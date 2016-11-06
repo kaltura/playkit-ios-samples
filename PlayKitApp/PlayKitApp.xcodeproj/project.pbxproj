@@ -1,0 +1,385 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BFD096B21DCF3D1400260D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD096B11DCF3D1400260D6A /* AppDelegate.swift */; };
+		BFD096B41DCF3D1400260D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD096B31DCF3D1400260D6A /* ViewController.swift */; };
+		BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B51DCF3D1400260D6A /* Main.storyboard */; };
+		BFD096B91DCF3D1400260D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B81DCF3D1400260D6A /* Assets.xcassets */; };
+		BFD096BC1DCF3D1400260D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096BA1DCF3D1400260D6A /* LaunchScreen.storyboard */; };
+		EEB865C1341EE9886A5DE513 /* Pods_PlayKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81A7658EC6B4D90ACDA56A7 /* Pods_PlayKitApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		71E918BA7E423583CB4A0F21 /* Pods-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
+		BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD096B11DCF3D1400260D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFD096B31DCF3D1400260D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFD096B61DCF3D1400260D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFD096B81DCF3D1400260D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFD096BB1DCF3D1400260D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFD096BD1DCF3D1400260D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEDD40FC6946CB57E1B0D6BE /* Pods-PlayKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayKitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F81A7658EC6B4D90ACDA56A7 /* Pods_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFD096AB1DCF3D1400260D6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEB865C1341EE9886A5DE513 /* Pods_PlayKitApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3344E87147129B6D2332B87B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F81A7658EC6B4D90ACDA56A7 /* Pods_PlayKitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFD096A51DCF3D1400260D6A = {
+			isa = PBXGroup;
+			children = (
+				BFD096B01DCF3D1400260D6A /* PlayKitApp */,
+				BFD096AF1DCF3D1400260D6A /* Products */,
+				FD95E6BC2419A64ED84BFF77 /* Pods */,
+				3344E87147129B6D2332B87B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFD096AF1DCF3D1400260D6A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFD096B01DCF3D1400260D6A /* PlayKitApp */ = {
+			isa = PBXGroup;
+			children = (
+				BFD096B11DCF3D1400260D6A /* AppDelegate.swift */,
+				BFD096B31DCF3D1400260D6A /* ViewController.swift */,
+				BFD096B51DCF3D1400260D6A /* Main.storyboard */,
+				BFD096B81DCF3D1400260D6A /* Assets.xcassets */,
+				BFD096BA1DCF3D1400260D6A /* LaunchScreen.storyboard */,
+				BFD096BD1DCF3D1400260D6A /* Info.plist */,
+			);
+			path = PlayKitApp;
+			sourceTree = "<group>";
+		};
+		FD95E6BC2419A64ED84BFF77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEDD40FC6946CB57E1B0D6BE /* Pods-PlayKitApp.debug.xcconfig */,
+				71E918BA7E423583CB4A0F21 /* Pods-PlayKitApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFD096AD1DCF3D1400260D6A /* PlayKitApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFD096C01DCF3D1400260D6A /* Build configuration list for PBXNativeTarget "PlayKitApp" */;
+			buildPhases = (
+				BB01D82DD8CE78303DA77550 /* [CP] Check Pods Manifest.lock */,
+				BFD096AA1DCF3D1400260D6A /* Sources */,
+				BFD096AB1DCF3D1400260D6A /* Frameworks */,
+				BFD096AC1DCF3D1400260D6A /* Resources */,
+				1DF2F414187ED44F8DDB6BC7 /* [CP] Embed Pods Frameworks */,
+				B38CD130F518072892045E56 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayKitApp;
+			productName = PlayKitApp;
+			productReference = BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFD096A61DCF3D1400260D6A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Kaltura;
+				TargetAttributes = {
+					BFD096AD1DCF3D1400260D6A = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = X8RDCFJK95;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BFD096A91DCF3D1400260D6A /* Build configuration list for PBXProject "PlayKitApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFD096A51DCF3D1400260D6A;
+			productRefGroup = BFD096AF1DCF3D1400260D6A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFD096AD1DCF3D1400260D6A /* PlayKitApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFD096AC1DCF3D1400260D6A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD096BC1DCF3D1400260D6A /* LaunchScreen.storyboard in Resources */,
+				BFD096B91DCF3D1400260D6A /* Assets.xcassets in Resources */,
+				BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DF2F414187ED44F8DDB6BC7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B38CD130F518072892045E56 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB01D82DD8CE78303DA77550 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFD096AA1DCF3D1400260D6A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD096B41DCF3D1400260D6A /* ViewController.swift in Sources */,
+				BFD096B21DCF3D1400260D6A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BFD096B51DCF3D1400260D6A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD096B61DCF3D1400260D6A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFD096BA1DCF3D1400260D6A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD096BB1DCF3D1400260D6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFD096BE1DCF3D1400260D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BFD096BF1DCF3D1400260D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFD096C11DCF3D1400260D6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEDD40FC6946CB57E1B0D6BE /* Pods-PlayKitApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = PlayKitApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFD096C21DCF3D1400260D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E918BA7E423583CB4A0F21 /* Pods-PlayKitApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = PlayKitApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFD096A91DCF3D1400260D6A /* Build configuration list for PBXProject "PlayKitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD096BE1DCF3D1400260D6A /* Debug */,
+				BFD096BF1DCF3D1400260D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFD096C01DCF3D1400260D6A /* Build configuration list for PBXNativeTarget "PlayKitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD096C11DCF3D1400260D6A /* Debug */,
+				BFD096C21DCF3D1400260D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFD096A61DCF3D1400260D6A /* Project object */;
+}
