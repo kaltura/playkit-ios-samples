@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
+        //PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
         let config = PlayerConfig()
         self.player = PlayKitManager.sharedInstance.createPlayer(config:config)
         
