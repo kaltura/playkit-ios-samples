@@ -27,6 +27,7 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var playerContainer: UIView!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

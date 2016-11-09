@@ -3,10 +3,14 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'PlayKitApp' do
-  pod 'PlayKit'      , :path => ‘../../playkit-ios'
- pod 'PlayKit/IMAPlugin'      , :path => ‘../../playkit-ios'
 
+abstract_target 'all' do
+    pod 'PlayKit'      , :path => ‘../../playkit-ios'
+    target 'PlayKitApp' do
+    end
+    target 'IMAPluginSample' do
+        pod 'PlayKit/IMAPlugin'      , :path => ‘../../playkit-ios'
+    end
  end
 
 pre_install do |installer|

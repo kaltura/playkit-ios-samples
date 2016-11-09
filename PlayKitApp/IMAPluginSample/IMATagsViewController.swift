@@ -174,7 +174,7 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell", for: indexPath) as! IMASettingsTableViewCell
-            cell.populate(text: Array(settings[indexPath.row].keys).first!, isSelected: Array(settings[indexPath.row].values).first!)
+            cell.populate(Array(settings[indexPath.row].keys).first!, isSelected: Array(settings[indexPath.row].values).first!)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! IMAVideoTableViewCell

@@ -10,8 +10,9 @@ import Foundation
 import UIKit
 import AVFoundation
 import AVKit
+import PlayKit
 
-class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate/*, PlayerDataSource, PlayerDelegate*/ {
+class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate, PlayerDataSource/*, PlayerDelegate*/ {
 
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
@@ -48,7 +49,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         self.playerController.pause()
         // Don't reset if we're presenting a modal view (e.g. in-app clickthrough).
         if ((navigationController!.viewControllers as NSArray).index(of: self) == NSNotFound) {
-            self.playerController.destroy()
+            //self.playerController.destroy()
             self.playerController = nil
         }
         super.viewWillDisappear(animated)
@@ -72,39 +73,42 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     // MARK: Set-up methods
     
     func setUpContentPlayer() {
-        let config = PlayKitConfig()
+        let config = PlayerConfig()
         
         if kUseIMA {
-            let adsPluginData: PluginData!
+            /*let adsPluginData: PluginData!
             if video.tag != "" {
                 adsPluginData = PluginData(plugin: PluginType.Ads, data: video.tag as AnyObject?)
             } else {
                 adsPluginData = PluginData(plugin: PluginType.Ads, data: video.tagsTimes as AnyObject?)
             }
             
-            config.plugins = [adsPluginData]
+            config.plugins = [adsPluginData]*/
+            PlayKitManager.sharedInstance.registerPlugin(AdsPlugin.self)
         }
         
-        config.autoStartPlayback = kAutoStartPlayback
+        config.autoPlay = kAutoStartPlayback
         
-        self.playerController = PlayKitManager.createPlayer(with: config, and: video)
+        self.playerController = PlayKitManager.sharedInstance.createPlayer(config: config)
         self.playerController.dataSource = self
-        self.playerController.delegate = self
+  //      self.playerController.delegate = self
         
-        let contentPlayerLayer = self.playerController.layer
-        contentPlayerLayer.frame = videoView.layer.bounds
-        videoView.layer.addSublayer(contentPlayerLayer)
+        self.playerController.layer.frame = videoView.layer.bounds
+        videoView.layer.addSublayer(self.playerController.layer)
+        if self.playerController.load(config) {
+            
+        }
         
-        self.playerController.subscribe(to: PlayerEventType.playhead_state_changed, using: { (eventData: AnyObject?) -> Void in
+        /*self.playerController.subscribe(to: PlayerEventType.playhead_state_changed, using: { (eventData: AnyObject?) -> Void in
             self.updatePlayhead(with: (eventData as! KalturaPlayerEventData).currentTime, duration: (eventData as! KalturaPlayerEventData).duration)
-        })
+        })*/
     }
     
     func setupPiP() {
-        pictureInPictureController = self.playerController.createPiPController(with: self)
+        /*pictureInPictureController = self.playerController.createPiPController(with: self)
         if (!AVPictureInPictureController.isPictureInPictureSupported() && pictureInPictureButton != nil) {
             pictureInPictureButton.isHidden = true;
-        }
+        }*/
     }
     
     func onPlayPressed(_ sender: UIButton) {
@@ -123,7 +127,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     
     @IBAction func onPlayPauseClicked(_ sender: AnyObject) {
         if (playheadButton.tag == PlayButtonType.playButton.rawValue) {
-            self.playerController.resume()
+            //self.playerController.resume()
             setPlayButtonType(PlayButtonType.pauseButton)
         } else {
             self.playerController.pause()
@@ -136,7 +140,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             return
         }
         let slider = sender as! UISlider
-        playerController.seek(to: CMTimeMake(Int64(slider.value), 1))
+        //playerController.seek(to: CMTimeMake(Int64(slider.value), 1))
     }
     
     @IBAction func onPipButtonClicked(_ sender: AnyObject) {

@@ -7,138 +7,175 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C5150DACB42C36E1D419DB9B3E5509F /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 126B90382AD920625A5F70B775E008FB /* AVPlayerEngine.swift */; };
-		231D5561F028FF85482CB411146DB26D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		6E9285F33B6D0772333616508EFD40E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		7031EACE6B37D736DF976B79E4102C4D /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283A88B800B79A0AC0BD8A3B3FF7C3F /* PlayerConfig.swift */; };
-		A0932FE2121533CFBA38016BCABF2A5A /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55BFD7C20541E4D4B8E74E50B629B17 /* Plugin.swift */; };
-		A10DBF34621BB2F064776684F72B031B /* Pods-PlayKitApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF5367C315C7B382A5FB69BA293B095 /* Pods-PlayKitApp-dummy.m */; };
-		A6DF651285D91FCD03492E5356ADF0A4 /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDD9894D79CA95D823C77007FC4640D /* AdsEnabledPlayerController.swift */; };
-		A8E8243806C465F8FAAE1E034EACB910 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB18773F256B40DF8A373674FF63E834 /* ReplaceMe.swift */; };
-		B135C078B277F9DC0DCD96593DDF5F00 /* AdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 265E8465E239592518D6FD123F649B8F /* AdsPlugin.swift */; };
-		B63A536D4EB312AE294760D321E103DB /* PlayKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BF598727CE8860DF44811491B08F69C /* PlayKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6E95DEBA073214597513B1A321AB813 /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A21045EEFBD5C54579388DE6782577 /* MediaEntry.swift */; };
-		C9DC76F9272B1C4E49BEFB7F5BDC6B08 /* Pods-PlayKitApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CE079A2438AA7B5748F28DBE7E3D6C0B /* Pods-PlayKitApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CAB5AABE750F6BB5F7CDE315CE392131 /* PlayKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06092590091529F316A87F90A43B4254 /* PlayKit-dummy.m */; };
-		CE967F54763823F5AB0787A8C08E56BF /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32CFDFF4970399B19D757A3C7CAF84A /* PlayKitManager.swift */; };
-		D498F6F63BCDA1B533F9E29C1090B41F /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A0BBA3CCDF3543E22BC6A447B8F2E7 /* PlayerEngine.swift */; };
-		E1D081A91DADF1BA7A5BBCCDAD5E19A8 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564F4E77E480924F0DDCDBA98A3CBF35 /* PlayerController.swift */; };
-		FFB4AAC9DB39555847B4D87E8CB0C3E1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDA35C851F8DD2002A26459F074F2C /* Player.swift */; };
+		13FCC754A7F915ABD362F3FEC2D619F6 /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161DCB0222FD292A4CC4A66D5580B58 /* MediaEntry.swift */; };
+		197C42A843BEA8B568B47120EF9BCC7B /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27E6791D48B755847BA9DD534D33D3 /* Plugin.swift */; };
+		26F785A5B80E7E65FA31190648A6EC58 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CEDD589F5CFDC36D48F5C73BCE273 /* Player.swift */; };
+		29CDD502C4736569544437CB40AC672E /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F19FFE9EAB2EF0068C6D5EC8477C44 /* PlayerConfig.swift */; };
+		328CFAAD629C3517B296723C12C57142 /* Pods-all-IMAPluginSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7C6248D0F5E51A1417372AADE7D89 /* Pods-all-IMAPluginSample-dummy.m */; };
+		334CEA31FC855BB574EBF283DE644D81 /* PlayKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A32B7CD603696B45174FB2CD6A1CCE24 /* PlayKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43B5A2AA4F4BA4A74E6E2E77604D734A /* Pods-all-IMAPluginSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE451135CCFE2DABC83BC8A74988EE80 /* Pods-all-IMAPluginSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4717343BC66CCD4C04572F57B154EBB7 /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C717BAD9103C417848BF7569D3363 /* PlayKitManager.swift */; };
+		64C3F1DD45239B199D8DBC5D02E80FCF /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */; };
+		710C77C6258C87C0BB149FDDB7886109 /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0C717BAD9103C417848BF7569D3363 /* PlayKitManager.swift */; };
+		7337606F51384CFFB06D61487B7A5C2C /* PlayKit.default-IMAPlugin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BB21A7FBEF089224A2ECC4E67C7C9A /* PlayKit.default-IMAPlugin-dummy.m */; };
+		7AF30E943897FEE12E120408B7B0808E /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2C2090F3984FB42D6784C513B50F6 /* AVPlayerEngine.swift */; };
+		8019E90FE42E0B35ECE5F3E275BB592F /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */; };
+		8956ED186CE30BFEF93D9A86B6AE8FED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		8B7BCE56B1F4B2580685F0DEDDAE9699 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8CEDD589F5CFDC36D48F5C73BCE273 /* Player.swift */; };
+		8ED4DD855F3157842990733D1B3393E3 /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5A7C9F0E47532788CE56323D306AF1 /* AdsEnabledPlayerController.swift */; };
+		9867D88042F2B851B2907235FB3A9121 /* Pods-all-PlayKitApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F03F9982427BDC4DD2DAF913590F74 /* Pods-all-PlayKitApp-dummy.m */; };
+		9B9F6E344F74FD2A2103FD8C2D8620B7 /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F161DCB0222FD292A4CC4A66D5580B58 /* MediaEntry.swift */; };
+		9FDB0E541267599577A08EE0C7B02012 /* AdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C836D03DE5FBA6B83B7753A6DBA366D /* AdsPlugin.swift */; };
+		A3F649646414B74885F70DB82A9F2DD1 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F19FFE9EAB2EF0068C6D5EC8477C44 /* PlayerConfig.swift */; };
+		A45985BE2F1034C27464E6792B4EBC09 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B589BED3D3F3908089A0185E2714A33 /* PlayerController.swift */; };
+		AB21B0EB5C5087610E5FCFF75A401811 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27E6791D48B755847BA9DD534D33D3 /* Plugin.swift */; };
+		AE1CFE8AC7E217BCA2A381BD501FC74E /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B589BED3D3F3908089A0185E2714A33 /* PlayerController.swift */; };
+		AEBB28C87F2D3E1FFBF52B2ED43BBE26 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		AF615B858BE1568FDECA2452E90236B6 /* Pods-all-PlayKitApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B70B6DAF4463B205DF2BBEE2A76C2A81 /* PlayKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 199AAEF419038DB47C5530601E47D400 /* PlayKit-dummy.m */; };
+		B8735279856428A17DC3618841F33F7C /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */; };
+		C06756F7351F2F5BD8E756BBEBBEEDEA /* PlayKit.default-IMAPlugin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE51E06D0C9B1E6764E9DC143EDE7687 /* PlayKit.default-IMAPlugin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D27D8EAA950D1B76280ADC5BF18A812B /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2C2090F3984FB42D6784C513B50F6 /* AVPlayerEngine.swift */; };
+		DBBF3470C4DEE739F8464CFE42C8195D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */; };
+		E984E3CCA00894DC0194FCE0BA6CAA68 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		F46A0B823D51B98878C13FDB211C3D38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C480A2E91A598134FD3DE41CBD06D04 /* PBXContainerItemProxy */ = {
+		0F3C237668FC175A2D867A6BF5BD8CA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 29871251222AA5BB074543C20DCA070E;
+			remoteGlobalIDString = 0ECB29D54C5CD216FFB5D1771408D4E4;
 			remoteInfo = PlayKit;
+		};
+		BEBB39C656910186D7A036017C67701C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BA2547097B97D12F3FEE85B9ADC2C2B2;
+			remoteInfo = "PlayKit.default-IMAPlugin";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06092590091529F316A87F90A43B4254 /* PlayKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlayKit-dummy.m"; sourceTree = "<group>"; };
-		126B90382AD920625A5F70B775E008FB /* AVPlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AVPlayerEngine.swift; sourceTree = "<group>"; };
-		14A21045EEFBD5C54579388DE6782577 /* MediaEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEntry.swift; sourceTree = "<group>"; };
-		160C6E634A4E603E752759B175E8B9FA /* Pods_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		19F21E0F70FFD672DFD25F9700FA8681 /* Pods-PlayKitApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlayKitApp-frameworks.sh"; sourceTree = "<group>"; };
-		1F97A49CE3F0AD28CF98E4296B8BF028 /* PlayKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-prefix.pch"; sourceTree = "<group>"; };
-		21BAC1986DB1CF96DA4F355841879009 /* Pods-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
-		265E8465E239592518D6FD123F649B8F /* AdsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsPlugin.swift; sourceTree = "<group>"; };
+		186BFE25109230B5BFFB5E41FC5C00F8 /* PlayKit.default-IMAPlugin.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PlayKit.default-IMAPlugin.xcconfig"; path = "../PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin.xcconfig"; sourceTree = "<group>"; };
+		199AAEF419038DB47C5530601E47D400 /* PlayKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlayKit-dummy.m"; sourceTree = "<group>"; };
+		1B9662EE83CA82A2A64C8E16F97D6D56 /* Pods-all-IMAPluginSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-all-IMAPluginSample.modulemap"; sourceTree = "<group>"; };
+		1F81306E18E4A0AB77C2E8C8218ED85E /* Pods_all_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2486CF8759EE7759CA6F14ABD990E034 /* PlayKit.default-IMAPlugin.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "PlayKit.default-IMAPlugin.modulemap"; path = "../PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin.modulemap"; sourceTree = "<group>"; };
+		26F03F9982427BDC4DD2DAF913590F74 /* Pods-all-PlayKitApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-all-PlayKitApp-dummy.m"; sourceTree = "<group>"; };
 		2B4CD5635A2F44AE9E2F91BB16E391E2 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInteractiveMediaAds.framework; path = "GoogleInteractiveMediaAds/GoogleInteractiveMediaAds-GoogleIMA3/GoogleInteractiveMediaAds.framework"; sourceTree = "<group>"; };
-		2CAC1E31B13B90730A93FEEA9AC4CE17 /* PlayKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlayKit.xcconfig; sourceTree = "<group>"; };
-		31FE940B8A4563C9872833F51CD73B22 /* PlayKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PlayKit.modulemap; sourceTree = "<group>"; };
-		3283A88B800B79A0AC0BD8A3B3FF7C3F /* PlayerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerConfig.swift; sourceTree = "<group>"; };
-		4A462412E92CADABF05DAAD15FADA3D8 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52C619E579FB622996ED77B42DF9D635 /* Pods-PlayKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PlayKitApp.debug.xcconfig"; sourceTree = "<group>"; };
-		564F4E77E480924F0DDCDBA98A3CBF35 /* PlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
-		6BF598727CE8860DF44811491B08F69C /* PlayKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-umbrella.h"; sourceTree = "<group>"; };
-		843C9E1F58BE9F2B62ADEB3C842CFEAB /* Pods-PlayKitApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PlayKitApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		8BF5367C315C7B382A5FB69BA293B095 /* Pods-PlayKitApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PlayKitApp-dummy.m"; sourceTree = "<group>"; };
+		2BFDD849FADCDD2991EF1D5E199BD498 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8794A718B3FBCF78D93D81B6B4F0A7 /* Pods-all-IMAPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-IMAPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		3F1275526F8C97C1DD223AA6BE07CEBF /* Pods_all_IMAPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_IMAPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43C2C2090F3984FB42D6784C513B50F6 /* AVPlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AVPlayerEngine.swift; sourceTree = "<group>"; };
+		4DC381BC104D11333AE0B254A103BD7C /* Pods-all-PlayKitApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-all-PlayKitApp.modulemap"; sourceTree = "<group>"; };
+		63F7C6248D0F5E51A1417372AADE7D89 /* Pods-all-IMAPluginSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-all-IMAPluginSample-dummy.m"; sourceTree = "<group>"; };
+		69B702ECCF8F911152E79B15C7F27E7D /* Pods-all-IMAPluginSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-IMAPluginSample-resources.sh"; sourceTree = "<group>"; };
+		76370493D441FF2C95E2ADC3D77846CE /* PlayKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PlayKit.modulemap; sourceTree = "<group>"; };
+		7C5C1D2D4659BC8C325E8604856D0125 /* Pods-all-IMAPluginSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-IMAPluginSample-frameworks.sh"; sourceTree = "<group>"; };
+		8B5A585462664367748FB4DFA98B7DD8 /* Pods-all-IMAPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-IMAPluginSample.release.xcconfig"; sourceTree = "<group>"; };
+		8C836D03DE5FBA6B83B7753A6DBA366D /* AdsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsPlugin.swift; sourceTree = "<group>"; };
+		8D5A7C9F0E47532788CE56323D306AF1 /* AdsEnabledPlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsEnabledPlayerController.swift; sourceTree = "<group>"; };
+		924CFC43FF3C6F80E67D36EB4BCE51E6 /* Pods-all-PlayKitApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-all-PlayKitApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A55BFD7C20541E4D4B8E74E50B629B17 /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
-		AB18773F256B40DF8A373674FF63E834 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
-		ABDD9894D79CA95D823C77007FC4640D /* AdsEnabledPlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsEnabledPlayerController.swift; sourceTree = "<group>"; };
-		AE68D1CA511E3C1A14BFDA424B78B356 /* Pods-PlayKitApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PlayKitApp.modulemap"; sourceTree = "<group>"; };
-		B32CFDFF4970399B19D757A3C7CAF84A /* PlayKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayKitManager.swift; sourceTree = "<group>"; };
-		B6FDA35C851F8DD2002A26459F074F2C /* Player.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		CE079A2438AA7B5748F28DBE7E3D6C0B /* Pods-PlayKitApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PlayKitApp-umbrella.h"; sourceTree = "<group>"; };
+		96413FECFAF0EDD3F7AB939DE0665D9E /* PlayKit.default-IMAPlugin-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PlayKit.default-IMAPlugin-prefix.pch"; path = "../PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin-prefix.pch"; sourceTree = "<group>"; };
+		9B589BED3D3F3908089A0185E2714A33 /* PlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		A32B7CD603696B45174FB2CD6A1CCE24 /* PlayKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-umbrella.h"; sourceTree = "<group>"; };
+		A8D6382C038292A34C46F116B3F19F0C /* PlayKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PlayKit.xcconfig; sourceTree = "<group>"; };
+		A9F045260A1441C57B23A16D1B861845 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../PlayKit.default-IMAPlugin/Info.plist"; sourceTree = "<group>"; };
+		AB6DE46537DF6A0179A98293A12CCA1B /* Pods-all-IMAPluginSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-all-IMAPluginSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-all-PlayKitApp-umbrella.h"; sourceTree = "<group>"; };
+		AC9A91376C81DC0FD0EB942FDBEF9DCB /* Pods-all-PlayKitApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-PlayKitApp-frameworks.sh"; sourceTree = "<group>"; };
+		AE2C40BB9F31D9551FCC12409380BFB1 /* Pods-all-PlayKitApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-all-PlayKitApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AE451135CCFE2DABC83BC8A74988EE80 /* Pods-all-IMAPluginSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-all-IMAPluginSample-umbrella.h"; sourceTree = "<group>"; };
+		AFBDE88FD18688E2FAB1D565626A23B8 /* Pods-all-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
+		B1866F5B94D94EE78DA8C436A0E1D58C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerEngine.swift; sourceTree = "<group>"; };
+		C0018EEF8864E84814091BCB32E949F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A1EC6A1499CCA11806BFEEACD56F29 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6C7F3101AA28268BD438937079217B0 /* PlayKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-prefix.pch"; sourceTree = "<group>"; };
+		C70339CC8B5BD907E7C2BF761CB1BB7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8B583AE7CA44C6D1B04DC80B0AFB7E2 /* Pods-all-PlayKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-PlayKitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		CE0C717BAD9103C417848BF7569D3363 /* PlayKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayKitManager.swift; sourceTree = "<group>"; };
+		CE8CEDD589F5CFDC36D48F5C73BCE273 /* Player.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D4A0BBA3CCDF3543E22BC6A447B8F2E7 /* PlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerEngine.swift; sourceTree = "<group>"; };
-		D8C47B2C8F878B3723F8C42CC283E0A2 /* Pods-PlayKitApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PlayKitApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E7D83FBC963A1108774E197C6DE77772 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F47924A4309897F105260420BAC89A16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFEB36316ABC1EB031C1519EAB989A8B /* Pods-PlayKitApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PlayKitApp-resources.sh"; sourceTree = "<group>"; };
+		D686A782119FD4D0E006808CF6BCD28B /* Pods-all-IMAPluginSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-all-IMAPluginSample-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D9F19FFE9EAB2EF0068C6D5EC8477C44 /* PlayerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerConfig.swift; sourceTree = "<group>"; };
+		DCF0DC447E4E2E3B7B5104553D857060 /* Pods-all-PlayKitApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-PlayKitApp-resources.sh"; sourceTree = "<group>"; };
+		E0BB21A7FBEF089224A2ECC4E67C7C9A /* PlayKit.default-IMAPlugin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PlayKit.default-IMAPlugin-dummy.m"; path = "../PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin-dummy.m"; sourceTree = "<group>"; };
+		F161DCB0222FD292A4CC4A66D5580B58 /* MediaEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEntry.swift; sourceTree = "<group>"; };
+		FD27E6791D48B755847BA9DD534D33D3 /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		FE51E06D0C9B1E6764E9DC143EDE7687 /* PlayKit.default-IMAPlugin-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PlayKit.default-IMAPlugin-umbrella.h"; path = "../PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2DEAB1E0221C4F0448C142A7EEA5A903 /* Frameworks */ = {
+		61C48A083C30F7EE598127FB9CA4B14D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				231D5561F028FF85482CB411146DB26D /* Foundation.framework in Frameworks */,
+				AEBB28C87F2D3E1FFBF52B2ED43BBE26 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ECFD35B1932C6443CAACCBAC8A4E942E /* Frameworks */ = {
+		80635FB0CEA91DE4CBACFF32E6269822 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E9285F33B6D0772333616508EFD40E7 /* Foundation.framework in Frameworks */,
+				F46A0B823D51B98878C13FDB211C3D38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C69D602D3FE964ED072D567537C0023C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E984E3CCA00894DC0194FCE0BA6CAA68 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB8183BC96782CED3502732E36303C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8956ED186CE30BFEF93D9A86B6AE8FED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F2D8585BE21F18451E6DC90AA21AB7A /* IMA */ = {
+		07C49CBF85F4D7F06D33D7A6F9C33CC1 /* PlayKit */ = {
 			isa = PBXGroup;
 			children = (
-				ABDD9894D79CA95D823C77007FC4640D /* AdsEnabledPlayerController.swift */,
-				265E8465E239592518D6FD123F649B8F /* AdsPlugin.swift */,
+				5FF5B4E012C04915C5EAC17D39A0A01B /* Core */,
+				4403C5028FA5457B013A858953D8F632 /* IMAPlugin */,
+				11644FE2555CCF44BC14F2309C11D2F6 /* Support Files */,
 			);
-			path = IMA;
+			name = PlayKit;
+			path = "../../../playkit-ios";
 			sourceTree = "<group>";
 		};
-		111B9932835224C29E605161859DFFED /* Products */ = {
+		11644FE2555CCF44BC14F2309C11D2F6 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4A462412E92CADABF05DAAD15FADA3D8 /* PlayKit.framework */,
-				160C6E634A4E603E752759B175E8B9FA /* Pods_PlayKitApp.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		301ACF3EE37E1B29E30C65772B403A88 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E7D83FBC963A1108774E197C6DE77772 /* Info.plist */,
-				31FE940B8A4563C9872833F51CD73B22 /* PlayKit.modulemap */,
-				2CAC1E31B13B90730A93FEEA9AC4CE17 /* PlayKit.xcconfig */,
-				06092590091529F316A87F90A43B4254 /* PlayKit-dummy.m */,
-				1F97A49CE3F0AD28CF98E4296B8BF028 /* PlayKit-prefix.pch */,
-				6BF598727CE8860DF44811491B08F69C /* PlayKit-umbrella.h */,
+				A9F045260A1441C57B23A16D1B861845 /* Info.plist */,
+				C0018EEF8864E84814091BCB32E949F1 /* Info.plist */,
+				76370493D441FF2C95E2ADC3D77846CE /* PlayKit.modulemap */,
+				A8D6382C038292A34C46F116B3F19F0C /* PlayKit.xcconfig */,
+				199AAEF419038DB47C5530601E47D400 /* PlayKit-dummy.m */,
+				C6C7F3101AA28268BD438937079217B0 /* PlayKit-prefix.pch */,
+				A32B7CD603696B45174FB2CD6A1CCE24 /* PlayKit-umbrella.h */,
+				2486CF8759EE7759CA6F14ABD990E034 /* PlayKit.default-IMAPlugin.modulemap */,
+				186BFE25109230B5BFFB5E41FC5C00F8 /* PlayKit.default-IMAPlugin.xcconfig */,
+				E0BB21A7FBEF089224A2ECC4E67C7C9A /* PlayKit.default-IMAPlugin-dummy.m */,
+				96413FECFAF0EDD3F7AB939DE0665D9E /* PlayKit.default-IMAPlugin-prefix.pch */,
+				FE51E06D0C9B1E6764E9DC143EDE7687 /* PlayKit.default-IMAPlugin-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../playkit-ios-samples/PlayKitApp/Pods/Target Support Files/PlayKit";
-			sourceTree = "<group>";
-		};
-		3BD4948FA39A3FACC877302AB1D53CFF /* Pods-PlayKitApp */ = {
-			isa = PBXGroup;
-			children = (
-				F47924A4309897F105260420BAC89A16 /* Info.plist */,
-				AE68D1CA511E3C1A14BFDA424B78B356 /* Pods-PlayKitApp.modulemap */,
-				D8C47B2C8F878B3723F8C42CC283E0A2 /* Pods-PlayKitApp-acknowledgements.markdown */,
-				843C9E1F58BE9F2B62ADEB3C842CFEAB /* Pods-PlayKitApp-acknowledgements.plist */,
-				8BF5367C315C7B382A5FB69BA293B095 /* Pods-PlayKitApp-dummy.m */,
-				19F21E0F70FFD672DFD25F9700FA8681 /* Pods-PlayKitApp-frameworks.sh */,
-				FFEB36316ABC1EB031C1519EAB989A8B /* Pods-PlayKitApp-resources.sh */,
-				CE079A2438AA7B5748F28DBE7E3D6C0B /* Pods-PlayKitApp-umbrella.h */,
-				52C619E579FB622996ED77B42DF9D635 /* Pods-PlayKitApp.debug.xcconfig */,
-				21BAC1986DB1CF96DA4F355841879009 /* Pods-PlayKitApp.release.xcconfig */,
-			);
-			name = "Pods-PlayKitApp";
-			path = "Target Support Files/Pods-PlayKitApp";
 			sourceTree = "<group>";
 		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
@@ -149,20 +186,105 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		3F2287CB8733EC0015EC6AE1B67FE873 /* Pods-all-PlayKitApp */ = {
+			isa = PBXGroup;
+			children = (
+				C70339CC8B5BD907E7C2BF761CB1BB7C /* Info.plist */,
+				4DC381BC104D11333AE0B254A103BD7C /* Pods-all-PlayKitApp.modulemap */,
+				AE2C40BB9F31D9551FCC12409380BFB1 /* Pods-all-PlayKitApp-acknowledgements.markdown */,
+				924CFC43FF3C6F80E67D36EB4BCE51E6 /* Pods-all-PlayKitApp-acknowledgements.plist */,
+				26F03F9982427BDC4DD2DAF913590F74 /* Pods-all-PlayKitApp-dummy.m */,
+				AC9A91376C81DC0FD0EB942FDBEF9DCB /* Pods-all-PlayKitApp-frameworks.sh */,
+				DCF0DC447E4E2E3B7B5104553D857060 /* Pods-all-PlayKitApp-resources.sh */,
+				AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */,
+				C8B583AE7CA44C6D1B04DC80B0AFB7E2 /* Pods-all-PlayKitApp.debug.xcconfig */,
+				AFBDE88FD18688E2FAB1D565626A23B8 /* Pods-all-PlayKitApp.release.xcconfig */,
+			);
+			name = "Pods-all-PlayKitApp";
+			path = "Target Support Files/Pods-all-PlayKitApp";
+			sourceTree = "<group>";
+		};
+		4403C5028FA5457B013A858953D8F632 /* IMAPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				4738876C66558A43436C9E8AEFD4FA7B /* Plugins */,
+			);
+			name = IMAPlugin;
+			sourceTree = "<group>";
+		};
+		4738876C66558A43436C9E8AEFD4FA7B /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				514CEEA54004337246C49A8F5211E596 /* IMA */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		4A6C066CCCB4E24518D31C1E72AEA651 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C5A1EC6A1499CCA11806BFEEACD56F29 /* PlayKit.framework */,
+				2BFDD849FADCDD2991EF1D5E199BD498 /* PlayKit.framework */,
+				3F1275526F8C97C1DD223AA6BE07CEBF /* Pods_all_IMAPluginSample.framework */,
+				1F81306E18E4A0AB77C2E8C8218ED85E /* Pods_all_PlayKitApp.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		514CEEA54004337246C49A8F5211E596 /* IMA */ = {
+			isa = PBXGroup;
+			children = (
+				8D5A7C9F0E47532788CE56323D306AF1 /* AdsEnabledPlayerController.swift */,
+				8C836D03DE5FBA6B83B7753A6DBA366D /* AdsPlugin.swift */,
+			);
+			path = IMA;
+			sourceTree = "<group>";
+		};
+		583E606D9EE69F3F7528C47EDB33B101 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				43C2C2090F3984FB42D6784C513B50F6 /* AVPlayerEngine.swift */,
+				F161DCB0222FD292A4CC4A66D5580B58 /* MediaEntry.swift */,
+				CE8CEDD589F5CFDC36D48F5C73BCE273 /* Player.swift */,
+				D9F19FFE9EAB2EF0068C6D5EC8477C44 /* PlayerConfig.swift */,
+				9B589BED3D3F3908089A0185E2714A33 /* PlayerController.swift */,
+				BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		5FF5B4E012C04915C5EAC17D39A0A01B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F2E9C8D551E73242268F1F937EC19C94 /* Classes */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		6714D51FDDBACD62C14C72BD2866B900 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				826AE31B68C819B286C1A47834114AA1 /* PlayKit */,
+				07C49CBF85F4D7F06D33D7A6F9C33CC1 /* PlayKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		7CACF7E2A26EB9B483CB65AD65C59712 /* Managers */ = {
+		759E26049FE49978F2F20D6E969C591B /* Pods-all-IMAPluginSample */ = {
 			isa = PBXGroup;
 			children = (
-				B32CFDFF4970399B19D757A3C7CAF84A /* PlayKitManager.swift */,
+				B1866F5B94D94EE78DA8C436A0E1D58C /* Info.plist */,
+				1B9662EE83CA82A2A64C8E16F97D6D56 /* Pods-all-IMAPluginSample.modulemap */,
+				D686A782119FD4D0E006808CF6BCD28B /* Pods-all-IMAPluginSample-acknowledgements.markdown */,
+				AB6DE46537DF6A0179A98293A12CCA1B /* Pods-all-IMAPluginSample-acknowledgements.plist */,
+				63F7C6248D0F5E51A1417372AADE7D89 /* Pods-all-IMAPluginSample-dummy.m */,
+				7C5C1D2D4659BC8C325E8604856D0125 /* Pods-all-IMAPluginSample-frameworks.sh */,
+				69B702ECCF8F911152E79B15C7F27E7D /* Pods-all-IMAPluginSample-resources.sh */,
+				AE451135CCFE2DABC83BC8A74988EE80 /* Pods-all-IMAPluginSample-umbrella.h */,
+				2C8794A718B3FBCF78D93D81B6B4F0A7 /* Pods-all-IMAPluginSample.debug.xcconfig */,
+				8B5A585462664367748FB4DFA98B7DD8 /* Pods-all-IMAPluginSample.release.xcconfig */,
 			);
-			path = Managers;
+			name = "Pods-all-IMAPluginSample";
+			path = "Target Support Files/Pods-all-IMAPluginSample";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -172,20 +294,9 @@
 				6714D51FDDBACD62C14C72BD2866B900 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				F14B5F00318EBC92805B49006A387B0B /* Pods */,
-				111B9932835224C29E605161859DFFED /* Products */,
-				AF2130BDDDF384C4010EA1F54C4897FC /* Targets Support Files */,
+				4A6C066CCCB4E24518D31C1E72AEA651 /* Products */,
+				DB5A087399CE461AE7AF3A8669C5D3E8 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		826AE31B68C819B286C1A47834114AA1 /* PlayKit */ = {
-			isa = PBXGroup;
-			children = (
-				9D88367646D4EBC719F7C9C892348768 /* Core */,
-				B876FD6D894CE71C62ABB9F78A34BF36 /* IMAPlugin */,
-				301ACF3EE37E1B29E30C65772B403A88 /* Support Files */,
-			);
-			name = PlayKit;
-			path = "../../../playkit-ios";
 			sourceTree = "<group>";
 		};
 		99987B91273A8D9F5E0DECA3344BE79B /* GoogleAds-IMA-iOS-SDK */ = {
@@ -196,43 +307,6 @@
 			path = "GoogleAds-IMA-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		9D88367646D4EBC719F7C9C892348768 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				DFB2C5C0472BC38485EE87CB6788C057 /* Classes */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		AF2130BDDDF384C4010EA1F54C4897FC /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3BD4948FA39A3FACC877302AB1D53CFF /* Pods-PlayKitApp */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		B876FD6D894CE71C62ABB9F78A34BF36 /* IMAPlugin */ = {
-			isa = PBXGroup;
-			children = (
-				EDE264E58C68D7E6368DC4650141486F /* Plugins */,
-			);
-			name = IMAPlugin;
-			sourceTree = "<group>";
-		};
-		BBFE16905DDC76E91458F62B3ED80BC1 /* Player */ = {
-			isa = PBXGroup;
-			children = (
-				126B90382AD920625A5F70B775E008FB /* AVPlayerEngine.swift */,
-				14A21045EEFBD5C54579388DE6782577 /* MediaEntry.swift */,
-				B6FDA35C851F8DD2002A26459F074F2C /* Player.swift */,
-				3283A88B800B79A0AC0BD8A3B3FF7C3F /* PlayerConfig.swift */,
-				564F4E77E480924F0DDCDBA98A3CBF35 /* PlayerController.swift */,
-				D4A0BBA3CCDF3543E22BC6A447B8F2E7 /* PlayerEngine.swift */,
-			);
-			path = Player;
-			sourceTree = "<group>";
-		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,23 +315,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DFB2C5C0472BC38485EE87CB6788C057 /* Classes */ = {
+		BD6F454C667DB1D8DCB9795D6F9ECDC8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				A55BFD7C20541E4D4B8E74E50B629B17 /* Plugin.swift */,
-				AB18773F256B40DF8A373674FF63E834 /* ReplaceMe.swift */,
-				7CACF7E2A26EB9B483CB65AD65C59712 /* Managers */,
-				BBFE16905DDC76E91458F62B3ED80BC1 /* Player */,
+				CE0C717BAD9103C417848BF7569D3363 /* PlayKitManager.swift */,
 			);
-			path = Classes;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		EDE264E58C68D7E6368DC4650141486F /* Plugins */ = {
+		DB5A087399CE461AE7AF3A8669C5D3E8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				0F2D8585BE21F18451E6DC90AA21AB7A /* IMA */,
+				759E26049FE49978F2F20D6E969C591B /* Pods-all-IMAPluginSample */,
+				3F2287CB8733EC0015EC6AE1B67FE873 /* Pods-all-PlayKitApp */,
 			);
-			path = Plugins;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		F14B5F00318EBC92805B49006A387B0B /* Pods */ = {
@@ -266,6 +338,17 @@
 				99987B91273A8D9F5E0DECA3344BE79B /* GoogleAds-IMA-iOS-SDK */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2E9C8D551E73242268F1F937EC19C94 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FD27E6791D48B755847BA9DD534D33D3 /* Plugin.swift */,
+				CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */,
+				BD6F454C667DB1D8DCB9795D6F9ECDC8 /* Managers */,
+				583E606D9EE69F3F7528C47EDB33B101 /* Player */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		F5CF0D0B497BBCE47EA8625C9088C0F6 /* Frameworks */ = {
@@ -279,32 +362,48 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		09F4410FEA8D0B8724F86C722C8AEFAC /* Headers */ = {
+		50A986786BB845C1C129B5C072E5B718 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B63A536D4EB312AE294760D321E103DB /* PlayKit-umbrella.h in Headers */,
+				C06756F7351F2F5BD8E756BBEBBEEDEA /* PlayKit.default-IMAPlugin-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3E45EA870C4176EB051CCA03DCEF31B9 /* Headers */ = {
+		78BE88A3C8245AD8ACEEA7FB4CF22624 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9DC76F9272B1C4E49BEFB7F5BDC6B08 /* Pods-PlayKitApp-umbrella.h in Headers */,
+				43B5A2AA4F4BA4A74E6E2E77604D734A /* Pods-all-IMAPluginSample-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9320F6FF10E80CEA196EF744628EFC5D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				334CEA31FC855BB574EBF283DE644D81 /* PlayKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4AACF9C3784503AA5DE92E6ACA2C1D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF615B858BE1568FDECA2452E90236B6 /* Pods-all-PlayKitApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		29871251222AA5BB074543C20DCA070E /* PlayKit */ = {
+		0ECB29D54C5CD216FFB5D1771408D4E4 /* PlayKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F7A7D5B9DD0DB903D99E1A18B579FE9D /* Build configuration list for PBXNativeTarget "PlayKit" */;
+			buildConfigurationList = 85BB0441EDEAD1149261E9C5DD2C8DCB /* Build configuration list for PBXNativeTarget "PlayKit" */;
 			buildPhases = (
-				3827F0D4ECD91B8FCAF73C8CE44B2C6C /* Sources */,
-				2DEAB1E0221C4F0448C142A7EEA5A903 /* Frameworks */,
-				09F4410FEA8D0B8724F86C722C8AEFAC /* Headers */,
+				7AB96317228EF9F68526860D791D74E8 /* Sources */,
+				61C48A083C30F7EE598127FB9CA4B14D /* Frameworks */,
+				9320F6FF10E80CEA196EF744628EFC5D /* Headers */,
 			);
 			buildRules = (
 			);
@@ -312,25 +411,60 @@
 			);
 			name = PlayKit;
 			productName = PlayKit;
-			productReference = 4A462412E92CADABF05DAAD15FADA3D8 /* PlayKit.framework */;
+			productReference = C5A1EC6A1499CCA11806BFEEACD56F29 /* PlayKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		32934AA91AE4F0A1C2C671B6E9C96D98 /* Pods-PlayKitApp */ = {
+		384F32A8E31A82AA2C19F678DE922662 /* Pods-all-IMAPluginSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0141CFBE8C229FD2857E3521D76F0B3E /* Build configuration list for PBXNativeTarget "Pods-PlayKitApp" */;
+			buildConfigurationList = 4A1EB12FCED6E3DC369FC6E93383905B /* Build configuration list for PBXNativeTarget "Pods-all-IMAPluginSample" */;
 			buildPhases = (
-				DFC8C3EC83C334CB1B82457CCEF31FFB /* Sources */,
-				ECFD35B1932C6443CAACCBAC8A4E942E /* Frameworks */,
-				3E45EA870C4176EB051CCA03DCEF31B9 /* Headers */,
+				F5BD5811B2FE77DCFE431E64B57D245A /* Sources */,
+				C69D602D3FE964ED072D567537C0023C /* Frameworks */,
+				78BE88A3C8245AD8ACEEA7FB4CF22624 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E473E33446610DF255460819BEE8D4FF /* PBXTargetDependency */,
+				0ADEC924DBED44E55E84D822FF8CA571 /* PBXTargetDependency */,
 			);
-			name = "Pods-PlayKitApp";
-			productName = "Pods-PlayKitApp";
-			productReference = 160C6E634A4E603E752759B175E8B9FA /* Pods_PlayKitApp.framework */;
+			name = "Pods-all-IMAPluginSample";
+			productName = "Pods-all-IMAPluginSample";
+			productReference = 3F1275526F8C97C1DD223AA6BE07CEBF /* Pods_all_IMAPluginSample.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BA2547097B97D12F3FEE85B9ADC2C2B2 /* PlayKit.default-IMAPlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B28782AF5A133614D89A1F0D2A5C28E /* Build configuration list for PBXNativeTarget "PlayKit.default-IMAPlugin" */;
+			buildPhases = (
+				36A77264AE192BD2AA1675B5CEA32F18 /* Sources */,
+				80635FB0CEA91DE4CBACFF32E6269822 /* Frameworks */,
+				50A986786BB845C1C129B5C072E5B718 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PlayKit.default-IMAPlugin";
+			productName = "PlayKit.default-IMAPlugin";
+			productReference = 2BFDD849FADCDD2991EF1D5E199BD498 /* PlayKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DB9EF5620DD88F7E8587D9F7A0931E6A /* Pods-all-PlayKitApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96F1CE264CC4BC5E70AD27D15D9173DE /* Build configuration list for PBXNativeTarget "Pods-all-PlayKitApp" */;
+			buildPhases = (
+				4D8BF6C25C2AD7EC95108EE197FCAA6C /* Sources */,
+				EB8183BC96782CED3502732E36303C8C /* Frameworks */,
+				F4AACF9C3784503AA5DE92E6ACA2C1D5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9C77474D16E1DC3202604AF54362DFD /* PBXTargetDependency */,
+			);
+			name = "Pods-all-PlayKitApp";
+			productName = "Pods-all-PlayKitApp";
+			productReference = 1F81306E18E4A0AB77C2E8C8218ED85E /* Pods_all_PlayKitApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -350,57 +484,123 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 111B9932835224C29E605161859DFFED /* Products */;
+			productRefGroup = 4A6C066CCCB4E24518D31C1E72AEA651 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29871251222AA5BB074543C20DCA070E /* PlayKit */,
-				32934AA91AE4F0A1C2C671B6E9C96D98 /* Pods-PlayKitApp */,
+				0ECB29D54C5CD216FFB5D1771408D4E4 /* PlayKit */,
+				BA2547097B97D12F3FEE85B9ADC2C2B2 /* PlayKit.default-IMAPlugin */,
+				384F32A8E31A82AA2C19F678DE922662 /* Pods-all-IMAPluginSample */,
+				DB9EF5620DD88F7E8587D9F7A0931E6A /* Pods-all-PlayKitApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3827F0D4ECD91B8FCAF73C8CE44B2C6C /* Sources */ = {
+		36A77264AE192BD2AA1675B5CEA32F18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6DF651285D91FCD03492E5356ADF0A4 /* AdsEnabledPlayerController.swift in Sources */,
-				B135C078B277F9DC0DCD96593DDF5F00 /* AdsPlugin.swift in Sources */,
-				1C5150DACB42C36E1D419DB9B3E5509F /* AVPlayerEngine.swift in Sources */,
-				C6E95DEBA073214597513B1A321AB813 /* MediaEntry.swift in Sources */,
-				FFB4AAC9DB39555847B4D87E8CB0C3E1 /* Player.swift in Sources */,
-				7031EACE6B37D736DF976B79E4102C4D /* PlayerConfig.swift in Sources */,
-				E1D081A91DADF1BA7A5BBCCDAD5E19A8 /* PlayerController.swift in Sources */,
-				D498F6F63BCDA1B533F9E29C1090B41F /* PlayerEngine.swift in Sources */,
-				CAB5AABE750F6BB5F7CDE315CE392131 /* PlayKit-dummy.m in Sources */,
-				CE967F54763823F5AB0787A8C08E56BF /* PlayKitManager.swift in Sources */,
-				A0932FE2121533CFBA38016BCABF2A5A /* Plugin.swift in Sources */,
-				A8E8243806C465F8FAAE1E034EACB910 /* ReplaceMe.swift in Sources */,
+				8ED4DD855F3157842990733D1B3393E3 /* AdsEnabledPlayerController.swift in Sources */,
+				9FDB0E541267599577A08EE0C7B02012 /* AdsPlugin.swift in Sources */,
+				7AF30E943897FEE12E120408B7B0808E /* AVPlayerEngine.swift in Sources */,
+				13FCC754A7F915ABD362F3FEC2D619F6 /* MediaEntry.swift in Sources */,
+				8B7BCE56B1F4B2580685F0DEDDAE9699 /* Player.swift in Sources */,
+				29CDD502C4736569544437CB40AC672E /* PlayerConfig.swift in Sources */,
+				AE1CFE8AC7E217BCA2A381BD501FC74E /* PlayerController.swift in Sources */,
+				64C3F1DD45239B199D8DBC5D02E80FCF /* PlayerEngine.swift in Sources */,
+				7337606F51384CFFB06D61487B7A5C2C /* PlayKit.default-IMAPlugin-dummy.m in Sources */,
+				4717343BC66CCD4C04572F57B154EBB7 /* PlayKitManager.swift in Sources */,
+				AB21B0EB5C5087610E5FCFF75A401811 /* Plugin.swift in Sources */,
+				DBBF3470C4DEE739F8464CFE42C8195D /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DFC8C3EC83C334CB1B82457CCEF31FFB /* Sources */ = {
+		4D8BF6C25C2AD7EC95108EE197FCAA6C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A10DBF34621BB2F064776684F72B031B /* Pods-PlayKitApp-dummy.m in Sources */,
+				9867D88042F2B851B2907235FB3A9121 /* Pods-all-PlayKitApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AB96317228EF9F68526860D791D74E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27D8EAA950D1B76280ADC5BF18A812B /* AVPlayerEngine.swift in Sources */,
+				9B9F6E344F74FD2A2103FD8C2D8620B7 /* MediaEntry.swift in Sources */,
+				26F785A5B80E7E65FA31190648A6EC58 /* Player.swift in Sources */,
+				A3F649646414B74885F70DB82A9F2DD1 /* PlayerConfig.swift in Sources */,
+				A45985BE2F1034C27464E6792B4EBC09 /* PlayerController.swift in Sources */,
+				B8735279856428A17DC3618841F33F7C /* PlayerEngine.swift in Sources */,
+				B70B6DAF4463B205DF2BBEE2A76C2A81 /* PlayKit-dummy.m in Sources */,
+				710C77C6258C87C0BB149FDDB7886109 /* PlayKitManager.swift in Sources */,
+				197C42A843BEA8B568B47120EF9BCC7B /* Plugin.swift in Sources */,
+				8019E90FE42E0B35ECE5F3E275BB592F /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5BD5811B2FE77DCFE431E64B57D245A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				328CFAAD629C3517B296723C12C57142 /* Pods-all-IMAPluginSample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E473E33446610DF255460819BEE8D4FF /* PBXTargetDependency */ = {
+		0ADEC924DBED44E55E84D822FF8CA571 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PlayKit.default-IMAPlugin";
+			target = BA2547097B97D12F3FEE85B9ADC2C2B2 /* PlayKit.default-IMAPlugin */;
+			targetProxy = BEBB39C656910186D7A036017C67701C /* PBXContainerItemProxy */;
+		};
+		B9C77474D16E1DC3202604AF54362DFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PlayKit;
-			target = 29871251222AA5BB074543C20DCA070E /* PlayKit */;
-			targetProxy = 2C480A2E91A598134FD3DE41CBD06D04 /* PBXContainerItemProxy */;
+			target = 0ECB29D54C5CD216FFB5D1771408D4E4 /* PlayKit */;
+			targetProxy = 0F3C237668FC175A2D867A6BF5BD8CA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+		1D8271AEF16F9702D5620C55317265B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 186BFE25109230B5BFFB5E41FC5C00F8 /* PlayKit.default-IMAPlugin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayKit.default-IMAPlugin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PlayKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -436,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
@@ -444,45 +644,9 @@
 			};
 			name = Debug;
 		};
-		2BAB570B57B19728B3726352EB0122B9 /* Debug */ = {
+		62BF0F20D029E27D9710C615F40A6DF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 52C619E579FB622996ED77B42DF9D635 /* Pods-PlayKitApp.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PlayKitApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PlayKitApp;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		2F9617EF1AEAF07731C41044AD3FD739 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21BAC1986DB1CF96DA4F355841879009 /* Pods-PlayKitApp.release.xcconfig */;
+			baseConfigurationReference = A8D6382C038292A34C46F116B3F19F0C /* PlayKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -495,18 +659,50 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-PlayKitApp/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/PlayKit/PlayKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayKit/PlayKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PlayKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6339E0B97219F16F39FD733321C1343B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B5A585462664367748FB4DFA98B7DD8 /* Pods-all-IMAPluginSample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-all-IMAPluginSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_PlayKitApp;
+				PRODUCT_NAME = Pods_all_IMAPluginSample;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -515,9 +711,77 @@
 			};
 			name = Release;
 		};
-		77AB8F5E8B6C715CC84307ECC5F54D0D /* Debug */ = {
+		66B7CDA8F3498A352D63F214331F77DC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CAC1E31B13B90730A93FEEA9AC4CE17 /* PlayKit.xcconfig */;
+			baseConfigurationReference = 186BFE25109230B5BFFB5E41FC5C00F8 /* PlayKit.default-IMAPlugin.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayKit.default-IMAPlugin/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayKit.default-IMAPlugin/PlayKit.default-IMAPlugin.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PlayKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7861E49888B66F8263A717AF22132D24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8B583AE7CA44C6D1B04DC80B0AFB7E2 /* Pods-all-PlayKitApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-all-PlayKitApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_all_PlayKitApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ADCCC93C1BC3A0DE709A72682CAFF1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8D6382C038292A34C46F116B3F19F0C /* PlayKit.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -548,39 +812,7 @@
 			};
 			name = Debug;
 		};
-		79D7AB50E61F50FD6D0A2DACB33E223D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CAC1E31B13B90730A93FEEA9AC4CE17 /* PlayKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PlayKit/PlayKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlayKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlayKit/PlayKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PlayKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -612,7 +844,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
@@ -620,32 +852,121 @@
 			};
 			name = Release;
 		};
+		BE4CB51A28E6F64EAEFF442B2F42A350 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8794A718B3FBCF78D93D81B6B4F0A7 /* Pods-all-IMAPluginSample.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-all-IMAPluginSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_all_IMAPluginSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F47925D6AD1B1DDB56F087C360694F62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBDE88FD18688E2FAB1D565626A23B8 /* Pods-all-PlayKitApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-all-PlayKitApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_all_PlayKitApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0141CFBE8C229FD2857E3521D76F0B3E /* Build configuration list for PBXNativeTarget "Pods-PlayKitApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2BAB570B57B19728B3726352EB0122B9 /* Debug */,
-				2F9617EF1AEAF07731C41044AD3FD739 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
-				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F7A7D5B9DD0DB903D99E1A18B579FE9D /* Build configuration list for PBXNativeTarget "PlayKit" */ = {
+		4A1EB12FCED6E3DC369FC6E93383905B /* Build configuration list for PBXNativeTarget "Pods-all-IMAPluginSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				77AB8F5E8B6C715CC84307ECC5F54D0D /* Debug */,
-				79D7AB50E61F50FD6D0A2DACB33E223D /* Release */,
+				BE4CB51A28E6F64EAEFF442B2F42A350 /* Debug */,
+				6339E0B97219F16F39FD733321C1343B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4B28782AF5A133614D89A1F0D2A5C28E /* Build configuration list for PBXNativeTarget "PlayKit.default-IMAPlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D8271AEF16F9702D5620C55317265B0 /* Debug */,
+				66B7CDA8F3498A352D63F214331F77DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85BB0441EDEAD1149261E9C5DD2C8DCB /* Build configuration list for PBXNativeTarget "PlayKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADCCC93C1BC3A0DE709A72682CAFF1A8 /* Debug */,
+				62BF0F20D029E27D9710C615F40A6DF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96F1CE264CC4BC5E70AD27D15D9173DE /* Build configuration list for PBXNativeTarget "Pods-all-PlayKitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7861E49888B66F8263A717AF22132D24 /* Debug */,
+				F47925D6AD1B1DDB56F087C360694F62 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

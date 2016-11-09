@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ycJ-SZ-Eza">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,7 +11,7 @@
         <!--Tags-->
         <scene sceneID="ae7-qc-vDS">
             <objects>
-                <viewController id="HdT-js-Krs" customClass="IMATagsViewController" customModule="IMA_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HdT-js-Krs" customClass="IMATagsViewController" customModule="IMAPluginSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5tB-sM-0Gm"/>
                         <viewControllerLayoutGuide type="bottom" id="rgd-1x-5jf"/>
@@ -26,7 +25,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" rowHeight="44" id="WTT-z2-KtQ" customClass="IMASettingsTableViewCell" customModule="IMA_Sample" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" rowHeight="44" id="WTT-z2-KtQ" customClass="IMASettingsTableViewCell" customModule="IMAPluginSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WTT-z2-KtQ" id="eRm-hx-JRp">
@@ -51,7 +50,7 @@
                                             <outlet property="label" destination="tMm-zw-AhF" id="yjb-gm-Nmf"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="yrb-uf-eHz" customClass="IMAVideoTableViewCell" customModule="IMA_Sample" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="yrb-uf-eHz" customClass="IMAVideoTableViewCell" customModule="IMAPluginSample" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="66" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="yrb-uf-eHz" id="61B-ZO-M69">
@@ -98,7 +97,7 @@
         <!--Video View Controller-->
         <scene sceneID="B3k-ne-4d4">
             <objects>
-                <viewController id="dg8-m6-p1J" customClass="IMAVideoViewController" customModule="IMA_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dg8-m6-p1J" customClass="IMAVideoViewController" customModule="IMAPluginSample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ymk-YB-mdj"/>
                         <viewControllerLayoutGuide type="bottom" id="jTU-B8-a6P"/>
@@ -199,7 +198,7 @@
         <!--Navigation Controller-->
         <scene sceneID="UAP-P2-dUV">
             <objects>
-                <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ycJ-SZ-Eza" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ycJ-SZ-Eza" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="06B-Dv-i1X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
