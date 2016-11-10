@@ -14,17 +14,6 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2015 Google, Inc. All rights reserved.
-</string>
-			<key>License</key>
-			<string>Copyright</string>
-			<key>Title</key>
-			<string>GoogleAds-IMA-iOS-SDK</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>                    GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
 
