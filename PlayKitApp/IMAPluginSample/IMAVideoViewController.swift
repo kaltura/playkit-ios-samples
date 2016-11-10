@@ -23,7 +23,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     @IBOutlet weak var pictureInPictureButton: UIButton!
     @IBOutlet weak var companionView: UIView!
     
-    var pipEnabled: Bool = kAllowAVPlayerExpose
+    var pipEnabled: Bool = true
     var video: Video!
     var playerController: Player!
     var pictureInPictureController: AVPictureInPictureController?
@@ -37,6 +37,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         super.viewDidLoad()
         topLabel.text = video.title as String
         
+        pipEnabled = configAllowsPiP()
         setUpContentPlayer()
         setupPiP()
         
@@ -77,11 +78,18 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         
         let mock = MockMediaEntryProvider(video.title)
         mock.addSource(video.title, contentUrl: video.video)
-        config.set(mediaEntry: mock.mediaEntry!)
+        
+        config.set(mediaEntry: mock.mediaEntry!).set(allowPlayerEngineExpose: kAllowAVPlayerExpose)
         
         if kUseIMA {
             var plugins = [String : AnyObject?]()
-            plugins[AdsPlugin.pluginName] = video.tag != "" ? video.tag as AnyObject? : video.tagsTimes as AnyObject?
+            if video.tag != "" {
+                plugins[AdsPlugin.pluginName] = video.tag as AnyObject?
+            } else {
+                plugins[AdsPlugin.pluginName] = video.tagsTimes as AnyObject?
+                pipEnabled = true
+            }
+            
             config.plugins = plugins
         }
         
@@ -98,10 +106,14 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     }
     
     func setupPiP() {
-        /*pictureInPictureController = self.playerController.createPiPController(with: self)
+        pictureInPictureController = self.playerController.createPiPController(with: self)
         if (!AVPictureInPictureController.isPictureInPictureSupported() && pictureInPictureButton != nil) {
             pictureInPictureButton.isHidden = true;
-        }*/
+        }
+    }
+    
+    func configAllowsPiP() -> Bool {
+        return kAllowAVPlayerExpose || !kUseIMA
     }
     
     func onPlayPressed(_ sender: UIButton) {
@@ -181,7 +193,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     }
     
     func playerCanPlayAd(_ player: Player) -> Bool {
-        return pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
+        return kAllowAVPlayerExpose || pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
     }
     
     public func playerCompanionView(_ player: Player) -> UIView? {
@@ -199,7 +211,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     }
     
     func playerAdDidRequestContentPause(_ player: Player) {
-        pipEnabled = kAllowAVPlayerExpose ? true : false
+        pipEnabled = configAllowsPiP() ? true : false
         progressBar.isEnabled = false
     }
     
@@ -228,5 +240,4 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     
     func player(_ player: Player, adWebOpenerWillOpenExternalBrowser webOpener: NSObject!) {
     }
-
 }

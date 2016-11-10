@@ -43,7 +43,7 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // Populate the video array.
     func initVideos() {
-        let dfpThumbnail = UIImage(named: "dfp.png")
+        let dfpThumbnail = UIImage(named: "bunny.png")
         let bipThumbnail = UIImage(named: "bip.png")
         
         var tagsTimes = [TimeInterval : String]()
@@ -133,7 +133,7 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
         if indexPath.section == 0 {
             return 44
         }
-        return 100
+        return tableView.tag == 1 ? 60 : 100
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

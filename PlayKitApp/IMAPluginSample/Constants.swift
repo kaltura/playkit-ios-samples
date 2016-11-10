@@ -1,7 +1,7 @@
 import Foundation
 
 // DFP content path
-let kDFPContentPath = "http://rmcdn.2mdn.net/Demo/html5/output.mp4";
+let kDFPContentPath = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
 
 // Android content path
 let kAndroidContentPath = "https://s0.2mdn.net/instream/videoplayer/media/android.mp4";

@@ -318,10 +318,10 @@
 		A9CFB31B5C0660D95EDC2B4F35BD3FFD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D66F8CFFD9565D85201F9477BB1B223A /* Plugin.swift */,
-				30B155CE363A41710A17BAA722F5FD05 /* ReplaceMe.swift */,
 				BBF7926822C4200F7DEA9B6DBEADD100 /* Managers */,
 				02A658100D3C127BBFCE375EB7F25FB8 /* Player */,
+				D66F8CFFD9565D85201F9477BB1B223A /* Plugin.swift */,
+				30B155CE363A41710A17BAA722F5FD05 /* ReplaceMe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
