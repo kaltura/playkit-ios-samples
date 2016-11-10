@@ -12,8 +12,8 @@ import AVFoundation
 import AVKit
 import PlayKit
 
-class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate, PlayerDataSource/*, PlayerDelegate*/ {
-
+class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate, PlayerDataSource, PlayerDelegate {
+    
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var playheadButton: UIButton!
@@ -49,7 +49,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         self.playerController.pause()
         // Don't reset if we're presenting a modal view (e.g. in-app clickthrough).
         if ((navigationController!.viewControllers as NSArray).index(of: self) == NSNotFound) {
-            //self.playerController.destroy()
+            self.playerController.destroy()
             self.playerController = nil
         }
         super.viewWillDisappear(animated)
@@ -75,29 +75,22 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     func setUpContentPlayer() {
         let config = PlayerConfig()
         
+        let mock = MockMediaEntryProvider(video.title)
+        mock.addSource(video.title, contentUrl: video.video)
+        config.set(mediaEntry: mock.mediaEntry!)
+        
         if kUseIMA {
-            /*let adsPluginData: PluginData!
-            if video.tag != "" {
-                adsPluginData = PluginData(plugin: PluginType.Ads, data: video.tag as AnyObject?)
-            } else {
-                adsPluginData = PluginData(plugin: PluginType.Ads, data: video.tagsTimes as AnyObject?)
-            }
-            
-            config.plugins = [adsPluginData]*/
-            PlayKitManager.sharedInstance.registerPlugin(AdsPlugin.self)
+            var plugins = [String : AnyObject?]()
+            plugins[AdsPlugin.pluginName] = video.tag != "" ? video.tag as AnyObject? : video.tagsTimes as AnyObject?
+            config.plugins = plugins
         }
         
-        config.autoPlay = kAutoStartPlayback
-        
-        self.playerController = PlayKitManager.sharedInstance.createPlayer(config: config)
+        self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
         self.playerController.dataSource = self
-  //      self.playerController.delegate = self
+        self.playerController.delegate = self
         
         self.playerController.layer.frame = videoView.layer.bounds
         videoView.layer.addSublayer(self.playerController.layer)
-        if self.playerController.load(config) {
-            
-        }
         
         /*self.playerController.subscribe(to: PlayerEventType.playhead_state_changed, using: { (eventData: AnyObject?) -> Void in
             self.updatePlayhead(with: (eventData as! KalturaPlayerEventData).currentTime, duration: (eventData as! KalturaPlayerEventData).duration)
@@ -127,7 +120,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     
     @IBAction func onPlayPauseClicked(_ sender: AnyObject) {
         if (playheadButton.tag == PlayButtonType.playButton.rawValue) {
-            //self.playerController.resume()
+            self.playerController.resume()
             setPlayButtonType(PlayButtonType.pauseButton)
         } else {
             self.playerController.pause()
@@ -140,7 +133,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             return
         }
         let slider = sender as! UISlider
-        //playerController.seek(to: CMTimeMake(Int64(slider.value), 1))
+        playerController.seek(to: CMTimeMake(Int64(slider.value), 1))
     }
     
     @IBAction func onPipButtonClicked(_ sender: AnyObject) {
@@ -191,6 +184,14 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         return pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
     }
     
+    public func playerCompanionView(_ player: Player) -> UIView? {
+        return nil
+    }
+    
+    public func playerAdWebOpenerPresentingController(_ player: Player) -> UIViewController? {
+        return nil
+    }
+    
     func player(_ player: Player, adDidProgressToTime mediaTime: TimeInterval, totalTime: TimeInterval) {
         let time = CMTimeMakeWithSeconds(mediaTime, 1000)
         let duration = CMTimeMakeWithSeconds(totalTime, 1000)
@@ -206,4 +207,26 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         pipEnabled = true
         progressBar.isEnabled = true
     }
+    
+    func player(_ player: Player, failedWith error: String) {
+    }
+    
+    func player(_ player: Player, didReceive event: PlayerEventType) {
+    }
+    
+    func player(_ player: Player, adWebOpenerDidOpenInAppBrowser webOpener: NSObject!) {
+    }
+    
+    func player(_ player: Player, adWebOpenerDidCloseInAppBrowser webOpener: NSObject!) {
+    }
+    
+    func player(_ player: Player, adWebOpenerWillOpenInAppBrowser webOpener: NSObject!) {
+    }
+    
+    func player(_ player: Player, adWebOpenerWillCloseInAppBrowser webOpener: NSObject!) {
+    }
+    
+    func player(_ player: Player, adWebOpenerWillOpenExternalBrowser webOpener: NSObject!) {
+    }
+
 }

@@ -34,6 +34,10 @@
 		AF615B858BE1568FDECA2452E90236B6 /* Pods-all-PlayKitApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B70B6DAF4463B205DF2BBEE2A76C2A81 /* PlayKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 199AAEF419038DB47C5530601E47D400 /* PlayKit-dummy.m */; };
 		B8735279856428A17DC3618841F33F7C /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */; };
+		BF02304B1DD34C8200C620C6 /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02304A1DD34C8200C620C6 /* PlayerLoader.swift */; };
+		BF02304F1DD3529200C620C6 /* PlayerDecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02304E1DD3529200C620C6 /* PlayerDecoratorBase.swift */; };
+		BF0230501DD3553C00C620C6 /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02304A1DD34C8200C620C6 /* PlayerLoader.swift */; };
+		BF0230511DD3554B00C620C6 /* PlayerDecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02304E1DD3529200C620C6 /* PlayerDecoratorBase.swift */; };
 		C06756F7351F2F5BD8E756BBEBBEEDEA /* PlayKit.default-IMAPlugin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FE51E06D0C9B1E6764E9DC143EDE7687 /* PlayKit.default-IMAPlugin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D27D8EAA950D1B76280ADC5BF18A812B /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2C2090F3984FB42D6784C513B50F6 /* AVPlayerEngine.swift */; };
 		DBBF3470C4DEE739F8464CFE42C8195D /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */; };
@@ -93,6 +97,8 @@
 		AFBDE88FD18688E2FAB1D565626A23B8 /* Pods-all-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
 		B1866F5B94D94EE78DA8C436A0E1D58C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerEngine.swift; sourceTree = "<group>"; };
+		BF02304A1DD34C8200C620C6 /* PlayerLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerLoader.swift; sourceTree = "<group>"; };
+		BF02304E1DD3529200C620C6 /* PlayerDecoratorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerDecoratorBase.swift; sourceTree = "<group>"; };
 		C0018EEF8864E84814091BCB32E949F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A1EC6A1499CCA11806BFEEACD56F29 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C7F3101AA28268BD438937079217B0 /* PlayKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-prefix.pch"; sourceTree = "<group>"; };
@@ -249,6 +255,8 @@
 				D9F19FFE9EAB2EF0068C6D5EC8477C44 /* PlayerConfig.swift */,
 				9B589BED3D3F3908089A0185E2714A33 /* PlayerController.swift */,
 				BEEC03591955FB7E4ACB807FB9E1A289 /* PlayerEngine.swift */,
+				BF02304A1DD34C8200C620C6 /* PlayerLoader.swift */,
+				BF02304E1DD3529200C620C6 /* PlayerDecoratorBase.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -343,10 +351,10 @@
 		F2E9C8D551E73242268F1F937EC19C94 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				FD27E6791D48B755847BA9DD534D33D3 /* Plugin.swift */,
-				CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */,
 				BD6F454C667DB1D8DCB9795D6F9ECDC8 /* Managers */,
 				583E606D9EE69F3F7528C47EDB33B101 /* Player */,
+				FD27E6791D48B755847BA9DD534D33D3 /* Plugin.swift */,
+				CBB2FE437979B0A0DCD642B76A357CB0 /* ReplaceMe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -502,10 +510,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ED4DD855F3157842990733D1B3393E3 /* AdsEnabledPlayerController.swift in Sources */,
+				BF0230511DD3554B00C620C6 /* PlayerDecoratorBase.swift in Sources */,
 				9FDB0E541267599577A08EE0C7B02012 /* AdsPlugin.swift in Sources */,
 				7AF30E943897FEE12E120408B7B0808E /* AVPlayerEngine.swift in Sources */,
 				13FCC754A7F915ABD362F3FEC2D619F6 /* MediaEntry.swift in Sources */,
 				8B7BCE56B1F4B2580685F0DEDDAE9699 /* Player.swift in Sources */,
+				BF0230501DD3553C00C620C6 /* PlayerLoader.swift in Sources */,
 				29CDD502C4736569544437CB40AC672E /* PlayerConfig.swift in Sources */,
 				AE1CFE8AC7E217BCA2A381BD501FC74E /* PlayerController.swift in Sources */,
 				64C3F1DD45239B199D8DBC5D02E80FCF /* PlayerEngine.swift in Sources */,
@@ -531,11 +541,13 @@
 				D27D8EAA950D1B76280ADC5BF18A812B /* AVPlayerEngine.swift in Sources */,
 				9B9F6E344F74FD2A2103FD8C2D8620B7 /* MediaEntry.swift in Sources */,
 				26F785A5B80E7E65FA31190648A6EC58 /* Player.swift in Sources */,
+				BF02304F1DD3529200C620C6 /* PlayerDecoratorBase.swift in Sources */,
 				A3F649646414B74885F70DB82A9F2DD1 /* PlayerConfig.swift in Sources */,
 				A45985BE2F1034C27464E6792B4EBC09 /* PlayerController.swift in Sources */,
 				B8735279856428A17DC3618841F33F7C /* PlayerEngine.swift in Sources */,
 				B70B6DAF4463B205DF2BBEE2A76C2A81 /* PlayKit-dummy.m in Sources */,
 				710C77C6258C87C0BB149FDDB7886109 /* PlayKitManager.swift in Sources */,
+				BF02304B1DD34C8200C620C6 /* PlayerLoader.swift in Sources */,
 				197C42A843BEA8B568B47120EF9BCC7B /* Plugin.swift in Sources */,
 				8019E90FE42E0B35ECE5F3E275BB592F /* ReplaceMe.swift in Sources */,
 			);

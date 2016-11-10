@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import PlayKit
 
 var kAutoStartPlayback = true
 var kUseIMA = true
@@ -25,9 +26,12 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
     // Set up the app.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         language = "en"
         initVideos()
         
+        PlayKitManager.sharedInstance.registerPlugin(AdsPlugin.self)
+
         // For PiP.
         do {
             try AVAudioSession.sharedInstance().setActive(true);

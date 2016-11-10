@@ -18,12 +18,11 @@ class ViewController: UIViewController {
         
         //PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
         let config = PlayerConfig()
-        self.player = PlayKitManager.sharedInstance.createPlayer(config:config)
+        self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
         
         self.player.layer.backgroundColor = UIColor.red.cgColor
         self.player.layer.frame = playerContainer.bounds
         self.playerContainer.layer.addSublayer(player.layer)
-        self.player.load(config)
     }
 
     @IBOutlet weak var playerContainer: UIView!

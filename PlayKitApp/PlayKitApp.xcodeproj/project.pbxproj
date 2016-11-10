@@ -16,6 +16,7 @@
 		BF02303A1DD2F8C200C620C6 /* dfp.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230321DD2F8C200C620C6 /* dfp.png */; };
 		BF02303B1DD2F8C200C620C6 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230331DD2F8C200C620C6 /* pause.png */; };
 		BF02303C1DD2F8C200C620C6 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230341DD2F8C200C620C6 /* play.png */; };
+		BF0230491DD34ACC00C620C6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0230481DD34ACC00C620C6 /* Video.swift */; };
 		BFD096B21DCF3D1400260D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD096B11DCF3D1400260D6A /* AppDelegate.swift */; };
 		BFD096B41DCF3D1400260D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD096B31DCF3D1400260D6A /* ViewController.swift */; };
 		BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B51DCF3D1400260D6A /* Main.storyboard */; };
@@ -31,7 +32,6 @@
 		BFFB91021DD22BFD00C23217 /* ima_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90FB1DD22BFD00C23217 /* ima_ipad.storyboard */; };
 		BFFB91031DD22BFD00C23217 /* ima_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90FC1DD22BFD00C23217 /* ima_iphone.storyboard */; };
 		BFFB91041DD22BFD00C23217 /* IMAVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90FD1DD22BFD00C23217 /* IMAVideoTableViewCell.swift */; };
-		BFFB91051DD22BFD00C23217 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90FE1DD22BFD00C23217 /* Video.swift */; };
 		EEBE17CA1D2C5AE420513C58 /* Pods_all_IMAPluginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF4109398BC691AF75A692D /* Pods_all_IMAPluginSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,7 @@
 		BF0230321DD2F8C200C620C6 /* dfp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dfp.png; sourceTree = "<group>"; };
 		BF0230331DD2F8C200C620C6 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
 		BF0230341DD2F8C200C620C6 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		BF0230481DD34ACC00C620C6 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD096B11DCF3D1400260D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD096B31DCF3D1400260D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +82,6 @@
 		BFFB90FB1DD22BFD00C23217 /* ima_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ima_ipad.storyboard; sourceTree = "<group>"; };
 		BFFB90FC1DD22BFD00C23217 /* ima_iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ima_iphone.storyboard; sourceTree = "<group>"; };
 		BFFB90FD1DD22BFD00C23217 /* IMAVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMAVideoTableViewCell.swift; sourceTree = "<group>"; };
-		BFFB90FE1DD22BFD00C23217 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		C4ADEFDF6331D20E3C97D870 /* Pods_IMAPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMAPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B2A99FD8B8603ED729177E /* Pods-all-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-PlayKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
 		DE12E2495022ACA5F9FBBFF3 /* Pods_all_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,7 +218,7 @@
 				BFFB90E61DD22BC100C23217 /* Info.plist */,
 				BF02303D1DD2F8CC00C620C6 /* Resources */,
 				BF02303F1DD2F8FA00C620C6 /* Storyboard */,
-				BFFB90FE1DD22BFD00C23217 /* Video.swift */,
+				BF0230481DD34ACC00C620C6 /* Video.swift */,
 			);
 			path = IMAPluginSample;
 			sourceTree = "<group>";
@@ -503,8 +503,8 @@
 				BFFB91001DD22BFD00C23217 /* IMAVideoViewController.swift in Sources */,
 				BFFB91041DD22BFD00C23217 /* IMAVideoTableViewCell.swift in Sources */,
 				BFFB90FF1DD22BFD00C23217 /* IMASettingsTableViewCell.swift in Sources */,
-				BFFB91051DD22BFD00C23217 /* Video.swift in Sources */,
 				BFFB90DB1DD22BC100C23217 /* AppDelegate.swift in Sources */,
+				BF0230491DD34ACC00C620C6 /* Video.swift in Sources */,
 				BF0230361DD2F8C200C620C6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

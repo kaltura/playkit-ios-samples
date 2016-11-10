@@ -48,7 +48,7 @@
                                         <connections>
                                             <outlet property="thumbnail" destination="Eje-7I-56j" id="qL6-Dj-ked"/>
                                             <outlet property="videoLabel" destination="TFO-jf-oPr" id="W6n-Te-gQ0"/>
-                                            <segue destination="yzJ-rv-kmj" kind="show" id="XLP-qf-p3L"/>
+                                            <segue destination="yzJ-rv-kmj" kind="show" identifier="showVideo" id="XLP-qf-p3L"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" rowHeight="44" id="dEP-k5-XcV" customClass="IMASettingsTableViewCell" customModule="IMAPluginSample" customModuleProvider="target">
@@ -86,6 +86,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tags" id="bKu-dz-JYX"/>
+                    <connections>
+                        <outlet property="tableView" destination="u33-Y6-RXg" id="6Uo-qI-8vx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2D-V1-jei" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
