@@ -30,9 +30,8 @@ class ViewController: UIViewController {
             print("error")
         }
         
-        self.player.layer.backgroundColor = UIColor.red.cgColor
-        self.player.layer.frame = playerContainer.bounds
-        self.playerContainer.layer.addSublayer(player.layer)
+        self.player.view.frame = playerContainer.bounds
+        self.playerContainer.addSubview(player.view)
     }
 
     @IBOutlet weak var playerContainer: UIView!
