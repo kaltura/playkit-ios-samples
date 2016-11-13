@@ -195,11 +195,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     }
     
     //MARK: Player DataSource and Delegate methods
-    
-    func playerVideoView(_ player: Player) -> UIView {
-        return videoView
-    }
-    
+        
     func playerCanPlayAd(_ player: Player) -> Bool {
         return kAllowAVPlayerExpose || pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
     }
