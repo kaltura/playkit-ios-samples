@@ -104,8 +104,9 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         self.playerController.dataSource = self
         self.playerController.delegate = self
         
-        self.playerController.layer.frame = videoView.layer.bounds
-        videoView.layer.addSublayer(self.playerController.layer)
+        self.playerController.view.frame = CGRect(origin: CGPoint.zero, size: videoView.frame.size)
+        videoView.addSubview(self.playerController.view)
+        
         
         /*self.playerController.subscribe(to: PlayerEventType.playhead_state_changed, using: { (eventData: AnyObject?) -> Void in
             self.updatePlayhead(with: (eventData as! KalturaPlayerEventData).currentTime, duration: (eventData as! KalturaPlayerEventData).duration)

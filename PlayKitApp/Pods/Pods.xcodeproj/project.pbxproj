@@ -35,6 +35,8 @@
 		B3C9C6D177F17A8FDB8A68FBF594C098 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1147AB94D2AA11C9CD87D1D4C31D5FD2 /* PlayerConfig.swift */; };
 		B63A536D4EB312AE294760D321E103DB /* PlayKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A32B7CD603696B45174FB2CD6A1CCE24 /* PlayKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9A0E18A0D35EFE343004D7DDF9CF3F5 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F8CFFD9565D85201F9477BB1B223A /* Plugin.swift */; };
+		BF0230531DD877FB00C620C6 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0230521DD877FB00C620C6 /* PlayerView.swift */; };
+		BF0230541DD8780100C620C6 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0230521DD877FB00C620C6 /* PlayerView.swift */; };
 		C25A6104B67FC8DA9CB698BD3B4474DC /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CEE9A2EEEF68CE22F380E51EEA17D3 /* AdsEnabledPlayerController.swift */; };
 		C7F8FE5C7D84640D07EE9B43E7AAB2D4 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1147AB94D2AA11C9CD87D1D4C31D5FD2 /* PlayerConfig.swift */; };
 		CC4E16DE382A07CDB7F4FF382B9F3227 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F8CFFD9565D85201F9477BB1B223A /* Plugin.swift */; };
@@ -101,6 +103,7 @@
 		B1866F5B94D94EE78DA8C436A0E1D58C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3F111FEC954448D4C213E566B106F64 /* PlayerLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerLoader.swift; sourceTree = "<group>"; };
 		B8CEE9A2EEEF68CE22F380E51EEA17D3 /* AdsEnabledPlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsEnabledPlayerController.swift; sourceTree = "<group>"; };
+		BF0230521DD877FB00C620C6 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		C0018EEF8864E84814091BCB32E949F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5A1EC6A1499CCA11806BFEEACD56F29 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6C7F3101AA28268BD438937079217B0 /* PlayKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-prefix.pch"; sourceTree = "<group>"; };
@@ -164,6 +167,7 @@
 				67B977933F55462DFF08158767C60D72 /* PlayerDecoratorBase.swift */,
 				68A919AD407A959AAEEAD74D0346BFAD /* PlayerEngine.swift */,
 				B3F111FEC954448D4C213E566B106F64 /* PlayerLoader.swift */,
+				BF0230521DD877FB00C620C6 /* PlayerView.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -520,6 +524,7 @@
 				C25A6104B67FC8DA9CB698BD3B4474DC /* AdsEnabledPlayerController.swift in Sources */,
 				873F16247C4C866C7D98681896FBBEC2 /* AdsPlugin.swift in Sources */,
 				917C3C11CBD11EE854A4F585766B2AF7 /* AVPlayerEngine.swift in Sources */,
+				BF0230541DD8780100C620C6 /* PlayerView.swift in Sources */,
 				152CF235B8821F0D7F0E1C8DB5628BC1 /* MediaEntry.swift in Sources */,
 				659F3A4E24E0084A87B2F18FDE593AC0 /* Player.swift in Sources */,
 				B3C9C6D177F17A8FDB8A68FBF594C098 /* PlayerConfig.swift in Sources */,
@@ -545,6 +550,7 @@
 				FDF6F767A8FD0538892A7205EDE7CE5C /* PlayerController.swift in Sources */,
 				DD7F2E8D1BF681B8F9457FA4F3590C3B /* PlayerDecoratorBase.swift in Sources */,
 				2EBC07263B2A69EC0A2805201C9D89BD /* PlayerEngine.swift in Sources */,
+				BF0230531DD877FB00C620C6 /* PlayerView.swift in Sources */,
 				3CAC112DC853691786E8D2F2E42328B0 /* PlayerLoader.swift in Sources */,
 				8969031145565CB970517FBE4959F9E9 /* PlayKit-dummy.m in Sources */,
 				80DA746286B92E0A57081D62673E7F91 /* PlayKitManager.swift in Sources */,
