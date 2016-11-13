@@ -93,7 +93,14 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             config.plugins = plugins
         }
         
-        self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
+        do {
+            try self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
+        } catch PlayKitError.multipleDecoratorsDetected {
+            print("multipleDecoratorsDetected")
+        } catch {
+            print("error")
+        }
+        
         self.playerController.dataSource = self
         self.playerController.delegate = self
         

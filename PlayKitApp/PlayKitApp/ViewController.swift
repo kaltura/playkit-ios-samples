@@ -22,7 +22,13 @@ class ViewController: UIViewController {
         mock.addSource("test", contentUrl: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
         config.set(mediaEntry: mock.mediaEntry!)
         
-        self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
+        do {
+            try self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
+        } catch PlayKitError.multipleDecoratorsDetected {
+            print("multipleDecoratorsDetected")
+        } catch {
+            print("error")
+        }
         
         self.player.layer.backgroundColor = UIColor.red.cgColor
         self.player.layer.frame = playerContainer.bounds
