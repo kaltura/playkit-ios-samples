@@ -216,10 +216,10 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
                 let duration = CMTimeMakeWithSeconds(data["totalTime"]!, 1000)
                 self.updatePlayhead(with: time, duration: duration)
             }
-        } else if event == PlayerEventType.ad_did_pause {
+        } else if event == PlayerEventType.ad_did_request_pause {
             pipEnabled = configAllowsPiP() ? true : false
             progressBar.isEnabled = false
-        } else if event == PlayerEventType.ad_did_resume {
+        } else if event == PlayerEventType.ad_did_request_resume {
             pipEnabled = true
             progressBar.isEnabled = true
         }
