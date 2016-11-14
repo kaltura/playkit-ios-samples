@@ -83,13 +83,22 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         
         if kUseIMA {
             var plugins = [String : AnyObject?]()
+            
+            let adsConfig = AdsConfig()
+            
             if video.tag != "" {
-                plugins[AdsPlugin.pluginName] = video.tag as AnyObject?
-            } else {
-                plugins[AdsPlugin.pluginName] = video.tagsTimes as AnyObject?
+                adsConfig.set(adTagUrl: video.tag)
+            } else if let tagsTimes = video.tagsTimes {
+                adsConfig.set(tagsTimes: tagsTimes)
                 pipEnabled = true
             }
             
+            adsConfig.set(webOpenerPresentingController: self)
+            if let companionView = self.companionView {
+                adsConfig.set(companionView: companionView)
+            }
+            
+            plugins[AdsPlugin.pluginName] = adsConfig
             config.plugins = plugins
         }
         
@@ -198,14 +207,6 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         
     func playerCanPlayAd(_ player: Player) -> Bool {
         return kAllowAVPlayerExpose || pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
-    }
-    
-    public func playerCompanionView(_ player: Player) -> UIView? {
-        return nil
-    }
-    
-    public func playerAdWebOpenerPresentingController(_ player: Player) -> UIViewController? {
-        return nil
     }
     
     func player(_ player: Player, didReceive event: PlayerEventType, with eventData: Any?) {
