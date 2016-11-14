@@ -208,40 +208,22 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         return nil
     }
     
-    func player(_ player: Player, adDidProgressToTime mediaTime: TimeInterval, totalTime: TimeInterval) {
-        let time = CMTimeMakeWithSeconds(mediaTime, 1000)
-        let duration = CMTimeMakeWithSeconds(totalTime, 1000)
-        self.updatePlayhead(with: time, duration: duration)
-    }
-    
-    func playerAdDidRequestContentPause(_ player: Player) {
-        pipEnabled = configAllowsPiP() ? true : false
-        progressBar.isEnabled = false
-    }
-    
-    func playerAdDidRequestContentResume(_ player: Player) {
-        pipEnabled = true
-        progressBar.isEnabled = true
+    func player(_ player: Player, didReceive event: PlayerEventType, with eventData: Any?) {
+        if event == PlayerEventType.ad_did_progress_to_time {
+            if let data = eventData as? [String : TimeInterval] {
+                let time = CMTimeMakeWithSeconds(data["mediaTime"]!, 1000)
+                let duration = CMTimeMakeWithSeconds(data["totalTime"]!, 1000)
+                self.updatePlayhead(with: time, duration: duration)
+            }
+        } else if event == PlayerEventType.ad_did_pause {
+            pipEnabled = configAllowsPiP() ? true : false
+            progressBar.isEnabled = false
+        } else if event == PlayerEventType.ad_did_resume {
+            pipEnabled = true
+            progressBar.isEnabled = true
+        }
     }
     
     func player(_ player: Player, failedWith error: String) {
-    }
-    
-    func player(_ player: Player, didReceive event: PlayerEventType) {
-    }
-    
-    func player(_ player: Player, adWebOpenerDidOpenInAppBrowser webOpener: NSObject!) {
-    }
-    
-    func player(_ player: Player, adWebOpenerDidCloseInAppBrowser webOpener: NSObject!) {
-    }
-    
-    func player(_ player: Player, adWebOpenerWillOpenInAppBrowser webOpener: NSObject!) {
-    }
-    
-    func player(_ player: Player, adWebOpenerWillCloseInAppBrowser webOpener: NSObject!) {
-    }
-    
-    func player(_ player: Player, adWebOpenerWillOpenExternalBrowser webOpener: NSObject!) {
     }
 }
