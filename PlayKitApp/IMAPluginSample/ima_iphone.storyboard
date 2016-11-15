@@ -73,7 +73,7 @@
                                         <connections>
                                             <outlet property="thumbnail" destination="E6U-Wa-Iut" id="Jhd-dZ-Y6x"/>
                                             <outlet property="videoLabel" destination="P9o-DP-AIL" id="aR2-Vh-mEn"/>
-                                            <segue destination="dg8-m6-p1J" kind="push" identifier="showVideo" id="AHz-q7-wPK"/>
+                                            <segue destination="dg8-m6-p1J" kind="show" identifier="showVideo" id="AHz-q7-wPK"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
