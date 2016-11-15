@@ -98,7 +98,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
                 adsConfig.set(companionView: companionView)
             }
             
-            plugins[AdsPlugin.pluginName] = adsConfig
+            plugins[IMAPlugin.pluginName] = adsConfig
             config.plugins = plugins
         }
         

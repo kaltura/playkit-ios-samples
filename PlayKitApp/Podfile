@@ -9,7 +9,6 @@ abstract_target 'all' do
     target 'PlayKitApp' do
     end
     target 'IMAPluginSample' do
-        pod 'PlayKit/IMAPlugin'      , :path => ‘../../playkit-ios'
     end
  end
 

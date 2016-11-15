@@ -1,5 +1,5 @@
 framework module PlayKit {
-  umbrella header "PlayKit.default-IMAPlugin-umbrella.h"
+  umbrella header "PlayKit-iOS9.0-umbrella.h"
 
   export *
   module * { export * }

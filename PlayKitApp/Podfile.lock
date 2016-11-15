@@ -2,13 +2,11 @@ PODS:
   - GoogleAds-IMA-iOS-SDK (3.3.1)
   - PlayKit (0.1.0):
     - PlayKit/Core (= 0.1.0)
-  - PlayKit/Core (0.1.0)
-  - PlayKit/IMAPlugin (0.1.0):
+  - PlayKit/Core (0.1.0):
     - GoogleAds-IMA-iOS-SDK (~> 3.3)
 
 DEPENDENCIES:
   - PlayKit (from `../../playkit-ios`)
-  - PlayKit/IMAPlugin (from `../../playkit-ios`)
 
 EXTERNAL SOURCES:
   PlayKit:
@@ -16,8 +14,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 5643300870bd3289c47c0d0b5a2dbf595b05c336
-  PlayKit: 148f10630e73589081dec548be521cd8b65f312b
+  PlayKit: b7f179892eeb162351d3323e132698f290a07bf2
 
-PODFILE CHECKSUM: ade3db752132b16600c5712c243f6d877924e308
+PODFILE CHECKSUM: 36f4925af26996df426ecb0d7295ceaa1eeb0d73
 
 COCOAPODS: 1.1.0.rc.2

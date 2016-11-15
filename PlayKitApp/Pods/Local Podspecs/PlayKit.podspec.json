@@ -24,15 +24,7 @@
   "subspecs": [
     {
       "name": "Core",
-      "source_files": "Classes/**/*"
-    },
-    {
-      "name": "SamplePlugin",
-      "source_files": "Plugins/Sample"
-    },
-    {
-      "name": "IMAPlugin",
-      "source_files": "Plugins/IMA",
+      "source_files": "Classes/**/*",
       "xcconfig": {
         "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
         "OTHER_LDFLAGS": "$(inherited) -framework \"GoogleInteractiveMediaAds\"",
@@ -44,6 +36,10 @@
           "~> 3.3"
         ]
       }
+    },
+    {
+      "name": "SamplePlugin",
+      "source_files": "Plugins/Sample"
     },
     {
       "name": "AnalyticsPlugin",

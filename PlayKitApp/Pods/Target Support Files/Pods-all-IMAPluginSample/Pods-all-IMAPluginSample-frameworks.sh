@@ -84,8 +84,8 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/PlayKit.default-IMAPlugin/PlayKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PlayKit-iOS9.0/PlayKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/PlayKit.default-IMAPlugin/PlayKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PlayKit-iOS9.0/PlayKit.framework"
 fi
