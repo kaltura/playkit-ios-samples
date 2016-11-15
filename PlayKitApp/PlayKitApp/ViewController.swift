@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import SwiftyJSON
 
 class ViewController: UIViewController {
     var player : Player!
@@ -18,9 +19,19 @@ class ViewController: UIViewController {
         
         //PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
         let config = PlayerConfig()
-        let mock = MockMediaEntryProvider("test")
-        mock.addSource("test", contentUrl: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        config.set(mediaEntry: mock.mediaEntry!)
+        
+        var source = [String : Any]()
+        source["id"] = "test"
+        source["url"] = "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
+        
+        var sources = [JSON]()
+        sources.append(JSON(source))
+        
+        var entry = [String : Any]()
+        entry["id"] = "test"
+        entry["sources"] = sources
+        
+        config.set(mediaEntry: MediaEntry(json: JSON(entry)))
         
         do {
             try self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
