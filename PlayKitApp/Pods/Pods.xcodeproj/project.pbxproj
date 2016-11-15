@@ -7,177 +7,275 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05CBB169E24D234D066504ADADED8FFE /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62001ADEF97FFE099648A1D91F0779E8 /* PlayerView.swift */; };
-		071CA7AB0741ADC21ADA2276045FF0D1 /* IMAPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D55792BFED4711FCABF6668D4CDAE1D /* IMAPlugin.swift */; };
-		16D5CF0C15D0532E030285992E2F0009 /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6702EDA80396DC0B70FFBE7C61713 /* PlayerEngine.swift */; };
-		16F11E757EBC7A346F030B8D6733EEB7 /* Pods-all-PlayKitApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F03F9982427BDC4DD2DAF913590F74 /* Pods-all-PlayKitApp-dummy.m */; };
-		1DBE91FD94D87D983B0B0AB6750D2B0A /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22946CE123C576FDEB844D6CA601FED9 /* PlayerConfig.swift */; };
-		2DEB6A0AEB5FFD7DBAA75CB3C17C3798 /* Pods-all-PlayKitApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		32BCCE48FE105047271AE1FF9697E684 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		5674152C25573DBBD52B30AB733C8EE1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D684631FE67C16DE7E3CB829BC44F /* ReplaceMe.swift */; };
-		5954E1D5C17EAE2EB034E2ED86F82778 /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AC37DA03374A5CC890A5D48649EAB /* AdsConfig.swift */; };
-		59689E14B8B19D722049E092FE3D9FD0 /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C30DEE55F3D7C4651A281AC28A4FF5 /* PlayKitManager.swift */; };
-		5B99F9CD626E08D7453588021FBA53F7 /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80797264AC574148242E853D6F5D3F6 /* AVPlayerEngine.swift */; };
-		5F7C74D9E636E0851C8F69E5DAF9DA02 /* PlayKit-iOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BA4557734A90A8F6DD1819E1D58E964 /* PlayKit-iOS9.0-dummy.m */; };
-		64463B4F73226F33014891ABCE2B6A66 /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B6B49788ECDAC47B66BF83917BFA0 /* PlayerLoader.swift */; };
-		79E19C0E7EC2FA8CFBB1EA66D25B5299 /* Pods-all-IMAPluginSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE451135CCFE2DABC83BC8A74988EE80 /* Pods-all-IMAPluginSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A9D66F45E3593CB7776C53D611322F5 /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80797264AC574148242E853D6F5D3F6 /* AVPlayerEngine.swift */; };
-		7FF86F4D09E3B387948B52051F24BB08 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267D47EF8671174444EFF28B41394C8 /* Plugin.swift */; };
-		8268C970A564F5711E16FBB1977AF3C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		8341A2C2AF5F7402C22D394672A216EE /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22946CE123C576FDEB844D6CA601FED9 /* PlayerConfig.swift */; };
-		88C59EC814B4DEB61860D1F28C7F81A3 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E8F9B73FE5B9231ABD430D69EF88B /* PlayerController.swift */; };
-		8A032C192425A9DF31B144DD14986DE8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F212C9AE83657B84E90D6B1069DF9BA /* Player.swift */; };
-		8D62C7D0B33F88F9167E6A69B879BB99 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 999D684631FE67C16DE7E3CB829BC44F /* ReplaceMe.swift */; };
-		97BEFFFCFCCA7293283131BA47AE8160 /* Pods-all-IMAPluginSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7C6248D0F5E51A1417372AADE7D89 /* Pods-all-IMAPluginSample-dummy.m */; };
-		A1D051896A2AC6759294DD874274B152 /* AdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22430DB12E0356F1E93163D8C4409F07 /* AdsPlugin.swift */; };
-		A2A6CA800A86614321ED29D64231866B /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B6B49788ECDAC47B66BF83917BFA0 /* PlayerLoader.swift */; };
-		AC7FB96D0AE78ACB97D0A919E127A11B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		AE0CFB221A44429FF6001FA7429A4F00 /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AC37DA03374A5CC890A5D48649EAB /* AdsConfig.swift */; };
-		AE6A6CD18F2545FFBB65DD888CD61AE4 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31E8F9B73FE5B9231ABD430D69EF88B /* PlayerController.swift */; };
-		B199BECEDCB1EE102B75E2D814EB066D /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425CD72D63C752243AFCAFC91F52922 /* AdsEnabledPlayerController.swift */; };
-		B1E0D8CC293FBFC4207186005937F4D5 /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED6702EDA80396DC0B70FFBE7C61713 /* PlayerEngine.swift */; };
-		B5B411BE5F6E0E93781A5A7C61EFDEB6 /* AdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22430DB12E0356F1E93163D8C4409F07 /* AdsPlugin.swift */; };
-		BF3F2FDC60239780F9ED443C4CC61B66 /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C30DEE55F3D7C4651A281AC28A4FF5 /* PlayKitManager.swift */; };
-		C0A8A7C4ACE8C37203D4FC0440AF61C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		C428F7BC13711A5B37EA5718BF81B667 /* PlayKit-iOS9.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C20A6EEFBAD1EC18B65B4F7EE746F65 /* PlayKit-iOS9.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7022CEE0B4590EC141EFDDCF2E71FDC /* PlayKit-iOS10.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D328D9363986B6A3F755D7FA741E2C0A /* PlayKit-iOS10.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C791C4A063F4208B1A3742995D7A67ED /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265B5B15959843391013DC3CBC73556 /* MediaEntry.swift */; };
-		D146B8FABB8A14C1B6995A2FEA9DFE70 /* IMAPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D55792BFED4711FCABF6668D4CDAE1D /* IMAPlugin.swift */; };
-		D653522081FD6F29743A232BF2372901 /* PlayKit-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8222B98AD1351B53182486E87CDC815F /* PlayKit-iOS10.0-dummy.m */; };
-		D6F4E63156D2EB14D7D9A7B17A7E72D0 /* PlayerDecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723FDF111F2E3F07065D53AA9A45B85A /* PlayerDecoratorBase.swift */; };
-		E467E6D313353B43A29969BF0B1E14F7 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = A267D47EF8671174444EFF28B41394C8 /* Plugin.swift */; };
-		ED929E5B94B5B98357DA199DC1A3FC57 /* PlayerDecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723FDF111F2E3F07065D53AA9A45B85A /* PlayerDecoratorBase.swift */; };
-		F0A08AC897F5337CF51BE9A1C2F68A55 /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2425CD72D63C752243AFCAFC91F52922 /* AdsEnabledPlayerController.swift */; };
-		F4A7207BB65DDE11FCD9ABB81D8F1F66 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F212C9AE83657B84E90D6B1069DF9BA /* Player.swift */; };
-		F57D9CF4A5B513853DB2698EC0802B0A /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62001ADEF97FFE099648A1D91F0779E8 /* PlayerView.swift */; };
-		FBD5B5A47DB2AC6A7C3C44CFBF36A803 /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = D265B5B15959843391013DC3CBC73556 /* MediaEntry.swift */; };
+		0EC5E54A01A4F8BD1AE6461558A4475F /* PlayerDecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61584EBFDE1607F2A11DD33259E5F214 /* PlayerDecoratorBase.swift */; };
+		0EF73F3269EFCF1D3024491FEDA3C87D /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F357F4B648014C79C6D8B8ED397255 /* AVPlayerEngine.swift */; };
+		11CF3C5765C83BF381B7B7B4E5512333 /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19E011B4379766A2D25E9A925329C4 /* PlayerLoader.swift */; };
+		194C7BF92E01CDD91B326638B6869F63 /* AdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C135D826D0164D0DFDD4B02E834357 /* AdsPlugin.swift */; };
+		1961FF88091B2BA0819035037F4A4F16 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE08BEDA8705FAB29EBF697803126A /* PlayerController.swift */; };
+		1A2E9EAE727681FED50EB1CC7B3536CF /* MockMediaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EC45CF021BA1D7C47F180F1AE26E93 /* MockMediaProvider.swift */; };
+		1DF24F3D3B954566B062C3ECC2D944D0 /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C18A0A44CFA8E74374F7498E46AAE /* MediaEntry.swift */; };
+		26497FD6FE448785930D76A0A531F3CC /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A5D3558859B829A7F9ACE499D9EA /* PlayKitManager.swift */; };
+		28959BECC4D59EEDB3C418E3569053C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */; };
+		2897B473F5C478DE313F295049170CCA /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C22438DB7ED28DD31AFBC64F82F32D /* AdsEnabledPlayerController.swift */; };
+		28A0BE009EEA2B75F1B9FB6FBB29C15D /* Pods-all-IMAPluginSample-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F7C6248D0F5E51A1417372AADE7D89 /* Pods-all-IMAPluginSample-dummy.m */; };
+		28AC3175D2EAD36FF91E8508C8F9AA3C /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05A2DDA9058082E37FAAA448F008219 /* SwiftyJSON.framework */; };
+		2A0E3CBF68B5034A009AA3D1A1F5ACB4 /* MediaEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3449A4BE9C80BAAC0926CA0B1D7DC8 /* MediaEntryProvider.swift */; };
+		2CE3EFA3C36DEBC676738768C1067A0E /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C2FDEC2776B0E924AD8847760CC3 /* AdsConfig.swift */; };
+		356B56AEC6A2451A7A89968D88EFB1AB /* SwiftyJSON-iOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67BF80ACBD2E919A9D147690D405C3D0 /* SwiftyJSON-iOS9.0-dummy.m */; };
+		3C9962EF65519A7CF70522B1E03F355A /* Pods-all-PlayKitApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F03F9982427BDC4DD2DAF913590F74 /* Pods-all-PlayKitApp-dummy.m */; };
+		3F3313BD04183D542743EF86268A8229 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2594941C9556426D5DDA1822C6310E2 /* Player.swift */; };
+		3F7CD452F03453C7AE68E643BDD72E91 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B92C7B165A8A28E21F935009291863 /* ReplaceMe.swift */; };
+		415BF6EBADB7116F4D2F66954672BC84 /* Pods-all-PlayKitApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A15D7CA56ABDB39C6C6D17CEBD4716B /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED810D34C8DBBE951FC66485E062D6 /* PlayerConfig.swift */; };
+		4A429205FF42167AEB7F6A5F23BFED58 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B92C7B165A8A28E21F935009291863 /* ReplaceMe.swift */; };
+		4BC40F964C53949203308661625E8FF8 /* MediaEntryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3449A4BE9C80BAAC0926CA0B1D7DC8 /* MediaEntryProvider.swift */; };
+		594CEA71D67282C9DEF60EC5563D5E5D /* PlayKit-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0B4F7A01B2FB9490E5DDD06919E214 /* PlayKit-iOS10.0-dummy.m */; };
+		633125CD64A8DB8829E1B7DACA5DBA17 /* PlayerLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C19E011B4379766A2D25E9A925329C4 /* PlayerLoader.swift */; };
+		641486370C9B027F8AD55A9EDD33148F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B00207EE3CA04062479EEBBE6E56CA /* Response.swift */; };
+		6CD1CEABD89F2ADD0D355604F3AB6CF7 /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425BACCCADAA63EAAE18D608BE3A5F73 /* PlayerEngine.swift */; };
+		6FA75EDC4E54F5E03F49BCA70E759EF2 /* IMAPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9718EFBBE4785952DDE7220D397DA3A5 /* IMAPlugin.swift */; };
+		723364D3CE5EB8B2063AF93F93B8E6C7 /* PlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CE08BEDA8705FAB29EBF697803126A /* PlayerController.swift */; };
+		72CC1772A06927739449CFF3B409B559 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F05A2DDA9058082E37FAAA448F008219 /* SwiftyJSON.framework */; };
+		7424CD4AE33375EFB7B39F7E5F205489 /* AdsEnabledPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C22438DB7ED28DD31AFBC64F82F32D /* AdsEnabledPlayerController.swift */; };
+		793D45AB9D2F237BBCB3A1F81BC62562 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */; };
+		79AC745623E13BD3963564C44A1F8976 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */; };
+		7F833AE582D009E0E207F12492DECB76 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2594941C9556426D5DDA1822C6310E2 /* Player.swift */; };
+		80F483D0C33905120A87314A3B3DB655 /* PlayKit-iOS10.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CBFF1645847679A87900418EACB0E9A /* PlayKit-iOS10.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82B5CE39B3F4BC4D182547ACA02AFC4C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B00207EE3CA04062479EEBBE6E56CA /* Response.swift */; };
+		830897D39A6B6B1EF464B390042CD1CE /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068787D37DCEE67FA5E3AFD636FAE48B /* PlayerView.swift */; };
+		855C16BDEC6FDAB5D8351B4707F60B64 /* SwiftyJSON-iOS10.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9961C5FC2C65B9534AE2BD12CA85D /* SwiftyJSON-iOS10.0-dummy.m */; };
+		86F368004AD53B5D249E27DC7D1C6996 /* PlayKit-iOS9.0-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E9FB2E1B5949BF0B6D3089D4DC33E7 /* PlayKit-iOS9.0-dummy.m */; };
+		888C499BEAD386A9B9C1E6FB6DE4625F /* PlayKit-iOS9.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA5550F9DB06176DAB7F0983421197EE /* PlayKit-iOS9.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D9619D94DCD123F0EB9316C3A7550B4 /* AdsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C135D826D0164D0DFDD4B02E834357 /* AdsPlugin.swift */; };
+		909F2589034F05C0D6010C6500B4F82A /* Pods-all-IMAPluginSample-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE451135CCFE2DABC83BC8A74988EE80 /* Pods-all-IMAPluginSample-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96BE6D3F9D4CCE81D10319AB82BB4DE6 /* PlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425BACCCADAA63EAAE18D608BE3A5F73 /* PlayerEngine.swift */; };
+		9809D62EDFE46DB5A36230FDEDBAF0DD /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D827BCFB550A9D2197B7D4F010ED4D4 /* SwiftyJSON.swift */; };
+		A076756DBA24A327196EE4E9787720A8 /* AVPlayerEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F357F4B648014C79C6D8B8ED397255 /* AVPlayerEngine.swift */; };
+		A7B7C0CD00F2D29C1BEEB5DCA039E3A0 /* SwiftyJSON-iOS9.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 731A95D0392B87A0092E041214FFC465 /* SwiftyJSON-iOS9.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE1EEC72426498A0CFFA9F84CE05D6A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */; };
+		B2026E0A53FDD94F8BE1C5EFDEC412B5 /* SwiftyJSON-iOS10.0-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7CD26DE2E2DF8AA79210C0609D5468F /* SwiftyJSON-iOS10.0-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B55D280DAD8B210828090925B96FAAA2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D827BCFB550A9D2197B7D4F010ED4D4 /* SwiftyJSON.swift */; };
+		B56C4AB90B4B6DE4E81D13CA9047879F /* PlayerDecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61584EBFDE1607F2A11DD33259E5F214 /* PlayerDecoratorBase.swift */; };
+		C279EC43FCD166F3B97BAD05F34C8042 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */; };
+		C62C14EAD7469FB4B9DCE4F29FFE1262 /* PlayKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C9A5D3558859B829A7F9ACE499D9EA /* PlayKitManager.swift */; };
+		C796116E2B52BA3FE7AB49715ED19A12 /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56346965F811305434DE14243B319B1E /* Plugin.swift */; };
+		C831AB48D0ECC01927E2FC1C5A12EFFF /* Plugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56346965F811305434DE14243B319B1E /* Plugin.swift */; };
+		C9D5282B226489039FC127CF6C06AC7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */; };
+		CD594087E9328517FC89D61D439101B3 /* MediaEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019C18A0A44CFA8E74374F7498E46AAE /* MediaEntry.swift */; };
+		D374D4B5F9CF29B2DE111D95DE526343 /* AdsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC5C2FDEC2776B0E924AD8847760CC3 /* AdsConfig.swift */; };
+		DCC5D76A0BFFD01F1560DAA3956244D5 /* PlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDED810D34C8DBBE951FC66485E062D6 /* PlayerConfig.swift */; };
+		E44C3740FF132AE3AB0F3584FDB4649E /* MockMediaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EC45CF021BA1D7C47F180F1AE26E93 /* MockMediaProvider.swift */; };
+		EEA6A54BB66347487731CD02908263E7 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 068787D37DCEE67FA5E3AFD636FAE48B /* PlayerView.swift */; };
+		F82208B121439EB185F253C8E912D943 /* IMAPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9718EFBBE4785952DDE7220D397DA3A5 /* IMAPlugin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		426148A57B2EB9C6B276EED4180F00C8 /* PBXContainerItemProxy */ = {
+		2EA3DFF3405E8975EBA5BE438F41C6E2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5818DB573A588765C54B777512F0F6CF;
+			remoteGlobalIDString = CCABBEB3A05D602179E2B5627E304AF8;
+			remoteInfo = "SwiftyJSON-iOS10.0";
+		};
+		416783E51A63A13388605B1C9C559FF0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7CCA940498AE8010137E09F78908113;
+			remoteInfo = "PlayKit-iOS10.0";
+		};
+		6B09465F340B1C934EDF3DC9AED5E3B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 20CC247F8B4FE68E64441E9ECFE40545;
 			remoteInfo = "PlayKit-iOS9.0";
 		};
-		709608B62EB6EE92D3D84178ACCF8417 /* PBXContainerItemProxy */ = {
+		7B77BA170C99757BAEA21C4B434E8955 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BAA23CD4FC2F5AAF035E713FCC2046B8;
-			remoteInfo = "PlayKit-iOS10.0";
+			remoteGlobalIDString = CCABBEB3A05D602179E2B5627E304AF8;
+			remoteInfo = "SwiftyJSON-iOS10.0";
+		};
+		AC4B2D81E1292D51FE8F2807D197A61F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D82B231A39139E9A54CBBE5092B7CE08;
+			remoteInfo = "SwiftyJSON-iOS9.0";
+		};
+		E2C7D5E82A4D9E340A84D5153CB0A08F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCABBEB3A05D602179E2B5627E304AF8;
+			remoteInfo = "SwiftyJSON-iOS10.0";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0160D491007B335916A11D91BFBBA7EE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		12882BDA574DCA84D917B98B49C2EF56 /* PlayKit-iOS10.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-iOS10.0-prefix.pch"; sourceTree = "<group>"; };
-		1A7B6B49788ECDAC47B66BF83917BFA0 /* PlayerLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerLoader.swift; sourceTree = "<group>"; };
+		019C18A0A44CFA8E74374F7498E46AAE /* MediaEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEntry.swift; sourceTree = "<group>"; };
+		068787D37DCEE67FA5E3AFD636FAE48B /* PlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		0D827BCFB550A9D2197B7D4F010ED4D4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		11E3620775787388852F62F3259004BD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15B92C7B165A8A28E21F935009291863 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		19CE08BEDA8705FAB29EBF697803126A /* PlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
 		1B9662EE83CA82A2A64C8E16F97D6D56 /* Pods-all-IMAPluginSample.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-all-IMAPluginSample.modulemap"; sourceTree = "<group>"; };
-		1C20A6EEFBAD1EC18B65B4F7EE746F65 /* PlayKit-iOS9.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PlayKit-iOS9.0-umbrella.h"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0-umbrella.h"; sourceTree = "<group>"; };
-		22430DB12E0356F1E93163D8C4409F07 /* AdsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsPlugin.swift; sourceTree = "<group>"; };
-		22946CE123C576FDEB844D6CA601FED9 /* PlayerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerConfig.swift; sourceTree = "<group>"; };
-		2425CD72D63C752243AFCAFC91F52922 /* AdsEnabledPlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsEnabledPlayerController.swift; sourceTree = "<group>"; };
+		22DF6DAB662BDEAF61A0E160C2498178 /* Pods_all_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23899EE77D0F11178174497AB67E0B6D /* SwiftyJSON-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "SwiftyJSON-iOS10.0.modulemap"; sourceTree = "<group>"; };
 		26F03F9982427BDC4DD2DAF913590F74 /* Pods-all-PlayKitApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-all-PlayKitApp-dummy.m"; sourceTree = "<group>"; };
-		2B4CD5635A2F44AE9E2F91BB16E391E2 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInteractiveMediaAds.framework; path = "GoogleInteractiveMediaAds/GoogleInteractiveMediaAds-GoogleIMA3/GoogleInteractiveMediaAds.framework"; sourceTree = "<group>"; };
 		2C8794A718B3FBCF78D93D81B6B4F0A7 /* Pods-all-IMAPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-IMAPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
-		2D55792BFED4711FCABF6668D4CDAE1D /* IMAPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAPlugin.swift; sourceTree = "<group>"; };
-		3292A69D613C0225DF799B1F5EB95666 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3A79BB7955B466F0C51CAACC6BF036AE /* PlayKit-iOS9.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PlayKit-iOS9.0-prefix.pch"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0-prefix.pch"; sourceTree = "<group>"; };
-		3BA4557734A90A8F6DD1819E1D58E964 /* PlayKit-iOS9.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PlayKit-iOS9.0-dummy.m"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0-dummy.m"; sourceTree = "<group>"; };
+		31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3CDF82683780AA7E8FFD19353613F09A /* PlayKit-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "PlayKit-iOS10.0.modulemap"; sourceTree = "<group>"; };
+		425BACCCADAA63EAAE18D608BE3A5F73 /* PlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerEngine.swift; sourceTree = "<group>"; };
 		4DC381BC104D11333AE0B254A103BD7C /* Pods-all-PlayKitApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-all-PlayKitApp.modulemap"; sourceTree = "<group>"; };
-		4F212C9AE83657B84E90D6B1069DF9BA /* Player.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		523B2DF4C67F06D20EBCF5B8FE67079D /* Pods_all_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62001ADEF97FFE099648A1D91F0779E8 /* PlayerView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		630AC37DA03374A5CC890A5D48649EAB /* AdsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsConfig.swift; sourceTree = "<group>"; };
+		4F56C0FA239A4C8BB5BB24B390054403 /* PlayKit-iOS9.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PlayKit-iOS9.0-prefix.pch"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0-prefix.pch"; sourceTree = "<group>"; };
+		56346965F811305434DE14243B319B1E /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
+		61584EBFDE1607F2A11DD33259E5F214 /* PlayerDecoratorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerDecoratorBase.swift; sourceTree = "<group>"; };
+		63085D01FCC6F3BE3B27BED0161A1175 /* SwiftyJSON-iOS9.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftyJSON-iOS9.0-prefix.pch"; path = "../SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0-prefix.pch"; sourceTree = "<group>"; };
 		63F7C6248D0F5E51A1417372AADE7D89 /* Pods-all-IMAPluginSample-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-all-IMAPluginSample-dummy.m"; sourceTree = "<group>"; };
+		67BF80ACBD2E919A9D147690D405C3D0 /* SwiftyJSON-iOS9.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SwiftyJSON-iOS9.0-dummy.m"; path = "../SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0-dummy.m"; sourceTree = "<group>"; };
 		69B702ECCF8F911152E79B15C7F27E7D /* Pods-all-IMAPluginSample-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-IMAPluginSample-resources.sh"; sourceTree = "<group>"; };
-		723FDF111F2E3F07065D53AA9A45B85A /* PlayerDecoratorBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerDecoratorBase.swift; sourceTree = "<group>"; };
-		777E4F8EEC12EE3F4C353E3DA4416BCE /* PlayKit-iOS9.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "PlayKit-iOS9.0.modulemap"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0.modulemap"; sourceTree = "<group>"; };
+		6D4F3B03F33BADAFE29E1F311A6A9717 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72EC45CF021BA1D7C47F180F1AE26E93 /* MockMediaProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MockMediaProvider.swift; sourceTree = "<group>"; };
+		731A95D0392B87A0092E041214FFC465 /* SwiftyJSON-iOS9.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SwiftyJSON-iOS9.0-umbrella.h"; path = "../SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0-umbrella.h"; sourceTree = "<group>"; };
+		753C28D38099747C99BF73D5D580ACEF /* PlayKit-iOS9.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PlayKit-iOS9.0.xcconfig"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0.xcconfig"; sourceTree = "<group>"; };
+		77C22438DB7ED28DD31AFBC64F82F32D /* AdsEnabledPlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsEnabledPlayerController.swift; sourceTree = "<group>"; };
+		78F357F4B648014C79C6D8B8ED397255 /* AVPlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AVPlayerEngine.swift; sourceTree = "<group>"; };
 		7C5C1D2D4659BC8C325E8604856D0125 /* Pods-all-IMAPluginSample-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-IMAPluginSample-frameworks.sh"; sourceTree = "<group>"; };
-		8222B98AD1351B53182486E87CDC815F /* PlayKit-iOS10.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlayKit-iOS10.0-dummy.m"; sourceTree = "<group>"; };
+		7CBFF1645847679A87900418EACB0E9A /* PlayKit-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
+		84D9961C5FC2C65B9534AE2BD12CA85D /* SwiftyJSON-iOS10.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-iOS10.0-dummy.m"; sourceTree = "<group>"; };
+		8544FDCE98A42434126C86CBBF4C8AFB /* PlayKit-iOS9.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "PlayKit-iOS9.0.modulemap"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0.modulemap"; sourceTree = "<group>"; };
+		86C135D826D0164D0DFDD4B02E834357 /* AdsPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsPlugin.swift; sourceTree = "<group>"; };
+		8A3049739E48C43C4B1327488E9ABAA8 /* SwiftyJSON-iOS10.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-iOS10.0-prefix.pch"; sourceTree = "<group>"; };
 		8B5A585462664367748FB4DFA98B7DD8 /* Pods-all-IMAPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-IMAPluginSample.release.xcconfig"; sourceTree = "<group>"; };
-		90C30DEE55F3D7C4651A281AC28A4FF5 /* PlayKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayKitManager.swift; sourceTree = "<group>"; };
+		8C19E011B4379766A2D25E9A925329C4 /* PlayerLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerLoader.swift; sourceTree = "<group>"; };
 		924CFC43FF3C6F80E67D36EB4BCE51E6 /* Pods-all-PlayKitApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-all-PlayKitApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93F1FFFA023E9659EF583AF4923AB851 /* Pods_all_IMAPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_IMAPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		999D684631FE67C16DE7E3CB829BC44F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
-		A267D47EF8671174444EFF28B41394C8 /* Plugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Plugin.swift; sourceTree = "<group>"; };
-		A8549599D5E4D487036F0356C1F0DA5D /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96943D7B91E13ADDBD05B6429B920F51 /* SwiftyJSON-iOS9.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SwiftyJSON-iOS9.0.xcconfig"; path = "../SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0.xcconfig"; sourceTree = "<group>"; };
+		9718EFBBE4785952DDE7220D397DA3A5 /* IMAPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IMAPlugin.swift; sourceTree = "<group>"; };
+		A2594941C9556426D5DDA1822C6310E2 /* Player.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		A43B6F104B3C08EDC420B50985882832 /* PlayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PlayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B4B28D4FC6E14607DB7A1FA5783B55 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../PlayKit-iOS9.0/Info.plist"; sourceTree = "<group>"; };
+		A9B2EE90E032274A7194B5163FA67164 /* PlayKit-iOS10.0-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-iOS10.0-prefix.pch"; sourceTree = "<group>"; };
+		AB006337E180F3164A25C779AC8FD42F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB6DE46537DF6A0179A98293A12CCA1B /* Pods-all-IMAPluginSample-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-all-IMAPluginSample-acknowledgements.plist"; sourceTree = "<group>"; };
+		ABD62099486C12FF5D4ACD79703B1BE1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2C3EBDCEC4DDFF3AD5F6D9CBF54F2B /* Pods-all-PlayKitApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-all-PlayKitApp-umbrella.h"; sourceTree = "<group>"; };
 		AC9A91376C81DC0FD0EB942FDBEF9DCB /* Pods-all-PlayKitApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-PlayKitApp-frameworks.sh"; sourceTree = "<group>"; };
 		AE2C40BB9F31D9551FCC12409380BFB1 /* Pods-all-PlayKitApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-all-PlayKitApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AE451135CCFE2DABC83BC8A74988EE80 /* Pods-all-IMAPluginSample-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-all-IMAPluginSample-umbrella.h"; sourceTree = "<group>"; };
-		AED6702EDA80396DC0B70FFBE7C61713 /* PlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerEngine.swift; sourceTree = "<group>"; };
 		AFBDE88FD18688E2FAB1D565626A23B8 /* Pods-all-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
 		B1866F5B94D94EE78DA8C436A0E1D58C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C31E8F9B73FE5B9231ABD430D69EF88B /* PlayerController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
+		BA724398C1DE9EBB2606C82F1EF172D6 /* Pods_all_IMAPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_IMAPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFC5C2FDEC2776B0E924AD8847760CC3 /* AdsConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AdsConfig.swift; sourceTree = "<group>"; };
+		C1E9FB2E1B5949BF0B6D3089D4DC33E7 /* PlayKit-iOS9.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PlayKit-iOS9.0-dummy.m"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0-dummy.m"; sourceTree = "<group>"; };
+		C6C9A5D3558859B829A7F9ACE499D9EA /* PlayKitManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayKitManager.swift; sourceTree = "<group>"; };
 		C70339CC8B5BD907E7C2BF761CB1BB7C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8B583AE7CA44C6D1B04DC80B0AFB7E2 /* Pods-all-PlayKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-all-PlayKitApp.debug.xcconfig"; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CFFFAA0195A1FEC461962E2FEB78B561 /* PlayKit-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PlayKit-iOS10.0.xcconfig"; sourceTree = "<group>"; };
-		D265B5B15959843391013DC3CBC73556 /* MediaEntry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEntry.swift; sourceTree = "<group>"; };
-		D328D9363986B6A3F755D7FA741E2C0A /* PlayKit-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PlayKit-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
+		CC0B4F7A01B2FB9490E5DDD06919E214 /* PlayKit-iOS10.0-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PlayKit-iOS10.0-dummy.m"; sourceTree = "<group>"; };
+		D189FB273E0E88001868DF13B2FBE145 /* GoogleInteractiveMediaAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInteractiveMediaAds.framework; path = "GoogleInteractiveMediaAds/GoogleInteractiveMediaAds-GoogleIMA3/GoogleInteractiveMediaAds.framework"; sourceTree = "<group>"; };
 		D686A782119FD4D0E006808CF6BCD28B /* Pods-all-IMAPluginSample-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-all-IMAPluginSample-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DCF0DC447E4E2E3B7B5104553D857060 /* Pods-all-PlayKitApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-all-PlayKitApp-resources.sh"; sourceTree = "<group>"; };
-		E80797264AC574148242E853D6F5D3F6 /* AVPlayerEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AVPlayerEngine.swift; sourceTree = "<group>"; };
-		EB5EF9D5A0BB7254B84E2D0DA8DBC2EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../PlayKit-iOS9.0/Info.plist"; sourceTree = "<group>"; };
-		F54104CD2821EE5800675C1F6BE3F25D /* PlayKit-iOS9.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "PlayKit-iOS9.0.xcconfig"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0.xcconfig"; sourceTree = "<group>"; };
-		FCB4C0907FF50C9A2AD238D012D772A1 /* PlayKit-iOS10.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "PlayKit-iOS10.0.modulemap"; sourceTree = "<group>"; };
+		DD548622A23DF245024E02883AF87776 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SwiftyJSON-iOS9.0/Info.plist"; sourceTree = "<group>"; };
+		DDED810D34C8DBBE951FC66485E062D6 /* PlayerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PlayerConfig.swift; sourceTree = "<group>"; };
+		DE3449A4BE9C80BAAC0926CA0B1D7DC8 /* MediaEntryProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaEntryProvider.swift; sourceTree = "<group>"; };
+		DF5015C78B3F90124CEA84F9E2B2CFB1 /* PlayKit-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "PlayKit-iOS10.0.xcconfig"; sourceTree = "<group>"; };
+		E216D68B155719764612A5D7ACBAA7DE /* SwiftyJSON-iOS9.0.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "SwiftyJSON-iOS9.0.modulemap"; path = "../SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0.modulemap"; sourceTree = "<group>"; };
+		E7CD26DE2E2DF8AA79210C0609D5468F /* SwiftyJSON-iOS10.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-iOS10.0-umbrella.h"; sourceTree = "<group>"; };
+		E95F48E57FB4345B120BEB314AEA778D /* SwiftyJSON-iOS10.0.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SwiftyJSON-iOS10.0.xcconfig"; sourceTree = "<group>"; };
+		E9B00207EE3CA04062479EEBBE6E56CA /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		EF2BA1163DAD9338B5EEF432E94D00B0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F05A2DDA9058082E37FAAA448F008219 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5550F9DB06176DAB7F0983421197EE /* PlayKit-iOS9.0-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PlayKit-iOS9.0-umbrella.h"; path = "../PlayKit-iOS9.0/PlayKit-iOS9.0-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B4297E1A2E9C8A17E147CEC34726259 /* Frameworks */ = {
+		2B37E254C8AE15C676A4FB35B3E35442 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC7FB96D0AE78ACB97D0A919E127A11B /* Foundation.framework in Frameworks */,
+				AE1EEC72426498A0CFFA9F84CE05D6A6 /* Foundation.framework in Frameworks */,
+				28AC3175D2EAD36FF91E8508C8F9AA3C /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4CE23EAAF50B9F1BB4EAC7B39A60CFB1 /* Frameworks */ = {
+		3A4F76CAC3D02550567C32DEB01ABD2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A8A7C4ACE8C37203D4FC0440AF61C3 /* Foundation.framework in Frameworks */,
+				79AC745623E13BD3963564C44A1F8976 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF3A21504D09A006AF74A3FD7285E9BE /* Frameworks */ = {
+		50ED64A28695FA466793A330B4255050 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32BCCE48FE105047271AE1FF9697E684 /* Foundation.framework in Frameworks */,
+				28959BECC4D59EEDB3C418E3569053C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E8C508A5A25CB781C2076BEB84964011 /* Frameworks */ = {
+		C58ACAC385CAE880B9043144BFCE0A56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8268C970A564F5711E16FBB1977AF3C2 /* Foundation.framework in Frameworks */,
+				C279EC43FCD166F3B97BAD05F34C8042 /* Foundation.framework in Frameworks */,
+				72CC1772A06927739449CFF3B409B559 /* SwiftyJSON.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E32A666431552440ABBC6CF50DA2DDE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793D45AB9D2F237BBCB3A1F81BC62562 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F90C473766E573D360C57A4C354E8BBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D5282B226489039FC127CF6C06AC7D /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		086828E1E7E5446FECEE19D1A8143D0F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				31205B28DFB2B7366AF496597F020A02 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		1847C259CBF5C82F19ED50EDA32B046F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D77EBB535495B54EA6C4F6B3DE7D2040 /* Classes */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		226C3A1410D9C38DD2589B79774CAE34 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A6B2014E83BE71E9B66C8AF78826F080 /* PlayKit */,
+				F5BFC7AA7617B21E06D60AB403B8F0E0 /* PlayKit */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
+		38C06DFD248019BFCBB10A5AA98D6E87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
+				9BB74049B825A048F03CA42B70C8C151 /* GoogleAds-IMA-iOS-SDK */,
+				68E3524BD63FCF9476ED270BC9991930 /* SwiftyJSON */,
 			);
-			name = iOS;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		3F2287CB8733EC0015EC6AE1B67FE873 /* Pods-all-PlayKitApp */ = {
@@ -198,13 +296,46 @@
 			path = "Target Support Files/Pods-all-PlayKitApp";
 			sourceTree = "<group>";
 		};
-		4058071A046CC4DD8D49645DC06DF4F2 /* Plugins */ = {
+		50018DAE14EC750355A24C39BB347275 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A267D47EF8671174444EFF28B41394C8 /* Plugin.swift */,
-				BA4BCB225DA3ED653A5AB672A6ADEEC3 /* Ads */,
+				A43B6F104B3C08EDC420B50985882832 /* PlayKit.framework */,
+				6D4F3B03F33BADAFE29E1F311A6A9717 /* PlayKit.framework */,
+				BA724398C1DE9EBB2606C82F1EF172D6 /* Pods_all_IMAPluginSample.framework */,
+				22DF6DAB662BDEAF61A0E160C2498178 /* Pods_all_PlayKitApp.framework */,
+				AB006337E180F3164A25C779AC8FD42F /* SwiftyJSON.framework */,
+				ABD62099486C12FF5D4ACD79703B1BE1 /* SwiftyJSON.framework */,
 			);
-			path = Plugins;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65B35BF8E63AD31F1FDAD1F7E7313A21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F05A2DDA9058082E37FAAA448F008219 /* SwiftyJSON.framework */,
+				086828E1E7E5446FECEE19D1A8143D0F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68E3524BD63FCF9476ED270BC9991930 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				0D827BCFB550A9D2197B7D4F010ED4D4 /* SwiftyJSON.swift */,
+				8DF71DCFC879B69AD3A8F06C65E47607 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		6D0AAE285B95DC00AE8343495CB9DE90 /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				BFC5C2FDEC2776B0E924AD8847760CC3 /* AdsConfig.swift */,
+				77C22438DB7ED28DD31AFBC64F82F32D /* AdsEnabledPlayerController.swift */,
+				86C135D826D0164D0DFDD4B02E834357 /* AdsPlugin.swift */,
+				D50EBC9B596F0F506D64F8923327C93D /* IMA */,
+			);
+			path = Ads;
 			sourceTree = "<group>";
 		};
 		759E26049FE49978F2F20D6E969C591B /* Pods-all-IMAPluginSample */ = {
@@ -230,103 +361,101 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				226C3A1410D9C38DD2589B79774CAE34 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				F14B5F00318EBC92805B49006A387B0B /* Pods */,
-				D6E281A98C7006C3A1B6DE59BF2CB6E2 /* Products */,
+				65B35BF8E63AD31F1FDAD1F7E7313A21 /* Frameworks */,
+				38C06DFD248019BFCBB10A5AA98D6E87 /* Pods */,
+				50018DAE14EC750355A24C39BB347275 /* Products */,
 				DB5A087399CE461AE7AF3A8669C5D3E8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		971C04C538107428396DFAC74733D8B5 /* IMA */ = {
+		8B6293FFBE082E0419573EE5DD120A48 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				2D55792BFED4711FCABF6668D4CDAE1D /* IMAPlugin.swift */,
-			);
-			path = IMA;
-			sourceTree = "<group>";
-		};
-		99987B91273A8D9F5E0DECA3344BE79B /* GoogleAds-IMA-iOS-SDK */ = {
-			isa = PBXGroup;
-			children = (
-				F5CF0D0B497BBCE47EA8625C9088C0F6 /* Frameworks */,
-			);
-			path = "GoogleAds-IMA-iOS-SDK";
-			sourceTree = "<group>";
-		};
-		A6B2014E83BE71E9B66C8AF78826F080 /* PlayKit */ = {
-			isa = PBXGroup;
-			children = (
-				D3916B10AF1FE998DAAA85C42DE716F4 /* Core */,
-				D28881A00EF18FF34A2510FAFC4A7345 /* Support Files */,
-			);
-			name = PlayKit;
-			path = "../../../playkit-ios";
-			sourceTree = "<group>";
-		};
-		A9ACF823F3172A618FDE1E026C5A49E5 /* Managers */ = {
-			isa = PBXGroup;
-			children = (
-				90C30DEE55F3D7C4651A281AC28A4FF5 /* PlayKitManager.swift */,
+				C6C9A5D3558859B829A7F9ACE499D9EA /* PlayKitManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		BA4BCB225DA3ED653A5AB672A6ADEEC3 /* Ads */ = {
+		8DF71DCFC879B69AD3A8F06C65E47607 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				630AC37DA03374A5CC890A5D48649EAB /* AdsConfig.swift */,
-				2425CD72D63C752243AFCAFC91F52922 /* AdsEnabledPlayerController.swift */,
-				22430DB12E0356F1E93163D8C4409F07 /* AdsPlugin.swift */,
-				971C04C538107428396DFAC74733D8B5 /* IMA */,
-			);
-			path = Ads;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D28881A00EF18FF34A2510FAFC4A7345 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EB5EF9D5A0BB7254B84E2D0DA8DBC2EF /* Info.plist */,
-				0160D491007B335916A11D91BFBBA7EE /* Info.plist */,
-				FCB4C0907FF50C9A2AD238D012D772A1 /* PlayKit-iOS10.0.modulemap */,
-				CFFFAA0195A1FEC461962E2FEB78B561 /* PlayKit-iOS10.0.xcconfig */,
-				8222B98AD1351B53182486E87CDC815F /* PlayKit-iOS10.0-dummy.m */,
-				12882BDA574DCA84D917B98B49C2EF56 /* PlayKit-iOS10.0-prefix.pch */,
-				D328D9363986B6A3F755D7FA741E2C0A /* PlayKit-iOS10.0-umbrella.h */,
-				777E4F8EEC12EE3F4C353E3DA4416BCE /* PlayKit-iOS9.0.modulemap */,
-				F54104CD2821EE5800675C1F6BE3F25D /* PlayKit-iOS9.0.xcconfig */,
-				3BA4557734A90A8F6DD1819E1D58E964 /* PlayKit-iOS9.0-dummy.m */,
-				3A79BB7955B466F0C51CAACC6BF036AE /* PlayKit-iOS9.0-prefix.pch */,
-				1C20A6EEFBAD1EC18B65B4F7EE746F65 /* PlayKit-iOS9.0-umbrella.h */,
+				DD548622A23DF245024E02883AF87776 /* Info.plist */,
+				EF2BA1163DAD9338B5EEF432E94D00B0 /* Info.plist */,
+				23899EE77D0F11178174497AB67E0B6D /* SwiftyJSON-iOS10.0.modulemap */,
+				E95F48E57FB4345B120BEB314AEA778D /* SwiftyJSON-iOS10.0.xcconfig */,
+				84D9961C5FC2C65B9534AE2BD12CA85D /* SwiftyJSON-iOS10.0-dummy.m */,
+				8A3049739E48C43C4B1327488E9ABAA8 /* SwiftyJSON-iOS10.0-prefix.pch */,
+				E7CD26DE2E2DF8AA79210C0609D5468F /* SwiftyJSON-iOS10.0-umbrella.h */,
+				E216D68B155719764612A5D7ACBAA7DE /* SwiftyJSON-iOS9.0.modulemap */,
+				96943D7B91E13ADDBD05B6429B920F51 /* SwiftyJSON-iOS9.0.xcconfig */,
+				67BF80ACBD2E919A9D147690D405C3D0 /* SwiftyJSON-iOS9.0-dummy.m */,
+				63085D01FCC6F3BE3B27BED0161A1175 /* SwiftyJSON-iOS9.0-prefix.pch */,
+				731A95D0392B87A0092E041214FFC465 /* SwiftyJSON-iOS9.0-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../playkit-ios-samples/PlayKitApp/Pods/Target Support Files/PlayKit-iOS10.0";
+			path = "../Target Support Files/SwiftyJSON-iOS10.0";
 			sourceTree = "<group>";
 		};
-		D3916B10AF1FE998DAAA85C42DE716F4 /* Core */ = {
+		9BB74049B825A048F03CA42B70C8C151 /* GoogleAds-IMA-iOS-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				F2C0C5AB047D99BDD4A6BC20CF6E321A /* Classes */,
+				E83A6C0CB8597490C45C92B4AAF15FF0 /* Frameworks */,
 			);
-			name = Core;
+			path = "GoogleAds-IMA-iOS-SDK";
 			sourceTree = "<group>";
 		};
-		D6E281A98C7006C3A1B6DE59BF2CB6E2 /* Products */ = {
+		BFD0E46C8440FE81CE92AEA0DB03F08E /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				3292A69D613C0225DF799B1F5EB95666 /* PlayKit.framework */,
-				A8549599D5E4D487036F0356C1F0DA5D /* PlayKit.framework */,
-				93F1FFFA023E9659EF583AF4923AB851 /* Pods_all_IMAPluginSample.framework */,
-				523B2DF4C67F06D20EBCF5B8FE67079D /* Pods_all_PlayKitApp.framework */,
+				78F357F4B648014C79C6D8B8ED397255 /* AVPlayerEngine.swift */,
+				019C18A0A44CFA8E74374F7498E46AAE /* MediaEntry.swift */,
+				A2594941C9556426D5DDA1822C6310E2 /* Player.swift */,
+				DDED810D34C8DBBE951FC66485E062D6 /* PlayerConfig.swift */,
+				19CE08BEDA8705FAB29EBF697803126A /* PlayerController.swift */,
+				61584EBFDE1607F2A11DD33259E5F214 /* PlayerDecoratorBase.swift */,
+				425BACCCADAA63EAAE18D608BE3A5F73 /* PlayerEngine.swift */,
+				8C19E011B4379766A2D25E9A925329C4 /* PlayerLoader.swift */,
+				068787D37DCEE67FA5E3AFD636FAE48B /* PlayerView.swift */,
 			);
-			name = Products;
+			path = Player;
+			sourceTree = "<group>";
+		};
+		CC538FD6768C3A220E79F939F6E3A173 /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				DE3449A4BE9C80BAAC0926CA0B1D7DC8 /* MediaEntryProvider.swift */,
+				72EC45CF021BA1D7C47F180F1AE26E93 /* MockMediaProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		CD6A714D2F312BC52AB386284240E9B2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E9B00207EE3CA04062479EEBBE6E56CA /* Response.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D50EBC9B596F0F506D64F8923327C93D /* IMA */ = {
+			isa = PBXGroup;
+			children = (
+				9718EFBBE4785952DDE7220D397DA3A5 /* IMAPlugin.swift */,
+			);
+			path = IMA;
+			sourceTree = "<group>";
+		};
+		D77EBB535495B54EA6C4F6B3DE7D2040 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				15B92C7B165A8A28E21F935009291863 /* ReplaceMe.swift */,
+				8B6293FFBE082E0419573EE5DD120A48 /* Managers */,
+				CD6A714D2F312BC52AB386284240E9B2 /* Network */,
+				BFD0E46C8440FE81CE92AEA0DB03F08E /* Player */,
+				E37153C23813D3DBD664833C03C616C7 /* Plugins */,
+				CC538FD6768C3A220E79F939F6E3A173 /* Providers */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		DB5A087399CE461AE7AF3A8669C5D3E8 /* Targets Support Files */ = {
@@ -338,155 +467,213 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F14B5F00318EBC92805B49006A387B0B /* Pods */ = {
+		E37153C23813D3DBD664833C03C616C7 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
-				99987B91273A8D9F5E0DECA3344BE79B /* GoogleAds-IMA-iOS-SDK */,
+				56346965F811305434DE14243B319B1E /* Plugin.swift */,
+				6D0AAE285B95DC00AE8343495CB9DE90 /* Ads */,
 			);
-			name = Pods;
+			path = Plugins;
 			sourceTree = "<group>";
 		};
-		F2C0C5AB047D99BDD4A6BC20CF6E321A /* Classes */ = {
+		E6FB790E4E1A0707FD1D496CE84FE740 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				999D684631FE67C16DE7E3CB829BC44F /* ReplaceMe.swift */,
-				A9ACF823F3172A618FDE1E026C5A49E5 /* Managers */,
-				F30ADF43392002B8D2F777655A680378 /* Player */,
-				4058071A046CC4DD8D49645DC06DF4F2 /* Plugins */,
+				A6B4B28D4FC6E14607DB7A1FA5783B55 /* Info.plist */,
+				11E3620775787388852F62F3259004BD /* Info.plist */,
+				3CDF82683780AA7E8FFD19353613F09A /* PlayKit-iOS10.0.modulemap */,
+				DF5015C78B3F90124CEA84F9E2B2CFB1 /* PlayKit-iOS10.0.xcconfig */,
+				CC0B4F7A01B2FB9490E5DDD06919E214 /* PlayKit-iOS10.0-dummy.m */,
+				A9B2EE90E032274A7194B5163FA67164 /* PlayKit-iOS10.0-prefix.pch */,
+				7CBFF1645847679A87900418EACB0E9A /* PlayKit-iOS10.0-umbrella.h */,
+				8544FDCE98A42434126C86CBBF4C8AFB /* PlayKit-iOS9.0.modulemap */,
+				753C28D38099747C99BF73D5D580ACEF /* PlayKit-iOS9.0.xcconfig */,
+				C1E9FB2E1B5949BF0B6D3089D4DC33E7 /* PlayKit-iOS9.0-dummy.m */,
+				4F56C0FA239A4C8BB5BB24B390054403 /* PlayKit-iOS9.0-prefix.pch */,
+				FA5550F9DB06176DAB7F0983421197EE /* PlayKit-iOS9.0-umbrella.h */,
 			);
-			path = Classes;
+			name = "Support Files";
+			path = "../PlayKit-ios-samples/PlayKitApp/Pods/Target Support Files/PlayKit-iOS10.0";
 			sourceTree = "<group>";
 		};
-		F30ADF43392002B8D2F777655A680378 /* Player */ = {
+		E83A6C0CB8597490C45C92B4AAF15FF0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E80797264AC574148242E853D6F5D3F6 /* AVPlayerEngine.swift */,
-				D265B5B15959843391013DC3CBC73556 /* MediaEntry.swift */,
-				4F212C9AE83657B84E90D6B1069DF9BA /* Player.swift */,
-				22946CE123C576FDEB844D6CA601FED9 /* PlayerConfig.swift */,
-				C31E8F9B73FE5B9231ABD430D69EF88B /* PlayerController.swift */,
-				723FDF111F2E3F07065D53AA9A45B85A /* PlayerDecoratorBase.swift */,
-				AED6702EDA80396DC0B70FFBE7C61713 /* PlayerEngine.swift */,
-				1A7B6B49788ECDAC47B66BF83917BFA0 /* PlayerLoader.swift */,
-				62001ADEF97FFE099648A1D91F0779E8 /* PlayerView.swift */,
-			);
-			path = Player;
-			sourceTree = "<group>";
-		};
-		F5CF0D0B497BBCE47EA8625C9088C0F6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2B4CD5635A2F44AE9E2F91BB16E391E2 /* GoogleInteractiveMediaAds.framework */,
+				D189FB273E0E88001868DF13B2FBE145 /* GoogleInteractiveMediaAds.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5BFC7AA7617B21E06D60AB403B8F0E0 /* PlayKit */ = {
+			isa = PBXGroup;
+			children = (
+				1847C259CBF5C82F19ED50EDA32B046F /* Core */,
+				E6FB790E4E1A0707FD1D496CE84FE740 /* Support Files */,
+			);
+			name = PlayKit;
+			path = "../../../playkit-ios";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B033A4BA254105664A6DD4C6CD42A937 /* Headers */ = {
+		462846A98409038E33AD25AB1D586821 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79E19C0E7EC2FA8CFBB1EA66D25B5299 /* Pods-all-IMAPluginSample-umbrella.h in Headers */,
+				B2026E0A53FDD94F8BE1C5EFDEC412B5 /* SwiftyJSON-iOS10.0-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB8056D5AAC46C08D9DD2794316A6ECB /* Headers */ = {
+		4771222D5FB5BD86BA88B3323AA0B2CE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C428F7BC13711A5B37EA5718BF81B667 /* PlayKit-iOS9.0-umbrella.h in Headers */,
+				909F2589034F05C0D6010C6500B4F82A /* Pods-all-IMAPluginSample-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F15419FD8532B9A8E2445466A72F5F7D /* Headers */ = {
+		55EC3AFA9D6E38F901FFDE596E75FC15 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DEB6A0AEB5FFD7DBAA75CB3C17C3798 /* Pods-all-PlayKitApp-umbrella.h in Headers */,
+				A7B7C0CD00F2D29C1BEEB5DCA039E3A0 /* SwiftyJSON-iOS9.0-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBF086D2F0D78111F6F7A9437395AC63 /* Headers */ = {
+		6D54D88234CF13462096CE4A88673AE1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C7022CEE0B4590EC141EFDDCF2E71FDC /* PlayKit-iOS10.0-umbrella.h in Headers */,
+				80F483D0C33905120A87314A3B3DB655 /* PlayKit-iOS10.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78627E04AE7E29D96FA6B6BC66F6D52E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888C499BEAD386A9B9C1E6FB6DE4625F /* PlayKit-iOS9.0-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3D654142AD3D660AFDB96EB9F1B2877 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				415BF6EBADB7116F4D2F66954672BC84 /* Pods-all-PlayKitApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1C81A850E17E7A6771A90F171C173908 /* Pods-all-PlayKitApp */ = {
+		20CC247F8B4FE68E64441E9ECFE40545 /* PlayKit-iOS9.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71F0A7B6D17B6DD054A0327FA0548E06 /* Build configuration list for PBXNativeTarget "Pods-all-PlayKitApp" */;
+			buildConfigurationList = B8E413429170EDFCA6CD33213B4EB02A /* Build configuration list for PBXNativeTarget "PlayKit-iOS9.0" */;
 			buildPhases = (
-				8C44BCAADC8032658A1B5E895451D041 /* Sources */,
-				E8C508A5A25CB781C2076BEB84964011 /* Frameworks */,
-				F15419FD8532B9A8E2445466A72F5F7D /* Headers */,
+				638B749FFC9263C7EFA997F575741D0C /* Sources */,
+				C58ACAC385CAE880B9043144BFCE0A56 /* Frameworks */,
+				78627E04AE7E29D96FA6B6BC66F6D52E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FEF54A7EC1E92D09A1D3547B0E5D1A6A /* PBXTargetDependency */,
-			);
-			name = "Pods-all-PlayKitApp";
-			productName = "Pods-all-PlayKitApp";
-			productReference = 523B2DF4C67F06D20EBCF5B8FE67079D /* Pods_all_PlayKitApp.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5818DB573A588765C54B777512F0F6CF /* PlayKit-iOS9.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E23BE22839EBA87F54305C80016ECFA5 /* Build configuration list for PBXNativeTarget "PlayKit-iOS9.0" */;
-			buildPhases = (
-				D10D57E8A22C8AAADBD368C45F85B94E /* Sources */,
-				1B4297E1A2E9C8A17E147CEC34726259 /* Frameworks */,
-				EB8056D5AAC46C08D9DD2794316A6ECB /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				77B2D88D91A13B1E0C8B418F40960C36 /* PBXTargetDependency */,
 			);
 			name = "PlayKit-iOS9.0";
 			productName = "PlayKit-iOS9.0";
-			productReference = A8549599D5E4D487036F0356C1F0DA5D /* PlayKit.framework */;
+			productReference = 6D4F3B03F33BADAFE29E1F311A6A9717 /* PlayKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B6AC7176E18DADF1DFF2933F507423FE /* Pods-all-IMAPluginSample */ = {
+		B7CCA940498AE8010137E09F78908113 /* PlayKit-iOS10.0 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F1ED6A34EB0B2D54F5C9C66E2EA09200 /* Build configuration list for PBXNativeTarget "Pods-all-IMAPluginSample" */;
+			buildConfigurationList = E4EA02D8F278965C06B544888078CCDD /* Build configuration list for PBXNativeTarget "PlayKit-iOS10.0" */;
 			buildPhases = (
-				E144ABD9B0FC3D22E49F0291957F1149 /* Sources */,
-				4CE23EAAF50B9F1BB4EAC7B39A60CFB1 /* Frameworks */,
-				B033A4BA254105664A6DD4C6CD42A937 /* Headers */,
+				D4B493A92D593B067C0B99956B194222 /* Sources */,
+				2B37E254C8AE15C676A4FB35B3E35442 /* Frameworks */,
+				6D54D88234CF13462096CE4A88673AE1 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5E3BA1774434089F2682FD943559010A /* PBXTargetDependency */,
-			);
-			name = "Pods-all-IMAPluginSample";
-			productName = "Pods-all-IMAPluginSample";
-			productReference = 93F1FFFA023E9659EF583AF4923AB851 /* Pods_all_IMAPluginSample.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		BAA23CD4FC2F5AAF035E713FCC2046B8 /* PlayKit-iOS10.0 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF869AD3F43780E244C2D2C6D496B1FA /* Build configuration list for PBXNativeTarget "PlayKit-iOS10.0" */;
-			buildPhases = (
-				2246833CCBAEBE8CBE0BC423CCDF2CE1 /* Sources */,
-				AF3A21504D09A006AF74A3FD7285E9BE /* Frameworks */,
-				FBF086D2F0D78111F6F7A9437395AC63 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
+				CF70423942B5E25840B99EA86B9B5A7F /* PBXTargetDependency */,
 			);
 			name = "PlayKit-iOS10.0";
 			productName = "PlayKit-iOS10.0";
-			productReference = 3292A69D613C0225DF799B1F5EB95666 /* PlayKit.framework */;
+			productReference = A43B6F104B3C08EDC420B50985882832 /* PlayKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C75AA93191D8E557F1D8196C9DAD2BCA /* Pods-all-PlayKitApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8EA989C992F0659D000A82CFE9F83DD /* Build configuration list for PBXNativeTarget "Pods-all-PlayKitApp" */;
+			buildPhases = (
+				4D5AEF39A1F3C1A6C59E7183E31DA91C /* Sources */,
+				E32A666431552440ABBC6CF50DA2DDE6 /* Frameworks */,
+				E3D654142AD3D660AFDB96EB9F1B2877 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B59112BD22F9DA7067C463E8C400A4CB /* PBXTargetDependency */,
+				FE815AFD341ADA91572528CD36899CFC /* PBXTargetDependency */,
+			);
+			name = "Pods-all-PlayKitApp";
+			productName = "Pods-all-PlayKitApp";
+			productReference = 22DF6DAB662BDEAF61A0E160C2498178 /* Pods_all_PlayKitApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CCABBEB3A05D602179E2B5627E304AF8 /* SwiftyJSON-iOS10.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0FF897202D7ABB19763758D87ECBDA6 /* Build configuration list for PBXNativeTarget "SwiftyJSON-iOS10.0" */;
+			buildPhases = (
+				C71C4DC1CBD429A7826E5B2164EE19DE /* Sources */,
+				F90C473766E573D360C57A4C354E8BBF /* Frameworks */,
+				462846A98409038E33AD25AB1D586821 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftyJSON-iOS10.0";
+			productName = "SwiftyJSON-iOS10.0";
+			productReference = AB006337E180F3164A25C779AC8FD42F /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D82B231A39139E9A54CBBE5092B7CE08 /* SwiftyJSON-iOS9.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C0E25518EC0D5576AAB5917E18B34F2 /* Build configuration list for PBXNativeTarget "SwiftyJSON-iOS9.0" */;
+			buildPhases = (
+				BE909BB757767540C9A07DD6E1B28405 /* Sources */,
+				50ED64A28695FA466793A330B4255050 /* Frameworks */,
+				55EC3AFA9D6E38F901FFDE596E75FC15 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftyJSON-iOS9.0";
+			productName = "SwiftyJSON-iOS9.0";
+			productReference = ABD62099486C12FF5D4ACD79703B1BE1 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F5FCF1F34A6D15BEB9DB33D434484CD2 /* Pods-all-IMAPluginSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B40F86771FDED54BD63BFF5D9663E7E7 /* Build configuration list for PBXNativeTarget "Pods-all-IMAPluginSample" */;
+			buildPhases = (
+				349F56C9A56D8C33CF963C5B259B3BE3 /* Sources */,
+				3A4F76CAC3D02550567C32DEB01ABD2C /* Frameworks */,
+				4771222D5FB5BD86BA88B3323AA0B2CE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD40A2667791599E4FB796C3F5F7CAAF /* PBXTargetDependency */,
+				4463B1130C8AC21A2BA021BB52F134B3 /* PBXTargetDependency */,
+			);
+			name = "Pods-all-IMAPluginSample";
+			productName = "Pods-all-IMAPluginSample";
+			productReference = BA724398C1DE9EBB2606C82F1EF172D6 /* Pods_all_IMAPluginSample.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -506,136 +693,154 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D6E281A98C7006C3A1B6DE59BF2CB6E2 /* Products */;
+			productRefGroup = 50018DAE14EC750355A24C39BB347275 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BAA23CD4FC2F5AAF035E713FCC2046B8 /* PlayKit-iOS10.0 */,
-				5818DB573A588765C54B777512F0F6CF /* PlayKit-iOS9.0 */,
-				B6AC7176E18DADF1DFF2933F507423FE /* Pods-all-IMAPluginSample */,
-				1C81A850E17E7A6771A90F171C173908 /* Pods-all-PlayKitApp */,
+				B7CCA940498AE8010137E09F78908113 /* PlayKit-iOS10.0 */,
+				20CC247F8B4FE68E64441E9ECFE40545 /* PlayKit-iOS9.0 */,
+				F5FCF1F34A6D15BEB9DB33D434484CD2 /* Pods-all-IMAPluginSample */,
+				C75AA93191D8E557F1D8196C9DAD2BCA /* Pods-all-PlayKitApp */,
+				CCABBEB3A05D602179E2B5627E304AF8 /* SwiftyJSON-iOS10.0 */,
+				D82B231A39139E9A54CBBE5092B7CE08 /* SwiftyJSON-iOS9.0 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2246833CCBAEBE8CBE0BC423CCDF2CE1 /* Sources */ = {
+		349F56C9A56D8C33CF963C5B259B3BE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5954E1D5C17EAE2EB034E2ED86F82778 /* AdsConfig.swift in Sources */,
-				B199BECEDCB1EE102B75E2D814EB066D /* AdsEnabledPlayerController.swift in Sources */,
-				A1D051896A2AC6759294DD874274B152 /* AdsPlugin.swift in Sources */,
-				7A9D66F45E3593CB7776C53D611322F5 /* AVPlayerEngine.swift in Sources */,
-				071CA7AB0741ADC21ADA2276045FF0D1 /* IMAPlugin.swift in Sources */,
-				FBD5B5A47DB2AC6A7C3C44CFBF36A803 /* MediaEntry.swift in Sources */,
-				F4A7207BB65DDE11FCD9ABB81D8F1F66 /* Player.swift in Sources */,
-				8341A2C2AF5F7402C22D394672A216EE /* PlayerConfig.swift in Sources */,
-				AE6A6CD18F2545FFBB65DD888CD61AE4 /* PlayerController.swift in Sources */,
-				D6F4E63156D2EB14D7D9A7B17A7E72D0 /* PlayerDecoratorBase.swift in Sources */,
-				16D5CF0C15D0532E030285992E2F0009 /* PlayerEngine.swift in Sources */,
-				64463B4F73226F33014891ABCE2B6A66 /* PlayerLoader.swift in Sources */,
-				05CBB169E24D234D066504ADADED8FFE /* PlayerView.swift in Sources */,
-				D653522081FD6F29743A232BF2372901 /* PlayKit-iOS10.0-dummy.m in Sources */,
-				59689E14B8B19D722049E092FE3D9FD0 /* PlayKitManager.swift in Sources */,
-				7FF86F4D09E3B387948B52051F24BB08 /* Plugin.swift in Sources */,
-				8D62C7D0B33F88F9167E6A69B879BB99 /* ReplaceMe.swift in Sources */,
+				28A0BE009EEA2B75F1B9FB6FBB29C15D /* Pods-all-IMAPluginSample-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8C44BCAADC8032658A1B5E895451D041 /* Sources */ = {
+		4D5AEF39A1F3C1A6C59E7183E31DA91C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16F11E757EBC7A346F030B8D6733EEB7 /* Pods-all-PlayKitApp-dummy.m in Sources */,
+				3C9962EF65519A7CF70522B1E03F355A /* Pods-all-PlayKitApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D10D57E8A22C8AAADBD368C45F85B94E /* Sources */ = {
+		638B749FFC9263C7EFA997F575741D0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE0CFB221A44429FF6001FA7429A4F00 /* AdsConfig.swift in Sources */,
-				F0A08AC897F5337CF51BE9A1C2F68A55 /* AdsEnabledPlayerController.swift in Sources */,
-				B5B411BE5F6E0E93781A5A7C61EFDEB6 /* AdsPlugin.swift in Sources */,
-				5B99F9CD626E08D7453588021FBA53F7 /* AVPlayerEngine.swift in Sources */,
-				D146B8FABB8A14C1B6995A2FEA9DFE70 /* IMAPlugin.swift in Sources */,
-				C791C4A063F4208B1A3742995D7A67ED /* MediaEntry.swift in Sources */,
-				8A032C192425A9DF31B144DD14986DE8 /* Player.swift in Sources */,
-				1DBE91FD94D87D983B0B0AB6750D2B0A /* PlayerConfig.swift in Sources */,
-				88C59EC814B4DEB61860D1F28C7F81A3 /* PlayerController.swift in Sources */,
-				ED929E5B94B5B98357DA199DC1A3FC57 /* PlayerDecoratorBase.swift in Sources */,
-				B1E0D8CC293FBFC4207186005937F4D5 /* PlayerEngine.swift in Sources */,
-				A2A6CA800A86614321ED29D64231866B /* PlayerLoader.swift in Sources */,
-				F57D9CF4A5B513853DB2698EC0802B0A /* PlayerView.swift in Sources */,
-				5F7C74D9E636E0851C8F69E5DAF9DA02 /* PlayKit-iOS9.0-dummy.m in Sources */,
-				BF3F2FDC60239780F9ED443C4CC61B66 /* PlayKitManager.swift in Sources */,
-				E467E6D313353B43A29969BF0B1E14F7 /* Plugin.swift in Sources */,
-				5674152C25573DBBD52B30AB733C8EE1 /* ReplaceMe.swift in Sources */,
+				2CE3EFA3C36DEBC676738768C1067A0E /* AdsConfig.swift in Sources */,
+				2897B473F5C478DE313F295049170CCA /* AdsEnabledPlayerController.swift in Sources */,
+				8D9619D94DCD123F0EB9316C3A7550B4 /* AdsPlugin.swift in Sources */,
+				0EF73F3269EFCF1D3024491FEDA3C87D /* AVPlayerEngine.swift in Sources */,
+				F82208B121439EB185F253C8E912D943 /* IMAPlugin.swift in Sources */,
+				CD594087E9328517FC89D61D439101B3 /* MediaEntry.swift in Sources */,
+				4BC40F964C53949203308661625E8FF8 /* MediaEntryProvider.swift in Sources */,
+				E44C3740FF132AE3AB0F3584FDB4649E /* MockMediaProvider.swift in Sources */,
+				7F833AE582D009E0E207F12492DECB76 /* Player.swift in Sources */,
+				4A15D7CA56ABDB39C6C6D17CEBD4716B /* PlayerConfig.swift in Sources */,
+				723364D3CE5EB8B2063AF93F93B8E6C7 /* PlayerController.swift in Sources */,
+				B56C4AB90B4B6DE4E81D13CA9047879F /* PlayerDecoratorBase.swift in Sources */,
+				96BE6D3F9D4CCE81D10319AB82BB4DE6 /* PlayerEngine.swift in Sources */,
+				633125CD64A8DB8829E1B7DACA5DBA17 /* PlayerLoader.swift in Sources */,
+				830897D39A6B6B1EF464B390042CD1CE /* PlayerView.swift in Sources */,
+				86F368004AD53B5D249E27DC7D1C6996 /* PlayKit-iOS9.0-dummy.m in Sources */,
+				26497FD6FE448785930D76A0A531F3CC /* PlayKitManager.swift in Sources */,
+				C796116E2B52BA3FE7AB49715ED19A12 /* Plugin.swift in Sources */,
+				4A429205FF42167AEB7F6A5F23BFED58 /* ReplaceMe.swift in Sources */,
+				82B5CE39B3F4BC4D182547ACA02AFC4C /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E144ABD9B0FC3D22E49F0291957F1149 /* Sources */ = {
+		BE909BB757767540C9A07DD6E1B28405 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97BEFFFCFCCA7293283131BA47AE8160 /* Pods-all-IMAPluginSample-dummy.m in Sources */,
+				356B56AEC6A2451A7A89968D88EFB1AB /* SwiftyJSON-iOS9.0-dummy.m in Sources */,
+				9809D62EDFE46DB5A36230FDEDBAF0DD /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C71C4DC1CBD429A7826E5B2164EE19DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				855C16BDEC6FDAB5D8351B4707F60B64 /* SwiftyJSON-iOS10.0-dummy.m in Sources */,
+				B55D280DAD8B210828090925B96FAAA2 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4B493A92D593B067C0B99956B194222 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D374D4B5F9CF29B2DE111D95DE526343 /* AdsConfig.swift in Sources */,
+				7424CD4AE33375EFB7B39F7E5F205489 /* AdsEnabledPlayerController.swift in Sources */,
+				194C7BF92E01CDD91B326638B6869F63 /* AdsPlugin.swift in Sources */,
+				A076756DBA24A327196EE4E9787720A8 /* AVPlayerEngine.swift in Sources */,
+				6FA75EDC4E54F5E03F49BCA70E759EF2 /* IMAPlugin.swift in Sources */,
+				1DF24F3D3B954566B062C3ECC2D944D0 /* MediaEntry.swift in Sources */,
+				2A0E3CBF68B5034A009AA3D1A1F5ACB4 /* MediaEntryProvider.swift in Sources */,
+				1A2E9EAE727681FED50EB1CC7B3536CF /* MockMediaProvider.swift in Sources */,
+				3F3313BD04183D542743EF86268A8229 /* Player.swift in Sources */,
+				DCC5D76A0BFFD01F1560DAA3956244D5 /* PlayerConfig.swift in Sources */,
+				1961FF88091B2BA0819035037F4A4F16 /* PlayerController.swift in Sources */,
+				0EC5E54A01A4F8BD1AE6461558A4475F /* PlayerDecoratorBase.swift in Sources */,
+				6CD1CEABD89F2ADD0D355604F3AB6CF7 /* PlayerEngine.swift in Sources */,
+				11CF3C5765C83BF381B7B7B4E5512333 /* PlayerLoader.swift in Sources */,
+				EEA6A54BB66347487731CD02908263E7 /* PlayerView.swift in Sources */,
+				594CEA71D67282C9DEF60EC5563D5E5D /* PlayKit-iOS10.0-dummy.m in Sources */,
+				C62C14EAD7469FB4B9DCE4F29FFE1262 /* PlayKitManager.swift in Sources */,
+				C831AB48D0ECC01927E2FC1C5A12EFFF /* Plugin.swift in Sources */,
+				3F7CD452F03453C7AE68E643BDD72E91 /* ReplaceMe.swift in Sources */,
+				641486370C9B027F8AD55A9EDD33148F /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5E3BA1774434089F2682FD943559010A /* PBXTargetDependency */ = {
+		4463B1130C8AC21A2BA021BB52F134B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "PlayKit-iOS9.0";
-			target = 5818DB573A588765C54B777512F0F6CF /* PlayKit-iOS9.0 */;
-			targetProxy = 426148A57B2EB9C6B276EED4180F00C8 /* PBXContainerItemProxy */;
+			name = "SwiftyJSON-iOS9.0";
+			target = D82B231A39139E9A54CBBE5092B7CE08 /* SwiftyJSON-iOS9.0 */;
+			targetProxy = AC4B2D81E1292D51FE8F2807D197A61F /* PBXContainerItemProxy */;
 		};
-		FEF54A7EC1E92D09A1D3547B0E5D1A6A /* PBXTargetDependency */ = {
+		77B2D88D91A13B1E0C8B418F40960C36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON-iOS10.0";
+			target = CCABBEB3A05D602179E2B5627E304AF8 /* SwiftyJSON-iOS10.0 */;
+			targetProxy = E2C7D5E82A4D9E340A84D5153CB0A08F /* PBXContainerItemProxy */;
+		};
+		B59112BD22F9DA7067C463E8C400A4CB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "PlayKit-iOS10.0";
-			target = BAA23CD4FC2F5AAF035E713FCC2046B8 /* PlayKit-iOS10.0 */;
-			targetProxy = 709608B62EB6EE92D3D84178ACCF8417 /* PBXContainerItemProxy */;
+			target = B7CCA940498AE8010137E09F78908113 /* PlayKit-iOS10.0 */;
+			targetProxy = 416783E51A63A13388605B1C9C559FF0 /* PBXContainerItemProxy */;
+		};
+		BD40A2667791599E4FB796C3F5F7CAAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PlayKit-iOS9.0";
+			target = 20CC247F8B4FE68E64441E9ECFE40545 /* PlayKit-iOS9.0 */;
+			targetProxy = 6B09465F340B1C934EDF3DC9AED5E3B2 /* PBXContainerItemProxy */;
+		};
+		CF70423942B5E25840B99EA86B9B5A7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON-iOS10.0";
+			target = CCABBEB3A05D602179E2B5627E304AF8 /* SwiftyJSON-iOS10.0 */;
+			targetProxy = 2EA3DFF3405E8975EBA5BE438F41C6E2 /* PBXContainerItemProxy */;
+		};
+		FE815AFD341ADA91572528CD36899CFC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SwiftyJSON-iOS10.0";
+			target = CCABBEB3A05D602179E2B5627E304AF8 /* SwiftyJSON-iOS10.0 */;
+			targetProxy = 7B77BA170C99757BAEA21C4B434E8955 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		08A578C894B9E400714C95814FA92F2E /* Release */ = {
+		092F2CFB8E2E9FA5296FCBE1EF4B3905 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54104CD2821EE5800675C1F6BE3F25D /* PlayKit-iOS9.0.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PlayKit-iOS9.0/PlayKit-iOS9.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlayKit-iOS9.0/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlayKit-iOS9.0/PlayKit-iOS9.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PlayKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		305FA9FC683E38E8BB291A7CDEC2A098 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFFFAA0195A1FEC461962E2FEB78B561 /* PlayKit-iOS10.0.xcconfig */;
+			baseConfigurationReference = DF5015C78B3F90124CEA84F9E2B2CFB1 /* PlayKit-iOS10.0.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -666,7 +871,106 @@
 			};
 			name = Debug;
 		};
-		3AD9E369684E402807C4B1A89EF58A99 /* Debug */ = {
+		0E8EE9AACC961AEDAAEEA82D6BA9D07A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B5A585462664367748FB4DFA98B7DD8 /* Pods-all-IMAPluginSample.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-all-IMAPluginSample/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_all_IMAPluginSample;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1363A99F1988E1321E5E4F49B80F5122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 753C28D38099747C99BF73D5D580ACEF /* PlayKit-iOS9.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PlayKit-iOS9.0/PlayKit-iOS9.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayKit-iOS9.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayKit-iOS9.0/PlayKit-iOS9.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PlayKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		17581D5BD54D617E95A70119CC402F81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF5015C78B3F90124CEA84F9E2B2CFB1 /* PlayKit-iOS10.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PlayKit-iOS10.0/PlayKit-iOS10.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PlayKit-iOS10.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PlayKit-iOS10.0/PlayKit-iOS10.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PlayKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		17D45C94EE9A088841BB9583A842B7FD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C8B583AE7CA44C6D1B04DC80B0AFB7E2 /* Pods-all-PlayKitApp.debug.xcconfig */;
 			buildSettings = {
@@ -746,39 +1050,7 @@
 			};
 			name = Debug;
 		};
-		7CED49C23923E39BC61FF9876277E4CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFFFAA0195A1FEC461962E2FEB78B561 /* PlayKit-iOS10.0.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/PlayKit-iOS10.0/PlayKit-iOS10.0-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PlayKit-iOS10.0/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PlayKit-iOS10.0/PlayKit-iOS10.0.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = PlayKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A0F10A83F76DCCC8E38D8918DF94A920 /* Release */ = {
+		5C77E8411EA440EF0227A20200745CF1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AFBDE88FD18688E2FAB1D565626A23B8 /* Pods-all-PlayKitApp.release.xcconfig */;
 			buildSettings = {
@@ -813,9 +1085,74 @@
 			};
 			name = Release;
 		};
-		A4157CC9927543E169822EC873E56A11 /* Debug */ = {
+		5F26FC9F6F98CB91DB57640EDB382EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F54104CD2821EE5800675C1F6BE3F25D /* PlayKit-iOS9.0.xcconfig */;
+			baseConfigurationReference = 96943D7B91E13ADDBD05B6429B920F51 /* SwiftyJSON-iOS9.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON-iOS9.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		84DBD282A004C76B082135E8452B8C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96943D7B91E13ADDBD05B6429B920F51 /* SwiftyJSON-iOS9.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON-iOS9.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON-iOS9.0/SwiftyJSON-iOS9.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		934A79A3C636502504B3422F1E96D33E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 753C28D38099747C99BF73D5D580ACEF /* PlayKit-iOS9.0.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -845,41 +1182,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		B28F4D928E914FFAFA7A721BB07CDA3D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B5A585462664367748FB4DFA98B7DD8 /* Pods-all-IMAPluginSample.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-all-IMAPluginSample/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_all_IMAPluginSample;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -921,7 +1223,7 @@
 			};
 			name = Release;
 		};
-		D5F91950DC4B21D621E087FDE23AC76A /* Debug */ = {
+		C2758E2DEE4A74497C31BD7FAD5C21CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C8794A718B3FBCF78D93D81B6B4F0A7 /* Pods-all-IMAPluginSample.debug.xcconfig */;
 			buildSettings = {
@@ -957,6 +1259,71 @@
 			};
 			name = Debug;
 		};
+		DD67D5B577F3F34D61007FD7E6B3F5D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E95F48E57FB4345B120BEB314AEA778D /* SwiftyJSON-iOS10.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON-iOS10.0/SwiftyJSON-iOS10.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON-iOS10.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON-iOS10.0/SwiftyJSON-iOS10.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F70EBF021DC8D1814A0555141B3931A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E95F48E57FB4345B120BEB314AEA778D /* SwiftyJSON-iOS10.0.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON-iOS10.0/SwiftyJSON-iOS10.0-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON-iOS10.0/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON-iOS10.0/SwiftyJSON-iOS10.0.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -969,38 +1336,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71F0A7B6D17B6DD054A0327FA0548E06 /* Build configuration list for PBXNativeTarget "Pods-all-PlayKitApp" */ = {
+		9C0E25518EC0D5576AAB5917E18B34F2 /* Build configuration list for PBXNativeTarget "SwiftyJSON-iOS9.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3AD9E369684E402807C4B1A89EF58A99 /* Debug */,
-				A0F10A83F76DCCC8E38D8918DF94A920 /* Release */,
+				84DBD282A004C76B082135E8452B8C90 /* Debug */,
+				5F26FC9F6F98CB91DB57640EDB382EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF869AD3F43780E244C2D2C6D496B1FA /* Build configuration list for PBXNativeTarget "PlayKit-iOS10.0" */ = {
+		B0FF897202D7ABB19763758D87ECBDA6 /* Build configuration list for PBXNativeTarget "SwiftyJSON-iOS10.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				305FA9FC683E38E8BB291A7CDEC2A098 /* Debug */,
-				7CED49C23923E39BC61FF9876277E4CA /* Release */,
+				DD67D5B577F3F34D61007FD7E6B3F5D6 /* Debug */,
+				F70EBF021DC8D1814A0555141B3931A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E23BE22839EBA87F54305C80016ECFA5 /* Build configuration list for PBXNativeTarget "PlayKit-iOS9.0" */ = {
+		B40F86771FDED54BD63BFF5D9663E7E7 /* Build configuration list for PBXNativeTarget "Pods-all-IMAPluginSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A4157CC9927543E169822EC873E56A11 /* Debug */,
-				08A578C894B9E400714C95814FA92F2E /* Release */,
+				C2758E2DEE4A74497C31BD7FAD5C21CD /* Debug */,
+				0E8EE9AACC961AEDAAEEA82D6BA9D07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F1ED6A34EB0B2D54F5C9C66E2EA09200 /* Build configuration list for PBXNativeTarget "Pods-all-IMAPluginSample" */ = {
+		B8E413429170EDFCA6CD33213B4EB02A /* Build configuration list for PBXNativeTarget "PlayKit-iOS9.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D5F91950DC4B21D621E087FDE23AC76A /* Debug */,
-				B28F4D928E914FFAFA7A721BB07CDA3D /* Release */,
+				934A79A3C636502504B3422F1E96D33E /* Debug */,
+				1363A99F1988E1321E5E4F49B80F5122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8EA989C992F0659D000A82CFE9F83DD /* Build configuration list for PBXNativeTarget "Pods-all-PlayKitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17D45C94EE9A088841BB9583A842B7FD /* Debug */,
+				5C77E8411EA440EF0227A20200745CF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4EA02D8F278965C06B544888078CCDD /* Build configuration list for PBXNativeTarget "PlayKit-iOS10.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				092F2CFB8E2E9FA5296FCBE1EF4B3905 /* Debug */,
+				17581D5BD54D617E95A70119CC402F81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

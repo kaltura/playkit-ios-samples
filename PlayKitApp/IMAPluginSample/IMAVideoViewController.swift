@@ -11,6 +11,7 @@ import UIKit
 import AVFoundation
 import AVKit
 import PlayKit
+import SwiftyJSON
 
 class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate, PlayerDataSource, PlayerDelegate {
     
@@ -76,10 +77,18 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     func setUpContentPlayer() {
         let config = PlayerConfig()
         
-        let mock = MockMediaEntryProvider(video.title)
-        mock.addSource(video.title, contentUrl: video.video)
+        var source = [String : Any]()
+        source["id"] = video.video
+        source["url"] = video.video
         
-        config.set(mediaEntry: mock.mediaEntry!).set(allowPlayerEngineExpose: kAllowAVPlayerExpose)
+        var sources = [JSON]()
+        sources.append(JSON(source))
+        
+        var entry = [String : Any]()
+        entry["id"] = video.title
+        entry["sources"] = sources
+        
+        config.set(mediaEntry: MediaEntry(json: JSON(entry))).set(allowPlayerEngineExpose: kAllowAVPlayerExpose)
         
         if kUseIMA {
             var plugins = [String : AnyObject?]()

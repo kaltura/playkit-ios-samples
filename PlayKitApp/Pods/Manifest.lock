@@ -2,8 +2,11 @@ PODS:
   - GoogleAds-IMA-iOS-SDK (3.3.1)
   - PlayKit (0.1.0):
     - PlayKit/Core (= 0.1.0)
+    - SwiftyJSON
   - PlayKit/Core (0.1.0):
     - GoogleAds-IMA-iOS-SDK (~> 3.3)
+    - SwiftyJSON
+  - SwiftyJSON (3.1.1)
 
 DEPENDENCIES:
   - PlayKit (from `../../playkit-ios`)
@@ -14,7 +17,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 5643300870bd3289c47c0d0b5a2dbf595b05c336
-  PlayKit: b7f179892eeb162351d3323e132698f290a07bf2
+  PlayKit: 61c0df96f4ae9482cb71ebeac38f5dfe64de1cdd
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
 PODFILE CHECKSUM: 36f4925af26996df426ecb0d7295ceaa1eeb0d73
 
