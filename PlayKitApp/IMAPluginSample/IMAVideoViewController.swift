@@ -72,6 +72,13 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         }
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let controller = self.playerController {
+            controller.view.frame = CGRect(origin: CGPoint.zero, size: videoView.frame.size)
+        }
+    }
+    
     // MARK: Set-up methods
     
     func setUpContentPlayer() {
@@ -122,7 +129,6 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         self.playerController.dataSource = self
         self.playerController.delegate = self
         
-        self.playerController.view.frame = CGRect(origin: CGPoint.zero, size: videoView.frame.size)
         videoView.addSubview(self.playerController.view)
         
         
