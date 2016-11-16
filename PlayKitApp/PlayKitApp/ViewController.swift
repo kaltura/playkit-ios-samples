@@ -33,14 +33,7 @@ class ViewController: UIViewController {
         
         config.set(mediaEntry: MediaEntry(json: JSON(entry)))
         
-        do {
-            try self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
-        } catch PlayKitError.multipleDecoratorsDetected {
-            print("multipleDecoratorsDetected")
-        } catch {
-            print("error")
-        }
-        
+        self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
         self.player.view.frame = playerContainer.bounds
         self.playerContainer.addSubview(player.view)
     }

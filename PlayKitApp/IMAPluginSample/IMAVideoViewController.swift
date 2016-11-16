@@ -118,14 +118,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             config.plugins = plugins
         }
         
-        do {
-            try self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
-        } catch PlayKitError.multipleDecoratorsDetected {
-            print("multipleDecoratorsDetected")
-        } catch {
-            print("error")
-        }
-        
+        self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
         self.playerController.dataSource = self
         self.playerController.delegate = self
         
@@ -220,7 +213,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     
     //MARK: Player DataSource and Delegate methods
         
-    func playerCanPlayAd(_ player: Player) -> Bool {
+    func playerShouldPlayAd(_ player: Player) -> Bool {
         return kAllowAVPlayerExpose || pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
     }
     
