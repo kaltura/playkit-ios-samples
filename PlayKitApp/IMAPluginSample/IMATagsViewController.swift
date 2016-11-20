@@ -11,6 +11,7 @@ import AVFoundation
 import PlayKit
 
 var kAutoStartPlayback = true
+var kAutoPlayAd = true
 var kUseIMA = true
 var kAllowAVPlayerExpose = false
 
@@ -102,7 +103,7 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
                 tagsTimes: tagsTimes)
         ]
         
-        settings = [["auto start playback": kAutoStartPlayback], ["use ima": kUseIMA], ["allow av player expose": kAllowAVPlayerExpose]]
+        settings = [["auto start playback": kAutoStartPlayback], ["use ima": kUseIMA], ["allow av player expose": kAllowAVPlayerExpose], ["auto play ad break": kAutoPlayAd]]
         
     }
     
@@ -163,6 +164,8 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
                 kUseIMA = newValue
             } else if currentKey == "allow av player expose" {
                 kAllowAVPlayerExpose = newValue
+            } else if currentKey == "auto play ad break" {
+                kAutoPlayAd = newValue
             }
         }
     }

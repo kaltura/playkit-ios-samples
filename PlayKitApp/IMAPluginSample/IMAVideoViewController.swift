@@ -108,8 +108,8 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
                 adsConfig.set(tagsTimes: tagsTimes)
                 pipEnabled = true
             }
-            
-            adsConfig.set(webOpenerPresentingController: self)
+
+            adsConfig.set(webOpenerPresentingController: self).set(autoPlayAdBreaks: kAutoPlayAd)
             if let companionView = self.companionView {
                 adsConfig.set(companionView: companionView)
             }
