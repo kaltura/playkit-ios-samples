@@ -3,8 +3,15 @@
 # Uncomment this line if you're using Swift
 use_frameworks!
 
-target 'PlayKitApp' do
-  pod 'PlayKit'      , :path => '../playkit-ios'
-  
-#pod 'google-cast-sdk' 
+
+abstract_target 'all' do
+    pod 'PlayKit'      , :path => ‘../../playkit-ios'
+    target 'PlayKitApp' do
+    end
+    target 'IMAPluginSample' do
+    end
+ end
+
+pre_install do |installer|
+    def installer.verify_no_static_framework_transitive_dependencies; end
 end
