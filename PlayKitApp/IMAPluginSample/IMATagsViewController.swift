@@ -11,7 +11,7 @@ import AVFoundation
 import PlayKit
 
 var kAutoStartPlayback = true
-var kAutoPlayAd = true
+var kAutoPlayAd = false
 var kUseIMA = true
 var kAllowAVPlayerExpose = false
 

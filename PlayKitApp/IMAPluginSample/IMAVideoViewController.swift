@@ -181,7 +181,9 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     
     @IBAction func onPipButtonClicked(_ sender: AnyObject) {
         if #available(iOS 9.0, *) {
-            (self.pipManager as! PiPManager).togglePiP(pipEnabled: pipEnabled)
+            if let pipManager = self.pipManager as? PiPManager {
+                pipManager.togglePiP(pipEnabled: pipEnabled)
+            }
         } else {
             // Fallback on earlier versions
         }
@@ -220,11 +222,15 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     //MARK: Player DataSource and Delegate methods
         
     func playerShouldPlayAd(_ player: Player) -> Bool {
+        var pipActive = false
+        
         if #available(iOS 9.0, *) {
-            return kAllowAVPlayerExpose || (self.pipManager as! PiPManager).isPictureInPictureActive()
-        } else {
-            return true
+            if let pipManager = self.pipManager as? PiPManager {
+                pipActive = pipManager.isPictureInPictureActive()
+            }
         }
+        
+        return kAllowAVPlayerExpose || !pipActive
     }
     
     func player(_ player: Player, didReceive event: PlayerEventType, with eventData: Any?) {
