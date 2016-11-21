@@ -22,6 +22,7 @@
 		BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B51DCF3D1400260D6A /* Main.storyboard */; };
 		BFD096B91DCF3D1400260D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B81DCF3D1400260D6A /* Assets.xcassets */; };
 		BFD096BC1DCF3D1400260D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096BA1DCF3D1400260D6A /* LaunchScreen.storyboard */; };
+		BFF78DC61DE2DB84005BDAC5 /* PiPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */; };
 		BFFB90DB1DD22BC100C23217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */; };
 		BFFB90E21DD22BC100C23217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90E11DD22BC100C23217 /* Assets.xcassets */; };
 		BFFB90E51DD22BC100C23217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90E31DD22BC100C23217 /* LaunchScreen.storyboard */; };
@@ -68,6 +69,7 @@
 		BFD096B81DCF3D1400260D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD096BB1DCF3D1400260D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD096BD1DCF3D1400260D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiPManager.swift; sourceTree = "<group>"; };
 		BFFB90D81DD22BC100C23217 /* IMAPluginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMAPluginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFFB90E11DD22BC100C23217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				BFFB90FA1DD22BFD00C23217 /* IMATagsViewController.swift */,
 				BFFB90F91DD22BFD00C23217 /* IMAVideoViewController.swift */,
+				BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				BFFB90DB1DD22BC100C23217 /* AppDelegate.swift in Sources */,
 				BF0230491DD34ACC00C620C6 /* Video.swift in Sources */,
 				BF0230361DD2F8C200C620C6 /* Constants.swift in Sources */,
+				BFF78DC61DE2DB84005BDAC5 /* PiPManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -688,7 +692,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = IMAPluginSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSample;
@@ -708,7 +712,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = IMAPluginSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSample;

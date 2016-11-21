@@ -27,7 +27,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     var pipEnabled: Bool = true
     var video: Video!
     var playerController: Player!
-    var pictureInPictureController: AVPictureInPictureController?
+    var pipManager: Any?
     
     enum PlayButtonType: Int {
         case playButton = 0
@@ -40,7 +40,18 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         
         pipEnabled = configAllowsPiP()
         setUpContentPlayer()
-        setupPiP()
+        
+        if pictureInPictureButton != nil {
+            if #available(iOS 9.0, *) {
+                if PiPManager.isPictureInPictureSupported() {
+                    self.pipManager = PiPManager(playerController: self.playerController, parent: self)
+                } else {
+                    pictureInPictureButton.isHidden = true
+                }
+            } else {
+                pictureInPictureButton.isHidden = true
+            }
+        }
         
         if kAutoStartPlayback {
             self.playContent()
@@ -130,12 +141,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         })*/
     }
     
-    func setupPiP() {
-        pictureInPictureController = self.playerController.createPiPController(with: self)
-        if (!AVPictureInPictureController.isPictureInPictureSupported() && pictureInPictureButton != nil) {
-            pictureInPictureButton.isHidden = true;
-        }
-    }
+    
     
     func configAllowsPiP() -> Bool {
         return kAllowAVPlayerExpose || !kUseIMA
@@ -174,10 +180,10 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     }
     
     @IBAction func onPipButtonClicked(_ sender: AnyObject) {
-        if (pictureInPictureController!.isPictureInPictureActive) {
-            pictureInPictureController!.stopPictureInPicture();
-        } else if pipEnabled {
-            pictureInPictureController!.startPictureInPicture();
+        if #available(iOS 9.0, *) {
+            (self.pipManager as! PiPManager).togglePiP(pipEnabled: pipEnabled)
+        } else {
+            // Fallback on earlier versions
         }
     }
     
@@ -214,7 +220,11 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     //MARK: Player DataSource and Delegate methods
         
     func playerShouldPlayAd(_ player: Player) -> Bool {
-        return kAllowAVPlayerExpose || pictureInPictureController == nil || !pictureInPictureController!.isPictureInPictureActive
+        if #available(iOS 9.0, *) {
+            return kAllowAVPlayerExpose || (self.pipManager as! PiPManager).isPictureInPictureActive()
+        } else {
+            return true
+        }
     }
     
     func player(_ player: Player, didReceive event: PlayerEventType, with eventData: Any?) {
