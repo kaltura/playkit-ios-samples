@@ -321,12 +321,12 @@
 				TargetAttributes = {
 					BFD096AD1DCF3D1400260D6A = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = BT5J4WV2RB;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 					BFFB90D71DD22BC100C23217 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = BT5J4WV2RB;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 					BFFB90EA1DD22BC100C23217 = {
@@ -658,7 +658,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = PlayKitApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitApp;
@@ -673,7 +673,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = PlayKitApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitApp;
@@ -688,7 +688,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = IMAPluginSample/Info.plist;
@@ -708,7 +708,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = IMAPluginSample/Info.plist;
