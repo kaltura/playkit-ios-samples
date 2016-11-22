@@ -1,6 +1,0 @@
-framework module Pods_all_IMAPluginSample {
-  umbrella header "Pods-all-IMAPluginSample-umbrella.h"
-
-  export *
-  module * { export * }
-}
