@@ -1,0 +1,26 @@
+PODS:
+  - GoogleAds-IMA-iOS-SDK (3.3.1)
+  - PlayKit (0.1.0):
+    - PlayKit/Core (= 0.1.0)
+  - PlayKit/Core (0.1.0):
+    - SwiftyJSON
+  - PlayKit/IMAPlugin (0.1.0):
+    - GoogleAds-IMA-iOS-SDK (~> 3.3)
+  - SwiftyJSON (3.1.3)
+
+DEPENDENCIES:
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit/IMAPlugin (from `../../playkit-ios`)
+
+EXTERNAL SOURCES:
+  PlayKit:
+    :path: ../../playkit-ios
+
+SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: 5643300870bd3289c47c0d0b5a2dbf595b05c336
+  PlayKit: f2f99846a3f84b7a6a3aabbfabefaef1612d3706
+  SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
+
+PODFILE CHECKSUM: 7a5aa602b9aee42ab882843452130769626af31d
+
+COCOAPODS: 1.1.0

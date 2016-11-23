@@ -7,16 +7,61 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A8BAB7BD500E6670EAFD9CF /* Pods_all_PlayKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE12E2495022ACA5F9FBBFF3 /* Pods_all_PlayKitApp.framework */; };
+		BF0230351DD2F8C200C620C6 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = BF02302D1DD2F8C200C620C6 /* check.png */; };
+		BF0230361DD2F8C200C620C6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF02302E1DD2F8C200C620C6 /* Constants.swift */; };
+		BF0230371DD2F8C200C620C6 /* android.png in Resources */ = {isa = PBXBuildFile; fileRef = BF02302F1DD2F8C200C620C6 /* android.png */; };
+		BF0230381DD2F8C200C620C6 /* bip.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230301DD2F8C200C620C6 /* bip.png */; };
+		BF0230391DD2F8C200C620C6 /* bunny.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230311DD2F8C200C620C6 /* bunny.png */; };
+		BF02303A1DD2F8C200C620C6 /* dfp.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230321DD2F8C200C620C6 /* dfp.png */; };
+		BF02303B1DD2F8C200C620C6 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230331DD2F8C200C620C6 /* pause.png */; };
+		BF02303C1DD2F8C200C620C6 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = BF0230341DD2F8C200C620C6 /* play.png */; };
+		BF0230491DD34ACC00C620C6 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0230481DD34ACC00C620C6 /* Video.swift */; };
 		BFD096B21DCF3D1400260D6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD096B11DCF3D1400260D6A /* AppDelegate.swift */; };
 		BFD096B41DCF3D1400260D6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD096B31DCF3D1400260D6A /* ViewController.swift */; };
 		BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B51DCF3D1400260D6A /* Main.storyboard */; };
 		BFD096B91DCF3D1400260D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B81DCF3D1400260D6A /* Assets.xcassets */; };
 		BFD096BC1DCF3D1400260D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096BA1DCF3D1400260D6A /* LaunchScreen.storyboard */; };
-		EEB865C1341EE9886A5DE513 /* Pods_PlayKitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F81A7658EC6B4D90ACDA56A7 /* Pods_PlayKitApp.framework */; };
+		BFF78DC61DE2DB84005BDAC5 /* PiPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */; };
+		BFFB90DB1DD22BC100C23217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */; };
+		BFFB90E21DD22BC100C23217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90E11DD22BC100C23217 /* Assets.xcassets */; };
+		BFFB90E51DD22BC100C23217 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90E31DD22BC100C23217 /* LaunchScreen.storyboard */; };
+		BFFB90F01DD22BC100C23217 /* IMAPluginSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90EF1DD22BC100C23217 /* IMAPluginSampleTests.swift */; };
+		BFFB90FF1DD22BFD00C23217 /* IMASettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90F81DD22BFD00C23217 /* IMASettingsTableViewCell.swift */; };
+		BFFB91001DD22BFD00C23217 /* IMAVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90F91DD22BFD00C23217 /* IMAVideoViewController.swift */; };
+		BFFB91011DD22BFD00C23217 /* IMATagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90FA1DD22BFD00C23217 /* IMATagsViewController.swift */; };
+		BFFB91021DD22BFD00C23217 /* ima_ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90FB1DD22BFD00C23217 /* ima_ipad.storyboard */; };
+		BFFB91031DD22BFD00C23217 /* ima_iphone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90FC1DD22BFD00C23217 /* ima_iphone.storyboard */; };
+		BFFB91041DD22BFD00C23217 /* IMAVideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90FD1DD22BFD00C23217 /* IMAVideoTableViewCell.swift */; };
+		EEBE17CA1D2C5AE420513C58 /* Pods_all_IMAPluginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FF4109398BC691AF75A692D /* Pods_all_IMAPluginSample.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BFFB90EC1DD22BC100C23217 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFD096A61DCF3D1400260D6A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFFB90D71DD22BC100C23217;
+			remoteInfo = IMAPluginSample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		18C34AA89A598CD14A3168F6 /* Pods-all-IMAPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-IMAPluginSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		4FF4109398BC691AF75A692D /* Pods_all_IMAPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_IMAPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		71E918BA7E423583CB4A0F21 /* Pods-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
+		B54C072F25CF47551022599F /* Pods-all-IMAPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-IMAPluginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample.release.xcconfig"; sourceTree = "<group>"; };
+		BF0230291DD2F75700C620C6 /* Pods_PlayKitApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pods_PlayKitApp.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PlayKitApp-bmmnkjkqbpojhpcswrxmefrgvpzw/Build/Products/Debug-iphonesimulator/Pods_PlayKitApp.framework"; sourceTree = "<group>"; };
+		BF02302B1DD2F76000C620C6 /* PlayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PlayKit.framework; path = "../../../../Library/Developer/Xcode/DerivedData/PlayKitApp-bmmnkjkqbpojhpcswrxmefrgvpzw/Build/Products/Debug-iphonesimulator/PlayKit/PlayKit.framework"; sourceTree = "<group>"; };
+		BF02302D1DD2F8C200C620C6 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		BF02302E1DD2F8C200C620C6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF02302F1DD2F8C200C620C6 /* android.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = android.png; sourceTree = "<group>"; };
+		BF0230301DD2F8C200C620C6 /* bip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bip.png; sourceTree = "<group>"; };
+		BF0230311DD2F8C200C620C6 /* bunny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunny.png; sourceTree = "<group>"; };
+		BF0230321DD2F8C200C620C6 /* dfp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dfp.png; sourceTree = "<group>"; };
+		BF0230331DD2F8C200C620C6 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause.png; sourceTree = "<group>"; };
+		BF0230341DD2F8C200C620C6 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		BF0230481DD34ACC00C620C6 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD096B11DCF3D1400260D6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD096B31DCF3D1400260D6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +69,25 @@
 		BFD096B81DCF3D1400260D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD096BB1DCF3D1400260D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD096BD1DCF3D1400260D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiPManager.swift; sourceTree = "<group>"; };
+		BFFB90D81DD22BC100C23217 /* IMAPluginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMAPluginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFFB90E11DD22BC100C23217 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFFB90E41DD22BC100C23217 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFFB90E61DD22BC100C23217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFFB90EB1DD22BC100C23217 /* IMAPluginSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMAPluginSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFFB90EF1DD22BC100C23217 /* IMAPluginSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMAPluginSampleTests.swift; sourceTree = "<group>"; };
+		BFFB90F11DD22BC100C23217 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFFB90F81DD22BFD00C23217 /* IMASettingsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMASettingsTableViewCell.swift; sourceTree = "<group>"; };
+		BFFB90F91DD22BFD00C23217 /* IMAVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMAVideoViewController.swift; sourceTree = "<group>"; };
+		BFFB90FA1DD22BFD00C23217 /* IMATagsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMATagsViewController.swift; sourceTree = "<group>"; };
+		BFFB90FB1DD22BFD00C23217 /* ima_ipad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ima_ipad.storyboard; sourceTree = "<group>"; };
+		BFFB90FC1DD22BFD00C23217 /* ima_iphone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ima_iphone.storyboard; sourceTree = "<group>"; };
+		BFFB90FD1DD22BFD00C23217 /* IMAVideoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMAVideoTableViewCell.swift; sourceTree = "<group>"; };
+		C4ADEFDF6331D20E3C97D870 /* Pods_IMAPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMAPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5B2A99FD8B8603ED729177E /* Pods-all-PlayKitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-PlayKitApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp.release.xcconfig"; sourceTree = "<group>"; };
+		DE12E2495022ACA5F9FBBFF3 /* Pods_all_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8247E1C6A8A86F6AD5D8B61 /* Pods-all-PlayKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-PlayKitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EEDD40FC6946CB57E1B0D6BE /* Pods-PlayKitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayKitApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F81A7658EC6B4D90ACDA56A7 /* Pods_PlayKitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayKitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -33,7 +97,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEB865C1341EE9886A5DE513 /* Pods_PlayKitApp.framework in Frameworks */,
+				2A8BAB7BD500E6670EAFD9CF /* Pods_all_PlayKitApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFFB90D51DD22BC100C23217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEBE17CA1D2C5AE420513C58 /* Pods_all_IMAPluginSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFFB90E81DD22BC100C23217 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,15 +122,65 @@
 		3344E87147129B6D2332B87B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF02302B1DD2F76000C620C6 /* PlayKit.framework */,
+				BF0230291DD2F75700C620C6 /* Pods_PlayKitApp.framework */,
 				F81A7658EC6B4D90ACDA56A7 /* Pods_PlayKitApp.framework */,
+				C4ADEFDF6331D20E3C97D870 /* Pods_IMAPluginSample.framework */,
+				4FF4109398BC691AF75A692D /* Pods_all_IMAPluginSample.framework */,
+				DE12E2495022ACA5F9FBBFF3 /* Pods_all_PlayKitApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF02303D1DD2F8CC00C620C6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BF02302F1DD2F8C200C620C6 /* android.png */,
+				BF0230301DD2F8C200C620C6 /* bip.png */,
+				BF0230311DD2F8C200C620C6 /* bunny.png */,
+				BF02302D1DD2F8C200C620C6 /* check.png */,
+				BF0230321DD2F8C200C620C6 /* dfp.png */,
+				BF0230331DD2F8C200C620C6 /* pause.png */,
+				BF0230341DD2F8C200C620C6 /* play.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BF02303E1DD2F8ED00C620C6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BFFB90F81DD22BFD00C23217 /* IMASettingsTableViewCell.swift */,
+				BFFB90FD1DD22BFD00C23217 /* IMAVideoTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		BF02303F1DD2F8FA00C620C6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BFFB90FB1DD22BFD00C23217 /* ima_ipad.storyboard */,
+				BFFB90FC1DD22BFD00C23217 /* ima_iphone.storyboard */,
+				BFFB90E31DD22BC100C23217 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		BF0230401DD2F90D00C620C6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFFB90FA1DD22BFD00C23217 /* IMATagsViewController.swift */,
+				BFFB90F91DD22BFD00C23217 /* IMAVideoViewController.swift */,
+				BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		BFD096A51DCF3D1400260D6A = {
 			isa = PBXGroup;
 			children = (
 				BFD096B01DCF3D1400260D6A /* PlayKitApp */,
+				BFFB90D91DD22BC100C23217 /* IMAPluginSample */,
+				BFFB90EE1DD22BC100C23217 /* IMAPluginSampleTests */,
 				BFD096AF1DCF3D1400260D6A /* Products */,
 				FD95E6BC2419A64ED84BFF77 /* Pods */,
 				3344E87147129B6D2332B87B /* Frameworks */,
@@ -62,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */,
+				BFFB90D81DD22BC100C23217 /* IMAPluginSample.app */,
+				BFFB90EB1DD22BC100C23217 /* IMAPluginSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,11 +210,40 @@
 			path = PlayKitApp;
 			sourceTree = "<group>";
 		};
+		BFFB90D91DD22BC100C23217 /* IMAPluginSample */ = {
+			isa = PBXGroup;
+			children = (
+				BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */,
+				BFFB90E11DD22BC100C23217 /* Assets.xcassets */,
+				BF02303E1DD2F8ED00C620C6 /* Cells */,
+				BF02302E1DD2F8C200C620C6 /* Constants.swift */,
+				BF0230401DD2F90D00C620C6 /* Controllers */,
+				BFFB90E61DD22BC100C23217 /* Info.plist */,
+				BF02303D1DD2F8CC00C620C6 /* Resources */,
+				BF02303F1DD2F8FA00C620C6 /* Storyboard */,
+				BF0230481DD34ACC00C620C6 /* Video.swift */,
+			);
+			path = IMAPluginSample;
+			sourceTree = "<group>";
+		};
+		BFFB90EE1DD22BC100C23217 /* IMAPluginSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFFB90EF1DD22BC100C23217 /* IMAPluginSampleTests.swift */,
+				BFFB90F11DD22BC100C23217 /* Info.plist */,
+			);
+			path = IMAPluginSampleTests;
+			sourceTree = "<group>";
+		};
 		FD95E6BC2419A64ED84BFF77 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				EEDD40FC6946CB57E1B0D6BE /* Pods-PlayKitApp.debug.xcconfig */,
 				71E918BA7E423583CB4A0F21 /* Pods-PlayKitApp.release.xcconfig */,
+				18C34AA89A598CD14A3168F6 /* Pods-all-IMAPluginSample.debug.xcconfig */,
+				B54C072F25CF47551022599F /* Pods-all-IMAPluginSample.release.xcconfig */,
+				E8247E1C6A8A86F6AD5D8B61 /* Pods-all-PlayKitApp.debug.xcconfig */,
+				D5B2A99FD8B8603ED729177E /* Pods-all-PlayKitApp.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -111,20 +271,69 @@
 			productReference = BFD096AE1DCF3D1400260D6A /* PlayKitApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFFB90D71DD22BC100C23217 /* IMAPluginSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFFB90F61DD22BC100C23217 /* Build configuration list for PBXNativeTarget "IMAPluginSample" */;
+			buildPhases = (
+				C20A86D9CEAA96B5F14DB40C /* [CP] Check Pods Manifest.lock */,
+				BFFB90D41DD22BC100C23217 /* Sources */,
+				BFFB90D51DD22BC100C23217 /* Frameworks */,
+				BFFB90D61DD22BC100C23217 /* Resources */,
+				25C59BFE4D1F89F089B84D7B /* [CP] Embed Pods Frameworks */,
+				DA3885FE3390DB9B747002CC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IMAPluginSample;
+			productName = IMAPluginSample;
+			productReference = BFFB90D81DD22BC100C23217 /* IMAPluginSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFFB90EA1DD22BC100C23217 /* IMAPluginSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFFB90F71DD22BC100C23217 /* Build configuration list for PBXNativeTarget "IMAPluginSampleTests" */;
+			buildPhases = (
+				BFFB90E71DD22BC100C23217 /* Sources */,
+				BFFB90E81DD22BC100C23217 /* Frameworks */,
+				BFFB90E91DD22BC100C23217 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFFB90ED1DD22BC100C23217 /* PBXTargetDependency */,
+			);
+			name = IMAPluginSampleTests;
+			productName = IMAPluginSampleTests;
+			productReference = BFFB90EB1DD22BC100C23217 /* IMAPluginSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		BFD096A61DCF3D1400260D6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Kaltura;
 				TargetAttributes = {
 					BFD096AD1DCF3D1400260D6A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
+					};
+					BFFB90D71DD22BC100C23217 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = X8RDCFJK95;
+						ProvisioningStyle = Automatic;
+					};
+					BFFB90EA1DD22BC100C23217 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = BT5J4WV2RB;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BFFB90D71DD22BC100C23217;
 					};
 				};
 			};
@@ -142,6 +351,8 @@
 			projectRoot = "";
 			targets = (
 				BFD096AD1DCF3D1400260D6A /* PlayKitApp */,
+				BFFB90D71DD22BC100C23217 /* IMAPluginSample */,
+				BFFB90EA1DD22BC100C23217 /* IMAPluginSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -154,6 +365,31 @@
 				BFD096BC1DCF3D1400260D6A /* LaunchScreen.storyboard in Resources */,
 				BFD096B91DCF3D1400260D6A /* Assets.xcassets in Resources */,
 				BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFFB90D61DD22BC100C23217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF02303A1DD2F8C200C620C6 /* dfp.png in Resources */,
+				BF0230351DD2F8C200C620C6 /* check.png in Resources */,
+				BFFB90E51DD22BC100C23217 /* LaunchScreen.storyboard in Resources */,
+				BF0230391DD2F8C200C620C6 /* bunny.png in Resources */,
+				BF02303B1DD2F8C200C620C6 /* pause.png in Resources */,
+				BF02303C1DD2F8C200C620C6 /* play.png in Resources */,
+				BFFB90E21DD22BC100C23217 /* Assets.xcassets in Resources */,
+				BF0230371DD2F8C200C620C6 /* android.png in Resources */,
+				BFFB91031DD22BFD00C23217 /* ima_iphone.storyboard in Resources */,
+				BF0230381DD2F8C200C620C6 /* bip.png in Resources */,
+				BFFB91021DD22BFD00C23217 /* ima_ipad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFFB90E91DD22BC100C23217 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +408,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25C59BFE4D1F89F089B84D7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B38CD130F518072892045E56 /* [CP] Copy Pods Resources */ = {
@@ -187,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayKitApp/Pods-PlayKitApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-all-PlayKitApp/Pods-all-PlayKitApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BB01D82DD8CE78303DA77550 /* [CP] Check Pods Manifest.lock */ = {
@@ -205,6 +456,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C20A86D9CEAA96B5F14DB40C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DA3885FE3390DB9B747002CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-all-IMAPluginSample/Pods-all-IMAPluginSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -217,7 +498,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFFB90D41DD22BC100C23217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFFB91011DD22BFD00C23217 /* IMATagsViewController.swift in Sources */,
+				BFFB91001DD22BFD00C23217 /* IMAVideoViewController.swift in Sources */,
+				BFFB91041DD22BFD00C23217 /* IMAVideoTableViewCell.swift in Sources */,
+				BFFB90FF1DD22BFD00C23217 /* IMASettingsTableViewCell.swift in Sources */,
+				BFFB90DB1DD22BC100C23217 /* AppDelegate.swift in Sources */,
+				BF0230491DD34ACC00C620C6 /* Video.swift in Sources */,
+				BF0230361DD2F8C200C620C6 /* Constants.swift in Sources */,
+				BFF78DC61DE2DB84005BDAC5 /* PiPManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFFB90E71DD22BC100C23217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFFB90F01DD22BC100C23217 /* IMAPluginSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFFB90ED1DD22BC100C23217 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFFB90D71DD22BC100C23217 /* IMAPluginSample */;
+			targetProxy = BFFB90EC1DD22BC100C23217 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BFD096B51DCF3D1400260D6A /* Main.storyboard */ = {
@@ -232,6 +544,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFD096BB1DCF3D1400260D6A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFFB90E31DD22BC100C23217 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFFB90E41DD22BC100C23217 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -257,6 +577,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -306,6 +627,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -332,7 +654,7 @@
 		};
 		BFD096C11DCF3D1400260D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EEDD40FC6946CB57E1B0D6BE /* Pods-PlayKitApp.debug.xcconfig */;
+			baseConfigurationReference = E8247E1C6A8A86F6AD5D8B61 /* Pods-all-PlayKitApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -346,7 +668,7 @@
 		};
 		BFD096C21DCF3D1400260D6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 71E918BA7E423583CB4A0F21 /* Pods-PlayKitApp.release.xcconfig */;
+			baseConfigurationReference = D5B2A99FD8B8603ED729177E /* Pods-all-PlayKitApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -355,6 +677,70 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		BFFB90F21DD22BC100C23217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18C34AA89A598CD14A3168F6 /* Pods-all-IMAPluginSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = IMAPluginSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFFB90F31DD22BC100C23217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54C072F25CF47551022599F /* Pods-all-IMAPluginSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = IMAPluginSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BFFB90F41DD22BC100C23217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				INFOPLIST_FILE = IMAPluginSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMAPluginSample.app/IMAPluginSample";
+			};
+			name = Debug;
+		};
+		BFFB90F51DD22BC100C23217 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				INFOPLIST_FILE = IMAPluginSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IMAPluginSample.app/IMAPluginSample";
 			};
 			name = Release;
 		};
@@ -375,6 +761,24 @@
 			buildConfigurations = (
 				BFD096C11DCF3D1400260D6A /* Debug */,
 				BFD096C21DCF3D1400260D6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFFB90F61DD22BC100C23217 /* Build configuration list for PBXNativeTarget "IMAPluginSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFFB90F21DD22BC100C23217 /* Debug */,
+				BFFB90F31DD22BC100C23217 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFFB90F71DD22BC100C23217 /* Build configuration list for PBXNativeTarget "IMAPluginSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFFB90F41DD22BC100C23217 /* Debug */,
+				BFFB90F51DD22BC100C23217 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
