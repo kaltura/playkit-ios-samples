@@ -656,7 +656,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E8247E1C6A8A86F6AD5D8B61 /* Pods-all-PlayKitApp.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = PlayKitApp/Info.plist;
@@ -671,7 +670,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D5B2A99FD8B8603ED729177E /* Pods-all-PlayKitApp.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = PlayKitApp/Info.plist;
@@ -686,15 +684,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 18C34AA89A598CD14A3168F6 /* Pods-all-IMAPluginSample.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = IMAPluginSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -706,15 +701,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B54C072F25CF47551022599F /* Pods-all-IMAPluginSample.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = IMAPluginSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.IMAPluginSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -725,7 +717,6 @@
 		BFFB90F41DD22BC100C23217 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = BT5J4WV2RB;
 				INFOPLIST_FILE = IMAPluginSampleTests/Info.plist;
@@ -741,7 +732,6 @@
 		BFFB90F51DD22BC100C23217 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = BT5J4WV2RB;
 				INFOPLIST_FILE = IMAPluginSampleTests/Info.plist;
