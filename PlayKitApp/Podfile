@@ -15,6 +15,10 @@ abstract_target 'all' do
     
     target 'IMAPluginSample' do
     end
+    
+    target 'AnalyticsSample' do
+    end
+
  end
 
 pre_install do |installer|
