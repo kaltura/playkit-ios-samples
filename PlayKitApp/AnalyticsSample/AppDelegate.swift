@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import PlayKit
+import Log
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        PKLog.theme = Themes.tomorrowNight
+        
         // Override point for customization after application launch.
         return true
     }
@@ -44,3 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension Themes {
+    static let tomorrowNight = Theme(
+        trace:   "#C5C8C6",
+        debug:   "#81A2BE",
+        info:    "#B5BD68",
+        warning: "#F0C674",
+        error:   "#CC6666"
+    )
+}
