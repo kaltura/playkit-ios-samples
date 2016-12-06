@@ -2,8 +2,7 @@
   "name": "PlayKit",
   "version": "0.1.0",
   "summary": "A short description of PlayKit.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/PlayKit",
+  "homepage": "https://github.com/kaltura/playkit-ios",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -11,25 +10,37 @@
   "authors": {
     "Rivka Schwartz": "Rivka.Peleg@kaltura.com",
     "Vadim Kononov": "vadim.kononov@kaltura.com",
-    "Eliza Sapir": "eliza.sapir@kaltura.com"
+    "Eliza Sapir": "eliza.sapir@kaltura.com",
+    "Noam Tamim": "noam.tamim@kaltura.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/PlayKit.git",
+    "git": "https://github.com/kaltura/playkit-ios.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
-  },
-  "dependencies": {
-    "SwiftyJSON": [
-
-    ]
   },
   "default_subspecs": "Core",
   "subspecs": [
     {
       "name": "Core",
       "source_files": "Classes/**/*",
+      "dependencies": {
+        "SwiftyJSON": [
+
+        ],
+        "Log": [
+
+        ]
+      }
+    },
+    {
+      "name": "SamplePlugin",
+      "source_files": "Plugins/Sample"
+    },
+    {
+      "name": "IMAPlugin",
+      "source_files": "Plugins/IMA",
       "xcconfig": {
         "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
         "OTHER_LDFLAGS": "$(inherited) -framework \"GoogleInteractiveMediaAds\"",
@@ -43,12 +54,8 @@
       }
     },
     {
-      "name": "SamplePlugin",
-      "source_files": "Plugins/Sample"
-    },
-    {
-      "name": "AnalyticsPlugin",
-      "source_files": "Plugins/Analytics",
+      "name": "YouboraPlugin",
+      "source_files": "Plugins/Youbora",
       "xcconfig": {
         "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
         "OTHER_LDFLAGS": "$(inherited) -framework \"YouboraLib\" -framework \"YouboraPluginAVPlayer\"",

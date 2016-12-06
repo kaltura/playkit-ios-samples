@@ -1,10 +1,10 @@
 CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES
 CONFIGURATION_BUILD_DIR = $PODS_CONFIGURATION_BUILD_DIR/PlayKit-iOS10.0
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}"/** "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON-iOS10.0"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}"/** "$PODS_CONFIGURATION_BUILD_DIR/Log-iOS10.0" "$PODS_CONFIGURATION_BUILD_DIR/SwiftyJSON-iOS10.0"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleAds-IMA-iOS-SDK" "${PODS_ROOT}/Headers/Public/Youbora-AVPlayer" "${PODS_ROOT}/Headers/Public/Youbora-YouboraLib"
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}"/**
-OTHER_LDFLAGS = $(inherited) -framework "GoogleInteractiveMediaAds"
+OTHER_LDFLAGS = $(inherited) -framework "GoogleInteractiveMediaAds" -framework "YouboraLib" -framework "YouboraPluginAVPlayer"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

@@ -1,0 +1,6 @@
+framework module YouboraLib {
+  umbrella header "YouboraLib.h"
+
+  export *
+  module * { export * }
+}

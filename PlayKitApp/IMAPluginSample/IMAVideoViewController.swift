@@ -13,7 +13,7 @@ import AVKit
 import PlayKit
 import SwiftyJSON
 
-class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate, PlayerDataSource, PlayerDelegate {
+class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDelegate, PlayerDelegate {
     
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var videoView: UIView!
@@ -130,7 +130,6 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         }
         
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
-        self.playerController.dataSource = self
         self.playerController.delegate = self
         
         videoView.addSubview(self.playerController.view)
@@ -233,8 +232,9 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         return kAllowAVPlayerExpose || !pipActive
     }
     
-    func player(_ player: Player, didReceive event: PlayerEventType, with eventData: Any?) {
-        if event == PlayerEventType.ad_did_progress_to_time {
+    func player(_ player: Player, didReceive event: PKEvent, with eventData: Any?) {
+        /*
+        if event == AdEvents.ad {
             if let data = eventData as? [String : TimeInterval] {
                 let time = CMTimeMakeWithSeconds(data["mediaTime"]!, 1000)
                 let duration = CMTimeMakeWithSeconds(data["totalTime"]!, 1000)
@@ -247,6 +247,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             pipEnabled = true
             progressBar.isEnabled = true
         }
+        */
     }
     
     func player(_ player: Player, failedWith error: String) {
