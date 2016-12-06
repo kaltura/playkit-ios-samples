@@ -84,10 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/PlayKit-iOS9.0/PlayKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON-iOS9.0/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Log-iOS8.3/Log.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PlayKit-iOS8.3/PlayKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON-iOS8.3/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "$BUILT_PRODUCTS_DIR/PlayKit-iOS9.0/PlayKit.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON-iOS9.0/SwiftyJSON.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Log-iOS8.3/Log.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PlayKit-iOS8.3/PlayKit.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyJSON-iOS8.3/SwiftyJSON.framework"
 fi
