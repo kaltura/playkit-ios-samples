@@ -1,9 +1,10 @@
 PODS:
-  - Log (1.0)
+  - GoogleAds-IMA-iOS-SDK (3.3.1)
   - PlayKit (0.1.0):
     - PlayKit/Core (= 0.1.0)
+    - SwiftyJSON
   - PlayKit/Core (0.1.0):
-    - Log
+    - GoogleAds-IMA-iOS-SDK (~> 3.3)
     - SwiftyJSON
   - SwiftyJSON (3.1.1)
 
@@ -15,10 +16,10 @@ EXTERNAL SOURCES:
     :path: ../../playkit-ios
 
 SPEC CHECKSUMS:
-  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 3b76cbb340c2b65792eb63e23e84b5e6e0a594ac
+  GoogleAds-IMA-iOS-SDK: 5643300870bd3289c47c0d0b5a2dbf595b05c336
+  PlayKit: 61c0df96f4ae9482cb71ebeac38f5dfe64de1cdd
   SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
 
 PODFILE CHECKSUM: 36f4925af26996df426ecb0d7295ceaa1eeb0d73
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.1.0.rc.2
