@@ -19,6 +19,9 @@ abstract_target 'all' do
     target 'AnalyticsSample' do
     end
 
+    target 'TracksSample' do
+    end
+
  end
 
 pre_install do |installer|
