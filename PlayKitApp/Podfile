@@ -1,5 +1,5 @@
 # Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
+platform :ios, '8.0'
 # Uncomment this line if you're using Swift
 use_frameworks!
 
@@ -20,8 +20,7 @@ abstract_target 'all' do
     end
 
     target 'TracksSample' do
-    end
-
+    end 
  end
 
 pre_install do |installer|
@@ -35,5 +34,12 @@ post_install do |installer|
             config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO' 
         end 
     end 
+end
+
+
+target 'ObjCSample' do
+    pod 'PlayKit', :path => '../../playkit-ios'
+    pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
+    pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
 end
 
