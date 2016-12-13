@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             "sources": [mp4],
         ]
 
-        return MediaEntry(json: JSON(entry))
+        return MediaEntry(json: entry)
     }
     
     
