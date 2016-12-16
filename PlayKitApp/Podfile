@@ -7,16 +7,17 @@ use_frameworks!
 abstract_target 'all' do
     
     pod 'PlayKit', :path => '../../playkit-ios'
-    pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
-    pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
 
     target 'PlayKitApp' do
     end
     
     target 'IMAPluginSample' do
+        pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
     end
     
     target 'AnalyticsSample' do
+        pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
+        pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
     end
 
     target 'TracksSample' do
