@@ -24,6 +24,7 @@ abstract_target 'all' do
     end 
     
     target 'LocalAssetsSample' do
+        pod 'DownPicker'
     end
  end
 

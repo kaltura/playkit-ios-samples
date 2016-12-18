@@ -681,6 +681,7 @@
 					FBD61EBF1E04840B00F0183B = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = X8RDCFJK95;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1567,7 +1568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = LocalAssetsSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.LocalAssetsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1583,7 +1584,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = LocalAssetsSample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.LocalAssetsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1674,6 +1675,7 @@
 				FBD61ED01E04840B00F0183B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
