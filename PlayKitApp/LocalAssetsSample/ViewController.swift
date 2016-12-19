@@ -19,7 +19,7 @@ struct Asset {
     let url: String
     let licenseUrl: String?
     
-    var downloadLocation: URL? = nil
+//    var downloadLocation: URL? = nil
     
     init(_ id: String, url: String, licenseUrl: String? = nil) {
         self.id = id
@@ -27,24 +27,29 @@ struct Asset {
         self.licenseUrl = licenseUrl
     }
     
-    func mediaEntry() -> MediaEntry {
-        let drmData = licenseUrl == nil ? nil : [
-            [
-            "licenseUrl": licenseUrl,
-            "fpsCertificate": fpsCertificate
-            ]
-        ]
-        
-        return MediaEntry(json: [
-            "id": id,
-            "sources": [
-                [
-                    "url": url,
-                    "drmData": drmData as Any
-                ]
-            ]
-        ])
-    }
+//    func mediaEntry() -> MediaEntry {
+//        let drmData = licenseUrl == nil ? nil : [
+//            [
+//            "licenseUrl": licenseUrl,
+//            "fpsCertificate": fpsCertificate
+//            ]
+//        ]
+//        
+//        if let url = loadDownloadLocation(assetId: self.id) {
+//            let mediaSource = 
+//        }
+//        let url = loadDownloadLocation(assetId: self.id)?.absoluteString ?? self.url
+//        
+//        return MediaEntry(json: [
+//            "id": id,
+//            "sources": [
+//                [
+//                    "url": url,
+//                    "drmData": drmData as Any
+//                ]
+//            ]
+//        ])
+//    }
     
     func avAsset() -> AVURLAsset {
         return AVURLAsset(url: URL(string: url)!)
@@ -52,20 +57,51 @@ struct Asset {
 }
 
 let assets = [
-    Asset("player",
-          url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
     Asset("sintel", 
           url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8", 
-          licenseUrl: "https://udrmv3.kaltura.com/fps/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh4VVNvWks3T1NWaEpOSFIzQWV5X0stQWFDWG4xWEQ0NldiQzdwTE9GRHJVS3N3amxlOHNrWFRTZE1UR1FpdkRtLWxtRVVhMmhyMkFJY0xaZ1JoSFZNREg4bEtFbG9KdUY3cnUzcnBPRGhLbnc9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=F343zeUI%2BvxzrrLbV3xTmXW4p3Y%3D"),
+          licenseUrl: "https://udrmv3.kaltura.com/fps/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh3cWRGNk9CUTRBQlV1LUtvYmJuWndUMVEyb0daOUotYUg3T05Tblh3SmU4WDM5cXJfWGpuVXg4UnJNeFVZN0dKNkF6YVJIVmtzbzlmdll6WkRzdU5HOHNScUpHbnhoTHN0S2U4QlQyOHdWOGc9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=3aYfqde7%2FPGrHjkOG3J0iXQ%2BEps%3D"),
+    Asset("player",
+          url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
 ]
+
+fileprivate let simpleStorage: LocalDrmStorage? = {
+    return try? DefaultLocalDrmStorage()
+}()
+
+func downloadPathKeyName(_ assetId: String) -> String {
+    return "\(assetId).localPath"
+}
+
+func loadDownloadLocation(assetId: String) -> URL? {
+    guard let data = simpleStorage?.load(key: downloadPathKeyName(assetId)) else {
+        return nil
+    }
+    guard let relativePath = String(data: data, encoding: .utf8) else {
+        return nil
+    }
+    
+    return URL(fileURLWithPath: NSHomeDirectory(), isDirectory: true).appendingPathComponent(relativePath)
+}
+
+func saveDownloadLocation(assetId: String, downloadLocation: URL) {
+    if let data = downloadLocation.relativePath.data(using: .utf8) {
+        simpleStorage?.save(key: downloadPathKeyName(assetId), value: data)
+    }
+}
+
 
 class ViewController: UIViewController {
     
     
     
     var player : Player!
-    let assetsManager = LocalAssetsManager()
     var currentDownloadingAsset: Asset?
+    var selectedAsset: Asset?
+    
+    
+    lazy var assetsManager: LocalAssetsManager = {
+        return LocalAssetsManager(storage: simpleStorage)
+    }()
     
     lazy var downloadConfig: URLSessionConfiguration = {
         return URLSessionConfiguration.background(withIdentifier: "playkit-demo-download")
@@ -74,20 +110,33 @@ class ViewController: UIViewController {
     lazy var downloadSession: AVAssetDownloadURLSession = {
         return AVAssetDownloadURLSession(configuration: self.downloadConfig, assetDownloadDelegate: self, delegateQueue: OperationQueue.main)
     }()
-        
 
 
-    @IBOutlet var itemSelector: UITextField?
+    @IBOutlet var itemSelector: UITextField!
+    @IBOutlet var playerContainer: UIView!
     var picker: DownPicker!
 
-
     @IBAction func playTapped(_: UIButton) {
+        guard let asset = self.selectedAsset else {
+            return
+        }
         
+        let config = PlayerConfig()
+        
+        let mediaEntry = self.mediaEntry(asset)
+        
+        config.set(mediaEntry: mediaEntry)
+        
+        self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
+        self.player.view.frame = playerContainer.bounds
+        self.playerContainer.addSubview(player.view)
+        self.player.play()
     }
     
     @IBAction func downloadTapped(_: UIButton) {
-        let asset = assets[picker.selectedIndex]
-        self.startDownload(asset)
+        if let asset = self.selectedAsset {
+            self.startDownload(asset)
+        }
     }
     
     override func viewDidLoad() {
@@ -98,8 +147,15 @@ class ViewController: UIViewController {
         let pickerData = assets.map { $0.id }
                 
         self.picker = DownPicker.init(textField: self.itemSelector, withData: pickerData)
-        self.picker?.selectedIndex = 0
+        self.picker.addTarget(self, action: #selector(assetSelected), for:.valueChanged)
         
+        self.picker.selectedIndex = 0
+        self.assetSelected()
+    }
+    
+    func assetSelected(_: Any? = nil) {
+        self.selectedAsset = assets[picker.selectedIndex]
+        print("selected asset:", self.selectedAsset)
     }
 
     override func didReceiveMemoryWarning() {
@@ -109,7 +165,7 @@ class ViewController: UIViewController {
 
     
     func startDownload(_ asset: Asset) {
-        let entry = asset.mediaEntry()
+        let entry = self.mediaEntry(asset, allowLocal: false)
         let avAsset = asset.avAsset()
         
         let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil)
@@ -124,6 +180,24 @@ class ViewController: UIViewController {
         currentDownloadingAsset = asset
     }
     
+    func mediaEntry(_ asset: Asset, allowLocal: Bool = true) -> MediaEntry {
+        
+        let mediaSource: MediaSource
+        if allowLocal, let url = loadDownloadLocation(assetId: asset.id) {
+            mediaSource = assetsManager.createLocalMediaSource(for: asset.id, localURL: url)
+        } else {
+            
+            let drmData = [DRMData.fromJSON([
+                "licenseUrl": asset.licenseUrl,
+                "fpsCertificate": fpsCertificate
+                ])].flatMap({$0})
+            mediaSource = MediaSource(asset.id, contentUrl: URL(string: asset.url), drmData: drmData)
+        }
+                
+        return MediaEntry(asset.id, sources: [mediaSource])
+    }
+    
+
 }
 
 
@@ -135,8 +209,10 @@ extension ViewController: AVAssetDownloadDelegate {
     
     @available(iOS 10.0, *)
     public func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didFinishDownloadingTo location: URL) {
-        currentDownloadingAsset?.downloadLocation = location
         print(assetDownloadTask, location)
+        if let assetId = selectedAsset?.id {
+            saveDownloadLocation(assetId: assetId, downloadLocation: location)
+        }
     }
     
     @available(iOS 9.0, *)
