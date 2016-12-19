@@ -28,15 +28,19 @@ struct Asset {
     }
     
     func mediaEntry() -> MediaEntry {
-        return MediaEntry(dict: [
+        let drmData = licenseUrl == nil ? nil : [
+            [
+            "licenseUrl": licenseUrl,
+            "fpsCertificate": fpsCertificate
+            ]
+        ]
+        
+        return MediaEntry(json: [
             "id": id,
             "sources": [
                 [
                     "url": url,
-                    "drmData": [
-                        "licenseUrl": licenseUrl,
-                        "fpsCertificate": fpsCertificate
-                    ]
+                    "drmData": drmData as Any
                 ]
             ]
         ])
@@ -48,21 +52,33 @@ struct Asset {
 }
 
 let assets = [
+    Asset("player",
+          url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
     Asset("sintel", 
-          url: "https://cdnapisec.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8", 
-          licenseUrl: "https://udrmv3.kaltura.com/fps/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh4VVNvWks3T1NWaEpOSFIzQWV5X0stQWFDWG4xWEQ0NldiQzdwTE9GRHJVS3N3amxlOHNrWFRTZE1UR1FpdkRtLWxtRVVhMmhyMkFJY0xaZ1JoSFZNREg4bEtFbG9KdUY3cnUzcnBPRGhLbnc9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=F343zeUI%2BvxzrrLbV3xTmXW4p3Y%3D")
+          url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8", 
+          licenseUrl: "https://udrmv3.kaltura.com/fps/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh4VVNvWks3T1NWaEpOSFIzQWV5X0stQWFDWG4xWEQ0NldiQzdwTE9GRHJVS3N3amxlOHNrWFRTZE1UR1FpdkRtLWxtRVVhMmhyMkFJY0xaZ1JoSFZNREg4bEtFbG9KdUY3cnUzcnBPRGhLbnc9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=F343zeUI%2BvxzrrLbV3xTmXW4p3Y%3D"),
 ]
 
 class ViewController: UIViewController {
+    
     
     
     var player : Player!
     let assetsManager = LocalAssetsManager()
     var currentDownloadingAsset: Asset?
     
+    lazy var downloadConfig: URLSessionConfiguration = {
+        return URLSessionConfiguration.background(withIdentifier: "playkit-demo-download")
+    }()
+
+    lazy var downloadSession: AVAssetDownloadURLSession = {
+        return AVAssetDownloadURLSession(configuration: self.downloadConfig, assetDownloadDelegate: self, delegateQueue: OperationQueue.main)
+    }()
+        
+
 
     @IBOutlet var itemSelector: UITextField?
-    var picker: DownPicker?
+    var picker: DownPicker!
 
 
     @IBAction func playTapped(_: UIButton) {
@@ -70,23 +86,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func downloadTapped(_: UIButton) {
-        let asset = assets[(picker?.selectedIndex)!]
+        let asset = assets[picker.selectedIndex]
         self.startDownload(asset)
     }
     
     override func viewDidLoad() {
         print("viewDidLoad")
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        
-//        let pickerData = assets.map { (_ asset: Asset) -> String in
-//            return asset.id
-//        }
+
         
         let pickerData = assets.map { $0.id }
-        
-        
+                
         self.picker = DownPicker.init(textField: self.itemSelector, withData: pickerData)
         self.picker?.selectedIndex = 0
         
@@ -98,28 +108,30 @@ class ViewController: UIViewController {
     }
 
     
-}
-
-
-extension ViewController: AVAssetDownloadDelegate {
     func startDownload(_ asset: Asset) {
         let entry = asset.mediaEntry()
         let avAsset = asset.avAsset()
-
+        
+        let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil)
+        
         guard let source = entry.sources?.first else {
             return
         }
         assetsManager.prepareForDownload(asset: avAsset, assetId: asset.id, mediaSource: source)
-
-        let assetConfig = URLSessionConfiguration.background(withIdentifier: "download-\(asset.id)")
-        let downloadSession = AVAssetDownloadURLSession(configuration: assetConfig, assetDownloadDelegate: self, delegateQueue: nil)
-        let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil)
+        
         task?.resume()
         
         currentDownloadingAsset = asset
     }
     
+}
+
+
+extension ViewController: AVAssetDownloadDelegate {
     
+    public func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        print(#function, task, error.debugDescription)
+    }
     
     @available(iOS 10.0, *)
     public func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didFinishDownloadingTo location: URL) {
@@ -129,7 +141,7 @@ extension ViewController: AVAssetDownloadDelegate {
     
     @available(iOS 9.0, *)
     public func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didLoad timeRange: CMTimeRange, totalTimeRangesLoaded loadedTimeRanges: [NSValue], timeRangeExpectedToLoad: CMTimeRange) {
-        print(assetDownloadTask, timeRange, loadedTimeRanges, timeRangeExpectedToLoad)
+        print("didLoadTimeRange: \(timeRange.start.value/Int64(timeRange.start.timescale)) (\(timeRange.duration.value/Int64(timeRange.duration.timescale))) expected: \(timeRangeExpectedToLoad.duration.value/Int64(timeRangeExpectedToLoad.duration.timescale))") 
     }
     
     @available(iOS 9.0, *)
