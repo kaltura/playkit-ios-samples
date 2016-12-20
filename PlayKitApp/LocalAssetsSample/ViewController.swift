@@ -19,37 +19,11 @@ struct Asset {
     let url: String
     let licenseUrl: String?
     
-//    var downloadLocation: URL? = nil
-    
     init(_ id: String, url: String, licenseUrl: String? = nil) {
         self.id = id
         self.url = url
         self.licenseUrl = licenseUrl
     }
-    
-//    func mediaEntry() -> MediaEntry {
-//        let drmData = licenseUrl == nil ? nil : [
-//            [
-//            "licenseUrl": licenseUrl,
-//            "fpsCertificate": fpsCertificate
-//            ]
-//        ]
-//        
-//        if let url = loadDownloadLocation(assetId: self.id) {
-//            let mediaSource = 
-//        }
-//        let url = loadDownloadLocation(assetId: self.id)?.absoluteString ?? self.url
-//        
-//        return MediaEntry(json: [
-//            "id": id,
-//            "sources": [
-//                [
-//                    "url": url,
-//                    "drmData": drmData as Any
-//                ]
-//            ]
-//        ])
-//    }
     
     func avAsset() -> AVURLAsset {
         return AVURLAsset(url: URL(string: url)!)
@@ -73,10 +47,10 @@ func downloadPathKeyName(_ assetId: String) -> String {
 }
 
 func loadDownloadLocation(assetId: String) -> URL? {
-    guard let data = simpleStorage?.load(key: downloadPathKeyName(assetId)) else {
+    guard let data = try? simpleStorage?.load(key: downloadPathKeyName(assetId)) else {
         return nil
     }
-    guard let relativePath = String(data: data, encoding: .utf8) else {
+    guard let value = data, let relativePath = String(data: value, encoding: .utf8) else {
         return nil
     }
     
@@ -85,7 +59,7 @@ func loadDownloadLocation(assetId: String) -> URL? {
 
 func saveDownloadLocation(assetId: String, downloadLocation: URL) {
     if let data = downloadLocation.relativePath.data(using: .utf8) {
-        simpleStorage?.save(key: downloadPathKeyName(assetId), value: data)
+        try? simpleStorage?.save(key: downloadPathKeyName(assetId), value: data)
     }
 }
 
