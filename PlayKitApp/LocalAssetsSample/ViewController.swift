@@ -11,18 +11,20 @@ import PlayKit
 import AVFoundation
 import DownPicker
 
-let fpsCertificate = "MIIFETCCA/mgAwIBAgIISWLo8KcYfPMwDQYJKoZIhvcNAQEFBQAwfzELMAkGA1UEBhMCVVMxEzARBgNVBAoMCkFwcGxlIEluYy4xJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MTMwMQYDVQQDDCpBcHBsZSBLZXkgU2VydmljZXMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTYwMjAxMTY0NTQ0WhcNMTgwMjAxMTY0NTQ0WjCBijELMAkGA1UEBhMCVVMxKDAmBgNVBAoMH1ZJQUNPTSAxOCBNRURJQSBQUklWQVRFIExJTUlURUQxEzARBgNVBAsMClE5QU5HR0w4TTYxPDA6BgNVBAMMM0ZhaXJQbGF5IFN0cmVhbWluZzogVklBQ09NIDE4IE1FRElBIFBSSVZBVEUgTElNSVRFRDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2YmfdPWM86+te7Bbt4Ic6FexXwMeL+8AmExIj8jAaNxhKbfVFnUnuXzHOajGC7XDbXxsFbPqnErqjw0BqUoZhs+WVMy+0X4AGqHk7uRpZ4RLYganel+fqitL9rz9w3p41x8JfLV+lAej+BEN7zNeqQ2IsC4BxkViu1gA6K22uGsCAwEAAaOCAgcwggIDMB0GA1UdDgQWBBQK+Gmarl2PO3jtLP6A6TZeihOL3DAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFGPkR1TLhXFZRiyDrMxEMWRnAyy+MIHiBgNVHSAEgdowgdcwgdQGCSqGSIb3Y2QFATCBxjCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjA1BgNVHR8ELjAsMCqgKKAmhiRodHRwOi8vY3JsLmFwcGxlLmNvbS9rZXlzZXJ2aWNlcy5jcmwwDgYDVR0PAQH/BAQDAgUgMEgGCyqGSIb3Y2QGDQEDAQH/BDYBZ2diOGN5bXpsb21vdXFqb3p0aHg5aXB6dDJ0bThrcGdqOGNwZGlsbGVhMWI1aG9saWlyaW8wPQYLKoZIhvdjZAYNAQQBAf8EKwF5aHZlYXgzaDB2Nno5dXBqcjRsNWVyNm9hMXBtam9zYXF6ZXdnZXFkaTUwDQYJKoZIhvcNAQEFBQADggEBAIaTVzuOpZhHHUMGd47XeIo08E+Wb5jgE2HPsd8P/aHwVcR+9627QkuAnebftasV/h3FElahzBXRbK52qIZ/UU9nRLCqqKwX33eS2TiaAzOoMAL9cTUmEa2SMSzzAehb7lYPC73Y4VQFttbNidHZHawGp/844ipBS7Iumas8kT8G6ZmIBIevWiggd+D5gLdqXpOFI2XsoAipuxW6NKnnlKnuX6aNReqzKO0DmQPDHO2d7pbd3wAz5zJmxDLpRQfn7iJKupoYGqBs2r45OFyM14HUWaC0+VSh2PaZKwnSS8XXo4zcT/MfEcmP0tL9NaDfsvIWnScMxHUUTNNsZIp3QXA="
+let globalFpsCertificate = "MIIFETCCA/mgAwIBAgIISWLo8KcYfPMwDQYJKoZIhvcNAQEFBQAwfzELMAkGA1UEBhMCVVMxEzARBgNVBAoMCkFwcGxlIEluYy4xJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MTMwMQYDVQQDDCpBcHBsZSBLZXkgU2VydmljZXMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTYwMjAxMTY0NTQ0WhcNMTgwMjAxMTY0NTQ0WjCBijELMAkGA1UEBhMCVVMxKDAmBgNVBAoMH1ZJQUNPTSAxOCBNRURJQSBQUklWQVRFIExJTUlURUQxEzARBgNVBAsMClE5QU5HR0w4TTYxPDA6BgNVBAMMM0ZhaXJQbGF5IFN0cmVhbWluZzogVklBQ09NIDE4IE1FRElBIFBSSVZBVEUgTElNSVRFRDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2YmfdPWM86+te7Bbt4Ic6FexXwMeL+8AmExIj8jAaNxhKbfVFnUnuXzHOajGC7XDbXxsFbPqnErqjw0BqUoZhs+WVMy+0X4AGqHk7uRpZ4RLYganel+fqitL9rz9w3p41x8JfLV+lAej+BEN7zNeqQ2IsC4BxkViu1gA6K22uGsCAwEAAaOCAgcwggIDMB0GA1UdDgQWBBQK+Gmarl2PO3jtLP6A6TZeihOL3DAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFGPkR1TLhXFZRiyDrMxEMWRnAyy+MIHiBgNVHSAEgdowgdcwgdQGCSqGSIb3Y2QFATCBxjCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjA1BgNVHR8ELjAsMCqgKKAmhiRodHRwOi8vY3JsLmFwcGxlLmNvbS9rZXlzZXJ2aWNlcy5jcmwwDgYDVR0PAQH/BAQDAgUgMEgGCyqGSIb3Y2QGDQEDAQH/BDYBZ2diOGN5bXpsb21vdXFqb3p0aHg5aXB6dDJ0bThrcGdqOGNwZGlsbGVhMWI1aG9saWlyaW8wPQYLKoZIhvdjZAYNAQQBAf8EKwF5aHZlYXgzaDB2Nno5dXBqcjRsNWVyNm9hMXBtam9zYXF6ZXdnZXFkaTUwDQYJKoZIhvcNAQEFBQADggEBAIaTVzuOpZhHHUMGd47XeIo08E+Wb5jgE2HPsd8P/aHwVcR+9627QkuAnebftasV/h3FElahzBXRbK52qIZ/UU9nRLCqqKwX33eS2TiaAzOoMAL9cTUmEa2SMSzzAehb7lYPC73Y4VQFttbNidHZHawGp/844ipBS7Iumas8kT8G6ZmIBIevWiggd+D5gLdqXpOFI2XsoAipuxW6NKnnlKnuX6aNReqzKO0DmQPDHO2d7pbd3wAz5zJmxDLpRQfn7iJKupoYGqBs2r45OFyM14HUWaC0+VSh2PaZKwnSS8XXo4zcT/MfEcmP0tL9NaDfsvIWnScMxHUUTNNsZIp3QXA="
 
 
 struct Asset {
     let id: String
     let url: String
     let licenseUrl: String?
+    let licenseDataUrl: String?
     
-    init(_ id: String, url: String, licenseUrl: String? = nil) {
+    init(_ id: String, url: String, licenseUrl: String? = nil, licenseDataUrl: String? = nil) {
         self.id = id
         self.url = url
         self.licenseUrl = licenseUrl
+        self.licenseDataUrl = licenseDataUrl
     }
     
     func avAsset() -> AVURLAsset {
@@ -31,9 +33,11 @@ struct Asset {
 }
 
 let assets = [
+    Asset("multi", url: "https://cdnapisec.kaltura.com/p/2212491/sp/221249100/playManifest/entryId/1_dozywu20/flavorIds/1_syffxygr,1_2w08tz17,1_6fxsja3g/format/applehttp/protocol/https/a.m3u8"),
     Asset("sintel", 
           url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8", 
-          licenseUrl: "https://udrmv3.kaltura.com/fps/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1UZzFNVFUzTVh3cWRGNk9CUTRBQlV1LUtvYmJuWndUMVEyb0daOUotYUg3T05Tblh3SmU4WDM5cXJfWGpuVXg4UnJNeFVZN0dKNkF6YVJIVmtzbzlmdll6WkRzdU5HOHNScUpHbnhoTHN0S2U4QlQyOHdWOGc9PSIsImFjY291bnRfaWQiOiIxODUxNTcxIiwiY29udGVudF9pZCI6IjBfcGw1bGJmbzAiLCJmaWxlcyI6IjBfendxM2w0NHIsMF91YTYycms2cywwX290bWFxcG5mLDBfeXdrbXFua2csMV9lMHF0YWoxaiwxX2IycXp5dmE3In0%3D&signature=3aYfqde7%2FPGrHjkOG3J0iXQ%2BEps%3D"),
+          licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=fps"
+          ),
     Asset("player",
           url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
 ]
@@ -65,16 +69,14 @@ func saveDownloadLocation(assetId: String, downloadLocation: URL) {
 
 
 class ViewController: UIViewController {
-    
-    
-    
+
     var player : Player!
     var currentDownloadingAsset: Asset?
     var selectedAsset: Asset?
     
     
     lazy var assetsManager: LocalAssetsManager = {
-        return LocalAssetsManager(storage: simpleStorage)
+        return LocalAssetsManager(storage: simpleStorage!)
     }()
     
     lazy var downloadConfig: URLSessionConfiguration = {
@@ -116,7 +118,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         print("viewDidLoad")
         super.viewDidLoad()
-
         
         let pickerData = assets.map { $0.id }
                 
@@ -147,12 +148,47 @@ class ViewController: UIViewController {
         guard let source = entry.sources?.first else {
             return
         }
-        assetsManager.prepareForDownload(asset: avAsset, assetId: asset.id, mediaSource: source)
+        assetsManager.prepareForDownload(asset: avAsset, mediaSource: source)
         
         task?.resume()
         
         currentDownloadingAsset = asset
     }
+    
+    func drmData(for asset: Asset) -> [DRMData]? {
+        
+        var drmData: DRMData? = nil
+        
+        if let licenseUrl = asset.licenseUrl {
+            drmData = DRMData.fromJSON([
+                "licenseUrl": licenseUrl,
+                "fpsCertificate": globalFpsCertificate
+                ])
+        } else if let licenseDataUrl = asset.licenseDataUrl, let url = URL(string: licenseDataUrl) {
+            var response: URLResponse?
+            var responseData: Data? = nil
+            do {
+                responseData = try NSURLConnection.sendSynchronousRequest(URLRequest.init(url: url), returning: &response)
+            } catch let error {
+                print("Error:", error)
+                return nil
+            }
+
+            let json = try? JSONSerialization.jsonObject(with: responseData!, options: .mutableContainers)
+            if var dict = json as? [String: Any] {
+                dict["licenseUrl"] = dict["licenseUri"]
+                drmData = DRMData.fromJSON(dict)
+            }
+
+        }
+        
+        if let data = drmData {
+            return [data]
+        }
+        
+        return nil
+    }
+    
     
     func mediaEntry(_ asset: Asset, allowLocal: Bool = true) -> MediaEntry {
         
@@ -161,11 +197,7 @@ class ViewController: UIViewController {
             mediaSource = assetsManager.createLocalMediaSource(for: asset.id, localURL: url)
         } else {
             
-            let drmData = [DRMData.fromJSON([
-                "licenseUrl": asset.licenseUrl,
-                "fpsCertificate": fpsCertificate
-                ])].flatMap({$0})
-            mediaSource = MediaSource(asset.id, contentUrl: URL(string: asset.url), drmData: drmData)
+            mediaSource = MediaSource(asset.id, contentUrl: URL(string: asset.url), drmData: drmData(for: asset))
         }
                 
         return MediaEntry(asset.id, sources: [mediaSource])
