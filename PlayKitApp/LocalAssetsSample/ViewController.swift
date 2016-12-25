@@ -33,7 +33,7 @@ struct Asset {
 }
 
 let assets = [
-    Asset("multi", url: "https://cdnapisec.kaltura.com/p/2212491/sp/221249100/playManifest/entryId/1_dozywu20/flavorIds/1_syffxygr,1_2w08tz17,1_6fxsja3g/format/applehttp/protocol/https/a.m3u8"),
+    Asset("multiSubs", url: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"),
     Asset("sintel", 
           url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8", 
           licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=fps"
