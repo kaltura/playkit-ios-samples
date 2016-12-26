@@ -17,13 +17,13 @@ let globalFpsCertificate = "MIIFETCCA/mgAwIBAgIISWLo8KcYfPMwDQYJKoZIhvcNAQEFBQAw
 struct Asset {
     let id: String
     let url: String
-    let licenseUrl: String?
+    let licenseUri: String?
     let licenseDataUrl: String?
     
-    init(_ id: String, url: String, licenseUrl: String? = nil, licenseDataUrl: String? = nil) {
+    init(_ id: String, url: String, licenseUri: String? = nil, licenseDataUrl: String? = nil) {
         self.id = id
         self.url = url
-        self.licenseUrl = licenseUrl
+        self.licenseUri = licenseUri
         self.licenseDataUrl = licenseDataUrl
     }
     
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
     
     func assetSelected(_: Any? = nil) {
         self.selectedAsset = assets[picker.selectedIndex]
-        print("selected asset:", self.selectedAsset)
+        print("selected asset:", self.selectedAsset ?? "<nil>")
     }
 
     override func didReceiveMemoryWarning() {
@@ -160,9 +160,9 @@ class ViewController: UIViewController {
         
         var drmData: DRMData? = nil
         
-        if let licenseUrl = asset.licenseUrl {
+        if let licenseUri = asset.licenseUri {
             drmData = DRMData.fromJSON([
-                "licenseUrl": licenseUrl,
+                "licenseUri": licenseUri,
                 "fpsCertificate": globalFpsCertificate
                 ])
         } else if let licenseDataUrl = asset.licenseDataUrl, let url = URL(string: licenseDataUrl) {
@@ -176,8 +176,7 @@ class ViewController: UIViewController {
             }
 
             let json = try? JSONSerialization.jsonObject(with: responseData!, options: .mutableContainers)
-            if var dict = json as? [String: Any] {
-                dict["licenseUrl"] = dict["licenseUri"]
+            if let dict = json as? [String: Any] {
                 drmData = DRMData.fromJSON(dict)
             }
 
@@ -192,15 +191,15 @@ class ViewController: UIViewController {
     
     func mediaEntry(_ asset: Asset, allowLocal: Bool = true) -> MediaEntry {
         
-        let mediaSource: MediaSource
         if allowLocal, let url = loadDownloadLocation(assetId: asset.id) {
-            mediaSource = assetsManager.createLocalMediaSource(for: asset.id, localURL: url)
+            return assetsManager.createLocalMediaEntry(for: asset.id, localURL: url)
         } else {
-            
-            mediaSource = MediaSource(asset.id, contentUrl: URL(string: asset.url), drmData: drmData(for: asset))
+            // Note: this should actually come from the media provider
+            return MediaEntry(asset.id, sources: [
+                MediaSource(asset.id, contentUrl: URL(string: asset.url), drmData: drmData(for: asset))
+                ])
         }
                 
-        return MediaEntry(asset.id, sources: [mediaSource])
     }
 }
 
