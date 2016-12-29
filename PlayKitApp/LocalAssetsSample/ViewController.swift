@@ -140,17 +140,14 @@ class ViewController: UIViewController {
 
     
     func startDownload(_ asset: Asset) {
+        
         let entry = self.mediaEntry(asset, allowLocal: false)
-        let avAsset = asset.avAsset()
+        
+        guard let (avAsset, _) = assetsManager.prepareForDownload(of: entry) else { return }
         
         guard let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil) else {
             return
         }
-        
-        guard let source = entry.sources?.first else {
-            return
-        }
-        assetsManager.prepareForDownload(asset: avAsset, mediaSource: source)
         
         task.resume()
         
