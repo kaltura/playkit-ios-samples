@@ -42,8 +42,8 @@ let assets = [
     Asset("sintel-wvm", url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/flavorId/1_b2qzyva7/format/url/protocol/https/a/a.wvm", licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=wvclassic")
 ]
 
-fileprivate let simpleStorage: LocalDrmStorage? = {
-    return try? DefaultLocalDrmStorage()
+fileprivate let simpleStorage: LocalDataStore? = {
+    return try? DefaultLocalDataStore()
 }()
 
 func downloadPathKeyName(_ assetId: String) -> String {
