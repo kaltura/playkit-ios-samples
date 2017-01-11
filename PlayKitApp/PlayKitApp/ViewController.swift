@@ -8,7 +8,6 @@
 
 import UIKit
 import PlayKit
-import SwiftyJSON
 
 class ViewController: UIViewController {
     var player : Player!

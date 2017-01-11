@@ -8,7 +8,6 @@
 
 import UIKit
 import PlayKit
-import SwiftyJSON
 import AVFoundation
 
 class ViewController: UIViewController {

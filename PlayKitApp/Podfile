@@ -8,18 +8,19 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 abstract_target 'all' do
     
-    pod 'PlayKit', :path => '../../playkit-ios'
+    pod 'PlayKit' #, :path => '../../playkit-ios'
 
     target 'PlayKitApp' do
     end
     
     target 'IMAPluginSample' do
-        pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
+        pod'GoogleAds-IMA-iOS-SDK', '~> 3.3'
+        pod 'PlayKit/IMAPlugin' #, :path => '../../playkit-ios'
     end
     
     target 'AnalyticsSample' do
-        pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
-        pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
+        pod 'PlayKit/IMAPlugin' #, :path => '../../playkit-ios'
+        pod 'PlayKit/YouboraPlugin' #, :path => '../../playkit-ios'
     end
 
     target 'TracksSample' do
@@ -27,7 +28,7 @@ abstract_target 'all' do
     
     target 'LocalAssetsSample' do
         pod 'DownPicker'
-	pod 'PlayKit/WidevineClassic', :path => '../../playkit-ios'
+	# pod 'PlayKit/WidevineClassic', :path => '../../playkit-ios'
     end
  end
 
@@ -41,14 +42,19 @@ post_install do |installer|
         target.build_configurations.each do |config| 
             config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
             config.build_settings['OTHER_SWIFT_FLAGS'] = '-Xfrontend -warn-long-function-bodies=100'
+            if target.name == "PlayKit"
+	            config.build_settings['OTHER_SWIFT_FLAGS'] = '-DIMA_ENABLED'
+	            config.build_settings['OTHER_LDFLAGS'] = '$(inherited) -framework "GoogleInteractiveMediaAds"'
+	        end
         end 
     end 
 end
 
 
 target 'ObjCSample' do
-    pod 'PlayKit', :path => '../../playkit-ios'
-    pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
-    pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
+    pod 'PlayKit' #, :path => '../../playkit-ios'
+    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.3'
+    pod 'PlayKit/IMAPlugin' #, :path => '../../playkit-ios'
+    pod 'PlayKit/YouboraPlugin' #, :path => '../../playkit-ios'
 end
 
