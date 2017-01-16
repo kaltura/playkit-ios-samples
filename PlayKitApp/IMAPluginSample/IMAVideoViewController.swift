@@ -120,7 +120,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
                 pipEnabled = true
             }
 
-            adsConfig.set(webOpenerPresentingController: self).set(autoPlayAdBreaks: kAutoPlayAd)
+            adsConfig.set(webOpenerPresentingController: self)
             if let companionView = self.companionView {
                 adsConfig.set(companionView: companionView)
             }
@@ -232,16 +232,16 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     }
     
     func player(_ player: Player, didReceive event: PKEvent, with eventData: Any?) {
-        if event.rawValue == AdEvents.adDidProgressToTime.rawValue {
+        if event is AdEvents.adDidProgressToTime {
             if let data = eventData as? [String : TimeInterval] {
                 let time = CMTimeMakeWithSeconds(data["mediaTime"]!, 1000)
                 let duration = CMTimeMakeWithSeconds(data["totalTime"]!, 1000)
                 self.updatePlayhead(with: time, duration: duration)
             }
-        } else if event.rawValue == AdEvents.adDidRequestPause.rawValue {
+        } else if event is AdEvents.adDidRequestPause {
             pipEnabled = configAllowsPiP() ? true : false
             progressBar.isEnabled = false
-        } else if event.rawValue == AdEvents.adDidRequestResume.rawValue {
+        } else if event is AdEvents.adDidRequestResume {
             pipEnabled = true
             progressBar.isEnabled = true
         }
