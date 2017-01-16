@@ -25,6 +25,9 @@ abstract_target 'all' do
 
     target 'TracksSample' do
     end 
+
+ target 'SamplePlugin' do
+    end 
     
     target 'LocalAssetsSample' do
         pod 'DownPicker'
