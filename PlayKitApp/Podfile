@@ -27,7 +27,7 @@ abstract_target 'all' do
     
     target 'LocalAssetsSample' do
         pod 'DownPicker'
-	pod 'PlayKit/WidevineClassic', :path => '../../playkit-ios'
+        pod 'PlayKit/WidevineClassic', :path => '../../playkit-ios'
     end
  end
 
