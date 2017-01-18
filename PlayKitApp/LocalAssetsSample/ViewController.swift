@@ -33,17 +33,31 @@ struct Asset {
 }
 
 let assets = [
-    Asset("multiSubs", url: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"),
-    Asset("player", url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
+    Asset("cat", 
+          url: "https://cdnapisec.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/1_i02uprfp/format/applehttp/protocol/https/f/a.m3u8", 
+          licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=1_i02uprfp&drm=fps"
+    ),
+    Asset("count1", 
+          url: "https://cdnapisec.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/0_uafvpmv8/flavorIds/0_6ackygkg/format/applehttp/protocol/https/a.m3u8", 
+          licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_uafvpmv8&drm=fps&flavor=0_6ackygkg"
+    ),
+    Asset("count", 
+          url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_uafvpmv8/format/applehttp/protocol/https/f/a.m3u8", 
+          licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_uafvpmv8&drm=fps"
+    ),
     Asset("sintel", 
           url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/format/applehttp/protocol/https/a/a.m3u8", 
           licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=fps"
           ),
-    Asset("sintel-wvm", url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/flavorId/1_b2qzyva7/format/url/protocol/https/a/a.wvm", licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=wvclassic")
+    Asset("sintel-wvm", 
+          url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/flavorId/1_b2qzyva7/format/url/protocol/https/a/a.wvm", 
+          licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=wvclassic"),
+    Asset("multiSubs", url: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"),
+    Asset("player", url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
 ]
 
-fileprivate let simpleStorage: LocalDrmStorage? = {
-    return try? DefaultLocalDrmStorage()
+fileprivate let simpleStorage: LocalDataStore? = {
+    return try? DefaultLocalDataStore()
 }()
 
 func downloadPathKeyName(_ assetId: String) -> String {
@@ -140,17 +154,14 @@ class ViewController: UIViewController {
 
     
     func startDownload(_ asset: Asset) {
+        
         let entry = self.mediaEntry(asset, allowLocal: false)
-        let avAsset = asset.avAsset()
+        
+        guard let (avAsset, _) = assetsManager.prepareForDownload(of: entry) else { return }
         
         guard let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil) else {
             return
         }
-        
-        guard let source = entry.sources?.first else {
-            return
-        }
-        assetsManager.prepareForDownload(asset: avAsset, mediaSource: source)
         
         task.resume()
         
