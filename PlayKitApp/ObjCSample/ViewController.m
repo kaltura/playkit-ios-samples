@@ -30,7 +30,7 @@
 
 - (void)setupPlayer {
     PlayerConfig *config = [PlayerConfig new];
-    NSDictionary *src = @{@"id":@"123123",@"url": @"https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"};
+    NSDictionary *src = @{@"id":@"123123",@"url": @"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"};
     
     NSArray *srcs = @[src];
     NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
@@ -41,6 +41,22 @@
     self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
     self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);
     
+    [self.kPlayer addObserver:self events:@[PlayerEvent_playing.self, PlayerEvent_pause.self, PlayerEvent_durationChanged.self, PlayerEvent_stateChanged.self] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent_playing.class]) {
+            NSLog(@"playing %@", event);
+        } else if ([event isKindOfClass:PlayerEvent_pause.class]) {
+            NSLog(@"paused %@", event);
+        } else if ([event isKindOfClass:PlayerEvent_durationChanged.class]) {
+            NSLog(@"duration: %f", ((PlayerEvent_durationChanged*)event).duration);
+        } else if ([event isKindOfClass:PlayerEvent_stateChanged.class]) {
+            NSLog(@"---------> newState: %ld", (long)((PlayerEvent_stateChanged*)event).newState);
+            NSLog(@"---------> oldState: %ld", (long)((PlayerEvent_stateChanged*)event).oldState);
+        } else {
+            NSLog(@"event: %@", event);
+        }
+    }];
+    
+
     [self.playerContainer addSubview:self.kPlayer.view];
     [self.kPlayer play];
 }
