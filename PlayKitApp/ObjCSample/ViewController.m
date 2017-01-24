@@ -41,16 +41,16 @@
     self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
     self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);
     
-    [self.kPlayer addObserver:self events:@[PlayerEvent_playing.self, PlayerEvent_pause.self, PlayerEvent_durationChanged.self, PlayerEvent_stateChanged.self] block:^(PKEvent * _Nonnull event) {
-        if ([event isKindOfClass:PlayerEvent_playing.class]) {
+    [self.kPlayer addObserver:self events:@[PlayerEvents.playingEvent, PlayerEvents.durationChangeEvent, PlayerEvent_stateChanged.self] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvents.playingEvent]) {
             NSLog(@"playing %@", event);
-        } else if ([event isKindOfClass:PlayerEvent_pause.class]) {
-            NSLog(@"paused %@", event);
-        } else if ([event isKindOfClass:PlayerEvent_durationChanged.class]) {
-            NSLog(@"duration: %f", ((PlayerEvent_durationChanged*)event).duration);
-        } else if ([event isKindOfClass:PlayerEvent_stateChanged.class]) {
-            NSLog(@"---------> newState: %ld", (long)((PlayerEvent_stateChanged*)event).newState);
-            NSLog(@"---------> oldState: %ld", (long)((PlayerEvent_stateChanged*)event).oldState);
+//        } else if ([event isKindOfClass:PlayerEvent_pause.class]) {
+//            NSLog(@"paused %@", event);
+        } else if ([event isKindOfClass:PlayerEvents.durationChangeEvent]) {
+            NSLog(@"duration: %@", event.data);
+//        } else if ([event isKindOfClass:PlayerEvents.stateChangedEvent]) {
+//            NSLog(@"---------> newState: %ld", (long)((PlayerEvent_stateChanged*)event).newState);
+//            NSLog(@"---------> oldState: %ld", (long)((PlayerEvent_stateChanged*)event).oldState);
         } else {
             NSLog(@"event: %@", event);
         }
