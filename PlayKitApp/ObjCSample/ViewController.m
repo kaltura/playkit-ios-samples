@@ -41,22 +41,19 @@
     self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
     self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);
     
-    [self.kPlayer addObserver:self events:@[PlayerEvents.playingEvent, PlayerEvents.durationChangeEvent, PlayerEvent_stateChanged.self] block:^(PKEvent * _Nonnull event) {
+    [self.kPlayer addObserver:self events:@[PlayerEvents.playingEvent, PlayerEvents.durationChangeEvent, PlayerEvents.stateChangedEvent] block:^(PKEvent * _Nonnull event) {
         if ([event isKindOfClass:PlayerEvents.playingEvent]) {
             NSLog(@"playing %@", event);
-//        } else if ([event isKindOfClass:PlayerEvent_pause.class]) {
-//            NSLog(@"paused %@", event);
         } else if ([event isKindOfClass:PlayerEvents.durationChangeEvent]) {
-            NSLog(@"duration: %@", event.data);
-//        } else if ([event isKindOfClass:PlayerEvents.stateChangedEvent]) {
-//            NSLog(@"---------> newState: %ld", (long)((PlayerEvent_stateChanged*)event).newState);
-//            NSLog(@"---------> oldState: %ld", (long)((PlayerEvent_stateChanged*)event).oldState);
+            NSLog(@"duration: %f", ((NSDictionary *)event.data).durationValue);
+        } else if ([event isKindOfClass:PlayerEvents.stateChangedEvent]) {
+            NSLog(@"old state: %ld", (long)((NSDictionary *)event.data).oldStateValue);
+            NSLog(@"new state: %ld", (long)((NSDictionary *)event.data).newStateValue);
         } else {
             NSLog(@"event: %@", event);
         }
     }];
     
-
     [self.playerContainer addSubview:self.kPlayer.view];
     [self.kPlayer play];
 }
