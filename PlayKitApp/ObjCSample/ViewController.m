@@ -45,10 +45,10 @@
         if ([event isKindOfClass:PlayerEvent.playingEvent]) {
             NSLog(@"playing %@", event);
         } else if ([event isKindOfClass:PlayerEvent.durationChangedEvent]) {
-            NSLog(@"duration: %f", ((NSDictionary *)event.data).durationValue);
+            NSLog(@"duration: %f", event.data.eventDuration);
         } else if ([event isKindOfClass:PlayerEvent.stateChangedEvent]) {
-            NSLog(@"old state: %ld", (long)((NSDictionary *)event.data).oldStateValue);
-            NSLog(@"new state: %ld", (long)((NSDictionary *)event.data).newStateValue);
+            NSLog(@"old state: %ld", (long)event.data.eventOldState);
+            NSLog(@"new state: %ld", (long)event.data.eventNewState);
         } else {
             NSLog(@"event: %@", event);
         }
