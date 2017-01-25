@@ -63,7 +63,7 @@ class ViewController: UIViewController {
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
         playerView.addSubview(self.playerController.view)
 
-        self.playerController.addObserver(self, events: [PlayerEvents.canPlay.self, PlayerEvents.play.self], block: {(info) in
+        self.playerController.addObserver(self, events: [PlayerEvent.canPlay.self, PlayerEvent.play.self], block: {(info) in
             
             PKLog.debug("Duration: \(self.playerController.duration)")
             

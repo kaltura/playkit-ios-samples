@@ -41,12 +41,12 @@
     self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
     self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);
     
-    [self.kPlayer addObserver:self events:@[PlayerEvents.playingEvent, PlayerEvents.durationChangeEvent, PlayerEvents.stateChangedEvent] block:^(PKEvent * _Nonnull event) {
-        if ([event isKindOfClass:PlayerEvents.playingEvent]) {
+    [self.kPlayer addObserver:self events:@[PlayerEvent.playingEvent, PlayerEvent.durationChangedEvent, PlayerEvent.stateChangedEvent] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.playingEvent]) {
             NSLog(@"playing %@", event);
-        } else if ([event isKindOfClass:PlayerEvents.durationChangeEvent]) {
+        } else if ([event isKindOfClass:PlayerEvent.durationChangedEvent]) {
             NSLog(@"duration: %f", ((NSDictionary *)event.data).durationValue);
-        } else if ([event isKindOfClass:PlayerEvents.stateChangedEvent]) {
+        } else if ([event isKindOfClass:PlayerEvent.stateChangedEvent]) {
             NSLog(@"old state: %ld", (long)((NSDictionary *)event.data).oldStateValue);
             NSLog(@"new state: %ld", (long)((NSDictionary *)event.data).newStateValue);
         } else {
