@@ -109,7 +109,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         config.set(mediaEntry: MediaEntry(json: JSON(entry))).set(allowPlayerEngineExpose: kAllowAVPlayerExpose)
         
         if kUseIMA {
-            var plugins = [String : AnyObject?]()
+            var plugins = [String : AnyObject]()
             
             let adsConfig = AdsConfig()
             
@@ -130,6 +130,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         }
         
         self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
+        self.playerController.prepare(config)
         self.playerController.delegate = self
         videoView.addSubview(self.playerController.view)
         
@@ -231,21 +232,21 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         return kAllowAVPlayerExpose || !pipActive
     }
     
-    func player(_ player: Player, didReceive event: PKEvent, with eventData: Any?) {
-        if event is AdEvents.adDidProgressToTime {
-            if let data = eventData as? [String : TimeInterval] {
-                let time = CMTimeMakeWithSeconds(data["mediaTime"]!, 1000)
-                let duration = CMTimeMakeWithSeconds(data["totalTime"]!, 1000)
-                self.updatePlayhead(with: time, duration: duration)
-            }
-        } else if event is AdEvents.adDidRequestPause {
-            pipEnabled = configAllowsPiP() ? true : false
-            progressBar.isEnabled = false
-        } else if event is AdEvents.adDidRequestResume {
-            pipEnabled = true
-            progressBar.isEnabled = true
-        }
-    }
+//    func player(_ player: Player, didReceive event: PKEvent, with eventData: Any?) {
+//        if event is AdEvents.adDidProgressToTime {
+//            if let data = eventData as? [String : TimeInterval] {
+//                let time = CMTimeMakeWithSeconds(data["mediaTime"]!, 1000)
+//                let duration = CMTimeMakeWithSeconds(data["totalTime"]!, 1000)
+//                self.updatePlayhead(with: time, duration: duration)
+//            }
+//        } else if event is AdEvents.adDidRequestPause {
+//            pipEnabled = configAllowsPiP() ? true : false
+//            progressBar.isEnabled = false
+//        } else if event is AdEvents.adDidRequestResume {
+//            pipEnabled = true
+//            progressBar.isEnabled = true
+//        }
+//    }
     
     func player(_ player: Player, failedWith error: String) {
     }

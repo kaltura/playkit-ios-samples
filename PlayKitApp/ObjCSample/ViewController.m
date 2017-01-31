@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
 
-@interface ViewController ()
+@interface ViewController ()<AVPictureInPictureControllerDelegate, PlayerDelegate>
 @property (nonatomic, strong) id<Player> kPlayer;
 @property (weak, nonatomic) IBOutlet UIView *playerContainer;
 @end
@@ -36,26 +36,39 @@
     NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
     
     [config setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
+    config.allowPlayerEngineExpose = NO;
     
+    [PlayKitManager.sharedInstance registerPlugin:IMAPlugin.self];
+    
+    AdsConfig *adsConfig = [AdsConfig new];
+    adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
+    [config setPlugins:@{IMAPlugin.pluginName:adsConfig}];
     
     self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
+    [self.kPlayer prepare:config];
+    
     self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);
     
-    [self.kPlayer addObserver:self events:@[PlayerEvent.playingEvent, PlayerEvent.durationChangedEvent, PlayerEvent.stateChangedEvent] block:^(PKEvent * _Nonnull event) {
-        if ([event isKindOfClass:PlayerEvent.playingEvent]) {
+    [self.kPlayer addObserver:self events:@[PlayerEvent.playing, PlayerEvent.durationChanged, PlayerEvent.stateChanged] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.playing]) {
             NSLog(@"playing %@", event);
-        } else if ([event isKindOfClass:PlayerEvent.durationChangedEvent]) {
-            NSLog(@"duration: %f", event.data.eventDuration);
-        } else if ([event isKindOfClass:PlayerEvent.stateChangedEvent]) {
-            NSLog(@"old state: %ld", (long)event.data.eventOldState);
-            NSLog(@"new state: %ld", (long)event.data.eventNewState);
+        } else if ([event isKindOfClass:PlayerEvent.durationChanged]) {
+            NSLog(@"duration: %@", event.duration);
+        } else if ([event isKindOfClass:PlayerEvent.stateChanged]) {
+            NSLog(@"old state: %ld", (long)event.oldState);
+            NSLog(@"new state: %ld", (long)event.newState);
         } else {
             NSLog(@"event: %@", event);
         }
     }];
     
+    self.kPlayer.delegate = self;
     [self.playerContainer addSubview:self.kPlayer.view];
-    [self.kPlayer play];
+//    [self.kPlayer play];
+}
+
+- (BOOL)playerShouldPlayAd:(id<Player>)player {
+    return YES;
 }
 
 - (IBAction)playTapped:(id)sender {
