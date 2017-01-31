@@ -6,23 +6,23 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 abstract_target 'all' do
     
-    pod 'PlayKit', :path => '../../playkit-ios'
+    pod 'PlayKit' #, :path => '../../playkit-ios'
 
     target 'PlayKitApp' do
     end
     
     target 'IMAPluginSample' do
         pod'GoogleAds-IMA-iOS-SDK', '~> 3.3'
-        pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
-        pod 'PlayKit/PhoenixPlugin', :path => '../../playkit-ios'
-        pod 'PlayKit/KalturaStatsPlugin', :path => '../../playkit-ios'
-        pod 'PlayKit/KalturaLiveStatsPlugin', :path => '../../playkit-ios'
-        pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
+        pod 'PlayKit/IMAPlugin' #, :path => '../../playkit-ios'
+        pod 'PlayKit/PhoenixPlugin' #, :path => '../../playkit-ios'
+        pod 'PlayKit/KalturaStatsPlugin' #, :path => '../../playkit-ios'
+        pod 'PlayKit/KalturaLiveStatsPlugin' #, :path => '../../playkit-ios'
+        pod 'PlayKit/YouboraPlugin' #, :path => '../../playkit-ios'
     end
     
     target 'AnalyticsSample' do
-        pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
-        pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
+        pod 'PlayKit/IMAPlugin' #, :path => '../../playkit-ios'
+        pod 'PlayKit/YouboraPlugin' #, :path => '../../playkit-ios'
     end
 
     target 'TracksSample' do
@@ -33,7 +33,7 @@ abstract_target 'all' do
     
     target 'LocalAssetsSample' do
         pod 'DownPicker'
-        pod 'PlayKit/WidevineClassic', :path => '../../playkit-ios'
+        pod 'PlayKit/WidevineClassic' #, :path => '../../playkit-ios'
     end
  end
 
@@ -58,9 +58,9 @@ end
 
 
 target 'ObjCSample' do
-    pod 'PlayKit', :path => '../../playkit-ios'
+    pod 'PlayKit' #, :path => '../../playkit-ios'
     pod 'GoogleAds-IMA-iOS-SDK', '~> 3.3'
-    pod 'PlayKit/IMAPlugin', :path => '../../playkit-ios'
+    pod 'PlayKit/IMAPlugin' #, :path => '../../playkit-ios'
    # pod 'PlayKit/YouboraPlugin', :path => '../../playkit-ios'
 end
 
