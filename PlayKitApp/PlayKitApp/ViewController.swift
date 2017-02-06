@@ -39,15 +39,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         //PlayKitManager.sharedInstance.registerPlugin(SamplePlugin.self)
-        let config = PlayerConfig()
+        let mediaConfig = MediaConfig()
+        guard let mediaEntry = self.mediaEntry() else { return }
+        mediaConfig.set(mediaEntry: mediaEntry)
         
-        guard let mediaEntry = self.mediaEntry() else {
-            return
-        }
-
-        config.set(mediaEntry: mediaEntry)
+        let pluginConfig = PluginConfig()
         
-        self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        self.player.prepare(mediaConfig)
+        
         self.player.view.frame = playerContainer.bounds
         self.playerContainer.addSubview(player.view)
     }

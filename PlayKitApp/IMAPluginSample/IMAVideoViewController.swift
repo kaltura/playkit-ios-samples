@@ -93,7 +93,8 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     // MARK: Set-up methods
     
     func setUpContentPlayer() {
-        let config = PlayerConfig()
+        let mediaConfig = MediaConfig()
+        let pluginConfig = PluginConfig()
         
         var source = [String : Any]()
         source["id"] = video.video
@@ -106,7 +107,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         entry["id"] = video.title
         entry["sources"] = sources
         
-        config.set(mediaEntry: MediaEntry(json: JSON(entry))).set(allowPlayerEngineExpose: kAllowAVPlayerExpose)
+        mediaConfig.set(mediaEntry: MediaEntry(json: JSON(entry)))
         
         if kUseIMA {
             var plugins = [String : AnyObject]()
@@ -126,21 +127,18 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             }
             
             plugins[IMAPlugin.pluginName] = adsConfig
-            config.plugins = plugins
+            pluginConfig.config = plugins
         }
         
-        self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
-        self.playerController.prepare(config)
+        self.playerController = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        self.playerController.prepare(mediaConfig)
         self.playerController.delegate = self
         videoView.addSubview(self.playerController.view)
-        
         
         /*self.playerController.subscribe(to: PlayerEventType.playhead_state_changed, using: { (eventData: AnyObject?) -> Void in
             self.updatePlayhead(with: (eventData as! KalturaPlayerEventData).currentTime, duration: (eventData as! KalturaPlayerEventData).duration)
         })*/
     }
-    
-    
     
     func configAllowsPiP() -> Bool {
         return kAllowAVPlayerExpose || !kUseIMA

@@ -9,6 +9,7 @@
 import UIKit
 import PlayKit
 import AVFoundation
+import SwiftyJSON
 
 class ViewController: UIViewController {
 
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        PlayKitManager.sharedInstance.registerPlugin(YouboraPlugin.self)
+        PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
 
         setupVideo()
     
@@ -36,7 +37,8 @@ class ViewController: UIViewController {
 
     func setupVideo() {
         
-        let config = PlayerConfig()
+        let mediaConfig = MediaConfig()
+        let pluginConfig = PluginConfig()
         
         var source = [String : Any]()
         source["id"] = "123123" //"http://media.w3.org/2010/05/sintel/trailer.mp4"
@@ -49,25 +51,23 @@ class ViewController: UIViewController {
         entry["id"] = "Trailer"
         entry["sources"] = sources
         
-        config.set(mediaEntry: MediaEntry(json: JSON(entry)))//.set(allowPlayerEngineExpose: kAllowAVPlayerExpose)
+        mediaConfig.set(mediaEntry: MediaEntry(json: JSON(entry)))
         
-        var plugins = [String : AnyObject?]()
+        var plugins = [String : AnyObject]()
         
         let analyticsConfig = AnalyticsConfig()
         
-        
         plugins[YouboraPlugin.pluginName] = analyticsConfig
-        config.plugins = plugins
+        pluginConfig.config = plugins
 
         
-        self.playerController = PlayKitManager.sharedInstance.loadPlayer(config: config)
+        self.playerController = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        self.playerController.prepare(mediaConfig)
         playerView.addSubview(self.playerController.view)
 
         self.playerController.addObserver(self, events: [PlayerEvent.canPlay.self, PlayerEvent.play.self], block: {(info) in
-            
             PKLog.debug("Duration: \(self.playerController.duration)")
-            
-            })
+        })
     }
     
     @IBAction func playClicked(_ sender: AnyObject) {
