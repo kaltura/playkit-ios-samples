@@ -29,23 +29,23 @@
 }
 
 - (void)setupPlayer {
-    PlayerConfig *config = [PlayerConfig new];
+    MediaConfig *mediaConfig = [MediaConfig new];
     NSDictionary *src = @{@"id":@"123123",@"url": @"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"};
     
     NSArray *srcs = @[src];
     NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
     
-    [config setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
-    config.allowPlayerEngineExpose = NO;
+    [mediaConfig setWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
     
     [PlayKitManager.sharedInstance registerPlugin:IMAPlugin.self];
     
+    PluginConfig *pluginConfig = [PluginConfig new];
     AdsConfig *adsConfig = [AdsConfig new];
     adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
-    [config setPlugins:@{IMAPlugin.pluginName:adsConfig}];
+    [pluginConfig setConfig: @{IMAPlugin.pluginName:adsConfig}];
     
-    self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithConfig:config];
-    [self.kPlayer prepare:config];
+    self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
+    [self.kPlayer prepare:mediaConfig];
     
     self.kPlayer.view.frame = CGRectMake(0, 0, self.playerContainer.frame.size.width,self.playerContainer.frame.size.height);
     
@@ -64,7 +64,6 @@
     
     self.kPlayer.delegate = self;
     [self.playerContainer addSubview:self.kPlayer.view];
-//    [self.kPlayer play];
 }
 
 - (BOOL)playerShouldPlayAd:(id<Player>)player {

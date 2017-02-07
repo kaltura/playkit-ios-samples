@@ -31,7 +31,7 @@ class IMATagsViewController: UIViewController, UITableViewDataSource, UITableVie
         language = "en"
         initVideos()
         
-        PlayKitManager.sharedInstance.registerPlugin(IMAPlugin.self)
+        PlayKitManager.shared.registerPlugin(IMAPlugin.self)
 
         // For PiP.
         do {
