@@ -160,26 +160,28 @@ class ViewController: UIViewController {
 
     
     func startDownload(_ asset: Asset) {
-        let dowanloader = Downloader(url: asset.url)
-        dowanloader.startDownload(asset: asset) { (localPath) in
+        if asset.url.hasSuffix("wvm") {
+            let dowanloader = Downloader(url: asset.url)
+            dowanloader.startDownload(asset: asset) { (localPath) in
+                let entry = self.mediaEntry(asset, allowLocal: false)
+                let mediaSource = self.assetsManager.getPreferredDownloadableMediaSource(for: entry)
+                self.assetsManager.assetDownloadFinished(location: URL(string: localPath)!, mediaSource: mediaSource!, refresh: false, callback: { (error) in
+                    saveDownloadLocation(assetId: asset.id, downloadLocation: URL(string: localPath)!)
+                })
+            }
+        } else {
             let entry = self.mediaEntry(asset, allowLocal: false)
-            let mediaSource = self.assetsManager.getPreferredDownloadableMediaSource(for: entry)
-            self.assetsManager.assetDownloadFinished(location: URL(string: localPath)!, mediaSource: mediaSource!, refresh: false, callback: { (error) in
-                saveDownloadLocation(assetId: asset.id, downloadLocation: URL(string: localPath)!)
-            })
+            
+            guard let (avAsset, _) = assetsManager.prepareForDownload(of: entry) else { return }
+            
+            guard let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil) else {
+                return
+            }
+            
+            task.resume()
+            
+            currentDownloadingAsset = asset
         }
-        
-        let entry = self.mediaEntry(asset, allowLocal: false)
-        
-        guard let (avAsset, _) = assetsManager.prepareForDownload(of: entry) else { return }
-        
-        guard let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil) else {
-            return
-        }
-        
-        task.resume()
-        
-        currentDownloadingAsset = asset
     }
     
     func drmData(for asset: Asset) -> [DRMData]? {
