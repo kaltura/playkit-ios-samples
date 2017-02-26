@@ -165,7 +165,7 @@ class ViewController: UIViewController {
             dowanloader.startDownload(asset: asset) { (localPath) in
                 let entry = self.mediaEntry(asset, allowLocal: false)
                 let mediaSource = self.assetsManager.getPreferredDownloadableMediaSource(for: entry)
-                self.assetsManager.assetDownloadFinished(location: URL(string: localPath)!, mediaSource: mediaSource!, refresh: false, callback: { (error) in
+                self.assetsManager.assetDownloadFinished(location: URL(string: localPath)!, mediaSource: mediaSource!, callback: { (error) in
                     saveDownloadLocation(assetId: asset.id, downloadLocation: URL(string: localPath)!)
                 })
             }
@@ -255,6 +255,8 @@ extension ViewController: AVAssetDownloadDelegate {
     public func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didResolve resolvedMediaSelection: AVMediaSelection) {
         print(assetDownloadTask, resolvedMediaSelection)
     }
+    
+    
     
 
 }

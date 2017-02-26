@@ -2,6 +2,8 @@ PODS:
   - DownPicker (0.1.34)
   - GoogleAds-IMA-iOS-SDK (3.4.1)
   - Log (1.0)
+  - PlayKit/AnalyticsCommon (0.1.x-dev):
+    - PlayKit/Core
   - PlayKit/Core (0.1.x-dev):
     - Log
     - SwiftyJSON
@@ -13,9 +15,10 @@ PODS:
     - PlayKit/Core
     - PlayKitWV
   - PlayKit/YouboraPlugin (0.1.x-dev):
+    - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic
-  - PlayKitWV (0.0.1)
+  - PlayKitWV (0.0.4)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.0)
   - Youbora-AVPlayer/dynamic (5.3.5):
@@ -37,8 +40,8 @@ SPEC CHECKSUMS:
   DownPicker: c00ea63f08ae82116cc93d0eba74e86bf3d4c68e
   GoogleAds-IMA-iOS-SDK: 7355db22ce69be4607ed0cc5112847b2b0c5e89d
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 72bc8bc843b7430c0b459ad441fe3a629d47156b
-  PlayKitWV: 33226c453dec5fd9b258369d7b4b84e4eab9016a
+  PlayKit: c1a6a158ba9df0993103f4faf84dfef2b2ff7714
+  PlayKitWV: 1c5e41e54785172380538e84e84360579874c5e7
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
   Youbora-AVPlayer: 02aea2a12a4f7e6a61d8a1747e5dfc177bf2354b
