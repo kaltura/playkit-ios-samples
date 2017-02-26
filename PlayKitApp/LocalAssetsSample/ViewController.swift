@@ -57,7 +57,7 @@ let assets = [
 ]
 
 fileprivate let simpleStorage: LocalDataStore? = {
-    return try? DefaultLocalDataStore()
+    return DefaultLocalDataStore.defaultDataStore()
 }()
 
 func downloadPathKeyName(_ assetId: String) -> String {
@@ -70,6 +70,10 @@ func loadDownloadLocation(assetId: String) -> URL? {
     }
     guard let value = data, let relativePath = String(data: value, encoding: .utf8) else {
         return nil
+    }
+    
+    if relativePath.contains(NSHomeDirectory()) {
+        return URL(string: relativePath)
     }
     
     return URL(fileURLWithPath: NSHomeDirectory(), isDirectory: true).appendingPathComponent(relativePath)
@@ -90,7 +94,7 @@ class ViewController: UIViewController {
     
     
     lazy var assetsManager: LocalAssetsManager = {
-        return LocalAssetsManager(storage: simpleStorage!)
+        return LocalAssetsManager.manager(storage: simpleStorage!)
     }()
     
     lazy var downloadConfig: URLSessionConfiguration = {
@@ -111,13 +115,15 @@ class ViewController: UIViewController {
             return
         }
         
-        let config = PlayerConfig()
+        let config = PluginConfig(config: [:])
         
         let mediaEntry = self.mediaEntry(asset)
         
-        config.set(mediaEntry: mediaEntry)
+        let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
         
-        self.player = PlayKitManager.sharedInstance.loadPlayer(config:config)
+        
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig:config)
+        self.player.prepare(mediaConfig)
         self.player.view.frame = playerContainer.bounds
         self.playerContainer.addSubview(player.view)
         self.player.play()
@@ -154,18 +160,28 @@ class ViewController: UIViewController {
 
     
     func startDownload(_ asset: Asset) {
-        
-        let entry = self.mediaEntry(asset, allowLocal: false)
-        
-        guard let (avAsset, _) = assetsManager.prepareForDownload(of: entry) else { return }
-        
-        guard let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil) else {
-            return
+        if asset.url.hasSuffix("wvm") {
+            let dowanloader = Downloader(url: asset.url)
+            dowanloader.startDownload(asset: asset) { (localPath) in
+                let entry = self.mediaEntry(asset, allowLocal: false)
+                let mediaSource = self.assetsManager.getPreferredDownloadableMediaSource(for: entry)
+                self.assetsManager.assetDownloadFinished(location: URL(string: localPath)!, mediaSource: mediaSource!, callback: { (error) in
+                    saveDownloadLocation(assetId: asset.id, downloadLocation: URL(string: localPath)!)
+                })
+            }
+        } else {
+            let entry = self.mediaEntry(asset, allowLocal: false)
+            
+            guard let (avAsset, _) = assetsManager.prepareForDownload(of: entry) else { return }
+            
+            guard let task = downloadSession.makeAssetDownloadTask(asset: avAsset, assetTitle: asset.id, assetArtworkData: nil, options: nil) else {
+                return
+            }
+            
+            task.resume()
+            
+            currentDownloadingAsset = asset
         }
-        
-        task.resume()
-        
-        currentDownloadingAsset = asset
     }
     
     func drmData(for asset: Asset) -> [DRMData]? {
@@ -239,6 +255,8 @@ extension ViewController: AVAssetDownloadDelegate {
     public func urlSession(_ session: URLSession, assetDownloadTask: AVAssetDownloadTask, didResolve resolvedMediaSelection: AVMediaSelection) {
         print(assetDownloadTask, resolvedMediaSelection)
     }
+    
+    
     
 
 }
