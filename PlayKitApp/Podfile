@@ -2,10 +2,10 @@ platform :ios, '8.0'
 use_frameworks!
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_TAG='v0.1.13'
+PLAYKIT_TAG='widevine/v0.1.15'
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
+# PLAYKIT_LOCAL='../../playkit-ios'
 
 def definePlayKit(subSpecName)
     if defined? PLAYKIT_LOCAL
