@@ -44,6 +44,7 @@
 		BFD096B71DCF3D1400260D6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B51DCF3D1400260D6A /* Main.storyboard */; };
 		BFD096B91DCF3D1400260D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD096B81DCF3D1400260D6A /* Assets.xcassets */; };
 		BFD096BC1DCF3D1400260D6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD096BA1DCF3D1400260D6A /* LaunchScreen.storyboard */; };
+		BFDD36D31E5A49D600F23636 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD36D21E5A49D600F23636 /* Downloader.swift */; };
 		BFF78DC61DE2DB84005BDAC5 /* PiPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */; };
 		BFFB90DB1DD22BC100C23217 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */; };
 		BFFB90E21DD22BC100C23217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFFB90E11DD22BC100C23217 /* Assets.xcassets */; };
@@ -149,6 +150,7 @@
 		BFD096B81DCF3D1400260D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD096BB1DCF3D1400260D6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD096BD1DCF3D1400260D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDD36D21E5A49D600F23636 /* Downloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
 		BFF78DC51DE2DB84005BDAC5 /* PiPManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PiPManager.swift; sourceTree = "<group>"; };
 		BFFB90D81DD22BC100C23217 /* IMAPluginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMAPluginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFFB90DA1DD22BC100C23217 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -508,6 +510,7 @@
 		FBD61EC11E04840B00F0183B /* LocalAssetsSample */ = {
 			isa = PBXGroup;
 			children = (
+				BFDD36D21E5A49D600F23636 /* Downloader.swift */,
 				FBD61EC21E04840B00F0183B /* AppDelegate.swift */,
 				FBD61EC41E04840B00F0183B /* ViewController.swift */,
 				FBD61EC61E04840B00F0183B /* Main.storyboard */,
@@ -1282,6 +1285,7 @@
 			files = (
 				FBD61EC51E04840B00F0183B /* ViewController.swift in Sources */,
 				FBD61EC31E04840B00F0183B /* AppDelegate.swift in Sources */,
+				BFDD36D31E5A49D600F23636 /* Downloader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
