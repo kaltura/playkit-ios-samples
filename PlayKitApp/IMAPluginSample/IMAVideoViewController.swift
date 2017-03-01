@@ -93,9 +93,6 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
     // MARK: Set-up methods
     
     func setUpContentPlayer() {
-        let mediaConfig = MediaConfig()
-        let pluginConfig = PluginConfig()
-        
         var source = [String : Any]()
         source["id"] = video.video
         source["url"] = video.video
@@ -107,8 +104,9 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
         entry["id"] = video.title
         entry["sources"] = sources
         
-        mediaConfig.set(mediaEntry: MediaEntry(json: JSON(entry)))
+        let mediaConfig = MediaConfig(mediaEntry: MediaEntry(json: JSON(entry)))
         
+        var pluginConfig: PluginConfig? = nil
         if kUseIMA {
             var plugins = [String : AnyObject]()
             
@@ -127,7 +125,7 @@ class IMAVideoViewController: UIViewController, AVPictureInPictureControllerDele
             }
             
             plugins[IMAPlugin.pluginName] = adsConfig
-            pluginConfig.config = plugins
+            pluginConfig = PluginConfig(config: plugins)
         }
         
         self.playerController = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)

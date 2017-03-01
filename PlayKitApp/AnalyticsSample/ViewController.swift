@@ -37,9 +37,6 @@ class ViewController: UIViewController {
 
     func setupVideo() {
         
-        let mediaConfig = MediaConfig()
-        let pluginConfig = PluginConfig()
-        
         var source = [String : Any]()
         source["id"] = "123123" //"http://media.w3.org/2010/05/sintel/trailer.mp4"
         source["url"] = "http://media.w3.org/2010/05/sintel/trailer.mp4"
@@ -51,23 +48,27 @@ class ViewController: UIViewController {
         entry["id"] = "Trailer"
         entry["sources"] = sources
         
-        mediaConfig.set(mediaEntry: MediaEntry(json: JSON(entry)))
+        let mediaConfig = MediaConfig(mediaEntry: MediaEntry(json: JSON(entry)))
         
         var plugins = [String : AnyObject]()
         
-        let analyticsConfig = AnalyticsConfig()
+        let analyticsConfig = AnalyticsConfig(params: [:])
         
         plugins[YouboraPlugin.pluginName] = analyticsConfig
-        pluginConfig.config = plugins
+        let pluginConfig = PluginConfig(config: plugins)
 
+        do {
+            self.playerController = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+            self.playerController.prepare(mediaConfig)
+            playerView.addSubview(self.playerController.view)
+            
+            self.playerController.addObserver(self, events: [PlayerEvent.canPlay.self, PlayerEvent.play.self], block: {(info) in
+                PKLog.debug("Duration: \(self.playerController.duration)")
+            })
+        } catch let e {
+            print("failed with error: \(e)")
+        }
         
-        self.playerController = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-        self.playerController.prepare(mediaConfig)
-        playerView.addSubview(self.playerController.view)
-
-        self.playerController.addObserver(self, events: [PlayerEvent.canPlay.self, PlayerEvent.play.self], block: {(info) in
-            PKLog.debug("Duration: \(self.playerController.duration)")
-        })
     }
     
     @IBAction func playClicked(_ sender: AnyObject) {

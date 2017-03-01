@@ -64,6 +64,13 @@
         }
     }];
     
+    [self.kPlayer addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
+        NSError *error = event.error;
+        if (error && error.domain == PKErrorDomain.Player && error.code == 7000) {
+            // handle error
+        }
+    }];
+    
     self.kPlayer.delegate = self;
     [self.playerContainer addSubview:self.kPlayer.view];
 }
