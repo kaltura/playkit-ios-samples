@@ -14,11 +14,13 @@ import DownPicker
 let globalFpsCertificate = "MIIFETCCA/mgAwIBAgIISWLo8KcYfPMwDQYJKoZIhvcNAQEFBQAwfzELMAkGA1UEBhMCVVMxEzARBgNVBAoMCkFwcGxlIEluYy4xJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MTMwMQYDVQQDDCpBcHBsZSBLZXkgU2VydmljZXMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTYwMjAxMTY0NTQ0WhcNMTgwMjAxMTY0NTQ0WjCBijELMAkGA1UEBhMCVVMxKDAmBgNVBAoMH1ZJQUNPTSAxOCBNRURJQSBQUklWQVRFIExJTUlURUQxEzARBgNVBAsMClE5QU5HR0w4TTYxPDA6BgNVBAMMM0ZhaXJQbGF5IFN0cmVhbWluZzogVklBQ09NIDE4IE1FRElBIFBSSVZBVEUgTElNSVRFRDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2YmfdPWM86+te7Bbt4Ic6FexXwMeL+8AmExIj8jAaNxhKbfVFnUnuXzHOajGC7XDbXxsFbPqnErqjw0BqUoZhs+WVMy+0X4AGqHk7uRpZ4RLYganel+fqitL9rz9w3p41x8JfLV+lAej+BEN7zNeqQ2IsC4BxkViu1gA6K22uGsCAwEAAaOCAgcwggIDMB0GA1UdDgQWBBQK+Gmarl2PO3jtLP6A6TZeihOL3DAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFGPkR1TLhXFZRiyDrMxEMWRnAyy+MIHiBgNVHSAEgdowgdcwgdQGCSqGSIb3Y2QFATCBxjCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjA1BgNVHR8ELjAsMCqgKKAmhiRodHRwOi8vY3JsLmFwcGxlLmNvbS9rZXlzZXJ2aWNlcy5jcmwwDgYDVR0PAQH/BAQDAgUgMEgGCyqGSIb3Y2QGDQEDAQH/BDYBZ2diOGN5bXpsb21vdXFqb3p0aHg5aXB6dDJ0bThrcGdqOGNwZGlsbGVhMWI1aG9saWlyaW8wPQYLKoZIhvdjZAYNAQQBAf8EKwF5aHZlYXgzaDB2Nno5dXBqcjRsNWVyNm9hMXBtam9zYXF6ZXdnZXFkaTUwDQYJKoZIhvcNAQEFBQADggEBAIaTVzuOpZhHHUMGd47XeIo08E+Wb5jgE2HPsd8P/aHwVcR+9627QkuAnebftasV/h3FElahzBXRbK52qIZ/UU9nRLCqqKwX33eS2TiaAzOoMAL9cTUmEa2SMSzzAehb7lYPC73Y4VQFttbNidHZHawGp/844ipBS7Iumas8kT8G6ZmIBIevWiggd+D5gLdqXpOFI2XsoAipuxW6NKnnlKnuX6aNReqzKO0DmQPDHO2d7pbd3wAz5zJmxDLpRQfn7iJKupoYGqBs2r45OFyM14HUWaC0+VSh2PaZKwnSS8XXo4zcT/MfEcmP0tL9NaDfsvIWnScMxHUUTNNsZIp3QXA="
 
 
-struct Asset {
+class Asset {
     let id: String
-    let url: String
+    let url: String?
     let licenseUri: String?
     let licenseDataUrl: String?
+    
+    var mediaEntry: MediaEntry?
     
     init(_ id: String, url: String, licenseUri: String? = nil, licenseDataUrl: String? = nil) {
         self.id = id
@@ -27,12 +29,27 @@ struct Asset {
         self.licenseDataUrl = licenseDataUrl
     }
     
-    func avAsset() -> AVURLAsset {
-        return AVURLAsset(url: URL(string: url)!)
+    init(_ id: String, partnerId: Int64, entryId: String) {
+        self.id = id
+        self.url = nil
+        self.licenseUri = nil
+        self.licenseDataUrl = nil
+        let mediaProvider = OVPMediaProvider(SimpleOVPSessionProvider(serverURL: "https://cdnapisec.kaltura.com", partnerId: partnerId, ks: nil)).set(entryId: entryId)
+        mediaProvider.loadMedia { [unowned self] (mediaEntry, error) in
+            self.mediaEntry = mediaEntry
+        }
+    }
+    
+    func avAsset() -> AVURLAsset? {
+        if let urlString = self.url, let url = URL(string: urlString) {
+            return AVURLAsset(url: url)
+        }
+        return nil
     }
 }
 
 let assets = [
+    Asset("mp3", url: "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w2i7tf7c/flavorParamId/0/format/url/protocol/https/a.mp3"),
     Asset("cat", 
           url: "https://cdnapisec.kaltura.com/p/1851571/sp/185157100/playManifest/entryId/1_i02uprfp/format/applehttp/protocol/https/f/a.m3u8", 
           licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=1_i02uprfp&drm=fps"
@@ -52,7 +69,6 @@ let assets = [
     Asset("sintel-wvm", 
           url: "https://cdnapisec.kaltura.com/p/1851571/playManifest/entryId/0_pl5lbfo0/flavorId/1_b2qzyva7/format/url/protocol/https/a/a.wvm", 
           licenseDataUrl: "https://cdnapisec.kaltura.com/html5/html5lib/v2.50/services.php?service=getLicenseData&uiconf_id=31956421&wid=_1851571&entry_id=0_pl5lbfo0&drm=wvclassic"),
-    Asset("multiSubs", url: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_nzffqkbk/flavorIds/1_fwqw0ess,1_yq43k0hz,1_7pjl2kat,1_tebzcakx/format/applehttp/protocol/https/a.m3u8"),
     Asset("player", url: "https://cdnapisec.kaltura.com/p/243342/playManifest/entryId/1_sf5ovm7u/format/applehttp/protocol/https/a/a.m3u8"),
 ]
 
@@ -122,10 +138,19 @@ class ViewController: UIViewController {
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
         
         
-        self.player = PlayKitManager.shared.loadPlayer(pluginConfig:config)
+        self.player = try? PlayKitManager.shared.loadPlayer(pluginConfig:config)
         self.player.prepare(mediaConfig)
+
         self.player.view.frame = playerContainer.bounds
         self.playerContainer.addSubview(player.view)
+        
+        self.player.addObserver(self, events: [PlayerEvent.tracksAvailable]) { (event) in
+            if let tracks = event.tracks, let lastAudioTrack = tracks.audioTracks?.last {
+                self.player.selectTrack(trackId: lastAudioTrack.id!)
+            }
+        }
+        
+        self.player.prepare(mediaConfig)
         self.player.play()
     }
     
@@ -137,6 +162,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         print("viewDidLoad")
+        
+        PKLog.minLevel = .info
+        
         super.viewDidLoad()
         
         let pickerData = assets.map { $0.id }
@@ -160,8 +188,8 @@ class ViewController: UIViewController {
 
     
     func startDownload(_ asset: Asset) {
-        if asset.url.hasSuffix("wvm") {
-            let dowanloader = Downloader(url: asset.url)
+        if let url = asset.url, url.hasSuffix("wvm") {
+            let dowanloader = Downloader(url: url)
             dowanloader.startDownload(asset: asset) { (localPath) in
                 let entry = self.mediaEntry(asset, allowLocal: false)
                 let mediaSource = self.assetsManager.getPreferredDownloadableMediaSource(for: entry)
@@ -184,12 +212,12 @@ class ViewController: UIViewController {
         }
     }
     
-    func drmData(for asset: Asset) -> [DRMData]? {
+    func drmData(for asset: Asset) -> [DRMParams]? {
         
-        var drmData: DRMData? = nil
+        var drmData: DRMParams? = nil
         
         if let licenseUri = asset.licenseUri {
-            drmData = DRMData.fromJSON([
+            drmData = DRMParams.fromJSON([
                 "licenseUri": licenseUri,
                 "fpsCertificate": globalFpsCertificate
                 ])
@@ -205,7 +233,7 @@ class ViewController: UIViewController {
 
             let json = try? JSONSerialization.jsonObject(with: responseData!, options: .mutableContainers)
             if let dict = json as? [String: Any] {
-                drmData = DRMData.fromJSON(dict)
+                drmData = DRMParams.fromJSON(dict)
             }
 
         }
@@ -222,9 +250,14 @@ class ViewController: UIViewController {
         if allowLocal, let url = loadDownloadLocation(assetId: asset.id) {
             return assetsManager.createLocalMediaEntry(for: asset.id, localURL: url)
         } else {
+            // If Asset has a mediaEntry, use it.
+            if let mediaEntry = asset.mediaEntry {
+                return mediaEntry
+            }            
+            
             // Note: this should actually come from the media provider
             return MediaEntry(asset.id, sources: [
-                MediaSource(asset.id, contentUrl: URL(string: asset.url), drmData: drmData(for: asset))
+                MediaSource(asset.id, contentUrl: URL(string: asset.url!), drmData: drmData(for: asset))
                 ])
         }
                 

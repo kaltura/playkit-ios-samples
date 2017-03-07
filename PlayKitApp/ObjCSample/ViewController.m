@@ -44,7 +44,8 @@
     
     // create plugin config with the adsConfig and load the player with it.
     PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:@{IMAPlugin.pluginName:adsConfig}];
-    self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig];
+    NSError* error;
+    self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig error:&error];
     
     // prepare the player with media entry to start the plugin and buffering the media.
     [self.kPlayer prepare:mediaConfig];
