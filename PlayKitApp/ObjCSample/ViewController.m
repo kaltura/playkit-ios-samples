@@ -18,7 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setupPlayer];
+    [self startBasicOVPPlayer];
+//    [self startPlayerWithGivenSource];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -28,22 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setupPlayer {
-    NSDictionary *src = @{@"id":@"123123",@"url": @"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"};
-    
-    NSArray *srcs = @[src];
-    NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
-    MediaConfig *mediaConfig = [MediaConfig configWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
-    
-    // register the plugin
-    [PlayKitManager.sharedInstance registerPlugin:IMAPlugin.self];
-    
-    // ads config for the ima plugin
-    AdsConfig *adsConfig = [AdsConfig new];
-    adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/3274935/preroll&impl=s&gdfp_req=1&env=vp&output=xml_vast2&unviewed_position_start=1&url=[referrer_url]&description_url=[description_url]&correlator=[timestamp]";
-    
-    // create plugin config with the adsConfig and load the player with it.
-    PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:@{IMAPlugin.pluginName:adsConfig}];
+-(void)startPlayerWithMediaConfig:(MediaConfig*)mediaConfig pluginConfig:(PluginConfig*)pluginConfig {
     NSError* error;
     self.kPlayer = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig error:&error];
     
@@ -74,6 +60,37 @@
     
     self.kPlayer.delegate = self;
     [self.playerContainer addSubview:self.kPlayer.view];
+}
+
+-(void)startBasicOVPPlayer {
+    SimpleOVPSessionProvider* sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:@"https://cdnapisec.kaltura.com" partnerId:2215841 ks:nil];
+    OVPMediaProvider* mediaProvider = [[OVPMediaProvider alloc] init:sessionProvider];
+    mediaProvider.entryId = @"1_vl96wf1o";
+    [mediaProvider loadMediaWithCallback:^(MediaEntry * _Nullable mediaEntry, NSError * _Nullable error) {
+        [self startPlayerWithMediaConfig:[[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0] pluginConfig:nil];
+    }];
+}
+
+- (void)startPlayerWithGivenSource {
+    
+    NSDictionary *src = @{@"id":@"123123",@"url": @"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"};
+    
+    NSArray *srcs = @[src];
+    NSDictionary *entry = @{@"id":@"Trailer",@"sources": srcs};
+    MediaConfig *mediaConfig = [MediaConfig configWithMediaEntry:[[MediaEntry alloc] initWithJson:entry]];
+    
+    // register the plugin
+    [PlayKitManager.sharedInstance registerPlugin:IMAPlugin.self];
+    
+    // ads config for the ima plugin
+    AdsConfig *adsConfig = [AdsConfig new];
+    adsConfig.adTagUrl = @"https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpreonly&cmsid=496&vid=short_onecue&correlator=";
+    
+    // create plugin config with the adsConfig and load the player with it.
+    PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:@{IMAPlugin.pluginName:adsConfig}];
+    
+    [self startPlayerWithMediaConfig:mediaConfig pluginConfig:pluginConfig];
+
 }
 
 - (BOOL)playerShouldPlayAd:(id<Player>)player {
