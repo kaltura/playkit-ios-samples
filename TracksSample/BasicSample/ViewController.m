@@ -25,6 +25,54 @@
 @implementation ViewController
 
 /*********************************/
+#pragma mark - LifeCycle
+/*********************************/
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // setup our player instance
+    [self setupPlayer];
+    
+    // handle audio/ text tracks
+    [self handleTracks];
+}
+ 
+- (void)viewDidLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    self.player.view.frame = self.playerContainer.bounds;
+}
+
+/*********************************/
+#pragma mark - Player Setup
+/*********************************/
+    
+- (void)setupPlayer {
+    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
+    
+    // create media source and initialize a media entry with that source
+    NSString *entryId = @"apple_bipbop";
+    MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
+    NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    // setup media entry
+    MediaEntry *mediaEntry = [[MediaEntry alloc] init:entryId sources:sources duration:-1];
+    
+    // create media config
+    MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
+    
+    // load the player
+    NSError *error = nil;
+    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
+    
+    if (!error) {
+        [self.player prepare:mediaConfig];
+        [self.playerContainer addSubview:self.player.view];
+        [self.playerContainer sendSubviewToBack:self.player.view];
+    } else {
+        // error loading the player
+    }
+}
+
+/*********************************/
 #pragma mark - Tracks
 /*********************************/
 
@@ -91,54 +139,6 @@
 // Catpure the picker view selection
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     [self selectTrack:((Track *)self.selectedTracks[row])];
-}
-
-/*********************************/
-#pragma mark - LifeCycle
-/*********************************/
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // setup our player instance
-    [self setupPlayer];
-    
-    // handle audio/ text tracks
-    [self handleTracks];
-}
- 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
-}
-
-/*********************************/
-#pragma mark - Player Setup
-/*********************************/
-    
-- (void)setupPlayer {
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
-    
-    // create media source and initialize a media entry with that source
-    NSString *entryId = @"apple_bipbop";
-    MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
-    // setup media entry
-    MediaEntry *mediaEntry = [[MediaEntry alloc] init:entryId sources:sources duration:-1];
-    
-    // create media config
-    MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
-    
-    // load the player
-    NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
-    
-    if (!error) {
-        [self.player prepare:mediaConfig];
-        [self.playerContainer addSubview:self.player.view];
-        [self.playerContainer sendSubviewToBack:self.player.view];
-    } else {
-        // error loading the player
-    }
 }
 
 /*********************************/
