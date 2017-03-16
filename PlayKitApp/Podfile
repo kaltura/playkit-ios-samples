@@ -2,10 +2,10 @@ platform :ios, '8.0'
 use_frameworks!
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_TAG='widevine/v0.1.15'
+PLAYKIT_TAG='widevine/v0.1.23'
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_LOCAL='../../playkit-ios'
 
 def definePlayKit(subSpecName)
     if defined? PLAYKIT_LOCAL
@@ -15,7 +15,7 @@ def definePlayKit(subSpecName)
     end
 end
 
-# source 'https://github.com/kaltura/playkit-ios-widevine.git'
+source 'https://github.com/kaltura/playkit-ios-widevine.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 abstract_target 'all' do
@@ -64,5 +64,6 @@ end
 target 'ObjCSample' do
     definePlayKit('Core')
     definePlayKit('IMAPlugin')
+    definePlayKit('WidevineClassic')
 end
 
