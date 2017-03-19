@@ -15,7 +15,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Register kaltura analytics plugins.
     [[PlayKitManager sharedInstance] registerPlugin:PhoenixAnalyticsPlugin.self];

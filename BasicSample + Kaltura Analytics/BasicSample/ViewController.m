@@ -68,7 +68,7 @@
     
     // load the player
     NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:[self createPluginConfig] error:&error];
+    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:[self createPluginConfig] error:&error];
     
     if (!error) {
         // add observers, **makes sure to call this **after** player creation otherwise no observation will be added**
@@ -81,34 +81,6 @@
     }
 }
 
-/*********************************/
-#pragma mark - Actions
-/*********************************/
-    
-- (IBAction)playTouched:(UIButton *)sender {
-    if(!self.player.isPlaying) {
-        self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
-        [self.player play];
-    }
-}
-    
-- (IBAction)pauseTouched:(UIButton *)sender {
-    if(self.player.isPlaying) {
-        [self.playheadTimer invalidate];
-        self.playheadTimer = nil;
-        [self.player pause];
-    }
-}
-    
-- (IBAction)playheadValueChanged:(UISlider *)sender {
-    NSLog(@"playhead value: %f", sender.value);
-    self.player.currentTime = self.player.duration * sender.value;
-}
-   
-- (void)playheadUpdate {
-    self.playheadSlider.value = self.player.currentTime / self.player.duration;
-}
-  
 /*********************************/
 #pragma mark - Analytics
 /*********************************/
@@ -203,5 +175,33 @@
                                                    };
     return [[AnalyticsConfig alloc] initWithParams:kalturaLiveStatsPluginParams];
 }
-    
+
+/*********************************/
+#pragma mark - Actions
+/*********************************/
+
+- (IBAction)playTouched:(UIButton *)sender {
+    if(!self.player.isPlaying) {
+        self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
+        [self.player play];
+    }
+}
+
+- (IBAction)pauseTouched:(UIButton *)sender {
+    if(self.player.isPlaying) {
+        [self.playheadTimer invalidate];
+        self.playheadTimer = nil;
+        [self.player pause];
+    }
+}
+
+- (IBAction)playheadValueChanged:(UISlider *)sender {
+    NSLog(@"playhead value: %f", sender.value);
+    self.player.currentTime = self.player.duration * sender.value;
+}
+
+- (void)playheadUpdate {
+    self.playheadSlider.value = self.player.currentTime / self.player.duration;
+}
+
 @end
