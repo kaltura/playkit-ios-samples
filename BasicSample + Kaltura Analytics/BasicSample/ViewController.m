@@ -60,6 +60,7 @@
     NSString *entryId = @"sintel";
     MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
     NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    
     // setup media entry
     MediaEntry *mediaEntry = [[MediaEntry alloc] init:entryId sources:sources duration:-1];
     
@@ -86,6 +87,7 @@
 /*********************************/
 
 // creates plugin config by adding params under the plugin name.
+// in real app just add the plugins you need.
 - (PluginConfig *)createPluginConfig {
     NSMutableDictionary *pluginConfigDict = [[NSMutableDictionary alloc] init];
     
@@ -98,6 +100,7 @@
 }
 
 // adds analytics observers
+// in real app just add the observers you need.
 - (void)addAnalyticsObservations {
     [self.player addObserver:self events:@[OttEvent.report] block:^(PKEvent * _Nonnull event) {
         NSLog(@"received ott event: %@", event.ottEventMessage);

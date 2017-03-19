@@ -66,7 +66,6 @@
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="leading" secondItem="mkz-3y-9UE" secondAttribute="trailing" constant="15" id="yjt-xa-Npg"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="vXf-ss-O3T">
                                         <variation key="heightClass=compact" constant="40"/>
