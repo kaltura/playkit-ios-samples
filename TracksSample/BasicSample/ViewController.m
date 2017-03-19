@@ -35,6 +35,8 @@
     
     // handle audio/ text tracks
     [self handleTracks];
+    // get current bitrate value
+    [self currentBitrateHandler];
 }
  
 - (void)viewDidLayoutSubviews {
@@ -101,6 +103,8 @@
             }
         }
     }];
+    
+    [self printCurrentTrack];
 }
 
 
@@ -108,7 +112,18 @@
 - (void)printCurrentTrack {
     NSLog(@"currentAudioTrack:: %@", self.player.currentAudioTrack);
     NSLog(@"currentTextTrack:: %@", self.player.currentTextTrack);
-    
+}
+
+// Get Current Bitrate
+- (void)currentBitrateHandler {   
+    [self.player addObserver:self events:@[PlayerEvent.playbackParamsUpdated] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.playbackParamsUpdated]) {
+            // Get Current Bitrate Value
+            if (event.currentBitrate) {
+                NSLog(@"%@", event.currentBitrate);
+            }
+        }
+    }];
 }
 
 // Select Track
