@@ -103,6 +103,14 @@
     }];
 }
 
+
+// Get Current Audio/ Text Track
+- (void)printCurrentTrack {
+    NSLog(@"currentAudioTrack:: %@", self.player.currentAudioTrack);
+    NSLog(@"currentTextTrack:: %@", self.player.currentTextTrack);
+    
+}
+
 // Select Track
 - (void)selectTrack:(Track *)track {
     [self.player selectTrackWithTrackId:track.id];
