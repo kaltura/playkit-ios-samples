@@ -77,6 +77,7 @@
 /*********************************/
     
 - (AnalyticsConfig *)createYouboraPluginConfig {
+    // account code is mandatory, make sure to put the correct one.
     NSDictionary *youboraPluginParams = @{
                                           @"accountCode": @"nicetest",
                                           @"httpSecure": @YES,
