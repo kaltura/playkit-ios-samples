@@ -4,7 +4,7 @@ use_frameworks!
 
 platform :ios, '9.0' # (define required version)
 
-target 'BasicSample' do
+target 'ChangeMediaSample' do
     pod 'PlayKit'
 end
 

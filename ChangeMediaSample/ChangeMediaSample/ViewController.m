@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  BasicSample
+//  ChangeMediaSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
+//  Created by Gal Orlanczyk on 20/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
@@ -15,11 +15,11 @@
 @property (strong, nonatomic) NSTimer *playheadTimer;
 @property (weak, nonatomic) IBOutlet UIView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
-    
+
 @end
 
 @implementation ViewController
-   
+
 /*********************************/
 #pragma mark - LifeCycle
 /*********************************/
@@ -33,16 +33,16 @@
     // setup our player instance
     [self setupPlayerWithMediaEntry:mediaEntry];
 }
- 
+
 - (void)viewDidLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.player.view.frame = self.playerContainer.bounds;
 }
-    
+
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
-    
+
 - (void)setupPlayerWithMediaEntry:(MediaEntry *)mediaEntry {
     // create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
@@ -72,14 +72,14 @@
 /*********************************/
 #pragma mark - Actions
 /*********************************/
-    
+
 - (IBAction)playTouched:(UIButton *)sender {
     if(!self.player.isPlaying) {
         self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
         [self.player play];
     }
 }
-    
+
 - (IBAction)pauseTouched:(UIButton *)sender {
     if(self.player.isPlaying) {
         [self.playheadTimer invalidate];
@@ -87,12 +87,12 @@
         [self.player pause];
     }
 }
-    
+
 - (IBAction)playheadValueChanged:(UISlider *)sender {
     NSLog(@"playhead value: %f", sender.value);
     self.player.currentTime = self.player.duration * sender.value;
 }
-   
+
 - (void)playheadUpdate {
     self.playheadSlider.value = self.player.currentTime / self.player.duration;
 }
@@ -111,5 +111,5 @@
     // setup our player instance
     [self setupPlayerWithMediaEntry:mediaEntry];
 }
-    
+
 @end
