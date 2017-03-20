@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  BasicSample
+//  YouboraSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
+//  Created by Gal Orlanczyk on 20/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "PlayKit-Swift.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [PlayKitManager.sharedInstance registerPlugin:YouboraPlugin.self];
+    // Override point for customization after application launch.
     return YES;
 }
 
