@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="608-xs-Xbx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="wQQ-TZ-5ud">
+            <objects>
+                <viewController id="608-xs-Xbx" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kj0-at-joP"/>
+                        <viewControllerLayoutGuide type="bottom" id="fgw-np-7tq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fgb-vj-baC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-bg-hpR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-2i-z4o">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WGa-7R-M2l">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPG-7m-wP0">
+                                            <rect key="frame" x="8" y="17" width="30" height="30"/>
+                                            <state key="normal" title="Play">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="playTouched:" destination="608-xs-Xbx" eventType="touchUpInside" id="4I0-Dt-YPo"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dL-RS-ITM">
+                                            <rect key="frame" x="53" y="17" width="42" height="30"/>
+                                            <state key="normal" title="Pause">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pauseTouched:" destination="608-xs-Xbx" eventType="touchUpInside" id="ygZ-ea-62N"/>
+                                            </connections>
+                                        </button>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9cl-ML-FoM">
+                                            <rect key="frame" x="108" y="17" width="261" height="31"/>
+                                            <connections>
+                                                <action selector="playheadValueChanged:" destination="608-xs-Xbx" eventType="valueChanged" id="h28-qo-1Md"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fPG-7m-wP0" firstAttribute="leading" secondItem="WGa-7R-M2l" secondAttribute="leading" constant="8" id="2Ug-8H-ojp"/>
+                                        <constraint firstItem="4dL-RS-ITM" firstAttribute="centerY" secondItem="WGa-7R-M2l" secondAttribute="centerY" id="JT2-mf-rlB"/>
+                                        <constraint firstItem="4dL-RS-ITM" firstAttribute="leading" secondItem="fPG-7m-wP0" secondAttribute="trailing" constant="15" id="JZ5-Nv-RcJ"/>
+                                        <constraint firstItem="9cl-ML-FoM" firstAttribute="centerY" secondItem="WGa-7R-M2l" secondAttribute="centerY" id="LPW-gO-ttH"/>
+                                        <constraint firstItem="9cl-ML-FoM" firstAttribute="leading" secondItem="4dL-RS-ITM" secondAttribute="trailing" constant="15" id="Yfj-bx-JDQ"/>
+                                        <constraint firstItem="fPG-7m-wP0" firstAttribute="centerY" secondItem="WGa-7R-M2l" secondAttribute="centerY" id="ZaK-gL-xqr"/>
+                                        <constraint firstAttribute="trailing" secondItem="9cl-ML-FoM" secondAttribute="trailing" constant="8" id="ngG-1o-StJ"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="up2-9U-817">
+                                        <variation key="heightClass=compact" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fdw-bg-hpR" firstAttribute="top" secondItem="Fgb-vj-baC" secondAttribute="top" id="690-n2-BsQ"/>
+                            <constraint firstAttribute="trailing" secondItem="NVS-2i-z4o" secondAttribute="trailing" id="Wjq-nt-dDA"/>
+                            <constraint firstItem="fdw-bg-hpR" firstAttribute="leading" secondItem="Fgb-vj-baC" secondAttribute="leading" id="Wqt-E1-Cdz"/>
+                            <constraint firstAttribute="trailing" secondItem="fdw-bg-hpR" secondAttribute="trailing" id="b12-eC-cMw"/>
+                            <constraint firstItem="fgw-np-7tq" firstAttribute="top" secondItem="NVS-2i-z4o" secondAttribute="bottom" id="fYK-LA-kE4"/>
+                            <constraint firstItem="NVS-2i-z4o" firstAttribute="leading" secondItem="Fgb-vj-baC" secondAttribute="leading" id="jAd-i2-c4R"/>
+                            <constraint firstItem="fgw-np-7tq" firstAttribute="top" secondItem="fdw-bg-hpR" secondAttribute="bottom" id="sN6-Ve-nyN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerContainer" destination="fdw-bg-hpR" id="KZg-Kn-tal"/>
+                        <outlet property="playheadSlider" destination="9cl-ML-FoM" id="9Gw-e6-F2b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xi5-VD-UVV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
