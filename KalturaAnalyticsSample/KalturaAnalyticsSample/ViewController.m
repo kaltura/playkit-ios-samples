@@ -1,8 +1,8 @@
 //
 //  ViewController.m
-//  BasicSample
+//  KalturaAnalyticsSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
+//  Created by Gal Orlanczyk on 20/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
@@ -15,7 +15,7 @@
 @property (strong, nonatomic) NSTimer *playheadTimer;
 @property (weak, nonatomic) IBOutlet UIView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
-    
+
 @end
 
 /*********************************/
@@ -25,7 +25,7 @@
 /*********************************/
 
 @implementation ViewController
-   
+
 /*********************************/
 #pragma mark - LifeCycle
 /*********************************/
@@ -37,22 +37,22 @@
     // because we are using live source set silder to be disabled
     self.playheadSlider.enabled = NO;
 }
- 
+
 - (void)viewDidLayoutSubviews {
     [super viewWillLayoutSubviews];
     self.player.view.frame = self.playerContainer.bounds;
 }
-    
+
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     // remove observers
     [self removeAnalyticsObservations];
 }
-    
+
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
-    
+
 - (void)setupPlayer {
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8"];
     
@@ -119,7 +119,7 @@
 - (void)removeAnalyticsObservations {
     [self.player removeObserver:self events:@[OttEvent.report, KalturaStatsEvent.report, KalturaLiveStatsEvent.report]];
 }
-   
+
 - (AnalyticsConfig *)createPhoenixPluginConfig {
     NSDictionary *phoenixPluginParams = @{
                                           @"fileId": @"",
@@ -130,7 +130,7 @@
                                           };
     return [[AnalyticsConfig alloc] initWithParams:phoenixPluginParams];
 }
-    
+
 - (AnalyticsConfig *)createTVPAPIPluginConfig {
     NSDictionary *tvpapiPluginParams = @{
                                          @"fileId": @"",
@@ -155,7 +155,7 @@
                                          };
     return [[AnalyticsConfig alloc] initWithParams:tvpapiPluginParams];
 }
-    
+
 - (AnalyticsConfig *)createKalturaStatsPluginConfig {
     NSDictionary *kalturaStatsPluginParams = @{
                                                @"sessionId": @"",
@@ -167,7 +167,7 @@
     
     return [[AnalyticsConfig alloc] initWithParams:kalturaStatsPluginParams];
 }
-    
+
 - (AnalyticsConfig *)createKalturaLiveStatsPluginConfig {
     NSDictionary *kalturaLiveStatsPluginParams = @{
                                                    @"sessionId": @"",

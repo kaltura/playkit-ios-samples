@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  BasicSample
+//  KalturaAnalyticsSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
+//  Created by Gal Orlanczyk on 20/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "PlayKit-Swift.h"
 
 @interface AppDelegate ()
 
@@ -15,12 +14,9 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Register kaltura analytics plugins.
-    [[PlayKitManager sharedInstance] registerPlugin:PhoenixAnalyticsPlugin.self];
-    [[PlayKitManager sharedInstance] registerPlugin:TVPAPIAnalyticsPlugin.self];
-    [[PlayKitManager sharedInstance] registerPlugin:KalturaStatsPlugin.self];
-    [[PlayKitManager sharedInstance] registerPlugin:KalturaLiveStatsPlugin.self];
+    // Override point for customization after application launch.
     return YES;
 }
 

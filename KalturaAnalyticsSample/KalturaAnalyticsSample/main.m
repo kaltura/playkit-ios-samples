@@ -1,8 +1,8 @@
 //
 //  main.m
-//  BasicSample
+//  KalturaAnalyticsSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
+//  Created by Gal Orlanczyk on 20/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
