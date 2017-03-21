@@ -1,6 +1,6 @@
 # Basic setup sample
 
-## Purpose
+## What's inside
 This Playkit sample show how to instanicate and setup videos using Playkit SDK.
 
 For more info see [documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart.html)
