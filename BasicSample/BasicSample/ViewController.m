@@ -42,7 +42,7 @@
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
         
-        // 3. Prepare the player
+        // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         [self preparePlayer];
     } else {
         // error loading the player
