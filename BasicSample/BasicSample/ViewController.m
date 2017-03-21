@@ -74,7 +74,7 @@
     // prepare the player
     [self.player prepare:mediaConfig];
     
-    // setup the view
+    // setup the player's view
     [self.playerContainer addSubview:self.player.view];
     self.player.view.frame = self.playerContainer.bounds;
 }
