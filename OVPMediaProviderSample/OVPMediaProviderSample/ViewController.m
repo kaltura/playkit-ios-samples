@@ -59,12 +59,12 @@
 /*********************************/
 
 - (void)preparePlayer {
-    NSString *serverURL = @"https://cdnapisec.kaltura.com";
-    int64_t partnerId = 2215841;
+    NSString *serverURL = @"your server url";
+    int64_t partnerId = 0; // put your partner id here
     // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
-    SimpleOVPSessionProvider *sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:serverURL partnerId:partnerId ks:@""];
+    SimpleOVPSessionProvider *sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:serverURL partnerId:partnerId ks:@"your ks"];
     OVPMediaProvider *mediaProvider = [[OVPMediaProvider alloc] init:sessionProvider];
-    mediaProvider.entryId = @"1_w9zx2eti";
+    mediaProvider.entryId = @"your entry id";
     
     [mediaProvider loadMediaWithCallback:^(MediaEntry * _Nullable mediaEntry, NSError * _Nullable error) {
         if (!error) {
