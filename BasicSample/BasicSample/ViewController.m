@@ -9,6 +9,13 @@
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
 
+/*
+ This sample will show you how to create a player with basic functionality.
+ The steps required:
+ 1. Load player with plugin config (only if has plugins).
+ 2. Register player events.
+ 3. Prepare Player.
+ */
 @interface ViewController ()
 
 @property (strong, nonatomic) id<Player> player;
@@ -26,8 +33,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // setup our player instance
-    [self setupPlayer];
+    // 1. Load the player
+    NSError *error = nil;
+    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:nil error:&error];
+    // make sure player loaded
+    if (!error) {
+        // 2. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        
+        // 3. Prepare the player
+        [self preparePlayer];
+    } else {
+        // error loading the player
+    }
 }
  
 - (void)viewDidLayoutSubviews {
@@ -39,7 +58,7 @@
 #pragma mark - Player Setup
 /*********************************/
     
-- (void)setupPlayer {
+- (void)preparePlayer {
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     
     // create media source and initialize a media entry with that source
@@ -52,16 +71,12 @@
     // create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
-    // load the player
-    NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
+    // prepare the player
+    [self.player prepare:mediaConfig];
     
-    if (!error) {
-        [self.player prepare:mediaConfig];
-        [self.playerContainer addSubview:self.player.view];
-    } else {
-        // error loading the player
-    }
+    // setup the view
+    [self.playerContainer addSubview:self.player.view];
+    self.player.view.frame = self.playerContainer.bounds;
 }
 
 /*********************************/
