@@ -25,7 +25,7 @@
 /*********************************/
 
 /*
- This sample will show you how to create a player with basic functionality.
+ This sample will show you how to create a player with tvpapi analytics plugin.
  The steps required:
  1. Create plugin config.
  2. Load player with plugin config.

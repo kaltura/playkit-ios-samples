@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Fxm-Vj-V2F">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="lxE-BX-zoU">
+            <objects>
+                <viewController id="Fxm-Vj-V2F" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yj8-xL-9zt"/>
+                        <viewControllerLayoutGuide type="bottom" id="m0r-3z-wwu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Q1o-wg-IDy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mo-3z-ahh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R50-iX-JGt">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Q9h-H2-hbn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRd-Bv-OGX">
+                                            <rect key="frame" x="8" y="17" width="30" height="30"/>
+                                            <state key="normal" title="Play">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="playTouched:" destination="Fxm-Vj-V2F" eventType="touchUpInside" id="Tge-WU-y7h"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieb-6B-Sgb">
+                                            <rect key="frame" x="53" y="17" width="42" height="30"/>
+                                            <state key="normal" title="Pause">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pauseTouched:" destination="Fxm-Vj-V2F" eventType="touchUpInside" id="uct-dc-LyL"/>
+                                            </connections>
+                                        </button>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-wp-Oi3">
+                                            <rect key="frame" x="108" y="17" width="261" height="31"/>
+                                            <connections>
+                                                <action selector="playheadValueChanged:" destination="Fxm-Vj-V2F" eventType="valueChanged" id="vdm-IM-zgh"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Hxe-wp-Oi3" firstAttribute="leading" secondItem="ieb-6B-Sgb" secondAttribute="trailing" constant="15" id="FBS-dz-9c5"/>
+                                        <constraint firstItem="ieb-6B-Sgb" firstAttribute="leading" secondItem="aRd-Bv-OGX" secondAttribute="trailing" constant="15" id="KzE-XH-fxU"/>
+                                        <constraint firstItem="ieb-6B-Sgb" firstAttribute="centerY" secondItem="Q9h-H2-hbn" secondAttribute="centerY" id="V8u-EU-qLY"/>
+                                        <constraint firstItem="aRd-Bv-OGX" firstAttribute="leading" secondItem="Q9h-H2-hbn" secondAttribute="leading" constant="8" id="fEV-xo-6TR"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hxe-wp-Oi3" secondAttribute="trailing" constant="8" id="j40-xi-S0Q"/>
+                                        <constraint firstItem="aRd-Bv-OGX" firstAttribute="centerY" secondItem="Q9h-H2-hbn" secondAttribute="centerY" id="vQW-Vw-aTl"/>
+                                        <constraint firstItem="Hxe-wp-Oi3" firstAttribute="centerY" secondItem="Q9h-H2-hbn" secondAttribute="centerY" id="zOA-W6-jqr"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Djz-F8-Wev">
+                                        <variation key="heightClass=compact" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4Mo-3z-ahh" firstAttribute="top" secondItem="Q1o-wg-IDy" secondAttribute="top" id="HMj-LB-THj"/>
+                            <constraint firstAttribute="trailing" secondItem="R50-iX-JGt" secondAttribute="trailing" id="I4Z-Qt-vn3"/>
+                            <constraint firstItem="m0r-3z-wwu" firstAttribute="top" secondItem="4Mo-3z-ahh" secondAttribute="bottom" id="Tkp-bA-3wt"/>
+                            <constraint firstAttribute="trailing" secondItem="4Mo-3z-ahh" secondAttribute="trailing" id="afY-MN-LkZ"/>
+                            <constraint firstItem="m0r-3z-wwu" firstAttribute="top" secondItem="R50-iX-JGt" secondAttribute="bottom" id="kDo-2I-tNG"/>
+                            <constraint firstItem="4Mo-3z-ahh" firstAttribute="leading" secondItem="Q1o-wg-IDy" secondAttribute="leading" id="s4a-tr-nF1"/>
+                            <constraint firstItem="R50-iX-JGt" firstAttribute="leading" secondItem="Q1o-wg-IDy" secondAttribute="leading" id="ukt-p9-d5o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerContainer" destination="4Mo-3z-ahh" id="Id7-ua-aFb"/>
+                        <outlet property="playheadSlider" destination="Hxe-wp-Oi3" id="bxJ-ul-ExE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFz-ob-uPg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>

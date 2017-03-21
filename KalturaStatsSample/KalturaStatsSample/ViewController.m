@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  PhoenixAnalyticsSample
+//  KalturaStatsSample
 //
 //  Created by Gal Orlanczyk on 21/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
@@ -25,7 +25,7 @@
 /*********************************/
 
 /*
- This sample will show you how to create a player with phoenix analytics plugin.
+ This sample will show you how to create a player with kaltura stats plugin.
  The steps required:
  1. Create plugin config.
  2. Load player with plugin config.
@@ -50,7 +50,7 @@
         // 3. Register events if have ones.
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-        [self addPhoenixAnalyticsObservations];
+        [self addKalturaStatsObservations];
         
         // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         [self preparePlayer];
@@ -103,13 +103,13 @@
 // creates plugin config by adding params under the plugin name.
 - (PluginConfig *)createPluginConfig {
     NSMutableDictionary *pluginConfigDict = [[NSMutableDictionary alloc] init];
-    pluginConfigDict[PhoenixAnalyticsPlugin.pluginName] = [self createPhoenixPluginConfig];
+    pluginConfigDict[KalturaStatsPlugin.pluginName] = [self createKalturaStatsPluginConfig];
     return [[PluginConfig alloc] initWithConfig:pluginConfigDict];
 }
 
-- (void)addPhoenixAnalyticsObservations {
-    [self.player addObserver:self events:@[OttEvent.report] block:^(PKEvent * _Nonnull event) {
-        NSLog(@"received ott event: %@", event.ottEventMessage);
+- (void)addKalturaStatsObservations {
+    [self.player addObserver:self events:@[KalturaStatsEvent.report] block:^(PKEvent * _Nonnull event) {
+        NSLog(@"received kaltura stats event: %@", event.kalturaStatsMessage);
     }];
 }
 
@@ -118,15 +118,16 @@
     [self.player removeObserver:self events:@[OttEvent.report]];
 }
 
-- (AnalyticsConfig *)createPhoenixPluginConfig {
-    NSDictionary *phoenixPluginParams = @{
-                                          @"fileId": @"",
-                                          @"baseUrl": @"",
-                                          @"ks": @"",
-                                          @"partnerId": @0,
-                                          @"timerInterval": @30
-                                          };
-    return [[AnalyticsConfig alloc] initWithParams:phoenixPluginParams];
+- (AnalyticsConfig *)createKalturaStatsPluginConfig {
+    NSDictionary *kalturaStatsPluginParams = @{
+                                               @"sessionId": @"",
+                                               @"uiconfId": @0,
+                                               @"baseUrl": @"",
+                                               @"partnerId": @0,
+                                               @"timerInterval": @30
+                                               };
+    
+    return [[AnalyticsConfig alloc] initWithParams:kalturaStatsPluginParams];
 }
 
 /*********************************/
