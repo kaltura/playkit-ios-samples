@@ -9,6 +9,14 @@
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
 
+/*
+ This sample will show you how to create a player with youbora plugin.
+ The steps required:
+ 1. Create youbora plugin config.
+ 2. Load player with plugin config.
+ 3. Register events.
+ 4. Prepare Player.
+ */
 @interface ViewController ()
 
 @property (strong, nonatomic) id<Player> player;
@@ -26,8 +34,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // setup our player instance
-    [self setupPlayer];
+    // 1. create plugin config
+    PluginConfig *pluginConfig = [self createPluginConfig];
+    
+    // 2. Load the player
+    NSError *error = nil;
+    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig error:&error];
+    // make sure player loaded
+    if (!error) {
+        // 3. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        [self addYouboraObservations];
+        
+        // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        [self preparePlayer];
+    } else {
+        // error loading the player
+    }
 }
 
 - (void)viewDidLayoutSubviews {
@@ -39,7 +63,13 @@
 #pragma mark - Player Setup
 /*********************************/
 
-- (void)setupPlayer {
+- (PluginConfig *)createPluginConfig {
+    NSMutableDictionary *pluginConfigDict = [[NSMutableDictionary alloc] init];
+    pluginConfigDict[YouboraPlugin.pluginName] = [self createYouboraPluginConfig];
+    return [[PluginConfig alloc] initWithConfig:pluginConfigDict];
+}
+
+- (void)preparePlayer {
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     
     // create media source and initialize a media entry with that source
@@ -52,24 +82,10 @@
     // create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
-    // create plugin config
-    NSMutableDictionary *pluginConfigDict = [[NSMutableDictionary alloc] init];
-    pluginConfigDict[YouboraPlugin.pluginName] = [self createYouboraPluginConfig];
-    PluginConfig *pluginConfig = [[PluginConfig alloc] initWithConfig:pluginConfigDict];
+    [self.player prepare:mediaConfig];
     
-    // load the player
-    NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:pluginConfig error:&error];
-    
-    if (!error) {
-        // add observers, **makes sure to call this **after** player creation otherwise no observation will be added**
-        [self addYouboraObservations];
-        
-        [self.player prepare:mediaConfig];
-        [self.playerContainer addSubview:self.player.view];
-    } else {
-        // error loading the player
-    }
+    [self.playerContainer addSubview:self.player.view];
+    self.player.view.frame = self.playerContainer.bounds;
 }
 
 /*********************************/
