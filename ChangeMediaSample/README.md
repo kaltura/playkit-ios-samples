@@ -1,7 +1,7 @@
-# Basic Setup Sample
+# Change Media Sample
 
 ## Purpose
-This PlayKit sample show how to create and setup PlayKit SDK player.
+This PlayKit sample show how to create, setup and change media using PlayKit SDK player.
 
 For more info see [documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart.html)
 
