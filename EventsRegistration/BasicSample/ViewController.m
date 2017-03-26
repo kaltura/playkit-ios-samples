@@ -26,6 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.playheadSlider.continuous = NO;
+    
     // Load Player
     NSError *error = [self loadPlayer];
     // Register Player Events

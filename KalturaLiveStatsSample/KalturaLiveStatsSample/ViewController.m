@@ -40,6 +40,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.playheadSlider.continuous = NO;
+    
     // 1. Create plugin config
     PluginConfig *pluginConfig = [self createPluginConfig];
     // 2. Load the player

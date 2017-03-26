@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.playheadSlider.continuous = NO;
     [self setupPlayerWithMediaConfig:[self getDefaultMediaConfig]];
 }
 

@@ -34,9 +34,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.playheadSlider.continuous = NO;
+    
     // 1. create plugin config
     PluginConfig *pluginConfig = [self createPluginConfig];
-    
     // 2. Load the player
     NSError *error = nil;
     self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig error:&error];
