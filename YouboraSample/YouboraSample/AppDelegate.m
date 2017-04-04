@@ -16,7 +16,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [[PlayKitManager sharedInstance] registerPlugin:YouboraPlugin.self];
     return YES;
 }
 

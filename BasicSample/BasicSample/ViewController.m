@@ -33,6 +33,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.playheadSlider.continuous = NO;
+    
     // 1. Load the player
     NSError *error = nil;
     self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:nil error:&error];
@@ -74,7 +76,7 @@
     // prepare the player
     [self.player prepare:mediaConfig];
     
-    // setup the view
+    // setup the player's view
     [self.playerContainer addSubview:self.player.view];
     self.player.view.frame = self.playerContainer.bounds;
 }

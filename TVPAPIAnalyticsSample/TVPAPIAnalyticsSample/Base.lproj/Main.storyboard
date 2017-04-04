@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KGx-K2-xw8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="v3p-uv-QgA">
+            <objects>
+                <viewController id="KGx-K2-xw8" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zmg-TN-tvz"/>
+                        <viewControllerLayoutGuide type="bottom" id="xaP-er-Uie"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rHH-3r-9lH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="66q-Me-J6m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Anu-V7-TKf">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xzi-mj-gfc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqh-ZK-NyL">
+                                            <rect key="frame" x="8" y="17" width="30" height="30"/>
+                                            <state key="normal" title="Play">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="playTouched:" destination="KGx-K2-xw8" eventType="touchUpInside" id="kg4-wz-j78"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEl-DI-guh">
+                                            <rect key="frame" x="53" y="17" width="42" height="30"/>
+                                            <state key="normal" title="Pause">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pauseTouched:" destination="KGx-K2-xw8" eventType="touchUpInside" id="Qg7-Oj-ODj"/>
+                                            </connections>
+                                        </button>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="PKL-vX-ZgS">
+                                            <rect key="frame" x="108" y="17" width="261" height="31"/>
+                                            <connections>
+                                                <action selector="playheadValueChanged:" destination="KGx-K2-xw8" eventType="valueChanged" id="T9W-gW-E3o"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PKL-vX-ZgS" firstAttribute="leading" secondItem="QEl-DI-guh" secondAttribute="trailing" constant="15" id="Xhc-DK-NR4"/>
+                                        <constraint firstItem="Oqh-ZK-NyL" firstAttribute="centerY" secondItem="xzi-mj-gfc" secondAttribute="centerY" id="cH1-Vg-CMR"/>
+                                        <constraint firstItem="Oqh-ZK-NyL" firstAttribute="leading" secondItem="xzi-mj-gfc" secondAttribute="leading" constant="8" id="igK-vS-B5a"/>
+                                        <constraint firstAttribute="trailing" secondItem="PKL-vX-ZgS" secondAttribute="trailing" constant="8" id="jdR-w9-3NS"/>
+                                        <constraint firstItem="QEl-DI-guh" firstAttribute="centerY" secondItem="xzi-mj-gfc" secondAttribute="centerY" id="pon-2a-MdN"/>
+                                        <constraint firstItem="PKL-vX-ZgS" firstAttribute="centerY" secondItem="xzi-mj-gfc" secondAttribute="centerY" id="w3k-7G-dSg"/>
+                                        <constraint firstItem="QEl-DI-guh" firstAttribute="leading" secondItem="Oqh-ZK-NyL" secondAttribute="trailing" constant="15" id="wyS-Uh-id5"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="dAH-4M-J0w">
+                                        <variation key="heightClass=compact" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xaP-er-Uie" firstAttribute="top" secondItem="Anu-V7-TKf" secondAttribute="bottom" id="5Ej-0H-fdt"/>
+                            <constraint firstItem="Anu-V7-TKf" firstAttribute="leading" secondItem="rHH-3r-9lH" secondAttribute="leading" id="EMI-rV-xf1"/>
+                            <constraint firstItem="66q-Me-J6m" firstAttribute="leading" secondItem="rHH-3r-9lH" secondAttribute="leading" id="Rrp-y4-qCC"/>
+                            <constraint firstItem="xaP-er-Uie" firstAttribute="top" secondItem="66q-Me-J6m" secondAttribute="bottom" id="XQ9-JS-cfA"/>
+                            <constraint firstItem="66q-Me-J6m" firstAttribute="top" secondItem="rHH-3r-9lH" secondAttribute="top" id="YNc-Fo-yXh"/>
+                            <constraint firstAttribute="trailing" secondItem="66q-Me-J6m" secondAttribute="trailing" id="p60-pm-cyx"/>
+                            <constraint firstAttribute="trailing" secondItem="Anu-V7-TKf" secondAttribute="trailing" id="ulU-9F-Pax"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playerContainer" destination="66q-Me-J6m" id="CRV-fh-o48"/>
+                        <outlet property="playheadSlider" destination="PKL-vX-ZgS" id="bdm-mU-cGs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSZ-n5-PXf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
