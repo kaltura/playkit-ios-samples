@@ -13,6 +13,7 @@
 		2005AE511E800B3D00FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE4F1E800B3D00FB01B0 /* Main.storyboard */; };
 		2005AE531E800B3D00FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE521E800B3D00FB01B0 /* Assets.xcassets */; };
 		2005AE561E800B3D00FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE541E800B3D00FB01B0 /* LaunchScreen.storyboard */; };
+		D03A158A0241B08E33B1D441 /* Pods_ChangeMediaSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A130978091290598FC0720B /* Pods_ChangeMediaSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		2005AE521E800B3D00FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AE551E800B3D00FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AE571E800B3D00FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A130978091290598FC0720B /* Pods_ChangeMediaSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChangeMediaSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7802FD9645FA01D72A529128 /* Pods-ChangeMediaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeMediaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample.release.xcconfig"; sourceTree = "<group>"; };
+		FA058BD654E29E510A131B7C /* Pods-ChangeMediaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeMediaSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D03A158A0241B08E33B1D441 /* Pods_ChangeMediaSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				2005AE451E800B3C00FB01B0 /* ChangeMediaSample */,
 				2005AE441E800B3C00FB01B0 /* Products */,
+				3786BE3364C402245179D40C /* Pods */,
+				DFBCC9DC944EDB960EB10A25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3786BE3364C402245179D40C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FA058BD654E29E510A131B7C /* Pods-ChangeMediaSample.debug.xcconfig */,
+				7802FD9645FA01D72A529128 /* Pods-ChangeMediaSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DFBCC9DC944EDB960EB10A25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A130978091290598FC0720B /* Pods_ChangeMediaSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AE5A1E800B3D00FB01B0 /* Build configuration list for PBXNativeTarget "ChangeMediaSample" */;
 			buildPhases = (
+				2ABABF21457E69F90ECC400A /* [CP] Check Pods Manifest.lock */,
 				2005AE3F1E800B3C00FB01B0 /* Sources */,
 				2005AE401E800B3C00FB01B0 /* Frameworks */,
 				2005AE411E800B3C00FB01B0 /* Resources */,
+				0B372BDCBA89D339FBB33C8B /* [CP] Embed Pods Frameworks */,
+				2E468B0D07C082D0FBE99A2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B372BDCBA89D339FBB33C8B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2ABABF21457E69F90ECC400A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2E468B0D07C082D0FBE99A2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2005AE3F1E800B3C00FB01B0 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		2005AE5B1E800B3D00FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA058BD654E29E510A131B7C /* Pods-ChangeMediaSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChangeMediaSample/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		2005AE5C1E800B3D00FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7802FD9645FA01D72A529128 /* Pods-ChangeMediaSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ChangeMediaSample/Info.plist;

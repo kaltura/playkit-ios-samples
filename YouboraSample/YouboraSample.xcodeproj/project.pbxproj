@@ -13,6 +13,7 @@
 		2005AE971E80133900FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE951E80133900FB01B0 /* Main.storyboard */; };
 		2005AE991E80133900FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE981E80133900FB01B0 /* Assets.xcassets */; };
 		2005AE9C1E80133900FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE9A1E80133900FB01B0 /* LaunchScreen.storyboard */; };
+		5BD5B40BF111F8555224A7D7 /* Pods_YouboraSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B056E3E2021A0959155ABAB /* Pods_YouboraSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		2005AE981E80133900FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AE9B1E80133900FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AE9D1E80133900FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B056E3E2021A0959155ABAB /* Pods_YouboraSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouboraSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		793A1C876BF59029530A3A21 /* Pods-YouboraSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YouboraSample/Pods-YouboraSample.debug.xcconfig"; sourceTree = "<group>"; };
+		F8A6BD4EF91A97290BC1FEFC /* Pods-YouboraSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouboraSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-YouboraSample/Pods-YouboraSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BD5B40BF111F8555224A7D7 /* Pods_YouboraSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				2005AE8B1E80133900FB01B0 /* YouboraSample */,
 				2005AE8A1E80133900FB01B0 /* Products */,
+				8F288488A9D5F0D900526F88 /* Pods */,
+				CD20A9A291F1A3BD3E1C287D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +86,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8F288488A9D5F0D900526F88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				793A1C876BF59029530A3A21 /* Pods-YouboraSample.debug.xcconfig */,
+				F8A6BD4EF91A97290BC1FEFC /* Pods-YouboraSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD20A9A291F1A3BD3E1C287D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B056E3E2021A0959155ABAB /* Pods_YouboraSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AEA01E80133900FB01B0 /* Build configuration list for PBXNativeTarget "YouboraSample" */;
 			buildPhases = (
+				E1C8CB92B3FDA8129B6A9E2B /* [CP] Check Pods Manifest.lock */,
 				2005AE851E80133900FB01B0 /* Sources */,
 				2005AE861E80133900FB01B0 /* Frameworks */,
 				2005AE871E80133900FB01B0 /* Resources */,
+				2321E669D9F086BBF6212B63 /* [CP] Embed Pods Frameworks */,
+				7CD634235D8947CE8BD34325 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2321E669D9F086BBF6212B63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouboraSample/Pods-YouboraSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CD634235D8947CE8BD34325 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YouboraSample/Pods-YouboraSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1C8CB92B3FDA8129B6A9E2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2005AE851E80133900FB01B0 /* Sources */ = {
@@ -270,6 +345,7 @@
 		};
 		2005AEA11E80133900FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 793A1C876BF59029530A3A21 /* Pods-YouboraSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YouboraSample/Info.plist;
@@ -281,6 +357,7 @@
 		};
 		2005AEA21E80133900FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8A6BD4EF91A97290BC1FEFC /* Pods-YouboraSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YouboraSample/Info.plist;

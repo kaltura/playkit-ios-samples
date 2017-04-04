@@ -9,6 +9,17 @@
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
 
+/*
+ This sample will show you how to change media on player with basic functionality.
+ The steps required to Chgange Media:
+ 1. Stop Player
+ 2. Call Prepare with new MediaConfig
+ 
+ ** Not Recommended **
+ Just in case you wish to remove Player and Recreate when Media Changed 
+ go to "changeMediaByRecreation" method.
+ */
+
 @interface ViewController ()
 
 @property (strong, nonatomic) id<Player> player;
@@ -98,15 +109,37 @@
 }
 
 - (IBAction)changeMediaTouched:(UIButton *)sender {
+    // create mediaEntry for change media, you can use differrent params here.
+    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"];
+    NSString *entryId = @"Kaltura Media";
+    MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
+    // Resets The Player And Prepares for Change Media
+    [self.player stop]; // 1. Stop Player
+    // Create new Media Config
+    MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
+    // Call Prepare
+    [self.player prepare:mediaConfig]; // 2. Call Prepare with new MediaConfig
+    
+    // don't forget to use weak self to prevent retain cycles when needed
+    __weak __typeof(self) weakSelf = self;
+    // After preparing if you wish to play make sure to wait `canPlay` event.
+    [self.player addObserver:self events:@[PlayerEvent.canPlay] block:^(PKEvent * _Nonnull event) {
+        [weakSelf.player play];
+    }];
+}
+
+// ** Not Recommended **
+// Change Media by Remove & Recreation
+- (void)changeMediaByRecreation {
     // to change the media we remove player view from container, destroy the player and create a new instance.
-    [self.player.view removeFromSuperview];
-    [self.player destroy];
-    self.player = nil;
+        [self.player.view removeFromSuperview];
+        [self.player destroy];
+        self.player = nil;
     // create mediaEntry to setup player for change media, you can use differrent params here.
     // for the sake of this example we will use same content url and id.
     // in a real app you can select more properties to be changed not just the content url and id.
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
-    NSString *entryId = @"sintel";
+    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"];
+    NSString *entryId = @"Kaltura Media";
     MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
     // setup our player instance
     [self setupPlayerWithMediaEntry:mediaEntry];

@@ -58,6 +58,10 @@
         }
     }];
     
+    [self.kPlayer addObserver:self events:@[YouboraEvent.youboraReportSent] block:^(PKEvent * _Nonnull event) {
+        
+    }];
+    
     self.kPlayer.delegate = self;
     [self.playerContainer addSubview:self.kPlayer.view];
 }
