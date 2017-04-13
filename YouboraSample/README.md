@@ -14,6 +14,8 @@ For more info see [documentation](https://github.com/kaltura/DeveloperPortalDocs
     * All other parameters are optional, but in order to receive the most accurate analytics please make sure to give all available information.
 4. Run on simulator or device.
 
+For more info regarding Youbora usage and configuration see [Youbora Developer site](http://developer.nicepeopleatwork.com/)
+
 ## License
 
 See [license and copyright information](https://github.com/kaltura/playkit-ios-samples#license-and-copyright-information)
