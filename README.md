@@ -4,7 +4,7 @@ This project hosts samples for the [PlayKit -  Kaltura iOS SDK v3](https://githu
 
 ## Requirements
 
-* XCode7 or newer
+* Xcode7 or newer
 * iOS 9.0+
 * CocoaPods
 
