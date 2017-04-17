@@ -8,6 +8,10 @@ target 'BasicSample' do
     pod 'PlayKit'
 end
 
+target 'BasicSample-Swift' do
+    pod 'PlayKit'
+end
+
 pre_install do |installer|
     def installer.verify_no_static_framework_transitive_dependencies; end
 end
