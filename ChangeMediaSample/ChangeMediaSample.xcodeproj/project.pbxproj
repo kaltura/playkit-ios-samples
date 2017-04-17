@@ -13,6 +13,12 @@
 		2005AE511E800B3D00FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE4F1E800B3D00FB01B0 /* Main.storyboard */; };
 		2005AE531E800B3D00FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE521E800B3D00FB01B0 /* Assets.xcassets */; };
 		2005AE561E800B3D00FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE541E800B3D00FB01B0 /* LaunchScreen.storyboard */; };
+		82D12F05CF2FE348F62E18D6 /* Pods_ChangeMediaSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC21FC7F1FEABE041385832A /* Pods_ChangeMediaSample_Swift.framework */; };
+		BFAA88FC1EA4DDC8004CA6D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA88FB1EA4DDC8004CA6D2 /* AppDelegate.swift */; };
+		BFAA89011EA4DDC8004CA6D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAA88FF1EA4DDC8004CA6D2 /* Main.storyboard */; };
+		BFAA89031EA4DDC8004CA6D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFAA89021EA4DDC8004CA6D2 /* Assets.xcassets */; };
+		BFAA89061EA4DDC8004CA6D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAA89041EA4DDC8004CA6D2 /* LaunchScreen.storyboard */; };
+		BFAA890C1EA4DE92004CA6D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA890B1EA4DE92004CA6D2 /* ViewController.swift */; };
 		D03A158A0241B08E33B1D441 /* Pods_ChangeMediaSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A130978091290598FC0720B /* Pods_ChangeMediaSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,16 @@
 		2005AE571E800B3D00FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A130978091290598FC0720B /* Pods_ChangeMediaSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChangeMediaSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7802FD9645FA01D72A529128 /* Pods-ChangeMediaSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeMediaSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample.release.xcconfig"; sourceTree = "<group>"; };
+		B98EE40BC87FCE653C249510 /* Pods-ChangeMediaSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeMediaSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChangeMediaSample-Swift/Pods-ChangeMediaSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		BFAA88F91EA4DDC7004CA6D2 /* ChangeMediaSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChangeMediaSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFAA88FB1EA4DDC8004CA6D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFAA89001EA4DDC8004CA6D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFAA89021EA4DDC8004CA6D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFAA89051EA4DDC8004CA6D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFAA89071EA4DDC8004CA6D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAA890B1EA4DE92004CA6D2 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D488D41EA24007229BA84C22 /* Pods-ChangeMediaSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeMediaSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChangeMediaSample-Swift/Pods-ChangeMediaSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		DC21FC7F1FEABE041385832A /* Pods_ChangeMediaSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChangeMediaSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA058BD654E29E510A131B7C /* Pods-ChangeMediaSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChangeMediaSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,6 +57,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFAA88F61EA4DDC7004CA6D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82D12F05CF2FE348F62E18D6 /* Pods_ChangeMediaSample_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -48,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AE451E800B3C00FB01B0 /* ChangeMediaSample */,
+				BFAA88FA1EA4DDC8004CA6D2 /* ChangeMediaSample-Swift */,
 				2005AE441E800B3C00FB01B0 /* Products */,
 				3786BE3364C402245179D40C /* Pods */,
 				DFBCC9DC944EDB960EB10A25 /* Frameworks */,
@@ -58,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AE431E800B3C00FB01B0 /* ChangeMediaSample.app */,
+				BFAA88F91EA4DDC7004CA6D2 /* ChangeMediaSample-Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,14 +117,30 @@
 			children = (
 				FA058BD654E29E510A131B7C /* Pods-ChangeMediaSample.debug.xcconfig */,
 				7802FD9645FA01D72A529128 /* Pods-ChangeMediaSample.release.xcconfig */,
+				D488D41EA24007229BA84C22 /* Pods-ChangeMediaSample-Swift.debug.xcconfig */,
+				B98EE40BC87FCE653C249510 /* Pods-ChangeMediaSample-Swift.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFAA88FA1EA4DDC8004CA6D2 /* ChangeMediaSample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BFAA890B1EA4DE92004CA6D2 /* ViewController.swift */,
+				BFAA88FB1EA4DDC8004CA6D2 /* AppDelegate.swift */,
+				BFAA88FF1EA4DDC8004CA6D2 /* Main.storyboard */,
+				BFAA89021EA4DDC8004CA6D2 /* Assets.xcassets */,
+				BFAA89041EA4DDC8004CA6D2 /* LaunchScreen.storyboard */,
+				BFAA89071EA4DDC8004CA6D2 /* Info.plist */,
+			);
+			path = "ChangeMediaSample-Swift";
 			sourceTree = "<group>";
 		};
 		DFBCC9DC944EDB960EB10A25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2A130978091290598FC0720B /* Pods_ChangeMediaSample.framework */,
+				DC21FC7F1FEABE041385832A /* Pods_ChangeMediaSample_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,17 +168,43 @@
 			productReference = 2005AE431E800B3C00FB01B0 /* ChangeMediaSample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFAA88F81EA4DDC7004CA6D2 /* ChangeMediaSample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFAA890A1EA4DDC8004CA6D2 /* Build configuration list for PBXNativeTarget "ChangeMediaSample-Swift" */;
+			buildPhases = (
+				B8249AFF5365C807B648E985 /* [CP] Check Pods Manifest.lock */,
+				BFAA88F51EA4DDC7004CA6D2 /* Sources */,
+				BFAA88F61EA4DDC7004CA6D2 /* Frameworks */,
+				BFAA88F71EA4DDC7004CA6D2 /* Resources */,
+				FD75C3BFD759608B4AD7EAFC /* [CP] Embed Pods Frameworks */,
+				DAF0047EEF933CD7CB4FE8D1 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ChangeMediaSample-Swift";
+			productName = "ChangeMediaSample-Swift";
+			productReference = BFAA88F91EA4DDC7004CA6D2 /* ChangeMediaSample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2005AE3B1E800B3C00FB01B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Kaltura;
 				TargetAttributes = {
 					2005AE421E800B3C00FB01B0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BFAA88F81EA4DDC7004CA6D2 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -155,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				2005AE421E800B3C00FB01B0 /* ChangeMediaSample */,
+				BFAA88F81EA4DDC7004CA6D2 /* ChangeMediaSample-Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -167,6 +236,16 @@
 				2005AE561E800B3D00FB01B0 /* LaunchScreen.storyboard in Resources */,
 				2005AE531E800B3D00FB01B0 /* Assets.xcassets in Resources */,
 				2005AE511E800B3D00FB01B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAA88F71EA4DDC7004CA6D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAA89061EA4DDC8004CA6D2 /* LaunchScreen.storyboard in Resources */,
+				BFAA89031EA4DDC8004CA6D2 /* Assets.xcassets in Resources */,
+				BFAA89011EA4DDC8004CA6D2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +297,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChangeMediaSample/Pods-ChangeMediaSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B8249AFF5365C807B648E985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAF0047EEF933CD7CB4FE8D1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChangeMediaSample-Swift/Pods-ChangeMediaSample-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD75C3BFD759608B4AD7EAFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChangeMediaSample-Swift/Pods-ChangeMediaSample-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -228,6 +352,15 @@
 				2005AE4E1E800B3C00FB01B0 /* ViewController.m in Sources */,
 				2005AE4B1E800B3C00FB01B0 /* AppDelegate.m in Sources */,
 				2005AE481E800B3C00FB01B0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFAA88F51EA4DDC7004CA6D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFAA890C1EA4DE92004CA6D2 /* ViewController.swift in Sources */,
+				BFAA88FC1EA4DDC8004CA6D2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +379,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				2005AE551E800B3D00FB01B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFAA88FF1EA4DDC8004CA6D2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAA89001EA4DDC8004CA6D2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFAA89041EA4DDC8004CA6D2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFAA89051EA4DDC8004CA6D2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -367,6 +516,41 @@
 			};
 			name = Release;
 		};
+		BFAA89081EA4DDC8004CA6D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D488D41EA24007229BA84C22 /* Pods-ChangeMediaSample-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = "ChangeMediaSample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.ChangeMediaSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFAA89091EA4DDC8004CA6D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98EE40BC87FCE653C249510 /* Pods-ChangeMediaSample-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = "ChangeMediaSample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.ChangeMediaSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -386,6 +570,16 @@
 				2005AE5C1E800B3D00FB01B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFAA890A1EA4DDC8004CA6D2 /* Build configuration list for PBXNativeTarget "ChangeMediaSample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFAA89081EA4DDC8004CA6D2 /* Debug */,
+				BFAA89091EA4DDC8004CA6D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

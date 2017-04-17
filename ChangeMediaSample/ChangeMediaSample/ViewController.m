@@ -124,7 +124,7 @@
 - (IBAction)changeMediaTouched:(UIButton *)sender {
     // create mediaEntry for change media, you can use differrent params here.
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"];
-    NSString *entryId = @"Kaltura Media";
+    NSString *entryId = @"KalturaMedia";
     MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
     // Resets The Player And Prepares for Change Media
     [self.player stop]; // 1. Stop Player
@@ -145,27 +145,12 @@
 // Change Media by Remove & Recreation
 - (void)changeMediaByRecreation {
     // to change the media we remove player view from container, destroy the player and create a new instance.
-<<<<<<< HEAD
         [self.player.view removeFromSuperview];
         [self.player destroy];
         self.player = nil;
-    // create mediaEntry to setup player for change media, you can use differrent params here.
-    // for the sake of this example we will use same content url and id.
-    // in a real app you can select more properties to be changed not just the content url and id.
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"];
-    NSString *entryId = @"Kaltura Media";
-    MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
+
     // setup our player instance
-    [self setupPlayerWithMediaEntry:mediaEntry];
-=======
-    [self.player.view removeFromSuperview];
-    [self.player destroy];
-    self.player = nil;
-    // setup player with default media config, you can use differrent config here.
-    // for the sake of this example we will use a default media config.
-    // in a real app you can select more properties to be changed and create a different config.
     [self setupPlayerWithMediaConfig:[self getDefaultMediaConfig]];
->>>>>>> c10212b241a79d52dd5c837e59c519855e2b83ed
 }
 
 @end
