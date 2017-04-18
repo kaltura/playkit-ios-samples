@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  BasicSample
+//  EventsRegistration
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
+//  Created by Eliza Sapir on 17/04/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
