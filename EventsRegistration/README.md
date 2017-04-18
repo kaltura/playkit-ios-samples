@@ -1,10 +1,10 @@
-# Basic Setup Sample
+# Events Registration Sample
 
 ## Purpose
 
-This PlayKit sample show how to create and setup PlayKit SDK player.
+This PlayKit sample show how to register to the relevant events.
 
-For more info see [documentation](https://vpaas.kaltura.com/documentation/Mobile-Video-Player-SDKs/v3_iOS_QuickStart.html)
+For more info see [documentation](https://github.com/kaltura/DeveloperPortalDocs/blob/master/documentation/Mobile-Video-Player-SDKs/v3_iOS_EventsAndStates.md)
 
 ## How to use
 
