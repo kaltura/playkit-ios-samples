@@ -114,7 +114,7 @@ class ViewController: UIViewController {
         }
         
         player.addObserver(self, events: [OttEvent.report]) { event in
-            print("received kaltura live stats event(buffer time): \(String(describing: event.ottEventMessage))")
+            print("received stats event(buffer time): \(String(describing: event.ottEventMessage))")
         }
     }
     
