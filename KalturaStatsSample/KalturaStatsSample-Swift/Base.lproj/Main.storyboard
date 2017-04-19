@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="rj8-Rj-yvV">
             <objects>
-                <viewController id="yQf-LR-HVa" customClass="ViewController" customModule="KalturaLiveStatsSample_Swift" sceneMemberID="viewController">
+                <viewController id="yQf-LR-HVa" customClass="ViewController" customModule="KalturaStatsSample_Swift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hdM-Na-ftz"/>
                         <viewControllerLayoutGuide type="bottom" id="C1n-Dc-OdC"/>

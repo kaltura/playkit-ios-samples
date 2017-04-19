@@ -4,9 +4,24 @@ use_frameworks!
 
 platform :ios, '9.0' # (define required version)
 
-target ‘KalturaStatsSample’ do
-    pod 'PlayKit'
-    pod 'PlayKit/KalturaStatsPlugin'
+target 'KalturaStatsSample' do
+    if defined? PLAYKIT_LOCAL
+        pod "PlayKit" , :path => PLAYKIT_LOCAL
+    	pod 'PlayKit/KalturaLiveStatsPlugin', :path => PLAYKIT_LOCAL
+    else
+	pod 'PlayKit'
+    	pod 'PlayKit/KalturaStatsPlugin'
+    end
+end
+
+target 'KalturaStatsSample-Swift' do
+    if defined? PLAYKIT_LOCAL
+        pod "PlayKit" , :path => PLAYKIT_LOCAL
+    	pod 'PlayKit/KalturaLiveStatsPlugin', :path => PLAYKIT_LOCAL
+    else
+	pod 'PlayKit'
+    	pod 'PlayKit/KalturaStatsPlugin'
+    end
 end
 
 pre_install do |installer|

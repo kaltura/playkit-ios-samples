@@ -13,6 +13,13 @@
 		2005AF231E816EB700FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AF211E816EB700FB01B0 /* Main.storyboard */; };
 		2005AF251E816EB700FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AF241E816EB700FB01B0 /* Assets.xcassets */; };
 		2005AF281E816EB700FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AF261E816EB700FB01B0 /* LaunchScreen.storyboard */; };
+		359B7412C65BF0096928CA6B /* Pods_KalturaStatsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A95579DC1D6B0EB92C307F05 /* Pods_KalturaStatsSample.framework */; };
+		7C8C036E8A6DC1949EFE426B /* Pods_KalturaStatsSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D01B3C8D9AE39A299CF6D81 /* Pods_KalturaStatsSample_Swift.framework */; };
+		BFD209F21EA788970018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD209F11EA788970018FD8A /* AppDelegate.swift */; };
+		BFD209F41EA788970018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD209F31EA788970018FD8A /* ViewController.swift */; };
+		BFD209F71EA788970018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD209F51EA788970018FD8A /* Main.storyboard */; };
+		BFD209F91EA788970018FD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD209F81EA788970018FD8A /* Assets.xcassets */; };
+		BFD209FC1EA788970018FD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD209FA1EA788970018FD8A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,19 @@
 		2005AF241E816EB700FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AF271E816EB700FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AF291E816EB700FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6967D219DBA6E7E450DF7624 /* Pods-KalturaStatsSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaStatsSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaStatsSample-Swift/Pods-KalturaStatsSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		9D01B3C8D9AE39A299CF6D81 /* Pods_KalturaStatsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KalturaStatsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A95579DC1D6B0EB92C307F05 /* Pods_KalturaStatsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KalturaStatsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD209EF1EA788970018FD8A /* KalturaStatsSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KalturaStatsSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD209F11EA788970018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFD209F31EA788970018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFD209F61EA788970018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFD209F81EA788970018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFD209FB1EA788970018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFD209FD1EA788970018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF91FF9A85BB312AE25503D /* Pods-KalturaStatsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaStatsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaStatsSample/Pods-KalturaStatsSample.release.xcconfig"; sourceTree = "<group>"; };
+		C92188DFE027212CD4317B2D /* Pods-KalturaStatsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaStatsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaStatsSample-Swift/Pods-KalturaStatsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		E59459C3477ED7066130CE6D /* Pods-KalturaStatsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KalturaStatsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KalturaStatsSample/Pods-KalturaStatsSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +53,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				359B7412C65BF0096928CA6B /* Pods_KalturaStatsSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD209EC1EA788970018FD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C8C036E8A6DC1949EFE426B /* Pods_KalturaStatsSample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1822C73FF03958C8A09702D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E59459C3477ED7066130CE6D /* Pods-KalturaStatsSample.debug.xcconfig */,
+				BFF91FF9A85BB312AE25503D /* Pods-KalturaStatsSample.release.xcconfig */,
+				C92188DFE027212CD4317B2D /* Pods-KalturaStatsSample-Swift.debug.xcconfig */,
+				6967D219DBA6E7E450DF7624 /* Pods-KalturaStatsSample-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2005AF0C1E816EB700FB01B0 = {
 			isa = PBXGroup;
 			children = (
 				2005AF171E816EB700FB01B0 /* KalturaStatsSample */,
+				BFD209F01EA788970018FD8A /* KalturaStatsSample-Swift */,
 				2005AF161E816EB700FB01B0 /* Products */,
+				1822C73FF03958C8A09702D7 /* Pods */,
+				8367DC8E07929376C9307B56 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AF151E816EB700FB01B0 /* KalturaStatsSample.app */,
+				BFD209EF1EA788970018FD8A /* KalturaStatsSample-Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +123,28 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8367DC8E07929376C9307B56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A95579DC1D6B0EB92C307F05 /* Pods_KalturaStatsSample.framework */,
+				9D01B3C8D9AE39A299CF6D81 /* Pods_KalturaStatsSample_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFD209F01EA788970018FD8A /* KalturaStatsSample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BFD209F11EA788970018FD8A /* AppDelegate.swift */,
+				BFD209F31EA788970018FD8A /* ViewController.swift */,
+				BFD209F51EA788970018FD8A /* Main.storyboard */,
+				BFD209F81EA788970018FD8A /* Assets.xcassets */,
+				BFD209FA1EA788970018FD8A /* LaunchScreen.storyboard */,
+				BFD209FD1EA788970018FD8A /* Info.plist */,
+			);
+			path = "KalturaStatsSample-Swift";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AF2C1E816EB700FB01B0 /* Build configuration list for PBXNativeTarget "KalturaStatsSample" */;
 			buildPhases = (
+				7B0B0662C074F07A9783EA43 /* [CP] Check Pods Manifest.lock */,
 				2005AF111E816EB700FB01B0 /* Sources */,
 				2005AF121E816EB700FB01B0 /* Frameworks */,
 				2005AF131E816EB700FB01B0 /* Resources */,
+				23247BB026E0BC5F3B0AFC01 /* [CP] Embed Pods Frameworks */,
+				01185CCA3B2238F234EDE2EA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,17 +168,43 @@
 			productReference = 2005AF151E816EB700FB01B0 /* KalturaStatsSample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFD209EE1EA788970018FD8A /* KalturaStatsSample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFD20A001EA788970018FD8A /* Build configuration list for PBXNativeTarget "KalturaStatsSample-Swift" */;
+			buildPhases = (
+				DAEDD6E24A19C54C3B102053 /* [CP] Check Pods Manifest.lock */,
+				BFD209EB1EA788970018FD8A /* Sources */,
+				BFD209EC1EA788970018FD8A /* Frameworks */,
+				BFD209ED1EA788970018FD8A /* Resources */,
+				95CC0EADE3FED6567951A0FA /* [CP] Embed Pods Frameworks */,
+				0811174F11DF4B02ACF6C17D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KalturaStatsSample-Swift";
+			productName = "KalturaStatsSample-Swift";
+			productReference = BFD209EF1EA788970018FD8A /* KalturaStatsSample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2005AF0D1E816EB700FB01B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Kaltura;
 				TargetAttributes = {
 					2005AF141E816EB700FB01B0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BFD209EE1EA788970018FD8A = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -128,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				2005AF141E816EB700FB01B0 /* KalturaStatsSample */,
+				BFD209EE1EA788970018FD8A /* KalturaStatsSample-Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -143,7 +239,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFD209ED1EA788970018FD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD209FC1EA788970018FD8A /* LaunchScreen.storyboard in Resources */,
+				BFD209F91EA788970018FD8A /* Assets.xcassets in Resources */,
+				BFD209F71EA788970018FD8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01185CCA3B2238F234EDE2EA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaStatsSample/Pods-KalturaStatsSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0811174F11DF4B02ACF6C17D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaStatsSample-Swift/Pods-KalturaStatsSample-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23247BB026E0BC5F3B0AFC01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaStatsSample/Pods-KalturaStatsSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B0B0662C074F07A9783EA43 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95CC0EADE3FED6567951A0FA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KalturaStatsSample-Swift/Pods-KalturaStatsSample-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAEDD6E24A19C54C3B102053 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2005AF111E816EB700FB01B0 /* Sources */ = {
@@ -153,6 +352,15 @@
 				2005AF201E816EB700FB01B0 /* ViewController.m in Sources */,
 				2005AF1D1E816EB700FB01B0 /* AppDelegate.m in Sources */,
 				2005AF1A1E816EB700FB01B0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD209EB1EA788970018FD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD209F41EA788970018FD8A /* ViewController.swift in Sources */,
+				BFD209F21EA788970018FD8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +379,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				2005AF271E816EB700FB01B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFD209F51EA788970018FD8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD209F61EA788970018FD8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFD209FA1EA788970018FD8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD209FB1EA788970018FD8A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -270,6 +494,7 @@
 		};
 		2005AF2D1E816EB700FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E59459C3477ED7066130CE6D /* Pods-KalturaStatsSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KalturaStatsSample/Info.plist;
@@ -281,12 +506,48 @@
 		};
 		2005AF2E1E816EB700FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFF91FF9A85BB312AE25503D /* Pods-KalturaStatsSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = KalturaStatsSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.KalturaStatsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BFD209FE1EA788970018FD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92188DFE027212CD4317B2D /* Pods-KalturaStatsSample-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = "KalturaStatsSample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.KalturaStatsSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFD209FF1EA788970018FD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6967D219DBA6E7E450DF7624 /* Pods-KalturaStatsSample-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = "KalturaStatsSample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.KalturaStatsSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -307,6 +568,15 @@
 			buildConfigurations = (
 				2005AF2D1E816EB700FB01B0 /* Debug */,
 				2005AF2E1E816EB700FB01B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFD20A001EA788970018FD8A /* Build configuration list for PBXNativeTarget "KalturaStatsSample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD209FE1EA788970018FD8A /* Debug */,
+				BFD209FF1EA788970018FD8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

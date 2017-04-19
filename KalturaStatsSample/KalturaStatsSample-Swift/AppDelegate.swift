@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  KalturaLiveStatsSample-Swift
+//  KalturaStatsSample-Swift
 //
 //  Created by Eliza Sapir on 19/04/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
 import UIKit
+import PlayKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        PlayKitManager.shared.registerPlugin(KalturaLiveStatsPlugin.self)
+        PlayKitManager.shared.registerPlugin(KalturaStatsPlugin.self)
         return true
     }
 

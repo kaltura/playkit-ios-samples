@@ -102,7 +102,7 @@ class ViewController: UIViewController {
 // MARK: - Analytics
 /***********************/
     func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [KalturaLiveStatsPlugin.pluginName: self.createKalturaLiveStatsPluginConfig()]
+        let pluginConfigDict = [KalturaStatsPlugin.pluginName: self.createKalturaStatsPluginConfig()]
         
         return PluginConfig(config: pluginConfigDict)
     }
@@ -113,8 +113,8 @@ class ViewController: UIViewController {
             return
         }
         
-        player.addObserver(self, events: [KalturaLiveStatsEvent.report]) { event in
-            print("received kaltura live stats event(buffer time): \(String(describing: event.kalturaLiveStatsBufferTime))")
+        player.addObserver(self, events: [KalturaStatsEvent.report]) { event in
+            print("received kaltura live stats event(buffer time): \(String(describing: event.kalturaStatsMessage))")
         }
     }
     
@@ -124,10 +124,10 @@ class ViewController: UIViewController {
             return
         }
         
-        player.removeObserver(self, events: [KalturaLiveStatsEvent.report])
+        player.removeObserver(self, events: [KalturaStatsEvent.report])
     }
     
-    func createKalturaLiveStatsPluginConfig() -> AnalyticsConfig {
+    func createKalturaStatsPluginConfig() -> AnalyticsConfig {
         let kalturaLiveStatsPluginParams: [String : Any] = ["sessionId": "",
                                                             "uiconfId": 0,
                                                             "baseUrl": "",
