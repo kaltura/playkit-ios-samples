@@ -9,12 +9,19 @@
 import UIKit
 import PlayKit
 
+/*********************************/
+// Plugin registration should be done in App Delegate!!!
+// Don't forget to add it in your project.
+// Look at `AppDelegate` to see the registration.
+/*********************************/
+
 /*
- This sample will show you how to create a player with basic functionality.
+ This sample will show you how to create a player with kaltura live stats plugin.
  The steps required:
- 1. Load player with plugin config (only if has plugins).
- 2. Register player events.
- 3. Prepare Player.
+ 1. Create plugin config.
+ 2. Load player with plugin config.
+ 3. Register player events.
+ 4. Prepare Player.
  */
 
 class ViewController: UIViewController {
@@ -27,14 +34,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.playheadSlider.isContinuous = false;
         
-        // 1. Load the player
+        // 1. Create plugin config
+        let pluginConfig: PluginConfig = self.createPluginConfig()
+        
+        // 2. Load the player
         do {
             self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-            // 2. Register events if have ones.
+            // 3. Register events if have ones.
             // Event registeration must be after loading the player successfully to make sure events are added,
             // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+            self.addKalturaLiveStatsObservations()
             
-            // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
             self.preparePlayer()
         } catch let e {
             // error loading the player
@@ -51,6 +62,12 @@ class ViewController: UIViewController {
         }
         
         player.view.frame = self.playerContainer.bounds
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // remove observers
+        self.removeAnalyticsObservations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,6 +96,45 @@ class ViewController: UIViewController {
         // setup the player's view
         self.playerContainer.addSubview(self.player!.view)
         self.player!.view.frame = self.playerContainer.bounds
+    }
+    
+/************************/
+// MARK: - Analytics
+/***********************/
+    func createPluginConfig() -> PluginConfig {
+        let pluginConfigDict = [KalturaLiveStatsPlugin.pluginName: self.createKalturaLiveStatsPluginConfig()]
+        
+        return PluginConfig(config: pluginConfigDict)
+    }
+    
+    func addKalturaLiveStatsObservations() {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        player.addObserver(self, events: [KalturaLiveStatsEvent.report]) { event in
+            print("received kaltura live stats event(buffer time): \(String(describing: event.kalturaLiveStatsBufferTime))")
+        }
+    }
+    
+    func removeAnalyticsObservations() {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        player.removeObserver(self, events: [KalturaLiveStatsEvent.report])
+    }
+    
+    func createKalturaLiveStatsPluginConfig() -> AnalyticsConfig {
+        let kalturaLiveStatsPluginParams: [String : Any] = ["sessionId": "",
+                                                            "uiconfId": 0,
+                                                            "baseUrl": "",
+                                                            "partnerId": 0,
+                                                            "timerInterval": 30]
+        
+        return AnalyticsConfig(params: kalturaLiveStatsPluginParams)
     }
     
 /************************/

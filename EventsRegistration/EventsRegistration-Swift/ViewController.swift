@@ -43,6 +43,17 @@ class ViewController: UIViewController {
             print("error:", e.localizedDescription)
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        player.view.frame = self.playerContainer.bounds
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
