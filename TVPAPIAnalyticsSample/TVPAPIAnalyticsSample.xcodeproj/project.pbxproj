@@ -13,6 +13,13 @@
 		2005AEDD1E81608B00FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEDB1E81608B00FB01B0 /* Main.storyboard */; };
 		2005AEDF1E81608B00FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEDE1E81608B00FB01B0 /* Assets.xcassets */; };
 		2005AEE21E81608B00FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEE01E81608B00FB01B0 /* LaunchScreen.storyboard */; };
+		6AFFAE28797AAB5A050AAD34 /* Pods_TVPAPIAnalyticsSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E416069944FC3E274A0AA62B /* Pods_TVPAPIAnalyticsSample_Swift.framework */; };
+		BFD20A341EA7A1960018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A331EA7A1960018FD8A /* AppDelegate.swift */; };
+		BFD20A361EA7A1960018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A351EA7A1960018FD8A /* ViewController.swift */; };
+		BFD20A391EA7A1960018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A371EA7A1960018FD8A /* Main.storyboard */; };
+		BFD20A3B1EA7A1960018FD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A3A1EA7A1960018FD8A /* Assets.xcassets */; };
+		BFD20A3E1EA7A1960018FD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A3C1EA7A1960018FD8A /* LaunchScreen.storyboard */; };
+		C42BD3DC90A13650FEB427FF /* Pods_TVPAPIAnalyticsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8023C8F16C1501D4C77377A /* Pods_TVPAPIAnalyticsSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +33,19 @@
 		2005AEDE1E81608B00FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AEE11E81608B00FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AEE31E81608B00FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47033829FE31E2AD56555A38 /* Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		AE1D1C681DB891FB6FAA6D18 /* Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		BD43680CF4EDD628E2B42CF5 /* Pods-TVPAPIAnalyticsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample.debug.xcconfig"; sourceTree = "<group>"; };
+		BFD20A311EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPAPIAnalyticsSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD20A331EA7A1960018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BFD20A351EA7A1960018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BFD20A381EA7A1960018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFD20A3A1EA7A1960018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFD20A3D1EA7A1960018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFD20A3F1EA7A1960018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA0473B2974EBB5C86619246 /* Pods-TVPAPIAnalyticsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample.release.xcconfig"; sourceTree = "<group>"; };
+		D8023C8F16C1501D4C77377A /* Pods_TVPAPIAnalyticsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVPAPIAnalyticsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E416069944FC3E274A0AA62B /* Pods_TVPAPIAnalyticsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVPAPIAnalyticsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +53,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42BD3DC90A13650FEB427FF /* Pods_TVPAPIAnalyticsSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD20A2E1EA7A1960018FD8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AFFAE28797AAB5A050AAD34 /* Pods_TVPAPIAnalyticsSample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		080A1B036D7ABAE0854ACE2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8023C8F16C1501D4C77377A /* Pods_TVPAPIAnalyticsSample.framework */,
+				E416069944FC3E274A0AA62B /* Pods_TVPAPIAnalyticsSample_Swift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2005AEC61E81608B00FB01B0 = {
 			isa = PBXGroup;
 			children = (
 				2005AED11E81608B00FB01B0 /* TVPAPIAnalyticsSample */,
+				BFD20A321EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift */,
 				2005AED01E81608B00FB01B0 /* Products */,
+				3C68F5F07662F4839DE23848 /* Pods */,
+				080A1B036D7ABAE0854ACE2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				2005AECF1E81608B00FB01B0 /* TVPAPIAnalyticsSample.app */,
+				BFD20A311EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,6 +121,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		3C68F5F07662F4839DE23848 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD43680CF4EDD628E2B42CF5 /* Pods-TVPAPIAnalyticsSample.debug.xcconfig */,
+				CA0473B2974EBB5C86619246 /* Pods-TVPAPIAnalyticsSample.release.xcconfig */,
+				AE1D1C681DB891FB6FAA6D18 /* Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */,
+				47033829FE31E2AD56555A38 /* Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BFD20A321EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				BFD20A331EA7A1960018FD8A /* AppDelegate.swift */,
+				BFD20A351EA7A1960018FD8A /* ViewController.swift */,
+				BFD20A371EA7A1960018FD8A /* Main.storyboard */,
+				BFD20A3A1EA7A1960018FD8A /* Assets.xcassets */,
+				BFD20A3C1EA7A1960018FD8A /* LaunchScreen.storyboard */,
+				BFD20A3F1EA7A1960018FD8A /* Info.plist */,
+			);
+			path = "TVPAPIAnalyticsSample-Swift";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AEE61E81608B00FB01B0 /* Build configuration list for PBXNativeTarget "TVPAPIAnalyticsSample" */;
 			buildPhases = (
+				6D1FC1F1B6C59A27AABE2635 /* [CP] Check Pods Manifest.lock */,
 				2005AECB1E81608B00FB01B0 /* Sources */,
 				2005AECC1E81608B00FB01B0 /* Frameworks */,
 				2005AECD1E81608B00FB01B0 /* Resources */,
+				87BFF3DC28FD177B0299461A /* [CP] Embed Pods Frameworks */,
+				1419F08A847EFCE1DA2157C2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,17 +168,43 @@
 			productReference = 2005AECF1E81608B00FB01B0 /* TVPAPIAnalyticsSample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		BFD20A301EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFD20A421EA7A1960018FD8A /* Build configuration list for PBXNativeTarget "TVPAPIAnalyticsSample-Swift" */;
+			buildPhases = (
+				3C102308083C151ACFE47B50 /* [CP] Check Pods Manifest.lock */,
+				BFD20A2D1EA7A1960018FD8A /* Sources */,
+				BFD20A2E1EA7A1960018FD8A /* Frameworks */,
+				BFD20A2F1EA7A1960018FD8A /* Resources */,
+				3830B1A20919F347977EE882 /* [CP] Embed Pods Frameworks */,
+				3515A35828254DCB5C22B327 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TVPAPIAnalyticsSample-Swift";
+			productName = "TVPAPIAnalyticsSample-Swift";
+			productReference = BFD20A311EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		2005AEC71E81608B00FB01B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Kaltura;
 				TargetAttributes = {
 					2005AECE1E81608B00FB01B0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					BFD20A301EA7A1960018FD8A = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -128,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				2005AECE1E81608B00FB01B0 /* TVPAPIAnalyticsSample */,
+				BFD20A301EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift */,
 			);
 		};
 /* End PBXProject section */
@@ -143,7 +239,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFD20A2F1EA7A1960018FD8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD20A3E1EA7A1960018FD8A /* LaunchScreen.storyboard in Resources */,
+				BFD20A3B1EA7A1960018FD8A /* Assets.xcassets in Resources */,
+				BFD20A391EA7A1960018FD8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1419F08A847EFCE1DA2157C2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3515A35828254DCB5C22B327 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3830B1A20919F347977EE882 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C102308083C151ACFE47B50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1FC1F1B6C59A27AABE2635 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		87BFF3DC28FD177B0299461A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2005AECB1E81608B00FB01B0 /* Sources */ = {
@@ -153,6 +352,15 @@
 				2005AEDA1E81608B00FB01B0 /* ViewController.m in Sources */,
 				2005AED71E81608B00FB01B0 /* AppDelegate.m in Sources */,
 				2005AED41E81608B00FB01B0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD20A2D1EA7A1960018FD8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD20A361EA7A1960018FD8A /* ViewController.swift in Sources */,
+				BFD20A341EA7A1960018FD8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +379,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				2005AEE11E81608B00FB01B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BFD20A371EA7A1960018FD8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD20A381EA7A1960018FD8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFD20A3C1EA7A1960018FD8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD20A3D1EA7A1960018FD8A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -270,6 +494,7 @@
 		};
 		2005AEE71E81608B00FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD43680CF4EDD628E2B42CF5 /* Pods-TVPAPIAnalyticsSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TVPAPIAnalyticsSample/Info.plist;
@@ -281,12 +506,48 @@
 		};
 		2005AEE81E81608B00FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0473B2974EBB5C86619246 /* Pods-TVPAPIAnalyticsSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TVPAPIAnalyticsSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.TVPAPIAnalyticsSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BFD20A401EA7A1960018FD8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE1D1C681DB891FB6FAA6D18 /* Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = "TVPAPIAnalyticsSample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.TVPAPIAnalyticsSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BFD20A411EA7A1960018FD8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47033829FE31E2AD56555A38 /* Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = "TVPAPIAnalyticsSample-Swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.TVPAPIAnalyticsSample-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -307,6 +568,15 @@
 			buildConfigurations = (
 				2005AEE71E81608B00FB01B0 /* Debug */,
 				2005AEE81E81608B00FB01B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFD20A421EA7A1960018FD8A /* Build configuration list for PBXNativeTarget "TVPAPIAnalyticsSample-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD20A401EA7A1960018FD8A /* Debug */,
+				BFD20A411EA7A1960018FD8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
