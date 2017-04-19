@@ -102,7 +102,7 @@ class ViewController: UIViewController {
 // MARK: - Analytics
 /***********************/
     func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [KalturaStatsPlugin.pluginName: self.createKalturaStatsPluginConfig()]
+        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createKalturaStatsPluginConfig()]
         
         return PluginConfig(config: pluginConfigDict)
     }
@@ -113,8 +113,8 @@ class ViewController: UIViewController {
             return
         }
         
-        player.addObserver(self, events: [KalturaStatsEvent.report]) { event in
-            print("received kaltura live stats event(buffer time): \(String(describing: event.kalturaStatsMessage))")
+        player.addObserver(self, events: [OttEvent.report]) { event in
+            print("received kaltura live stats event(buffer time): \(String(describing: event.ottEventMessage))")
         }
     }
     
@@ -124,17 +124,17 @@ class ViewController: UIViewController {
             return
         }
         
-        player.removeObserver(self, events: [KalturaStatsEvent.report])
+        player.removeObserver(self, events: [OttEvent.report])
     }
     
     func createKalturaStatsPluginConfig() -> AnalyticsConfig {
-        let kalturaStatsPluginParams: [String : Any] = ["sessionId": "",
+        let phoenixPluginParams: [String : Any] = ["sessionId": "",
                                                             "uiconfId": 0,
                                                             "baseUrl": "",
                                                             "partnerId": 0,
                                                             "timerInterval": 30]
         
-        return AnalyticsConfig(params: kalturaStatsPluginParams)
+        return AnalyticsConfig(params: phoenixPluginParams)
     }
     
 /************************/
