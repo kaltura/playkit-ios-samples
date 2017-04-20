@@ -2,6 +2,10 @@
 
 This project hosts samples for the [PlayKit -  Kaltura iOS SDK v3](https://github.com/kaltura/playkit-ios.git)
 
+**Every sample contains 2 targets:**
+1. Objc Sample
+2. Swift Sample
+
 ## Requirements
 
 * XCode7 or newer
