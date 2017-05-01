@@ -10,8 +10,6 @@ import UIKit
 import PlayKit
 
 
-
-
 class ViewController: UIViewController {
     
     var player: Player!
@@ -72,17 +70,11 @@ class ViewController: UIViewController {
         
         let assetName = "entry_\(index)"
         downloadManager.downloadStream(for: Asset(name: assetName, urlAsset: avAsset))
-        
-        
-        
-        // For finer control on download source selection, 
-        
     }
     
     func playLocal(_ index: Int) {
         
         // Get Local asset and play it
-//        let id = sampleEntries[index].id
         
         let assetName = "entry_\(index)"
         guard let localAsset = downloadManager.localAssetForStream(withName: assetName) else { return }

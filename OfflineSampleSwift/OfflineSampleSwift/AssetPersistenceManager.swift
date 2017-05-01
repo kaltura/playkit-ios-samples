@@ -1,9 +1,13 @@
 /*
- Copyright (C) 2017 Apple Inc. All Rights Reserved.
- See LICENSE.txt for this sample’s licensing information
+ `AssetPersistenceManager` is the main class in this sample that demonstrates how to manage downloading HLS streams.  
+ It includes APIs for starting and canceling downloads, deleting existing assets off the users device, and monitoring 
+ the download progress.
+ This class can be copied to the application's code, and modified to fit particular needs. It was derived from Apple's
+ "HLSCatalog" sample app, with minimal changes and fixes.
  
- Abstract:
- `AssetPersistenceManager` is the main class in this sample that demonstrates how to manage downloading HLS streams.  It includes APIs for starting and canceling downloads, deleting existing assets off the users device, and monitoring the download progress.
+ When downloading a new asset, this implementation first downloads the main video in low resolution (265000bps), then 
+ downloads all additional media selections (subtitles, audio). This logic SHOULD be customized to fit app needs.
+ 
  */
 
 import Foundation
@@ -78,7 +82,6 @@ class AssetPersistenceManager: NSObject {
          */
         guard let task = assetDownloadURLSession.makeAssetDownloadTask(asset: asset.urlAsset, assetTitle: asset.name, assetArtworkData: nil, options: [AVAssetDownloadTaskMinimumRequiredMediaBitrateKey: 265000]) else {
             fatalError("Failed to create download task")
-//            return 
         }
         
         // To better track the AVAssetDownloadTask we set the taskDescription to something unique for our sample.
@@ -236,6 +239,9 @@ class AssetPersistenceManager: NSObject {
      */
     fileprivate func nextMediaSelection(_ asset: AVURLAsset) -> MediaSelectionPair? {
         
+        // PlayKit note: originally, this function iterates over all media selections every time it's called,
+        // Looking for new things to download. This logic is slightly modified: we first build a list of all
+        // additional selections, and then download all of them.
         buildSelectionOptions(for: asset)
         
         if var options = mediaSelectionOptions[asset] {
