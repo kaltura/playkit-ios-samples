@@ -18,6 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [[PlayKitManager sharedInstance] registerPlugin:IMAPlugin.self];
+    [[PlayKitManager sharedInstance] registerPlugin:YouboraPlugin.self];
     return YES;
 }
 

@@ -25,15 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     // setup the view
-    [self.playerContainer addSubview:self.player.view];
-    self.player.view.frame = self.playerContainer.bounds;
-}
- 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
+    [self.player.view addToContainer:self.playerContainer];
+    self.playheadSlider.continuous = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

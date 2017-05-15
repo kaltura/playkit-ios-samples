@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property(nonatomic, strong) Video *video;
+
 @end
 

@@ -128,7 +128,7 @@
             MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
             
             MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
-            AdsConfig *adsConfig = [AdsConfig new];
+            IMAConfig *adsConfig = [IMAConfig new];
             adsConfig.adTagUrl = video.tag;
             [self.player updatePluginConfigWithPluginName:@"IMAPlugin" config:adsConfig];
             [self.player prepare:mediaConfig];
@@ -152,6 +152,9 @@
             // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
             [self preparePlayer];
             destVC.player = self.player;
+            [self.player addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
+                event.error;
+            }];
         } else {
             NSLog(@"%@", error.description);
             // error loading the player
@@ -167,11 +170,18 @@
     NSMutableDictionary *pluginConfigDict = [NSMutableDictionary new];
     
     
-    AdsConfig *adsConfig = [AdsConfig new];
-    adsConfig.adTagUrl = video.tag;
+    IMAConfig *imaConfig = [IMAConfig new];
+    imaConfig.adTagUrl = video.tag;
     
+    pluginConfigDict[IMAPlugin.pluginName] = imaConfig;
     
-    pluginConfigDict[IMAPlugin.pluginName] = adsConfig;
+    NSDictionary *youboraPluginParams = @{
+                                          @"accountCode": @"kalturatest",
+                                          [YouboraPlugin enableSmartAdsKey]: @true // enables youbora smart ads
+                                          };
+    AnalyticsConfig *youboraConfig = [[AnalyticsConfig alloc] initWithParams:youboraPluginParams];
+    pluginConfigDict[YouboraPlugin.pluginName] = youboraConfig;
+    
     return [[PluginConfig alloc] initWithConfig:pluginConfigDict];
 }
 
