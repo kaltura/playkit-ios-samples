@@ -117,7 +117,7 @@
 
 // remove observers
 - (void)removeAnalyticsObservations {
-    [self.player removeObserver:self events:@[OttEvent.report]];
+    [self.player removeObserver:self events:@[KalturaStatsEvent.report]];
 }
 
 - (AnalyticsConfig *)createKalturaStatsPluginConfig {

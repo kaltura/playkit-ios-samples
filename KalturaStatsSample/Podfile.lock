@@ -1,0 +1,29 @@
+PODS:
+  - Log (1.0)
+  - PlayKit (0.1.29):
+    - PlayKit/Core (= 0.1.29)
+  - PlayKit/AnalyticsCommon (0.1.29):
+    - PlayKit/Core
+  - PlayKit/Core (0.1.29):
+    - Log
+    - SwiftyJSON
+    - SwiftyXMLParser
+  - PlayKit/KalturaStatsPlugin (0.1.29):
+    - PlayKit/AnalyticsCommon
+    - PlayKit/Core
+  - SwiftyJSON (3.1.4)
+  - SwiftyXMLParser (3.0.0)
+
+DEPENDENCIES:
+  - PlayKit
+  - PlayKit/KalturaStatsPlugin
+
+SPEC CHECKSUMS:
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  PlayKit: 78e25282ca2270cc8b6db718974a1d8e55aadeec
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
+
+PODFILE CHECKSUM: ff161276b4f1140c5efcbc3df2ed0eee1c07b642
+
+COCOAPODS: 1.2.0

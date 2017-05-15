@@ -1,14 +1,14 @@
 PODS:
   - Log (1.0)
-  - PlayKit (0.1.26):
-    - PlayKit/Core (= 0.1.26)
-  - PlayKit/AnalyticsCommon (0.1.26):
+  - PlayKit (0.1.29):
+    - PlayKit/Core (= 0.1.29)
+  - PlayKit/AnalyticsCommon (0.1.29):
     - PlayKit/Core
-  - PlayKit/Core (0.1.26):
+  - PlayKit/Core (0.1.29):
     - Log
     - SwiftyJSON
     - SwiftyXMLParser
-  - PlayKit/YouboraPlugin (0.1.26):
+  - PlayKit/YouboraPlugin (0.1.29):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic
@@ -24,12 +24,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 611561aeed3e3d62c7e370cb8993bb148de277fa
+  PlayKit: 78e25282ca2270cc8b6db718974a1d8e55aadeec
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
   Youbora-AVPlayer: 02aea2a12a4f7e6a61d8a1747e5dfc177bf2354b
   Youbora-YouboraLib: 523adf7cd09c4a213e3485e6ec7c48d498986246
 
-PODFILE CHECKSUM: 6f5671e872978eb66cc1f3378ad38e024ec6ac35
+PODFILE CHECKSUM: 1a9066789e0f85415d7b815875df4fcb132f7714
 
 COCOAPODS: 1.2.0

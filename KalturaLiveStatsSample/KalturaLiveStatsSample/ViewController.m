@@ -104,8 +104,8 @@
 
 // creates plugin config by adding params under the plugin name.
 - (PluginConfig *)createPluginConfig {
-    NSMutableDictionary *pluginConfigDict = [[NSMutableDictionary alloc] init];
-    pluginConfigDict[KalturaLiveStatsPlugin.pluginName] = [self createKalturaLiveStatsPluginConfig];
+    NSDictionary *pluginConfigDict = @{KalturaLiveStatsPlugin.pluginName: [self createKalturaLiveStatsPluginConfig]};
+
     return [[PluginConfig alloc] initWithConfig:pluginConfigDict];
 }
 
@@ -117,7 +117,7 @@
 
 // remove observers
 - (void)removeAnalyticsObservations {
-    [self.player removeObserver:self events:@[OttEvent.report]];
+    [self.player removeObserver:self events:@[KalturaLiveStatsEvent.report]];
 }
 
 - (AnalyticsConfig *)createKalturaLiveStatsPluginConfig {
