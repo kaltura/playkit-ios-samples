@@ -62,12 +62,12 @@ class ViewController: UIViewController {
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
-        let contentUrl = "file://\(Bundle(for: type(of: self)).path(forResource: "big_buck_bunny_short", ofType: "mp4")!)"
+        let contentUrl = Bundle(for: type(of: self)).path(forResource: "big_buck_bunny_short", ofType: "mp4")!
   
         // create media source and initialize a media entry with that source
         let entryId = "sintel"
         
-        let source = MediaSource(entryId, contentUrl: URL(string: contentUrl), drmData: nil, mediaFormat: .mp4)
+        let source = MediaSource(entryId, contentUrl: URL(fileURLWithPath: contentUrl), drmData: nil, mediaFormat: .mp4)
         
         // setup media entry
         let mediaEntry = MediaEntry(entryId, sources: [source], duration: -1)
