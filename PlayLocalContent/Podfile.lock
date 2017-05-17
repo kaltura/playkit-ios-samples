@@ -1,0 +1,29 @@
+PODS:
+  - KalturaNetKit (0.0.14):
+    - KalturaNetKit/Core (= 0.0.14)
+  - KalturaNetKit/Core (0.0.14):
+    - SwiftyJSON
+  - Log (1.0)
+  - PlayKit (0.2.0):
+    - PlayKit/Core (= 0.2.0)
+  - PlayKit/Core (0.2.0):
+    - KalturaNetKit (~> 0.0)
+    - Log (= 1.0)
+    - SwiftyJSON (= 3.1.4)
+    - SwiftyXMLParser (= 3.0.0)
+  - SwiftyJSON (3.1.4)
+  - SwiftyXMLParser (3.0.0)
+
+DEPENDENCIES:
+  - PlayKit
+
+SPEC CHECKSUMS:
+  KalturaNetKit: bd3825d14e604c9f06bb41607eb6ce8929f27556
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  PlayKit: 8b528cb314a37899a64e7f53d9809671d07c8c84
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
+
+PODFILE CHECKSUM: 371cd54afe4a4e1ce9da4401a5ff5ab5d4adb9f6
+
+COCOAPODS: 1.2.0
