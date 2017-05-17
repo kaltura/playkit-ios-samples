@@ -83,14 +83,6 @@ class ViewController: UIViewController {
         self.player!.view.frame = self.playerContainer.bounds
     }
     
-    lazy var assetsManager: LocalAssetsManager = {
-        return LocalAssetsManager.manager()
-    }()
-    
-    func mediaEntry(_ mediaId: String, localUrl: String) -> MediaEntry {
-        return assetsManager.createLocalMediaEntry(for: mediaId, localURL: URL(string: localUrl)!)
-    }
-    
 /************************/
 // MARK: - Actions
 /***********************/
