@@ -1,0 +1,41 @@
+PODS:
+  - google-cast-sdk (3.5.0):
+    - google-cast-sdk/Core (= 3.5.0)
+  - google-cast-sdk/Core (3.5.0)
+  - KalturaNetKit (0.0.14):
+    - KalturaNetKit/Core (= 0.0.14)
+  - KalturaNetKit/Core (0.0.14):
+    - SwiftyJSON
+  - Log (1.0)
+  - PlayKit (0.2.1):
+    - PlayKit/Core (= 0.2.1)
+  - PlayKit/Core (0.2.1):
+    - KalturaNetKit (~> 0.0)
+    - Log (= 1.0)
+    - SwiftyJSON (= 3.1.4)
+    - SwiftyXMLParser (= 3.0.0)
+  - PlayKit/GoogleCastAddon (0.2.1):
+    - google-cast-sdk (= 3.5)
+    - PlayKit/Core
+  - SwiftyJSON (3.1.4)
+  - SwiftyXMLParser (3.0.0)
+
+DEPENDENCIES:
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit/GoogleCastAddon (from `../../playkit-ios`)
+
+EXTERNAL SOURCES:
+  PlayKit:
+    :path: ../../playkit-ios
+
+SPEC CHECKSUMS:
+  google-cast-sdk: fc3728ead66150ac746e001ba03a44e4b10e359e
+  KalturaNetKit: bd3825d14e604c9f06bb41607eb6ce8929f27556
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  PlayKit: 3a58ddda08c72393b0a8b72e2e9ce0202ab3c473
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
+
+PODFILE CHECKSUM: 6af7729cdbc18a01fa5d5608868c51d9139ebf73
+
+COCOAPODS: 1.2.0
