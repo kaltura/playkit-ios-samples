@@ -150,7 +150,6 @@ class ViewController: UIViewController {
             }
         }
         
-        self.player.prepare(mediaConfig)
         self.player.play()
     }
     
