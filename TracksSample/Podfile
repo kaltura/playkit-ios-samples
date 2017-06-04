@@ -4,8 +4,11 @@ use_frameworks!
 
 platform :ios, '9.0' # (define required version)
 
+PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
+
 target 'BasicSample' do
-    pod 'PlayKit'
+    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
 end
 
 pre_install do |installer|
