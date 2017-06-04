@@ -47,7 +47,20 @@ class VideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        guard let player = try? PlayKitManager.shared.loadPlayer(pluginConfig: nil) else {
+        
+        // config options
+        let youboraOptions: [String: Any] = [
+            "accountCode": "kalturatest" // mandatory
+            // YouboraPlugin.enableSmartAdsKey: true - use this if you want to enable smart ads
+        ]
+        // create analytics config with the created params
+        let youboraConfig = AnalyticsConfig(params: youboraOptions)
+        // create config dictionary
+        let config = [YouboraPlugin.pluginName: youboraConfig]
+        // create plugin config object
+        let pluginConfig = PluginConfig(config: config)
+        
+        guard let player = try? PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig) else {
             print("failed to create player!")
             return
         }
