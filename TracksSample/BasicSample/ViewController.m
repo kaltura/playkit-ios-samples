@@ -117,11 +117,11 @@
 
 // Get Current Bitrate
 - (void)currentBitrateHandler {   
-    [self.player addObserver:self events:@[PlayerEvent.playbackParamsUpdated] block:^(PKEvent * _Nonnull event) {
-        if ([event isKindOfClass:PlayerEvent.playbackParamsUpdated]) {
+    [self.player addObserver:self events:@[PlayerEvent.playbackInfo] block:^(PKEvent * _Nonnull event) {
+        if ([event isKindOfClass:PlayerEvent.playbackInfo]) {
             // Get Current Bitrate Value
-            if (event.currentBitrate) {
-                NSLog(@"%@", event.currentBitrate);
+            if (event.playbackInfo) {
+                NSLog(@"%@", event.playbackInfo);
             }
         }
     }];

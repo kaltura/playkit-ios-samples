@@ -63,15 +63,15 @@ class ViewController: UIViewController {
 /***********************/
     func preparePlayer() {
         let serverURL = "your server url"
-        let partnerId = 0 // put your partner id here
+        let partnerId: Int64 = 0 // put your partner id here
         // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
         let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:"your ks" )
-        var mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
+        let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
         mediaProvider.entryId = "your entry id"
         mediaProvider.loadMedia { (mediaEntry, error) in
-            if(!error) {
+            if let me = mediaEntry, error == nil {
                 // create media config
-                let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
+                let mediaConfig = MediaConfig(mediaEntry: me, startTime: 0.0)
                 
                 // prepare the player
                 self.player!.prepare(mediaConfig)

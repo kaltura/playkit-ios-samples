@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PlayKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
