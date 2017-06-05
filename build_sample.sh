@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#exit on failure and pipeline used to receive the exit code from xcpretty
+set -eo pipefail
+
 #ARGUMENTS
 BRANCH=$1
 FOLDER_NAME=$2
@@ -14,7 +17,7 @@ cd $FOLDER_NAME
 PK_BRANCH=$BRANCH pod update
 
 echo -e "\nbuild target for $FOLDER_NAME\n"
-xcodebuild -scheme $FOLDER_NAME -workspace $WORKSPACE_NAME.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 7' | tee xcodebuild.log | xcpretty
+xcodebuild -scheme $WORKSPACE_NAME -workspace $WORKSPACE_NAME.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 7' | tee xcodebuild.log | xcpretty
 
 if [ $SECOND_TARGET_NAME != "" ]; then
     echo -e "\nbuild swift target for $SECOND_TARGET_NAME\n"
