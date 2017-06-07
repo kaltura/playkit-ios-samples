@@ -4,7 +4,9 @@
 #import "Video.h"
 #import "VideoViewController.h"
 #import "VideoTableViewCell.h"
-#import "PlayKit-Swift.h"
+@import PlayKit;
+@import PlayKit_IMA;
+
 
 /*
  This sample will show you how to create a player with IMA plugin.

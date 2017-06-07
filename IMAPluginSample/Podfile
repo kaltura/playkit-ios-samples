@@ -3,7 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
+# PLAYKIT_LOCAL='../../playkit-ios'
 
 platform :ios, '9.0' # (define required version)
 
@@ -13,9 +13,8 @@ target 'BasicSample' do
  	      pod 'PlayKit/IMAPlugin', :path => PLAYKIT_LOCAL
  	      pod 'PlayKit/YouboraPlugin', :path => PLAYKIT_LOCAL
     else
-	      pod "PlayKit"
-	      pod 'PlayKit/IMAPlugin'
-	      pod 'PlayKit/YouboraPlugin'
+	      pod 'PlayKit_IMA', :git => 'https://github.com/kaltura/playkit-ios-ima.git', :branch => 'master' 	      
+          pod 'PlayKit/YouboraPlugin', :git => 'https://github.com/kaltura/playkit-ios.git', :branch => 'FEM-1437'
     end
 end
 

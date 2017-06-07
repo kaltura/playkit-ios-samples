@@ -5,8 +5,6 @@ PODS:
   - KalturaNetKit/Core (0.0.14):
     - SwiftyJSON
   - Log (1.0)
-  - PlayKit (0.2.x-dev):
-    - PlayKit/Core (= 0.2.x-dev)
   - PlayKit/AnalyticsCommon (0.2.x-dev):
     - PlayKit/Core
   - PlayKit/Core (0.2.x-dev):
@@ -14,13 +12,13 @@ PODS:
     - Log (= 1.0)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.0)
-  - PlayKit/IMAPlugin (0.2.x-dev):
-    - GoogleAds-IMA-iOS-SDK (= 3.5.2)
-    - PlayKit/Core
   - PlayKit/YouboraPlugin (0.2.x-dev):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.3.5)
+  - PlayKit_IMA (0.0.1):
+    - GoogleAds-IMA-iOS-SDK (= 3.5.2)
+    - PlayKit/Core
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.0)
   - Youbora-AVPlayer/dynamic (5.3.5):
@@ -28,24 +26,36 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.3.8)
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKit/IMAPlugin (from `../../playkit-ios`)
-  - PlayKit/YouboraPlugin (from `../../playkit-ios`)
+  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1437`)
+  - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `master`)
 
 EXTERNAL SOURCES:
   PlayKit:
-    :path: ../../playkit-ios
+    :branch: FEM-1437
+    :git: https://github.com/kaltura/playkit-ios.git
+  PlayKit_IMA:
+    :branch: master
+    :git: https://github.com/kaltura/playkit-ios-ima.git
+
+CHECKOUT OPTIONS:
+  PlayKit:
+    :commit: ecc5e8a967ac26531d002563997717e3f3fb024b
+    :git: https://github.com/kaltura/playkit-ios.git
+  PlayKit_IMA:
+    :commit: b9bc3cb9f5b26c41f6c04bde0bf8155d297086af
+    :git: https://github.com/kaltura/playkit-ios-ima.git
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: a0692ecc51d7c8816d5245edfb8a69c553cd84d4
   KalturaNetKit: bd3825d14e604c9f06bb41607eb6ce8929f27556
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: b240f4206102e3f28d7bb7331de28770191f9b82
+  PlayKit: f961321903e4223de688b31529f5932f72ee4723
+  PlayKit_IMA: b7a781ee79d9d2c02b72c26df0ec05534344de02
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
   Youbora-AVPlayer: 02aea2a12a4f7e6a61d8a1747e5dfc177bf2354b
   Youbora-YouboraLib: 523adf7cd09c4a213e3485e6ec7c48d498986246
 
-PODFILE CHECKSUM: 6b1ceaf2ed174a002a973fd43e81d15684558c32
+PODFILE CHECKSUM: 3898e5e271c418028b6c30e864042b3f84ef42b6
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1
