@@ -2,7 +2,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_TAG='widevine/v0.1.23'
+#PLAYKIT_TAG='v0.2.2'
 
 # Uncomment to use a local copy of PlayKit
 PLAYKIT_LOCAL='../../playkit-ios'

@@ -4,20 +4,24 @@ use_frameworks!
 
 # Uncomment to use a local copy of PlayKit
 # PLAYKIT_LOCAL='../../playkit-ios'
+# PLAYKIT_LOCAL='../../playkit-ios'
+# PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 
 platform :ios, '9.0' # (define required version)
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
 
 target 'BasicSample' do
     if defined? PLAYKIT_LOCAL
-        pod "PlayKit", :path => PLAYKIT_LOCAL
- 	    pod 'PlayKit/IMAPlugin', :path => PLAYKIT_LOCAL
+            pod "PlayKit", :path => PLAYKIT_LOCAL
+ 	    pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
  	    pod 'PlayKit/YouboraPlugin', :path => PLAYKIT_LOCAL
     else
 	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-	    pod 'PlayKit/IMAPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+	    pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_BRANCH
 	    pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
     end
 end
