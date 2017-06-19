@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PlayKit-Swift.h"
+@import PlayKit;
 #import "Video.h"
 
 @interface VideoViewController : UIViewController

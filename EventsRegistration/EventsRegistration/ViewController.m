@@ -90,7 +90,13 @@
 // Handle basic event (Play, Pause, CanPlay ..)
 - (void)registerPlayEvent {
     [self.player addObserver:self
-                      events:@[PlayerEvent.playing]
+                      events:@[PlayerEvent.playing, PlayerEvent.pause]
+                       block:^(PKEvent * _Nonnull event) {
+        NSLog(@"Several Events Callback");
+    }];
+    
+    [self.player addObserver:self
+                      event:PlayerEvent.playing
                        block:^(PKEvent * _Nonnull event) {
         NSLog(@"Playing Event");
     }];

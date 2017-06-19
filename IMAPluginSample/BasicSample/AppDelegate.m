@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "PlayKit-Swift.h"
+@import PlayKit;
+@import PlayKit_IMA;
 
 @interface AppDelegate ()
 
