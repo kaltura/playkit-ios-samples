@@ -1,0 +1,42 @@
+PODS:
+  - GoogleAds-IMA-iOS-SDK (3.5.2)
+  - KalturaNetKit (0.0.14):
+    - KalturaNetKit/Core (= 0.0.14)
+  - KalturaNetKit/Core (0.0.14):
+    - SwiftyJSON
+  - Log (1.0)
+  - PlayKit (0.2.x-dev):
+    - PlayKit/Core (= 0.2.x-dev)
+  - PlayKit/Core (0.2.x-dev):
+    - KalturaNetKit (~> 0.0)
+    - Log (= 1.0)
+    - SwiftyJSON (= 3.1.4)
+    - SwiftyXMLParser (= 3.0.0)
+  - PlayKit_IMA (0.0.1):
+    - GoogleAds-IMA-iOS-SDK (= 3.5.2)
+    - PlayKit/Core
+  - SwiftyJSON (3.1.4)
+  - SwiftyXMLParser (3.0.0)
+
+DEPENDENCIES:
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit_IMA (from `../../playkit-ios-ima`)
+
+EXTERNAL SOURCES:
+  PlayKit:
+    :path: ../../playkit-ios
+  PlayKit_IMA:
+    :path: ../../playkit-ios-ima
+
+SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: a0692ecc51d7c8816d5245edfb8a69c553cd84d4
+  KalturaNetKit: bd3825d14e604c9f06bb41607eb6ce8929f27556
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  PlayKit: f961321903e4223de688b31529f5932f72ee4723
+  PlayKit_IMA: b7a781ee79d9d2c02b72c26df0ec05534344de02
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
+
+PODFILE CHECKSUM: 3a3a58cfc0b13996eebe11ad18d93b2a42321f6c
+
+COCOAPODS: 1.2.1
