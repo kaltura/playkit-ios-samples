@@ -127,14 +127,10 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [KalturaStatsEvent.report])
     }
     
-    func createKalturaStatsPluginConfig() -> AnalyticsConfig {
-        let kalturaStatsPluginParams: [String : Any] = ["sessionId": "",
-                                                            "uiconfId": 0,
-                                                            "baseUrl": "",
-                                                            "partnerId": 0,
-                                                            "timerInterval": 30]
-        
-        return AnalyticsConfig(params: kalturaStatsPluginParams)
+    func createKalturaStatsPluginConfig() -> KalturaStatsPluginConfig {
+        return KalturaStatsPluginConfig(uiconfId: 0,
+                                        partnerId: 0,
+                                        entryId: "")
     }
     
 /************************/

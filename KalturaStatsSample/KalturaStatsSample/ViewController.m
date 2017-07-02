@@ -120,16 +120,10 @@
     [self.player removeObserver:self events:@[KalturaStatsEvent.report]];
 }
 
-- (AnalyticsConfig *)createKalturaStatsPluginConfig {
-    NSDictionary *kalturaStatsPluginParams = @{
-                                               @"sessionId": @"",
-                                               @"uiconfId": @0,
-                                               @"baseUrl": @"",
-                                               @"partnerId": @0,
-                                               @"timerInterval": @30
-                                               };
-    
-    return [[AnalyticsConfig alloc] initWithParams:kalturaStatsPluginParams];
+- (KalturaStatsPluginConfig *)createKalturaStatsPluginConfig {
+    return [[KalturaStatsPluginConfig alloc] initWithUiconfId:0
+                                                    partnerId:0
+                                                      entryId:@""];
 }
 
 /*********************************/
