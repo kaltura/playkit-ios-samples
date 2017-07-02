@@ -1,26 +1,98 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dQx-TO-usJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="1VM-Ld-AId">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="dQx-TO-usJ" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="fPd-YQ-pft"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Zi-wv-zQ9"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="cmq-by-Sol">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hds-Y9-XhQ" customClass="PlayerView" customModule="PlayKit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZV-59-0pH">
+                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="JCW-6A-xS1">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qU2-My-c1v">
+                                            <rect key="frame" x="8" y="17" width="30" height="30"/>
+                                            <state key="normal" title="Play">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="playTouched:" destination="dQx-TO-usJ" eventType="touchUpInside" id="fmq-PL-psV"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikd-3G-5fM">
+                                            <rect key="frame" x="53" y="17" width="42" height="30"/>
+                                            <state key="normal" title="Pause">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="pauseTouched:" destination="dQx-TO-usJ" eventType="touchUpInside" id="1GV-tk-42L"/>
+                                            </connections>
+                                        </button>
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="uoq-NJ-lSi">
+                                            <rect key="frame" x="108" y="17" width="261" height="31"/>
+                                            <connections>
+                                                <action selector="playheadValueChanged:" destination="dQx-TO-usJ" eventType="valueChanged" id="4s7-y2-G6i"/>
+                                            </connections>
+                                        </slider>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ikd-3G-5fM" firstAttribute="leading" secondItem="qU2-My-c1v" secondAttribute="trailing" constant="15" id="A6I-ol-Hji"/>
+                                        <constraint firstAttribute="trailing" secondItem="uoq-NJ-lSi" secondAttribute="trailing" constant="8" id="DWw-D3-y4S"/>
+                                        <constraint firstItem="qU2-My-c1v" firstAttribute="leading" secondItem="JCW-6A-xS1" secondAttribute="leading" constant="8" id="Y0I-nW-XFr"/>
+                                        <constraint firstItem="uoq-NJ-lSi" firstAttribute="leading" secondItem="ikd-3G-5fM" secondAttribute="trailing" constant="15" id="YPv-2A-fLr"/>
+                                        <constraint firstItem="ikd-3G-5fM" firstAttribute="centerY" secondItem="JCW-6A-xS1" secondAttribute="centerY" id="gED-As-mJ0"/>
+                                        <constraint firstItem="qU2-My-c1v" firstAttribute="centerY" secondItem="JCW-6A-xS1" secondAttribute="centerY" id="qY0-NR-lyY"/>
+                                        <constraint firstItem="uoq-NJ-lSi" firstAttribute="centerY" secondItem="JCW-6A-xS1" secondAttribute="centerY" id="yOb-01-nI0"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="jSE-Tg-p1c">
+                                        <variation key="heightClass=compact" constant="40"/>
+                                    </constraint>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wZV-59-0pH" secondAttribute="trailing" id="0b4-fN-201"/>
+                            <constraint firstItem="Hds-Y9-XhQ" firstAttribute="leading" secondItem="cmq-by-Sol" secondAttribute="leading" id="0fW-aM-gDr"/>
+                            <constraint firstItem="wZV-59-0pH" firstAttribute="leading" secondItem="cmq-by-Sol" secondAttribute="leading" id="94B-TK-c44"/>
+                            <constraint firstAttribute="trailing" secondItem="Hds-Y9-XhQ" secondAttribute="trailing" id="K9w-31-VoQ"/>
+                            <constraint firstItem="6Zi-wv-zQ9" firstAttribute="top" secondItem="wZV-59-0pH" secondAttribute="bottom" id="qL2-3d-DZK"/>
+                            <constraint firstItem="6Zi-wv-zQ9" firstAttribute="top" secondItem="Hds-Y9-XhQ" secondAttribute="bottom" id="r3D-71-Rec"/>
+                            <constraint firstItem="Hds-Y9-XhQ" firstAttribute="top" secondItem="cmq-by-Sol" secondAttribute="top" id="r3s-C1-loc"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playerContainer" destination="Hds-Y9-XhQ" id="6Qa-LM-mRl"/>
+                        <outlet property="playheadSlider" destination="uoq-NJ-lSi" id="Dms-Ww-lsn"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dtv-7h-0Jl" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
         </scene>
     </scenes>
 </document>

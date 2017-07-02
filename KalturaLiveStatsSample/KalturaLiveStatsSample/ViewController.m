@@ -77,7 +77,7 @@
 /*********************************/
 
 - (void)preparePlayer {
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8"];
+    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://www.kaltura.com/p/1953371/sp/0/playManifest/entryId/0_ghzg9q0q/format/applehttp/protocol/https/a.m3u8"];
     
     // create media source and initialize a media entry with that source
     NSString *entryId = @"sintel";
@@ -120,15 +120,9 @@
     [self.player removeObserver:self events:@[KalturaLiveStatsEvent.report]];
 }
 
-- (AnalyticsConfig *)createKalturaLiveStatsPluginConfig {
-    NSDictionary *kalturaLiveStatsPluginParams = @{
-                                                   @"sessionId": @"",
-                                                   @"uiconfId": @0,
-                                                   @"baseUrl": @"",
-                                                   @"partnerId": @0,
-                                                   @"timerInterval": @30
-                                                   };
-    return [[AnalyticsConfig alloc] initWithParams:kalturaLiveStatsPluginParams];
+- (KalturaLiveStatsPluginConfig *)createKalturaLiveStatsPluginConfig {
+    return [[KalturaLiveStatsPluginConfig alloc] initWithEntryId:@""
+                                                       partnerId:0];
 }
 
 /*********************************/
