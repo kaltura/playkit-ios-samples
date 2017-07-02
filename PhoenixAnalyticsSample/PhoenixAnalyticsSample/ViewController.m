@@ -120,15 +120,11 @@
     [self.player removeObserver:self events:@[OttEvent.report]];
 }
 
-- (AnalyticsConfig *)createPhoenixPluginConfig {
-    NSDictionary *phoenixPluginParams = @{
-                                          @"fileId": @"",
-                                          @"baseUrl": @"",
-                                          @"ks": @"",
-                                          @"partnerId": @0,
-                                          @"timerInterval": @30
-                                          };
-    return [[AnalyticsConfig alloc] initWithParams:phoenixPluginParams];
+- (PhoenixAnalyticsPluginConfig *)createPhoenixPluginConfig {
+    return [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:@""
+                                                   timerInterval:30.0f
+                                                              ks:@""
+                                                       partnerId:0];
 }
 
 /*********************************/

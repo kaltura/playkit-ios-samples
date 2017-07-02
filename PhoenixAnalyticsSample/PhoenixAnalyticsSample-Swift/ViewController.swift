@@ -102,7 +102,7 @@ class ViewController: UIViewController {
 // MARK: - Analytics
 /***********************/
     func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createKalturaStatsPluginConfig()]
+        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createPhoenixAnalyticsPluginConfig()]
         
         return PluginConfig(config: pluginConfigDict)
     }
@@ -127,14 +127,11 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [OttEvent.report])
     }
     
-    func createKalturaStatsPluginConfig() -> AnalyticsConfig {
-        let phoenixPluginParams: [String : Any] = ["sessionId": "",
-                                                            "uiconfId": 0,
-                                                            "baseUrl": "",
-                                                            "partnerId": 0,
-                                                            "timerInterval": 30]
-        
-        return AnalyticsConfig(params: phoenixPluginParams)
+    func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
+        return PhoenixAnalyticsPluginConfig(baseUrl: "",
+                                            timerInterval: 30,
+                                            ks: "",
+                                            partnerId: 0)
     }
     
 /************************/
