@@ -102,7 +102,7 @@ class ViewController: UIViewController {
 // MARK: - Analytics
 /***********************/
     func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createKalturaStatsPluginConfig()]
+        let pluginConfigDict = [TVPAPIAnalyticsPlugin.pluginName: self.createTVPAPIPluginConfig()]
         
         return PluginConfig(config: pluginConfigDict)
     }
@@ -127,29 +127,27 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [OttEvent.report])
     }
     
-    func createKalturaStatsPluginConfig() -> AnalyticsConfig {
-        let tvpapiPluginParams: [String : Any] = ["fileId": "",
-                                                    "baseUrl": "",
-                                                     "timerInterval": 30,
-                                                     "initObj":
-                                                        [
-                                                            "Token": "",
-                                                            "SiteGuid": "",
-                                                            "ApiUser": "",
-                                                            "DomainID": "",
-                                                            "UDID": "",
-                                                            "ApiPass": "",
-                                                            "Locale": [
-                                                                "LocaleUserState": "",
-                                                                "LocaleCountry": "",
-                                                                "LocaleDevice": "",
-                                                                "LocaleLanguage": ""
-                                                            ],
-                                                            "Platform": ""
-                                                        ]
+    func createTVPAPIPluginConfig() -> TVPAPIAnalyticsPluginConfig {
+        
+        let initObject: [String: Any] =  [
+            "Token": "",
+            "SiteGuid": "",
+            "ApiUser": "",
+            "DomainID": "",
+            "UDID": "",
+            "ApiPass": "",
+            "Locale": [
+                "LocaleUserState": "",
+                "LocaleCountry": "",
+                "LocaleDevice": "",
+                "LocaleLanguage": ""
+            ],
+            "Platform": ""
         ]
         
-        return AnalyticsConfig(params: tvpapiPluginParams)
+        return TVPAPIAnalyticsPluginConfig(baseUrl: "",
+                                           timerInterval: 30,
+                                           initObject: initObject)
     }
     
 /************************/

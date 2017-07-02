@@ -120,29 +120,24 @@
     [self.player removeObserver:self events:@[OttEvent.report]];
 }
 
-- (AnalyticsConfig *)createTVPAPIPluginConfig {
-    NSDictionary *tvpapiPluginParams = @{
-                                         @"fileId": @"",
-                                         @"baseUrl": @"",
-                                         @"timerInterval": @30,
-                                         @"initObj":
-                                             @{
-                                                 @"Token": @"",
-                                                 @"SiteGuid": @"",
-                                                 @"ApiUser": @"",
-                                                 @"DomainID": @"",
-                                                 @"UDID": @"",
-                                                 @"ApiPass": @"",
-                                                 @"Locale": @{
-                                                         @"LocaleUserState": @"",
-                                                         @"LocaleCountry": @"",
-                                                         @"LocaleDevice": @"",
-                                                         @"LocaleLanguage": @""
-                                                         },
-                                                 @"Platform": @""
-                                                 }
-                                         };
-    return [[AnalyticsConfig alloc] initWithParams:tvpapiPluginParams];
+- (TVPAPIAnalyticsPluginConfig *)createTVPAPIPluginConfig {
+    return [[TVPAPIAnalyticsPluginConfig alloc] initWithBaseUrl:@""
+                                                  timerInterval:30.0f
+                                                     initObject:@{
+                                                                  @"Token": @"",
+                                                                  @"SiteGuid": @"",
+                                                                  @"ApiUser": @"",
+                                                                  @"DomainID": @"",
+                                                                  @"UDID": @"",
+                                                                  @"ApiPass": @"",
+                                                                  @"Locale": @{
+                                                                          @"LocaleUserState": @"",
+                                                                          @"LocaleCountry": @"",
+                                                                          @"LocaleDevice": @"",
+                                                                          @"LocaleLanguage": @""
+                                                                          },
+                                                                  @"Platform": @""
+                                                                  }];
 }
 
 /*********************************/
