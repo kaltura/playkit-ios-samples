@@ -12,7 +12,7 @@ import PlayKit
 
 class ViewController: UIViewController {
     
-    var player: Player!
+    var player: Player?
     @IBOutlet var playerContainer: UIView!
     
     let simpleStorage = DefaultLocalDataStore.defaultDataStore()
@@ -42,16 +42,20 @@ class ViewController: UIViewController {
         }
         
         let pluginConfig = PluginConfig(config: [:])
-        player = try? PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        guard let player = try? PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig) else { return }
         
         loadSampleEntries()
         
-        self.playerContainer.addSubview(self.player.view)
-        self.player.view.frame = self.playerContainer.bounds;
+        if let playerView = player.view {
+            self.playerContainer.addSubview(playerView)
+            playerView.frame = self.playerContainer.bounds;
+        }
+        
+        self.player = player
     }
     
     override func viewDidLayoutSubviews() {
-        self.player.view.frame = self.playerContainer.bounds
+        self.player?.view?.frame = self.playerContainer.bounds
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,8 +88,8 @@ class ViewController: UIViewController {
         let localEntry = assetsManager.createLocalMediaEntry(for: assetName, localURL: localURL)
         
         let mediaConfig = MediaConfig(mediaEntry: localEntry)
-        player.prepare(mediaConfig)
-        player.play()
+        player!.prepare(mediaConfig)
+        player!.play()
     }
     
     
