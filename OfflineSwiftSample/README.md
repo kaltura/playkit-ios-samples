@@ -1,0 +1,1 @@
+See OfflineSampleSwift project instead.
