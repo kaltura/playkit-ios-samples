@@ -26,7 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // setup the view
-    //[self.player.view addToContainer:self.playerContainer];
     self.player.view = self.playerContainer;
     [self.player prepare:self.mediaConfig];
     self.playheadSlider.continuous = NO;

@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
 
 @property (weak, nonatomic) NSArray *audioTracks;
@@ -39,18 +39,13 @@
     // get current bitrate value
     [self currentBitrateHandler];
 }
- 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
-}
 
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
     
 - (void)setupPlayer {
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
+    NSURL *contentURL = [[NSURL alloc] initWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
     
     // create media source and initialize a media entry with that source
     NSString *entryId = @"apple_bipbop";
@@ -68,7 +63,7 @@
     
     if (!error) {
         [self.player prepare:mediaConfig];
-        [self.playerContainer addSubview:self.player.view];
+        self.player.view = self.playerContainer;
         [self.playerContainer sendSubviewToBack:self.player.view];
     } else {
         // error loading the player

@@ -2,7 +2,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-#PLAYKIT_TAG='v0.2.2'
+PLAYKIT_TAG='widevine/v3.1.1'
 
 # Uncomment to use a local copy of PlayKit
 PLAYKIT_LOCAL='../../playkit-ios'
@@ -26,11 +26,11 @@ abstract_target 'all' do
     end
     
     target 'IMAPluginSample' do
-        definePlayKit('IMAPlugin')
+        #definePlayKit('IMAPlugin')
     end
     
     target 'AnalyticsSample' do
-        definePlayKit('IMAPlugin')
+       # definePlayKit('IMAPlugin')
         definePlayKit('YouboraPlugin')
     end
 
@@ -42,6 +42,7 @@ abstract_target 'all' do
     
     target 'LocalAssetsSample' do
         pod 'DownPicker'
+        definePlayKit('Core')
         definePlayKit('WidevineClassic')
     end
  end
@@ -62,9 +63,8 @@ end
 
 
 target 'ObjCSample' do
-    definePlayKit('Core')
-    definePlayKit('IMAPlugin')
-    #definePlayKit('WidevineClassic')
+    #definePlayKit('IMAPlugin')
+    definePlayKit('WidevineClassic')
 definePlayKit('YouboraPlugin')
 end
 

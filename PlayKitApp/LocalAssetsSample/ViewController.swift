@@ -123,7 +123,7 @@ class ViewController: UIViewController {
 
 
     @IBOutlet var itemSelector: UITextField!
-    @IBOutlet var playerContainer: UIView!
+    @IBOutlet var playerContainer: PlayerView!
     var picker: DownPicker!
 
     @IBAction func playTapped(_: UIButton) {
@@ -141,12 +141,11 @@ class ViewController: UIViewController {
         self.player = try? PlayKitManager.shared.loadPlayer(pluginConfig:config)
         self.player.prepare(mediaConfig)
 
-        self.player.view.frame = playerContainer.bounds
-        self.playerContainer.addSubview(player.view)
+        self.player.view = self.playerContainer
         
         self.player.addObserver(self, events: [PlayerEvent.tracksAvailable]) { (event) in
             if let tracks = event.tracks, let lastAudioTrack = tracks.audioTracks?.last {
-                self.player.selectTrack(trackId: lastAudioTrack.id!)
+                self.player.selectTrack(trackId: lastAudioTrack.id)
             }
         }
         
@@ -156,6 +155,13 @@ class ViewController: UIViewController {
     @IBAction func downloadTapped(_: UIButton) {
         if let asset = self.selectedAsset {
             self.startDownload(asset)
+        }
+    }
+    @IBAction func basicPlayTap(_ sender: Any) {
+        if self.player.isPlaying {
+            self.player.pause()
+        } else {
+            self.player.play()
         }
     }
     

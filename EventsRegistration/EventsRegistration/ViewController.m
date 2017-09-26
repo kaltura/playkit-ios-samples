@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
     
 @end
@@ -55,6 +55,7 @@
 }
 
 - (void)preparePlayer:(NSError *)error {
+    self.player.view = self.playerContainer;
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     
     // create media source and initialize a media entry with that source
@@ -70,7 +71,6 @@
     if (!error) {
         // prepare the player
         [self.player prepare:mediaConfig];
-        [self.playerContainer addSubview:self.player.view];
     } else {
         // error loading the player
         NSLog(@"error:: %@",error.description);

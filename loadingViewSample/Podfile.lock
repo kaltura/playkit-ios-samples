@@ -1,42 +1,46 @@
 PODS:
-  - GoogleAds-IMA-iOS-SDK (3.5.2)
-  - KalturaNetKit (0.0.14):
-    - KalturaNetKit/Core (= 0.0.14)
-  - KalturaNetKit/Core (0.0.14):
+  - GoogleAds-IMA-iOS-SDK (3.6.0)
+  - KalturaNetKit (0.0.17):
+    - KalturaNetKit/Core (= 0.0.17)
+  - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
   - Log (1.0)
-  - PlayKit (0.2.x-dev):
-    - PlayKit/Core (= 0.2.x-dev)
-  - PlayKit/Core (0.2.x-dev):
+  - PlayKit (3.2.0):
+    - PlayKit/Core (= 3.2.0)
+  - PlayKit/Core (3.2.0):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
     - SwiftyJSON (= 3.1.4)
-    - SwiftyXMLParser (= 3.0.0)
+    - SwiftyXMLParser (= 3.0.3)
   - PlayKit_IMA (0.0.1):
-    - GoogleAds-IMA-iOS-SDK (= 3.5.2)
+    - GoogleAds-IMA-iOS-SDK (= 3.6.0)
     - PlayKit/Core
   - SwiftyJSON (3.1.4)
-  - SwiftyXMLParser (3.0.0)
+  - SwiftyXMLParser (3.0.3)
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKit_IMA (from `../../playkit-ios-ima`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
+  - PlayKit_IMA
 
 EXTERNAL SOURCES:
   PlayKit:
-    :path: ../../playkit-ios
-  PlayKit_IMA:
-    :path: ../../playkit-ios-ima
+    :branch: master
+    :git: https://github.com/kaltura/playkit-ios.git
+
+CHECKOUT OPTIONS:
+  PlayKit:
+    :commit: eb8cc8cd913c0e36e797c4a3f52c859244aeab4c
+    :git: https://github.com/kaltura/playkit-ios.git
 
 SPEC CHECKSUMS:
-  GoogleAds-IMA-iOS-SDK: a0692ecc51d7c8816d5245edfb8a69c553cd84d4
-  KalturaNetKit: bd3825d14e604c9f06bb41607eb6ce8929f27556
+  GoogleAds-IMA-iOS-SDK: 193ca918ed33278c29c96683f500524bf788d509
+  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: f961321903e4223de688b31529f5932f72ee4723
-  PlayKit_IMA: b7a781ee79d9d2c02b72c26df0ec05534344de02
+  PlayKit: ed72c7d27621628239050e9cb8251d95362d9a12
+  PlayKit_IMA: ea3a09577d44d2fba0ced6d95dfa43fa6ace27f4
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyXMLParser: 8d2295fb4fbc6e2ff241e7c8d7717e159be35969
+  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
 
-PODFILE CHECKSUM: 3a3a58cfc0b13996eebe11ad18d93b2a42321f6c
+PODFILE CHECKSUM: 9474d1aecf2ca51dda98a7b655d121608a77ef90
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1

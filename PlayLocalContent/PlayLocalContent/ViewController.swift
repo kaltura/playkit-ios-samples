@@ -20,7 +20,7 @@ import PlayKit
 class ViewController: UIViewController {
     var player: Player?
     var playheadTimer: Timer?
-    @IBOutlet weak var playerContainer: UIView!
+    @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
     override func viewDidLoad() {
@@ -50,7 +50,7 @@ class ViewController: UIViewController {
             return
         }
         
-        player.view.frame = self.playerContainer.bounds
+        player.view?.frame = self.playerContainer.bounds
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
-        let contentUrl = Bundle(for: type(of: self)).path(forResource: "big_buck_bunny_short", ofType: "mp4")!
+        let contentUrl = Bundle(for: type(of: self)).path(forResource: "movie", ofType: "mov")!
   
         // create media source and initialize a media entry with that source
         let entryId = "sintel"
@@ -75,12 +75,11 @@ class ViewController: UIViewController {
         // create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
         
+        // setup the player's view
+         self.player!.view = self.playerContainer
+        
         // prepare the player
         self.player!.prepare(mediaConfig)
-        
-        // setup the player's view
-        self.playerContainer.addSubview(self.player!.view)
-        self.player!.view.frame = self.playerContainer.bounds
     }
     
 /************************/

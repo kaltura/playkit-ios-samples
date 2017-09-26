@@ -20,7 +20,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
 
 @end
@@ -51,22 +51,17 @@
     }
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
-}
-
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
 
 - (void)preparePlayer {
-    NSString *serverURL = @"your server url";
-    int64_t partnerId = 0; // put your partner id here
+    NSString *serverURL = @"https://cdnapisec.kaltura.com";
+    int64_t partnerId = 1424501; // put your partner id here
     // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
-    SimpleOVPSessionProvider *sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:serverURL partnerId:partnerId ks:@"your ks"];
+    SimpleOVPSessionProvider *sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:serverURL partnerId:partnerId ks:nil];
     OVPMediaProvider *mediaProvider = [[OVPMediaProvider alloc] init:sessionProvider];
-    mediaProvider.entryId = @"your entry id";
+    mediaProvider.entryId = @"1_673p2v7h";
     
     [mediaProvider loadMediaWithCallback:^(MediaEntry * _Nullable mediaEntry, NSError * _Nullable error) {
         if (!error) {
@@ -75,8 +70,8 @@
             
             // prepare the player
             [self.player prepare:mediaConfig];
-            [self.playerContainer addSubview:self.player.view];
-            self.player.view.frame = self.playerContainer.bounds;
+            // setup the player's view
+            self.player.view = self.playerContainer;
         }
     }];
 }

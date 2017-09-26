@@ -21,7 +21,7 @@ import PlayKit_IMA
 class ViewController: UIViewController, PlayerDelegate {
     var player: Player?
     var playheadTimer: Timer?
-    @IBOutlet weak var playerContainer: UIView!
+    @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -53,17 +53,6 @@ class ViewController: UIViewController, PlayerDelegate {
     
     func playerShouldPlayAd(_ player: Player) -> Bool {
         return true
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        guard let player = self.player else {
-            print("player is not set")
-            return
-        }
-        
-        player.view.frame = self.playerContainer.bounds
     }
 
     override func didReceiveMemoryWarning() {
@@ -124,9 +113,8 @@ class ViewController: UIViewController, PlayerDelegate {
         self.player!.prepare(mediaConfig)
         
         // setup the player's view
-        self.playerContainer.addSubview(self.player!.view)
+        self.player?.view = self.playerContainer
         self.playerContainer.bringSubview(toFront: self.activityIndicator)
-        self.player!.view.frame = self.playerContainer.bounds
     }
     
 /************************/

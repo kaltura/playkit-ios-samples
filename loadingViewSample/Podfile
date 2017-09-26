@@ -17,7 +17,7 @@ target 'loadingViewSample' do
  	    pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
     else
         pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-        pod 'PlayKit_IMA', :git => 'https://github.com/kaltura/playkit-ios-ima.git', :tag => 'v0.0.1.rc1'
+        pod 'PlayKit_IMA'
     end
 end
 
