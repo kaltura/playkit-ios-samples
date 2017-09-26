@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-j3-lIg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7EJ-j3-lIg">
                                 <rect key="frame" x="16" y="28" width="262" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="itemSelector">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
@@ -31,29 +31,52 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfk-7l-65U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfk-7l-65U">
                                 <rect key="frame" x="16" y="66" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Download"/>
                                 <connections>
                                     <action selector="downloadTapped:" destination="dkx-z0-nzr" eventType="touchUpInside" id="9tt-oY-9dx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbJ-05-zRD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbJ-05-zRD">
                                 <rect key="frame" x="124" y="66" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="EoE-BG-CIN"/>
+                                </constraints>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playTapped:" destination="dkx-z0-nzr" eventType="touchUpInside" id="0a8-hb-gPI"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-TV-QWg">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eaJ-TV-QWg" customClass="PlayerView" customModule="PlayKit">
                                 <rect key="frame" x="16" y="133" width="343" height="183"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.78907048668302582" green="0.84155558568851485" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltY-Hx-6Yd">
+                                <rect key="frame" x="24" y="347" width="30" height="30"/>
+                                <state key="normal" title="P"/>
+                                <connections>
+                                    <action selector="basicPlayTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pnk-HW-iSz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cbJ-05-zRD" firstAttribute="top" secondItem="7EJ-j3-lIg" secondAttribute="bottom" constant="8" symbolic="YES" id="1HS-uc-aqq"/>
+                            <constraint firstItem="eaJ-TV-QWg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="133" id="7w2-0f-8bY"/>
+                            <constraint firstItem="eaJ-TV-QWg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DsA-SD-DYc"/>
+                            <constraint firstItem="cbJ-05-zRD" firstAttribute="leading" secondItem="qfk-7l-65U" secondAttribute="trailing" constant="8" symbolic="YES" id="LcM-9l-xfm"/>
+                            <constraint firstItem="cbJ-05-zRD" firstAttribute="centerX" secondItem="7EJ-j3-lIg" secondAttribute="centerX" id="MO3-2C-i68"/>
+                            <constraint firstItem="eaJ-TV-QWg" firstAttribute="leading" secondItem="qfk-7l-65U" secondAttribute="leading" id="Tjs-59-IaH"/>
+                            <constraint firstItem="eaJ-TV-QWg" firstAttribute="leading" secondItem="7EJ-j3-lIg" secondAttribute="leading" id="fB0-eg-Ca9"/>
+                            <constraint firstAttribute="bottom" secondItem="eaJ-TV-QWg" secondAttribute="bottom" constant="351" id="fij-8I-iMu"/>
+                            <constraint firstItem="eaJ-TV-QWg" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="hLo-EK-ifE"/>
+                            <constraint firstItem="cbJ-05-zRD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="124" id="i61-Oa-VH4"/>
+                            <constraint firstItem="ltY-Hx-6Yd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="olU-lo-t87"/>
+                            <constraint firstItem="ltY-Hx-6Yd" firstAttribute="top" secondItem="eaJ-TV-QWg" secondAttribute="bottom" constant="31" id="szb-Mi-uXm"/>
+                            <constraint firstItem="cbJ-05-zRD" firstAttribute="baseline" secondItem="qfk-7l-65U" secondAttribute="baseline" id="w4e-UJ-Rqa"/>
+                            <constraint firstItem="eaJ-TV-QWg" firstAttribute="top" secondItem="cbJ-05-zRD" secondAttribute="bottom" constant="37" id="xRH-Av-xZz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="itemSelector" destination="7EJ-j3-lIg" id="AzM-xN-aHv"/>

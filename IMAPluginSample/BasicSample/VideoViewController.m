@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSObject *pipManager;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
     
 @end
@@ -26,7 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // setup the view
-    [self.player.view addToContainer:self.playerContainer];
+    self.player.view = self.playerContainer;
+    [self.player prepare:self.mediaConfig];
     self.playheadSlider.continuous = NO;
 }
 

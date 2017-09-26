@@ -3,13 +3,14 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 # Uncomment to use a local copy of PlayKit
- PLAYKIT_LOCAL='../../playkit-ios'
- PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
+# PLAYKIT_LOCAL='../../playkit-ios'
+# PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 
 platform :ios, '9.0' # (define required version)
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
 
 target 'BasicSample' do

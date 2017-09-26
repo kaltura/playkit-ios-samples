@@ -20,7 +20,7 @@ import PlayKit
 class ViewController: UIViewController {
     var player: Player?
     var playheadTimer: Timer?
-    @IBOutlet weak var playerContainer: UIView!
+    @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
     override func viewDidLoad() {
@@ -41,17 +41,6 @@ class ViewController: UIViewController {
             print("error:", e.localizedDescription)
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        guard let player = self.player else {
-            print("player is not set")
-            return
-        }
-        
-        player.view.frame = self.playerContainer.bounds
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -62,23 +51,22 @@ class ViewController: UIViewController {
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
-        let serverURL = "your server url"
-        let partnerId = 0 // put your partner id here
+        // setup the player's view
+        self.player?.view = self.playerContainer
+        
+        let serverURL = "https://cdnapisec.kaltura.com"
+        let partnerId: Int64 = 1424501 // put your partner id here
         // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
-        let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:"your ks" )
-        var mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
-        mediaProvider.entryId = "your entry id"
+        let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:nil )
+        let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
+        mediaProvider.entryId = "1_djnefl4e"
         mediaProvider.loadMedia { (mediaEntry, error) in
-            if(!error) {
+            if let me = mediaEntry, error == nil {
                 // create media config
-                let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
+                let mediaConfig = MediaConfig(mediaEntry: me, startTime: 0.0)
                 
                 // prepare the player
                 self.player!.prepare(mediaConfig)
-                
-                // setup the player's view
-                self.playerContainer.addSubview(self.player!.view)
-                self.player!.view.frame = self.playerContainer.bounds
             }
         }
     }

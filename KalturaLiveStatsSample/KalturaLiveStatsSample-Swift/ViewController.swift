@@ -79,7 +79,7 @@ class ViewController: UIViewController {
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
-        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
+        let contentURL = "https://www.kaltura.com/p/1953371/sp/0/playManifest/entryId/0_ghzg9q0q/format/applehttp/protocol/https/a.m3u8"
         
         // create media source and initialize a media entry with that source
         let entryId = "sintel"
@@ -127,14 +127,9 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [KalturaLiveStatsEvent.report])
     }
     
-    func createKalturaLiveStatsPluginConfig() -> AnalyticsConfig {
-        let kalturaLiveStatsPluginParams: [String : Any] = ["sessionId": "",
-                                                            "uiconfId": 0,
-                                                            "baseUrl": "",
-                                                            "partnerId": 0,
-                                                            "timerInterval": 30]
-        
-        return AnalyticsConfig(params: kalturaLiveStatsPluginParams)
+    func createKalturaLiveStatsPluginConfig() -> KalturaLiveStatsPluginConfig {
+        return KalturaLiveStatsPluginConfig(entryId: "",
+                                            partnerId: 0)
     }
     
 /************************/

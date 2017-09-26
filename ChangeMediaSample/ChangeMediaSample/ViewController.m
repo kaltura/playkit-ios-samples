@@ -24,7 +24,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
 
 @end
@@ -68,10 +68,10 @@
 }
 
 - (void)preparePlayerWithMediaConfig:(MediaConfig *)mediaConfig {
+    // setup the view
+    self.player.view = self.playerContainer;
     // prepare the player
     [self.player prepare:mediaConfig];
-    // setup the view
-    [self.playerContainer addSubview:self.player.view];
     // need to set player view each setup because we create the player when changing media.
     self.player.view.frame = self.playerContainer.bounds;
 }

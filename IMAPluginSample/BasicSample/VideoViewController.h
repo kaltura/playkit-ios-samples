@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property(nonatomic, strong) Video *video;
+@property (strong, nonatomic) MediaConfig *mediaConfig;
 
 @end
 

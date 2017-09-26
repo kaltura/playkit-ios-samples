@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BDC343A9C7773DF25AD2CEE3 /* Pods_PlayLocalContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A39416BFDA3B058E8CA107 /* Pods_PlayLocalContent.framework */; };
+		BF4B4A3D1F781AE4007863B3 /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = BF4B4A3C1F781AE4007863B3 /* movie.mov */; };
 		BF55EB311ECC1FE400432FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55EB301ECC1FE400432FF9 /* AppDelegate.swift */; };
 		BF55EB331ECC1FE400432FF9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55EB321ECC1FE400432FF9 /* ViewController.swift */; };
 		BF55EB361ECC1FE400432FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF55EB341ECC1FE400432FF9 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		A84CEEE624D10D32F1BA6F58 /* Pods-PlayLocalContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayLocalContent.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent.release.xcconfig"; sourceTree = "<group>"; };
+		BF4B4A3C1F781AE4007863B3 /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; name = movie.mov; path = ../../../../../../../Downloads/movie.mov; sourceTree = "<group>"; };
 		BF55EB2D1ECC1FE400432FF9 /* PlayLocalContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayLocalContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF55EB301ECC1FE400432FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF55EB321ECC1FE400432FF9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		BF55EB2F1ECC1FE400432FF9 /* PlayLocalContent */ = {
 			isa = PBXGroup;
 			children = (
+				BF4B4A3C1F781AE4007863B3 /* movie.mov */,
 				BF55EB421ECC22AF00432FF9 /* big_buck_bunny_short.mp4 */,
 				BF55EB301ECC1FE400432FF9 /* AppDelegate.swift */,
 				BF55EB321ECC1FE400432FF9 /* ViewController.swift */,
@@ -154,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4B4A3D1F781AE4007863B3 /* movie.mov in Resources */,
 				BF55EB3B1ECC1FE400432FF9 /* LaunchScreen.storyboard in Resources */,
 				BF55EB381ECC1FE400432FF9 /* Assets.xcassets in Resources */,
 				BF55EB361ECC1FE400432FF9 /* Main.storyboard in Resources */,
@@ -170,13 +174,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PlayLocalContent-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		62290FD07251CE1BFDD2D45B /* [CP] Copy Pods Resources */ = {
@@ -200,9 +207,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

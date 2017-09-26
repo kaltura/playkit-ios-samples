@@ -21,7 +21,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
 
 @end
@@ -55,11 +55,6 @@
     }
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
-}
-
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
@@ -71,6 +66,9 @@
 }
 
 - (void)preparePlayer {
+    // setup the player's view
+    self.player.view = self.playerContainer;
+    
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     
     // create media source and initialize a media entry with that source
@@ -84,9 +82,6 @@
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
     [self.player prepare:mediaConfig];
-    
-    [self.playerContainer addSubview:self.player.view];
-    self.player.view.frame = self.playerContainer.bounds;
 }
 
 /*********************************/

@@ -27,7 +27,7 @@ import PlayKit
 class ViewController: UIViewController {
     var player: Player?
     var playheadTimer: Timer?
-    @IBOutlet weak var playerContainer: UIView!
+    @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
     override func viewDidLoad() {
@@ -53,17 +53,6 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        guard let player = self.player else {
-            print("player is not set")
-            return
-        }
-        
-        player.view.frame = self.playerContainer.bounds
-    }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // remove observers
@@ -79,6 +68,9 @@ class ViewController: UIViewController {
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
+        // setup the player's view
+        self.player?.view = self.playerContainer
+        
         let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
         
         // create media source and initialize a media entry with that source
@@ -92,17 +84,13 @@ class ViewController: UIViewController {
         
         // prepare the player
         self.player!.prepare(mediaConfig)
-        
-        // setup the player's view
-        self.playerContainer.addSubview(self.player!.view)
-        self.player!.view.frame = self.playerContainer.bounds
     }
     
 /************************/
 // MARK: - Analytics
 /***********************/
     func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createKalturaStatsPluginConfig()]
+        let pluginConfigDict = [TVPAPIAnalyticsPlugin.pluginName: self.createTVPAPIPluginConfig()]
         
         return PluginConfig(config: pluginConfigDict)
     }
@@ -127,29 +115,27 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [OttEvent.report])
     }
     
-    func createKalturaStatsPluginConfig() -> AnalyticsConfig {
-        let tvpapiPluginParams: [String : Any] = ["fileId": "",
-                                                    "baseUrl": "",
-                                                     "timerInterval": 30,
-                                                     "initObj":
-                                                        [
-                                                            "Token": "",
-                                                            "SiteGuid": "",
-                                                            "ApiUser": "",
-                                                            "DomainID": "",
-                                                            "UDID": "",
-                                                            "ApiPass": "",
-                                                            "Locale": [
-                                                                "LocaleUserState": "",
-                                                                "LocaleCountry": "",
-                                                                "LocaleDevice": "",
-                                                                "LocaleLanguage": ""
-                                                            ],
-                                                            "Platform": ""
-                                                        ]
+    func createTVPAPIPluginConfig() -> TVPAPIAnalyticsPluginConfig {
+        
+        let initObject: [String: Any] =  [
+            "Token": "",
+            "SiteGuid": "",
+            "ApiUser": "",
+            "DomainID": "",
+            "UDID": "",
+            "ApiPass": "",
+            "Locale": [
+                "LocaleUserState": "",
+                "LocaleCountry": "",
+                "LocaleDevice": "",
+                "LocaleLanguage": ""
+            ],
+            "Platform": ""
         ]
         
-        return AnalyticsConfig(params: tvpapiPluginParams)
+        return TVPAPIAnalyticsPluginConfig(baseUrl: "",
+                                           timerInterval: 30,
+                                           initObject: initObject)
     }
     
 /************************/

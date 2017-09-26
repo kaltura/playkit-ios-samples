@@ -11,7 +11,7 @@
 
 @interface ViewController ()<AVPictureInPictureControllerDelegate, PlayerDelegate>
 @property (nonatomic, strong) id<Player> kPlayer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @end
 
 @implementation ViewController

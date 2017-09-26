@@ -133,7 +133,7 @@
             IMAConfig *adsConfig = [IMAConfig new];
             adsConfig.adTagUrl = video.tag;
             [self.player updatePluginConfigWithPluginName:@"IMAPlugin" config:adsConfig];
-            [self.player prepare:mediaConfig];
+            destVC.mediaConfig = mediaConfig;
             destVC.player = self.player;
             
             return;
@@ -152,8 +152,9 @@
             // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
             
             // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            [self preparePlayer];
+            //[self preparePlayer];
             destVC.player = self.player;
+            destVC.mediaConfig = [self firstMediaConfig];
             [self.player addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
                 event.error;
             }];
@@ -187,7 +188,7 @@
     return [[PluginConfig alloc] initWithConfig:pluginConfigDict];
 }
 
-- (void)preparePlayer {
+- (MediaConfig *)firstMediaConfig {
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     
     // create media source and initialize a media entry with that source
@@ -203,7 +204,8 @@
     
     
     // prepare the player
-    [self.player prepare:mediaConfig];
+    //[self.player prepare:mediaConfig];
+    return mediaConfig;
 }
 
 // Only allow one selection.

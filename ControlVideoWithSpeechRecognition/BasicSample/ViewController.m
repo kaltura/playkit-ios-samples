@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet UIView *playerContainer;
+@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
 @property (strong, nonatomic) SFSpeechRecognizer *speechRecognizer;
 @property (weak, nonatomic) IBOutlet UIButton *microphoneButton;
@@ -69,8 +69,8 @@
     self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
     
     if (!error) {
+        self.player.view = self.playerContainer;
         [self.player prepare:mediaConfig];
-        [self.playerContainer addSubview:self.player.view];
     } else {
         // error loading the player
     }
