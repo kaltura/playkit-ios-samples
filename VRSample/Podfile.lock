@@ -1,0 +1,55 @@
+PODS:
+  - KalturaNetKit (0.0.17):
+    - KalturaNetKit/Core (= 0.0.17)
+  - KalturaNetKit/Core (0.0.17):
+    - SwiftyJSON
+  - Log (1.0)
+  - MetalScope (0.15.1)
+  - PlayKit (3.2.x-dev):
+    - PlayKit/Core (= 3.2.x-dev)
+  - PlayKit/AnalyticsCommon (3.2.x-dev):
+    - PlayKit/Core
+  - PlayKit/Core (3.2.x-dev):
+    - KalturaNetKit (~> 0.0)
+    - Log (= 1.0)
+    - SwiftyJSON (= 3.1.4)
+    - SwiftyXMLParser (= 3.0.3)
+  - PlayKit/YouboraPlugin (3.2.x-dev):
+    - PlayKit/AnalyticsCommon
+    - PlayKit/Core
+    - Youbora-AVPlayer/dynamic (= 5.4.5)
+  - PlayKitVR (0.0.1):
+    - MetalScope
+    - PlayKit/Core
+    - PlayKit/YouboraPlugin
+  - SwiftyJSON (3.1.4)
+  - SwiftyXMLParser (3.0.3)
+  - Youbora-AVPlayer/dynamic (5.4.5):
+    - Youbora-YouboraLib/dynamic (= 5.3.10)
+  - Youbora-YouboraLib/dynamic (5.3.10)
+
+DEPENDENCIES:
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit/YouboraPlugin (from `../../playkit-ios`)
+  - PlayKitVR (from `../../playkit-ios-vr`)
+
+EXTERNAL SOURCES:
+  PlayKit:
+    :path: ../../playkit-ios
+  PlayKitVR:
+    :path: ../../playkit-ios-vr
+
+SPEC CHECKSUMS:
+  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
+  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
+  MetalScope: 2003b8680e279d20c7a674e81bd6d3c91fe20759
+  PlayKit: 63b7c056930f49b18f8a7d5a76b9f7002aa836a3
+  PlayKitVR: 4a75ac0c91f7352896e0788c21f1baa4017f618b
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
+  Youbora-AVPlayer: 37bba41fcc4ce11ca4f99908ee6824a3bad9dc8b
+  Youbora-YouboraLib: b237581a6cffdc62b8ba7be8c52297236a13921b
+
+PODFILE CHECKSUM: 8e5009c6ffd77a893d78481b40ac2cbcc7b8f341
+
+COCOAPODS: 1.3.1

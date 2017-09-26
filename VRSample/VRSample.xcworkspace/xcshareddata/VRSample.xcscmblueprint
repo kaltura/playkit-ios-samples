@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "30F9450BC2607D666546B5641270352E089DA5EC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "30F9450BC2607D666546B5641270352E089DA5EC" : 9223372036854775807,
+    "CED90CDB80D4899AA694A5603069EE2F08174501" : 9223372036854775807,
+    "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "DA19FAA4-9DEC-42C3-AEEA-EA04B4765F83",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "30F9450BC2607D666546B5641270352E089DA5EC" : "playkit-ios-samples\/",
+    "CED90CDB80D4899AA694A5603069EE2F08174501" : "playkit-ios-vr\/",
+    "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6" : "playkit-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VRSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VRSample\/VRSample.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios-samples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30F9450BC2607D666546B5641270352E089DA5EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios-vr.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CED90CDB80D4899AA694A5603069EE2F08174501"
+    }
+  ]
+}
