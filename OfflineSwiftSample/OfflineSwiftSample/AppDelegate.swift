@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  OfflineSampleSwift
+//  OfflineSwiftSample
 //
-//  Created by Noam Tamim on 27/04/2017.
+//  Created by Noam Tamim on 26/03/2017.
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
@@ -13,9 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        AssetPersistenceManager.sharedManager.restorePersistenceManager()
+        // Override point for customization after application launch.
         return true
     }
 
