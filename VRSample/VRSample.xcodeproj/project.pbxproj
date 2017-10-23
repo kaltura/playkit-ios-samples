@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E1C072148AA2A24F9C3086C /* Pods_VRSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A56962451A6DD47BFE9FB8 /* Pods_VRSample.framework */; };
+		BF7F10661F1CBDED00241DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F10651F1CBDED00241DC4 /* AppDelegate.swift */; };
+		BF7F10681F1CBDED00241DC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F10671F1CBDED00241DC4 /* ViewController.swift */; };
+		BF7F106B1F1CBDED00241DC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F10691F1CBDED00241DC4 /* Main.storyboard */; };
+		BF7F106D1F1CBDED00241DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F106C1F1CBDED00241DC4 /* Assets.xcassets */; };
+		BF7F10701F1CBDED00241DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F106E1F1CBDED00241DC4 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00A56962451A6DD47BFE9FB8 /* Pods_VRSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4956515569ED76A810F5B997 /* Pods-VRSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRSample/Pods-VRSample.debug.xcconfig"; sourceTree = "<group>"; };
+		A39C054909B2F04746567727 /* Pods-VRSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRSample/Pods-VRSample.release.xcconfig"; sourceTree = "<group>"; };
+		BF7F10621F1CBDED00241DC4 /* VRSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF7F10651F1CBDED00241DC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF7F10671F1CBDED00241DC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF7F106A1F1CBDED00241DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF7F106C1F1CBDED00241DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF7F106F1F1CBDED00241DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF7F10711F1CBDED00241DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF7F105F1F1CBDED00241DC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1C072148AA2A24F9C3086C /* Pods_VRSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4DEDB482EC774BE5F5281736 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00A56962451A6DD47BFE9FB8 /* Pods_VRSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF7F10591F1CBDED00241DC4 = {
+			isa = PBXGroup;
+			children = (
+				BF7F10641F1CBDED00241DC4 /* VRSample */,
+				BF7F10631F1CBDED00241DC4 /* Products */,
+				EDC85122300E3CAF35812444 /* Pods */,
+				4DEDB482EC774BE5F5281736 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF7F10631F1CBDED00241DC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F10621F1CBDED00241DC4 /* VRSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF7F10641F1CBDED00241DC4 /* VRSample */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F10651F1CBDED00241DC4 /* AppDelegate.swift */,
+				BF7F10671F1CBDED00241DC4 /* ViewController.swift */,
+				BF7F10691F1CBDED00241DC4 /* Main.storyboard */,
+				BF7F106C1F1CBDED00241DC4 /* Assets.xcassets */,
+				BF7F106E1F1CBDED00241DC4 /* LaunchScreen.storyboard */,
+				BF7F10711F1CBDED00241DC4 /* Info.plist */,
+			);
+			path = VRSample;
+			sourceTree = "<group>";
+		};
+		EDC85122300E3CAF35812444 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4956515569ED76A810F5B997 /* Pods-VRSample.debug.xcconfig */,
+				A39C054909B2F04746567727 /* Pods-VRSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF7F10611F1CBDED00241DC4 /* VRSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF7F10741F1CBDED00241DC4 /* Build configuration list for PBXNativeTarget "VRSample" */;
+			buildPhases = (
+				ADC9A3EDFCA8152F6B3FB380 /* [CP] Check Pods Manifest.lock */,
+				BF7F105E1F1CBDED00241DC4 /* Sources */,
+				BF7F105F1F1CBDED00241DC4 /* Frameworks */,
+				BF7F10601F1CBDED00241DC4 /* Resources */,
+				03E37658FF60E9707DBA22D8 /* [CP] Embed Pods Frameworks */,
+				7B4C27149A6B038C3630611C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRSample;
+			productName = VRSample;
+			productReference = BF7F10621F1CBDED00241DC4 /* VRSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF7F105A1F1CBDED00241DC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Kaltura;
+				TargetAttributes = {
+					BF7F10611F1CBDED00241DC4 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = X8RDCFJK95;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BF7F105D1F1CBDED00241DC4 /* Build configuration list for PBXProject "VRSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF7F10591F1CBDED00241DC4;
+			productRefGroup = BF7F10631F1CBDED00241DC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF7F10611F1CBDED00241DC4 /* VRSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF7F10601F1CBDED00241DC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7F10701F1CBDED00241DC4 /* LaunchScreen.storyboard in Resources */,
+				BF7F106D1F1CBDED00241DC4 /* Assets.xcassets in Resources */,
+				BF7F106B1F1CBDED00241DC4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03E37658FF60E9707DBA22D8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/MetalScope/MetalScope.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitVR/PlayKitVR.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${PODS_ROOT}/Youbora-AVPlayer/ios/dynamic/YouboraPluginAVPlayer.framework",
+				"${PODS_ROOT}/Youbora-YouboraLib/ios/dynamic/YouboraLib.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MetalScope.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitVR.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraPluginAVPlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouboraLib.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B4C27149A6B038C3630611C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-resources.sh",
+				"${PODS_ROOT}/GVRSDK/Resources/CardboardSDK.bundle",
+				"${PODS_ROOT}/GVRSDK/Resources/GoogleKitCore.bundle",
+				"${PODS_ROOT}/GVRSDK/Resources/GoogleKitDialogs.bundle",
+				"${PODS_ROOT}/GVRSDK/Resources/GoogleKitHUD.bundle",
+				"${PODS_ROOT}/GVRSDK/Resources/MaterialRobotoFontLoader.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADC9A3EDFCA8152F6B3FB380 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VRSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF7F105E1F1CBDED00241DC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7F10681F1CBDED00241DC4 /* ViewController.swift in Sources */,
+				BF7F10661F1CBDED00241DC4 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF7F10691F1CBDED00241DC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7F106A1F1CBDED00241DC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF7F106E1F1CBDED00241DC4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF7F106F1F1CBDED00241DC4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF7F10721F1CBDED00241DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF7F10731F1CBDED00241DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF7F10751F1CBDED00241DC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4956515569ED76A810F5B997 /* Pods-VRSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = VRSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.VRSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		BF7F10761F1CBDED00241DC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A39C054909B2F04746567727 /* Pods-VRSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = VRSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.VRSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF7F105D1F1CBDED00241DC4 /* Build configuration list for PBXProject "VRSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7F10721F1CBDED00241DC4 /* Debug */,
+				BF7F10731F1CBDED00241DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF7F10741F1CBDED00241DC4 /* Build configuration list for PBXNativeTarget "VRSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF7F10751F1CBDED00241DC4 /* Debug */,
+				BF7F10761F1CBDED00241DC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF7F105A1F1CBDED00241DC4 /* Project object */;
+}

@@ -26,8 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // setup the view
+    
     self.player.view = self.playerContainer;
-    [self.player prepare:self.mediaConfig];
+    
+    NSError *err = nil;
+    [self.player prepare:self.mediaConfig error:&err];
+    if (err) {
+        NSLog(@"error: %@", err.localizedDescription);
+        return;
+    }
     self.playheadSlider.continuous = NO;
 }
 
