@@ -50,12 +50,12 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
 }
 
-- (MediaEntry *)createMediaEntryWithId:(NSString *)entryId andContentURL:(NSURL *)contentURL {
+- (PKMediaEntry *)createMediaEntryWithId:(NSString *)entryId andContentURL:(NSURL *)contentURL {
     // create media source and initialize a media entry with that source
-    MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
+    NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
     // setup media entry
-    return [[MediaEntry alloc] init:entryId sources:sources duration:-1];
+    return [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
 }
 
 // Populate the video array.
@@ -127,7 +127,7 @@
         if (_player) {
             NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"];
             NSString *entryId = @"Kaltura Media";
-            MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
+            PKMediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
             
             MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
             IMAConfig *adsConfig = [IMAConfig new];
@@ -193,10 +193,10 @@
     
     // create media source and initialize a media entry with that source
     NSString *entryId = @"sintel";
-    MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
+    NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
     // setup media entry
-    MediaEntry *mediaEntry = [[MediaEntry alloc] init:entryId sources:sources duration:-1];
+    PKMediaEntry *mediaEntry = [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
     
     // create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];

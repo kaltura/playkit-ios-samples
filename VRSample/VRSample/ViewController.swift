@@ -13,8 +13,11 @@ import PlayKit
  This sample will show you how to create a player with basic functionality.
  The steps required:
  1. Load player with plugin config (only if has plugins).
- 2. Register player events.
+ 2. Set delegate.
  3. Prepare Player.
+ 4. impliment delegate method: shouldAddPlayerViewController.
+ 5. Get PKVRController.
+ 6. Use PKVRController API.
  */
 
 class ViewController: UIViewController, PlayerDelegate {
@@ -30,28 +33,15 @@ class ViewController: UIViewController, PlayerDelegate {
         // 1. Load the player
         do {
             self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+            // 2. Set delegate
             self.player?.delegate = self
-            // 2. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            
-//            self.player?.addObserver(self, events: [PlayerEvent.canPlay]) { event in
-//                self.player?.play()
-//            }
-            
+
             // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
             self.preparePlayer()
-            
-//            self.player?.play()
         } catch let e {
             // error loading the player
             print("error:", e.localizedDescription)
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 /************************/
@@ -71,14 +61,7 @@ class ViewController: UIViewController, PlayerDelegate {
             if(!(error != nil)) {
                 // create media config
                 let mediaConfig = MediaConfig(mediaEntry: mediaEntry!)
-                
-                do {
-                    // prepare the player
-                    try self.player!.prepare(mediaConfig)
-                } catch let e {
-                    // error loading the player
-                    print("error:", e.localizedDescription)
-                }
+                self.player!.prepare(mediaConfig)
             }
         }
     }
@@ -125,19 +108,24 @@ class ViewController: UIViewController, PlayerDelegate {
         player.currentTime = player.duration * Double(slider.value)
     }
     
+    @IBOutlet weak var vrBtn: UIButton!
+
+/************************/
+// MARK: - VR
+/***********************/
+    
+    // 4. Implement delegate method: shouldAddPlayerViewController
     func shouldAddPlayerViewController(_ vc: UIViewController) {
-        print("yei!")
         self.addChildViewController(vc)
         self.playerContainer.addSubview(vc.view)
         vc.didMove(toParentViewController: self)
         UIApplication.shared.keyWindow!.addSubview(self.vrBtn)
     }
     
-    @IBOutlet weak var vrBtn: UIButton!
     @IBAction func setVRMode(_ sender: Any) {
-        var vrController: PKVRController = self.player?.getController(type: PKVRController.self) as! PKVRController
-        
-        vrController.setVRModeEnabled(true)
+        // 5. Get PKVRController
+        let vrController = self.player?.getController(ofType:  PKVRController.self)
+        // 6. Use PKVRController API
+        vrController?.setVRModeEnabled(true)
     }
-    
 }

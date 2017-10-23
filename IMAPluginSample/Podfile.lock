@@ -1,25 +1,25 @@
 PODS:
-  - GoogleAds-IMA-iOS-SDK (3.5.2)
+  - GoogleAds-IMA-iOS-SDK (3.6.0)
   - KalturaNetKit (0.0.17):
     - KalturaNetKit/Core (= 0.0.17)
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
   - Log (1.0)
-  - PlayKit (3.2.0):
-    - PlayKit/Core (= 3.2.0)
-  - PlayKit/AnalyticsCommon (3.2.0):
+  - PlayKit (3.2.x-dev):
+    - PlayKit/Core (= 3.2.x-dev)
+  - PlayKit/AnalyticsCommon (3.2.x-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.2.0):
+  - PlayKit/Core (3.2.x-dev):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/YouboraPlugin (3.2.0):
+  - PlayKit/YouboraPlugin (3.2.x-dev):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.4.5)
   - PlayKit_IMA (0.0.1):
-    - GoogleAds-IMA-iOS-SDK (= 3.5.2)
+    - GoogleAds-IMA-iOS-SDK (= 3.6.0)
     - PlayKit/Core
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
@@ -28,37 +28,27 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.3.10)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
-  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
-  - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `master`)
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit/YouboraPlugin (from `../../playkit-ios`)
+  - PlayKit_IMA (from `../../playkit-ios-ima`)
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: master
-    :git: https://github.com/kaltura/playkit-ios.git
+    :path: ../../playkit-ios
   PlayKit_IMA:
-    :branch: master
-    :git: https://github.com/kaltura/playkit-ios-ima.git
-
-CHECKOUT OPTIONS:
-  PlayKit:
-    :commit: eb8cc8cd913c0e36e797c4a3f52c859244aeab4c
-    :git: https://github.com/kaltura/playkit-ios.git
-  PlayKit_IMA:
-    :commit: 637d584d209b1ed8bf949011fc8dc9523378b68c
-    :git: https://github.com/kaltura/playkit-ios-ima.git
+    :path: ../../playkit-ios-ima
 
 SPEC CHECKSUMS:
-  GoogleAds-IMA-iOS-SDK: a0692ecc51d7c8816d5245edfb8a69c553cd84d4
+  GoogleAds-IMA-iOS-SDK: 193ca918ed33278c29c96683f500524bf788d509
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: ed72c7d27621628239050e9cb8251d95362d9a12
-  PlayKit_IMA: b7a781ee79d9d2c02b72c26df0ec05534344de02
+  PlayKit: 63b7c056930f49b18f8a7d5a76b9f7002aa836a3
+  PlayKit_IMA: 59a03e6a9faf8674e6c18235a44a2e905f083b9a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: 37bba41fcc4ce11ca4f99908ee6824a3bad9dc8b
   Youbora-YouboraLib: b237581a6cffdc62b8ba7be8c52297236a13921b
 
-PODFILE CHECKSUM: 93bea58121dcbe0d412643cfd6b6b50634395d88
+PODFILE CHECKSUM: 60da0744461383d1ad72b32f252384e64ea96a14
 
 COCOAPODS: 1.3.1

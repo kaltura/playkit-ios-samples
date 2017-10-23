@@ -4,7 +4,7 @@ PODS:
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
   - Log (1.0)
-  - MetalScope (0.15.1)
+  - MetalScope (0.16.0)
   - PlayKit (3.2.x-dev):
     - PlayKit/Core (= 3.2.x-dev)
   - PlayKit/AnalyticsCommon (3.2.x-dev):
@@ -19,7 +19,7 @@ PODS:
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.4.5)
   - PlayKitVR (0.0.1):
-    - MetalScope
+    - MetalScope (= 0.16.0)
     - PlayKit/Core
     - PlayKit/YouboraPlugin
   - SwiftyJSON (3.1.4)
@@ -42,9 +42,9 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  MetalScope: 2003b8680e279d20c7a674e81bd6d3c91fe20759
+  MetalScope: 993be4faaad75645d72d9e8701ef88368c56752d
   PlayKit: 63b7c056930f49b18f8a7d5a76b9f7002aa836a3
-  PlayKitVR: 4a75ac0c91f7352896e0788c21f1baa4017f618b
+  PlayKitVR: a7f89abe11da291db6b2f36ae9cb5b99d298827a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: 37bba41fcc4ce11ca4f99908ee6824a3bad9dc8b
