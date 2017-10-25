@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,20 +23,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-bW-STh" customClass="PlayerView" customModule="PlayKit">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-Yd-oCZ">
-                                        <rect key="frame" x="176.5" y="54" width="22" height="22"/>
-                                        <connections>
-                                            <action selector="setVRMode:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Gac-Vh-SoN"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="ldn-Yd-oCZ" firstAttribute="centerX" secondItem="XYE-bW-STh" secondAttribute="centerX" id="6Cl-ud-rBE"/>
-                                    <constraint firstItem="ldn-Yd-oCZ" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="top" constant="54" id="gvT-Q6-lFa"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ldn-Yd-oCZ">
+                                <rect key="frame" x="20" y="20" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="48" id="TjJ-N7-7as"/>
+                                    <constraint firstAttribute="height" constant="48" id="iQB-Pv-62w"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="setVRMode:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Gac-Vh-SoN"/>
+                                </connections>
+                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-vm-eFy">
                                 <rect key="frame" x="0.0" y="603" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fyi-JH-bGD">
@@ -92,8 +90,10 @@
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="507-if-eVC"/>
                             <constraint firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
                             <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
+                            <constraint firstItem="ldn-Yd-oCZ" firstAttribute="top" secondItem="hdM-Na-ftz" secondAttribute="bottom" id="Adc-Z0-MYO"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="p5V-JA-dmL" secondAttribute="top" id="QdJ-99-hqG"/>
                             <constraint firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
+                            <constraint firstItem="ldn-Yd-oCZ" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" constant="20" id="tPt-ZU-hjP"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="wni-xA-PRH"/>
                         </constraints>
                     </view>

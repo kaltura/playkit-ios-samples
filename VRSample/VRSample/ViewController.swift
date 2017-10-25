@@ -113,15 +113,7 @@ class ViewController: UIViewController, PlayerDelegate {
 /************************/
 // MARK: - VR
 /***********************/
-    
-    // 4. Implement delegate method: shouldAddPlayerViewController
-    func shouldAddPlayerViewController(_ vc: UIViewController) {
-        self.addChildViewController(vc)
-        self.playerContainer.addSubview(vc.view)
-        vc.didMove(toParentViewController: self)
-        UIApplication.shared.keyWindow!.addSubview(self.vrBtn)
-    }
-    
+
     @IBAction func setVRMode(_ sender: Any) {
         // 5. Get PKVRController
         let vrController = self.player?.getController(ofType:  PKVRController.self)
