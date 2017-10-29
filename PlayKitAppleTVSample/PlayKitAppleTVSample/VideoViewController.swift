@@ -64,8 +64,8 @@ class VideoViewController: UIViewController {
             print("failed to create player!")
             return
         }
-        player.view.backgroundColor = UIColor.black
-        player.view.add(toContainer: self.view)
+        player.view?.backgroundColor = UIColor.black
+        player.view?.add(toContainer: self.view)
         self.player = player
         
         playerSettings.createMediaConfig() { [weak self] (mediaConfig) in
@@ -83,11 +83,11 @@ class VideoViewController: UIViewController {
         
         let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeUp(gesture:)))
         swipeUpGesture.direction = .up
-        player.view.addGestureRecognizer(swipeUpGesture)
+        player.view?.addGestureRecognizer(swipeUpGesture)
         
         let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeDown(gesture:)))
         swipeDownGesture.direction = .down
-        player.view.addGestureRecognizer(swipeDownGesture)
+        player.view?.addGestureRecognizer(swipeDownGesture)
     }
 
     override func viewWillAppear(_ animated: Bool) {

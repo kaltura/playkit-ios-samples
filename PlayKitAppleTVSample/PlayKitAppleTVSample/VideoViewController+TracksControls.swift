@@ -37,7 +37,7 @@ extension VideoViewController {
         centeredView.addSubview(captionsButton)
         centeredView.addSubview(audioTracksButton)
         tracksControlsView.contentView.addSubview(centeredView)
-        self.player.view.addSubview(tracksControlsView)
+        self.player.view?.addSubview(tracksControlsView)
         
         // add constraints //
         centeredView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,10 +45,10 @@ extension VideoViewController {
         captionsButton.translatesAutoresizingMaskIntoConstraints = false
         audioTracksButton.translatesAutoresizingMaskIntoConstraints = false
         
-        tracksControlsView.leftAnchor.constraint(equalTo: self.player.view.leftAnchor).isActive = true
-        tracksControlsView.rightAnchor.constraint(equalTo: self.player.view.rightAnchor).isActive = true
-        tracksControlsView.topAnchor.constraint(equalTo: self.player.view.topAnchor).isActive = true
-        tracksControlsView.heightAnchor.constraint(equalTo: self.player.view.heightAnchor, multiplier: 0.15).isActive = true
+        tracksControlsView.leftAnchor.constraint(equalTo: self.player.view!.leftAnchor).isActive = true
+        tracksControlsView.rightAnchor.constraint(equalTo: self.player.view!.rightAnchor).isActive = true
+        tracksControlsView.topAnchor.constraint(equalTo: self.player.view!.topAnchor).isActive = true
+        tracksControlsView.heightAnchor.constraint(equalTo: self.player.view!.heightAnchor, multiplier: 0.15).isActive = true
         
         centeredView.centerYAnchor.constraint(equalTo: tracksControlsView.centerYAnchor).isActive = true
         centeredView.centerXAnchor.constraint(equalTo: tracksControlsView.centerXAnchor).isActive = true
@@ -93,7 +93,7 @@ extension VideoViewController {
         
         guard let tracksControlsView = self.tracksControlsView else { return }
         UIView.animate(withDuration: self.animationDuration, animations: {
-            self.player?.view.layoutIfNeeded()
+            self.player?.view?.layoutIfNeeded()
             self.tracksControlsView?.alpha = 0
         }) { (finished) in
             self.focusedViews = []
