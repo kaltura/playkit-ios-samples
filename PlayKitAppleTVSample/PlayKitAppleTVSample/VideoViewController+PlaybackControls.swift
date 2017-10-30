@@ -39,7 +39,7 @@ extension VideoViewController {
         playbackControlsView.contentView.addSubview(currentTimeLabel)
         playbackControlsView.contentView.addSubview(durationLabel)
         playbackControlsView.contentView.addSubview(currentTimeLabel)
-        self.player.view.addSubview(playbackControlsView)
+        self.player.view?.addSubview(playbackControlsView)
         self.playbackControlsView = playbackControlsView
         self.progressView = progressView
         
@@ -50,11 +50,11 @@ extension VideoViewController {
         durationLabel.translatesAutoresizingMaskIntoConstraints = false
         currentTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let topConstraint = playbackControlsView.topAnchor.constraint(equalTo: self.player.view.bottomAnchor)
+        let topConstraint = playbackControlsView.topAnchor.constraint(equalTo: self.player.view!.bottomAnchor)
         topConstraint.isActive = true
-        playbackControlsView.leftAnchor.constraint(equalTo: self.player.view.leftAnchor).isActive = true
-        playbackControlsView.rightAnchor.constraint(equalTo: self.player.view.rightAnchor).isActive = true
-        playbackControlsView.heightAnchor.constraint(equalTo: self.player.view.heightAnchor, multiplier: 0.2).isActive = true
+        playbackControlsView.leftAnchor.constraint(equalTo: self.player.view!.leftAnchor).isActive = true
+        playbackControlsView.rightAnchor.constraint(equalTo: self.player.view!.rightAnchor).isActive = true
+        playbackControlsView.heightAnchor.constraint(equalTo: self.player.view!.heightAnchor, multiplier: 0.2).isActive = true
         
         let sideSpacing: CGFloat = 44
         let padding: CGFloat = 20
@@ -113,17 +113,17 @@ extension VideoViewController {
         self.updateProgress(animated: false)
         
         // update bottom constraint for nice animation
-        let bottomConstraint = playbackControlsView.bottomAnchor.constraint(equalTo: self.player.view.bottomAnchor)
+        let bottomConstraint = playbackControlsView.bottomAnchor.constraint(equalTo: self.player.view!.bottomAnchor)
         topConstraint.isActive = false
         bottomConstraint.isActive = true
         self.playbackControlsViewBottomConstraint = bottomConstraint
         // animate showing the playback controls
         UIView.animate(withDuration: self.animationDuration, animations: {
             playbackControlsView.alpha = 1
-            self.player.view.setNeedsLayout()
+            self.player.view?.setNeedsLayout()
         }) { (finished) in
-            self.player.view.setNeedsFocusUpdate()
-            self.player.view.updateFocusIfNeeded()
+            self.player.view?.setNeedsFocusUpdate()
+            self.player.view?.updateFocusIfNeeded()
         }
     }
     
@@ -132,7 +132,7 @@ extension VideoViewController {
         if let bottomConstraint = self.playbackControlsViewBottomConstraint {
             bottomConstraint.constant = playbackControlsView.frame.height
             UIView.animate(withDuration: self.animationDuration, animations: {
-                self.player?.view.layoutIfNeeded()
+                self.player?.view?.layoutIfNeeded()
                 self.playbackControlsView?.alpha = 0
             }) { (finished) in
                 self.focusedViews = []

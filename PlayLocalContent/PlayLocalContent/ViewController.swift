@@ -67,10 +67,10 @@ class ViewController: UIViewController {
         // create media source and initialize a media entry with that source
         let entryId = "sintel"
         
-        let source = MediaSource(entryId, contentUrl: URL(fileURLWithPath: contentUrl), drmData: nil, mediaFormat: .mp4)
+        let source = PKMediaSource(entryId, contentUrl: URL(fileURLWithPath: contentUrl), drmData: nil, mediaFormat: .mp4)
         
         // setup media entry
-        let mediaEntry = MediaEntry(entryId, sources: [source], duration: -1)
+        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
         
         // create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)

@@ -72,8 +72,8 @@ class PlayerSettings {
         }
     }
     
-    private func createMediaEntry(fromUrl url: String, andId id: String) -> MediaEntry {
-        let mediaSource = MediaSource.init(id, contentUrl: URL(string: url))
-        return MediaEntry.init(id, sources: [mediaSource])
+    private func createMediaEntry(fromUrl url: String, andId id: String) -> PKMediaEntry {
+        let mediaSource = PKMediaSource.init(id, contentUrl: URL(string: url))
+        return PKMediaEntry.init(id, sources: [mediaSource])
     }
 }
