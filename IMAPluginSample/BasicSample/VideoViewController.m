@@ -30,7 +30,7 @@
     self.player.view = self.playerContainer;
     
     NSError *err = nil;
-    [self.player prepare:self.mediaConfig error:&err];
+    [self.player prepare:self.mediaConfig];
     if (err) {
         NSLog(@"error: %@", err.localizedDescription);
         return;

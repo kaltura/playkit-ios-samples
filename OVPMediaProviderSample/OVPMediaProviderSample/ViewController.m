@@ -63,8 +63,8 @@
     OVPMediaProvider *mediaProvider = [[OVPMediaProvider alloc] init:sessionProvider];
     mediaProvider.entryId = @"1_673p2v7h";
     
-    [mediaProvider loadMediaWithCallback:^(MediaEntry * _Nullable mediaEntry, NSError * _Nullable error) {
-        if (!error) {
+    [mediaProvider loadMediaWithCallback:^(PKMediaEntry * _Nullable mediaEntry, NSError * _Nullable error) {
+        if (!ferror) {
             // create media config
             MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
             

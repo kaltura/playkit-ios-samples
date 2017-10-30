@@ -73,10 +73,10 @@
     
     // create media source and initialize a media entry with that source
     NSString *entryId = @"sintel";
-    MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
+    NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
     // setup media entry
-    MediaEntry *mediaEntry = [[MediaEntry alloc] init:entryId sources:sources duration:-1];
+    PKMediaEntry *mediaEntry = [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
     
     // create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];

@@ -80,17 +80,17 @@
 - (MediaConfig *)getDefaultMediaConfig {
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     NSString *entryId = @"sintel";
-    MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
+    PKMediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
     // create media config
     return [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
 }
 
-- (MediaEntry *)createMediaEntryWithId:(NSString *)entryId andContentURL:(NSURL *)contentURL {
+- (PKMediaEntry *)createMediaEntryWithId:(NSString *)entryId andContentURL:(NSURL *)contentURL {
     // create media source and initialize a media entry with that source
-    MediaSource* source = [[MediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<MediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
+    NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
     // setup media entry
-    return [[MediaEntry alloc] init:entryId sources:sources duration:-1];
+    return [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
 }
 
 /*********************************/
@@ -125,7 +125,7 @@
     // create mediaEntry for change media, you can use differrent params here.
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"];
     NSString *entryId = @"KalturaMedia";
-    MediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
+    PKMediaEntry *mediaEntry = [self createMediaEntryWithId:entryId andContentURL:contentURL];
     // Resets The Player And Prepares for Change Media
     [self.player stop]; // 1. Stop Player
     // Create new Media Config

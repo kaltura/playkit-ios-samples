@@ -102,9 +102,9 @@ class ViewController: UIViewController, PlayerDelegate {
         
         // create media source and initialize a media entry with that source
         let entryId = "sintel"
-        let source = MediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
+        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
         // setup media entry
-        let mediaEntry = MediaEntry(entryId, sources: [source], duration: -1)
+        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
         
         // create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
