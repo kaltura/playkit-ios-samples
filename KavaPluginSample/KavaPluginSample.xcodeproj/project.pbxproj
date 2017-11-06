@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F021731E5CB6EA62E9A91BA /* Pods_KavaPluginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */; };
+		BF9F689A1FA5F2D800454F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F68991FA5F2D800454F66 /* AppDelegate.swift */; };
+		BF9F689C1FA5F2D800454F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F689B1FA5F2D800454F66 /* ViewController.swift */; };
+		BF9F689F1FA5F2D800454F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9F689D1FA5F2D800454F66 /* Main.storyboard */; };
+		BF9F68A11FA5F2D800454F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F68A01FA5F2D800454F66 /* Assets.xcassets */; };
+		BF9F68A41FA5F2D800454F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KavaPluginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample.release.xcconfig"; sourceTree = "<group>"; };
+		958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KavaPluginSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		BF9F68961FA5F2D700454F66 /* KavaPluginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KavaPluginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF9F68991FA5F2D800454F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BF9F689B1FA5F2D800454F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF9F689E1FA5F2D800454F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BF9F68A01FA5F2D800454F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BF9F68A31FA5F2D800454F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BF9F68A51FA5F2D800454F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KavaPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF9F68931FA5F2D700454F66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F021731E5CB6EA62E9A91BA /* Pods_KavaPluginSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		02D0B6FDC227D26A643B6ACC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */,
+				80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D2447BFE6484DDD942AB62C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF9F688D1FA5F2D700454F66 = {
+			isa = PBXGroup;
+			children = (
+				BF9F68981FA5F2D800454F66 /* KavaPluginSample */,
+				BF9F68971FA5F2D700454F66 /* Products */,
+				02D0B6FDC227D26A643B6ACC /* Pods */,
+				6D2447BFE6484DDD942AB62C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BF9F68971FA5F2D700454F66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F68961FA5F2D700454F66 /* KavaPluginSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF9F68981FA5F2D800454F66 /* KavaPluginSample */ = {
+			isa = PBXGroup;
+			children = (
+				BF9F68991FA5F2D800454F66 /* AppDelegate.swift */,
+				BF9F689B1FA5F2D800454F66 /* ViewController.swift */,
+				BF9F689D1FA5F2D800454F66 /* Main.storyboard */,
+				BF9F68A01FA5F2D800454F66 /* Assets.xcassets */,
+				BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */,
+				BF9F68A51FA5F2D800454F66 /* Info.plist */,
+			);
+			path = KavaPluginSample;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF9F68951FA5F2D700454F66 /* KavaPluginSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF9F68A81FA5F2D800454F66 /* Build configuration list for PBXNativeTarget "KavaPluginSample" */;
+			buildPhases = (
+				9EB65D062C9FB3B913B0872C /* [CP] Check Pods Manifest.lock */,
+				BF9F68921FA5F2D700454F66 /* Sources */,
+				BF9F68931FA5F2D700454F66 /* Frameworks */,
+				BF9F68941FA5F2D700454F66 /* Resources */,
+				85E86D35FCD36A3AE6B94AC8 /* [CP] Embed Pods Frameworks */,
+				110192192CE114D0088311D6 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KavaPluginSample;
+			productName = KavaPluginSample;
+			productReference = BF9F68961FA5F2D700454F66 /* KavaPluginSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BF9F688E1FA5F2D700454F66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Kaltura;
+				TargetAttributes = {
+					BF9F68951FA5F2D700454F66 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = BF9F68911FA5F2D700454F66 /* Build configuration list for PBXProject "KavaPluginSample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BF9F688D1FA5F2D700454F66;
+			productRefGroup = BF9F68971FA5F2D700454F66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF9F68951FA5F2D700454F66 /* KavaPluginSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF9F68941FA5F2D700454F66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9F68A41FA5F2D800454F66 /* LaunchScreen.storyboard in Resources */,
+				BF9F68A11FA5F2D800454F66 /* Assets.xcassets in Resources */,
+				BF9F689F1FA5F2D800454F66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		110192192CE114D0088311D6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85E86D35FCD36A3AE6B94AC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitKava/PlayKitKava.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitKava.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EB65D062C9FB3B913B0872C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KavaPluginSample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF9F68921FA5F2D700454F66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF9F689C1FA5F2D800454F66 /* ViewController.swift in Sources */,
+				BF9F689A1FA5F2D800454F66 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BF9F689D1FA5F2D800454F66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9F689E1FA5F2D800454F66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9F68A31FA5F2D800454F66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF9F68A61FA5F2D800454F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BF9F68A71FA5F2D800454F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BF9F68A91FA5F2D800454F66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = KavaPluginSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.KavaPluginSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF9F68AA1FA5F2D800454F66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
+				INFOPLIST_FILE = KavaPluginSample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.KavaPluginSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF9F68911FA5F2D700454F66 /* Build configuration list for PBXProject "KavaPluginSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9F68A61FA5F2D800454F66 /* Debug */,
+				BF9F68A71FA5F2D800454F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF9F68A81FA5F2D800454F66 /* Build configuration list for PBXNativeTarget "KavaPluginSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF9F68A91FA5F2D800454F66 /* Debug */,
+				BF9F68AA1FA5F2D800454F66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BF9F688E1FA5F2D700454F66 /* Project object */;
+}
