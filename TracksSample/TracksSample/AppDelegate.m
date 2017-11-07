@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  BasicSample
+//  TracksSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
-//  Copyright © 2017 Kaltura. All rights reserved.
+//  Created by Vadik on 07/11/2017.
+//  Copyright © 2017 kaltura. All rights reserved.
 //
 
 #import "AppDelegate.h"

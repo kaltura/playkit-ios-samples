@@ -111,10 +111,9 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY0-yT-VAg">
-                                            <rect key="frame" x="8" y="8" width="46" height="48"/>
+                                            <rect key="frame" x="8" y="8" width="30" height="48"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="48" id="lRl-kC-fIj"/>
-                                                <constraint firstAttribute="width" constant="46" id="s5S-xd-7X9"/>
                                             </constraints>
                                             <state key="normal" title="Play">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,9 +123,8 @@
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ya6-GX-bA9">
-                                            <rect key="frame" x="59" y="8" width="48" height="48"/>
+                                            <rect key="frame" x="43" y="8" width="42" height="48"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="48" id="7Qs-W6-XiC"/>
                                                 <constraint firstAttribute="height" constant="48" id="CsA-5b-dTo"/>
                                             </constraints>
                                             <state key="normal" title="Pause">
@@ -137,7 +135,7 @@
                                             </connections>
                                         </button>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wpT-ut-4dy">
-                                            <rect key="frame" x="120" y="17" width="249" height="31"/>
+                                            <rect key="frame" x="98" y="17" width="271" height="31"/>
                                             <connections>
                                                 <action selector="didSeek:" destination="Yiq-tH-5V9" eventType="valueChanged" id="gVh-eI-5Bc"/>
                                             </connections>

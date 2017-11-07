@@ -19,7 +19,7 @@
 @property (weak, nonatomic) NSArray *audioTracks;
 @property (weak, nonatomic) NSArray *textTracks;
 @property (weak, nonatomic) NSArray *selectedTracks;
-    
+
 @end
 
 @implementation ViewController
@@ -43,7 +43,7 @@
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
-    
+
 - (void)setupPlayer {
     NSURL *contentURL = [[NSURL alloc] initWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
     
@@ -113,7 +113,7 @@
 }
 
 // Get Current Bitrate
-- (void)currentBitrateHandler {   
+- (void)currentBitrateHandler {
     [self.player addObserver:self events:@[PlayerEvent.playbackInfo] block:^(PKEvent * _Nonnull event) {
         if ([event isKindOfClass:PlayerEvent.playbackInfo]) {
             // Get Current Bitrate Value
@@ -165,14 +165,14 @@
 /*********************************/
 #pragma mark - Actions
 /*********************************/
-    
+
 - (IBAction)playTouched:(UIButton *)sender {
     if(!self.player.isPlaying) {
         self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
         [self.player play];
     }
 }
-    
+
 - (IBAction)pauseTouched:(UIButton *)sender {
     if(self.player.isPlaying) {
         [self.playheadTimer invalidate];
@@ -180,13 +180,14 @@
         [self.player pause];
     }
 }
-    
+
 - (IBAction)playheadValueChanged:(UISlider *)sender {
     NSLog(@"playhead value: %f", sender.value);
     self.player.currentTime = self.player.duration * sender.value;
 }
-   
+
 - (void)playheadUpdate {
     self.playheadSlider.value = self.player.currentTime / self.player.duration;
 }
 @end
+
