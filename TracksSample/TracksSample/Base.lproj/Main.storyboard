@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -38,7 +38,7 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="playTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="vB9-SA-cNT"/>
+                                                <action selector="playTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="jtU-Pi-YOm"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9dW-d4-ZXT">
@@ -47,13 +47,13 @@
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="pauseTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="6Ih-ab-755"/>
+                                                <action selector="pauseTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="8e8-4Y-vQt"/>
                                             </connections>
                                         </button>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-LM-qs2">
                                             <rect key="frame" x="108" y="17" width="261" height="31"/>
                                             <connections>
-                                                <action selector="playheadValueChanged:" destination="yQf-LR-HVa" eventType="valueChanged" id="cOy-C8-3ft"/>
+                                                <action selector="playheadValueChanged:" destination="yQf-LR-HVa" eventType="valueChanged" id="JZW-uC-GZI"/>
                                             </connections>
                                         </slider>
                                     </subviews>
@@ -116,17 +116,19 @@
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="rpY-Fm-cXa" secondAttribute="bottom" id="XSa-Yg-S3V"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" constant="8" id="c6j-MD-5Jc"/>
                             <constraint firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
+                            <constraint firstItem="LDa-qA-bGs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p5V-JA-dmL" secondAttribute="leadingMargin" id="hCQ-fD-b0O"/>
                             <constraint firstAttribute="trailing" secondItem="rpY-Fm-cXa" secondAttribute="trailing" constant="8" id="jbj-vx-esL"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GjG-IB-70v" secondAttribute="trailingMargin" id="oJL-4M-Cue"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="wni-xA-PRH"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="LDa-qA-bGs" secondAttribute="bottom" constant="8" id="yjr-cA-AaV"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="audioBtn" destination="GjG-IB-70v" id="gyP-7a-8F7"/>
-                        <outlet property="picker" destination="rpY-Fm-cXa" id="z5Z-7i-8Fq"/>
-                        <outlet property="playerContainer" destination="XYE-bW-STh" id="8os-dt-rVa"/>
-                        <outlet property="playheadSlider" destination="QMa-LM-qs2" id="P8h-Zi-qKc"/>
-                        <outlet property="textBtn" destination="LDa-qA-bGs" id="taP-gE-EyP"/>
+                        <outlet property="audioBtn" destination="GjG-IB-70v" id="zr4-f5-qjS"/>
+                        <outlet property="picker" destination="rpY-Fm-cXa" id="5mW-cj-CCT"/>
+                        <outlet property="playerContainer" destination="XYE-bW-STh" id="YgH-1Y-xya"/>
+                        <outlet property="playheadSlider" destination="QMa-LM-qs2" id="sX0-Fr-2Km"/>
+                        <outlet property="textBtn" destination="LDa-qA-bGs" id="pve-2R-R3F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nI-3U-OAI" sceneMemberID="firstResponder"/>

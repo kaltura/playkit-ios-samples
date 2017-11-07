@@ -10,7 +10,15 @@ platform :ios, '9.0' # (define required version)
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
 
-target 'BasicSample' do
+target ‘TracksSample' do
+    if defined? PLAYKIT_LOCAL 
+    	  pod 'PlayKit', :path => PLAYKIT_LOCAL
+    else
+	      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    end
+end
+
+target ‘TracksSample-swift’ do
     if defined? PLAYKIT_LOCAL 
     	  pod 'PlayKit', :path => PLAYKIT_LOCAL
     else

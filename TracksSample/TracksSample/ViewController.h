@@ -1,14 +1,14 @@
 //
 //  ViewController.h
-//  BasicSample
+//  TracksSample
 //
-//  Created by Gal Orlanczyk on 15/03/2017.
-//  Copyright © 2017 Kaltura. All rights reserved.
+//  Created by Vadik on 07/11/2017.
+//  Copyright © 2017 kaltura. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *audioBtn;
 @property (weak, nonatomic) IBOutlet UIButton *textBtn;
