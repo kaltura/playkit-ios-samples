@@ -61,11 +61,6 @@
     }
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
-}
-
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     // remove observers
