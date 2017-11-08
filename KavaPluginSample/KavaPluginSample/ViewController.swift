@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         // 1. Load the player
         do {
-            let kavaConfig = KavaPluginConfig.init(uiconfId: -1, partnerId: -1, ks: "-", playbackContext: "-", referrerAsBase64: "-", baseUrl: "-", customVar1: "-", customVar2: "-", customVar3: "-")
+            let kavaConfig = KavaPluginConfig.init(uiconfId: -1, partnerId: 1424501 , ks: nil, playbackContext: nil, referrer: nil, customVar1: nil, customVar2: nil, customVar3: nil)
             let pluginConfig = PluginConfig(config: [KavaPlugin.pluginName: kavaConfig])
             self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
             // 2. Register events if have ones.
@@ -57,19 +57,21 @@ class ViewController: UIViewController {
         // setup the player's view
         self.player?.view = self.playerContainer
         
-        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
-        
-        // create media source and initialize a media entry with that source
-        let entryId = "sintel"
-        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
-        // setup media entry
-        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
-        
-        // create media config
-        let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
-        
-        // prepare the player
-        self.player!.prepare(mediaConfig)
+        let serverURL = "https://cdnapisec.kaltura.com"
+        let partnerId: Int64 = 1424501 // put your partner id here
+        // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
+        let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:nil )
+        let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
+        mediaProvider.entryId = "1_djnefl4e"
+        mediaProvider.loadMedia { (mediaEntry, error) in
+            if let me = mediaEntry, error == nil {
+                // create media config
+                let mediaConfig = MediaConfig(mediaEntry: me, startTime: 0.0)
+                
+                // prepare the player
+                self.player!.prepare(mediaConfig)
+            }
+        }
     }
     
     /************************/
