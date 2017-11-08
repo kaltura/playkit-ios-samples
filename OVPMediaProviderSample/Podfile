@@ -8,7 +8,7 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_LOCAL='../../playkit-ios'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || ‘develop’
 
 target 'OVPMediaProviderSample' do
     if defined? PLAYKIT_LOCAL

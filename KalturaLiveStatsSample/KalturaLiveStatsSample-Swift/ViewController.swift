@@ -27,7 +27,7 @@ import PlayKit
 class ViewController: UIViewController {
     var player: Player?
     var playheadTimer: Timer?
-    @IBOutlet weak var playerContainer: UIView!
+    @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
     override func viewDidLoad() {
@@ -53,17 +53,6 @@ class ViewController: UIViewController {
         }
     }
     
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        guard let player = self.player else {
-            print("player is not set")
-            return
-        }
-        
-        player.view.frame = self.playerContainer.bounds
-    }
-    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // remove observers
@@ -79,23 +68,21 @@ class ViewController: UIViewController {
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
+        self.player?.view = self.playerContainer
+        
         let contentURL = "https://www.kaltura.com/p/1953371/sp/0/playManifest/entryId/0_ghzg9q0q/format/applehttp/protocol/https/a.m3u8"
         
         // create media source and initialize a media entry with that source
         let entryId = "sintel"
-        let source = MediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
+        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
         // setup media entry
-        let mediaEntry = MediaEntry(entryId, sources: [source], duration: -1)
+        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
         
         // create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
         
         // prepare the player
         self.player!.prepare(mediaConfig)
-        
-        // setup the player's view
-        self.playerContainer.addSubview(self.player!.view)
-        self.player!.view.frame = self.playerContainer.bounds
     }
     
 /************************/

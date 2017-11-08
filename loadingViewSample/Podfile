@@ -9,7 +9,7 @@ platform :ios, '9.0' # (define required version)
 # PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || ‘develop’
 
 target 'loadingViewSample' do
     if defined? PLAYKIT_LOCAL
