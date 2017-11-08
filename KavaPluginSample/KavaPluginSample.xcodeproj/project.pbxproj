@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2F021731E5CB6EA62E9A91BA /* Pods_KavaPluginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */; };
+		BD1E08AB1FB3106A00914A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1E08A91FB3106A00914A3E /* Main.storyboard */; };
 		BF9F689A1FA5F2D800454F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F68991FA5F2D800454F66 /* AppDelegate.swift */; };
 		BF9F689C1FA5F2D800454F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F689B1FA5F2D800454F66 /* ViewController.swift */; };
-		BF9F689F1FA5F2D800454F66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9F689D1FA5F2D800454F66 /* Main.storyboard */; };
 		BF9F68A11FA5F2D800454F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F68A01FA5F2D800454F66 /* Assets.xcassets */; };
 		BF9F68A41FA5F2D800454F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -18,10 +18,10 @@
 /* Begin PBXFileReference section */
 		80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KavaPluginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample.release.xcconfig"; sourceTree = "<group>"; };
 		958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KavaPluginSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		BD1E08AA1FB3106A00914A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF9F68961FA5F2D700454F66 /* KavaPluginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KavaPluginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9F68991FA5F2D800454F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF9F689B1FA5F2D800454F66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BF9F689E1FA5F2D800454F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF9F68A01FA5F2D800454F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9F68A31FA5F2D800454F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF9F68A51FA5F2D800454F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,11 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				BF9F68991FA5F2D800454F66 /* AppDelegate.swift */,
-				BF9F689B1FA5F2D800454F66 /* ViewController.swift */,
-				BF9F689D1FA5F2D800454F66 /* Main.storyboard */,
 				BF9F68A01FA5F2D800454F66 /* Assets.xcassets */,
-				BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */,
 				BF9F68A51FA5F2D800454F66 /* Info.plist */,
+				BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */,
+				BD1E08A91FB3106A00914A3E /* Main.storyboard */,
+				BF9F689B1FA5F2D800454F66 /* ViewController.swift */,
 			);
 			path = KavaPluginSample;
 			sourceTree = "<group>";
@@ -150,9 +150,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1E08AB1FB3106A00914A3E /* Main.storyboard in Resources */,
 				BF9F68A41FA5F2D800454F66 /* LaunchScreen.storyboard in Resources */,
 				BF9F68A11FA5F2D800454F66 /* Assets.xcassets in Resources */,
-				BF9F689F1FA5F2D800454F66 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,10 +235,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		BF9F689D1FA5F2D800454F66 /* Main.storyboard */ = {
+		BD1E08A91FB3106A00914A3E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BF9F689E1FA5F2D800454F66 /* Base */,
+				BD1E08AA1FB3106A00914A3E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
