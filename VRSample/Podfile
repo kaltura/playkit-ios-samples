@@ -6,20 +6,23 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
-PLAYKIT_VR_LOCAL='../../playkit-ios-vr'
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_VR_LOCAL='../../playkit-ios-vr'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
+PLAYKIT_VR_GIT='https://github.com/kaltura/playkit-ios-vr.git'
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || ‘master’
 
 target 'VRSample' do
     inherit! :search_paths
 	if defined? PLAYKIT_LOCAL
             pod "PlayKit", :path => PLAYKIT_LOCAL
-	    pod "PlayKit/YouboraPlugin", :path => PLAYKIT_LOCAL
+            pod "PlayKit/YouboraPlugin", :path => PLAYKIT_LOCAL
             pod "PlayKitVR", :path => PLAYKIT_VR_LOCAL		
     	else
-	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+            pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+            pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+            pod 'PlayKitVR', :git => PLAYKIT_VR_GIT, :branch => PLAYKIT_BRANCH
     end
 end
 

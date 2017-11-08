@@ -64,7 +64,7 @@
     mediaProvider.entryId = @"1_673p2v7h";
     
     [mediaProvider loadMediaWithCallback:^(PKMediaEntry * _Nullable mediaEntry, NSError * _Nullable error) {
-        if (!ferror) {
+        if (!error) {
             // create media config
             MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
             
