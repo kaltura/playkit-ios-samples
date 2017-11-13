@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitYoubora
 
 /*
  This sample will show you how to create a player with youbora plugin.
