@@ -9,6 +9,7 @@
 import UIKit
 import GoogleCast
 import PlayKit
+import PlayKitGoogleCast
 
 protocol GoogleCastManagerDelegate {
     func castManagerDidStartSession(sender:GoogleCastManager)
