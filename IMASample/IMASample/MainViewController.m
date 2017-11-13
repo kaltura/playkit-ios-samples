@@ -6,7 +6,7 @@
 #import "VideoTableViewCell.h"
 @import PlayKit;
 @import PlayKit_IMA;
-
+@import PlayKitYoubora;
 
 /*
  This sample will show you how to create a player with IMA plugin.

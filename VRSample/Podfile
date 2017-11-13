@@ -17,11 +17,9 @@ target 'VRSample' do
     inherit! :search_paths
 	if defined? PLAYKIT_LOCAL
             pod "PlayKit", :path => PLAYKIT_LOCAL
-            pod "PlayKit/YouboraPlugin", :path => PLAYKIT_LOCAL
-            pod "PlayKitVR", :path => PLAYKIT_VR_LOCAL		
+            pod "PlayKitVR", :path => PLAYKIT_VR_LOCAL
     	else
             pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-            pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
             pod 'PlayKitVR', :git => PLAYKIT_VR_GIT, :branch => PLAYKIT_BRANCH
     end
 end

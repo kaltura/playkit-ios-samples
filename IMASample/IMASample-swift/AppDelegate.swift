@@ -9,6 +9,7 @@
 import UIKit
 import PlayKit
 import PlayKit_IMA
+import PlayKitYoubora
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

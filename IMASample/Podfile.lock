@@ -14,13 +14,13 @@ PODS:
     - Log (= 1.0)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/YouboraPlugin (3.2.x-dev):
-    - PlayKit/AnalyticsCommon
-    - PlayKit/Core
-    - Youbora-AVPlayer/dynamic (= 5.4.18)
   - PlayKit_IMA (0.0.1):
     - GoogleAds-IMA-iOS-SDK (= 3.6.0)
     - PlayKit/Core
+  - PlayKitYoubora (1.0.0):
+    - PlayKit/AnalyticsCommon
+    - PlayKit/Core
+    - Youbora-AVPlayer/dynamic (= 5.4.18)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
   - Youbora-AVPlayer/dynamic (5.4.18):
@@ -28,37 +28,44 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
-  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1728`)
   - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `develop`)
+  - PlayKitYoubora (from `https://github.com/kaltura/playkit-ios-youbora.git`, branch `develop`)
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: develop
+    :branch: FEM-1728
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
     :branch: develop
     :git: https://github.com/kaltura/playkit-ios-ima.git
+  PlayKitYoubora:
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios-youbora.git
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: 9cab7708c56cef4a7a783e50fb53a4db3e370ffc
+    :commit: f1051ebff65867540df3a28a04ebe9ae3fe754d7
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
     :commit: 8b59f17ad05f53624b21ffd4cf51d80ba0435b61
     :git: https://github.com/kaltura/playkit-ios-ima.git
+  PlayKitYoubora:
+    :commit: 83e06e6f2e976481712f6114b6dd3c670910917f
+    :git: https://github.com/kaltura/playkit-ios-youbora.git
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 193ca918ed33278c29c96683f500524bf788d509
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 0764b474e2778735fabd94d372882984d92e0162
+  PlayKit: 4291bdacac293945a2a20e76cd5cf6decf48455d
   PlayKit_IMA: 59a03e6a9faf8674e6c18235a44a2e905f083b9a
+  PlayKitYoubora: 764923da0d629666ffc616339d12290d9f5e3833
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 4be3e372457d31f2d51a52cfa97f0f5240b3047b
+PODFILE CHECKSUM: 51f8fbfe28271ab43db36b373bd87728c549e493
 
 COCOAPODS: 1.3.1

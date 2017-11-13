@@ -5,23 +5,25 @@ use_frameworks!
 # Uncomment to use a local copy of PlayKit
 # PLAYKIT_LOCAL='../../playkit-ios'
 # PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
+# PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 
 platform :ios, '9.0' # (define required version)
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || ‘develop’
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 
 target ‘IMASample' do
     if defined? PLAYKIT_LOCAL
         pod "PlayKit", :path => PLAYKIT_LOCAL
  	    pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
- 	    pod 'PlayKit/YouboraPlugin', :path => PLAYKIT_LOCAL
+ 	    pod 'PlayKitYoubora', :path => PLAYKIT_YOUBORA_LOCAL
     else
 	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
 	    pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_BRANCH
-	    pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+	    pod 'PlayKitYoubora', :git => PLAYKIT_YOUBORA_GIT, :branch => PLAYKIT_BRANCH
     end
 end
 
@@ -29,11 +31,11 @@ target ‘IMASample-swift' do
 if defined? PLAYKIT_LOCAL
         pod "PlayKit", :path => PLAYKIT_LOCAL
         pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
-        pod 'PlayKit/YouboraPlugin', :path => PLAYKIT_LOCAL
+        pod 'PlayKitYoubora', :path => PLAYKIT_YOUBORA_LOCAL
     else
         pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
         pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_BRANCH
-        pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+        pod 'PlayKitYoubora', :git => PLAYKIT_YOUBORA_GIT, :branch => PLAYKIT_BRANCH
     end
 end
 

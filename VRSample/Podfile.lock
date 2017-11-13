@@ -5,56 +5,48 @@ PODS:
     - SwiftyJSON
   - Log (1.0)
   - MetalScope (0.16.0)
-  - PlayKit (3.3.x-dev):
-    - PlayKit/Core (= 3.3.x-dev)
-  - PlayKit/AnalyticsCommon (3.3.x-dev):
-    - PlayKit/Core
-  - PlayKit/Core (3.3.x-dev):
+  - PlayKit (3.2.x-dev):
+    - PlayKit/Core (= 3.2.x-dev)
+  - PlayKit/Core (3.2.x-dev):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/YouboraPlugin (3.3.x-dev):
-    - PlayKit/AnalyticsCommon
-    - PlayKit/Core
-    - Youbora-AVPlayer/dynamic (= 5.4.18)
   - PlayKitVR (1.0.0):
     - MetalScope (= 0.16.0)
     - PlayKit/Core
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
-  - Youbora-AVPlayer/dynamic (5.4.18):
-    - Youbora-YouboraLib/dynamic (= 5.4.4)
-  - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1723`)
-  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1723`)
-  - PlayKitVR (from `../../playkit-ios-vr`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKitVR (from `https://github.com/kaltura/playkit-ios-vr.git`, branch `develop`)
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: FEM-1723
+    :branch: develop
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKitVR:
-    :path: ../../playkit-ios-vr
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios-vr.git
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: c5e536910c77bc918545c2f79948577e0d5229df
+    :commit: 6181f1e0d08eef6f0e4cd2f4b9dbb9b41b504890
     :git: https://github.com/kaltura/playkit-ios.git
+  PlayKitVR:
+    :commit: f4aa2fb8b0d238fe8e4118eb4d9f15a455e67c94
+    :git: https://github.com/kaltura/playkit-ios-vr.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   MetalScope: 993be4faaad75645d72d9e8701ef88368c56752d
-  PlayKit: 7be72712403d5e53d1cc9799aceea9acbbe7d3fa
+  PlayKit: 0764b474e2778735fabd94d372882984d92e0162
   PlayKitVR: 08b54458ebfabec7ee763183892ce457911be169
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
-  Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
-  Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 9c14e127009985e19af22ab7aee7f7e1e28d4a2b
+PODFILE CHECKSUM: 297e20691882c27fc05207bf80538257a943656e
 
 COCOAPODS: 1.3.1
