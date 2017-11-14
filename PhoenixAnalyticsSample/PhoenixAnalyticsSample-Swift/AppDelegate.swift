@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitOTT
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
