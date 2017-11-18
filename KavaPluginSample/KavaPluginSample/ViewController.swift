@@ -30,7 +30,8 @@ class ViewController: UIViewController {
         
         // 1. Load the player
         do {
-            let kavaConfig = KavaPluginConfig.init(uiconfId: -1, partnerId: 1424501 , ks: nil, playbackContext: nil, referrer: nil, customVar1: nil, customVar2: nil, customVar3: nil)
+            let kavaConfig = KavaPluginConfig.init(partnerId: 1424501 , ks: nil, playbackContext: nil, referrer: nil, customVar1: nil, customVar2: nil, customVar3: nil)
+            kavaConfig.playbackType = KavaPluginConfig.PlaybackType.vod
             let pluginConfig = PluginConfig(config: [KavaPlugin.pluginName: kavaConfig])
             self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
             // 2. Register events if have ones.
