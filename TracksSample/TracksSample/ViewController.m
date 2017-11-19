@@ -80,7 +80,7 @@
     __weak __typeof(self) weakSelf = self;
     
     // add observer to tracksAvailable event
-    [self.player addObserver:self events:@[PlayerEvent.tracksAvailable, PlayerEvent.trackChanged] block:^(PKEvent * _Nonnull event) {
+    [self.player addObserver:self events:@[PlayerEvent.tracksAvailable, PlayerEvent.textTrackChanged, PlayerEvent.audioTrackChanged] block:^(PKEvent * _Nonnull event) {
         if ([event isKindOfClass:PlayerEvent.tracksAvailable]) {
             // Connect data
             weakSelf.picker.dataSource = weakSelf;
@@ -97,8 +97,10 @@
             if (event.tracks.textTracks) {
                 weakSelf.textTracks = event.tracks.textTracks;
             }
-        } else if ([event isKindOfClass:PlayerEvent.trackChanged]) {
-            NSLog(@"selected track:: %@", event.selectedTrack.title);
+        } else if ([event isKindOfClass:PlayerEvent.textTrackChanged]) {
+            NSLog(@"selected text track:: %@", event.selectedTrack.title);
+        } else if ([event isKindOfClass:PlayerEvent.audioTrackChanged]) {
+            NSLog(@"selected audio track:: %@", event.selectedTrack.title);
         }
     }];
     
