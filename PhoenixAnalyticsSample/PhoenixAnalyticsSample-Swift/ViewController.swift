@@ -25,9 +25,16 @@ import PlayKitOTT
  4. Prepare Player.
  */
 
+let ottServerUrl = "http://api-preprod.ott.kaltura.com/v4_5/api_v3"
+let ottPartnerId: Int64 = 198
+let ottAssetId = "259153"
+let ottFileId = "804398"
+
 class ViewController: UIViewController {
     var player: Player?
     var playheadTimer: Timer?
+    var provider: PhoenixMediaProvider?
+    
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
@@ -35,22 +42,28 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.playheadSlider.isContinuous = false;
         
-        // 1. Create plugin config
-        let pluginConfig: PluginConfig = self.createPluginConfig()
-        
-        // 2. Load the player
-        do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-            // 3. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            self.addKalturaLiveStatsObservations()
-            
-            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.preparePlayer()
-        } catch let e {
-            // error loading the player
-            print("error:", e.localizedDescription)
+        PhoenixAnonymousSession.get(baseUrl: ottServerUrl, partnerId: ottPartnerId) { (ks, error) in
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+            } else if let ks = ks {
+                // 1. Create plugin config
+                let pluginConfig: PluginConfig = self.createPluginConfig(ks: ks)
+                
+                // 2. Load the player
+                do {
+                    self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+                    // 3. Register events if have ones.
+                    // Event registeration must be after loading the player successfully to make sure events are added,
+                    // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+                    self.addAnalyticsObservations()
+                    
+                    // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+                    self.preparePlayer(ks: ks)
+                } catch let e {
+                    // error loading the player
+                    print("error:", e.localizedDescription)
+                }
+            }
         }
     }
     
@@ -68,35 +81,42 @@ class ViewController: UIViewController {
 /************************/
 // MARK: - Player Setup
 /***********************/
-    func preparePlayer() {
+    func preparePlayer(ks: String) {
         // setup the player's view
         self.player?.view = self.playerContainer
         
-        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
-        
-        // create media source and initialize a media entry with that source
-        let entryId = "sintel"
-        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
-        // setup media entry
-        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
-        
-        // create media config
-        let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
-        
-        // prepare the player
-        self.player!.prepare(mediaConfig)
+        provider = PhoenixMediaProvider()
+        provider?
+            .set(baseUrl: ottServerUrl)
+            .set(ks: ks)
+            .set(type: .media)
+            .set(assetId: ottAssetId)
+            .set(fileIds: [ottFileId])
+            .set(playbackContextType: .playback)
+
+        provider?.loadMedia() { (entry, error) in
+            if let error = error {
+                print("error: \(error.localizedDescription)")
+            } else if let entry = entry {
+                // create media config
+                let mediaConfig = MediaConfig(mediaEntry: entry)
+                
+                // prepare the player
+                self.player?.prepare(mediaConfig)
+            }
+        }
     }
     
 /************************/
 // MARK: - Analytics
 /***********************/
-    func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createPhoenixAnalyticsPluginConfig()]
+    func createPluginConfig(ks: String) -> PluginConfig {
+        let pluginConfigDict = [PhoenixAnalyticsPlugin.pluginName: self.createPhoenixAnalyticsPluginConfig(ks: ks)]
         
         return PluginConfig(config: pluginConfigDict)
     }
     
-    func addKalturaLiveStatsObservations() {
+    func addAnalyticsObservations() {
         guard let player = self.player else {
             print("player is not set")
             return
@@ -116,11 +136,11 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [OttEvent.report])
     }
     
-    func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
-        return PhoenixAnalyticsPluginConfig(baseUrl: "",
+    func createPhoenixAnalyticsPluginConfig(ks: String) -> PhoenixAnalyticsPluginConfig {
+        return PhoenixAnalyticsPluginConfig(baseUrl: ottServerUrl,
                                             timerInterval: 30,
-                                            ks: "",
-                                            partnerId: 0)
+                                            ks: ks,
+                                            partnerId: Int(ottPartnerId))
     }
     
 /************************/

@@ -10,10 +10,17 @@
 @import PlayKit;
 @import PlayKitOTT;
 
+#define ottServerUrl @"http://api-preprod.ott.kaltura.com/v4_5/api_v3"
+#define ottPartnerId 198
+#define ottAssetId @"259153"
+#define ottFileId @"804398"
+
 @interface ViewController ()
 
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
+@property (strong, nonatomic) PhoenixMediaProvider *provider;
+
 @property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
 
@@ -43,23 +50,26 @@
     [super viewDidLoad];
     self.playheadSlider.continuous = NO;
     
-    // 1. Create plugin config
-    PluginConfig *pluginConfig = [self createPluginConfig];
-    // 2. Load the player
-    NSError *error = nil;
-    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig error:&error];
-    // make sure player loaded
-    if (!error) {
-        // 3. Register events if have ones.
-        // Event registeration must be after loading the player successfully to make sure events are added,
-        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-        [self addPhoenixAnalyticsObservations];
-        
-        // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-        [self preparePlayer];
-    } else {
-        // error loading the player
-    }
+    [PhoenixAnonymousSession getWithBaseUrl:ottServerUrl partnerId:ottPartnerId completion:^(NSString *ks, NSError *error) {
+        // 1. Create plugin config
+        PluginConfig *pluginConfig = [self createPluginConfig:ks];
+        // 2. Load the player
+        NSError *err = nil;
+        self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig error:&err];
+        // make sure player loaded
+        if (!err) {
+            // 3. Register events if have ones.
+            // Event registeration must be after loading the player successfully to make sure events are added,
+            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+            [self addPhoenixAnalyticsObservations];
+            
+            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+            [self preparePlayer:ks];
+        } else {
+            // error loading the player
+        }
+    }];
+    
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -72,25 +82,24 @@
 #pragma mark - Player Setup
 /*********************************/
 
-- (void)preparePlayer {
+- (void)preparePlayer:(NSString *)ks {
     // setup the player's view
     self.player.view = self.playerContainer;
     
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
-    
-    // create media source and initialize a media entry with that source
-    NSString *entryId = @"sintel";
-    PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
-    
-    // setup media entry
-    PKMediaEntry *mediaEntry = [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
-    
-    // create media config
-    MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
-    
-    // prepare the player
-    [self.player prepare:mediaConfig];
+    _provider = [PhoenixMediaProvider new];
+    _provider.baseUrl = ottServerUrl;
+    _provider.ks = ks;
+    _provider.assetId = ottAssetId;
+    _provider.fileIds = [[NSArray alloc] initWithObjects:ottFileId, nil];
+    _provider.playbackContextType = PlaybackContextTypePlayback;
+    _provider.type = AssetTypeMedia;
+    [_provider loadMediaWithCallback:^(PKMediaEntry *entry, NSError *error) {
+        // create media config
+        MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:entry startTime:0.0];
+        
+        // prepare the player
+        [self.player prepare:mediaConfig];
+    }];
 }
 
 /*********************************/
@@ -98,9 +107,9 @@
 /*********************************/
 
 // creates plugin config by adding params under the plugin name.
-- (PluginConfig *)createPluginConfig {
+- (PluginConfig *)createPluginConfig:(NSString *)ks {
     NSMutableDictionary *pluginConfigDict = [[NSMutableDictionary alloc] init];
-    pluginConfigDict[PhoenixAnalyticsPlugin.pluginName] = [self createPhoenixPluginConfig];
+    pluginConfigDict[PhoenixAnalyticsPlugin.pluginName] = [self createPhoenixPluginConfig:ks];
     return [[PluginConfig alloc] initWithConfig:pluginConfigDict];
 }
 
@@ -115,11 +124,11 @@
     [self.player removeObserver:self events:@[OttEvent.report]];
 }
 
-- (PhoenixAnalyticsPluginConfig *)createPhoenixPluginConfig {
-    return [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:@""
+- (PhoenixAnalyticsPluginConfig *)createPhoenixPluginConfig:(NSString *)ks {
+    return [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:ottServerUrl
                                                    timerInterval:30.0f
-                                                              ks:@""
-                                                       partnerId:0];
+                                                              ks:ks
+                                                       partnerId:ottPartnerId];
 }
 
 /*********************************/
