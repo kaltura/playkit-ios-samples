@@ -8,18 +8,25 @@ platform :ios, '9.0' # (define required version)
 # Uncomment to use a local copy of PlayKit
 PLAYKIT_LOCAL='../../playkit-ios'
 PLAYKIT_KAVA_LOCAL='../../playkit-ios-kava'
+PLAYKIT_OVP_LOCAL='../../playkit-ios-ovp'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_KAVA_GIT='https://github.com/kaltura/playkit-ios-kava.git'
+PLAYKIT_OVP_GIT='https://github.com/kaltura/playkit-ios-ovp.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
 
 target 'KavaPluginSample' do
     inherit! :search_paths
+	
 	if defined? PLAYKIT_LOCAL
             pod "PlayKit", :path => PLAYKIT_LOCAL
             pod "PlayKitKava", :path => PLAYKIT_KAVA_LOCAL		
+            pod "PlayKitOVP", :path => PLAYKIT_OVP_LOCAL		
     	else
 	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    end
+	    pod 'PlayKitKava', :git => PLAYKIT_KAVA_GIT, :branch => PLAYKIT_BRANCH
+            pod 'PlayKitOVP', :git => PLAYKIT_OVP_GIT, :branch => PLAYKIT_BRANCH
+    	end
 end
 
 pre_install do |installer|
