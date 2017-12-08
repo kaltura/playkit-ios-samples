@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "84A7264E1FD84BFF00B64762"
+               BuildableName = "OVPMediaProviderSampleUITests.xctest"
+               BlueprintName = "OVPMediaProviderSampleUITests"
+               ReferencedContainer = "container:OVPMediaProviderSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

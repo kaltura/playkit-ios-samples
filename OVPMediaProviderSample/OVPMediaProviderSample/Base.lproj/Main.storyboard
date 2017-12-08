@@ -24,6 +24,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UaZ-8U-gnb" customClass="PlayerView" customModule="PlayKit">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration" label="playerView">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hkq-Fy-pwc">
                                 <rect key="frame" x="0.0" y="603" width="375" height="64"/>
@@ -51,11 +54,13 @@
                                         </button>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KpO-8K-CSD">
                                             <rect key="frame" x="108" y="17" width="261" height="31"/>
+                                            <accessibility key="accessibilityConfiguration" label="Playhead"/>
                                             <connections>
                                                 <action selector="playheadValueChanged:" destination="h9n-sq-8Zz" eventType="valueChanged" id="fev-Y3-7cS"/>
                                             </connections>
                                         </slider>
                                     </subviews>
+                                    <accessibility key="accessibilityConfiguration" label="controlsView"/>
                                     <constraints>
                                         <constraint firstItem="tVW-Qg-iQt" firstAttribute="leading" secondItem="IVe-Aj-NTU" secondAttribute="leading" constant="8" id="4mI-Ia-Sjf"/>
                                         <constraint firstItem="C4a-5t-231" firstAttribute="leading" secondItem="tVW-Qg-iQt" secondAttribute="trailing" constant="15" id="FpG-vG-D7i"/>

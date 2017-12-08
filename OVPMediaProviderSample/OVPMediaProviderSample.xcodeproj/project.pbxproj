@@ -13,8 +13,9 @@
 		2005AE2E1E7FFFFC00FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE2C1E7FFFFC00FB01B0 /* Main.storyboard */; };
 		2005AE301E7FFFFC00FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE2F1E7FFFFC00FB01B0 /* Assets.xcassets */; };
 		2005AE331E7FFFFC00FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE311E7FFFFC00FB01B0 /* LaunchScreen.storyboard */; };
-		5788577854692D3BD7285BAD /* Pods_OVPMediaProviderSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D22038B079B36E6866BCF03 /* Pods_OVPMediaProviderSample.framework */; };
-		9CA1F6AB9F7381AD3D89E51F /* Pods_OVPMediaProviderSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38C70446425BB33C0395621 /* Pods_OVPMediaProviderSample_Swift.framework */; };
+		7B248994DABFFD3BE6AC1C44 /* Pods_OVPMediaProviderSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC773799EB53D0EBDEC7CEA4 /* Pods_OVPMediaProviderSample_Swift.framework */; };
+		84A726521FD84BFF00B64762 /* OVPMediaProviderSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A726511FD84BFF00B64762 /* OVPMediaProviderSampleUITests.swift */; };
+		9B2C774D973ED77FAEC8EAFB /* Pods_OVPMediaProviderSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE0542422F8CD25ECD721CC /* Pods_OVPMediaProviderSample.framework */; };
 		BFD20A601EA891970018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A5F1EA891970018FD8A /* AppDelegate.swift */; };
 		BFD20A621EA891970018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A611EA891970018FD8A /* ViewController.swift */; };
 		BFD20A651EA891970018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A631EA891970018FD8A /* Main.storyboard */; };
@@ -22,7 +23,18 @@
 		BFD20A6A1EA891970018FD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A681EA891970018FD8A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		84A726541FD84BFF00B64762 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2005AE181E7FFFFC00FB01B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2005AE1F1E7FFFFC00FB01B0;
+			remoteInfo = OVPMediaProviderSample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		0FEFC0A48B2BEE122F6D0BF6 /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		2005AE201E7FFFFC00FB01B0 /* OVPMediaProviderSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OVPMediaProviderSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2005AE241E7FFFFC00FB01B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2005AE261E7FFFFC00FB01B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,12 +45,11 @@
 		2005AE2F1E7FFFFC00FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AE321E7FFFFC00FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AE341E7FFFFC00FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28F8D69679C3ECA57E378251 /* Pods-OVPMediaProviderSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample.release.xcconfig"; sourceTree = "<group>"; };
-		2D22038B079B36E6866BCF03 /* Pods_OVPMediaProviderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPMediaProviderSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5019C946FCA7C6386CB9888A /* Pods-OVPMediaProviderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample.debug.xcconfig"; sourceTree = "<group>"; };
-		60D28554DE78608DB2676786 /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		A5C3CFE7A7C85C5C007B2C4C /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		B38C70446425BB33C0395621 /* Pods_OVPMediaProviderSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPMediaProviderSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A9658B0A0C5899A654F540 /* Pods-OVPMediaProviderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample.debug.xcconfig"; sourceTree = "<group>"; };
+		7F7AACA6085E95F32BE3517C /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		84A7264F1FD84BFF00B64762 /* OVPMediaProviderSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OVPMediaProviderSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A726511FD84BFF00B64762 /* OVPMediaProviderSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OVPMediaProviderSampleUITests.swift; sourceTree = "<group>"; };
+		84A726531FD84BFF00B64762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFD20A5D1EA891970018FD8A /* OVPMediaProviderSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OVPMediaProviderSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD20A5F1EA891970018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD20A611EA891970018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +57,9 @@
 		BFD20A661EA891970018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD20A691EA891970018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A6B1EA891970018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC773799EB53D0EBDEC7CEA4 /* Pods_OVPMediaProviderSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPMediaProviderSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDE0542422F8CD25ECD721CC /* Pods_OVPMediaProviderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPMediaProviderSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0C7B9C6D091521917783766 /* Pods-OVPMediaProviderSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +67,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5788577854692D3BD7285BAD /* Pods_OVPMediaProviderSample.framework in Frameworks */,
+				9B2C774D973ED77FAEC8EAFB /* Pods_OVPMediaProviderSample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A7264C1FD84BFF00B64762 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,32 +82,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA1F6AB9F7381AD3D89E51F /* Pods_OVPMediaProviderSample_Swift.framework in Frameworks */,
+				7B248994DABFFD3BE6AC1C44 /* Pods_OVPMediaProviderSample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		038BF42658BD95F01F6231B2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5019C946FCA7C6386CB9888A /* Pods-OVPMediaProviderSample.debug.xcconfig */,
-				28F8D69679C3ECA57E378251 /* Pods-OVPMediaProviderSample.release.xcconfig */,
-				A5C3CFE7A7C85C5C007B2C4C /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */,
-				60D28554DE78608DB2676786 /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		2005AE171E7FFFFC00FB01B0 = {
 			isa = PBXGroup;
 			children = (
 				2005AE221E7FFFFC00FB01B0 /* OVPMediaProviderSample */,
 				BFD20A5E1EA891970018FD8A /* OVPMediaProviderSample-Swift */,
+				84A726501FD84BFF00B64762 /* OVPMediaProviderSampleUITests */,
 				2005AE211E7FFFFC00FB01B0 /* Products */,
-				038BF42658BD95F01F6231B2 /* Pods */,
-				A1CB41EB84AED87A5E27414B /* Frameworks */,
+				695C29F02C09E444F10DDA67 /* Pods */,
+				244069C597B9920024D9D7E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +106,7 @@
 			children = (
 				2005AE201E7FFFFC00FB01B0 /* OVPMediaProviderSample.app */,
 				BFD20A5D1EA891970018FD8A /* OVPMediaProviderSample-Swift.app */,
+				84A7264F1FD84BFF00B64762 /* OVPMediaProviderSampleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,13 +135,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A1CB41EB84AED87A5E27414B /* Frameworks */ = {
+		244069C597B9920024D9D7E7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2D22038B079B36E6866BCF03 /* Pods_OVPMediaProviderSample.framework */,
-				B38C70446425BB33C0395621 /* Pods_OVPMediaProviderSample_Swift.framework */,
+				CDE0542422F8CD25ECD721CC /* Pods_OVPMediaProviderSample.framework */,
+				CC773799EB53D0EBDEC7CEA4 /* Pods_OVPMediaProviderSample_Swift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		695C29F02C09E444F10DDA67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				69A9658B0A0C5899A654F540 /* Pods-OVPMediaProviderSample.debug.xcconfig */,
+				E0C7B9C6D091521917783766 /* Pods-OVPMediaProviderSample.release.xcconfig */,
+				0FEFC0A48B2BEE122F6D0BF6 /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */,
+				7F7AACA6085E95F32BE3517C /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		84A726501FD84BFF00B64762 /* OVPMediaProviderSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84A726511FD84BFF00B64762 /* OVPMediaProviderSampleUITests.swift */,
+				84A726531FD84BFF00B64762 /* Info.plist */,
+			);
+			path = OVPMediaProviderSampleUITests;
 			sourceTree = "<group>";
 		};
 		BFD20A5E1EA891970018FD8A /* OVPMediaProviderSample-Swift */ = {
@@ -152,12 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2005AE371E7FFFFC00FB01B0 /* Build configuration list for PBXNativeTarget "OVPMediaProviderSample" */;
 			buildPhases = (
-				8A88E8D46468D40A5FF8453E /* [CP] Check Pods Manifest.lock */,
+				B4404CCB5280917851C9FF06 /* [CP] Check Pods Manifest.lock */,
 				2005AE1C1E7FFFFC00FB01B0 /* Sources */,
 				2005AE1D1E7FFFFC00FB01B0 /* Frameworks */,
 				2005AE1E1E7FFFFC00FB01B0 /* Resources */,
-				3D3A07D54095B7ACF6786FE5 /* [CP] Embed Pods Frameworks */,
-				C217F5BBB8A2D802081F22DB /* [CP] Copy Pods Resources */,
+				098A1E664891CBCC5D0F69AA /* [CP] Embed Pods Frameworks */,
+				3E4EF6499E48E2A464118E36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,16 +200,34 @@
 			productReference = 2005AE201E7FFFFC00FB01B0 /* OVPMediaProviderSample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		84A7264E1FD84BFF00B64762 /* OVPMediaProviderSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84A726581FD84BFF00B64762 /* Build configuration list for PBXNativeTarget "OVPMediaProviderSampleUITests" */;
+			buildPhases = (
+				84A7264B1FD84BFF00B64762 /* Sources */,
+				84A7264C1FD84BFF00B64762 /* Frameworks */,
+				84A7264D1FD84BFF00B64762 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84A726551FD84BFF00B64762 /* PBXTargetDependency */,
+			);
+			name = OVPMediaProviderSampleUITests;
+			productName = OVPMediaProviderSampleUITests;
+			productReference = 84A7264F1FD84BFF00B64762 /* OVPMediaProviderSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		BFD20A5C1EA891970018FD8A /* OVPMediaProviderSample-Swift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFD20A6E1EA891970018FD8A /* Build configuration list for PBXNativeTarget "OVPMediaProviderSample-Swift" */;
 			buildPhases = (
-				05076B32999934A618DC0395 /* [CP] Check Pods Manifest.lock */,
+				544C65129A3778C6CA447066 /* [CP] Check Pods Manifest.lock */,
 				BFD20A591EA891970018FD8A /* Sources */,
 				BFD20A5A1EA891970018FD8A /* Frameworks */,
 				BFD20A5B1EA891970018FD8A /* Resources */,
-				E2199320A5E287F592C55FBB /* [CP] Embed Pods Frameworks */,
-				ED75240BAA3D11F71DE3D745 /* [CP] Copy Pods Resources */,
+				CAD73B405F76A5D2FDA5966C /* [CP] Embed Pods Frameworks */,
+				8ABDCAFBE4A738A04673476F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,13 +244,18 @@
 		2005AE181E7FFFFC00FB01B0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0910;
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = Kaltura;
 				TargetAttributes = {
 					2005AE1F1E7FFFFC00FB01B0 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+					};
+					84A7264E1FD84BFF00B64762 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2005AE1F1E7FFFFC00FB01B0;
 					};
 					BFD20A5C1EA891970018FD8A = {
 						CreatedOnToolsVersion = 8.3;
@@ -224,6 +279,7 @@
 			targets = (
 				2005AE1F1E7FFFFC00FB01B0 /* OVPMediaProviderSample */,
 				BFD20A5C1EA891970018FD8A /* OVPMediaProviderSample-Swift */,
+				84A7264E1FD84BFF00B64762 /* OVPMediaProviderSampleUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +292,13 @@
 				2005AE331E7FFFFC00FB01B0 /* LaunchScreen.storyboard in Resources */,
 				2005AE301E7FFFFC00FB01B0 /* Assets.xcassets in Resources */,
 				2005AE2E1E7FFFFC00FB01B0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84A7264D1FD84BFF00B64762 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,69 +315,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05076B32999934A618DC0395 /* [CP] Check Pods Manifest.lock */ = {
+		098A1E664891CBCC5D0F69AA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OVPMediaProviderSample-Swift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3D3A07D54095B7ACF6786FE5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
-				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8A88E8D46468D40A5FF8453E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OVPMediaProviderSample-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C217F5BBB8A2D802081F22DB /* [CP] Copy Pods Resources */ = {
+		3E4EF6499E48E2A464118E36 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -329,33 +345,22 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E2199320A5E287F592C55FBB /* [CP] Embed Pods Frameworks */ = {
+		544C65129A3778C6CA447066 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
-				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		ED75240BAA3D11F71DE3D745 /* [CP] Copy Pods Resources */ = {
+		8ABDCAFBE4A738A04673476F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,6 +373,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4404CCB5280917851C9FF06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CAD73B405F76A5D2FDA5966C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -383,6 +418,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84A7264B1FD84BFF00B64762 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A726521FD84BFF00B64762 /* OVPMediaProviderSampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFD20A591EA891970018FD8A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +436,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84A726551FD84BFF00B64762 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2005AE1F1E7FFFFC00FB01B0 /* OVPMediaProviderSample */;
+			targetProxy = 84A726541FD84BFF00B64762 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2005AE2C1E7FFFFC00FB01B0 /* Main.storyboard */ = {
@@ -535,7 +586,7 @@
 		};
 		2005AE381E7FFFFC00FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5019C946FCA7C6386CB9888A /* Pods-OVPMediaProviderSample.debug.xcconfig */;
+			baseConfigurationReference = 69A9658B0A0C5899A654F540 /* Pods-OVPMediaProviderSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -548,7 +599,7 @@
 		};
 		2005AE391E7FFFFC00FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28F8D69679C3ECA57E378251 /* Pods-OVPMediaProviderSample.release.xcconfig */;
+			baseConfigurationReference = E0C7B9C6D091521917783766 /* Pods-OVPMediaProviderSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -559,9 +610,51 @@
 			};
 			name = Release;
 		};
+		84A726561FD84BFF00B64762 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = OVPMediaProviderSampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bobah.OVPMediaProviderSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OVPMediaProviderSample;
+			};
+			name = Debug;
+		};
+		84A726571FD84BFF00B64762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = OVPMediaProviderSampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = bobah.OVPMediaProviderSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OVPMediaProviderSample;
+			};
+			name = Release;
+		};
 		BFD20A6C1EA891970018FD8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5C3CFE7A7C85C5C007B2C4C /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */;
+			baseConfigurationReference = 0FEFC0A48B2BEE122F6D0BF6 /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -579,7 +672,7 @@
 		};
 		BFD20A6D1EA891970018FD8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60D28554DE78608DB2676786 /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */;
+			baseConfigurationReference = 7F7AACA6085E95F32BE3517C /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -611,6 +704,15 @@
 			buildConfigurations = (
 				2005AE381E7FFFFC00FB01B0 /* Debug */,
 				2005AE391E7FFFFC00FB01B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84A726581FD84BFF00B64762 /* Build configuration list for PBXNativeTarget "OVPMediaProviderSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84A726561FD84BFF00B64762 /* Debug */,
+				84A726571FD84BFF00B64762 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
