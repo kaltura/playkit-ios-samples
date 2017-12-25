@@ -64,7 +64,7 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
                     var url: URL?
                     if let player = player {
                         url = URL.init(string: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8")
-                        player.updatePluginConfig(pluginName: "IMAPlugin", config: adsConfig)
+                        player.updatePluginConfig(pluginName: IMAPlugin.pluginName, config: adsConfig)
                     } else {
                         url = URL.init(string: "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8")
 

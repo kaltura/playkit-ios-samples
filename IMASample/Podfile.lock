@@ -1,22 +1,19 @@
 PODS:
   - GoogleAds-IMA-iOS-SDK (3.6.0)
-  - KalturaNetKit (0.0.17):
-    - KalturaNetKit/Core (= 0.0.17)
-  - KalturaNetKit/Core (0.0.17):
-    - SwiftyJSON
   - Log (1.0)
-  - PlayKit (3.2.x-dev):
-    - PlayKit/Core (= 3.2.x-dev)
-  - PlayKit/AnalyticsCommon (3.2.x-dev):
+  - PlayKit (3.3.x-dev):
+    - PlayKit/Core (= 3.3.x-dev)
+  - PlayKit/AnalyticsCommon (3.3.x-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.2.x-dev):
-    - KalturaNetKit (~> 0.0)
+  - PlayKit/Core (3.3.x-dev):
     - Log (= 1.0)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
   - PlayKit_IMA (0.0.1):
     - GoogleAds-IMA-iOS-SDK (= 3.6.0)
     - PlayKit/Core
+    - PlayKitUtils
+  - PlayKitUtils (0.1.4)
   - PlayKitYoubora (1.0.0):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
@@ -28,44 +25,30 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1728`)
-  - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `develop`)
-  - PlayKitYoubora (from `https://github.com/kaltura/playkit-ios-youbora.git`, branch `develop`)
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit_IMA (from `../../playkit-ios-ima`)
+  - PlayKitYoubora (from `../../playkit-ios-youbora`)
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: FEM-1728
-    :git: https://github.com/kaltura/playkit-ios.git
+    :path: ../../playkit-ios
   PlayKit_IMA:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios-ima.git
+    :path: ../../playkit-ios-ima
   PlayKitYoubora:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios-youbora.git
-
-CHECKOUT OPTIONS:
-  PlayKit:
-    :commit: f1051ebff65867540df3a28a04ebe9ae3fe754d7
-    :git: https://github.com/kaltura/playkit-ios.git
-  PlayKit_IMA:
-    :commit: 8b59f17ad05f53624b21ffd4cf51d80ba0435b61
-    :git: https://github.com/kaltura/playkit-ios-ima.git
-  PlayKitYoubora:
-    :commit: 83e06e6f2e976481712f6114b6dd3c670910917f
-    :git: https://github.com/kaltura/playkit-ios-youbora.git
+    :path: ../../playkit-ios-youbora
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 193ca918ed33278c29c96683f500524bf788d509
-  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 4291bdacac293945a2a20e76cd5cf6decf48455d
-  PlayKit_IMA: 59a03e6a9faf8674e6c18235a44a2e905f083b9a
+  PlayKit: 58212e94622e5cdc4f42b52af6d9b12467015549
+  PlayKit_IMA: f27ccbc80171f443c969497b85bedafed9d3cef0
+  PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   PlayKitYoubora: 764923da0d629666ffc616339d12290d9f5e3833
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 51f8fbfe28271ab43db36b373bd87728c549e493
+PODFILE CHECKSUM: b8efad5317b94c0577d0035643a59e62ba2f7e1e
 
 COCOAPODS: 1.3.1
