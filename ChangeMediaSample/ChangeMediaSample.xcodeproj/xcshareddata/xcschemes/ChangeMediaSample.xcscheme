@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E78938952006914400075B93"
+               BuildableName = "ChangeMediaSampleUITests.xctest"
+               BlueprintName = "ChangeMediaSampleUITests"
+               ReferencedContainer = "container:ChangeMediaSample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

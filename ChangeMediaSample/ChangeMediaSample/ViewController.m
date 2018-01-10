@@ -137,7 +137,7 @@
     __weak __typeof(self) weakSelf = self;
     // After preparing if you wish to play make sure to wait `canPlay` event.
     [self.player addObserver:self events:@[PlayerEvent.canPlay] block:^(PKEvent * _Nonnull event) {
-        [weakSelf.player play];
+        [weakSelf playTouched:nil];
     }];
 }
 
