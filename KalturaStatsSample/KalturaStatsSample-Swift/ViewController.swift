@@ -118,7 +118,8 @@ class ViewController: UIViewController {
     func createKalturaStatsPluginConfig() -> KalturaStatsPluginConfig {
         return KalturaStatsPluginConfig(uiconfId: 0,
                                         partnerId: 0,
-                                        entryId: "")
+                                        entryId: "",
+                                        hasKanalony: false)
     }
     
 /************************/
