@@ -14,11 +14,12 @@ class ViewController: UIViewController {
     
     var player: Player?
     @IBOutlet var playerContainer: UIView!
+    var playerView: PlayerView!
     
     let simpleStorage = DefaultLocalDataStore.defaultDataStore()
     
-    // The sample entries are initialized asynchronously by loadSampleEntries(). 
-    var sampleEntries = [MediaEntry]()
+    // The sample entries are initialized asynchronously by loadSampleEntries().
+    var sampleEntries = [PKMediaEntry]()
     
     
     // Use a LocalAssetsManager to handle local (offline, downloaded) assets.
@@ -46,10 +47,9 @@ class ViewController: UIViewController {
         
         loadSampleEntries()
         
-        if let playerView = player.view {
-            self.playerContainer.addSubview(playerView)
-            playerView.frame = self.playerContainer.bounds;
-        }
+        self.playerView = PlayerView.init(frame: playerContainer.bounds)
+        playerContainer.addSubview(playerView)
+        player.view = self.playerView
         
         self.player = player
     }
@@ -114,11 +114,11 @@ class ViewController: UIViewController {
     func loadSampleEntries() {
         // Use OVPMediaProvider to load a hardcoded entry.
         
-        let serverURL = "https://cdnapisec.kaltura.com"
+        let serverURL = "http://cdnapi.kaltura.com"
 
         let params: [(partnerId: Int, entryId: String)] = [
             (2215841, "1_9bwuo813"),    // Clear HLS
-            (2222401, "1_q81a5nbp"),    // HLS with FairPlay DRM
+            (2222401, "1_z9tkt5uz"),    // HLS with FairPlay DRM
         ]
         
         for item in params {
