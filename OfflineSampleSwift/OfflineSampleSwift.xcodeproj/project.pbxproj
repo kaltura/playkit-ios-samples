@@ -106,7 +106,6 @@
 				FB5565F21EB286630026554B /* Frameworks */,
 				FB5565F31EB286630026554B /* Resources */,
 				090A3284CC723A3F14C7DD92 /* [CP] Embed Pods Frameworks */,
-				DE8702E9DBE60A05049C9CC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,21 +191,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineSampleSwift/Pods-OfflineSampleSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE8702E9DBE60A05049C9CC5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineSampleSwift/Pods-OfflineSampleSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F38AAF6F99FFC8EC387347C6 /* [CP] Check Pods Manifest.lock */ = {
