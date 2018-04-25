@@ -17,9 +17,11 @@
 		D2529D3D2087365D0071411F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2529D3B2087365D0071411F /* LaunchScreen.storyboard */; };
 		D2529D482087365E0071411F /* AVAssetDownloadSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D472087365E0071411F /* AVAssetDownloadSampleTests.swift */; };
 		D2529D532087365E0071411F /* AVAssetDownloadSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D522087365E0071411F /* AVAssetDownloadSampleUITests.swift */; };
-		D2529D6320876DD90071411F /* PlayableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D6220876DD90071411F /* PlayableItem.swift */; };
+		D2529D6320876DD90071411F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D6220876DD90071411F /* Item.swift */; };
 		D2529D6820876EDA0071411F /* AssetPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D6620876EDA0071411F /* AssetPersistenceManager.swift */; };
 		D2529D6920876EDA0071411F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D6720876EDA0071411F /* Asset.swift */; };
+		D29674E3208F0FCF00836C09 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29674E2208F0FCE00836C09 /* MediaPlayerViewController.swift */; };
+		D29674E6208F1EF300836C09 /* UIAnimatedPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29674E5208F1EF300836C09 /* UIAnimatedPlayButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +62,11 @@
 		D2529D4E2087365E0071411F /* AVAssetDownloadSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVAssetDownloadSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2529D522087365E0071411F /* AVAssetDownloadSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVAssetDownloadSampleUITests.swift; sourceTree = "<group>"; };
 		D2529D542087365E0071411F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D2529D6220876DD90071411F /* PlayableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayableItem.swift; sourceTree = "<group>"; };
+		D2529D6220876DD90071411F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D2529D6620876EDA0071411F /* AssetPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetPersistenceManager.swift; sourceTree = "<group>"; };
 		D2529D6720876EDA0071411F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
+		D29674E2208F0FCE00836C09 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
+		D29674E5208F1EF300836C09 /* UIAnimatedPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnimatedPlayButton.swift; sourceTree = "<group>"; };
 		DA0AED8A2FD7D434E751E1FD /* Pods-AVAssetDownloadSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVAssetDownloadSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVAssetDownloadSample/Pods-AVAssetDownloadSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E64A2504C6B837A92F975C16 /* Pods-AVAssetDownloadSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVAssetDownloadSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVAssetDownloadSample/Pods-AVAssetDownloadSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,11 +137,12 @@
 		D2529D312087365D0071411F /* AVAssetDownloadSample */ = {
 			isa = PBXGroup;
 			children = (
+				D29674E4208F1EE100836C09 /* Views */,
+				D29674E1208F0F8400836C09 /* ViewControllers */,
 				D2529D6720876EDA0071411F /* Asset.swift */,
 				D2529D6620876EDA0071411F /* AssetPersistenceManager.swift */,
-				D2529D6220876DD90071411F /* PlayableItem.swift */,
+				D2529D6220876DD90071411F /* Item.swift */,
 				D2529D322087365D0071411F /* AppDelegate.swift */,
-				D2529D342087365D0071411F /* MainViewController.swift */,
 				D2529D362087365D0071411F /* Main.storyboard */,
 				D2529D392087365D0071411F /* Assets.xcassets */,
 				D2529D3B2087365D0071411F /* LaunchScreen.storyboard */,
@@ -162,6 +167,23 @@
 				D2529D542087365E0071411F /* Info.plist */,
 			);
 			path = AVAssetDownloadSampleUITests;
+			sourceTree = "<group>";
+		};
+		D29674E1208F0F8400836C09 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D29674E2208F0FCE00836C09 /* MediaPlayerViewController.swift */,
+				D2529D342087365D0071411F /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D29674E4208F1EE100836C09 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D29674E5208F1EF300836C09 /* UIAnimatedPlayButton.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DD0DD9370D3600174FD596F5 /* Frameworks */ = {
@@ -386,21 +408,37 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AVAssetDownloadSample/Pods-AVAssetDownloadSample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DownloadToGo/DownloadToGo.framework",
+				"${BUILT_PRODUCTS_DIR}/GCDWebServer/GCDWebServer.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/M3U8Kit/M3U8Kit.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DownloadToGo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GCDWebServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/M3U8Kit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -480,8 +518,10 @@
 				D2529D6820876EDA0071411F /* AssetPersistenceManager.swift in Sources */,
 				D2529D352087365D0071411F /* MainViewController.swift in Sources */,
 				D2529D6920876EDA0071411F /* Asset.swift in Sources */,
-				D2529D6320876DD90071411F /* PlayableItem.swift in Sources */,
+				D2529D6320876DD90071411F /* Item.swift in Sources */,
+				D29674E3208F0FCF00836C09 /* MediaPlayerViewController.swift in Sources */,
 				D2529D332087365D0071411F /* AppDelegate.swift in Sources */,
+				D29674E6208F1EF300836C09 /* UIAnimatedPlayButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +691,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = AVAssetDownloadSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AVAssetDownloadSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -667,6 +708,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = AVAssetDownloadSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ios.AVAssetDownloadSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

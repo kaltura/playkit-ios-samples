@@ -16,6 +16,9 @@ target 'AVAssetDownloadSample' do
   else
     pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
   end
+  
+  pod 'DownloadToGo'
+  pod 'Toast-Swift'
 
   target 'AVAssetDownloadSampleTests' do
     inherit! :search_paths

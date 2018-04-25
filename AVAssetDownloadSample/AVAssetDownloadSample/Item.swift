@@ -1,5 +1,5 @@
 //
-//  PlayableItem.swift
+//  Item.swift
 //  AVAssetDownloadSample
 //
 //  Created by Nilit Danan on 4/18/18.
@@ -9,7 +9,7 @@
 import Foundation
 import PlayKit
 
-class PlayableItem {
+class Item {
     let id: String
     let title: String
     let partnerId: Int?
@@ -28,7 +28,7 @@ class PlayableItem {
         self.partnerId = nil
     }
     
-    init(title: String, id: String, partnerId: Int, env: String = "http://cdnapi.kaltura.com") {
+    init(_ title: String, id: String, partnerId: Int, env: String = "http://cdnapi.kaltura.com") {
         self.id = id
         self.title = title
         self.partnerId = partnerId
