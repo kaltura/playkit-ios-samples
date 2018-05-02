@@ -88,7 +88,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Play Downloaded Item"/>
                                         <connections>
-                                            <segue destination="G1L-yH-ttH" kind="presentation" identifier="PlayDownloadedItemSegue" id="Cb9-Kt-aDE"/>
+                                            <segue destination="Nch-Uo-4jb" kind="presentation" identifier="SelectTracksSegue" id="Fvv-7W-0pY"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5m-nu-iVc">
@@ -209,6 +209,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Tracks View Controller-->
+        <scene sceneID="fyJ-Vf-5Vj">
+            <objects>
+                <viewController id="Nch-Uo-4jb" customClass="TracksViewController" customModule="AVAssetDownloadSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="siK-tk-xBN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-N2-lJc">
+                                <rect key="frame" x="0.0" y="44" width="375" height="674"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Nch-Uo-4jb" id="SDM-Z6-TQe"/>
+                                    <outlet property="delegate" destination="Nch-Uo-4jb" id="T3H-Ze-grK"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h35-4n-Bi6">
+                                <rect key="frame" x="0.0" y="718" width="375" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="G1L-yH-ttH" kind="presentation" identifier="PlayDownloadedItemSegue" modalTransitionStyle="flipHorizontal" id="Fa2-vp-s2X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="h35-4n-Bi6" firstAttribute="leading" secondItem="rxb-Fz-Ox9" secondAttribute="leading" id="MNb-EY-TSE"/>
+                            <constraint firstItem="h35-4n-Bi6" firstAttribute="bottom" secondItem="rxb-Fz-Ox9" secondAttribute="bottom" id="SlS-GH-ccU"/>
+                            <constraint firstItem="rxb-Fz-Ox9" firstAttribute="bottom" secondItem="bTz-N2-lJc" secondAttribute="bottom" constant="60" id="foF-36-hpo"/>
+                            <constraint firstItem="rxb-Fz-Ox9" firstAttribute="trailing" secondItem="bTz-N2-lJc" secondAttribute="trailing" id="kJd-g0-O9J"/>
+                            <constraint firstItem="rxb-Fz-Ox9" firstAttribute="trailing" secondItem="h35-4n-Bi6" secondAttribute="trailing" id="sAV-Oe-BmC"/>
+                            <constraint firstItem="bTz-N2-lJc" firstAttribute="top" secondItem="rxb-Fz-Ox9" secondAttribute="top" id="vog-vh-ZfJ"/>
+                            <constraint firstItem="bTz-N2-lJc" firstAttribute="leading" secondItem="rxb-Fz-Ox9" secondAttribute="leading" id="wMD-vB-dyE"/>
+                            <constraint firstItem="h35-4n-Bi6" firstAttribute="top" secondItem="bTz-N2-lJc" secondAttribute="bottom" id="whW-ht-yuW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rxb-Fz-Ox9"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bTz-N2-lJc" id="ZBh-uA-o9y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhO-Z1-hWT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="-388"/>
         </scene>
         <!--Media Player View Controller-->
         <scene sceneID="Dci-6p-CQU">
@@ -471,7 +517,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Huu-Ws-E0x" sceneMemberID="firstResponder"/>
                 <exit id="8fH-FU-570" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="133"/>
+            <point key="canvasLocation" x="2028" y="133"/>
         </scene>
     </scenes>
     <resources>
@@ -482,6 +528,6 @@
         <image name="speedRate" width="60" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Cb9-Kt-aDE"/>
+        <segue reference="Fa2-vp-s2X"/>
     </inferredMetricsTieBreakers>
 </document>

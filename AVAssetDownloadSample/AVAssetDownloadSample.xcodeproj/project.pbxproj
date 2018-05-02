@@ -22,6 +22,7 @@
 		D2529D6920876EDA0071411F /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2529D6720876EDA0071411F /* Asset.swift */; };
 		D29674E3208F0FCF00836C09 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29674E2208F0FCE00836C09 /* MediaPlayerViewController.swift */; };
 		D29674E6208F1EF300836C09 /* UIAnimatedPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D29674E5208F1EF300836C09 /* UIAnimatedPlayButton.swift */; };
+		D2C5BAFF2091BB0B00F733C1 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2C5BAFE2091BB0B00F733C1 /* TracksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		D2529D6720876EDA0071411F /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		D29674E2208F0FCE00836C09 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
 		D29674E5208F1EF300836C09 /* UIAnimatedPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnimatedPlayButton.swift; sourceTree = "<group>"; };
+		D2C5BAFE2091BB0B00F733C1 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
 		DA0AED8A2FD7D434E751E1FD /* Pods-AVAssetDownloadSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVAssetDownloadSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AVAssetDownloadSample/Pods-AVAssetDownloadSample.debug.xcconfig"; sourceTree = "<group>"; };
 		E64A2504C6B837A92F975C16 /* Pods-AVAssetDownloadSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AVAssetDownloadSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-AVAssetDownloadSample/Pods-AVAssetDownloadSample.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			children = (
 				D29674E2208F0FCE00836C09 /* MediaPlayerViewController.swift */,
 				D2529D342087365D0071411F /* MainViewController.swift */,
+				D2C5BAFE2091BB0B00F733C1 /* TracksViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				D2529D352087365D0071411F /* MainViewController.swift in Sources */,
 				D2529D6920876EDA0071411F /* Asset.swift in Sources */,
 				D2529D6320876DD90071411F /* Item.swift in Sources */,
+				D2C5BAFF2091BB0B00F733C1 /* TracksViewController.swift in Sources */,
 				D29674E3208F0FCF00836C09 /* MediaPlayerViewController.swift in Sources */,
 				D2529D332087365D0071411F /* AppDelegate.swift in Sources */,
 				D29674E6208F1EF300836C09 /* UIAnimatedPlayButton.swift in Sources */,

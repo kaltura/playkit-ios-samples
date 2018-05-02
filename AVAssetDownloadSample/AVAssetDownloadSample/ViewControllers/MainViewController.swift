@@ -9,6 +9,7 @@
 import UIKit
 import PlayKit
 import Toast_Swift
+import AVFoundation
 
 class MainViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class MainViewController: UIViewController {
     
     // Use a LocalAssetsManager to handle local (offline, downloaded) assets.
     lazy var localAssetsManager: LocalAssetsManager = {
-        return LocalAssetsManager.manager(storage: self.simpleStorage!)
+        return LocalAssetsManager.manager(storage: simpleStorage!)
     }()
     
     let assetPersistenceManager = AssetPersistenceManager.sharedManager
@@ -52,12 +53,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.selectedItem = self.items.first!
+        selectedItem = items.first!
         itemPickerView.delegate = self
         itemPickerView.dataSource = self
         selectedItemTextField.inputView = itemPickerView
         selectedItemTextField.text = items.first?.title ?? ""
-        self.selectedItemTextField.inputAccessoryView = getAccessoryView()
+        selectedItemTextField.inputAccessoryView = getAccessoryView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -138,15 +139,15 @@ class MainViewController: UIViewController {
     }
     
     private func getAccessoryView() -> UIView {
-        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
-        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(self.doneButtonTapped(button:)))
+        let toolBar = UIToolbar(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 44))
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped(button:)))
         toolBar.items = [doneButton]
         
         return toolBar
     }
     
     @objc private func doneButtonTapped(button: UIBarButtonItem) -> Void {
-        self.selectedItemTextField.resignFirstResponder()
+        selectedItemTextField.resignFirstResponder()
     }
     
     private func assetName(for item: Item) -> String {
@@ -186,30 +187,30 @@ class MainViewController: UIViewController {
     
     private func toastShort(_ message: String) {
         print(message)
-        self.view.makeToast(message, duration: 0.6, position: .center)
+        view.makeToast(message, duration: 0.6, position: .center)
     }
     
     private func toastMedium(_ message: String) {
         print(message)
-        self.view.makeToast(message, duration: 1.0, position: .center)
+        view.makeToast(message, duration: 1.0, position: .center)
     }
     
     private func toastLong(_ message: String) {
         print(message)
-        self.view.makeToast(message, duration: 1.5, position: .center)
+        view.makeToast(message, duration: 1.5, position: .center)
     }
 
     // MARK: - IBActions
     
     @IBAction func startDownloadClicked(_ sender: Any) {
-        let assetName = self.assetName(for: self.selectedItem)
+        let assetName = self.assetName(for: selectedItem)
         
         if assetPersistenceManager.downloadState(for: assetName) == Asset.DownloadState.downloaded {
             toastLong("The media was already downloaded.")
             return
         }
         
-        guard let entry = self.selectedItem.entry else {
+        guard let entry = selectedItem.entry else {
             toastLong("The entry for the selected media is empty.")
             return
         }
@@ -225,7 +226,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func cancelDownloadClicked(_ sender: Any) {
-        let assetName = self.assetName(for: self.selectedItem)
+        let assetName = self.assetName(for: selectedItem)
         
         guard let asset = assetPersistenceManager.assetForStream(withName: assetName) else {
             toastLong("Can't cancel an item which is not in progress.")
@@ -236,7 +237,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func removeItemClicked(_ sender: Any) {
-        let assetName = self.assetName(for: self.selectedItem)
+        let assetName = self.assetName(for: selectedItem)
         
         guard let asset = assetPersistenceManager.localAssetForStream(withName: assetName) else {
             toastLong("Can't remove an item that doesn't exists.")
@@ -252,13 +253,13 @@ class MainViewController: UIViewController {
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         switch identifier {
         case "PlayRemoteItemSegue":
-            if self.selectedItem.entry == nil {
+            if selectedItem.entry == nil {
                 toastLong("Can't play without a mediaEntry.")
                 return false
             }
             
-        case "PlayDownloadedItemSegue":
-            let assetName = self.assetName(for: self.selectedItem)
+        case "SelectTracksSegue":
+            let assetName = self.assetName(for: selectedItem)
             if assetPersistenceManager.localAssetForStream(withName: assetName) == nil {
                 toastLong("There is no local asset to play.")
                 return false
@@ -279,21 +280,22 @@ class MainViewController: UIViewController {
                 return
             }
             
-            destinationViewController.mediaEntry = self.selectedItem.entry
+            destinationViewController.mediaEntry = selectedItem.entry
         
-        case "PlayDownloadedItemSegue"?:
-            guard let destinationViewController = segue.destination as? MediaPlayerViewController else {
+        case "SelectTracksSegue"?:
+            guard let destinationViewController = segue.destination as? TracksViewController else {
                 return
             }
             
-            let assetName = self.assetName(for: self.selectedItem)
+            let assetName = self.assetName(for: selectedItem)
             guard let localAsset = assetPersistenceManager.localAssetForStream(withName: assetName) else {
                 return
             }
             
             let localURL = localAsset.urlAsset.url
-            let localEntry = localAssetsManager.createLocalMediaEntry(for: assetName, localURL: localURL)
-            destinationViewController.mediaEntry = localEntry
+            
+            destinationViewController.localURL = localURL
+            destinationViewController.mediaEntry = localAssetsManager.createLocalMediaEntry(for: assetName, localURL: localURL)
         
         default:
             print("Unhandled Segue: \(String(describing: segue.identifier))")
@@ -316,7 +318,7 @@ extension MainViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return self.items.count
+        return items.count
     }
 }
 
@@ -331,7 +333,7 @@ extension MainViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.selectedItemTextField.text = items[row].title
-        self.selectedItem = items[row]
+        selectedItemTextField.text = items[row].title
+        selectedItem = items[row]
     }
 }

@@ -14,6 +14,8 @@ class MediaPlayerViewController: UIViewController {
     var player: Player?
     
     var mediaEntry: PKMediaEntry?
+    var selectedAudio: String = ""
+    var selectedSubtitle: String = ""
     
     @IBOutlet weak var playerView: PlayerView!
     
@@ -37,10 +39,10 @@ class MediaPlayerViewController: UIViewController {
         super.viewDidLoad()
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(playerViewTapped))
-        self.playerView.addGestureRecognizer(gesture)
+        playerView.addGestureRecognizer(gesture)
         
-        self.setupPlayer()
-        self.showPlayerControllers(true)
+        setupPlayer()
+        showPlayerControllers(true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,29 +54,39 @@ class MediaPlayerViewController: UIViewController {
     
     private func setupPlayer() {
         
-        guard let mediaEntry = self.mediaEntry else {
+        guard let mediaEntry = mediaEntry else {
             return
         }
         
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
-        self.mediaProgressSlider.value = 0.0
+        mediaProgressSlider.value = 0.0
         
         do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-            self.registerPlayerEvents()
-            self.player!.prepare(mediaConfig)
-            self.player?.view = self.playerView
+            player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+            registerPlayerEvents()
+            player!.prepare(mediaConfig)
+            player?.view = playerView
+            
+            if selectedSubtitle.count > 0 {
+                player?.settings.trackSelection.textSelectionMode = .selection
+                player?.settings.trackSelection.textSelectionLanguage = selectedSubtitle
+            }
+            
+            if selectedAudio.count > 0 {
+                player?.settings.trackSelection.audioSelectionMode = .selection
+                player?.settings.trackSelection.audioSelectionLanguage = selectedAudio
+            }
         } catch let e {
             print("Error loading the player: \(e)")
         }
     }
     
     @objc private func mediaProgressTimerFired() {
-        guard let player = self.player else {
+        guard let player = player else {
             print("player is not set")
             return
         }
-        self.mediaProgressSlider.value = Float(player.currentTime / player.duration)
+        mediaProgressSlider.value = Float(player.currentTime / player.duration)
     }
     
     private func showPlayerControllers(_ show: Bool) {
@@ -88,31 +100,31 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @objc private func playerViewTapped() {
-        let show = !(self.topVisualEffectViewHeightConstraint.constant == CGFloat(topBottomVisualEffectViewHeight))
-        self.showPlayerControllers(show)
+        let show = !(topVisualEffectViewHeightConstraint.constant == CGFloat(topBottomVisualEffectViewHeight))
+        showPlayerControllers(show)
     }
     
     private func updateAnimatedPlayButton() {
-        guard let player = self.player else {
+        guard let player = player else {
             return
         }
         
-        if player.rate > 0 {
-            self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Pause)
+        if player.rate > 0 || player.isPlaying {
+            animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Pause)
         } else {
-            self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Play)
+            animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Play)
         }
     }
     
     // MARK: - Events Registration
     
     func registerPlayerEvents() {
-        self.registerPlaybackEvents()
-        self.handleTracks()
+        registerPlaybackEvents()
+        handleTracks()
     }
     
     func registerPlaybackEvents() {
-        guard let player = self.player else {
+        guard let player = player else {
             print("player is not set")
             return
         }
@@ -133,7 +145,7 @@ class MediaPlayerViewController: UIViewController {
     }
     
     func handleTracks() {
-        guard let player = self.player else {
+        guard let player = player else {
             print("player is not set")
             return
         }
@@ -155,7 +167,7 @@ class MediaPlayerViewController: UIViewController {
     
     @IBAction func trackTouched(_ sender: Any) {
         
-        self.showPlayerControllers(false)
+        showPlayerControllers(false)
         UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCrossDissolve, animations: {
             self.settingsVisualEffectView.alpha = 1.0
         }, completion: nil)
@@ -171,7 +183,7 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @IBAction func speechTouched(_ sender: Any) {
-        guard let tracks = self.audioTracks else {
+        guard let tracks = audioTracks else {
             return
         }
         
@@ -186,7 +198,7 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @IBAction func subtitleTouched(_ sender: Any) {
-        guard let tracks = self.textTracks else {
+        guard let tracks = textTracks else {
             return
         }
         
@@ -201,12 +213,12 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @IBAction func closeTouched(_ sender: Any) {
-        self.player?.destroy()
+        player?.destroy()
         performSegue(withIdentifier: "unwindSegueToMediaCollection", sender: self)
     }
     
     @IBAction func mediaProgressSliderValueChanged(_ sender: UISlider) {
-        guard let player = self.player else {
+        guard let player = player else {
             return
         }
         
@@ -216,23 +228,23 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @IBAction func animatedPlayButtonTouched(_ sender: Any) {
-        guard let player = self.player else {
+        guard let player = player else {
             print("player is not set")
             return
         }
         
-        if !(player.isPlaying) {
-            self.mediaProgressTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(mediaProgressTimerFired), userInfo: nil, repeats: true)
+        if player.rate > 0 || player.isPlaying {
+            mediaProgressTimer?.invalidate()
+            mediaProgressTimer = nil
+            player.pause()
+        } else {
+            mediaProgressTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(mediaProgressTimerFired), userInfo: nil, repeats: true)
             
             player.play()
-            self.showPlayerControllers(false)
-        } else {
-            self.mediaProgressTimer?.invalidate()
-            self.mediaProgressTimer = nil
-            player.pause()
+            showPlayerControllers(false)
         }
         
-        self.updateAnimatedPlayButton()
+        updateAnimatedPlayButton()
     }
     
     @IBAction func speedRateTouched(_ sender: Any) {
@@ -251,5 +263,4 @@ class MediaPlayerViewController: UIViewController {
         }))
         present(alertController, animated: true, completion: nil)
     }
-
 }
