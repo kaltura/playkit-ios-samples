@@ -64,8 +64,8 @@ class VideoViewController: UIViewController {
             print("failed to create player!")
             return
         }
+        player.view = (self.view as! PlayerView)
         player.view?.backgroundColor = UIColor.black
-        player.view?.add(toContainer: self.view)
         self.player = player
         
         playerSettings.createMediaConfig() { [weak self] (mediaConfig) in

@@ -1,0 +1,33 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '9.0'
+
+# Uncomment to use a local copy of PlayKit
+#PLAYKIT_LOCAL='../../playkit-ios'
+
+PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
+
+target 'AVAssetDownloadSample' do
+  use_frameworks!
+
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
+  else
+    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+  end
+  
+  pod 'DownloadToGo'
+  pod 'Toast-Swift'
+
+  target 'AVAssetDownloadSampleTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'AVAssetDownloadSampleUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

@@ -12,6 +12,9 @@ import PlayKit
 extension VideoViewController {
     
     func showTracksControlsView(tracks: PKTracks) {
+        
+        guard let playerView = self.player.view else { return }
+        
         // initialize views //
         let tracksControlsView = UIVisualEffectView(effect: UIBlurEffect(style: .dark))
         tracksControlsView.alpha = 0
@@ -37,7 +40,7 @@ extension VideoViewController {
         centeredView.addSubview(captionsButton)
         centeredView.addSubview(audioTracksButton)
         tracksControlsView.contentView.addSubview(centeredView)
-        self.player.view?.addSubview(tracksControlsView)
+        playerView.addSubview(tracksControlsView)
         
         // add constraints //
         centeredView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,10 +48,10 @@ extension VideoViewController {
         captionsButton.translatesAutoresizingMaskIntoConstraints = false
         audioTracksButton.translatesAutoresizingMaskIntoConstraints = false
         
-        tracksControlsView.leftAnchor.constraint(equalTo: self.player.view!.leftAnchor).isActive = true
-        tracksControlsView.rightAnchor.constraint(equalTo: self.player.view!.rightAnchor).isActive = true
-        tracksControlsView.topAnchor.constraint(equalTo: self.player.view!.topAnchor).isActive = true
-        tracksControlsView.heightAnchor.constraint(equalTo: self.player.view!.heightAnchor, multiplier: 0.15).isActive = true
+        tracksControlsView.leftAnchor.constraint(equalTo: playerView.leftAnchor).isActive = true
+        tracksControlsView.rightAnchor.constraint(equalTo: playerView.rightAnchor).isActive = true
+        tracksControlsView.topAnchor.constraint(equalTo: playerView.topAnchor).isActive = true
+        tracksControlsView.heightAnchor.constraint(equalTo: playerView.heightAnchor, multiplier: 0.15).isActive = true
         
         centeredView.centerYAnchor.constraint(equalTo: tracksControlsView.centerYAnchor).isActive = true
         centeredView.centerXAnchor.constraint(equalTo: tracksControlsView.centerXAnchor).isActive = true

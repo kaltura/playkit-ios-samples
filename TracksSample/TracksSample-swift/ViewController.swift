@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func handleTracks() {
-        player?.addObserver(self, events: [PlayerEvent.tracksAvailable, PlayerEvent.trackChanged], block: { [weak self] (event: PKEvent) in
+        player?.addObserver(self, events: [PlayerEvent.tracksAvailable, PlayerEvent.textTrackChanged, PlayerEvent.audioTrackChanged], block: { [weak self] (event: PKEvent) in
             if type(of: event) == PlayerEvent.tracksAvailable {
                 guard let this = self else { return }
                 
@@ -77,8 +77,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
                 
                 this.picker.reloadAllComponents()
-            } else if type(of: event) == PlayerEvent.trackChanged {
-                print("selected track: \(event.selectedTrack?.title ?? "")")
+            } else if type(of: event) == PlayerEvent.textTrackChanged {
+                print("selected text track: \(event.selectedTrack?.title ?? "")")
+            } else if type(of: event) == PlayerEvent.audioTrackChanged {
+                print("selected audio track: \(event.selectedTrack?.title ?? "")")
             }
         })
     }

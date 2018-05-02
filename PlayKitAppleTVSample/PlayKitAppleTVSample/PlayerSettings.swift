@@ -23,7 +23,7 @@ class PlayerSettings {
         switch self.mediaType {
         case .clear:
             let id = "Apple Bip Bop"
-            let contentUrl = "https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
+            let contentUrl = "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8"
             let mediaEntry = self.createMediaEntry(fromUrl: contentUrl, andId: id)
             completionHandler(MediaConfig(mediaEntry: mediaEntry, startTime: self.startTime))
         case .live:

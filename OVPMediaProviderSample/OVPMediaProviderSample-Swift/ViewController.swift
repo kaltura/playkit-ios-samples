@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitUtils
 
 /*
  This sample will show you how to create a player with basic functionality.
@@ -82,10 +83,9 @@ class ViewController: UIViewController {
         }
         
         if !(player.isPlaying) {
-            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (timer) in
+            self.playheadTimer = PKTimer.every(0.5) { (timer) in
                 self.playheadSlider.value = Float(player.currentTime / player.duration)
-            })
-            
+            }
             player.play()
         }
     }
