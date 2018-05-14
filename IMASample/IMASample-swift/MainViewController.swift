@@ -15,6 +15,9 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
 
     var videos: [Video] = []
     var player: Player?
+    let adsConfig = IMAConfig()
+    var pluginConfig: PluginConfig?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -30,6 +33,9 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
             
         }
         
+        let youboraConfig = AnalyticsConfig(params: ["accountCode": "kalturatest"])
+//        let youboraConfig = self.createYouboraPluginConfig()
+        pluginConfig = PluginConfig(config: [IMAPlugin.pluginName: adsConfig, YouboraPlugin.pluginName: youboraConfig])
     }
     
     func initVideos() {
@@ -38,15 +44,23 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
         let bunnyThumbnail = UIImage(named: "bunny.png")
         let bipThumbnail = UIImage(named: "bip.png")
         
-        videos.append(Video(title: "Pre-roll", thumbnail: dfpThumbnail!, tag: kPrerollTag))
-        videos.append(Video(title: "Skippable Pre-roll", thumbnail: androidThumbnail!, tag: kSkippableTag))
-        videos.append(Video(title: "Post-roll", thumbnail: bunnyThumbnail!, tag: kPostrollTag))
-        videos.append(Video(title: "AdRules", thumbnail: bipThumbnail!, tag: kAdRulesTag))
-        videos.append(Video(title: "AdRules Pods", thumbnail: dfpThumbnail!, tag: kAdRulesPodsTag))
-        videos.append(Video(title: "VMAP Pods", thumbnail: androidThumbnail!, tag: kVMAPPodsTag))
-        videos.append(Video(title: "Wrapper", thumbnail: bunnyThumbnail!, tag: kWrapperTag))
-        videos.append(Video(title: "AdSense", thumbnail: bipThumbnail!, tag: kAdSenseTag))
-        videos.append(Video(title: "Custom", thumbnail: androidThumbnail!, tag: "custom"))
+        let video1URLString = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
+        let video2URLString = "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8"
+        
+        videos.append(Video(title: "Pre-roll - Live",
+                            thumbnail: dfpThumbnail!,
+                            tag: kPrerollTag,
+                            urlString: "https://qa-apache-php7.dev.kaltura.com/p/1091/sp/1091/playManifest/entryId/0_fdb6sbgm/deliveryProfileId/1033/protocol/https/format/applehttp/a.m3u8",
+                            type: .live))
+        videos.append(Video(title: "Pre-roll", thumbnail: dfpThumbnail!, tag: kPrerollTag, urlString: video1URLString))
+        videos.append(Video(title: "Skippable Pre-roll", thumbnail: androidThumbnail!, tag: kSkippableTag, urlString: video1URLString))
+        videos.append(Video(title: "Post-roll", thumbnail: bunnyThumbnail!, tag: kPostrollTag, urlString: video1URLString))
+        videos.append(Video(title: "AdRules", thumbnail: bipThumbnail!, tag: kAdRulesTag, urlString: video1URLString))
+        videos.append(Video(title: "AdRules Pods", thumbnail: dfpThumbnail!, tag: kAdRulesPodsTag, urlString: video1URLString))
+        videos.append(Video(title: "VMAP Pods", thumbnail: androidThumbnail!, tag: kVMAPPodsTag, urlString: video2URLString))
+        videos.append(Video(title: "Wrapper", thumbnail: bunnyThumbnail!, tag: kWrapperTag, urlString: video2URLString))
+        videos.append(Video(title: "AdSense", thumbnail: bipThumbnail!, tag: kAdSenseTag, urlString: video2URLString))
+        videos.append(Video(title: "Custom", thumbnail: androidThumbnail!, tag: "custom", urlString: video2URLString))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,24 +71,21 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
                 if let videoVC = segue.destination as? VideoViewController {
                     videoVC.video = video
                     
-                    let adsConfig = IMAConfig()
                     adsConfig.adTagUrl = video.tag
                     
                     var url: URL?
                     if let player = player {
-                        url = URL.init(string: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8")
+                        url = URL(string: video.urlString)
                         player.updatePluginConfig(pluginName: "IMAPlugin", config: adsConfig)
                     } else {
-                        url = URL.init(string: "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8")
-
-                        let youboraConfig = AnalyticsConfig(params: ["accountCode": "kalturatest", YouboraPlugin.enableSmartAdsKey: true])
-                        let pluginConfig = PluginConfig(config: [IMAPlugin.pluginName: adsConfig, YouboraPlugin.pluginName: youboraConfig])
+                        url = URL(string: video.urlString)
                         
                         do {
                             player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
                         } catch let e {
                             print("error:", e.localizedDescription)
                         }
+
                         player?.delegate = self
                         
                         player?.addObserver(self, event: PlayerEvent.error, block: { (event) in
@@ -84,14 +95,46 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
 
                     let source = PKMediaSource("Kaltura Media", contentUrl: url, mimeType: nil, drmData: nil, mediaFormat: PKMediaSource.MediaFormat.hls)
                     let mediaEntry = PKMediaEntry("Kaltura Media", sources: [source], duration: -1)
+                    mediaEntry.mediaType = video.type
                     let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0)
                     
                     videoVC.player = player
                     videoVC.mediaConfig = mediaConfig
                 }
+               tableView.deselectRow(at: indexPath, animated: false)
             }
         }
     }
+    
+//    func createYouboraPluginConfig() -> AnalyticsConfig {
+//        // account code is mandatory, make sure to put the correct one.
+//        let youboraPluginParams: [String: Any] = ["accountCode": "kalturatest",
+//                                                  "httpSecure": true,
+//                                                  "houseHoldId": "aaa",
+//                                                  "media": [
+//                                                    "isLive": false,
+//                                                    "duration": 800
+//            ],
+//                                                  "properties": [
+//                                                    "year": "2001",
+//                                                    "genre": "Fantasy",
+//                                                    "price": "free"
+//            ],
+//                                                  "network": [
+//                                                    "ip": "1.2.3.4"
+//            ],
+//                                                  "ads": [
+//                                                    "adsExpected": true,
+//                                                    "campaign": "Ad campaign name"
+//            ],
+//                                                  "extraParams": [
+//                                                    "param1": "Extra param 1 value",
+//                                                    "param2": "Extra param 2 value"
+//            ]
+//        ]
+//
+//        return AnalyticsConfig(params: youboraPluginParams)
+//    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -111,4 +154,3 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
         return true
     }
 }
-
