@@ -117,7 +117,8 @@
 - (KalturaStatsPluginConfig *)createKalturaStatsPluginConfig {
     return [[KalturaStatsPluginConfig alloc] initWithUiconfId:0
                                                     partnerId:0
-                                                      entryId:@""];
+                                                      entryId:@""
+                                                  hasKanalony:NO];
 }
 
 /*********************************/
