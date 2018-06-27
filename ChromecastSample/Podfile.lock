@@ -7,41 +7,53 @@ PODS:
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
   - Log (1.0)
-  - PlayKit (3.2.x-dev):
-    - PlayKit/Core (= 3.2.x-dev)
-  - PlayKit/Core (3.2.x-dev):
+  - PlayKit (3.5.0):
+    - PlayKit/Core (= 3.5.0)
+  - PlayKit/Core (3.5.0):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
+    - PlayKitUtils (= 0.1.4)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/GoogleCastAddon (3.2.x-dev):
+  - PlayKit/GoogleCastAddon (3.5.0):
     - google-cast-sdk (= 3.5)
     - PlayKit/Core
+  - PlayKitUtils (0.1.4)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
-  - PlayKit/GoogleCastAddon (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
+  - PlayKit/GoogleCastAddon (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - google-cast-sdk
+    - KalturaNetKit
+    - Log
+    - PlayKitUtils
+    - SwiftyJSON
+    - SwiftyXMLParser
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: develop
+    :branch: master
     :git: https://github.com/kaltura/playkit-ios.git
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: 9cab7708c56cef4a7a783e50fb53a4db3e370ffc
+    :commit: e2b0daa7fd4be95352a51bd69e8ff9fb0c2983f3
     :git: https://github.com/kaltura/playkit-ios.git
 
 SPEC CHECKSUMS:
   google-cast-sdk: fc3728ead66150ac746e001ba03a44e4b10e359e
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 0764b474e2778735fabd94d372882984d92e0162
+  PlayKit: d6fba7ff6fbd6c592c181e550b627e41e6bf278d
+  PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
 
-PODFILE CHECKSUM: 095786e58843c85307e0ae5adbc6d798bf1d20f0
+PODFILE CHECKSUM: e19912b4bdbb4e8f6d65f4774cb856c8dd79ef7e
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

@@ -9,6 +9,7 @@
 import UIKit
 import PlayKit
 import GoogleCast
+import MediaPlayer
 
 /*
  This sample will show you how to create a player with basic functionality.
@@ -43,6 +44,24 @@ class ViewController: UIViewController, GoogleCastManagerDelegate {
             // error loading the player
             print("error:", e.localizedDescription)
         }
+        
+        createAirPlayButton()
+    }
+    
+    // MARK: - Airplay Button
+    
+    private func createAirPlayButton() {
+        let airplayButton = MPVolumeView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
+        airplayButton.showsRouteButton = true
+        airplayButton.showsVolumeSlider = false
+        airplayButton.clipsToBounds = true
+        airplayButton.isHidden = false
+        playerContainer.addSubview(airplayButton)
+        airplayButton.translatesAutoresizingMaskIntoConstraints = false
+        airplayButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        airplayButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        airplayButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        airplayButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
 
     override func didReceiveMemoryWarning() {
