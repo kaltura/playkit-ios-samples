@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="VYY-ZM-Jr6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VYY-ZM-Jr6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,10 +15,6 @@
         <scene sceneID="g3j-H4-nwf">
             <objects>
                 <viewController id="Jci-8o-Jgh" customClass="MainViewController" customModule="IMASample_swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4Xp-oA-rry"/>
-                        <viewControllerLayoutGuide type="bottom" id="flU-1b-ZVg"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ahs-fE-ovp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +58,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="IJ3-3B-wSr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tags" id="vPQ-N2-JZ5"/>
                     <connections>
@@ -92,18 +91,10 @@
         <scene sceneID="2SD-ti-3FN">
             <objects>
                 <viewController id="Yiq-tH-5V9" customClass="VideoViewController" customModule="IMASample_swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FfN-Df-G0R"/>
-                        <viewControllerLayoutGuide type="bottom" id="su1-1h-vpJ"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="GGr-Tw-LLL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tce-DX-dGC" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuW-mm-ErZ">
                                 <rect key="frame" x="0.0" y="603" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TRR-tX-wmi">
@@ -159,19 +150,28 @@
                                 </constraints>
                                 <blurEffect style="light"/>
                             </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tce-DX-dGC" customClass="PlayerView" customModule="PlayKit">
+                                <rect key="frame" x="0.0" y="64" width="375" height="211"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tce-DX-dGC" secondAttribute="height" multiplier="16:9" id="fqz-W1-2vB"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="su1-1h-vpJ" firstAttribute="top" secondItem="TuW-mm-ErZ" secondAttribute="bottom" id="8yw-4L-vI8"/>
-                            <constraint firstItem="tce-DX-dGC" firstAttribute="leading" secondItem="GGr-Tw-LLL" secondAttribute="leading" id="Bjr-hk-em7"/>
-                            <constraint firstItem="tce-DX-dGC" firstAttribute="top" secondItem="GGr-Tw-LLL" secondAttribute="top" id="Ss3-b3-WAj"/>
-                            <constraint firstItem="TuW-mm-ErZ" firstAttribute="leading" secondItem="GGr-Tw-LLL" secondAttribute="leading" id="aTY-El-Gos"/>
-                            <constraint firstAttribute="trailing" secondItem="tce-DX-dGC" secondAttribute="trailing" id="aYF-qI-FOe"/>
-                            <constraint firstItem="TuW-mm-ErZ" firstAttribute="top" secondItem="tce-DX-dGC" secondAttribute="bottom" id="got-Jn-wFZ"/>
-                            <constraint firstAttribute="trailing" secondItem="TuW-mm-ErZ" secondAttribute="trailing" id="yy4-br-YpR"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="top" secondItem="HkQ-GT-IGT" secondAttribute="top" id="7hA-DL-3Fo"/>
+                            <constraint firstItem="HkQ-GT-IGT" firstAttribute="bottom" secondItem="TuW-mm-ErZ" secondAttribute="bottom" id="8yw-4L-vI8"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HkQ-GT-IGT" secondAttribute="trailing" id="EMk-ik-4cX"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="centerX" secondItem="HkQ-GT-IGT" secondAttribute="centerX" id="Eq0-ay-e1q"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HkQ-GT-IGT" secondAttribute="leading" id="RwT-bF-kwR"/>
+                            <constraint firstItem="TuW-mm-ErZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tce-DX-dGC" secondAttribute="bottom" id="Uq1-v0-ZFN"/>
+                            <constraint firstItem="TuW-mm-ErZ" firstAttribute="leading" secondItem="HkQ-GT-IGT" secondAttribute="leading" id="aTY-El-Gos"/>
+                            <constraint firstItem="HkQ-GT-IGT" firstAttribute="trailing" secondItem="TuW-mm-ErZ" secondAttribute="trailing" id="yy4-br-YpR"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="HkQ-GT-IGT"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MjP-Jd-mAr"/>
+                    <navigationItem key="navigationItem" id="PlA-Sr-In1"/>
                     <connections>
                         <outlet property="playerContainer" destination="tce-DX-dGC" id="fkl-kr-LuB"/>
                         <outlet property="playheadSlider" destination="wpT-ut-4dy" id="QCV-Zx-xAo"/>

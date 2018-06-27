@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		126171BB443FB9F4DA13F6A2 /* Pods_IMASample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB07F1414CB0109273EC2E0A /* Pods_IMASample.framework */; };
-		B319B59EBB993E7A6B7A2160 /* Pods_IMASample_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CECF924CC9F3116D5833FA1 /* Pods_IMASample_swift.framework */; };
+		041C062CDCC06785AB0984B9 /* Pods_SharedPods_IMASample_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6694381B8BE9E3F4C7345BD8 /* Pods_SharedPods_IMASample_swift.framework */; };
+		AF9543316BF50E163ECEFDA9 /* Pods_SharedPods_IMASample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A94DB97D393763E692F5945B /* Pods_SharedPods_IMASample.framework */; };
 		BD806D931FB19BBE007275F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD806D921FB19BBE007275F9 /* AppDelegate.swift */; };
 		BD806D951FB19BBE007275F9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD806D941FB19BBE007275F9 /* MainViewController.swift */; };
 		BD806D9A1FB19BBE007275F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD806D991FB19BBE007275F9 /* Assets.xcassets */; };
@@ -30,11 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		10FA97B61D745CED93C39977 /* Pods-IMASample-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMASample-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMASample-swift/Pods-IMASample-swift.release.xcconfig"; sourceTree = "<group>"; };
-		38CF81AE5926258140248CCC /* Pods-IMASample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMASample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMASample/Pods-IMASample.debug.xcconfig"; sourceTree = "<group>"; };
-		7CECF924CC9F3116D5833FA1 /* Pods_IMASample_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMASample_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		901607063A9D4BB9ADC9D6BE /* Pods-IMASample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMASample.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMASample/Pods-IMASample.release.xcconfig"; sourceTree = "<group>"; };
-		AE8263152230B94A8A548A3F /* Pods-IMASample-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMASample-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMASample-swift/Pods-IMASample-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		17840A5B83FCB9D53BE2E082 /* Pods-SharedPods-IMASample-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-IMASample-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-IMASample-swift/Pods-SharedPods-IMASample-swift.release.xcconfig"; sourceTree = "<group>"; };
+		6694381B8BE9E3F4C7345BD8 /* Pods_SharedPods_IMASample_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_IMASample_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A459C7E0DC66076ACF6CC68D /* Pods-SharedPods-IMASample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-IMASample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-IMASample/Pods-SharedPods-IMASample.release.xcconfig"; sourceTree = "<group>"; };
+		A69FD3484C56869FF0F75271 /* Pods-SharedPods-IMASample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-IMASample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-IMASample/Pods-SharedPods-IMASample.debug.xcconfig"; sourceTree = "<group>"; };
+		A94DB97D393763E692F5945B /* Pods_SharedPods_IMASample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_IMASample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD806D901FB19BBE007275F9 /* IMASample-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IMASample-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD806D921FB19BBE007275F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD806D941FB19BBE007275F9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 		BD806DDC1FB1A38D007275F9 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		BD806DDE1FB1A72F007275F9 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		BD806DE01FB1AF3A007275F9 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
-		FB07F1414CB0109273EC2E0A /* Pods_IMASample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMASample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7EFC5EF821BD7FDBCA1E77F /* Pods-SharedPods-IMASample-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-IMASample-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-IMASample-swift/Pods-SharedPods-IMASample-swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B319B59EBB993E7A6B7A2160 /* Pods_IMASample_swift.framework in Frameworks */,
+				041C062CDCC06785AB0984B9 /* Pods_SharedPods_IMASample_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				126171BB443FB9F4DA13F6A2 /* Pods_IMASample.framework in Frameworks */,
+				AF9543316BF50E163ECEFDA9 /* Pods_SharedPods_IMASample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +89,8 @@
 		1639A4A76F96C4AB9B4A0837 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FB07F1414CB0109273EC2E0A /* Pods_IMASample.framework */,
-				7CECF924CC9F3116D5833FA1 /* Pods_IMASample_swift.framework */,
+				A94DB97D393763E692F5945B /* Pods_SharedPods_IMASample.framework */,
+				6694381B8BE9E3F4C7345BD8 /* Pods_SharedPods_IMASample_swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -98,10 +98,10 @@
 		B66C927D03EC1677A7898D5D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				38CF81AE5926258140248CCC /* Pods-IMASample.debug.xcconfig */,
-				901607063A9D4BB9ADC9D6BE /* Pods-IMASample.release.xcconfig */,
-				AE8263152230B94A8A548A3F /* Pods-IMASample-swift.debug.xcconfig */,
-				10FA97B61D745CED93C39977 /* Pods-IMASample-swift.release.xcconfig */,
+				A69FD3484C56869FF0F75271 /* Pods-SharedPods-IMASample.debug.xcconfig */,
+				A459C7E0DC66076ACF6CC68D /* Pods-SharedPods-IMASample.release.xcconfig */,
+				E7EFC5EF821BD7FDBCA1E77F /* Pods-SharedPods-IMASample-swift.debug.xcconfig */,
+				17840A5B83FCB9D53BE2E082 /* Pods-SharedPods-IMASample-swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -178,7 +178,6 @@
 				BD806D8D1FB19BBE007275F9 /* Frameworks */,
 				BD806D8E1FB19BBE007275F9 /* Resources */,
 				0F94514FF194FEB30C0331FC /* [CP] Embed Pods Frameworks */,
-				580EE861C38470DB77955655 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -198,7 +197,6 @@
 				BD806DA31FB19C9E007275F9 /* Frameworks */,
 				BD806DA41FB19C9E007275F9 /* Resources */,
 				5BBBB3D520D879F59594D4BE /* [CP] Embed Pods Frameworks */,
-				01212DCC00B9EF670983528D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -272,32 +270,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01212DCC00B9EF670983528D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMASample/Pods-IMASample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		0F94514FF194FEB30C0331FC /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-IMASample-swift/Pods-IMASample-swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-IMASample-swift/Pods-SharedPods-IMASample-swift-frameworks.sh",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit_IMA/PlayKit_IMA.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
@@ -310,6 +294,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit_IMA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
@@ -318,22 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMASample-swift/Pods-IMASample-swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		580EE861C38470DB77955655 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMASample-swift/Pods-IMASample-swift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-IMASample-swift/Pods-SharedPods-IMASample-swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5BBBB3D520D879F59594D4BE /* [CP] Embed Pods Frameworks */ = {
@@ -342,11 +312,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-IMASample/Pods-IMASample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-IMASample/Pods-SharedPods-IMASample-frameworks.sh",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit_IMA/PlayKit_IMA.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
@@ -359,6 +330,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit_IMA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
@@ -367,7 +339,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IMASample/Pods-IMASample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-IMASample/Pods-SharedPods-IMASample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		81F84A9B70FE2679128FDB91 /* [CP] Check Pods Manifest.lock */ = {
@@ -381,7 +353,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IMASample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-IMASample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -399,7 +371,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-IMASample-swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-IMASample-swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -505,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -554,7 +526,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -563,12 +535,13 @@
 		};
 		BD806D9F1FB19BBE007275F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE8263152230B94A8A548A3F /* Pods-IMASample-swift.debug.xcconfig */;
+			baseConfigurationReference = E7EFC5EF821BD7FDBCA1E77F /* Pods-SharedPods-IMASample-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "IMASample-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kaltura.IMASample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -581,12 +554,13 @@
 		};
 		BD806DA01FB19BBE007275F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10FA97B61D745CED93C39977 /* Pods-IMASample-swift.release.xcconfig */;
+			baseConfigurationReference = 17840A5B83FCB9D53BE2E082 /* Pods-SharedPods-IMASample-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "IMASample-swift/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "kaltura.IMASample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -598,11 +572,11 @@
 		};
 		BD806DBA1FB19C9E007275F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38CF81AE5926258140248CCC /* Pods-IMASample.debug.xcconfig */;
+			baseConfigurationReference = A69FD3484C56869FF0F75271 /* Pods-SharedPods-IMASample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = IMASample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaltura.IMASample;
@@ -613,11 +587,11 @@
 		};
 		BD806DBB1FB19C9E007275F9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 901607063A9D4BB9ADC9D6BE /* Pods-IMASample.release.xcconfig */;
+			baseConfigurationReference = A459C7E0DC66076ACF6CC68D /* Pods-SharedPods-IMASample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = IMASample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kaltura.IMASample;
