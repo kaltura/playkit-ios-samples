@@ -30,7 +30,8 @@ class MainViewController: UIViewController {
         Item("FPS: Ella 1", id: "1_x14v3p06", partnerId: 1788671),
         Item("FPS: QA 1", id: "0_4s6xvtx3", partnerId: 4171, env: "http://qa-apache-php7.dev.kaltura.com"),
         Item("Clear: Kaltura", id: "1_sf5ovm7u", partnerId: 243342),
-        Item(id: "QA multi/multi", url: "http://qa-apache-testing-ubu-01.dev.kaltura.com/p/1091/sp/109100/playManifest/entryId/0_mskmqcit/flavorIds/0_et3i1dux,0_pa4k1rn9/format/applehttp/protocol/http/a.m3u8"),
+        // Item not good getting an error
+        //        Item(id: "QA multi/multi", url: "http://qa-apache-testing-ubu-01.dev.kaltura.com/p/1091/sp/109100/playManifest/entryId/0_mskmqcit/flavorIds/0_et3i1dux,0_pa4k1rn9/format/applehttp/protocol/http/a.m3u8"),
         Item(id: "Eran multi audio", url: "https://cdnapisec.kaltura.com/p/2035982/sp/203598200/playManifest/entryId/0_7s8q41df/format/applehttp/protocol/https/name/a.m3u8?deliveryProfileId=4712"),
         Item(id: "Trailer", url: "http://cdnbakmi.kaltura.com/p/1758922/sp/175892200/playManifest/entryId/0_ksthpwh8/format/applehttp/tags/ipad/protocol/http/f/a.m3u8"),
         Item(id: "AES-128 multi-key", url: "https://noamtamim.com/random/hls/test-enc-aes/multi.m3u8")
@@ -38,9 +39,15 @@ class MainViewController: UIViewController {
     
     var selectedItem: Item! {
         didSet {
+            let downloadState = self.downloadState(of: selectedItem)
             DispatchQueue.main.async {
                 self.statusValueLabel.text = self.statusOf(self.selectedItem)
-                self.progressView.progress = 0.0
+                switch downloadState {
+                case .downloaded:
+                    self.progressView.progress = 1.0
+                default:
+                    self.progressView.progress = 0.0
+                }
             }
         }
     }
@@ -57,6 +64,7 @@ class MainViewController: UIViewController {
         itemPickerView.delegate = self
         itemPickerView.dataSource = self
         selectedItemTextField.inputView = itemPickerView
+        selectedItemTextField.inputView?.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         selectedItemTextField.text = items.first?.title ?? ""
         selectedItemTextField.inputAccessoryView = getAccessoryView()
     }
@@ -134,6 +142,12 @@ class MainViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.statusValueLabel.text = self.downloadState(state)
+                switch Asset.DownloadState(rawValue: state) {
+                case .downloaded?:
+                    self.progressView.progress = 1.0
+                default:
+                    self.progressView.progress = 0.0
+                }
             }
         }
     }
@@ -155,10 +169,13 @@ class MainViewController: UIViewController {
     }
     
     private func statusOf(_ item: Item) -> String {
-        let assetName = self.assetName(for: item)
-        
-        let downloadState = assetPersistenceManager.downloadState(for: assetName)
+        let downloadState = self.downloadState(of: item)
         return self.downloadState(downloadState)
+    }
+    
+    private func downloadState(of item: Item) -> Asset.DownloadState {
+        let assetName = self.assetName(for: item)
+        return assetPersistenceManager.downloadState(for: assetName)
     }
     
     private func downloadState(_ state: Asset.DownloadState) -> String {
