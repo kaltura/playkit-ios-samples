@@ -1,75 +1,48 @@
 PODS:
-  - DownloadToGo (3.3.1):
-    - GCDWebServer (~> 3.3.3)
-    - M3U8Kit (~> 0.2.1)
-    - PlayKitUtils (~> 0.1.4)
-    - RealmSwift (~> 2.8.3)
-    - XCGLogger (~> 6.0.1)
-  - GCDWebServer (3.3.3):
-    - GCDWebServer/Core (= 3.3.3)
-  - GCDWebServer/Core (3.3.3)
   - KalturaNetKit (0.0.17):
     - KalturaNetKit/Core (= 0.0.17)
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
   - Log (1.0)
-  - M3U8Kit (0.2.3)
-  - ObjcExceptionBridging (1.0.1):
-    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
-  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.4.x-dev):
-    - PlayKit/Core (= 3.4.x-dev)
-  - PlayKit/Core (3.4.x-dev):
+  - PlayKit (3.5.x-dev):
+    - PlayKit/Core (= 3.5.x-dev)
+  - PlayKit/Core (3.5.x-dev):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
     - PlayKitUtils (= 0.1.4)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
   - PlayKitUtils (0.1.4)
-  - Realm (2.8.3):
-    - Realm/Headers (= 2.8.3)
-  - Realm/Headers (2.8.3)
-  - RealmSwift (2.8.3):
-    - Realm (= 2.8.3)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
   - Toast-Swift (3.0.1)
-  - XCGLogger (6.0.2):
-    - XCGLogger/Core (= 6.0.2)
-  - XCGLogger/Core (6.0.2):
-    - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - DownloadToGo
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1895`)
+  - PlayKit (from `../../playkit-ios`)
   - Toast-Swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KalturaNetKit
+    - Log
+    - PlayKitUtils
+    - SwiftyJSON
+    - SwiftyXMLParser
+    - Toast-Swift
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: FEM-1895
-    :git: https://github.com/kaltura/playkit-ios.git
-
-CHECKOUT OPTIONS:
-  PlayKit:
-    :commit: 18594ba9944304b52f264d75636556678aed9540
-    :git: https://github.com/kaltura/playkit-ios.git
+    :path: "../../playkit-ios"
 
 SPEC CHECKSUMS:
-  DownloadToGo: 9f9169b379e0f359b7e40b014f46ce7dc2c11f7a
-  GCDWebServer: 1c39a1f0763e4eb492bee021e4270fce097d3555
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  M3U8Kit: 1a5720b2b3584750a66ae5e2f78d83c3149a0165
-  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: e7245cce60d631d6d886aa3af633723e13abadb9
+  PlayKit: 619d23bcbe33828494c8812f5daed4bb91e47917
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
-  Realm: 3601ef091c8c499a31101d8563b991e75546cdce
-  RealmSwift: 8183818515471b01a99abdd2970f8e4fd52b6f4a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
-  XCGLogger: c9601cae9a8912de34a58666ba931ed3d624dd31
 
-PODFILE CHECKSUM: 2ac5123b570759b2741e9051a865cb3280b89197
+PODFILE CHECKSUM: 0c1a04e323879c7863a78792057b359f30b182c6
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
