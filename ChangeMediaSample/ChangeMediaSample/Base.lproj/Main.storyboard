@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H48-65-3e9">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H48-65-3e9">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,20 +14,16 @@
         <scene sceneID="nkY-uY-H1X">
             <objects>
                 <viewController id="H48-65-3e9" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Pch-YF-oHg"/>
-                        <viewControllerLayoutGuide type="bottom" id="qYj-AF-KU6"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hsg-Lk-mHh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXt-Qw-M6y" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zc-bd-Vqs">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LZ3-D8-SSc">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,25 +74,26 @@
                                         <constraint firstItem="UBi-Va-xnb" firstAttribute="leading" secondItem="Sj5-TH-JQq" secondAttribute="trailing" constant="8" id="kBx-BO-8aD"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="NPI-Hz-duN">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qYj-AF-KU6" firstAttribute="top" secondItem="4zc-bd-Vqs" secondAttribute="bottom" id="Px1-Qe-ELP"/>
-                            <constraint firstItem="qYj-AF-KU6" firstAttribute="top" secondItem="OXt-Qw-M6y" secondAttribute="bottom" id="ZGN-IT-IJr"/>
-                            <constraint firstItem="OXt-Qw-M6y" firstAttribute="leading" secondItem="hsg-Lk-mHh" secondAttribute="leading" id="eIn-8V-PNp"/>
-                            <constraint firstAttribute="trailing" secondItem="4zc-bd-Vqs" secondAttribute="trailing" id="miX-I3-dsM"/>
-                            <constraint firstItem="OXt-Qw-M6y" firstAttribute="top" secondItem="hsg-Lk-mHh" secondAttribute="top" id="qwt-BI-qPf"/>
-                            <constraint firstAttribute="trailing" secondItem="OXt-Qw-M6y" secondAttribute="trailing" id="uAT-iL-8SF"/>
-                            <constraint firstItem="4zc-bd-Vqs" firstAttribute="leading" secondItem="hsg-Lk-mHh" secondAttribute="leading" id="xVb-uz-eUq"/>
+                            <constraint firstItem="4zc-bd-Vqs" firstAttribute="top" secondItem="OXt-Qw-M6y" secondAttribute="bottom" id="GjZ-U4-wFT"/>
+                            <constraint firstItem="VzJ-Jt-tew" firstAttribute="bottom" secondItem="4zc-bd-Vqs" secondAttribute="bottom" id="Px1-Qe-ELP"/>
+                            <constraint firstItem="OXt-Qw-M6y" firstAttribute="leading" secondItem="VzJ-Jt-tew" secondAttribute="leading" id="eIn-8V-PNp"/>
+                            <constraint firstItem="VzJ-Jt-tew" firstAttribute="trailing" secondItem="4zc-bd-Vqs" secondAttribute="trailing" id="miX-I3-dsM"/>
+                            <constraint firstItem="VzJ-Jt-tew" firstAttribute="trailing" secondItem="OXt-Qw-M6y" secondAttribute="trailing" id="uAT-iL-8SF"/>
+                            <constraint firstItem="OXt-Qw-M6y" firstAttribute="top" secondItem="VzJ-Jt-tew" secondAttribute="top" id="uWX-2S-Avq"/>
+                            <constraint firstItem="4zc-bd-Vqs" firstAttribute="leading" secondItem="VzJ-Jt-tew" secondAttribute="leading" id="xVb-uz-eUq"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="VzJ-Jt-tew"/>
                     </view>
                     <connections>
                         <outlet property="playerContainer" destination="OXt-Qw-M6y" id="JmJ-Ll-0Y3"/>
@@ -104,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5x-P5-F6i" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
 </document>
