@@ -44,7 +44,6 @@ class GoogleCastManager: NSObject,
     // MARK - Handle UI
     public func showExpandedControl() -> Void {
         GCKCastContext.sharedInstance().presentDefaultExpandedMediaControls()
-        
     }
     
     public func embedRootViewController(viewcontroller: UIViewController) -> GCKUICastContainerViewController {
@@ -57,7 +56,6 @@ class GoogleCastManager: NSObject,
     public func cast(appending:Bool)  {
         
         let customData = self.customData(_title: "Folger's coffee", _subtitle: "Smucker Company", _image: URL(string: "http://cfvod.kaltura.com/p/243342/sp/24334200/thumbnail/entry_id/0_uka1msg4/version/100007/width/1200/hight/780")!, _width: 780, _height: 1200)
-        
         
         var media: GCKMediaInformation? = nil
         do {
@@ -168,6 +166,3 @@ class GoogleCastManager: NSObject,
         print("request::", request, "didFailWithError", error.description)
     }
 }
-
-
-

@@ -168,7 +168,6 @@ class ViewController: UIViewController, GoogleCastManagerDelegate {
     
     internal func castManagerDidResumeSession(sender: GoogleCastManager) {
         print("castManagerDidResumeSession")
-        
     }
 }
 
