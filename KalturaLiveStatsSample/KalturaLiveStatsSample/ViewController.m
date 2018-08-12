@@ -67,6 +67,10 @@
     [self removeAnalyticsObservations];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
