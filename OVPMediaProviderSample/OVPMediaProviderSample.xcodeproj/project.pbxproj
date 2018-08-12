@@ -13,8 +13,8 @@
 		2005AE2E1E7FFFFC00FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE2C1E7FFFFC00FB01B0 /* Main.storyboard */; };
 		2005AE301E7FFFFC00FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE2F1E7FFFFC00FB01B0 /* Assets.xcassets */; };
 		2005AE331E7FFFFC00FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AE311E7FFFFC00FB01B0 /* LaunchScreen.storyboard */; };
-		5788577854692D3BD7285BAD /* Pods_OVPMediaProviderSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D22038B079B36E6866BCF03 /* Pods_OVPMediaProviderSample.framework */; };
-		9CA1F6AB9F7381AD3D89E51F /* Pods_OVPMediaProviderSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38C70446425BB33C0395621 /* Pods_OVPMediaProviderSample_Swift.framework */; };
+		674321084C9A58DEF6A940F2 /* Pods_SharedPods_OVPMediaProviderSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 780C423FEE40A0BC91B45C54 /* Pods_SharedPods_OVPMediaProviderSample.framework */; };
+		86AEFB884B3BBA290AED0890 /* Pods_SharedPods_OVPMediaProviderSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E57BB4B44115369EE9A88E1 /* Pods_SharedPods_OVPMediaProviderSample_Swift.framework */; };
 		BFD20A601EA891970018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A5F1EA891970018FD8A /* AppDelegate.swift */; };
 		BFD20A621EA891970018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A611EA891970018FD8A /* ViewController.swift */; };
 		BFD20A651EA891970018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A631EA891970018FD8A /* Main.storyboard */; };
@@ -33,12 +33,11 @@
 		2005AE2F1E7FFFFC00FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AE321E7FFFFC00FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AE341E7FFFFC00FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		28F8D69679C3ECA57E378251 /* Pods-OVPMediaProviderSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample.release.xcconfig"; sourceTree = "<group>"; };
-		2D22038B079B36E6866BCF03 /* Pods_OVPMediaProviderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPMediaProviderSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5019C946FCA7C6386CB9888A /* Pods-OVPMediaProviderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample.debug.xcconfig"; sourceTree = "<group>"; };
-		60D28554DE78608DB2676786 /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
-		A5C3CFE7A7C85C5C007B2C4C /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPMediaProviderSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		B38C70446425BB33C0395621 /* Pods_OVPMediaProviderSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPMediaProviderSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42CACD9776FBBA9D7FC06417 /* Pods-SharedPods-OVPMediaProviderSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OVPMediaProviderSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample/Pods-SharedPods-OVPMediaProviderSample.release.xcconfig"; sourceTree = "<group>"; };
+		4FCF39E8EEAA1CFA3EF8DCD1 /* Pods-SharedPods-OVPMediaProviderSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OVPMediaProviderSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample/Pods-SharedPods-OVPMediaProviderSample.debug.xcconfig"; sourceTree = "<group>"; };
+		780C423FEE40A0BC91B45C54 /* Pods_SharedPods_OVPMediaProviderSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_OVPMediaProviderSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E57BB4B44115369EE9A88E1 /* Pods_SharedPods_OVPMediaProviderSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_OVPMediaProviderSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8101400E39C1177939EB84D2 /* Pods-SharedPods-OVPMediaProviderSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OVPMediaProviderSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample-Swift/Pods-SharedPods-OVPMediaProviderSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD20A5D1EA891970018FD8A /* OVPMediaProviderSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OVPMediaProviderSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD20A5F1EA891970018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD20A611EA891970018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		BFD20A661EA891970018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD20A691EA891970018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A6B1EA891970018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF79B78FA5EF88514DBEDF20 /* Pods-SharedPods-OVPMediaProviderSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OVPMediaProviderSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample-Swift/Pods-SharedPods-OVPMediaProviderSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5788577854692D3BD7285BAD /* Pods_OVPMediaProviderSample.framework in Frameworks */,
+				674321084C9A58DEF6A940F2 /* Pods_SharedPods_OVPMediaProviderSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CA1F6AB9F7381AD3D89E51F /* Pods_OVPMediaProviderSample_Swift.framework in Frameworks */,
+				86AEFB884B3BBA290AED0890 /* Pods_SharedPods_OVPMediaProviderSample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +71,10 @@
 		038BF42658BD95F01F6231B2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				5019C946FCA7C6386CB9888A /* Pods-OVPMediaProviderSample.debug.xcconfig */,
-				28F8D69679C3ECA57E378251 /* Pods-OVPMediaProviderSample.release.xcconfig */,
-				A5C3CFE7A7C85C5C007B2C4C /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */,
-				60D28554DE78608DB2676786 /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */,
+				4FCF39E8EEAA1CFA3EF8DCD1 /* Pods-SharedPods-OVPMediaProviderSample.debug.xcconfig */,
+				42CACD9776FBBA9D7FC06417 /* Pods-SharedPods-OVPMediaProviderSample.release.xcconfig */,
+				8101400E39C1177939EB84D2 /* Pods-SharedPods-OVPMediaProviderSample-Swift.debug.xcconfig */,
+				DF79B78FA5EF88514DBEDF20 /* Pods-SharedPods-OVPMediaProviderSample-Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -126,8 +126,8 @@
 		A1CB41EB84AED87A5E27414B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2D22038B079B36E6866BCF03 /* Pods_OVPMediaProviderSample.framework */,
-				B38C70446425BB33C0395621 /* Pods_OVPMediaProviderSample_Swift.framework */,
+				780C423FEE40A0BC91B45C54 /* Pods_SharedPods_OVPMediaProviderSample.framework */,
+				7E57BB4B44115369EE9A88E1 /* Pods_SharedPods_OVPMediaProviderSample_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,11 +198,13 @@
 				TargetAttributes = {
 					2005AE1F1E7FFFFC00FB01B0 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = X8RDCFJK95;
 						ProvisioningStyle = Automatic;
 					};
 					BFD20A5C1EA891970018FD8A = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X8RDCFJK95;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -261,7 +263,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OVPMediaProviderSample-Swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-OVPMediaProviderSample-Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -274,7 +276,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample/Pods-SharedPods-OVPMediaProviderSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -293,7 +295,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample/Pods-OVPMediaProviderSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample/Pods-SharedPods-OVPMediaProviderSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8A88E8D46468D40A5FF8453E /* [CP] Check Pods Manifest.lock */ = {
@@ -307,7 +309,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OVPMediaProviderSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-OVPMediaProviderSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -320,7 +322,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample-Swift/Pods-SharedPods-OVPMediaProviderSample-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -339,7 +341,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPMediaProviderSample-Swift/Pods-OVPMediaProviderSample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OVPMediaProviderSample-Swift/Pods-SharedPods-OVPMediaProviderSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -507,10 +509,11 @@
 		};
 		2005AE381E7FFFFC00FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5019C946FCA7C6386CB9888A /* Pods-OVPMediaProviderSample.debug.xcconfig */;
+			baseConfigurationReference = 4FCF39E8EEAA1CFA3EF8DCD1 /* Pods-SharedPods-OVPMediaProviderSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = OVPMediaProviderSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.OVPMediaProviderSample;
@@ -520,10 +523,11 @@
 		};
 		2005AE391E7FFFFC00FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28F8D69679C3ECA57E378251 /* Pods-OVPMediaProviderSample.release.xcconfig */;
+			baseConfigurationReference = 42CACD9776FBBA9D7FC06417 /* Pods-SharedPods-OVPMediaProviderSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = OVPMediaProviderSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.OVPMediaProviderSample;
@@ -533,7 +537,7 @@
 		};
 		BFD20A6C1EA891970018FD8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5C3CFE7A7C85C5C007B2C4C /* Pods-OVPMediaProviderSample-Swift.debug.xcconfig */;
+			baseConfigurationReference = 8101400E39C1177939EB84D2 /* Pods-SharedPods-OVPMediaProviderSample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -545,13 +549,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		BFD20A6D1EA891970018FD8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 60D28554DE78608DB2676786 /* Pods-OVPMediaProviderSample-Swift.release.xcconfig */;
+			baseConfigurationReference = DF79B78FA5EF88514DBEDF20 /* Pods-SharedPods-OVPMediaProviderSample-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -562,7 +567,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.OVPMediaProviderSample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

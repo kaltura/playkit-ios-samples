@@ -34,7 +34,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: 86ca40cf5fb7fc7a1d8913451c90de1f5d5816f9
+    :commit: ebe3734edeabd40de5c8b5d7e43f64e025736af4
     :git: https://github.com/kaltura/playkit-ios.git
 
 SPEC CHECKSUMS:
@@ -45,6 +45,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
 
-PODFILE CHECKSUM: 4c3a8edc2c36631ab99878c622d481c86df1b828
+PODFILE CHECKSUM: 06d5a7b7c3b868da537c6cde8278444cf11b7865
 
 COCOAPODS: 1.5.3
