@@ -10,24 +10,18 @@ platform :ios, '9.0' # (define required version)
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 
-target 'KalturaStatsSample' do
+abstract_target 'SharedPods' do
     if defined? PLAYKIT_LOCAL
-        pod 'PlayKit' , :path => PLAYKIT_LOCAL
-    	pod 'PlayKit/KalturaStatsPlugin', :path => PLAYKIT_LOCAL
-    else
-	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    	pod 'PlayKit/KalturaStatsPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+        pod 'PlayKit', :path => PLAYKIT_LOCAL
+        pod 'PlayKit/KalturaStatsPlugin', :path => PLAYKIT_LOCAL
+        else
+        pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+        pod 'PlayKit/KalturaStatsPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
     end
-end
+    
+    target 'KalturaStatsSample'
+    target 'KalturaStatsSample-Swift'
 
-target 'KalturaStatsSample-Swift' do
-    if defined? PLAYKIT_LOCAL
-        pod 'PlayKit' , :path => PLAYKIT_LOCAL
-    	pod 'PlayKit/KalturaStatsPlugin', :path => PLAYKIT_LOCAL
-    else
-	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    	pod 'PlayKit/KalturaStatsPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    end
 end
 
 pre_install do |installer|
