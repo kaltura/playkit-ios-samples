@@ -207,7 +207,7 @@ class AssetPersistenceManager: NSObject {
 
         var options = [MediaSelectionPair]()
         
-        let mediaCharacteristics = [AVMediaCharacteristicAudible, AVMediaCharacteristicLegible]
+        let mediaCharacteristics = [AVMediaCharacteristic.audible, AVMediaCharacteristic.legible]
         
         guard let assetCache = asset.assetCache else { return }
         for mediaCharacteristic in mediaCharacteristics {
@@ -217,7 +217,7 @@ class AssetPersistenceManager: NSObject {
                 if savedOptions.count < mediaSelectionGroup.options.count {
                     // There are still media options left to download.
                     for option in mediaSelectionGroup.options {
-                        if !savedOptions.contains(option) && option.mediaType != AVMediaTypeClosedCaption {
+                        if !savedOptions.contains(option) && option.mediaType != AVMediaType.closedCaption.rawValue {
                             // This option has not been downloaded.
                             options.append((mediaSelectionGroup, option))
                         }

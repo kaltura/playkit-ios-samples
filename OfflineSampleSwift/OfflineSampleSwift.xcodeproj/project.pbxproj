@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		29D13419438EDD8DF05203C4 /* Pods_OfflineSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 088572F370D17291C48DD279 /* Pods_OfflineSampleSwift.framework */; };
+		A4B07662E869083ACDC38212 /* Pods_SharedPods_OfflineSampleSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DD2A80E0B3972C401053C5 /* Pods_SharedPods_OfflineSampleSwift.framework */; };
 		FB5565F91EB286630026554B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5565F81EB286630026554B /* AppDelegate.swift */; };
 		FB5565FB1EB286630026554B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5565FA1EB286630026554B /* ViewController.swift */; };
 		FB5565FE1EB286630026554B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB5565FC1EB286630026554B /* Main.storyboard */; };
@@ -18,9 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		088572F370D17291C48DD279 /* Pods_OfflineSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OfflineSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		435650C1A3612D3F64BAE22B /* Pods-OfflineSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineSampleSwift/Pods-OfflineSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
-		61BDEB59072629F7061D47E8 /* Pods-OfflineSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OfflineSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OfflineSampleSwift/Pods-OfflineSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		04DD2A80E0B3972C401053C5 /* Pods_SharedPods_OfflineSampleSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_OfflineSampleSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7AE649A6C0B11E47D354F59 /* Pods-SharedPods-OfflineSampleSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OfflineSampleSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift.release.xcconfig"; sourceTree = "<group>"; };
 		FB5565F51EB286630026554B /* OfflineSampleSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OfflineSampleSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB5565F81EB286630026554B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB5565FA1EB286630026554B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		FB5566041EB286630026554B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB55660A1EB286860026554B /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		FB55660B1EB286860026554B /* AssetPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetPersistenceManager.swift; sourceTree = "<group>"; };
+		FF55BAEECA84E89DE43666C8 /* Pods-SharedPods-OfflineSampleSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OfflineSampleSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29D13419438EDD8DF05203C4 /* Pods_OfflineSampleSwift.framework in Frameworks */,
+				A4B07662E869083ACDC38212 /* Pods_SharedPods_OfflineSampleSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		26A15975D2CD80A567A9FC65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				088572F370D17291C48DD279 /* Pods_OfflineSampleSwift.framework */,
+				04DD2A80E0B3972C401053C5 /* Pods_SharedPods_OfflineSampleSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -55,8 +55,8 @@
 		F7A5B70A408D35E41BC00253 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				61BDEB59072629F7061D47E8 /* Pods-OfflineSampleSwift.debug.xcconfig */,
-				435650C1A3612D3F64BAE22B /* Pods-OfflineSampleSwift.release.xcconfig */,
+				FF55BAEECA84E89DE43666C8 /* Pods-SharedPods-OfflineSampleSwift.debug.xcconfig */,
+				D7AE649A6C0B11E47D354F59 /* Pods-SharedPods-OfflineSampleSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -106,7 +106,6 @@
 				FB5565F21EB286630026554B /* Frameworks */,
 				FB5565F31EB286630026554B /* Resources */,
 				090A3284CC723A3F14C7DD92 /* [CP] Embed Pods Frameworks */,
-				DE8702E9DBE60A05049C9CC5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +129,7 @@
 					FB5565F41EB286630026554B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = X8RDCFJK95;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -172,28 +172,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineSampleSwift/Pods-OfflineSampleSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE8702E9DBE60A05049C9CC5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OfflineSampleSwift/Pods-OfflineSampleSwift-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F38AAF6F99FFC8EC387347C6 /* [CP] Check Pods Manifest.lock */ = {
@@ -202,13 +200,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-OfflineSampleSwift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -344,7 +345,7 @@
 		};
 		FB5566081EB286630026554B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61BDEB59072629F7061D47E8 /* Pods-OfflineSampleSwift.debug.xcconfig */;
+			baseConfigurationReference = FF55BAEECA84E89DE43666C8 /* Pods-SharedPods-OfflineSampleSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -352,13 +353,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.OfflineSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		FB5566091EB286630026554B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 435650C1A3612D3F64BAE22B /* Pods-OfflineSampleSwift.release.xcconfig */;
+			baseConfigurationReference = D7AE649A6C0B11E47D354F59 /* Pods-SharedPods-OfflineSampleSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -366,7 +368,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.OfflineSampleSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -389,6 +392,7 @@
 				FB5566091EB286630026554B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
