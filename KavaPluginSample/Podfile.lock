@@ -4,17 +4,17 @@ PODS:
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
   - Log (1.0)
-  - PlayKit (3.4.0):
-    - PlayKit/Core (= 3.4.0)
-  - PlayKit/AnalyticsCommon (3.4.0):
+  - PlayKit (3.5.x-dev):
+    - PlayKit/Core (= 3.5.x-dev)
+  - PlayKit/AnalyticsCommon (3.5.x-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.4.0):
+  - PlayKit/Core (3.5.x-dev):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
     - PlayKitUtils (= 0.1.4)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKitKava (1.0.1):
+  - PlayKitKava (1.0.4):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
   - PlayKitUtils (0.1.4)
@@ -22,28 +22,42 @@ PODS:
   - SwiftyXMLParser (3.0.3)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
-  - PlayKitKava
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKitKava (from `https://github.com/kaltura/playkit-ios-kava.git`, branch `develop`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KalturaNetKit
+    - Log
+    - PlayKitUtils
+    - SwiftyJSON
+    - SwiftyXMLParser
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: master
+    :branch: develop
     :git: https://github.com/kaltura/playkit-ios.git
+  PlayKitKava:
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios-kava.git
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: a1552f33774234c310297d96a19dc32297ac5113
+    :commit: ebe3734edeabd40de5c8b5d7e43f64e025736af4
     :git: https://github.com/kaltura/playkit-ios.git
+  PlayKitKava:
+    :commit: 04dbc5dffc51f3ffa84fc1d14bac9ca4f4930703
+    :git: https://github.com/kaltura/playkit-ios-kava.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 35630e3a931835f5724b332f6578fecc01fed156
-  PlayKitKava: af36a17e952d3b2b48242a8499f28025fd583643
+  PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
+  PlayKitKava: 7c2ff28bc8e0bedabab38ca409d57868f0541c68
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
 
-PODFILE CHECKSUM: 01b24ffeae97f43c4a8ce27d5df7e0ab7a98b91f
+PODFILE CHECKSUM: 0238b2b8a628524c5655a9f072aa06e5a98cab32
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F021731E5CB6EA62E9A91BA /* Pods_KavaPluginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */; };
 		BD1E08AB1FB3106A00914A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1E08A91FB3106A00914A3E /* Main.storyboard */; };
 		BF9F689A1FA5F2D800454F66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F68991FA5F2D800454F66 /* AppDelegate.swift */; };
 		BF9F689C1FA5F2D800454F66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9F689B1FA5F2D800454F66 /* ViewController.swift */; };
 		BF9F68A11FA5F2D800454F66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF9F68A01FA5F2D800454F66 /* Assets.xcassets */; };
 		BF9F68A41FA5F2D800454F66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */; };
+		DEF8ED7A6A9CC6E8508C90F3 /* Pods_SharedPods_KavaPluginSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD6DD4E1370D33E5599C9E1C /* Pods_SharedPods_KavaPluginSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KavaPluginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample.release.xcconfig"; sourceTree = "<group>"; };
-		958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KavaPluginSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		0AD351508A000DB840A775AF /* Pods-SharedPods-KavaPluginSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-KavaPluginSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample.debug.xcconfig"; sourceTree = "<group>"; };
+		AFFF0B2506AF4EBB71DDD222 /* Pods-SharedPods-KavaPluginSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-KavaPluginSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample.release.xcconfig"; sourceTree = "<group>"; };
 		BD1E08AA1FB3106A00914A3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF9F68961FA5F2D700454F66 /* KavaPluginSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KavaPluginSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9F68991FA5F2D800454F66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +25,7 @@
 		BF9F68A01FA5F2D800454F66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF9F68A31FA5F2D800454F66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF9F68A51FA5F2D800454F66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KavaPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6DD4E1370D33E5599C9E1C /* Pods_SharedPods_KavaPluginSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_KavaPluginSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F021731E5CB6EA62E9A91BA /* Pods_KavaPluginSample.framework in Frameworks */,
+				DEF8ED7A6A9CC6E8508C90F3 /* Pods_SharedPods_KavaPluginSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,8 +43,8 @@
 		02D0B6FDC227D26A643B6ACC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */,
-				80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */,
+				0AD351508A000DB840A775AF /* Pods-SharedPods-KavaPluginSample.debug.xcconfig */,
+				AFFF0B2506AF4EBB71DDD222 /* Pods-SharedPods-KavaPluginSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -52,7 +52,7 @@
 		6D2447BFE6484DDD942AB62C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F8984BC7C3946DE35E34F65D /* Pods_KavaPluginSample.framework */,
+				CD6DD4E1370D33E5599C9E1C /* Pods_SharedPods_KavaPluginSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -79,11 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				BF9F68991FA5F2D800454F66 /* AppDelegate.swift */,
-				BF9F68A01FA5F2D800454F66 /* Assets.xcassets */,
-				BF9F68A51FA5F2D800454F66 /* Info.plist */,
-				BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */,
-				BD1E08A91FB3106A00914A3E /* Main.storyboard */,
 				BF9F689B1FA5F2D800454F66 /* ViewController.swift */,
+				BD1E08A91FB3106A00914A3E /* Main.storyboard */,
+				BF9F68A01FA5F2D800454F66 /* Assets.xcassets */,
+				BF9F68A21FA5F2D800454F66 /* LaunchScreen.storyboard */,
+				BF9F68A51FA5F2D800454F66 /* Info.plist */,
 			);
 			path = KavaPluginSample;
 			sourceTree = "<group>";
@@ -100,7 +100,6 @@
 				BF9F68931FA5F2D700454F66 /* Frameworks */,
 				BF9F68941FA5F2D700454F66 /* Resources */,
 				85E86D35FCD36A3AE6B94AC8 /* [CP] Embed Pods Frameworks */,
-				110192192CE114D0088311D6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +123,11 @@
 					BF9F68951FA5F2D700454F66 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -159,28 +163,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		110192192CE114D0088311D6 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		85E86D35FCD36A3AE6B94AC8 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -201,7 +190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KavaPluginSample/Pods-KavaPluginSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EB65D062C9FB3B913B0872C /* [CP] Check Pods Manifest.lock */ = {
@@ -215,7 +204,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-KavaPluginSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-KavaPluginSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -365,7 +354,7 @@
 		};
 		BF9F68A91FA5F2D800454F66 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 958135C8A48872923CDEB1C1 /* Pods-KavaPluginSample.debug.xcconfig */;
+			baseConfigurationReference = 0AD351508A000DB840A775AF /* Pods-SharedPods-KavaPluginSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -381,7 +370,7 @@
 		};
 		BF9F68AA1FA5F2D800454F66 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80650D4F82620FB5877576D9 /* Pods-KavaPluginSample.release.xcconfig */;
+			baseConfigurationReference = AFFF0B2506AF4EBB71DDD222 /* Pods-SharedPods-KavaPluginSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
