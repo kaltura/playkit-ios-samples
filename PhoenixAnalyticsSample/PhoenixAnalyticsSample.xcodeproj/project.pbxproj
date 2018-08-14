@@ -13,8 +13,8 @@
 		2005AF001E81696200FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEFE1E81696200FB01B0 /* Main.storyboard */; };
 		2005AF021E81696200FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AF011E81696200FB01B0 /* Assets.xcassets */; };
 		2005AF051E81696200FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AF031E81696200FB01B0 /* LaunchScreen.storyboard */; };
-		2DB368BA53554E375AE54BF7 /* Pods_PhoenixAnalyticsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F9764C668A374D7A7DF025 /* Pods_PhoenixAnalyticsSample.framework */; };
-		AFF06478FE3221837E452FDE /* Pods_PhoenixAnalyticsSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BE297E5AA67A6741ECA635 /* Pods_PhoenixAnalyticsSample_Swift.framework */; };
+		4B5BED2F79D92C56FF58E4E9 /* Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFC167E5A10CA04A76E76C0C /* Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework */; };
+		BC18F17455FBB66390DEBE94 /* Pods_SharedPods_PhoenixAnalyticsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E0B38857B94DA3529CEB68 /* Pods_SharedPods_PhoenixAnalyticsSample.framework */; };
 		BFD20A1E1EA795820018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A1D1EA795820018FD8A /* AppDelegate.swift */; };
 		BFD20A201EA795820018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A1F1EA795820018FD8A /* ViewController.swift */; };
 		BFD20A231EA795820018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A211EA795820018FD8A /* Main.storyboard */; };
@@ -23,8 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06BE297E5AA67A6741ECA635 /* Pods_PhoenixAnalyticsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoenixAnalyticsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		149670E4CD0F7055E541CEE0 /* Pods-PhoenixAnalyticsSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixAnalyticsSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixAnalyticsSample-Swift/Pods-PhoenixAnalyticsSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		2005AEF21E81696200FB01B0 /* PhoenixAnalyticsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoenixAnalyticsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2005AEF61E81696200FB01B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2005AEF81E81696200FB01B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,9 +33,9 @@
 		2005AF011E81696200FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AF041E81696200FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AF061E81696200FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20EEB19A77F95A989BC739EE /* Pods-PhoenixAnalyticsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixAnalyticsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixAnalyticsSample/Pods-PhoenixAnalyticsSample.debug.xcconfig"; sourceTree = "<group>"; };
-		77000AEAD11115F48BB08E97 /* Pods-PhoenixAnalyticsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixAnalyticsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixAnalyticsSample-Swift/Pods-PhoenixAnalyticsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
-		882C4B51064A082CC0C5CCCE /* Pods-PhoenixAnalyticsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoenixAnalyticsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhoenixAnalyticsSample/Pods-PhoenixAnalyticsSample.release.xcconfig"; sourceTree = "<group>"; };
+		2894492181C770ACB3471C06 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PhoenixAnalyticsSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		B89B416B9337F05636F0D2F7 /* Pods-SharedPods-PhoenixAnalyticsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PhoenixAnalyticsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample.release.xcconfig"; sourceTree = "<group>"; };
+		B8E0B38857B94DA3529CEB68 /* Pods_SharedPods_PhoenixAnalyticsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_PhoenixAnalyticsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD20A1B1EA795820018FD8A /* PhoenixAnalyticsSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PhoenixAnalyticsSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD20A1D1EA795820018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD20A1F1EA795820018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +43,9 @@
 		BFD20A241EA795820018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD20A271EA795820018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A291EA795820018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E7F9764C668A374D7A7DF025 /* Pods_PhoenixAnalyticsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoenixAnalyticsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D575796C4C445E5E20EB4AF1 /* Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig"; sourceTree = "<group>"; };
+		D6F76FA6DF48FD765B17CD72 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		DFC167E5A10CA04A76E76C0C /* Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DB368BA53554E375AE54BF7 /* Pods_PhoenixAnalyticsSample.framework in Frameworks */,
+				BC18F17455FBB66390DEBE94 /* Pods_SharedPods_PhoenixAnalyticsSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF06478FE3221837E452FDE /* Pods_PhoenixAnalyticsSample_Swift.framework in Frameworks */,
+				4B5BED2F79D92C56FF58E4E9 /* Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +71,10 @@
 		13D2EF66AD6A0C9907439D22 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				20EEB19A77F95A989BC739EE /* Pods-PhoenixAnalyticsSample.debug.xcconfig */,
-				882C4B51064A082CC0C5CCCE /* Pods-PhoenixAnalyticsSample.release.xcconfig */,
-				77000AEAD11115F48BB08E97 /* Pods-PhoenixAnalyticsSample-Swift.debug.xcconfig */,
-				149670E4CD0F7055E541CEE0 /* Pods-PhoenixAnalyticsSample-Swift.release.xcconfig */,
+				D575796C4C445E5E20EB4AF1 /* Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig */,
+				B89B416B9337F05636F0D2F7 /* Pods-SharedPods-PhoenixAnalyticsSample.release.xcconfig */,
+				D6F76FA6DF48FD765B17CD72 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig */,
+				2894492181C770ACB3471C06 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -139,8 +139,8 @@
 		E9118741F3CEA78919488BAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7F9764C668A374D7A7DF025 /* Pods_PhoenixAnalyticsSample.framework */,
-				06BE297E5AA67A6741ECA635 /* Pods_PhoenixAnalyticsSample_Swift.framework */,
+				B8E0B38857B94DA3529CEB68 /* Pods_SharedPods_PhoenixAnalyticsSample.framework */,
+				DFC167E5A10CA04A76E76C0C /* Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -157,7 +157,6 @@
 				2005AEEF1E81696200FB01B0 /* Frameworks */,
 				2005AEF01E81696200FB01B0 /* Resources */,
 				918EA868E3DE71F34388D233 /* [CP] Embed Pods Frameworks */,
-				686D92B72BF8CD138994AEA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -177,7 +176,6 @@
 				BFD20A181EA795820018FD8A /* Frameworks */,
 				BFD20A191EA795820018FD8A /* Resources */,
 				D530DEE09A83BD20DEE0343F /* [CP] Embed Pods Frameworks */,
-				EB97EAB8DFE1A85E095E88CD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +204,7 @@
 					BFD20A1A1EA795820018FD8A = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X8RDCFJK95;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -253,31 +252,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		686D92B72BF8CD138994AEA9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixAnalyticsSample/Pods-PhoenixAnalyticsSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		918EA868E3DE71F34388D233 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixAnalyticsSample/Pods-PhoenixAnalyticsSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 			);
@@ -286,12 +271,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixAnalyticsSample/Pods-PhoenixAnalyticsSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AEFBCBCA974A642BC95ADE20 /* [CP] Check Pods Manifest.lock */ = {
@@ -305,7 +291,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PhoenixAnalyticsSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-PhoenixAnalyticsSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -318,10 +304,11 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixAnalyticsSample-Swift/Pods-PhoenixAnalyticsSample-Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 			);
@@ -330,12 +317,13 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixAnalyticsSample-Swift/Pods-PhoenixAnalyticsSample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D60FB2A4F160BE815EC0F630 /* [CP] Check Pods Manifest.lock */ = {
@@ -349,26 +337,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PhoenixAnalyticsSample-Swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-PhoenixAnalyticsSample-Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB97EAB8DFE1A85E095E88CD /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhoenixAnalyticsSample-Swift/Pods-PhoenixAnalyticsSample-Swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -536,7 +509,7 @@
 		};
 		2005AF0A1E81696200FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 20EEB19A77F95A989BC739EE /* Pods-PhoenixAnalyticsSample.debug.xcconfig */;
+			baseConfigurationReference = D575796C4C445E5E20EB4AF1 /* Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -550,7 +523,7 @@
 		};
 		2005AF0B1E81696200FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 882C4B51064A082CC0C5CCCE /* Pods-PhoenixAnalyticsSample.release.xcconfig */;
+			baseConfigurationReference = B89B416B9337F05636F0D2F7 /* Pods-SharedPods-PhoenixAnalyticsSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -564,7 +537,7 @@
 		};
 		BFD20A2B1EA795820018FD8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 77000AEAD11115F48BB08E97 /* Pods-PhoenixAnalyticsSample-Swift.debug.xcconfig */;
+			baseConfigurationReference = D6F76FA6DF48FD765B17CD72 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -576,13 +549,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		BFD20A2C1EA795820018FD8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 149670E4CD0F7055E541CEE0 /* Pods-PhoenixAnalyticsSample-Swift.release.xcconfig */;
+			baseConfigurationReference = 2894492181C770ACB3471C06 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -593,7 +567,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.avplayer.sample.PhoenixAnalyticsSample-Swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

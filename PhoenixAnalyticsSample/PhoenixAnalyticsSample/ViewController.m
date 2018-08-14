@@ -66,30 +66,41 @@
     // remove observers
     [self removeAnalyticsObservations];
 }
+    
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
 
 - (void)preparePlayer {
-    // setup the player's view
+    // Setup the player's view
     self.player.view = self.playerContainer;
     
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
+    // Create a session provider
+    SimpleOVPSessionProvider *sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:@"http://api-preprod.ott.kaltura.com/v4_5/api_v3/"
+                                                                                          partnerId:198
+                                                                                                 ks:nil];
     
-    // create media source and initialize a media entry with that source
-    NSString *entryId = @"sintel";
-    PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
-    NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
+    // Create the media provider
+    PhoenixMediaProvider *phoenixMediaProvider = [[PhoenixMediaProvider alloc] init];
+    [phoenixMediaProvider setAssetId:@"259153"];
+    [phoenixMediaProvider setType:AssetTypeMedia];
+    [phoenixMediaProvider setFormats:@[@"Mobile_Devices_Main_SD"]];
+    [phoenixMediaProvider setPlaybackContextType:PlaybackContextTypePlayback];
+    [phoenixMediaProvider setSessionProvider:sessionProvider];
     
-    // setup media entry
-    PKMediaEntry *mediaEntry = [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
-    
-    // create media config
-    MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
-    
-    // prepare the player
-    [self.player prepare:mediaConfig];
+    [phoenixMediaProvider loadMediaWithCallback:^(PKMediaEntry *pkMediaEntry, NSError *error) {
+        if (pkMediaEntry != nil) {
+            // Create media config
+            MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:pkMediaEntry startTime:0.0];
+            
+            // Prepare the player
+            [self.player prepare:mediaConfig];
+        }
+    }];
 }
 
 /*********************************/
