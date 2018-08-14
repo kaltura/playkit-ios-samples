@@ -72,10 +72,6 @@ class ViewController: UIViewController, PlayerDelegate {
         super.viewWillDisappear(animated)
     }
     
-//    override var preferredStatusBarStyle : UIStatusBarStyle {
-//        return UIStatusBarStyle.lightContent
-//    }
-    
 /************************/
 // MARK: - Player Setup
 /***********************/
