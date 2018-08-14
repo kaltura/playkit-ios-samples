@@ -129,7 +129,7 @@ class VideoViewController: UIViewController {
     // MARK: - Actions
     /************************************************************/
     
-    func handleSwipeUp(gesture: UISwipeGestureRecognizer) {
+    @objc func handleSwipeUp(gesture: UISwipeGestureRecognizer) {
         if self.playbackControlsView == nil && self.tracksControlsView == nil {
             self.showPlaybackControlsView()
         } else if self.playbackControlsView == nil && self.tracksControlsView != nil {
@@ -137,7 +137,7 @@ class VideoViewController: UIViewController {
         }
     }
     
-    func handleSwipeDown(gesture: UISwipeGestureRecognizer) {
+    @objc func handleSwipeDown(gesture: UISwipeGestureRecognizer) {
         if self.playbackControlsView != nil {
             self.removePlaybackControlsView()
         } else if let tracks = self.tracks, self.tracksControlsView == nil {
@@ -164,7 +164,7 @@ class VideoViewController: UIViewController {
     // MARK: - Internal
     /************************************************************/
     
-    func playPause() {
+    @objc func playPause() {
         if self.player.rate == 0 {
             self.player.play()
             self.playPauseButton?.setTitle("Pause", for: .normal)
