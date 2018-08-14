@@ -40,15 +40,19 @@
     [self currentBitrateHandler];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
 
 - (void)setupPlayer {
-    NSURL *contentURL = [[NSURL alloc] initWithString:@"http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"];
+    NSURL *contentURL = [[NSURL alloc] initWithString:@"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
     
     // create media source and initialize a media entry with that source
-    NSString *entryId = @"apple_bipbop";
+    NSString *entryId = @"bipbop_16x9";
     PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
     NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
     // setup media entry
@@ -81,21 +85,20 @@
     
     // add observer to tracksAvailable event
     [self.player addObserver:self events:@[PlayerEvent.tracksAvailable, PlayerEvent.textTrackChanged, PlayerEvent.audioTrackChanged] block:^(PKEvent * _Nonnull event) {
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        
         if ([event isKindOfClass:PlayerEvent.tracksAvailable]) {
-            // Connect data
-            weakSelf.picker.dataSource = weakSelf;
-            weakSelf.picker.delegate = weakSelf;
             
             // Extract Audio Tracks
             if (event.tracks.audioTracks) {
-                weakSelf.audioTracks = event.tracks.audioTracks;
+                strongSelf.audioTracks = event.tracks.audioTracks;
                 
                 // Set Defualt array for Picker View
-                weakSelf.selectedTracks = weakSelf.audioTracks;
+                strongSelf.selectedTracks = strongSelf.audioTracks;
             }
             // Extract Text Tracks
             if (event.tracks.textTracks) {
-                weakSelf.textTracks = event.tracks.textTracks;
+                strongSelf.textTracks = event.tracks.textTracks;
             }
         } else if ([event isKindOfClass:PlayerEvent.textTrackChanged]) {
             NSLog(@"selected text track:: %@", event.selectedTrack.title);
