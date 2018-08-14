@@ -5,19 +5,21 @@ PODS:
     - SwiftyJSON
   - Log (1.0)
   - MetalScope (0.16.0)
-  - PlayKit (3.3.x-dev):
-    - PlayKit/Core (= 3.3.x-dev)
-  - PlayKit/AnalyticsCommon (3.3.x-dev):
+  - PlayKit (3.5.x-dev):
+    - PlayKit/Core (= 3.5.x-dev)
+  - PlayKit/AnalyticsCommon (3.5.x-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.3.x-dev):
+  - PlayKit/Core (3.5.x-dev):
     - KalturaNetKit (~> 0.0)
     - Log (= 1.0)
+    - PlayKitUtils (= 0.1.4)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/YouboraPlugin (3.3.x-dev):
+  - PlayKit/YouboraPlugin (3.5.x-dev):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.4.18)
+  - PlayKitUtils (0.1.4)
   - PlayKitVR (1.0.0):
     - MetalScope (= 0.16.0)
     - PlayKit/Core
@@ -28,33 +30,49 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1723`)
-  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-1723`)
-  - PlayKitVR (from `../../playkit-ios-vr`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKitVR (from `https://github.com/kaltura/playkit-ios-vr.git`, branch `develop`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KalturaNetKit
+    - Log
+    - MetalScope
+    - PlayKitUtils
+    - SwiftyJSON
+    - SwiftyXMLParser
+    - Youbora-AVPlayer
+    - Youbora-YouboraLib
 
 EXTERNAL SOURCES:
   PlayKit:
-    :branch: FEM-1723
+    :branch: develop
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKitVR:
-    :path: ../../playkit-ios-vr
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios-vr.git
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: c5e536910c77bc918545c2f79948577e0d5229df
+    :commit: ebe3734edeabd40de5c8b5d7e43f64e025736af4
     :git: https://github.com/kaltura/playkit-ios.git
+  PlayKitVR:
+    :commit: 188518a180e2e9bebb6f0d5cdcaa40fb1092f7da
+    :git: https://github.com/kaltura/playkit-ios-vr.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   MetalScope: 993be4faaad75645d72d9e8701ef88368c56752d
-  PlayKit: 7be72712403d5e53d1cc9799aceea9acbbe7d3fa
+  PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
+  PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   PlayKitVR: 08b54458ebfabec7ee763183892ce457911be169
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 9c14e127009985e19af22ab7aee7f7e1e28d4a2b
+PODFILE CHECKSUM: 706b952812b08184ca26419e6152cc3b4735cd81
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.3

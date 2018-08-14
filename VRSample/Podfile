@@ -10,33 +10,42 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_VR_LOCAL='../../playkit-ios-vr'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_VR_GIT='https://github.com/kaltura/playkit-ios-vr.git'
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || ‘develop’
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 
-target 'VRSample' do
-    inherit! :search_paths
-	if defined? PLAYKIT_LOCAL
-            pod "PlayKit", :path => PLAYKIT_LOCAL
-            pod "PlayKit/YouboraPlugin", :path => PLAYKIT_LOCAL
-            pod "PlayKitVR", :path => PLAYKIT_VR_LOCAL		
-    	else
-            pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-            pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-            pod 'PlayKitVR', :git => PLAYKIT_VR_GIT, :branch => PLAYKIT_BRANCH
+PLAYKIT_VR_GIT='https://github.com/kaltura/playkit-ios-vr.git'
+PLAYKIT_VR_BRANCH=ENV['PK_VR_BRANCH'] || 'develop'
+
+abstract_target 'SharedPods' do
+    if defined? PLAYKIT_LOCAL
+        pod 'PlayKit', :path => PLAYKIT_LOCAL
+        pod 'PlayKit/YouboraPlugin', :path => PLAYKIT_LOCAL
+        else
+        pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+        pod 'PlayKit/YouboraPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
     end
+    
+    if defined? PLAYKIT_VR_LOCAL
+        pod 'PlayKitVR', :path => PLAYKIT_VR_LOCAL
+        else
+        pod 'PlayKitVR', :git => PLAYKIT_VR_GIT, :branch => PLAYKIT_VR_BRANCH
+    end
+    
+    target 'VRSample'
+    
 end
 
 pre_install do |installer|
     def installer.verify_no_static_framework_transitive_dependencies; end
 end
 
-post_install do |installer| 
-    installer.pods_project.targets.each do |target| 
-        target.build_configurations.each do |config| 
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
             config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
- 	    if target.name == 'PlayKit'
-	           config.build_settings['SWIFT_VERSION'] = '4.0'
-	    end
-        end 
-    end 
+            if target.name == 'PlayKit'
+                config.build_settings['SWIFT_VERSION'] = '4.0'
+            end
+        end
+    end
 end
+
