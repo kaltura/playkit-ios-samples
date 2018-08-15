@@ -18,9 +18,13 @@ PLAYKIT_KAVA_BRANCH=ENV['PK_KAVA_BRANCH'] || 'develop'
 abstract_target 'SharedPods' do
     if defined? PLAYKIT_LOCAL
         pod 'PlayKit', :path => PLAYKIT_LOCAL
-        pod 'PlayKitKava', :path => PLAYKIT_KAVA_LOCAL
         else
         pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    end
+    
+    if defined? PLAYKIT_KAVA_LOCAL
+        pod 'PlayKitKava', :path => PLAYKIT_KAVA_LOCAL
+        else
         pod 'PlayKitKava', :git => PLAYKIT_KAVA_GIT, :branch => PLAYKIT_KAVA_BRANCH
     end
     
