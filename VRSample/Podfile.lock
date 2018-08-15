@@ -30,6 +30,7 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
+  - MetalScope (from `https://github.com/kaltura/MetalScope.git`, branch `swift-4`)
   - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
   - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
   - PlayKitVR (from `https://github.com/kaltura/playkit-ios-vr.git`, branch `develop`)
@@ -38,7 +39,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
     - Log
-    - MetalScope
     - PlayKitUtils
     - SwiftyJSON
     - SwiftyXMLParser
@@ -46,6 +46,9 @@ SPEC REPOS:
     - Youbora-YouboraLib
 
 EXTERNAL SOURCES:
+  MetalScope:
+    :branch: swift-4
+    :git: https://github.com/kaltura/MetalScope.git
   PlayKit:
     :branch: develop
     :git: https://github.com/kaltura/playkit-ios.git
@@ -54,6 +57,9 @@ EXTERNAL SOURCES:
     :git: https://github.com/kaltura/playkit-ios-vr.git
 
 CHECKOUT OPTIONS:
+  MetalScope:
+    :commit: f170bc03b544f2035bbdf43fe59e53784a0f64fa
+    :git: https://github.com/kaltura/MetalScope.git
   PlayKit:
     :commit: ebe3734edeabd40de5c8b5d7e43f64e025736af4
     :git: https://github.com/kaltura/playkit-ios.git
@@ -64,7 +70,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  MetalScope: 993be4faaad75645d72d9e8701ef88368c56752d
+  MetalScope: 0453bf074a48927830018478cf7bc72f76645e5d
   PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   PlayKitVR: 08b54458ebfabec7ee763183892ce457911be169
@@ -73,6 +79,6 @@ SPEC CHECKSUMS:
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 706b952812b08184ca26419e6152cc3b4735cd81
+PODFILE CHECKSUM: e2aad9dc05f2b4568678434f7cc14b27affb60af
 
 COCOAPODS: 1.5.3
