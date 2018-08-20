@@ -48,14 +48,14 @@ class ViewController: UIViewController {
             // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
             self.preparePlayer()
         } catch let e {
-            // error loading the player
+            // Error loading the player
             print("error:", e.localizedDescription)
         }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // remove observers
+        // Remove observers
         self.removeAnalyticsObservations()
     }
 
@@ -64,26 +64,39 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
     func preparePlayer() {
-        // setup the player's view
+        // Setup the player's view
         self.player?.view = self.playerContainer
         
-        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
+        // Create a session provider
+        let sessionProvider = SimpleOVPSessionProvider(serverURL: "http://api-preprod.ott.kaltura.com/v4_5/api_v3/",
+                                 partnerId: 198,
+                                 ks: nil)
         
-        // create media source and initialize a media entry with that source
-        let entryId = "sintel"
-        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
-        // setup media entry
-        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
+        // Create the media provider
+        let phoenixMediaProvider = PhoenixMediaProvider()
+        phoenixMediaProvider.set(assetId: "259153")
+        phoenixMediaProvider.set(type: AssetType.media)
+        phoenixMediaProvider.set(formats: ["Mobile_Devices_Main_SD"])
+        phoenixMediaProvider.set(playbackContextType: PlaybackContextType.playback)
+        phoenixMediaProvider.set(sessionProvider: sessionProvider)
         
-        // create media config
-        let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
-        
-        // prepare the player
-        self.player!.prepare(mediaConfig)
+        phoenixMediaProvider.loadMedia { (pkMediaEntry, error) in
+            guard let mediaEntry = pkMediaEntry else { return }
+            
+            // Create media config
+            let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
+            
+            // Prepare the player
+            self.player?.prepare(mediaConfig)
+        }
     }
     
 /************************/

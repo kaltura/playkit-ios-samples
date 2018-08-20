@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E1C072148AA2A24F9C3086C /* Pods_VRSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00A56962451A6DD47BFE9FB8 /* Pods_VRSample.framework */; };
 		BF7F10661F1CBDED00241DC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F10651F1CBDED00241DC4 /* AppDelegate.swift */; };
 		BF7F10681F1CBDED00241DC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F10671F1CBDED00241DC4 /* ViewController.swift */; };
 		BF7F106B1F1CBDED00241DC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F10691F1CBDED00241DC4 /* Main.storyboard */; };
 		BF7F106D1F1CBDED00241DC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7F106C1F1CBDED00241DC4 /* Assets.xcassets */; };
 		BF7F10701F1CBDED00241DC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7F106E1F1CBDED00241DC4 /* LaunchScreen.storyboard */; };
+		C35CBC41148EA4B0AEC5DE41 /* Pods_SharedPods_VRSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65AECE3FF9F0839C828B3EFA /* Pods_SharedPods_VRSample.framework */; };
+		D236FB4B20C7F8E600F7A37B /* MediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D236FB4A20C7F8E600F7A37B /* MediaTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00A56962451A6DD47BFE9FB8 /* Pods_VRSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4956515569ED76A810F5B997 /* Pods-VRSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VRSample/Pods-VRSample.debug.xcconfig"; sourceTree = "<group>"; };
-		A39C054909B2F04746567727 /* Pods-VRSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VRSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-VRSample/Pods-VRSample.release.xcconfig"; sourceTree = "<group>"; };
+		65AECE3FF9F0839C828B3EFA /* Pods_SharedPods_VRSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_VRSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DA0082ED283D0E4427631B /* Pods-SharedPods-VRSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-VRSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample.release.xcconfig"; sourceTree = "<group>"; };
+		98EB0373D60DFFEC9A34B23F /* Pods-SharedPods-VRSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-VRSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample.debug.xcconfig"; sourceTree = "<group>"; };
 		BF7F10621F1CBDED00241DC4 /* VRSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7F10651F1CBDED00241DC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7F10671F1CBDED00241DC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +27,7 @@
 		BF7F106C1F1CBDED00241DC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7F106F1F1CBDED00241DC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7F10711F1CBDED00241DC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D236FB4A20C7F8E600F7A37B /* MediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E1C072148AA2A24F9C3086C /* Pods_VRSample.framework in Frameworks */,
+				C35CBC41148EA4B0AEC5DE41 /* Pods_SharedPods_VRSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +45,7 @@
 		4DEDB482EC774BE5F5281736 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				00A56962451A6DD47BFE9FB8 /* Pods_VRSample.framework */,
+				65AECE3FF9F0839C828B3EFA /* Pods_SharedPods_VRSample.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -71,6 +73,7 @@
 			children = (
 				BF7F10651F1CBDED00241DC4 /* AppDelegate.swift */,
 				BF7F10671F1CBDED00241DC4 /* ViewController.swift */,
+				D236FB4A20C7F8E600F7A37B /* MediaTableViewController.swift */,
 				BF7F10691F1CBDED00241DC4 /* Main.storyboard */,
 				BF7F106C1F1CBDED00241DC4 /* Assets.xcassets */,
 				BF7F106E1F1CBDED00241DC4 /* LaunchScreen.storyboard */,
@@ -82,8 +85,8 @@
 		EDC85122300E3CAF35812444 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4956515569ED76A810F5B997 /* Pods-VRSample.debug.xcconfig */,
-				A39C054909B2F04746567727 /* Pods-VRSample.release.xcconfig */,
+				98EB0373D60DFFEC9A34B23F /* Pods-SharedPods-VRSample.debug.xcconfig */,
+				67DA0082ED283D0E4427631B /* Pods-SharedPods-VRSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -100,7 +103,6 @@
 				BF7F105F1F1CBDED00241DC4 /* Frameworks */,
 				BF7F10601F1CBDED00241DC4 /* Resources */,
 				03E37658FF60E9707DBA22D8 /* [CP] Embed Pods Frameworks */,
-				7B4C27149A6B038C3630611C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,6 +126,7 @@
 					BF7F10611F1CBDED00241DC4 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = X8RDCFJK95;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -166,11 +169,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
 				"${BUILT_PRODUCTS_DIR}/MetalScope/MetalScope.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitVR/PlayKitVR.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
@@ -183,6 +187,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MetalScope.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitVR.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
@@ -191,29 +196,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7B4C27149A6B038C3630611C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-resources.sh",
-				"${PODS_ROOT}/GVRSDK/Resources/CardboardSDK.bundle",
-				"${PODS_ROOT}/GVRSDK/Resources/GoogleKitCore.bundle",
-				"${PODS_ROOT}/GVRSDK/Resources/GoogleKitDialogs.bundle",
-				"${PODS_ROOT}/GVRSDK/Resources/GoogleKitHUD.bundle",
-				"${PODS_ROOT}/GVRSDK/Resources/MaterialRobotoFontLoader.bundle",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VRSample/Pods-VRSample-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ADC9A3EDFCA8152F6B3FB380 /* [CP] Check Pods Manifest.lock */ = {
@@ -227,7 +210,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VRSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-VRSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -241,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D236FB4B20C7F8E600F7A37B /* MediaTableViewController.swift in Sources */,
 				BF7F10681F1CBDED00241DC4 /* ViewController.swift in Sources */,
 				BF7F10661F1CBDED00241DC4 /* AppDelegate.swift in Sources */,
 			);
@@ -321,6 +305,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -369,13 +354,14 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		BF7F10751F1CBDED00241DC4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4956515569ED76A810F5B997 /* Pods-VRSample.debug.xcconfig */;
+			baseConfigurationReference = 98EB0373D60DFFEC9A34B23F /* Pods-SharedPods-VRSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -384,13 +370,13 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.VRSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		BF7F10761F1CBDED00241DC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A39C054909B2F04746567727 /* Pods-VRSample.release.xcconfig */;
+			baseConfigurationReference = 67DA0082ED283D0E4427631B /* Pods-SharedPods-VRSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -399,7 +385,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.VRSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

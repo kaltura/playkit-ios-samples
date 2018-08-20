@@ -50,6 +50,10 @@
         // error loading the player
     }
 }
+    
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
 
 /*********************************/
 #pragma mark - Player Setup

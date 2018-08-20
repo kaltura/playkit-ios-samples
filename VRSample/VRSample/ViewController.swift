@@ -20,11 +20,24 @@ import PlayKit
  6. Use PKVRController API.
  */
 
+struct MediaData {
+    let serverURL: String
+    let partnerId: Int
+    let entryId: String
+}
+    
 class ViewController: UIViewController, PlayerDelegate {
+    
+    var mediaData: MediaData?
+    
     var player: Player?
     var playheadTimer: Timer?
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
+    
+    deinit {
+        print("deinit")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +57,21 @@ class ViewController: UIViewController, PlayerDelegate {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        player?.addObserver(self, event: PlayerEvent.error, block: { (event) in
+            print("error: " + (event.error?.localizedDescription ?? ""))
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.player?.stop()
+        player = nil
+        playheadTimer = nil
+
+        player?.removeObserver(self, event: PlayerEvent.error)
+        super.viewWillDisappear(animated)
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
@@ -51,18 +79,22 @@ class ViewController: UIViewController, PlayerDelegate {
         // setup the player's view
         self.player?.view = self.playerContainer
         
-        let serverURL = "http://cdnapi.kaltura.com"
-        let partnerId = 1424501
+        guard let serverURL = mediaData?.serverURL,
+            let partnerId = mediaData?.partnerId,
+            let entryID = mediaData?.entryId
+            else { return }
         
-        let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId: Int64(partnerId), ks: nil)
+        let sessionProvider = SimpleOVPSessionProvider(serverURL: serverURL, partnerId: Int64(partnerId), ks: nil)
         let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
-        mediaProvider.entryId = "0_a54foq3g"
-        mediaProvider.loadMedia { (mediaEntry, error) in
-            if(!(error != nil)) {
-                // create media config
-                let mediaConfig = MediaConfig(mediaEntry: mediaEntry!)
-                self.player!.prepare(mediaConfig)
-            }
+        
+        mediaProvider.entryId = entryID
+        
+        mediaProvider.loadMedia { [weak self] (pkMediaEntry, error) in
+            guard let mediaEntry = pkMediaEntry else { return }
+            
+            // create media config
+            let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
+            self?.player?.prepare(mediaConfig)
         }
     }
     
@@ -77,8 +109,8 @@ class ViewController: UIViewController, PlayerDelegate {
         }
         
         if !(player.isPlaying) {
-            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (timer) in
-                self.playheadSlider.value = Float(player.currentTime / player.duration)
+            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { [weak self] (timer) in
+                self?.playheadSlider.value = Float(player.currentTime / player.duration)
             })
             
             player.play()
@@ -116,8 +148,16 @@ class ViewController: UIViewController, PlayerDelegate {
 
     @IBAction func setVRMode(_ sender: Any) {
         // 5. Get PKVRController
-        let vrController = self.player?.getController(ofType:  PKVRController.self)
+        let vrController = self.player?.getController(ofType: PKVRController.self)
         // 6. Use PKVRController API
         vrController?.setVRModeEnabled(true)
+    }
+ 
+/************************/
+// MARK: - PlayerDelegate
+/***********************/
+
+    func playerShouldPlayAd(_ player: Player) -> Bool {
+        return true
     }
 }

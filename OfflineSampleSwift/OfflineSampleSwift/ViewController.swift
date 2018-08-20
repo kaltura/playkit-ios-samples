@@ -9,17 +9,15 @@
 import UIKit
 import PlayKit
 
-
 class ViewController: UIViewController {
     
     var player: Player?
-    @IBOutlet var playerContainer: UIView!
+    @IBOutlet weak var playerContainer: PlayerView!
     
     let simpleStorage = DefaultLocalDataStore.defaultDataStore()
     
     // The sample entries are initialized asynchronously by loadSampleEntries(). 
-    var sampleEntries = [MediaEntry]()
-    
+    var sampleEntries = [PKMediaEntry]()
     
     // Use a LocalAssetsManager to handle local (offline, downloaded) assets.
     lazy var assetsManager: LocalAssetsManager = {
@@ -39,6 +37,16 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(forName: AssetDownloadStateChangedNotification, object: nil, queue: OperationQueue.main) { (notif) in
             print("AssetDownloadProgressNotification", notif)
+            
+            guard let state = notif.userInfo?["AssetDownloadStateKey"] as? String else { return }
+            
+            if state == "downloaded"{
+                let alert = UIAlertController(title: "Download Progress", message: state, preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: { (alert) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
         
         let pluginConfig = PluginConfig(config: [:])
@@ -46,16 +54,8 @@ class ViewController: UIViewController {
         
         loadSampleEntries()
         
-        if let playerView = player.view {
-            self.playerContainer.addSubview(playerView)
-            playerView.frame = self.playerContainer.bounds;
-        }
-        
         self.player = player
-    }
-    
-    override func viewDidLayoutSubviews() {
-        self.player?.view?.frame = self.playerContainer.bounds
+        self.player?.view = self.playerContainer
     }
     
     override func didReceiveMemoryWarning() {

@@ -41,6 +41,8 @@ class MediaPlayerViewController: UIViewController {
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(playerViewTapped))
         playerView.addGestureRecognizer(gesture)
         
+        self.settingsVisualEffectView.alpha = 0.0
+        
         setupPlayer()
         showPlayerControllers(true)
     }
@@ -48,6 +50,10 @@ class MediaPlayerViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
 
     // MARK: - Private Methods

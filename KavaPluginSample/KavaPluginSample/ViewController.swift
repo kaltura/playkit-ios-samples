@@ -30,7 +30,7 @@ class ViewController: UIViewController {
         
         // 1. Load the player
         do {
-            let kavaConfig = KavaPluginConfig.init(partnerId: 1424501 , ks: nil, playbackContext: nil, referrer: nil, applicationVersion: "1.0", playlistId: "abc", customVar1: nil, customVar2: nil, customVar3: nil)
+            let kavaConfig = KavaPluginConfig(partnerId: 1091, entryId: nil, ks: nil, playbackContext: nil, referrer: nil, applicationVersion: "1.0", playlistId: "abc", customVar1: nil, customVar2: nil, customVar3: nil)
             kavaConfig.playbackType = KavaPluginConfig.PlaybackType.vod
             let pluginConfig = PluginConfig(config: [KavaPlugin.pluginName: kavaConfig])
             self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
@@ -49,6 +49,10 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
     /************************/

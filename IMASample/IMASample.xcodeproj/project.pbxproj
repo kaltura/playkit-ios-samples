@@ -109,10 +109,10 @@
 		BD806D6A1FB19914007275F9 = {
 			isa = PBXGroup;
 			children = (
-				1639A4A76F96C4AB9B4A0837 /* Frameworks */,
 				BD806DA71FB19C9E007275F9 /* IMASample */,
 				BD806D911FB19BBE007275F9 /* IMASample-swift */,
 				B66C927D03EC1677A7898D5D /* Pods */,
+				1639A4A76F96C4AB9B4A0837 /* Frameworks */,
 				BD806D741FB19914007275F9 /* Products */,
 			);
 			sourceTree = "<group>";

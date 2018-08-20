@@ -50,14 +50,18 @@ class ViewController: UIViewController, PlayerDelegate {
             print("error:", e.localizedDescription)
         }
     }
-    
-    func playerShouldPlayAd(_ player: Player) -> Bool {
-        return true
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
+    func playerShouldPlayAd(_ player: Player) -> Bool {
+        return true
     }
 
 /************************************************************/

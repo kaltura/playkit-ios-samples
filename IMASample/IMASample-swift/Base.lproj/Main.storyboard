@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VYY-ZM-Jr6">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,19 +16,19 @@
             <objects>
                 <viewController id="Jci-8o-Jgh" customClass="MainViewController" customModule="IMASample_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ahs-fE-ovp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HmR-f9-qDu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="N81-m2-qJQ" customClass="VideoTableViewCell" customModule="IMASample_swift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="22" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" tableViewCell="N81-m2-qJQ" id="zo6-AH-dTB">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gyi-Hj-DAr">
@@ -57,7 +57,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IJ3-3B-wSr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tags" id="vPQ-N2-JZ5"/>
@@ -74,9 +74,11 @@
             <objects>
                 <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VYY-ZM-Jr6" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bnf-dy-V9x">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="bnf-dy-V9x">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -92,11 +94,11 @@
             <objects>
                 <viewController id="Yiq-tH-5V9" customClass="VideoViewController" customModule="IMASample_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GGr-Tw-LLL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TuW-mm-ErZ">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TRR-tX-wmi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,23 +150,24 @@
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tce-DX-dGC" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="64" width="375" height="211"/>
+                                <rect key="frame" x="0.0" y="280.66666666666669" width="375" height="211"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="tce-DX-dGC" secondAttribute="height" multiplier="16:9" id="fqz-W1-2vB"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="tce-DX-dGC" firstAttribute="top" secondItem="HkQ-GT-IGT" secondAttribute="top" id="7hA-DL-3Fo"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="top" relation="greaterThanOrEqual" secondItem="HkQ-GT-IGT" secondAttribute="top" id="7hA-DL-3Fo"/>
                             <constraint firstItem="HkQ-GT-IGT" firstAttribute="bottom" secondItem="TuW-mm-ErZ" secondAttribute="bottom" id="8yw-4L-vI8"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="centerX" secondItem="GGr-Tw-LLL" secondAttribute="centerX" id="AkZ-QD-sAw"/>
                             <constraint firstItem="tce-DX-dGC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HkQ-GT-IGT" secondAttribute="trailing" id="EMk-ik-4cX"/>
-                            <constraint firstItem="tce-DX-dGC" firstAttribute="centerX" secondItem="HkQ-GT-IGT" secondAttribute="centerX" id="Eq0-ay-e1q"/>
                             <constraint firstItem="tce-DX-dGC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HkQ-GT-IGT" secondAttribute="leading" id="RwT-bF-kwR"/>
+                            <constraint firstItem="tce-DX-dGC" firstAttribute="centerY" secondItem="GGr-Tw-LLL" secondAttribute="centerY" constant="-20" id="UAk-51-6nu"/>
                             <constraint firstItem="TuW-mm-ErZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="tce-DX-dGC" secondAttribute="bottom" id="Uq1-v0-ZFN"/>
                             <constraint firstItem="TuW-mm-ErZ" firstAttribute="leading" secondItem="HkQ-GT-IGT" secondAttribute="leading" id="aTY-El-Gos"/>
                             <constraint firstItem="HkQ-GT-IGT" firstAttribute="trailing" secondItem="TuW-mm-ErZ" secondAttribute="trailing" id="yy4-br-YpR"/>

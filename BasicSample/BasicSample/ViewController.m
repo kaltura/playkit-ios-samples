@@ -33,6 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.playheadSlider.continuous = NO;
     
     // 1. Load the player
@@ -49,6 +50,10 @@
     } else {
         // error loading the player
     }
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
     
 /*********************************/
