@@ -61,10 +61,10 @@ CHECKOUT OPTIONS:
     :commit: f170bc03b544f2035bbdf43fe59e53784a0f64fa
     :git: https://github.com/kaltura/MetalScope.git
   PlayKit:
-    :commit: ebe3734edeabd40de5c8b5d7e43f64e025736af4
+    :commit: 8e84ce8e4b17de74eccedf5c19940b9f4e9b150c
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKitVR:
-    :commit: 188518a180e2e9bebb6f0d5cdcaa40fb1092f7da
+    :commit: 7c8292c0a45997c15d323563727e76ce1de4282c
     :git: https://github.com/kaltura/playkit-ios-vr.git
 
 SPEC CHECKSUMS:
@@ -73,7 +73,7 @@ SPEC CHECKSUMS:
   MetalScope: 0453bf074a48927830018478cf7bc72f76645e5d
   PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
-  PlayKitVR: 08b54458ebfabec7ee763183892ce457911be169
+  PlayKitVR: dc07ba17680245e18266b1fb8fd12af79541fd3c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d

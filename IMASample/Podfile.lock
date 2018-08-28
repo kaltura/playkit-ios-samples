@@ -55,10 +55,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: ebe3734edeabd40de5c8b5d7e43f64e025736af4
+    :commit: 8e84ce8e4b17de74eccedf5c19940b9f4e9b150c
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
-    :commit: 70f1c2213672c615a214fb23a7de3305bd234663
+    :commit: 8f9168fed9aeca47faedbc18a0c9b8128dff15ea
     :git: https://github.com/kaltura/playkit-ios-ima.git
 
 SPEC CHECKSUMS:
@@ -66,7 +66,7 @@ SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
-  PlayKit_IMA: 59a03e6a9faf8674e6c18235a44a2e905f083b9a
+  PlayKit_IMA: 58be407e237f1feaa5165e8f2a37a29d413bf8c5
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
