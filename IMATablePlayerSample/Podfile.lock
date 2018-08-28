@@ -55,10 +55,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: a4a1639a6d4119af3dec1285daffdcf1be6cea2a
+    :commit: 8e84ce8e4b17de74eccedf5c19940b9f4e9b150c
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
-    :commit: 4001dac59d7c00f31054755e8a198fa0537719cd
+    :commit: 8f9168fed9aeca47faedbc18a0c9b8128dff15ea
     :git: https://github.com/kaltura/playkit-ios-ima.git
 
 SPEC CHECKSUMS:
@@ -66,13 +66,13 @@ SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
-  PlayKit_IMA: 59a03e6a9faf8674e6c18235a44a2e905f083b9a
+  PlayKit_IMA: 58be407e237f1feaa5165e8f2a37a29d413bf8c5
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: da9f70d10b10f29b54e515d57680770c83583cf9
+PODFILE CHECKSUM: 4f9e795713b074363469d85fd9faa2b52d728fa6
 
 COCOAPODS: 1.5.3

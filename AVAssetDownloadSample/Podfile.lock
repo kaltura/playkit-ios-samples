@@ -18,7 +18,7 @@ PODS:
   - Toast-Swift (3.0.1)
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
   - Toast-Swift
 
 SPEC REPOS:
@@ -32,17 +32,23 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   PlayKit:
-    :path: "../../playkit-ios"
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios.git
+
+CHECKOUT OPTIONS:
+  PlayKit:
+    :commit: 8e84ce8e4b17de74eccedf5c19940b9f4e9b150c
+    :git: https://github.com/kaltura/playkit-ios.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 619d23bcbe33828494c8812f5daed4bb91e47917
+  PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   Toast-Swift: ba0b01b095aada709d915f9beb1d38184a2721c3
 
-PODFILE CHECKSUM: 0c1a04e323879c7863a78792057b359f30b182c6
+PODFILE CHECKSUM: e7906118d6d1bc53528cda2dc04899a2627c8ecd
 
 COCOAPODS: 1.5.3
