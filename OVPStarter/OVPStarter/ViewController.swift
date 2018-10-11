@@ -17,12 +17,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
+    @IBOutlet weak var positionLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var playPauseButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.playheadSlider.isContinuous = false;
-        
         
         try! self.setupPlayer()
         
@@ -47,21 +49,34 @@ class ViewController: UIViewController {
         
         self.player?.view = self.playerContainer
         
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
+        
+        func format(_ time: TimeInterval) -> String {
+            if let s = formatter.string(from: time) {
+                return s.count > 7 ? s : "0" + s
+            } else {
+                return "00:00:00"
+            }
+        }
+
         self.player?.addPeriodicObserver(interval: 0.2, observeOn: DispatchQueue.main, using: { (pos) in
             self.playheadSlider.value = Float(pos)
-            print("pos:\(pos)")
+            self.positionLabel.text = format(pos)
         })
-                
+        
         self.player?.addObserver(self, events: [PlayerEvent.durationChanged], block: { (event) in
-            if let e = event as? PlayerEvent.DurationChanged, let d = e.duration {
-                self.playheadSlider.maximumValue = Float(truncating: d)
+            if let e = event as? PlayerEvent.DurationChanged, let d = e.duration as? TimeInterval {
+                self.playheadSlider.maximumValue = Float(d)
+                self.durationLabel.text = format(d)
             }
         })
     }
     
     func createPluginConfig() -> PluginConfig? {
-        return nil
-//        return PluginConfig(config: [KavaPlugin.pluginName: createKavaConfig()])
+        return PluginConfig(config: [KavaPlugin.pluginName: createKavaConfig()])
     }
     
     func createKavaConfig() -> KavaPluginConfig {
@@ -95,35 +110,10 @@ class ViewController: UIViewController {
         
         if player.isPlaying {
             player.pause()
-//            self.playheadTimer?.invalidate()
-//            self.playheadTimer = nil
-
         } else {
             player.play()
-//            self.playheadTimer = PKTimer.every(0.5) { (timer) in
-//                self.playheadSlider.value = Float(player.currentTime)
-//            }
         }
-//        
-//        
-//        if !(player.isPlaying) {
-//            self.playheadTimer = PKTimer.every(0.5) { (timer) in
-//                self.playheadSlider.value = Float(player.currentTime / player.duration)
-//            }
-//            player.play()
-//        }
     }
-    
-//    @IBAction func pauseTouched(_ sender: Any) {
-//        guard let player = self.player else {
-//            print("player is not set")
-//            return
-//        }
-//        
-//        self.playheadTimer?.invalidate()
-//        self.playheadTimer = nil
-//        player.pause()
-//    }
     
     @IBAction func playheadValueChanged(_ sender: Any) {
         guard let player = self.player else {
@@ -132,10 +122,5 @@ class ViewController: UIViewController {
         }
         
         player.currentTime = TimeInterval(playheadSlider.value)
-        
-//        let slider = sender as! UISlider
-        
-//        print("playhead value:", slider.value)
-//        player.currentTime = player.duration * Double(slider.value)
     }
 }
