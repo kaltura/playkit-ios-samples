@@ -6,7 +6,7 @@ target 'OVPStarter' do
   use_frameworks!
 
   # Pods for OVPStarter
-  pod 'PlayKit', :path => '../../playkit-ios'
-	pod 'PlayKitKava', :path => '../../playkit-ios-kava'
+  pod 'PlayKit'
+  pod 'PlayKitKava'
 
 end
