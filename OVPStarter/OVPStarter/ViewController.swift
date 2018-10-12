@@ -9,11 +9,30 @@ fileprivate let PARTNER_ID = 1424501
 fileprivate let ENTRY_ID = "1_djnefl4e"
 
 class ViewController: UIViewController {
+
+    enum State {
+        case idle, playing, paused, ended
+    }
+    
     var entryId: String?
     var ks: String?
-    var player: Player?
-
-    var playheadTimer: Timer?
+    var player: Player! // Created in viewDidLoad
+    var state: State = .idle {
+        didSet {
+            let title: String
+            switch state {
+            case .idle:
+                title = "|>"
+            case .playing:
+                title = "||"
+            case .paused:
+                title = "|>"
+            case .ended:
+                title = "<>"
+            }
+            playPauseButton.setTitle(title, for: .normal)
+        }
+    }
     
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
@@ -24,9 +43,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.playheadSlider.isContinuous = false;
         
-        try! self.setupPlayer()
+        self.state = .idle
+
+        self.player = try! PlayKitManager.shared.loadPlayer(pluginConfig: createPluginConfig())
+        self.setupPlayer()
         
         entryId = ENTRY_ID
         loadMedia()
@@ -44,8 +65,7 @@ class ViewController: UIViewController {
 /************************/
 // MARK: - Player Setup
 /***********************/
-    func setupPlayer() throws {
-        self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: createPluginConfig())
+    func setupPlayer() {
         
         self.player?.view = self.playerContainer
         
@@ -62,12 +82,35 @@ class ViewController: UIViewController {
             }
         }
 
+        // Observe media progress to update UI
         self.player?.addPeriodicObserver(interval: 0.2, observeOn: DispatchQueue.main, using: { (pos) in
             self.playheadSlider.value = Float(pos)
             self.positionLabel.text = format(pos)
         })
         
+        // Observe duration to update UI
         self.player?.addObserver(self, events: [PlayerEvent.durationChanged], block: { (event) in
+            if let e = event as? PlayerEvent.DurationChanged, let d = e.duration as? TimeInterval {
+                self.playheadSlider.maximumValue = Float(d)
+                self.durationLabel.text = format(d)
+            }
+        })
+
+        // Observe play/pause to update UI
+        self.player?.addObserver(self, events: [PlayerEvent.play, PlayerEvent.ended, PlayerEvent.pause], block: { (event) in
+            switch event {
+            case is PlayerEvent.Play, is PlayerEvent.Playing:
+                self.state = .playing
+                
+            case is PlayerEvent.Pause:
+                self.state = .paused
+                
+            case is PlayerEvent.Ended:
+                self.state = .ended
+                
+            default:
+                break
+            }
             if let e = event as? PlayerEvent.DurationChanged, let d = e.duration as? TimeInterval {
                 self.playheadSlider.maximumValue = Float(d)
                 self.durationLabel.text = format(d)
@@ -79,10 +122,13 @@ class ViewController: UIViewController {
         return PluginConfig(config: [KavaPlugin.pluginName: createKavaConfig()])
     }
     
+    // Create Kava config using the current entryId and KS
+    // Depending on backend setup, some of the optional (nil) parameters may be required as well.
     func createKavaConfig() -> KavaPluginConfig {
         return KavaPluginConfig(partnerId: PARTNER_ID, entryId: entryId, ks: ks, playbackContext: nil, referrer: nil, applicationVersion: nil, playlistId: nil, customVar1: nil, customVar2: nil, customVar3: nil)
     }
-        
+    
+    // Load 
     func loadMedia() {
         let sessionProvider = SimpleSessionProvider(serverURL: SERVER_BASE_URL, partnerId: Int64(PARTNER_ID), ks: ks)
         let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
@@ -92,8 +138,13 @@ class ViewController: UIViewController {
                 // create media config
                 let mediaConfig = MediaConfig(mediaEntry: me, startTime: 0.0)
                 
+                // Update Kava config
+                self.player.updatePluginConfig(pluginName: KavaPlugin.pluginName, config: self.createKavaConfig())
+
                 // prepare the player
-                self.player!.prepare(mediaConfig)
+                self.player.prepare(mediaConfig)      
+                
+                self.state = .paused
             }
         }
     }
@@ -108,9 +159,15 @@ class ViewController: UIViewController {
             return
         }
         
-        if player.isPlaying {
+        switch state {
+        case .playing:
             player.pause()
-        } else {
+        case .idle:
+            player.play()
+        case .paused:
+            player.play()
+        case .ended:
+            player.seek(to: 0)
             player.play()
         }
     }
@@ -121,6 +178,9 @@ class ViewController: UIViewController {
             return
         }
         
+        if state == .ended && playheadSlider.value < playheadSlider.maximumValue {
+            state = .paused
+        }
         player.currentTime = TimeInterval(playheadSlider.value)
     }
 }

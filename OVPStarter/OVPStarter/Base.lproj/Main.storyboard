@@ -34,6 +34,7 @@
                                                 <constraint firstAttribute="width" secondItem="mkz-3y-9UE" secondAttribute="height" multiplier="1:1" id="4Ff-gm-deF"/>
                                                 <constraint firstAttribute="width" constant="40" id="MHE-wD-Ttq"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                             <state key="normal" title="||&gt;">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
@@ -47,7 +48,7 @@
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-LM-qs2">
+                                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-LM-qs2">
                                             <rect key="frame" x="140.5" y="17" width="534.5" height="31"/>
                                             <connections>
                                                 <action selector="playheadValueChanged:" destination="yQf-LR-HVa" eventType="valueChanged" id="tTh-nO-OTb"/>
