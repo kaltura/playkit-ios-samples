@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,6 +22,13 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="670"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-EM-Hms">
+                                <rect key="frame" x="20" y="64" width="108" height="30"/>
+                                <state key="normal" title="Changed Media"/>
+                                <connections>
+                                    <action selector="changeMediaTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="GE0-sL-kXz"/>
+                                </connections>
+                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-vm-eFy">
                                 <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fyi-JH-bGD">
@@ -46,20 +53,31 @@
                                                 <action selector="pauseTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="KGz-dV-sEa"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qw7-3N-uRU" userLabel="Stop">
+                                            <rect key="frame" x="110" y="17" width="32" height="30"/>
+                                            <state key="normal" title="Stop">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="stopTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Y3C-0h-kbh"/>
+                                            </connections>
+                                        </button>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-LM-qs2">
-                                            <rect key="frame" x="108" y="17" width="261" height="31"/>
+                                            <rect key="frame" x="155" y="17" width="214" height="31"/>
                                             <connections>
                                                 <action selector="playheadValueChanged:" destination="yQf-LR-HVa" eventType="valueChanged" id="tTh-nO-OTb"/>
                                             </connections>
                                         </slider>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QMa-LM-qs2" firstAttribute="leading" secondItem="9dW-d4-ZXT" secondAttribute="trailing" constant="15" id="CZF-9Z-SK3"/>
+                                        <constraint firstItem="QMa-LM-qs2" firstAttribute="leading" secondItem="qw7-3N-uRU" secondAttribute="trailing" constant="15" id="JJF-wN-VY2"/>
+                                        <constraint firstItem="qw7-3N-uRU" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="KKc-pl-Qkr"/>
                                         <constraint firstItem="QMa-LM-qs2" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="QGv-gz-RRx"/>
                                         <constraint firstItem="mkz-3y-9UE" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="TNw-y2-zcz"/>
                                         <constraint firstItem="mkz-3y-9UE" firstAttribute="leading" secondItem="Fyi-JH-bGD" secondAttribute="leading" constant="8" id="g36-JC-VMZ"/>
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="iC1-8j-GuY"/>
                                         <constraint firstAttribute="trailing" secondItem="QMa-LM-qs2" secondAttribute="trailing" constant="8" id="lNE-Ru-VI4"/>
+                                        <constraint firstItem="qw7-3N-uRU" firstAttribute="leading" secondItem="9dW-d4-ZXT" secondAttribute="trailing" constant="15" id="xv1-EC-K7d"/>
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="leading" secondItem="mkz-3y-9UE" secondAttribute="trailing" constant="15" id="yjt-xa-Npg"/>
                                     </constraints>
                                 </view>
@@ -79,6 +97,8 @@
                             <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="ynk-cW-eT0" secondAttribute="top" id="7Nz-Ku-x2c"/>
                             <constraint firstItem="ynk-cW-eT0" firstAttribute="bottom" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="EYC-xR-vAg"/>
+                            <constraint firstItem="J8g-EM-Hms" firstAttribute="top" secondItem="ynk-cW-eT0" secondAttribute="top" constant="20" id="FEk-2O-eLj"/>
+                            <constraint firstItem="J8g-EM-Hms" firstAttribute="leading" secondItem="ynk-cW-eT0" secondAttribute="leading" constant="20" id="JDH-EX-nAd"/>
                             <constraint firstItem="ynk-cW-eT0" firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="ynk-cW-eT0" secondAttribute="leading" id="wni-xA-PRH"/>
                         </constraints>
