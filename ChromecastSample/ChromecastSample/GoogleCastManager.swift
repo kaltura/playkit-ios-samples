@@ -6,6 +6,14 @@
 //  Copyright © 2017 Kaltura. All rights reserved.
 //
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Xcode 10 Warning: If developing using Xcode 10 and targeting iOS devices running iOS 12 or higher,      //
+// the "Access WiFi Information" capability is required in order to discover and connect to Cast devices.  //
+// https://developers.google.com/cast/docs/ios_sender_setup#xcode_setup                                    //
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 import UIKit
 import GoogleCast
 import PlayKit
@@ -71,7 +79,7 @@ class GoogleCastManager: NSObject,
                 
                 let gckMediaQueueLoadOptions = GCKMediaQueueLoadOptions()
                 gckMediaQueueLoadOptions.startIndex = 0
-                gckMediaQueueLoadOptions.playPosition = 0
+                gckMediaQueueLoadOptions.playPosition = 0 // For Live, if Live edge is wanted don't set the playPosition
                 gckMediaQueueLoadOptions.repeatMode = repeatMode
                 
                 let request = remoteMediaClient.queueLoad([item], with: gckMediaQueueLoadOptions)
@@ -101,15 +109,56 @@ class GoogleCastManager: NSObject,
         return media
     }
     
+//    struct TestMedia {
+//        var contentId: String
+//        var audioLanguage: String?
+//        var textLanguage: String?
+//        var adTagType: 
+//        
+//    }
+    
     private func getCAFMediaInformation() throws -> GCKMediaInformation {
         
+//        // Live
+//        let media = try CAFCastBuilder()
+//            .set(contentId: "0_nwkp7jtx")
+//            .build()
+        
+//        // VOD
+//        let media = try CAFCastBuilder()
+//            .set(contentId: "0_ttfy4uu0")
+//            .set(audioLanguage: "en")
+//            .set(textLanguage: "en")
+//            .build()
+        
+//        // VMAP Ad
+//        let media = try CAFCastBuilder()
+//            .set(contentId: "0_ttfy4uu0")
+//            .set(audioLanguage: "en")
+//            .set(textLanguage: "en")
+//            .set(adTagType: .vmap)
+//            .set(adTagURL: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=[timestamp]")
+//            .build()
+        
+//        // VAST Ad
+//        let media = try CAFCastBuilder()
+//            .set(contentId: "0_ttfy4uu0")
+//            .set(audioLanguage: "en")
+//            .set(textLanguage: "en")
+//            .set(adTagType: .vast)
+//            .set(adTagURL: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=[timestamp]")
+//            .build()
+        
+        
+        // VAST Ad with Skip
         let media = try CAFCastBuilder()
             .set(contentId: "0_ttfy4uu0")
             .set(audioLanguage: "en")
             .set(textLanguage: "en")
-            .set(adTagType: .vmap)
-            .set(adTagURL: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpostpod&cmsid=496&vid=short_onecue&correlator=[timestamp]")
+            .set(adTagType: .vast)
+            .set(adTagURL: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=5877787")
             .build()
+        
         
         return media
     }
