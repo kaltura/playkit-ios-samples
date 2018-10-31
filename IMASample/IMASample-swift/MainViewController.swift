@@ -59,6 +59,7 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
                     
                     let adsConfig = IMAConfig()
                     adsConfig.adTagUrl = video.tag
+                    adsConfig.playerVersion = PlayKitManager.versionString
                     
                     var url: URL?
                     if let player = player {

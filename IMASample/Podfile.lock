@@ -1,30 +1,36 @@
 PODS:
-  - GoogleAds-IMA-iOS-SDK (3.6.0)
+  - GoogleAds-IMA-iOS-SDK (3.7.3)
   - KalturaNetKit (0.0.17):
     - KalturaNetKit/Core (= 0.0.17)
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
-  - Log (1.0)
-  - PlayKit (3.5.x-dev):
-    - PlayKit/Core (= 3.5.x-dev)
-  - PlayKit/AnalyticsCommon (3.5.x-dev):
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - PlayKit (3.6.x-dev):
+    - PlayKit/Core (= 3.6.x-dev)
+  - PlayKit/AnalyticsCommon (3.6.x-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.5.x-dev):
+  - PlayKit/Core (3.6.x-dev):
     - KalturaNetKit (~> 0.0)
-    - Log (= 1.0)
     - PlayKitUtils (= 0.1.4)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/YouboraPlugin (3.5.x-dev):
+    - XCGLogger (~> 6.1.0)
+  - PlayKit/YouboraPlugin (3.6.x-dev):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.4.18)
-  - PlayKit_IMA (0.0.1):
-    - GoogleAds-IMA-iOS-SDK (= 3.6.0)
+  - PlayKit_IMA (1.1.0):
+    - GoogleAds-IMA-iOS-SDK (= 3.7.3)
     - PlayKit/Core
   - PlayKitUtils (0.1.4)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
   - Youbora-AVPlayer/dynamic (5.4.18):
     - Youbora-YouboraLib/dynamic (= 5.4.4)
   - Youbora-YouboraLib/dynamic (5.4.4)
@@ -32,16 +38,17 @@ PODS:
 DEPENDENCIES:
   - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
   - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
-  - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `develop`)
+  - PlayKit_IMA (from `../../playkit-ios-ima`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GoogleAds-IMA-iOS-SDK
     - KalturaNetKit
-    - Log
+    - ObjcExceptionBridging
     - PlayKitUtils
     - SwiftyJSON
     - SwiftyXMLParser
+    - XCGLogger
     - Youbora-AVPlayer
     - Youbora-YouboraLib
 
@@ -50,29 +57,26 @@ EXTERNAL SOURCES:
     :branch: develop
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios-ima.git
+    :path: "../../playkit-ios-ima"
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: 8e84ce8e4b17de74eccedf5c19940b9f4e9b150c
+    :commit: c343b9512fdc488f66420c9dacf09f993908f18c
     :git: https://github.com/kaltura/playkit-ios.git
-  PlayKit_IMA:
-    :commit: 8f9168fed9aeca47faedbc18a0c9b8128dff15ea
-    :git: https://github.com/kaltura/playkit-ios-ima.git
 
 SPEC CHECKSUMS:
-  GoogleAds-IMA-iOS-SDK: 193ca918ed33278c29c96683f500524bf788d509
+  GoogleAds-IMA-iOS-SDK: 6dc764910309dcc982d6eb8b7de19d3cf94a6857
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
-  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
-  PlayKit_IMA: 58be407e237f1feaa5165e8f2a37a29d413bf8c5
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  PlayKit: 2b80ea194a84abc5ae38c64507e4be32be2313b7
+  PlayKit_IMA: 1ab5740ec8bcc385ef8c98cbb9a4f7f9cd987abb
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: cbc195e21728bdc60f18c87e35aadaa57aa719da
+PODFILE CHECKSUM: 1bfd05c90c4e038b45cf8d315430a442477f72cf
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2
