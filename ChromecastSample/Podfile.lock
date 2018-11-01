@@ -1,8 +1,8 @@
 PODS:
-  - google-cast-sdk (4.3.2):
-    - google-cast-sdk/Core (= 4.3.2)
+  - google-cast-sdk (4.3.3):
+    - google-cast-sdk/Core (= 4.3.3)
     - Protobuf (~> 3.0)
-  - google-cast-sdk/Core (4.3.2):
+  - google-cast-sdk/Core (4.3.3):
     - Protobuf (~> 3.0)
   - KalturaNetKit (0.0.17):
     - KalturaNetKit/Core (= 0.0.17)
@@ -20,7 +20,7 @@ PODS:
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
   - PlayKit/GoogleCastAddon (3.6.x-dev):
-    - google-cast-sdk (= 4.3.2)
+    - google-cast-sdk (= 4.3.3)
     - PlayKit/Core
   - PlayKitUtils (0.1.4)
   - Protobuf (3.6.1)
@@ -32,8 +32,8 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKit/GoogleCastAddon (from `../../playkit-ios`)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKit/GoogleCastAddon (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -48,19 +48,25 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   PlayKit:
-    :path: "../../playkit-ios"
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios.git
+
+CHECKOUT OPTIONS:
+  PlayKit:
+    :commit: b9bd7d6c822a8048dd2f353f6b07bf579a632b52
+    :git: https://github.com/kaltura/playkit-ios.git
 
 SPEC CHECKSUMS:
-  google-cast-sdk: 845b740ef8c47919185651ba62b36b2ed0cfab40
+  google-cast-sdk: 792980f4fa5afd4f9b91f41d582cc75251648f3a
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: af2f12663d9b5fbac16ffa9a055897f37655e368
+  PlayKit: 418c68a5a283aa5e6ab3b263a80fc8f7515dc4fa
   PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: ebb12b7320b2a5ab56a4ff62fc7198cc1a4b4dd0
+PODFILE CHECKSUM: e3eb05696e4a41c6b78fbefbc7aea683e6a0054f
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2

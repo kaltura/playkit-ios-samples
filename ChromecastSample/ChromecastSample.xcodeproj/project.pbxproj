@@ -195,10 +195,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
-				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -209,7 +208,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -218,7 +216,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		76C836903D24034D7FB4840B /* [CP] Copy Pods Resources */ = {
@@ -227,9 +225,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.3.2_static/GoogleCast.framework/GoogleCastCoreResources.bundle",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.3.2_static/GoogleCast.framework/GoogleCastUIResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.3.3_static/GoogleCast.framework/GoogleCastCoreResources.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.3.3_static/GoogleCast.framework/GoogleCastUIResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -238,7 +236,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -396,7 +394,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -415,7 +413,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
