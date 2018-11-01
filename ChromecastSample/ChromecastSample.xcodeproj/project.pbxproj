@@ -17,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1D5E767C990A4BCFA7D70D5D /* Pods-SharedPods-ChromecastSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-ChromecastSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample.release.xcconfig"; sourceTree = "<group>"; };
+		1C06D2CE6AFC6ABA2CDB9190 /* Pods-SharedPods-ChromecastSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-ChromecastSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample.debug.xcconfig"; sourceTree = "<group>"; };
+		9F39709E9774E9F17C32D09A /* Pods-SharedPods-ChromecastSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-ChromecastSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample.release.xcconfig"; sourceTree = "<group>"; };
 		BFC811E41ECB2CE000C8CBF7 /* ChromecastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChromecastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFC811E71ECB2CE000C8CBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFC811E91ECB2CE000C8CBF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +27,7 @@
 		BFC811F11ECB2CE000C8CBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFC811F31ECB2CE000C8CBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFC811F91ECB30C300C8CBF7 /* GoogleCastManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleCastManager.swift; sourceTree = "<group>"; };
-		E04DC71F26664996B125C673 /* Pods-SharedPods-ChromecastSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-ChromecastSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample.debug.xcconfig"; sourceTree = "<group>"; };
+		D2B002A62174850200E3D615 /* ChromecastSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ChromecastSample.entitlements; sourceTree = "<group>"; };
 		F5B085335542F47791F1D5DE /* Pods_SharedPods_ChromecastSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_ChromecastSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -53,8 +54,8 @@
 		AAAD6A74D88848E2935FFE63 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E04DC71F26664996B125C673 /* Pods-SharedPods-ChromecastSample.debug.xcconfig */,
-				1D5E767C990A4BCFA7D70D5D /* Pods-SharedPods-ChromecastSample.release.xcconfig */,
+				1C06D2CE6AFC6ABA2CDB9190 /* Pods-SharedPods-ChromecastSample.debug.xcconfig */,
+				9F39709E9774E9F17C32D09A /* Pods-SharedPods-ChromecastSample.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -80,6 +81,7 @@
 		BFC811E61ECB2CE000C8CBF7 /* ChromecastSample */ = {
 			isa = PBXGroup;
 			children = (
+				D2B002A62174850200E3D615 /* ChromecastSample.entitlements */,
 				BFC811F91ECB30C300C8CBF7 /* GoogleCastManager.swift */,
 				BFC811E71ECB2CE000C8CBF7 /* AppDelegate.swift */,
 				BFC811E91ECB2CE000C8CBF7 /* ViewController.swift */,
@@ -103,6 +105,7 @@
 				BFC811E11ECB2CE000C8CBF7 /* Frameworks */,
 				BFC811E21ECB2CE000C8CBF7 /* Resources */,
 				44E9F6E2D05C2C7FBE179887 /* [CP] Embed Pods Frameworks */,
+				76C836903D24034D7FB4840B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +131,11 @@
 						DevelopmentTeam = X8RDCFJK95;
 						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -187,28 +195,48 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
-				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-Public-3.5.0-Release/GoogleCast.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleCast.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76C836903D24034D7FB4840B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.3.3_static/GoogleCast.framework/GoogleCastCoreResources.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-ios-4.3.3_static/GoogleCast.framework/GoogleCastUIResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastCoreResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastUIResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-ChromecastSample/Pods-SharedPods-ChromecastSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -353,31 +381,39 @@
 		};
 		BFC811F71ECB2CE000C8CBF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E04DC71F26664996B125C673 /* Pods-SharedPods-ChromecastSample.debug.xcconfig */;
+			baseConfigurationReference = 1C06D2CE6AFC6ABA2CDB9190 /* Pods-SharedPods-ChromecastSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChromecastSample/ChromecastSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = ChromecastSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.ChromecastSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.ChromecastSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		BFC811F81ECB2CE000C8CBF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D5E767C990A4BCFA7D70D5D /* Pods-SharedPods-ChromecastSample.release.xcconfig */;
+			baseConfigurationReference = 9F39709E9774E9F17C32D09A /* Pods-SharedPods-ChromecastSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ChromecastSample/ChromecastSample.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = ChromecastSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.ChromecastSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.ChromecastSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

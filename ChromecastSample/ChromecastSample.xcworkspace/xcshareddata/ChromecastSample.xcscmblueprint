@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "30F9450BC2607D666546B5641270352E089DA5EC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "30F9450BC2607D666546B5641270352E089DA5EC" : 9223372036854775807,
+    "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "872DFB87-2BAE-4263-9BA8-7C9065EDD731",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "30F9450BC2607D666546B5641270352E089DA5EC" : "playkit-ios-samples\/",
+    "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6" : "playkit-ios\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ChromecastSample",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChromecastSample\/ChromecastSample.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios-samples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30F9450BC2607D666546B5641270352E089DA5EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6"
+    }
+  ]
+}

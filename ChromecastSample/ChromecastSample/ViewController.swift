@@ -83,7 +83,7 @@ class ViewController: UIViewController, GoogleCastManagerDelegate {
         }
         
         if (GoogleCastManager.sharedInstance.isConnected()){
-            var preferredStyle: UIAlertControllerStyle = .actionSheet
+            var preferredStyle: UIAlertController.Style = .actionSheet
             
             if UIDevice.current.userInterfaceIdiom == .pad {
                 preferredStyle = .alert
