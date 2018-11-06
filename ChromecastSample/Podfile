@@ -2,21 +2,30 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-# Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-
 platform :ios, '9.0' # (define required version)
+
+# Uncomment to use a local copy of PlayKit
+PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_GOOGLECAST_LOCAL='../../playkit-ios-googlecast'
+
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 
+PLAYKIT_GOOGLECAST_GIT='https://github.com/kaltura/playkit-ios-googlecast.git'
+PLAYKIT_GOOGLECAST_BRANCH=ENV['PKGC_BRANCH'] || 'develop'
+
 abstract_target 'SharedPods' do
     if defined? PLAYKIT_LOCAL
         pod 'PlayKit', :path => PLAYKIT_LOCAL
-        pod 'PlayKit/GoogleCastAddon', :path => PLAYKIT_LOCAL
         else
         pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-        pod 'PlayKit/GoogleCastAddon', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    end
+    
+    if defined? PLAYKIT_GOOGLECAST_LOCAL
+      pod 'PlayKitGoogleCast', :path => PLAYKIT_GOOGLECAST_LOCAL
+      else
+      pod 'PlayKitGoogleCast', :git => PLAYKIT_GOOGLECAST_GIT, :branch => PLAYKIT_GOOGLECAST_BRANCH
     end
     
     target 'ChromecastSample'
