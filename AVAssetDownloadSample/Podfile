@@ -5,7 +5,7 @@ use_frameworks!
 platform :ios, '9.0'
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_LOCAL='../../playkit-ios'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
@@ -17,8 +17,7 @@ abstract_target 'SharedPods' do
         pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
     end
     
-    pod 'Toast-Swift'
-    #  pod 'DownloadToGo'
+    pod 'Toast', '~> 4.0.0'
     
     target 'AVAssetDownloadSample'
 

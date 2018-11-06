@@ -8,7 +8,7 @@
 
 import UIKit
 import PlayKit
-import Toast_Swift
+import Toast
 import AVFoundation
 
 class MainViewController: UIViewController {
@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
     
     let items = [
         Item("FPS: Ella 1", id: "1_x14v3p06", partnerId: 1788671),
-        Item("FPS: QA 1", id: "0_4s6xvtx3", partnerId: 4171, env: "http://qa-apache-php7.dev.kaltura.com"),
+        Item("FPS: QA 1", id: "0_4s6xvtx3", partnerId: 4171, env: "http://cdntesting.qa.mkaltura.com"),
         Item("Clear: Kaltura", id: "1_sf5ovm7u", partnerId: 243342),
         // Item not good getting an error
         //        Item(id: "QA multi/multi", url: "http://qa-apache-testing-ubu-01.dev.kaltura.com/p/1091/sp/109100/playManifest/entryId/0_mskmqcit/flavorIds/0_et3i1dux,0_pa4k1rn9/format/applehttp/protocol/http/a.m3u8"),
@@ -204,17 +204,17 @@ class MainViewController: UIViewController {
     
     private func toastShort(_ message: String) {
         print(message)
-        view.makeToast(message, duration: 0.6, position: .center)
+        view.makeToast(message, duration: 0.6, position: CSToastPositionCenter)
     }
     
     private func toastMedium(_ message: String) {
         print(message)
-        view.makeToast(message, duration: 1.0, position: .center)
+        view.makeToast(message, duration: 1.0, position: CSToastPositionCenter)
     }
     
     private func toastLong(_ message: String) {
         print(message)
-        view.makeToast(message, duration: 1.5, position: .center)
+        view.makeToast(message, duration: 1.5, position: CSToastPositionCenter)
     }
 
     // MARK: - IBActions
