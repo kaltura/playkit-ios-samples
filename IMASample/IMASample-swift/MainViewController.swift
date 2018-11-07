@@ -25,7 +25,7 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
         
         do {
             try AVAudioSession.sharedInstance().setActive(true)
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.mixWithOthers)
         } catch {
             
         }
@@ -93,6 +93,8 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
             }
         }
     }
+    
+    // MARK: - UITableViewDataSource
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -107,6 +109,14 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
         cell.populate(with: videos[indexPath.row])
         return cell
     }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    // MARK: - PlayerDelegate
     
     func playerShouldPlayAd(_ player: Player) -> Bool {
         return true
