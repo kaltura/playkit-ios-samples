@@ -41,8 +41,8 @@ class ViewController: UIViewController {
             guard let state = notif.userInfo?["AssetDownloadStateKey"] as? String else { return }
             
             if state == "downloaded"{
-                let alert = UIAlertController(title: "Download Progress", message: state, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: { (alert) in
+                let alert = UIAlertController(title: "Download Progress", message: state, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (alert) in
                     self.dismiss(animated: true, completion: nil)
                 }))
                 self.present(alert, animated: true, completion: nil)
