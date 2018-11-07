@@ -3,82 +3,86 @@ PODS:
     - KalturaNetKit/Core (= 0.0.17)
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
-  - Log (1.0)
   - MetalScope (0.16.0)
-  - PlayKit (3.5.x-dev):
-    - PlayKit/Core (= 3.5.x-dev)
-  - PlayKit/AnalyticsCommon (3.5.x-dev):
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - PlayKit (3.6.x-dev):
+    - PlayKit/Core (= 3.6.x-dev)
+  - PlayKit/AnalyticsCommon (3.6.x-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.5.x-dev):
+  - PlayKit/Core (3.6.x-dev):
     - KalturaNetKit (~> 0.0)
-    - Log (= 1.0)
-    - PlayKitUtils (= 0.1.4)
+    - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKit/YouboraPlugin (3.5.x-dev):
+    - XCGLogger (~> 6.1.0)
+  - PlayKit/YouboraPlugin (3.6.x-dev):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.4.18)
-  - PlayKitUtils (0.1.4)
+  - PlayKitUtils (0.1.6)
   - PlayKitVR (1.0.0):
     - MetalScope (= 0.16.0)
     - PlayKit/Core
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
   - Youbora-AVPlayer/dynamic (5.4.18):
     - Youbora-YouboraLib/dynamic (= 5.4.4)
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - MetalScope (from `https://github.com/kaltura/MetalScope.git`, branch `swift-4`)
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
-  - PlayKit/YouboraPlugin (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - MetalScope (from `https://github.com/kaltura/MetalScope.git`, branch `swift-4.2`)
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit/YouboraPlugin (from `../../playkit-ios`)
   - PlayKitVR (from `https://github.com/kaltura/playkit-ios-vr.git`, branch `develop`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
-    - Log
+    - ObjcExceptionBridging
     - PlayKitUtils
     - SwiftyJSON
     - SwiftyXMLParser
+    - XCGLogger
     - Youbora-AVPlayer
     - Youbora-YouboraLib
 
 EXTERNAL SOURCES:
   MetalScope:
-    :branch: swift-4
+    :branch: swift-4.2
     :git: https://github.com/kaltura/MetalScope.git
   PlayKit:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios.git
+    :path: "../../playkit-ios"
   PlayKitVR:
     :branch: develop
     :git: https://github.com/kaltura/playkit-ios-vr.git
 
 CHECKOUT OPTIONS:
   MetalScope:
-    :commit: f170bc03b544f2035bbdf43fe59e53784a0f64fa
+    :commit: 72afc97b5d40318b7d98f4d08e0df868b000b89e
     :git: https://github.com/kaltura/MetalScope.git
-  PlayKit:
-    :commit: 8e84ce8e4b17de74eccedf5c19940b9f4e9b150c
-    :git: https://github.com/kaltura/playkit-ios.git
   PlayKitVR:
     :commit: 7c8292c0a45997c15d323563727e76ce1de4282c
     :git: https://github.com/kaltura/playkit-ios-vr.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
-  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   MetalScope: 0453bf074a48927830018478cf7bc72f76645e5d
-  PlayKit: 9309b3205fa424b75968e7f61c907250d873e3c4
-  PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  PlayKit: cf7a6e6d3a64d495062930b12ff63bce4a01ba3a
+  PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   PlayKitVR: dc07ba17680245e18266b1fb8fd12af79541fd3c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: e2aad9dc05f2b4568678434f7cc14b27affb60af
+PODFILE CHECKSUM: 49ff82ffa3c9eb09efbf5512c04dac551c15dbad
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.0.beta.2
