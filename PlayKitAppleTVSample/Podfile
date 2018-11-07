@@ -5,8 +5,8 @@ platform :tvos, '9.0' # (define required version)
 use_frameworks!
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-#PLAYKIT_ADMANAGER_LOCAL='../../playkit-ios-admanager-plugin'
+PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_ADMANAGER_LOCAL='../../playkit-ios-admanager-plugin'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
@@ -32,17 +32,3 @@ abstract_target 'SharedPods' do
     target 'PlayKitAppleTVSample'
     
 end
-
-pre_install do |installer|
-    def installer.verify_no_static_framework_transitive_dependencies; end
-end
-
-post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '4.0'
-            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
-        end
-    end
-end
-

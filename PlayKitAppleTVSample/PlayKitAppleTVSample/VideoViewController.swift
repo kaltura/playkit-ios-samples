@@ -111,10 +111,10 @@ class VideoViewController: UIViewController {
     }
     
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        if presses.first?.type == UIPressType.menu && (self.playbackControlsView != nil || self.tracksControlsView != nil) {
+        if presses.first?.type == UIPress.PressType.menu && (self.playbackControlsView != nil || self.tracksControlsView != nil) {
             self.removePlaybackControlsView()
             self.removeTracksControlsView()
-        } else if presses.first?.type == UIPressType.playPause {
+        } else if presses.first?.type == UIPress.PressType.playPause {
             self.playPause()
         } else {
             super.pressesBegan(presses, with: event)
