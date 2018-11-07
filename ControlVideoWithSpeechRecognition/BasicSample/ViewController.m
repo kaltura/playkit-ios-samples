@@ -106,13 +106,9 @@
                 break;
         }
         
-//        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-            // Background work
-//            dispatch_async(dispatch_get_main_queue(), ^(void) {
-                // Main thread work (UI usually)
-                self.microphoneButton.enabled = isButtonEnabled;
-//            });
-//        });
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            self.microphoneButton.enabled = isButtonEnabled;
+        });
     }];
     
     self.audioEngine = [AVAudioEngine new];
