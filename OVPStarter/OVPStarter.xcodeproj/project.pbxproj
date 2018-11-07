@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B7A18B170A5A93530399824 /* Pods_OVPStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9B2B0EA45225216A71D9E3 /* Pods_OVPStarter.framework */; };
+		BD0E44A61BDF68E5B263D15C /* Pods_SharedPods_OVPStarter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C64D410099177A6914D390E3 /* Pods_SharedPods_OVPStarter.framework */; };
 		BFD20A601EA891970018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A5F1EA891970018FD8A /* AppDelegate.swift */; };
 		BFD20A621EA891970018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A611EA891970018FD8A /* ViewController.swift */; };
 		BFD20A651EA891970018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A631EA891970018FD8A /* Main.storyboard */; };
@@ -16,9 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		04A4D7691ADE2C1387EAB294 /* Pods-OVPStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-OVPStarter/Pods-OVPStarter.release.xcconfig"; sourceTree = "<group>"; };
-		23782B5D6C14DDC6A6E403D6 /* Pods-OVPStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OVPStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OVPStarter/Pods-OVPStarter.debug.xcconfig"; sourceTree = "<group>"; };
-		3C9B2B0EA45225216A71D9E3 /* Pods_OVPStarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OVPStarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1091BEF73F188DA4D5B2A29E /* Pods-SharedPods-OVPStarter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OVPStarter.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter.release.xcconfig"; sourceTree = "<group>"; };
 		BFD20A5D1EA891970018FD8A /* OVPStarter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OVPStarter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD20A5F1EA891970018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD20A611EA891970018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +24,8 @@
 		BFD20A661EA891970018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD20A691EA891970018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A6B1EA891970018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C64D410099177A6914D390E3 /* Pods_SharedPods_OVPStarter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_OVPStarter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D337BF400E4A6CD76FD10A3E /* Pods-SharedPods-OVPStarter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-OVPStarter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7A18B170A5A93530399824 /* Pods_OVPStarter.framework in Frameworks */,
+				BD0E44A61BDF68E5B263D15C /* Pods_SharedPods_OVPStarter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 		559DA1E3120442FC98A620A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3C9B2B0EA45225216A71D9E3 /* Pods_OVPStarter.framework */,
+				C64D410099177A6914D390E3 /* Pods_SharedPods_OVPStarter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,8 +69,8 @@
 		BF758945EBBBE01C16AB3637 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				23782B5D6C14DDC6A6E403D6 /* Pods-OVPStarter.debug.xcconfig */,
-				04A4D7691ADE2C1387EAB294 /* Pods-OVPStarter.release.xcconfig */,
+				D337BF400E4A6CD76FD10A3E /* Pods-SharedPods-OVPStarter.debug.xcconfig */,
+				1091BEF73F188DA4D5B2A29E /* Pods-SharedPods-OVPStarter.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -166,28 +166,30 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OVPStarter/Pods-OVPStarter-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitKava/PlayKitKava.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitKava.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OVPStarter/Pods-OVPStarter-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD65978E9A1F308F9BE04F8A /* [CP] Check Pods Manifest.lock */ = {
@@ -201,7 +203,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-OVPStarter-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-OVPStarter-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -347,7 +349,7 @@
 		};
 		BFD20A6C1EA891970018FD8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23782B5D6C14DDC6A6E403D6 /* Pods-OVPStarter.debug.xcconfig */;
+			baseConfigurationReference = D337BF400E4A6CD76FD10A3E /* Pods-SharedPods-OVPStarter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -360,13 +362,13 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		BFD20A6D1EA891970018FD8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 04A4D7691ADE2C1387EAB294 /* Pods-OVPStarter.release.xcconfig */;
+			baseConfigurationReference = 1091BEF73F188DA4D5B2A29E /* Pods-SharedPods-OVPStarter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -378,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
