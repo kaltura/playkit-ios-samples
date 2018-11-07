@@ -76,7 +76,7 @@ class ViewController: UIViewController {
         self.player?.view = self.playerContainer
         
         // Create a session provider
-        let sessionProvider = SimpleOVPSessionProvider(serverURL: "http://api-preprod.ott.kaltura.com/v4_5/api_v3/",
+        let sessionProvider = SimpleSessionProvider(serverURL: "http://api-preprod.ott.kaltura.com/v4_5/api_v3/",
                                  partnerId: 198,
                                  ks: nil)
         
@@ -129,7 +129,7 @@ class ViewController: UIViewController {
     }
     
     func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
-        return PhoenixAnalyticsPluginConfig(baseUrl: "",
+        return PhoenixAnalyticsPluginConfig(baseUrl: "https://rest-eus1.ott.kaltura.com/restful_v4_8/api_v3/",
                                             timerInterval: 30,
                                             ks: "",
                                             partnerId: 0)
@@ -163,6 +163,40 @@ class ViewController: UIViewController {
         self.playheadTimer?.invalidate()
         self.playheadTimer = nil
         player.pause()
+    }
+    
+    func createMediaEntry(id: String, contentURL: URL) -> PKMediaEntry {
+        // Create media source and initialize a media entry with that source
+        let source = PKMediaSource(id, contentUrl: contentURL, mimeType: nil, drmData: nil, mediaFormat: .hls)
+        let sources: Array = [source]
+        
+        // Setup media entry
+        return PKMediaEntry(id, sources: sources, duration: -1)
+    }
+    
+    @IBAction func changeMediaTouched(_ sender: Any) {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        // Resets The Player And Prepares for Change Media
+        player.stop() // 1. Stop Player
+        
+        // Create mediaEntry for change media, you can use differrent params here.
+        let contentURL = URL(string: "https://cdnapisec.kaltura.com/p/2215841/sp/221584100/playManifest/entryId/1_vl96wf1o/format/applehttp/protocol/https/a.m3u8")
+        let entryId = "KalturaMedia"
+        let mediaEntry = self.createMediaEntry(id: entryId, contentURL: contentURL!)
+        
+        // Create new Media Config
+        let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
+        // Call Prepare
+        player.prepare(mediaConfig) // 2. Call Prepare with new MediaConfig
+        
+        // After preparing if you wish to play make sure to wait `canPlay` event.
+        player.addObserver(self, events: [PlayerEvent.canPlay]) { event in
+            player.play()
+        }
     }
     
     @IBAction func playheadValueChanged(_ sender: Any) {
