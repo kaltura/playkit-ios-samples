@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		05F47B916C687BDA5D5C8F67 /* Pods_SharedPods_YouboraSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_YouboraSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E6BEB0A3D10FA68870BB70D /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		1BDC2E0886B5B72DB17A6FCC /* Pods-SharedPods-YouboraSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample.release.xcconfig"; sourceTree = "<group>"; };
 		2005AE891E80133900FB01B0 /* YouboraSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouboraSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2005AE8D1E80133900FB01B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2005AE8F1E80133900FB01B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,9 +35,8 @@
 		2005AE981E80133900FB01B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2005AE9B1E80133900FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AE9D1E80133900FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FAD899939968D45A117C436 /* Pods-SharedPods-YouboraSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample.release.xcconfig"; sourceTree = "<group>"; };
-		323E737D91D40F2CC9F6D5FE /* Pods-SharedPods-YouboraSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		A718B2B371765AA28283C4FA /* Pods_SharedPods_YouboraSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_YouboraSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB57E45171EBC33FCFE23FAF /* Pods-SharedPods-YouboraSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		BFD20A471EA7A88E0018FD8A /* YouboraSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YouboraSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD20A491EA7A88E0018FD8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD20A4B1EA7A88E0018FD8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,7 +44,8 @@
 		BFD20A501EA7A88E0018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD20A531EA7A88E0018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A551EA7A88E0018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C258F0FBE39580931414B191 /* Pods-SharedPods-YouboraSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample.debug.xcconfig"; sourceTree = "<group>"; };
+		C6BD8420228D139DB2C92366 /* Pods-SharedPods-YouboraSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample.debug.xcconfig"; sourceTree = "<group>"; };
+		E6E0C83C51581CE0DA6EF01F /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +115,10 @@
 		8F288488A9D5F0D900526F88 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C258F0FBE39580931414B191 /* Pods-SharedPods-YouboraSample.debug.xcconfig */,
-				2FAD899939968D45A117C436 /* Pods-SharedPods-YouboraSample.release.xcconfig */,
-				0E6BEB0A3D10FA68870BB70D /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */,
-				323E737D91D40F2CC9F6D5FE /* Pods-SharedPods-YouboraSample-Swift.release.xcconfig */,
+				C6BD8420228D139DB2C92366 /* Pods-SharedPods-YouboraSample.debug.xcconfig */,
+				1BDC2E0886B5B72DB17A6FCC /* Pods-SharedPods-YouboraSample.release.xcconfig */,
+				E6E0C83C51581CE0DA6EF01F /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */,
+				AB57E45171EBC33FCFE23FAF /* Pods-SharedPods-YouboraSample-Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -263,6 +263,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitYoubora/PlayKitYoubora.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -275,6 +276,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitYoubora.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -297,6 +299,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitYoubora/PlayKitYoubora.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -309,6 +312,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitYoubora.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -521,7 +525,7 @@
 		};
 		2005AEA11E80133900FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C258F0FBE39580931414B191 /* Pods-SharedPods-YouboraSample.debug.xcconfig */;
+			baseConfigurationReference = C6BD8420228D139DB2C92366 /* Pods-SharedPods-YouboraSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -535,7 +539,7 @@
 		};
 		2005AEA21E80133900FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FAD899939968D45A117C436 /* Pods-SharedPods-YouboraSample.release.xcconfig */;
+			baseConfigurationReference = 1BDC2E0886B5B72DB17A6FCC /* Pods-SharedPods-YouboraSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -549,7 +553,7 @@
 		};
 		BFD20A561EA7A88E0018FD8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E6BEB0A3D10FA68870BB70D /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */;
+			baseConfigurationReference = E6E0C83C51581CE0DA6EF01F /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -568,7 +572,7 @@
 		};
 		BFD20A571EA7A88E0018FD8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 323E737D91D40F2CC9F6D5FE /* Pods-SharedPods-YouboraSample-Swift.release.xcconfig */;
+			baseConfigurationReference = AB57E45171EBC33FCFE23FAF /* Pods-SharedPods-YouboraSample-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

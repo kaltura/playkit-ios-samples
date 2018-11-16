@@ -16,11 +16,11 @@ PODS:
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
-  - PlayKit/YouboraPlugin (3.6.x-dev):
+  - PlayKitUtils (0.1.6)
+  - PlayKitYoubora (1.0.0):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
     - Youbora-AVPlayer/dynamic (= 5.4.18)
-  - PlayKitUtils (0.1.6)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
   - XCGLogger (6.1.0):
@@ -33,7 +33,7 @@ PODS:
 
 DEPENDENCIES:
   - PlayKit (from `../../playkit-ios`)
-  - PlayKit/YouboraPlugin (from `../../playkit-ios`)
+  - PlayKitYoubora (from `../../playkit-ios-youbora`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -49,18 +49,21 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   PlayKit:
     :path: "../../playkit-ios"
+  PlayKitYoubora:
+    :path: "../../playkit-ios-youbora"
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: cf7a6e6d3a64d495062930b12ff63bce4a01ba3a
+  PlayKit: 3625c26916499e9d223ced1bd98dc939a3025914
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
+  PlayKitYoubora: 3a14239944e02f3990f9f79b36acdc76bed5ed7a
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 9d1fc3bd5ce730df02fcd57f1081edb0d80fccd5
+PODFILE CHECKSUM: aca637de9416b22a28675dc8e32dc4d6ddaf57c5
 
 COCOAPODS: 1.6.0.beta.2
