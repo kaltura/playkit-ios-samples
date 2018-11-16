@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
+#import "PlayKitProviders-Swift.h"
 
 @interface ViewController ()
 
@@ -80,9 +81,9 @@
     self.player.view = self.playerContainer;
     
     // Create a session provider
-    SimpleOVPSessionProvider *sessionProvider = [[SimpleOVPSessionProvider alloc] initWithServerURL:@"http://api-preprod.ott.kaltura.com/v4_5/api_v3/"
-                                                                                          partnerId:198
-                                                                                                 ks:nil];
+    SimpleSessionProvider *sessionProvider = [[SimpleSessionProvider alloc] initWithServerURL:@"http://api-preprod.ott.kaltura.com/v4_5/api_v3/"
+                                                                                    partnerId:198
+                                                                                           ks:nil];
     
     // Create the media provider
     PhoenixMediaProvider *phoenixMediaProvider = [[PhoenixMediaProvider alloc] init];
@@ -126,7 +127,7 @@
 }
 
 - (PhoenixAnalyticsPluginConfig *)createPhoenixPluginConfig {
-    return [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:@""
+    return [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:@"https://rest-eus1.ott.kaltura.com/restful_v4_8/api_v3/"
                                                    timerInterval:30.0f
                                                               ks:@""
                                                        partnerId:0];
