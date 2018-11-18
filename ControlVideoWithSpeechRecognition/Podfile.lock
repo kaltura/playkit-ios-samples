@@ -6,9 +6,9 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.6.x-dev):
-    - PlayKit/Core (= 3.6.x-dev)
-  - PlayKit/Core (3.6.x-dev):
+  - PlayKit (3.7.x-dev):
+    - PlayKit/Core (= 3.7.x-dev)
+  - PlayKit/Core (3.7.x-dev):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
@@ -41,7 +41,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: cf7a6e6d3a64d495062930b12ff63bce4a01ba3a
+  PlayKit: 844b0a4ef6b6929b56c4e645e11a283c658b5ff1
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
