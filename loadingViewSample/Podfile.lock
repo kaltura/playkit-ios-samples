@@ -7,15 +7,15 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.6.x-dev):
-    - PlayKit/Core (= 3.6.x-dev)
-  - PlayKit/Core (3.6.x-dev):
+  - PlayKit (3.7.x-dev):
+    - PlayKit/Core (= 3.7.x-dev)
+  - PlayKit/Core (3.7.x-dev):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
-  - PlayKit_IMA (1.1.0):
+  - PlayKit_IMA (1.2.x-dev):
     - GoogleAds-IMA-iOS-SDK (= 3.7.3)
     - PlayKit/Core
   - PlayKitUtils (0.1.6)
@@ -28,7 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - PlayKit (from `../../playkit-ios`)
-  - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `develop`)
+  - PlayKit_IMA (from `../../playkit-ios-ima`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -44,25 +44,19 @@ EXTERNAL SOURCES:
   PlayKit:
     :path: "../../playkit-ios"
   PlayKit_IMA:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios-ima.git
-
-CHECKOUT OPTIONS:
-  PlayKit_IMA:
-    :commit: 7c4ea4327be4f3308e6ae2d521dc87e0a004bc66
-    :git: https://github.com/kaltura/playkit-ios-ima.git
+    :path: "../../playkit-ios-ima"
 
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 6dc764910309dcc982d6eb8b7de19d3cf94a6857
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: cf7a6e6d3a64d495062930b12ff63bce4a01ba3a
-  PlayKit_IMA: 1ab5740ec8bcc385ef8c98cbb9a4f7f9cd987abb
+  PlayKit: 844b0a4ef6b6929b56c4e645e11a283c658b5ff1
+  PlayKit_IMA: 21c268518806b3ea396c115de9ffdaeca02dc429
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: da15d858c3773b2c834ac6b4625ff62bde24c0d1
+PODFILE CHECKSUM: b47c23ff12bb3200cb8cf01880d6f881e198bd33
 
 COCOAPODS: 1.6.0.beta.2
