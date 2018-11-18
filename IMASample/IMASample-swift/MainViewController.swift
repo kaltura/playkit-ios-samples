@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import PlayKit
 import PlayKit_IMA
+import PlayKitYoubora
 
 class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate, UITableViewDataSource {
 
