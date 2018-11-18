@@ -6,15 +6,25 @@ platform :ios, '9.0'
 
 # Uncomment to use a local copy of PlayKit
 PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
+
+PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
+PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
 
 abstract_target 'SharedPods' do
     if defined? PLAYKIT_LOCAL
         pod 'PlayKit', :path => PLAYKIT_LOCAL
         else
         pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    end
+    
+    if defined? PLAYKIT_PROVIDERS_LOCAL
+      pod 'PlayKitProviders', :path => PLAYKIT_PROVIDERS_LOCAL
+      else
+      pod 'PlayKitProviders', :git => PLAYKIT_PROVIDERS_GIT, :branch => PLAYKIT_PROVIDERS_BRANCH
     end
     
     pod 'Toast', '~> 4.0.0'
