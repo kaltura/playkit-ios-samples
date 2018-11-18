@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitProviders
 
 /*********************************/
 // Plugin registration should be done in App Delegate!!!
