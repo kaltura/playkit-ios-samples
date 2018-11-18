@@ -116,7 +116,7 @@ class ViewController: UIViewController {
         }
         
         player.addObserver(self, events: [OttEvent.report]) { event in
-            print("received stats event(buffer time): \(String(describing: event.ottEventMessage))")
+            print("received stats event (buffer time): \(String(describing: event.ottEventMessage))")
         }
     }
     
@@ -180,6 +180,8 @@ class ViewController: UIViewController {
             print("player is not set")
             return
         }
+        
+        playheadSlider.value = 0
         
         // Resets The Player And Prepares for Change Media
         player.stop() // 1. Stop Player
