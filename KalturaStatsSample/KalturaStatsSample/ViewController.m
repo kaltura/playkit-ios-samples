@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PlayKit-Swift.h"
+@import PlayKit;
+@import PlayKitProviders;
 
 @interface ViewController ()
 

@@ -61,7 +61,7 @@ class MediaTableViewCell: UITableViewCell, PlayerDelegate {
             }
             self.player?.delegate = self
             
-            self.player?.addObserver(self, events: [PlayerEvent.error, PlayerEvent.pluginError, PlayerEvent.errorLog], block: { (event) in
+            self.player?.addObserver(self, events: [PlayerEvent.error, PluginEvent.error, PlayerEvent.errorLog], block: { (event) in
                 print("error: " + (event.error?.localizedDescription ?? ""))
             })
             

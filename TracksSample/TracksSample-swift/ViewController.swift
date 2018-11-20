@@ -49,7 +49,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func preparePlayer() {
         // setup the player's view
         self.player?.view = self.playerContainer
-        self.playerContainer.sendSubview(toBack: self.player!.view!)
+        self.playerContainer.sendSubviewToBack(self.player!.view!)
         
         let contentURL = "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
         

@@ -16,7 +16,7 @@
 
 import UIKit
 import GoogleCast
-import PlayKit
+import PlayKitGoogleCast
 
 protocol GoogleCastManagerDelegate {
     func castManagerDidStartSession(sender:GoogleCastManager)
@@ -124,12 +124,12 @@ class GoogleCastManager: NSObject,
 //            .set(contentId: "0_nwkp7jtx")
 //            .build()
         
-//        // VOD
-//        let media = try CAFCastBuilder()
-//            .set(contentId: "0_ttfy4uu0")
-//            .set(audioLanguage: "en")
-//            .set(textLanguage: "en")
-//            .build()
+        // VOD
+        let media = try CAFCastBuilder()
+            .set(contentId: "0_ttfy4uu0")
+            .set(audioLanguage: "en")
+            .set(textLanguage: "en")
+            .build()
         
 //        // VMAP Ad
 //        let media = try CAFCastBuilder()
@@ -150,14 +150,14 @@ class GoogleCastManager: NSObject,
 //            .build()
         
         
-        // VAST Ad with Skip
-        let media = try CAFCastBuilder()
-            .set(contentId: "0_ttfy4uu0")
-            .set(audioLanguage: "en")
-            .set(textLanguage: "en")
-            .set(adTagType: .vast)
-            .set(adTagURL: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=5877787")
-            .build()
+//        // VAST Ad with Skip
+//        let media = try CAFCastBuilder()
+//            .set(contentId: "0_ttfy4uu0")
+//            .set(audioLanguage: "en")
+//            .set(textLanguage: "en")
+//            .set(adTagType: .vast)
+//            .set(adTagURL: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=5877787")
+//            .build()
         
         
         return media

@@ -6,6 +6,7 @@
 #import "VideoTableViewCell.h"
 @import PlayKit;
 @import PlayKit_IMA;
+@import PlayKitYoubora;
 
 
 /*

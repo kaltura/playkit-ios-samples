@@ -118,7 +118,7 @@ class ViewController: UIViewController, PlayerDelegate {
         
         // setup the player's view
         self.player?.view = self.playerContainer
-        self.playerContainer.bringSubview(toFront: self.activityIndicator)
+        self.playerContainer.bringSubviewToFront(self.activityIndicator)
     }
     
 /************************/

@@ -9,6 +9,7 @@
 import UIKit
 import PlayKit
 import PlayKitKava
+import PlayKitProviders
 
 /*
  This sample will show you how to create a player with basic functionality.
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
         let serverURL = "https://cdnapisec.kaltura.com"
         let partnerId: Int64 = 1424501 // put your partner id here
         // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
-        let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:nil )
+        let sessionProvider = SimpleSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:nil )
         let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
         mediaProvider.entryId = "1_djnefl4e"
         mediaProvider.loadMedia { (mediaEntry, error) in
@@ -119,5 +120,16 @@ class ViewController: UIViewController {
         
         print("playhead value:", slider.value)
         player.currentTime = player.duration * Double(slider.value)
+    }
+    
+    @IBAction func replayTouched(_ sender: Any) {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        playheadSlider.value = 0
+        
+        player.replay()
     }
 }

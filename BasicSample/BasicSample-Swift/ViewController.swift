@@ -114,4 +114,13 @@ class ViewController: UIViewController {
         print("playhead value:", slider.value)
         player.currentTime = player.duration * Double(slider.value)
     }
+    
+    @IBAction func replayTouched(_ sender: Any) {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        player.replay()
+    }
 }

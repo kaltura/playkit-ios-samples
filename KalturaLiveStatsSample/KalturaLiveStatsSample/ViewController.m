@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PlayKit-Swift.h"
+@import PlayKit;
+@import PlayKitProviders;
 
 @interface ViewController ()
 
@@ -109,7 +110,7 @@
 
 - (void)addKalturaLiveStatsObservations {
     [self.player addObserver:self events:@[KalturaLiveStatsEvent.report] block:^(PKEvent * _Nonnull event) {
-        NSLog(@"received kaltura live stats event(buffer time): %@", event.kalturaLiveStatsBufferTime);
+        NSLog(@"received kaltura live stats event (buffer time): %@", event.kalturaLiveStatsBufferTime);
     }];
 }
 

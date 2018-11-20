@@ -8,6 +8,7 @@
 
 import Foundation
 import PlayKit
+import PlayKitProviders
 
 class Item {
     let id: String
@@ -35,7 +36,7 @@ class Item {
         
         self.url = nil
         
-        OVPMediaProvider(SimpleOVPSessionProvider(serverURL: env, partnerId: Int64(partnerId), ks: nil))
+        OVPMediaProvider(SimpleSessionProvider(serverURL: env, partnerId: Int64(partnerId), ks: nil))
             .set(entryId: id)
             .loadMedia { (entry, error) in
                 self.entry = entry
