@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0159F60812115E506237DE27 /* Pods_SharedPods_TVPAPIAnalyticsSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF0C11833F83819EB804642F /* Pods_SharedPods_TVPAPIAnalyticsSample_Swift.framework */; };
 		2005AED41E81608B00FB01B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2005AED31E81608B00FB01B0 /* main.m */; };
 		2005AED71E81608B00FB01B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2005AED61E81608B00FB01B0 /* AppDelegate.m */; };
 		2005AEDA1E81608B00FB01B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2005AED91E81608B00FB01B0 /* ViewController.m */; };
 		2005AEDD1E81608B00FB01B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEDB1E81608B00FB01B0 /* Main.storyboard */; };
 		2005AEDF1E81608B00FB01B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEDE1E81608B00FB01B0 /* Assets.xcassets */; };
 		2005AEE21E81608B00FB01B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2005AEE01E81608B00FB01B0 /* LaunchScreen.storyboard */; };
-		6AFFAE28797AAB5A050AAD34 /* Pods_TVPAPIAnalyticsSample_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E416069944FC3E274A0AA62B /* Pods_TVPAPIAnalyticsSample_Swift.framework */; };
+		5190748FCA0557E78D063C50 /* Pods_SharedPods_TVPAPIAnalyticsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC57B3271DB5BFF9C5275388 /* Pods_SharedPods_TVPAPIAnalyticsSample.framework */; };
 		BFD20A341EA7A1960018FD8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A331EA7A1960018FD8A /* AppDelegate.swift */; };
 		BFD20A361EA7A1960018FD8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD20A351EA7A1960018FD8A /* ViewController.swift */; };
 		BFD20A391EA7A1960018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A371EA7A1960018FD8A /* Main.storyboard */; };
 		BFD20A3B1EA7A1960018FD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A3A1EA7A1960018FD8A /* Assets.xcassets */; };
 		BFD20A3E1EA7A1960018FD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A3C1EA7A1960018FD8A /* LaunchScreen.storyboard */; };
-		C42BD3DC90A13650FEB427FF /* Pods_TVPAPIAnalyticsSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8023C8F16C1501D4C77377A /* Pods_TVPAPIAnalyticsSample.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +34,8 @@
 		2005AEE11E81608B00FB01B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2005AEE31E81608B00FB01B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47033829FE31E2AD56555A38 /* Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		7B267EE20BB7C871B5D8FC00 /* Pods-SharedPods-TVPAPIAnalyticsSample-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TVPAPIAnalyticsSample-Swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample-Swift/Pods-SharedPods-TVPAPIAnalyticsSample-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		88C25DBCC3064B50B543FB3E /* Pods-SharedPods-TVPAPIAnalyticsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TVPAPIAnalyticsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample/Pods-SharedPods-TVPAPIAnalyticsSample.debug.xcconfig"; sourceTree = "<group>"; };
 		AE1D1C681DB891FB6FAA6D18 /* Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		BD43680CF4EDD628E2B42CF5 /* Pods-TVPAPIAnalyticsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample.debug.xcconfig"; sourceTree = "<group>"; };
 		BFD20A311EA7A1960018FD8A /* TVPAPIAnalyticsSample-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TVPAPIAnalyticsSample-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,8 +46,10 @@
 		BFD20A3D1EA7A1960018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A3F1EA7A1960018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA0473B2974EBB5C86619246 /* Pods-TVPAPIAnalyticsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TVPAPIAnalyticsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample.release.xcconfig"; sourceTree = "<group>"; };
-		D8023C8F16C1501D4C77377A /* Pods_TVPAPIAnalyticsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVPAPIAnalyticsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E416069944FC3E274A0AA62B /* Pods_TVPAPIAnalyticsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TVPAPIAnalyticsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D129B80D7AA770EF4C541F21 /* Pods-SharedPods-TVPAPIAnalyticsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TVPAPIAnalyticsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample/Pods-SharedPods-TVPAPIAnalyticsSample.release.xcconfig"; sourceTree = "<group>"; };
+		D4071DA37F4E171CAB403552 /* Pods-SharedPods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TVPAPIAnalyticsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample-Swift/Pods-SharedPods-TVPAPIAnalyticsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		DC57B3271DB5BFF9C5275388 /* Pods_SharedPods_TVPAPIAnalyticsSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_TVPAPIAnalyticsSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0C11833F83819EB804642F /* Pods_SharedPods_TVPAPIAnalyticsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_TVPAPIAnalyticsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C42BD3DC90A13650FEB427FF /* Pods_TVPAPIAnalyticsSample.framework in Frameworks */,
+				5190748FCA0557E78D063C50 /* Pods_SharedPods_TVPAPIAnalyticsSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AFFAE28797AAB5A050AAD34 /* Pods_TVPAPIAnalyticsSample_Swift.framework in Frameworks */,
+				0159F60812115E506237DE27 /* Pods_SharedPods_TVPAPIAnalyticsSample_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,8 +75,8 @@
 		080A1B036D7ABAE0854ACE2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D8023C8F16C1501D4C77377A /* Pods_TVPAPIAnalyticsSample.framework */,
-				E416069944FC3E274A0AA62B /* Pods_TVPAPIAnalyticsSample_Swift.framework */,
+				DC57B3271DB5BFF9C5275388 /* Pods_SharedPods_TVPAPIAnalyticsSample.framework */,
+				EF0C11833F83819EB804642F /* Pods_SharedPods_TVPAPIAnalyticsSample_Swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -128,6 +132,10 @@
 				CA0473B2974EBB5C86619246 /* Pods-TVPAPIAnalyticsSample.release.xcconfig */,
 				AE1D1C681DB891FB6FAA6D18 /* Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */,
 				47033829FE31E2AD56555A38 /* Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig */,
+				88C25DBCC3064B50B543FB3E /* Pods-SharedPods-TVPAPIAnalyticsSample.debug.xcconfig */,
+				D129B80D7AA770EF4C541F21 /* Pods-SharedPods-TVPAPIAnalyticsSample.release.xcconfig */,
+				D4071DA37F4E171CAB403552 /* Pods-SharedPods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */,
+				7B267EE20BB7C871B5D8FC00 /* Pods-SharedPods-TVPAPIAnalyticsSample-Swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -257,10 +265,11 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample-Swift/Pods-SharedPods-TVPAPIAnalyticsSample-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitProviders/PlayKitProviders.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
@@ -271,6 +280,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitProviders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
@@ -278,7 +288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TVPAPIAnalyticsSample-Swift/Pods-TVPAPIAnalyticsSample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample-Swift/Pods-SharedPods-TVPAPIAnalyticsSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3C102308083C151ACFE47B50 /* [CP] Check Pods Manifest.lock */ = {
@@ -292,7 +302,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TVPAPIAnalyticsSample-Swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-TVPAPIAnalyticsSample-Swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -310,7 +320,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TVPAPIAnalyticsSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-TVPAPIAnalyticsSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -323,10 +333,11 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample/Pods-SharedPods-TVPAPIAnalyticsSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitProviders/PlayKitProviders.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
@@ -337,6 +348,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitProviders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
@@ -344,7 +356,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TVPAPIAnalyticsSample/Pods-TVPAPIAnalyticsSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TVPAPIAnalyticsSample/Pods-SharedPods-TVPAPIAnalyticsSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -512,7 +524,7 @@
 		};
 		2005AEE71E81608B00FB01B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD43680CF4EDD628E2B42CF5 /* Pods-TVPAPIAnalyticsSample.debug.xcconfig */;
+			baseConfigurationReference = 88C25DBCC3064B50B543FB3E /* Pods-SharedPods-TVPAPIAnalyticsSample.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -526,7 +538,7 @@
 		};
 		2005AEE81E81608B00FB01B0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA0473B2974EBB5C86619246 /* Pods-TVPAPIAnalyticsSample.release.xcconfig */;
+			baseConfigurationReference = D129B80D7AA770EF4C541F21 /* Pods-SharedPods-TVPAPIAnalyticsSample.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -540,7 +552,7 @@
 		};
 		BFD20A401EA7A1960018FD8A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE1D1C681DB891FB6FAA6D18 /* Pods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */;
+			baseConfigurationReference = D4071DA37F4E171CAB403552 /* Pods-SharedPods-TVPAPIAnalyticsSample-Swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -558,7 +570,7 @@
 		};
 		BFD20A411EA7A1960018FD8A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47033829FE31E2AD56555A38 /* Pods-TVPAPIAnalyticsSample-Swift.release.xcconfig */;
+			baseConfigurationReference = 7B267EE20BB7C871B5D8FC00 /* Pods-SharedPods-TVPAPIAnalyticsSample-Swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;

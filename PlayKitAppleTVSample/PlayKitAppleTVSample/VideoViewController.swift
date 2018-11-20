@@ -9,6 +9,7 @@
 import UIKit
 import KalturaNetKit
 import PlayKit
+import PlayKitYoubora
 
 class VideoViewController: UIViewController {
 

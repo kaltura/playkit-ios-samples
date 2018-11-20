@@ -3,6 +3,7 @@ import UIKit
 import PlayKit
 import PlayKitUtils
 import PlayKitKava
+import PlayKitProviders
 
 fileprivate let SERVER_BASE_URL = "https://cdnapisec.kaltura.com"
 fileprivate let PARTNER_ID = 1424501

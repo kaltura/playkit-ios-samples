@@ -5,19 +5,25 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_LOCAL='../../playkit-ios'
 
-PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+# Uncomment to use a git copy
+#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 
 abstract_target 'SharedPods' do
-    if defined? PLAYKIT_LOCAL
-        pod 'PlayKit', :path => PLAYKIT_LOCAL
-        else
-        pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
+    else
+    if defined? PLAYKIT_GIT
+      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+      else
+      pod 'PlayKit'
     end
-    
-    target 'BasicSample'
-    target 'BasicSample-Swift'
-    
+  end
+  
+  target 'BasicSample'
+  target 'BasicSample-Swift'
+  
 end

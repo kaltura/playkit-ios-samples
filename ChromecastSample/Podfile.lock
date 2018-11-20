@@ -11,9 +11,9 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.6.x-dev):
-    - PlayKit/Core (= 3.6.x-dev)
-  - PlayKit/Core (3.6.x-dev):
+  - PlayKit (3.7.0):
+    - PlayKit/Core (= 3.7.0)
+  - PlayKit/Core (3.7.0):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
@@ -32,31 +32,27 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKitGoogleCast (from `../../playkit-ios-googlecast`)
+  - PlayKit
+  - PlayKitGoogleCast
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - google-cast-sdk
     - KalturaNetKit
     - ObjcExceptionBridging
+    - PlayKit
+    - PlayKitGoogleCast
     - PlayKitUtils
     - Protobuf
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
 
-EXTERNAL SOURCES:
-  PlayKit:
-    :path: "../../playkit-ios"
-  PlayKitGoogleCast:
-    :path: "../../playkit-ios-googlecast"
-
 SPEC CHECKSUMS:
   google-cast-sdk: 792980f4fa5afd4f9b91f41d582cc75251648f3a
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: cf7a6e6d3a64d495062930b12ff63bce4a01ba3a
+  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
   PlayKitGoogleCast: 7a4cca755a943c1cc0196457d6eac94264d5ce37
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
@@ -64,6 +60,6 @@ SPEC CHECKSUMS:
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: b7276913b95263fc644839526b5ab8b5729b2fe2
+PODFILE CHECKSUM: af61dd44cdeae7445096b769923e26bf8142fd98
 
 COCOAPODS: 1.6.0.beta.2

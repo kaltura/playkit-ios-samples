@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitProviders
 
 class ViewController: UIViewController {
     
@@ -122,7 +123,7 @@ class ViewController: UIViewController {
         ]
         
         for item in params {
-            let session = SimpleOVPSessionProvider(serverURL: serverURL, partnerId: Int64(item.partnerId), ks: nil)
+            let session = SimpleSessionProvider(serverURL: serverURL, partnerId: Int64(item.partnerId), ks: nil)
             OVPMediaProvider()
                 .set(sessionProvider: session)
                 .set(entryId: item.entryId)

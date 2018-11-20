@@ -6,20 +6,19 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.6.x-dev):
-    - PlayKit/Core (= 3.6.x-dev)
-  - PlayKit/AnalyticsCommon (3.6.x-dev):
+  - PlayKit (3.7.0):
+    - PlayKit/Core (= 3.7.0)
+  - PlayKit/AnalyticsCommon (3.7.0):
     - PlayKit/Core
-  - PlayKit/Core (3.6.x-dev):
+  - PlayKit/Core (3.7.0):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
   - PlayKitUtils (0.1.6)
-  - PlayKitYoubora (1.0.0):
-    - PlayKit/AnalyticsCommon
-    - PlayKit/Core
+  - PlayKitYoubora (1.0.1):
+    - PlayKit/AnalyticsCommon (~> 3.7.0)
     - Youbora-AVPlayer/dynamic (= 5.4.18)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
@@ -32,38 +31,34 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKitYoubora (from `../../playkit-ios-youbora`)
+  - PlayKit
+  - PlayKitYoubora
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
     - ObjcExceptionBridging
+    - PlayKit
     - PlayKitUtils
+    - PlayKitYoubora
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
     - Youbora-AVPlayer
     - Youbora-YouboraLib
 
-EXTERNAL SOURCES:
-  PlayKit:
-    :path: "../../playkit-ios"
-  PlayKitYoubora:
-    :path: "../../playkit-ios-youbora"
-
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 3625c26916499e9d223ced1bd98dc939a3025914
+  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
-  PlayKitYoubora: 3a14239944e02f3990f9f79b36acdc76bed5ed7a
+  PlayKitYoubora: 67e80416c20271ab9eb73ef147efb29d9ebc3ac6
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: aca637de9416b22a28675dc8e32dc4d6ddaf57c5
+PODFILE CHECKSUM: 86c26cfd9c7a0531ef8a44a6ec0b0a1f682f99de
 
 COCOAPODS: 1.6.0.beta.2

@@ -6,23 +6,22 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.7.x-dev):
-    - PlayKit/Core (= 3.7.x-dev)
-  - PlayKit/AnalyticsCommon (3.7.x-dev):
+  - PlayKit (3.7.0):
+    - PlayKit/Core (= 3.7.0)
+  - PlayKit/AnalyticsCommon (3.7.0):
     - PlayKit/Core
-  - PlayKit/Core (3.7.x-dev):
+  - PlayKit/Core (3.7.0):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
-  - PlayKitKava (1.0.4):
+  - PlayKitKava (1.0.5):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
   - PlayKitProviders (1.0.0):
     - KalturaNetKit
-    - PlayKit/AnalyticsCommon
-    - PlayKit/Core
+    - PlayKit/AnalyticsCommon (~> 3.7.0)
     - PlayKitUtils
   - PlayKitUtils (0.1.6)
   - SwiftyJSON (3.1.4)
@@ -33,38 +32,33 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKitKava (from `../../playkit-ios-kava`)
-  - PlayKitProviders (from `../../playkit-ios-providers`)
+  - PlayKit
+  - PlayKitKava
+  - PlayKitProviders
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
     - ObjcExceptionBridging
+    - PlayKit
+    - PlayKitKava
+    - PlayKitProviders
     - PlayKitUtils
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
 
-EXTERNAL SOURCES:
-  PlayKit:
-    :path: "../../playkit-ios"
-  PlayKitKava:
-    :path: "../../playkit-ios-kava"
-  PlayKitProviders:
-    :path: "../../playkit-ios-providers"
-
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 844b0a4ef6b6929b56c4e645e11a283c658b5ff1
-  PlayKitKava: 7c2ff28bc8e0bedabab38ca409d57868f0541c68
-  PlayKitProviders: b9cb7452988528cd6c81833ef448d57b54ffb832
+  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
+  PlayKitKava: 897ec5364c9662199a23825c20499d3fcd6bafbd
+  PlayKitProviders: 775a857a182d43db9e843c564bf40e130ee78c95
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: a1fc63a97e40b79f9c9eb2ed3826c2d7fde38262
+PODFILE CHECKSUM: d1696fe7f46e820fb42b10bfc8f0544841856deb
 
 COCOAPODS: 1.6.0.beta.2

@@ -5,28 +5,37 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
-PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 
-PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+# Uncomment to use a git copy
+#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+#PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
-
-PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
 PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'develop'
 
 abstract_target 'SharedPods' do
-    if defined? PLAYKIT_LOCAL
-        pod 'PlayKit', :path => PLAYKIT_LOCAL
-        else
-        pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
+    else
+    if defined? PLAYKIT_GIT
+      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+      else
+      pod 'PlayKit'
     end
-
-if defined? PLAYKIT_IMA_LOCAL
-        pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
-        else
-        pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
+  end
+  
+  if defined? PLAYKIT_IMA_LOCAL
+    pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
+    else
+    if defined? PLAYKIT_IMA_GIT
+      pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
+      else
+      pod 'PlayKit_IMA'
     end
-    
-    target 'loadingViewSample'
-    
+  end
+  
+  target 'loadingViewSample'
+  
 end

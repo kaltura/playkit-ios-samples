@@ -128,6 +128,8 @@ class ViewController: UIViewController {
             return
         }
         
+        playheadSlider.value = 0
+        
         player.replay()
     }
 }

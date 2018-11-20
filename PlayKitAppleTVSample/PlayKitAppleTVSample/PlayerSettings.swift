@@ -8,6 +8,7 @@
 
 import Foundation
 import PlayKit
+import PlayKitProviders
 
 class PlayerSettings {
     

@@ -2,40 +2,53 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-# Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
-PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
-PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
-
 platform :ios, '9.0' # (define required version)
 
-PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
-PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
+# Uncomment to use a local copy of PlayKit
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
+#PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
+
+# Uncomment to use a git copy
+#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+#PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+#PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'develop'
 PLAYKIT_YOUBORA_BRANCH=ENV['PKY_BRANCH'] || 'develop'
 
 abstract_target 'SharedPods' do
-    if defined? PLAYKIT_LOCAL
-        pod 'PlayKit', :path => PLAYKIT_LOCAL
-        else
-        pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    end
-    
-    if defined? PLAYKIT_IMA_LOCAL
-        pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
-        else
-        pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
-    end
-    
-    if defined? PLAYKIT_YOUBORA_LOCAL
-      pod 'PlayKitYoubora', :path => PLAYKIT_YOUBORA_LOCAL
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
+    else
+    if defined? PLAYKIT_GIT
+      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
-      pod 'PlayKitYoubora', :git => PLAYKIT_YOUBORA_GIT, :branch => PLAYKIT_YOUBORA_BRANCH
+      pod 'PlayKit'
     end
-    
-    target 'IMASample'
-    target 'IMASample-swift'
+  end
+  
+  if defined? PLAYKIT_IMA_LOCAL
+    pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
+    else
+    if defined? PLAYKIT_IMA_GIT
+      pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
+      else
+      pod 'PlayKit_IMA'
+    end
+  end
+  
+  if defined? PLAYKIT_YOUBORA_LOCAL
+    pod 'PlayKitYoubora', :path => PLAYKIT_YOUBORA_LOCAL
+    else
+    if defined? PLAYKIT_YOUBORA_GIT
+      pod 'PlayKitYoubora', :git => PLAYKIT_YOUBORA_GIT, :branch => PLAYKIT_YOUBORA_BRANCH
+      else
+      pod 'PlayKitYoubora'
+    end
+  end
+  
+  target 'IMASample'
+  target 'IMASample-swift'
 end
