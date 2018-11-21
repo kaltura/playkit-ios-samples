@@ -119,11 +119,15 @@
     [self.player addObserver:self events:@[OttEvent.report] block:^(PKEvent * _Nonnull event) {
         NSLog(@"received ott event: %@", event.ottEventMessage);
     }];
+    
+    [self.player addObserver:self events:@[OttEvent.bookmarkError] block:^(PKEvent * _Nonnull event) {
+        NSLog(@"Received bookmark error: %@", event.ottEventMessage);
+    }];
 }
 
 // remove observers
 - (void)removeAnalyticsObservations {
-    [self.player removeObserver:self events:@[OttEvent.report]];
+    [self.player removeObserver:self events:@[OttEvent.report, OttEvent.bookmarkError]];
 }
 
 - (PhoenixAnalyticsPluginConfig *)createPhoenixPluginConfig {
