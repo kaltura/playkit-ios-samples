@@ -118,6 +118,10 @@ class ViewController: UIViewController {
         player.addObserver(self, events: [OttEvent.report]) { event in
             print("received stats event (buffer time): \(String(describing: event.ottEventMessage))")
         }
+        
+        player.addObserver(self, events: [OttEvent.bookmarkError]) { event in
+            print("Received bookmark error: \(String(describing: event.ottEventMessage))")
+        }
     }
     
     func removeAnalyticsObservations() {
@@ -126,7 +130,7 @@ class ViewController: UIViewController {
             return
         }
         
-        player.removeObserver(self, events: [OttEvent.report])
+        player.removeObserver(self, events: [OttEvent.report, OttEvent.bookmarkError])
     }
     
     func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
