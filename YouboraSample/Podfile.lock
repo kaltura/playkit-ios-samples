@@ -6,59 +6,69 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.7.0):
-    - PlayKit/Core (= 3.7.0)
-  - PlayKit/AnalyticsCommon (3.7.0):
+  - PlayKit (3.7.0-dev):
+    - PlayKit/Core (= 3.7.0-dev)
+  - PlayKit/AnalyticsCommon (3.7.0-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.7.0):
+  - PlayKit/Core (3.7.0-dev):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
   - PlayKitUtils (0.1.6)
-  - PlayKitYoubora (1.0.1):
-    - PlayKit/AnalyticsCommon (~> 3.7.0)
-    - Youbora-AVPlayer/dynamic (= 5.4.18)
+  - PlayKitYoubora (1.0.1-dev):
+    - PlayKit/AnalyticsCommon (~> 3.7.0-dev)
+    - YouboraLib (= 6.1.7)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
   - XCGLogger (6.1.0):
     - XCGLogger/Core (= 6.1.0)
   - XCGLogger/Core (6.1.0):
     - ObjcExceptionBridging
-  - Youbora-AVPlayer/dynamic (5.4.18):
-    - Youbora-YouboraLib/dynamic (= 5.4.4)
-  - Youbora-YouboraLib/dynamic (5.4.4)
+  - YouboraLib (6.1.7)
 
 DEPENDENCIES:
-  - PlayKit
-  - PlayKitYoubora
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKitYoubora (from `https://github.com/kaltura/playkit-ios-youbora.git`, branch `V6`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
     - ObjcExceptionBridging
-    - PlayKit
     - PlayKitUtils
-    - PlayKitYoubora
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
-    - Youbora-AVPlayer
-    - Youbora-YouboraLib
+    - YouboraLib
+
+EXTERNAL SOURCES:
+  PlayKit:
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios.git
+  PlayKitYoubora:
+    :branch: V6
+    :git: https://github.com/kaltura/playkit-ios-youbora.git
+
+CHECKOUT OPTIONS:
+  PlayKit:
+    :commit: 8433669c51bea3d5063126cdc562c0913e0ebbd1
+    :git: https://github.com/kaltura/playkit-ios.git
+  PlayKitYoubora:
+    :commit: f6f8284df11bfdde7fb180505bb2beab33996bb3
+    :git: https://github.com/kaltura/playkit-ios-youbora.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
+  PlayKit: 638ea66fa7b026fcace6c12219bdf116c746d36c
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
-  PlayKitYoubora: 67e80416c20271ab9eb73ef147efb29d9ebc3ac6
+  PlayKitYoubora: aae9983e1c6147203b063c1000f767999e700537
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
-  Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
-  Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
+  YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: 86c26cfd9c7a0531ef8a44a6ec0b0a1f682f99de
+PODFILE CHECKSUM: df11de82e317f1808c7c4838b592e1290521776a
 
 COCOAPODS: 1.5.3
