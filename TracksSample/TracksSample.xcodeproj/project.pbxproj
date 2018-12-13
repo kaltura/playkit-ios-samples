@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87AD8E0B193F948CC111A749 /* Pods_TracksSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 529E2C3C701E66122C12F26E /* Pods_TracksSample.framework */; };
+		4AAF8AD1486B56B23F9DE17E /* Pods_SharedPods_TracksSample_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0538396B297CDF50314DD9AA /* Pods_SharedPods_TracksSample_swift.framework */; };
+		A737A3875609CB556CBB8CA9 /* Pods_SharedPods_TracksSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAAC9073724B0896A5FBC59F /* Pods_SharedPods_TracksSample.framework */; };
 		BD533FCE1FB1D8A50087C71F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD533FCD1FB1D8A50087C71F /* AppDelegate.m */; };
 		BD533FD11FB1D8A50087C71F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD533FD01FB1D8A50087C71F /* ViewController.m */; };
 		BD533FD61FB1D8A50087C71F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD533FD51FB1D8A50087C71F /* Assets.xcassets */; };
@@ -19,14 +20,13 @@
 		BD533FF31FB1D9360087C71F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD533FF11FB1D9360087C71F /* LaunchScreen.storyboard */; };
 		BD533FFA1FB1DB2F0087C71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD533FF81FB1DB2F0087C71F /* Main.storyboard */; };
 		BD533FFD1FB1DB370087C71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD533FFB1FB1DB370087C71F /* Main.storyboard */; };
-		DEB7D4A576659833A6DEF8A6 /* Pods_TracksSample_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7DFAF3A9BEB7C0D7BC385B1 /* Pods_TracksSample_swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		123B47CF407B8A0D735D36AD /* Pods-TracksSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-TracksSample/Pods-TracksSample.release.xcconfig"; sourceTree = "<group>"; };
-		529E2C3C701E66122C12F26E /* Pods_TracksSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TracksSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9FC758FF6B61BFAA6F2BD35F /* Pods-TracksSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TracksSample/Pods-TracksSample.debug.xcconfig"; sourceTree = "<group>"; };
-		AFA42E4295FCDFFB3A5B967F /* Pods-TracksSample-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksSample-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TracksSample-swift/Pods-TracksSample-swift.debug.xcconfig"; sourceTree = "<group>"; };
+		0538396B297CDF50314DD9AA /* Pods_SharedPods_TracksSample_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_TracksSample_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41B335343E913EF97FE24609 /* Pods-SharedPods-TracksSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TracksSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample.debug.xcconfig"; sourceTree = "<group>"; };
+		6C930E933057F1F2ED67362F /* Pods-SharedPods-TracksSample-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TracksSample-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift.release.xcconfig"; sourceTree = "<group>"; };
+		81320D1390BE89C23791CF09 /* Pods-SharedPods-TracksSample-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TracksSample-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		BD533FC91FB1D8A50087C71F /* TracksSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TracksSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD533FCC1FB1D8A50087C71F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD533FCD1FB1D8A50087C71F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		BD533FF41FB1D9360087C71F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD533FF91FB1DB2F0087C71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD533FFC1FB1DB370087C71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DEF5AA77BF96AFDE2C3DF325 /* Pods-TracksSample-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TracksSample-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-TracksSample-swift/Pods-TracksSample-swift.release.xcconfig"; sourceTree = "<group>"; };
-		F7DFAF3A9BEB7C0D7BC385B1 /* Pods_TracksSample_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TracksSample_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C988125DB1118323BDD4C7EF /* Pods-SharedPods-TracksSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TracksSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample.release.xcconfig"; sourceTree = "<group>"; };
+		EAAC9073724B0896A5FBC59F /* Pods_SharedPods_TracksSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_TracksSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87AD8E0B193F948CC111A749 /* Pods_TracksSample.framework in Frameworks */,
+				A737A3875609CB556CBB8CA9 /* Pods_SharedPods_TracksSample.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEB7D4A576659833A6DEF8A6 /* Pods_TracksSample_swift.framework in Frameworks */,
+				4AAF8AD1486B56B23F9DE17E /* Pods_SharedPods_TracksSample_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +71,10 @@
 		0DE0202C5EB726E50D6DC3C6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9FC758FF6B61BFAA6F2BD35F /* Pods-TracksSample.debug.xcconfig */,
-				123B47CF407B8A0D735D36AD /* Pods-TracksSample.release.xcconfig */,
-				AFA42E4295FCDFFB3A5B967F /* Pods-TracksSample-swift.debug.xcconfig */,
-				DEF5AA77BF96AFDE2C3DF325 /* Pods-TracksSample-swift.release.xcconfig */,
+				41B335343E913EF97FE24609 /* Pods-SharedPods-TracksSample.debug.xcconfig */,
+				C988125DB1118323BDD4C7EF /* Pods-SharedPods-TracksSample.release.xcconfig */,
+				81320D1390BE89C23791CF09 /* Pods-SharedPods-TracksSample-swift.debug.xcconfig */,
+				6C930E933057F1F2ED67362F /* Pods-SharedPods-TracksSample-swift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -82,8 +82,8 @@
 		64AB9CA846B4BCB8BB1E5C82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				529E2C3C701E66122C12F26E /* Pods_TracksSample.framework */,
-				F7DFAF3A9BEB7C0D7BC385B1 /* Pods_TracksSample_swift.framework */,
+				EAAC9073724B0896A5FBC59F /* Pods_SharedPods_TracksSample.framework */,
+				0538396B297CDF50314DD9AA /* Pods_SharedPods_TracksSample_swift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,7 +149,6 @@
 				BD533FC61FB1D8A50087C71F /* Frameworks */,
 				BD533FC71FB1D8A50087C71F /* Resources */,
 				5AE261B3362323E3CC44E870 /* [CP] Embed Pods Frameworks */,
-				9BC21B6B35B3299EC2026BF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,7 +168,6 @@
 				BD533FE31FB1D9360087C71F /* Frameworks */,
 				BD533FE41FB1D9360087C71F /* Resources */,
 				92C8D439ADEA36DF872967D7 /* [CP] Embed Pods Frameworks */,
-				AB1FA93BC6FD4D2514443CA9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,7 +252,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TracksSample-swift-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-TracksSample-swift-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -272,7 +270,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TracksSample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-TracksSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -285,26 +283,28 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TracksSample/Pods-TracksSample-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TracksSample/Pods-TracksSample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92C8D439ADEA36DF872967D7 /* [CP] Embed Pods Frameworks */ = {
@@ -313,56 +313,28 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-TracksSample-swift/Pods-TracksSample-swift-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TracksSample-swift/Pods-TracksSample-swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9BC21B6B35B3299EC2026BF5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TracksSample/Pods-TracksSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AB1FA93BC6FD4D2514443CA9 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TracksSample-swift/Pods-TracksSample-swift-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -531,14 +503,14 @@
 		};
 		BD533FE01FB1D8A50087C71F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FC758FF6B61BFAA6F2BD35F /* Pods-TracksSample.debug.xcconfig */;
+			baseConfigurationReference = 41B335343E913EF97FE24609 /* Pods-SharedPods-TracksSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = TracksSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kaltura.TracksSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.TracksSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,14 +518,14 @@
 		};
 		BD533FE11FB1D8A50087C71F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 123B47CF407B8A0D735D36AD /* Pods-TracksSample.release.xcconfig */;
+			baseConfigurationReference = C988125DB1118323BDD4C7EF /* Pods-SharedPods-TracksSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = TracksSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = kaltura.TracksSample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.TracksSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -561,35 +533,35 @@
 		};
 		BD533FF51FB1D9360087C71F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFA42E4295FCDFFB3A5B967F /* Pods-TracksSample-swift.debug.xcconfig */;
+			baseConfigurationReference = 81320D1390BE89C23791CF09 /* Pods-SharedPods-TracksSample-swift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "TracksSample-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kaltura.TracksSample-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.TracksSample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BD533FF61FB1D9360087C71F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DEF5AA77BF96AFDE2C3DF325 /* Pods-TracksSample-swift.release.xcconfig */;
+			baseConfigurationReference = 6C930E933057F1F2ED67362F /* Pods-SharedPods-TracksSample-swift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BT5J4WV2RB;
+				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = "TracksSample-swift/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "kaltura.TracksSample-swift";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kaltura.TracksSample-swift";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

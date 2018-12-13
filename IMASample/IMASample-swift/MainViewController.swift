@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 import PlayKit
 import PlayKit_IMA
+import PlayKitYoubora
 
 class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate, UITableViewDataSource {
 
@@ -28,7 +29,7 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
         
         do {
             try AVAudioSession.sharedInstance().setActive(true)
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: AVAudioSession.CategoryOptions.mixWithOthers)
         } catch {
             
         }
@@ -72,6 +73,7 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
                     videoVC.video = video
                     
                     adsConfig.adTagUrl = video.tag
+                    adsConfig.playerVersion = PlayKitManager.versionString
                     
                     var url: URL?
                     if let player = player {
@@ -101,40 +103,11 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
                     videoVC.player = player
                     videoVC.mediaConfig = mediaConfig
                 }
-               tableView.deselectRow(at: indexPath, animated: false)
             }
         }
     }
     
-//    func createYouboraPluginConfig() -> AnalyticsConfig {
-//        // account code is mandatory, make sure to put the correct one.
-//        let youboraPluginParams: [String: Any] = ["accountCode": "kalturatest",
-//                                                  "httpSecure": true,
-//                                                  "houseHoldId": "aaa",
-//                                                  "media": [
-//                                                    "isLive": false,
-//                                                    "duration": 800
-//            ],
-//                                                  "properties": [
-//                                                    "year": "2001",
-//                                                    "genre": "Fantasy",
-//                                                    "price": "free"
-//            ],
-//                                                  "network": [
-//                                                    "ip": "1.2.3.4"
-//            ],
-//                                                  "ads": [
-//                                                    "adsExpected": true,
-//                                                    "campaign": "Ad campaign name"
-//            ],
-//                                                  "extraParams": [
-//                                                    "param1": "Extra param 1 value",
-//                                                    "param2": "Extra param 2 value"
-//            ]
-//        ]
-//
-//        return AnalyticsConfig(params: youboraPluginParams)
-//    }
+    // MARK: - UITableViewDataSource
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -149,6 +122,14 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
         cell.populate(with: videos[indexPath.row])
         return cell
     }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+    
+    // MARK: - PlayerDelegate
     
     func playerShouldPlayAd(_ player: Player) -> Bool {
         return true

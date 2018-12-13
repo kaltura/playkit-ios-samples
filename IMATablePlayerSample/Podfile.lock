@@ -1,0 +1,73 @@
+PODS:
+  - GoogleAds-IMA-iOS-SDK (3.7.3)
+  - KalturaNetKit (0.0.17):
+    - KalturaNetKit/Core (= 0.0.17)
+  - KalturaNetKit/Core (0.0.17):
+    - SwiftyJSON
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - PlayKit (3.7.0):
+    - PlayKit/Core (= 3.7.0)
+  - PlayKit/AnalyticsCommon (3.7.0):
+    - PlayKit/Core
+  - PlayKit/Core (3.7.0):
+    - KalturaNetKit (~> 0.0)
+    - PlayKitUtils (~> 0.1.6)
+    - SwiftyJSON (= 3.1.4)
+    - SwiftyXMLParser (= 3.0.3)
+    - XCGLogger (~> 6.1.0)
+  - PlayKit_IMA (1.2.0):
+    - GoogleAds-IMA-iOS-SDK (= 3.7.3)
+    - PlayKit (~> 3.7.0)
+  - PlayKitUtils (0.1.6)
+  - PlayKitYoubora (1.0.0):
+    - PlayKit/AnalyticsCommon (~> 3.7.0)
+    - Youbora-AVPlayer/dynamic (= 5.4.18)
+  - SwiftyJSON (3.1.4)
+  - SwiftyXMLParser (3.0.3)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
+  - Youbora-AVPlayer/dynamic (5.4.18):
+    - Youbora-YouboraLib/dynamic (= 5.4.4)
+  - Youbora-YouboraLib/dynamic (5.4.4)
+
+DEPENDENCIES:
+  - PlayKit
+  - PlayKit_IMA
+  - PlayKitYoubora
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GoogleAds-IMA-iOS-SDK
+    - KalturaNetKit
+    - ObjcExceptionBridging
+    - PlayKit
+    - PlayKit_IMA
+    - PlayKitUtils
+    - PlayKitYoubora
+    - SwiftyJSON
+    - SwiftyXMLParser
+    - XCGLogger
+    - Youbora-AVPlayer
+    - Youbora-YouboraLib
+
+SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: 6dc764910309dcc982d6eb8b7de19d3cf94a6857
+  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
+  PlayKit_IMA: 218ea8e5d8c9b46c657304a87fe55b931c8716b4
+  PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
+  PlayKitYoubora: 849808068038781601193b2bf8c61388cf32d8e2
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+  Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
+  Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
+
+PODFILE CHECKSUM: 12878c987d3c9fae1111b0b5a81b953ecc170f53
+
+COCOAPODS: 1.6.0.beta.2

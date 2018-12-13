@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qLT-US-CGt">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qLT-US-CGt">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,20 +14,16 @@
         <scene sceneID="QoI-He-v7p">
             <objects>
                 <viewController id="qLT-US-CGt" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EKt-mb-hbe"/>
-                        <viewControllerLayoutGuide type="bottom" id="Reb-Pt-1YI"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7qa-mD-KAt">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lub-2d-Cvh" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="096-jW-OEH">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="k9L-h9-xfK">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,24 +63,26 @@
                                         <constraint firstItem="VCx-AT-a0f" firstAttribute="centerY" secondItem="k9L-h9-xfK" secondAttribute="centerY" id="m1N-oQ-8Ld"/>
                                     </constraints>
                                 </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="ocY-P1-i35">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Reb-Pt-1YI" firstAttribute="top" secondItem="Lub-2d-Cvh" secondAttribute="bottom" id="3LV-bk-ZO9"/>
-                            <constraint firstAttribute="trailing" secondItem="096-jW-OEH" secondAttribute="trailing" id="4bl-Vu-chk"/>
-                            <constraint firstItem="096-jW-OEH" firstAttribute="leading" secondItem="7qa-mD-KAt" secondAttribute="leading" id="K6K-eg-PEm"/>
-                            <constraint firstAttribute="trailing" secondItem="Lub-2d-Cvh" secondAttribute="trailing" id="mNs-bE-vNc"/>
-                            <constraint firstItem="Lub-2d-Cvh" firstAttribute="leading" secondItem="7qa-mD-KAt" secondAttribute="leading" id="rG5-qi-rJI"/>
-                            <constraint firstItem="Reb-Pt-1YI" firstAttribute="top" secondItem="096-jW-OEH" secondAttribute="bottom" id="wBz-Kh-mvs"/>
-                            <constraint firstItem="Lub-2d-Cvh" firstAttribute="top" secondItem="7qa-mD-KAt" secondAttribute="top" id="y68-YZ-P7v"/>
+                            <constraint firstItem="yDT-7F-4KO" firstAttribute="trailing" secondItem="096-jW-OEH" secondAttribute="trailing" id="4bl-Vu-chk"/>
+                            <constraint firstItem="Lub-2d-Cvh" firstAttribute="top" secondItem="yDT-7F-4KO" secondAttribute="top" id="A8k-aI-wqf"/>
+                            <constraint firstItem="096-jW-OEH" firstAttribute="top" secondItem="Lub-2d-Cvh" secondAttribute="bottom" id="CSh-cQ-crt"/>
+                            <constraint firstItem="096-jW-OEH" firstAttribute="leading" secondItem="yDT-7F-4KO" secondAttribute="leading" id="K6K-eg-PEm"/>
+                            <constraint firstItem="yDT-7F-4KO" firstAttribute="trailing" secondItem="Lub-2d-Cvh" secondAttribute="trailing" id="mNs-bE-vNc"/>
+                            <constraint firstItem="Lub-2d-Cvh" firstAttribute="leading" secondItem="yDT-7F-4KO" secondAttribute="leading" id="rG5-qi-rJI"/>
+                            <constraint firstItem="yDT-7F-4KO" firstAttribute="bottom" secondItem="096-jW-OEH" secondAttribute="bottom" id="wBz-Kh-mvs"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="yDT-7F-4KO"/>
                     </view>
                     <connections>
                         <outlet property="playerContainer" destination="Lub-2d-Cvh" id="P0C-fH-hx6"/>
@@ -92,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18L-lX-uL1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
 </document>

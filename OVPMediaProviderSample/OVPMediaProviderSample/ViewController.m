@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
+#import "PlayKitProviders-Swift.h"
 
 /*
  This sample will show you how to create a player and fetch mediaEntry from kaltura providers.
@@ -49,6 +50,10 @@
     } else {
         // error loading the player
     }
+}
+    
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 /*********************************/

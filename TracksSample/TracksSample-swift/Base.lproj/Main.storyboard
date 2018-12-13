@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,20 +15,16 @@
         <scene sceneID="rj8-Rj-yvV">
             <objects>
                 <viewController id="yQf-LR-HVa" customClass="ViewController" customModule="TracksSample_swift" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hdM-Na-ftz"/>
-                        <viewControllerLayoutGuide type="bottom" id="C1n-Dc-OdC"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p5V-JA-dmL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-bW-STh" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="590"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-vm-eFy">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fyi-JH-bGD">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,17 +64,16 @@
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="leading" secondItem="mkz-3y-9UE" secondAttribute="trailing" constant="15" id="yjt-xa-Npg"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="vXf-ss-O3T">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-IB-70v">
-                                <rect key="frame" x="24" y="465" width="83" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-IB-70v">
+                                <rect key="frame" x="24" y="592" width="98" height="34"/>
                                 <state key="normal" title="AudioTracks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -85,9 +81,8 @@
                                     <action selector="didTapAudio:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Q6C-Ur-ejC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-qA-bGs">
-                                <rect key="frame" x="277" y="465" width="74" height="30"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-qA-bGs">
+                                <rect key="frame" x="264" y="592" width="87" height="34"/>
                                 <state key="normal" title="TextTracks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -96,10 +91,11 @@
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpY-Fm-cXa">
-                                <rect key="frame" x="8" y="503" width="359" height="100"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="8" y="634" width="359" height="80"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="J4D-Cv-eow"/>
+                                    <constraint firstAttribute="height" constant="80" id="J4D-Cv-eow"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="dataSource" destination="yQf-LR-HVa" id="fzm-Ak-GDh"/>
@@ -107,25 +103,25 @@
                                 </connections>
                             </pickerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="GjG-IB-70v" secondAttribute="bottom" constant="8" id="4S7-Ru-Mjo"/>
-                            <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="4sT-Xd-LQQ"/>
-                            <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="507-if-eVC"/>
-                            <constraint firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
-                            <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
+                            <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" id="507-if-eVC"/>
+                            <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
+                            <constraint firstItem="Dh3-5s-DVq" firstAttribute="bottom" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
+                            <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="ENu-5D-jFy"/>
+                            <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="Dh3-5s-DVq" secondAttribute="top" id="JJi-ft-RWz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LDa-qA-bGs" secondAttribute="trailing" constant="8" id="MS2-Cy-GFe"/>
                             <constraint firstItem="GjG-IB-70v" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leadingMargin" constant="8" id="PfU-ao-MsT"/>
-                            <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="p5V-JA-dmL" secondAttribute="top" id="QdJ-99-hqG"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GjG-IB-70v" secondAttribute="trailingMargin" id="Tog-7c-sFi"/>
-                            <constraint firstItem="LDa-qA-bGs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="p5V-JA-dmL" secondAttribute="leadingMargin" id="VnX-3l-bQY"/>
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="rpY-Fm-cXa" secondAttribute="bottom" id="XSa-Yg-S3V"/>
-                            <constraint firstItem="rpY-Fm-cXa" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" constant="8" id="c6j-MD-5Jc"/>
-                            <constraint firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
-                            <constraint firstAttribute="trailing" secondItem="rpY-Fm-cXa" secondAttribute="trailing" constant="8" id="jbj-vx-esL"/>
-                            <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="wni-xA-PRH"/>
+                            <constraint firstItem="rpY-Fm-cXa" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="c6j-MD-5Jc"/>
+                            <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
+                            <constraint firstItem="LDa-qA-bGs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GjG-IB-70v" secondAttribute="trailing" id="fcg-nT-osY"/>
+                            <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="rpY-Fm-cXa" secondAttribute="trailing" constant="8" id="jbj-vx-esL"/>
+                            <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" id="wni-xA-PRH"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="LDa-qA-bGs" secondAttribute="bottom" constant="8" id="yjr-cA-AaV"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dh3-5s-DVq"/>
                     </view>
                     <connections>
                         <outlet property="picker" destination="rpY-Fm-cXa" id="uOG-t2-gj5"/>
@@ -135,7 +131,8 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nI-3U-OAI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "30F9450BC2607D666546B5641270352E089DA5EC",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7E7DEA4C0F4A215F0248E04375BB47685F1B6C34" : 9223372036854775807,
+    "30F9450BC2607D666546B5641270352E089DA5EC" : 9223372036854775807,
+    "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6" : 9223372036854775807,
+    "3EEC1F152A5E378E43C603784CB3A78102BCBA2D" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "EFD33983-5B52-4AC0-A477-C037FC9040BE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7E7DEA4C0F4A215F0248E04375BB47685F1B6C34" : "playkit-ios-media-player\/",
+    "30F9450BC2607D666546B5641270352E089DA5EC" : "playkit-ios-samples\/",
+    "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6" : "playkit-ios\/",
+    "3EEC1F152A5E378E43C603784CB3A78102BCBA2D" : "playkit-ios-kava\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OVPStarter",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OVPStarter\/OVPStarter.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios-samples.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "30F9450BC2607D666546B5641270352E089DA5EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios-kava.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3EEC1F152A5E378E43C603784CB3A78102BCBA2D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios-media-player",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7E7DEA4C0F4A215F0248E04375BB47685F1B6C34"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/playkit-ios",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7EDDB3A01EAA140FA2A0D046FAE4999C737211D6"
+    }
+  ]
+}

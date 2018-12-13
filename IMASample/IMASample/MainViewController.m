@@ -6,6 +6,7 @@
 #import "VideoTableViewCell.h"
 @import PlayKit;
 @import PlayKit_IMA;
+@import PlayKitYoubora;
 
 
 /*
@@ -113,6 +114,7 @@
             MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
             IMAConfig *adsConfig = [IMAConfig new];
             adsConfig.adTagUrl = video.tag;
+            adsConfig.playerVersion = PlayKitManager.versionString;
             [self.player updatePluginConfigWithPluginName:@"IMAPlugin" config:adsConfig];
             destVC.mediaConfig = mediaConfig;
             destVC.player = self.player;

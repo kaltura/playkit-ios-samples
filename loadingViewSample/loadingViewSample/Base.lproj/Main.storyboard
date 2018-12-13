@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,26 +14,25 @@
         <scene sceneID="rj8-Rj-yvV">
             <objects>
                 <viewController id="yQf-LR-HVa" customClass="ViewController" customModule="loadingViewSample" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hdM-Na-ftz"/>
-                        <viewControllerLayoutGuide type="bottom" id="C1n-Dc-OdC"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p5V-JA-dmL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-bW-STh" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="670"/>
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Hdh-eb-QCl">
-                                        <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Hdh-eb-QCl">
+                                        <rect key="frame" x="177" y="325" width="20" height="20"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hdh-eb-QCl" firstAttribute="centerY" secondItem="XYE-bW-STh" secondAttribute="centerY" id="Uju-fX-kGg"/>
+                                    <constraint firstItem="Hdh-eb-QCl" firstAttribute="centerX" secondItem="XYE-bW-STh" secondAttribute="centerX" id="luj-3Q-4EY"/>
+                                </constraints>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-vm-eFy">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fyi-JH-bGD">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,24 +72,26 @@
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="leading" secondItem="mkz-3y-9UE" secondAttribute="trailing" constant="15" id="yjt-xa-Npg"/>
                                     </constraints>
                                 </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="vXf-ss-O3T">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="4sT-Xd-LQQ"/>
-                            <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="507-if-eVC"/>
-                            <constraint firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
-                            <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
-                            <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="p5V-JA-dmL" secondAttribute="top" id="QdJ-99-hqG"/>
-                            <constraint firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
-                            <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="wni-xA-PRH"/>
+                            <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="Gxu-TM-ctK" secondAttribute="top" id="3CP-ay-nFb"/>
+                            <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="Gxu-TM-ctK" secondAttribute="leading" id="507-if-eVC"/>
+                            <constraint firstItem="Gxu-TM-ctK" firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
+                            <constraint firstItem="Gxu-TM-ctK" firstAttribute="bottom" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
+                            <constraint firstItem="Gxu-TM-ctK" firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
+                            <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="kbQ-eG-P4i"/>
+                            <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="Gxu-TM-ctK" secondAttribute="leading" id="wni-xA-PRH"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gxu-TM-ctK"/>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="Hdh-eb-QCl" id="y6m-F7-Z2B"/>
@@ -99,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nI-3U-OAI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
 </document>

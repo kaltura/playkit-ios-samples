@@ -3,47 +3,62 @@ PODS:
     - KalturaNetKit/Core (= 0.0.17)
   - KalturaNetKit/Core (0.0.17):
     - SwiftyJSON
-  - Log (1.0)
-  - PlayKit (3.4.0):
-    - PlayKit/Core (= 3.4.0)
-  - PlayKit/AnalyticsCommon (3.4.0):
+  - ObjcExceptionBridging (1.0.1):
+    - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
+  - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
+  - PlayKit (3.7.0):
+    - PlayKit/Core (= 3.7.0)
+  - PlayKit/AnalyticsCommon (3.7.0):
     - PlayKit/Core
-  - PlayKit/Core (3.4.0):
+  - PlayKit/Core (3.7.0):
     - KalturaNetKit (~> 0.0)
-    - Log (= 1.0)
-    - PlayKitUtils (= 0.1.4)
+    - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
-  - PlayKitKava (1.0.1):
+    - XCGLogger (~> 6.1.0)
+  - PlayKitKava (1.0.5):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
-  - PlayKitUtils (0.1.4)
+  - PlayKitProviders (1.0.0):
+    - KalturaNetKit
+    - PlayKit/AnalyticsCommon (~> 3.7.0)
+    - PlayKitUtils
+  - PlayKitUtils (0.1.6)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
+  - XCGLogger (6.1.0):
+    - XCGLogger/Core (= 6.1.0)
+  - XCGLogger/Core (6.1.0):
+    - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `master`)
+  - PlayKit
   - PlayKitKava
+  - PlayKitProviders
 
-EXTERNAL SOURCES:
-  PlayKit:
-    :branch: master
-    :git: https://github.com/kaltura/playkit-ios.git
-
-CHECKOUT OPTIONS:
-  PlayKit:
-    :commit: a1552f33774234c310297d96a19dc32297ac5113
-    :git: https://github.com/kaltura/playkit-ios.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - KalturaNetKit
+    - ObjcExceptionBridging
+    - PlayKit
+    - PlayKitKava
+    - PlayKitProviders
+    - PlayKitUtils
+    - SwiftyJSON
+    - SwiftyXMLParser
+    - XCGLogger
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
-  Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
-  PlayKit: 35630e3a931835f5724b332f6578fecc01fed156
-  PlayKitKava: af36a17e952d3b2b48242a8499f28025fd583643
-  PlayKitUtils: 8f03f72690805e20718be6f913547e0966c835f9
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
+  PlayKitKava: 897ec5364c9662199a23825c20499d3fcd6bafbd
+  PlayKitProviders: 775a857a182d43db9e843c564bf40e130ee78c95
+  PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
+  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
 
-PODFILE CHECKSUM: 01b24ffeae97f43c4a8ce27d5df7e0ab7a98b91f
+PODFILE CHECKSUM: d1696fe7f46e820fb42b10bfc8f0544841856deb
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.6.0.beta.2

@@ -9,6 +9,7 @@
 import UIKit
 import PlayKit
 import PlayKit_IMA
+import PlayKitYoubora
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         PlayKitManager.shared.registerPlugin(IMAPlugin.self)
         PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
         return true

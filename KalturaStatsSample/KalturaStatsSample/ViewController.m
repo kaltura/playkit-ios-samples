@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PlayKit-Swift.h"
+@import PlayKit;
+@import PlayKitProviders;
 
 @interface ViewController ()
 
@@ -67,6 +68,10 @@
     [self removeAnalyticsObservations];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
@@ -117,7 +122,8 @@
 - (KalturaStatsPluginConfig *)createKalturaStatsPluginConfig {
     return [[KalturaStatsPluginConfig alloc] initWithUiconfId:0
                                                     partnerId:0
-                                                      entryId:@""];
+                                                      entryId:@""
+                                                  hasKanalony:NO];
 }
 
 /*********************************/

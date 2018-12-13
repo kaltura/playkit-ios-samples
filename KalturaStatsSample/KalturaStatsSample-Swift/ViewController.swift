@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitProviders
 
 /*********************************/
 // Plugin registration should be done in App Delegate!!!
@@ -64,6 +65,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
@@ -118,7 +123,8 @@ class ViewController: UIViewController {
     func createKalturaStatsPluginConfig() -> KalturaStatsPluginConfig {
         return KalturaStatsPluginConfig(uiconfId: 0,
                                         partnerId: 0,
-                                        entryId: "")
+                                        entryId: "",
+                                        hasKanalony: false)
     }
     
 /************************/

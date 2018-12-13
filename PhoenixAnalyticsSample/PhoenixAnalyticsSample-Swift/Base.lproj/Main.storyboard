@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,20 +14,23 @@
         <scene sceneID="rj8-Rj-yvV">
             <objects>
                 <viewController id="yQf-LR-HVa" customClass="ViewController" customModule="PhoenixAnalyticsSample_Swift" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hdM-Na-ftz"/>
-                        <viewControllerLayoutGuide type="bottom" id="C1n-Dc-OdC"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="p5V-JA-dmL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYE-bW-STh" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8g-EM-Hms">
+                                <rect key="frame" x="20" y="64" width="108" height="30"/>
+                                <state key="normal" title="Changed Media"/>
+                                <connections>
+                                    <action selector="changeMediaTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="GE0-sL-kXz"/>
+                                </connections>
+                            </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gy5-vm-eFy">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Fyi-JH-bGD">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,33 +61,38 @@
                                         </slider>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QMa-LM-qs2" firstAttribute="leading" secondItem="9dW-d4-ZXT" secondAttribute="trailing" constant="15" id="CZF-9Z-SK3"/>
                                         <constraint firstItem="QMa-LM-qs2" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="QGv-gz-RRx"/>
                                         <constraint firstItem="mkz-3y-9UE" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="TNw-y2-zcz"/>
                                         <constraint firstItem="mkz-3y-9UE" firstAttribute="leading" secondItem="Fyi-JH-bGD" secondAttribute="leading" constant="8" id="g36-JC-VMZ"/>
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="centerY" secondItem="Fyi-JH-bGD" secondAttribute="centerY" id="iC1-8j-GuY"/>
                                         <constraint firstAttribute="trailing" secondItem="QMa-LM-qs2" secondAttribute="trailing" constant="8" id="lNE-Ru-VI4"/>
+                                        <constraint firstItem="QMa-LM-qs2" firstAttribute="leading" secondItem="9dW-d4-ZXT" secondAttribute="trailing" constant="15" id="qaf-Dh-nCa"/>
                                         <constraint firstItem="9dW-d4-ZXT" firstAttribute="leading" secondItem="mkz-3y-9UE" secondAttribute="trailing" constant="15" id="yjt-xa-Npg"/>
                                     </constraints>
                                 </view>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="vXf-ss-O3T">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="4sT-Xd-LQQ"/>
-                            <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="507-if-eVC"/>
-                            <constraint firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
-                            <constraint firstItem="C1n-Dc-OdC" firstAttribute="top" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
-                            <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="p5V-JA-dmL" secondAttribute="top" id="QdJ-99-hqG"/>
-                            <constraint firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
-                            <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leading" id="wni-xA-PRH"/>
+                            <constraint firstItem="gy5-vm-eFy" firstAttribute="leading" secondItem="ynk-cW-eT0" secondAttribute="leading" id="507-if-eVC"/>
+                            <constraint firstItem="ynk-cW-eT0" firstAttribute="trailing" secondItem="XYE-bW-STh" secondAttribute="trailing" id="79x-MV-dH0"/>
+                            <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="ynk-cW-eT0" secondAttribute="top" id="7Nz-Ku-x2c"/>
+                            <constraint firstItem="ynk-cW-eT0" firstAttribute="bottom" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
+                            <constraint firstItem="ynk-cW-eT0" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J8g-EM-Hms" secondAttribute="trailing" id="Cmm-g7-gTV"/>
+                            <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="EYC-xR-vAg"/>
+                            <constraint firstItem="J8g-EM-Hms" firstAttribute="top" secondItem="ynk-cW-eT0" secondAttribute="top" constant="20" id="FEk-2O-eLj"/>
+                            <constraint firstItem="J8g-EM-Hms" firstAttribute="leading" secondItem="ynk-cW-eT0" secondAttribute="leading" constant="20" id="JDH-EX-nAd"/>
+                            <constraint firstItem="ynk-cW-eT0" firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
+                            <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="ynk-cW-eT0" secondAttribute="leading" id="wni-xA-PRH"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="ynk-cW-eT0"/>
                     </view>
                     <connections>
                         <outlet property="playerContainer" destination="XYE-bW-STh" id="1G5-BV-CPO"/>
@@ -92,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nI-3U-OAI" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
 </document>

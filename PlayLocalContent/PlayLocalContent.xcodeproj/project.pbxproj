@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDC343A9C7773DF25AD2CEE3 /* Pods_PlayLocalContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3A39416BFDA3B058E8CA107 /* Pods_PlayLocalContent.framework */; };
+		862BAFF60BD51D6C3E0E6D1D /* Pods_SharedPods_PlayLocalContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D2C5032A1788150D3EA0755 /* Pods_SharedPods_PlayLocalContent.framework */; };
 		BDF64A7A1FBDCBE100F584BB /* example.m4a in Resources */ = {isa = PBXBuildFile; fileRef = BDF64A791FBDCBE100F584BB /* example.m4a */; };
 		BF4B4A3D1F781AE4007863B3 /* movie.mov in Resources */ = {isa = PBXBuildFile; fileRef = BF4B4A3C1F781AE4007863B3 /* movie.mov */; };
 		BF55EB311ECC1FE400432FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF55EB301ECC1FE400432FF9 /* AppDelegate.swift */; };
@@ -19,7 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A84CEEE624D10D32F1BA6F58 /* Pods-PlayLocalContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayLocalContent.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent.release.xcconfig"; sourceTree = "<group>"; };
+		7D2C5032A1788150D3EA0755 /* Pods_SharedPods_PlayLocalContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_PlayLocalContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		94DDE0D2E33B65C41F30E742 /* Pods-SharedPods-PlayLocalContent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PlayLocalContent.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PlayLocalContent/Pods-SharedPods-PlayLocalContent.release.xcconfig"; sourceTree = "<group>"; };
 		BDF64A791FBDCBE100F584BB /* example.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = example.m4a; sourceTree = "<group>"; };
 		BF4B4A3C1F781AE4007863B3 /* movie.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = movie.mov; sourceTree = "<group>"; };
 		BF55EB2D1ECC1FE400432FF9 /* PlayLocalContent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayLocalContent.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,8 +31,7 @@
 		BF55EB3A1ECC1FE400432FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF55EB3C1ECC1FE400432FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF55EB421ECC22AF00432FF9 /* big_buck_bunny_short.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_buck_bunny_short.mp4; sourceTree = "<group>"; };
-		C3A39416BFDA3B058E8CA107 /* Pods_PlayLocalContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PlayLocalContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E2677651FC45F3687537FF38 /* Pods-PlayLocalContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayLocalContent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent.debug.xcconfig"; sourceTree = "<group>"; };
+		D9C776A0DFAD02AA4B373BB7 /* Pods-SharedPods-PlayLocalContent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PlayLocalContent.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PlayLocalContent/Pods-SharedPods-PlayLocalContent.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC343A9C7773DF25AD2CEE3 /* Pods_PlayLocalContent.framework in Frameworks */,
+				862BAFF60BD51D6C3E0E6D1D /* Pods_SharedPods_PlayLocalContent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +49,7 @@
 		136801ED649AE058C4AD91C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C3A39416BFDA3B058E8CA107 /* Pods_PlayLocalContent.framework */,
+				7D2C5032A1788150D3EA0755 /* Pods_SharedPods_PlayLocalContent.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -57,8 +57,8 @@
 		4E07117774A3F32D00881551 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E2677651FC45F3687537FF38 /* Pods-PlayLocalContent.debug.xcconfig */,
-				A84CEEE624D10D32F1BA6F58 /* Pods-PlayLocalContent.release.xcconfig */,
+				D9C776A0DFAD02AA4B373BB7 /* Pods-SharedPods-PlayLocalContent.debug.xcconfig */,
+				94DDE0D2E33B65C41F30E742 /* Pods-SharedPods-PlayLocalContent.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -85,14 +85,14 @@
 			isa = PBXGroup;
 			children = (
 				BF55EB301ECC1FE400432FF9 /* AppDelegate.swift */,
+				BF55EB321ECC1FE400432FF9 /* ViewController.swift */,
+				BF55EB341ECC1FE400432FF9 /* Main.storyboard */,
 				BF55EB371ECC1FE400432FF9 /* Assets.xcassets */,
 				BF55EB421ECC22AF00432FF9 /* big_buck_bunny_short.mp4 */,
 				BDF64A791FBDCBE100F584BB /* example.m4a */,
 				BF55EB3C1ECC1FE400432FF9 /* Info.plist */,
 				BF55EB391ECC1FE400432FF9 /* LaunchScreen.storyboard */,
-				BF55EB341ECC1FE400432FF9 /* Main.storyboard */,
 				BF4B4A3C1F781AE4007863B3 /* movie.mov */,
-				BF55EB321ECC1FE400432FF9 /* ViewController.swift */,
 			);
 			path = PlayLocalContent;
 			sourceTree = "<group>";
@@ -109,7 +109,6 @@
 				BF55EB2A1ECC1FE400432FF9 /* Frameworks */,
 				BF55EB2B1ECC1FE400432FF9 /* Resources */,
 				7BA986D48B27A503C8A3B9C2 /* [CP] Embed Pods Frameworks */,
-				62290FD07251CE1BFDD2D45B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +132,7 @@
 					BF55EB2C1ECC1FE400432FF9 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = X8RDCFJK95;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -183,26 +183,11 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PlayLocalContent-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SharedPods-PlayLocalContent-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62290FD07251CE1BFDD2D45B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7BA986D48B27A503C8A3B9C2 /* [CP] Embed Pods Frameworks */ = {
@@ -211,26 +196,28 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PlayLocalContent/Pods-SharedPods-PlayLocalContent-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlayLocalContent/Pods-PlayLocalContent-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PlayLocalContent/Pods-SharedPods-PlayLocalContent-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -362,7 +349,7 @@
 		};
 		BF55EB401ECC1FE400432FF9 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2677651FC45F3687537FF38 /* Pods-PlayLocalContent.debug.xcconfig */;
+			baseConfigurationReference = D9C776A0DFAD02AA4B373BB7 /* Pods-SharedPods-PlayLocalContent.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -370,13 +357,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.PlayLocalContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		BF55EB411ECC1FE400432FF9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A84CEEE624D10D32F1BA6F58 /* Pods-PlayLocalContent.release.xcconfig */;
+			baseConfigurationReference = 94DDE0D2E33B65C41F30E742 /* Pods-SharedPods-PlayLocalContent.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
@@ -384,7 +372,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.avplayer.sample.PlayLocalContent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

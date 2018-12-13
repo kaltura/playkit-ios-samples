@@ -40,13 +40,21 @@ class ViewController: UIViewController {
             self.preparePlayer()
         } catch let e {
             // error loading the player
-            print("error:", e.localizedDescription)
+            PKLog.debug("Error: \(e.localizedDescription)")
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        player?.removeObserver(self, events: PlayerEvent.allEventTypes)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
     }
     
 /************************/
@@ -76,20 +84,42 @@ class ViewController: UIViewController {
 /*****************************/
     
     func registerPlayerEvents() {
-        self.registerPlayEvent()
+        self.registerPlayEvents()
+        self.registerDurationChangedEvent()
+        self.registerPlayerEventStateChangedEvent()
+        self.registerErrorEvent()
     }
     
     // Handle basic event (Play, Pause, CanPlay ..)
-    func registerPlayEvent() {
+    func registerPlayEvents() {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
-        player.addObserver(self, events: [PlayerEvent.playing]) { event in
-            if type(of: event) == PlayerEvent.playing {
-                // handle playing event
-                print("Playing Event")
+        player.addObserver(self, events: [PlayerEvent.playing, PlayerEvent.play, PlayerEvent.canPlay, PlayerEvent.pause, PlayerEvent.seeking, PlayerEvent.seeked, PlayerEvent.stopped, PlayerEvent.ended, PlayerEvent.replay]) { event in
+            
+            switch event {
+            case is PlayerEvent.Playing:
+                PKLog.debug("Event: Playing")
+            case is PlayerEvent.Play:
+                PKLog.debug("Event: Play")
+            case is PlayerEvent.CanPlay:
+                PKLog.debug("Event: CanPlay")
+            case is PlayerEvent.Pause:
+                PKLog.debug("Event: Pause")
+            case is PlayerEvent.Seeking:
+                PKLog.debug("Event: Seeking")
+            case is PlayerEvent.Seeked:
+                PKLog.debug("Event: Seeked")
+            case is PlayerEvent.Stopped:
+                PKLog.debug("Event: Stopped")
+            case is PlayerEvent.Ended:
+                PKLog.debug("Event: Ended")
+            case is PlayerEvent.Replay:
+                PKLog.debug("Event: Replay")
+            default:
+                break
             }
         }
     }
@@ -97,14 +127,14 @@ class ViewController: UIViewController {
     // Handle Duration Changes
     func registerDurationChangedEvent() {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
         player.addObserver(self, events: [PlayerEvent.durationChanged]) { event in
             if type(of: event) == PlayerEvent.durationChanged {
                 if let duration = event.duration {
-                    print("Duration Changed Event: ", duration.doubleValue)
+                    PKLog.debug("Event: Duration Changed, \(duration.doubleValue)")
                 }
             }
         }
@@ -113,7 +143,7 @@ class ViewController: UIViewController {
     // Handle State Changes
     func registerPlayerEventStateChangedEvent() {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
@@ -122,7 +152,7 @@ class ViewController: UIViewController {
                 let newState = event.newState
                 let oldState = event.oldState
                 
-                print("State Chnaged Event:: oldState: ", oldState, "newState:", newState)
+                PKLog.debug("Event: State Chnaged, oldState: \(oldState) newState: \(newState)")
             }
         }
     }
@@ -130,13 +160,14 @@ class ViewController: UIViewController {
     // Handle Player Errors
     func registerErrorEvent() {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
         player.addObserver(self, events: [PlayerEvent.error]) { event in
             if let error = event.error, error.code == PKErrorCode.assetNotPlayable {
                 // handle error
+                PKLog.debug("Event: Error, \(error)")
             }
         }
     }
@@ -147,7 +178,7 @@ class ViewController: UIViewController {
     
     @IBAction func playTouched(_ sender: Any) {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
@@ -162,7 +193,7 @@ class ViewController: UIViewController {
     
     @IBAction func pauseTouched(_ sender: Any) {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
@@ -173,13 +204,22 @@ class ViewController: UIViewController {
     
     @IBAction func playheadValueChanged(_ sender: Any) {
         guard let player = self.player else {
-            print("player is not set")
+            print("Player is not set")
             return
         }
         
         let slider = sender as! UISlider
         
-        print("playhead value:", slider.value)
+        PKLog.debug("Playhead value: \(slider.value)")
         player.currentTime = player.duration * Double(slider.value)
+    }
+    
+    @IBAction func replayTouched(_ sender: Any) {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        player.replay()
     }
 }
