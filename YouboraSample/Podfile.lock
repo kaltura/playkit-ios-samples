@@ -55,7 +55,7 @@ CHECKOUT OPTIONS:
     :commit: 8433669c51bea3d5063126cdc562c0913e0ebbd1
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKitYoubora:
-    :commit: f6f8284df11bfdde7fb180505bb2beab33996bb3
+    :commit: 7788bb01ff0943d87febace6f0713f9542fc0f01
     :git: https://github.com/kaltura/playkit-ios-youbora.git
 
 SPEC CHECKSUMS:
