@@ -9,7 +9,7 @@
 import UIKit
 import PlayKit
 import PlayKitYoubora
-
+import PlayKit_IMA
 /*
  This sample will show you how to create a player with youbora plugin.
  The steps required:
@@ -19,7 +19,7 @@ import PlayKitYoubora
  4. Prepare Player.
  */
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PlayerDelegate {
     var player: Player?
     var playheadTimer: Timer?
     @IBOutlet weak var playerContainer: PlayerView!
@@ -38,7 +38,12 @@ class ViewController: UIViewController {
             // 3. Register events if have ones.
             // Event registeration must be after loading the player successfully to make sure events are added,
             // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+            self.player?.delegate = self
             self.addYouboraObservations()
+            
+            self.player?.addObserver(self, event: PlayerEvent.error, block: { (event) in
+                print("error: " + (event.error?.localizedDescription ?? ""))
+            })
             
             // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
             self.preparePlayer()
@@ -83,7 +88,8 @@ class ViewController: UIViewController {
 // MARK: - Youbora
 /***********************/
     func createPluginConfig() -> PluginConfig {
-        let pluginConfigDict = [YouboraPlugin.pluginName: self.createYouboraPluginConfig()]
+        let pluginConfigDict = [YouboraPlugin.pluginName: self.createYouboraPluginConfig(),
+                                IMAPlugin.pluginName: self.createIMAPluginConfig()]
         
         return PluginConfig(config: pluginConfigDict)
     }
@@ -132,6 +138,21 @@ class ViewController: UIViewController {
     }
     
 /************************/
+// MARK: - IMA
+/***********************/
+    func createIMAPluginConfig() -> IMAConfig {
+        let adsConfig = IMAConfig()
+        adsConfig.adTagUrl = kPrerollTag
+        adsConfig.playerVersion = PlayKitManager.versionString
+        
+        return adsConfig
+    }
+    
+    func playerShouldPlayAd(_ player: Player) -> Bool {
+        return true
+    }
+    
+/************************/
 // MARK: - Actions
 /***********************/
     
@@ -173,3 +194,4 @@ class ViewController: UIViewController {
         player.currentTime = player.duration * Double(slider.value)
     }
 }
+

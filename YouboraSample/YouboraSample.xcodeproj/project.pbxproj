@@ -19,6 +19,7 @@
 		BFD20A4F1EA7A88E0018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A4D1EA7A88E0018FD8A /* Main.storyboard */; };
 		BFD20A511EA7A88E0018FD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A501EA7A88E0018FD8A /* Assets.xcassets */; };
 		BFD20A541EA7A88E0018FD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A521EA7A88E0018FD8A /* LaunchScreen.storyboard */; };
+		D221A49621CA319B008807D7 /* IMATags.swift in Sources */ = {isa = PBXBuildFile; fileRef = D221A49521CA319B008807D7 /* IMATags.swift */; };
 		F75DE36088A73835AEAF634F /* Pods_SharedPods_YouboraSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A718B2B371765AA28283C4FA /* Pods_SharedPods_YouboraSample.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		BFD20A531EA7A88E0018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A551EA7A88E0018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6BD8420228D139DB2C92366 /* Pods-SharedPods-YouboraSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample.debug.xcconfig"; sourceTree = "<group>"; };
+		D221A49521CA319B008807D7 /* IMATags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMATags.swift; sourceTree = "<group>"; };
 		E6E0C83C51581CE0DA6EF01F /* Pods-SharedPods-YouboraSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-YouboraSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -132,6 +134,7 @@
 				BFD20A501EA7A88E0018FD8A /* Assets.xcassets */,
 				BFD20A521EA7A88E0018FD8A /* LaunchScreen.storyboard */,
 				BFD20A551EA7A88E0018FD8A /* Info.plist */,
+				D221A49521CA319B008807D7 /* IMATags.swift */,
 			);
 			path = "YouboraSample-Swift";
 			sourceTree = "<group>";
@@ -259,11 +262,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample-frameworks.sh",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitYoubora/PlayKitYoubora.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit_IMA/PlayKit_IMA.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -271,11 +276,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitYoubora.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit_IMA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -293,11 +300,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift-frameworks.sh",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitYoubora/PlayKitYoubora.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit_IMA/PlayKit_IMA.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -305,11 +314,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitYoubora.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit_IMA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -374,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD20A4C1EA7A88E0018FD8A /* ViewController.swift in Sources */,
+				D221A49621CA319B008807D7 /* IMATags.swift in Sources */,
 				BFD20A4A1EA7A88E0018FD8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

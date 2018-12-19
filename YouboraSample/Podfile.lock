@@ -1,4 +1,5 @@
 PODS:
+  - GoogleAds-IMA-iOS-SDK (3.7.3)
   - KalturaNetKit (0.0.17):
     - KalturaNetKit/Core (= 0.0.17)
   - KalturaNetKit/Core (0.0.17):
@@ -16,6 +17,10 @@ PODS:
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
+  - PlayKit_IMA (1.2.1-dev):
+    - GoogleAds-IMA-iOS-SDK (= 3.7.3)
+    - PlayKit (~> 3.7.0-dev)
+    - XCGLogger (~> 6.1.0)
   - PlayKitUtils (0.1.6)
   - PlayKitYoubora (1.0.1-dev):
     - PlayKit/AnalyticsCommon (~> 3.7.0-dev)
@@ -30,10 +35,12 @@ PODS:
 
 DEPENDENCIES:
   - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `develop`)
+  - PlayKit_IMA (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `develop`)
   - PlayKitYoubora (from `https://github.com/kaltura/playkit-ios-youbora.git`, branch `V6`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - GoogleAds-IMA-iOS-SDK
     - KalturaNetKit
     - ObjcExceptionBridging
     - PlayKitUtils
@@ -46,6 +53,9 @@ EXTERNAL SOURCES:
   PlayKit:
     :branch: develop
     :git: https://github.com/kaltura/playkit-ios.git
+  PlayKit_IMA:
+    :branch: develop
+    :git: https://github.com/kaltura/playkit-ios-ima.git
   PlayKitYoubora:
     :branch: V6
     :git: https://github.com/kaltura/playkit-ios-youbora.git
@@ -54,14 +64,19 @@ CHECKOUT OPTIONS:
   PlayKit:
     :commit: 8433669c51bea3d5063126cdc562c0913e0ebbd1
     :git: https://github.com/kaltura/playkit-ios.git
+  PlayKit_IMA:
+    :commit: 14d00b4867bb4672b334b475dc943903b5c375db
+    :git: https://github.com/kaltura/playkit-ios-ima.git
   PlayKitYoubora:
     :commit: 7788bb01ff0943d87febace6f0713f9542fc0f01
     :git: https://github.com/kaltura/playkit-ios-youbora.git
 
 SPEC CHECKSUMS:
+  GoogleAds-IMA-iOS-SDK: 6dc764910309dcc982d6eb8b7de19d3cf94a6857
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   PlayKit: 638ea66fa7b026fcace6c12219bdf116c746d36c
+  PlayKit_IMA: 6d67e446287a4399ce322319721907f3b726e3eb
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   PlayKitYoubora: aae9983e1c6147203b063c1000f767999e700537
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
@@ -69,6 +84,6 @@ SPEC CHECKSUMS:
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: df11de82e317f1808c7c4838b592e1290521776a
+PODFILE CHECKSUM: 2d170342dfc99a93ea60328d7673d9e912aead7e
 
 COCOAPODS: 1.5.3
