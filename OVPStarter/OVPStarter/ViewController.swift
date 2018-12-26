@@ -1,4 +1,3 @@
-
 import UIKit
 import PlayKit
 import PlayKitUtils
@@ -111,10 +110,6 @@ class ViewController: UIViewController {
                 
             default:
                 break
-            }
-            if let e = event as? PlayerEvent.DurationChanged, let d = e.duration as? TimeInterval {
-                self.playheadSlider.maximumValue = Float(d)
-                self.durationLabel.text = format(d)
             }
         })
     }
