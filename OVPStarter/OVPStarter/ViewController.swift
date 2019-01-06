@@ -87,12 +87,11 @@ class ViewController: UIViewController {
             switch event {
             case is PlayerEvent.DurationChanged:
                 if let playerEvent = event as? PlayerEvent, let d = playerEvent.duration as? TimeInterval {
-                    self.playheadSlider.maximumValue = Float(d)
                     self.durationLabel.text = format(d)
                 }
             case is PlayerEvent.PlayheadUpdate:
                 if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
-                    self.playheadSlider.value = currentTime.floatValue
+                    self.playheadSlider.value = Float(self.player.currentTime / self.player.duration)
                     self.positionLabel.text = format(currentTime.doubleValue)
                 }
             default:
@@ -181,6 +180,6 @@ class ViewController: UIViewController {
         if state == .ended && playheadSlider.value < playheadSlider.maximumValue {
             state = .paused
         }
-        player.currentTime = TimeInterval(playheadSlider.value)
+        player.currentTime = player.duration * Double(playheadSlider.value)
     }
 }
