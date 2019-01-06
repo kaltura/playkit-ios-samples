@@ -82,18 +82,22 @@ class ViewController: UIViewController {
                 return "00:00:00"
             }
         }
-
-        // Observe media progress to update UI
-        self.player?.addPeriodicObserver(interval: 0.2, observeOn: DispatchQueue.main, using: { (pos) in
-            self.playheadSlider.value = Float(pos)
-            self.positionLabel.text = format(pos)
-        })
         
-        // Observe duration to update UI
-        self.player?.addObserver(self, events: [PlayerEvent.durationChanged], block: { (event) in
-            if let e = event as? PlayerEvent.DurationChanged, let d = e.duration as? TimeInterval {
-                self.playheadSlider.maximumValue = Float(d)
-                self.durationLabel.text = format(d)
+        // Observe duration and currentTime to update UI
+        self.player?.addObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.playheadUpdate], block: { (event) in
+            switch event {
+            case is PlayerEvent.DurationChanged:
+                if let playerEvent = event as? PlayerEvent, let d = playerEvent.duration as? TimeInterval {
+                    self.playheadSlider.maximumValue = Float(d)
+                    self.durationLabel.text = format(d)
+                }
+            case is PlayerEvent.PlayheadUpdate:
+                if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
+                    self.playheadSlider.value = currentTime.floatValue
+                    self.positionLabel.text = format(currentTime.doubleValue)
+                }
+            default:
+                break
             }
         })
 
@@ -111,10 +115,6 @@ class ViewController: UIViewController {
                 
             default:
                 break
-            }
-            if let e = event as? PlayerEvent.DurationChanged, let d = e.duration as? TimeInterval {
-                self.playheadSlider.maximumValue = Float(d)
-                self.durationLabel.text = format(d)
             }
         })
     }
