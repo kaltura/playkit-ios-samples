@@ -4,9 +4,20 @@ import PlayKitUtils
 import PlayKitKava
 import PlayKitProviders
 
+// VOD
 fileprivate let SERVER_BASE_URL = "https://cdnapisec.kaltura.com"
 fileprivate let PARTNER_ID = 1424501
 fileprivate let ENTRY_ID = "1_djnefl4e"
+
+// Live DVR
+//fileprivate let SERVER_BASE_URL = "https://cdnapisec.kaltura.com"
+//fileprivate let PARTNER_ID = 1740481
+//fileprivate let ENTRY_ID = "1_fdv46dba"
+
+// Live
+//fileprivate let SERVER_BASE_URL = "http://qa-apache-php7.dev.kaltura.com/"
+//fileprivate let PARTNER_ID = 1091
+//fileprivate let ENTRY_ID = "0_f8re4ujs"
 
 class ViewController: UIViewController {
 
@@ -69,30 +80,17 @@ class ViewController: UIViewController {
         
         self.player?.view = self.playerContainer
         
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute, .second]
-        formatter.unitsStyle = .positional
-        formatter.zeroFormattingBehavior = .pad
-        
-        func format(_ time: TimeInterval) -> String {
-            if let s = formatter.string(from: time) {
-                return s.count > 7 ? s : "0" + s
-            } else {
-                return "00:00:00"
-            }
-        }
-        
         // Observe duration and currentTime to update UI
         self.player?.addObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.playheadUpdate], block: { (event) in
             switch event {
             case is PlayerEvent.DurationChanged:
                 if let playerEvent = event as? PlayerEvent, let d = playerEvent.duration as? TimeInterval {
-                    self.durationLabel.text = format(d)
+                    self.durationLabel.text = self.format(d)
                 }
             case is PlayerEvent.PlayheadUpdate:
                 if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
                     self.playheadSlider.value = Float(self.player.currentTime / self.player.duration)
-                    self.positionLabel.text = format(currentTime.doubleValue)
+                    self.positionLabel.text = self.format(currentTime.doubleValue)
                 }
             default:
                 break
@@ -115,6 +113,19 @@ class ViewController: UIViewController {
                 break
             }
         })
+    }
+    
+    func format(_ time: TimeInterval) -> String {
+        let formatter = DateComponentsFormatter()
+        formatter.allowedUnits = [.hour, .minute, .second]
+        formatter.unitsStyle = .positional
+        formatter.zeroFormattingBehavior = .pad
+        
+        if let s = formatter.string(from: time) {
+            return s.count > 7 ? s : "0" + s
+        } else {
+            return "00:00:00"
+        }
     }
     
     func createPluginConfig() -> PluginConfig? {
@@ -144,6 +155,8 @@ class ViewController: UIViewController {
                 self.player.prepare(mediaConfig)      
                 
                 self.state = .paused
+                
+                self.playheadSlider.isEnabled = (me.mediaType != .live)
             }
         }
     }
@@ -166,8 +179,7 @@ class ViewController: UIViewController {
         case .paused:
             player.play()
         case .ended:
-            player.seek(to: 0)
-            player.play()
+            player.replay()
         }
     }
     
@@ -181,5 +193,6 @@ class ViewController: UIViewController {
             state = .paused
         }
         player.currentTime = player.duration * Double(playheadSlider.value)
+        positionLabel.text = format(player.currentTime)
     }
 }
