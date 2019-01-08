@@ -57,11 +57,26 @@ class ViewController: UIViewController {
         
         self.state = .idle
 
-        self.player = try! PlayKitManager.shared.loadPlayer(pluginConfig: createPluginConfig())
-        self.setupPlayer()
-        
-        entryId = ENTRY_ID
-        loadMedia()
+        // 2. Load the player
+        do {
+            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: createPluginConfig())
+            // 3. Register events if have ones.
+            // Event registeration must be after loading the player successfully to make sure events are added,
+            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+            self.addPlayerEventObservations()
+            
+            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+            self.setupPlayer()
+        } catch let e {
+            // Error loading the player
+            print("error:", e.localizedDescription)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Remove observers
+        self.removePlayerEventObservations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,6 +95,11 @@ class ViewController: UIViewController {
         
         self.player?.view = self.playerContainer
         
+        entryId = ENTRY_ID
+        loadMedia()
+    }
+    
+    func addPlayerEventObservations() {
         // Observe duration and currentTime to update UI
         self.player?.addObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.playheadUpdate], block: { (event) in
             switch event {
@@ -96,7 +116,7 @@ class ViewController: UIViewController {
                 break
             }
         })
-
+        
         // Observe play/pause to update UI
         self.player?.addObserver(self, events: [PlayerEvent.play, PlayerEvent.ended, PlayerEvent.pause], block: { (event) in
             switch event {
@@ -113,6 +133,14 @@ class ViewController: UIViewController {
                 break
             }
         })
+    }
+    
+    func removePlayerEventObservations() {
+        self.player?.removeObserver(self, events: [PlayerEvent.durationChanged,
+                                                   PlayerEvent.playheadUpdate,
+                                                   PlayerEvent.play,
+                                                   PlayerEvent.ended,
+                                                   PlayerEvent.pause])
     }
     
     func format(_ time: TimeInterval) -> String {
