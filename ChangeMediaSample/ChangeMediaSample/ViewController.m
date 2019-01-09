@@ -41,9 +41,8 @@
     [self setupPlayerWithMediaConfig:[self getDefaultMediaConfig]];
 }
 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 /*********************************/

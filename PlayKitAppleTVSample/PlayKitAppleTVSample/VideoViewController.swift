@@ -9,6 +9,7 @@
 import UIKit
 import KalturaNetKit
 import PlayKit
+import PlayKitYoubora
 
 class VideoViewController: UIViewController {
 
@@ -64,8 +65,8 @@ class VideoViewController: UIViewController {
             print("failed to create player!")
             return
         }
+        player.view = (self.view as! PlayerView)
         player.view?.backgroundColor = UIColor.black
-        player.view?.add(toContainer: self.view)
         self.player = player
         
         playerSettings.createMediaConfig() { [weak self] (mediaConfig) in
@@ -111,10 +112,10 @@ class VideoViewController: UIViewController {
     }
     
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        if presses.first?.type == UIPressType.menu && (self.playbackControlsView != nil || self.tracksControlsView != nil) {
+        if presses.first?.type == UIPress.PressType.menu && (self.playbackControlsView != nil || self.tracksControlsView != nil) {
             self.removePlaybackControlsView()
             self.removeTracksControlsView()
-        } else if presses.first?.type == UIPressType.playPause {
+        } else if presses.first?.type == UIPress.PressType.playPause {
             self.playPause()
         } else {
             super.pressesBegan(presses, with: event)
@@ -129,7 +130,7 @@ class VideoViewController: UIViewController {
     // MARK: - Actions
     /************************************************************/
     
-    func handleSwipeUp(gesture: UISwipeGestureRecognizer) {
+    @objc func handleSwipeUp(gesture: UISwipeGestureRecognizer) {
         if self.playbackControlsView == nil && self.tracksControlsView == nil {
             self.showPlaybackControlsView()
         } else if self.playbackControlsView == nil && self.tracksControlsView != nil {
@@ -137,7 +138,7 @@ class VideoViewController: UIViewController {
         }
     }
     
-    func handleSwipeDown(gesture: UISwipeGestureRecognizer) {
+    @objc func handleSwipeDown(gesture: UISwipeGestureRecognizer) {
         if self.playbackControlsView != nil {
             self.removePlaybackControlsView()
         } else if let tracks = self.tracks, self.tracksControlsView == nil {
@@ -164,7 +165,7 @@ class VideoViewController: UIViewController {
     // MARK: - Internal
     /************************************************************/
     
-    func playPause() {
+    @objc func playPause() {
         if self.player.rate == 0 {
             self.player.play()
             self.playPauseButton?.setTitle("Pause", for: .normal)

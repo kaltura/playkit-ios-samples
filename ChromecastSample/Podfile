@@ -2,35 +2,39 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-# Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-
 platform :ios, '9.0' # (define required version)
 
-PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
+# Uncomment to use a local copy of PlayKit
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_GOOGLECAST_LOCAL='../../playkit-ios-googlecast'
 
-target 'ChromecastSample' do
-if defined? PLAYKIT_LOCAL
-        pod 'PlayKit', :path => PLAYKIT_LOCAL
-        pod 'PlayKit/GoogleCastAddon', :path => PLAYKIT_LOCAL
+# Uncomment to use a git copy
+#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+#PLAYKIT_GOOGLECAST_GIT='https://github.com/kaltura/playkit-ios-googlecast.git'
+
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
+PLAYKIT_GOOGLECAST_BRANCH=ENV['PKGC_BRANCH'] || 'develop'
+
+abstract_target 'SharedPods' do
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
     else
-	    pod 'PlayKit' , :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-        pod 'PlayKit/GoogleCastAddon', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    if defined? PLAYKIT_GIT
+      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+      else
+      pod 'PlayKit'
     end
-end
-
-pre_install do |installer|
-    def installer.verify_no_static_framework_transitive_dependencies; end
-end
-
-post_install do |installer| 
-    installer.pods_project.targets.each do |target| 
-        target.build_configurations.each do |config| 
-            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
- 	    if target.name == 'PlayKit'
-	           config.build_settings['SWIFT_VERSION'] = '4.0'
-	    end
-        end 
-    end 
+  end
+  
+  if defined? PLAYKIT_GOOGLECAST_LOCAL
+    pod 'PlayKitGoogleCast', :path => PLAYKIT_GOOGLECAST_LOCAL
+    else
+    if defined? PLAYKIT_GOOGLECAST_GIT
+      pod 'PlayKitGoogleCast', :git => PLAYKIT_GOOGLECAST_GIT, :branch => PLAYKIT_GOOGLECAST_BRANCH
+      else
+      pod 'PlayKitGoogleCast'
+    end
+  end
+  
+  target 'ChromecastSample'
 end

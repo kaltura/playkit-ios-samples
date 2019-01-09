@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "PlayKit-Swift.h"
+#import "PlayKitYoubora-Swift.h"
 
 /*
  This sample will show you how to create a player with youbora plugin.
@@ -55,6 +56,10 @@
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
@@ -90,10 +95,11 @@
 
 - (AnalyticsConfig *)createYouboraPluginConfig {
     // account code is mandatory, make sure to put the correct one.
-    NSDictionary *youboraPluginParams = @{
-                                          @"accountCode": @"nicetest",
-                                          @"httpSecure": @YES,
-                                          @"parseHLS": @YES,
+    NSDictionary *youboraPluginParams = @{@"youboraConfig": @{
+                                                  @"accountCode": @"nicetest",
+                                                  @"httpSecure": @YES,
+                                                  @"parseHLS": @YES
+                                                  },
                                           @"media": @{
                                                   @"title": @"Sintel",
                                                   @"duration": @600

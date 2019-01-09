@@ -41,16 +41,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             print("error:", e.localizedDescription)
         }
     }
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 
     func preparePlayer() {
         // setup the player's view
         self.player?.view = self.playerContainer
-        self.playerContainer.sendSubview(toBack: self.player!.view!)
+        self.playerContainer.sendSubviewToBack(self.player!.view!)
         
-        let contentURL = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8"
+        let contentURL = "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
         
         // create media source and initialize a media entry with that source
-        let entryId = "apple_bipbop"
+        let entryId = "bipbop_16x9"
         let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
         // setup media entry
         let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
@@ -63,7 +67,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func handleTracks() {
-        player?.addObserver(self, events: [PlayerEvent.tracksAvailable, PlayerEvent.trackChanged], block: { [weak self] (event: PKEvent) in
+        player?.addObserver(self, events: [PlayerEvent.tracksAvailable, PlayerEvent.textTrackChanged, PlayerEvent.audioTrackChanged], block: { [weak self] (event: PKEvent) in
             if type(of: event) == PlayerEvent.tracksAvailable {
                 guard let this = self else { return }
                 
@@ -77,8 +81,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
                 
                 this.picker.reloadAllComponents()
-            } else if type(of: event) == PlayerEvent.trackChanged {
-                print("selected track: \(event.selectedTrack?.title ?? "")")
+            } else if type(of: event) == PlayerEvent.textTrackChanged {
+                print("selected text track: \(event.selectedTrack?.title ?? "")")
+            } else if type(of: event) == PlayerEvent.audioTrackChanged {
+                print("selected audio track: \(event.selectedTrack?.title ?? "")")
             }
         })
     }

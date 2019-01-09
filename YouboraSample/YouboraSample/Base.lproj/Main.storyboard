@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="608-xs-Xbx">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="608-xs-Xbx">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,20 +14,16 @@
         <scene sceneID="wQQ-TZ-5ud">
             <objects>
                 <viewController id="608-xs-Xbx" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kj0-at-joP"/>
-                        <viewControllerLayoutGuide type="bottom" id="fgw-np-7tq"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Fgb-vj-baC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdw-bg-hpR" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="670"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVS-2i-z4o">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="714" width="375" height="64"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="WGa-7R-M2l">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,25 +63,26 @@
                                         <constraint firstAttribute="trailing" secondItem="9cl-ML-FoM" secondAttribute="trailing" constant="8" id="ngG-1o-StJ"/>
                                     </constraints>
                                 </view>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="up2-9U-817">
                                         <variation key="heightClass=compact" constant="40"/>
                                     </constraint>
                                 </constraints>
-                                <blurEffect style="light"/>
+                                <blurEffect style="dark"/>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.059999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fdw-bg-hpR" firstAttribute="top" secondItem="Fgb-vj-baC" secondAttribute="top" id="690-n2-BsQ"/>
-                            <constraint firstAttribute="trailing" secondItem="NVS-2i-z4o" secondAttribute="trailing" id="Wjq-nt-dDA"/>
-                            <constraint firstItem="fdw-bg-hpR" firstAttribute="leading" secondItem="Fgb-vj-baC" secondAttribute="leading" id="Wqt-E1-Cdz"/>
-                            <constraint firstAttribute="trailing" secondItem="fdw-bg-hpR" secondAttribute="trailing" id="b12-eC-cMw"/>
-                            <constraint firstItem="fgw-np-7tq" firstAttribute="top" secondItem="NVS-2i-z4o" secondAttribute="bottom" id="fYK-LA-kE4"/>
-                            <constraint firstItem="NVS-2i-z4o" firstAttribute="leading" secondItem="Fgb-vj-baC" secondAttribute="leading" id="jAd-i2-c4R"/>
-                            <constraint firstItem="fgw-np-7tq" firstAttribute="top" secondItem="fdw-bg-hpR" secondAttribute="bottom" id="sN6-Ve-nyN"/>
+                            <constraint firstItem="NVS-2i-z4o" firstAttribute="top" secondItem="fdw-bg-hpR" secondAttribute="bottom" id="3un-D8-Jfy"/>
+                            <constraint firstItem="fdw-bg-hpR" firstAttribute="top" secondItem="IPt-76-8AX" secondAttribute="top" id="KHJ-Y0-zJZ"/>
+                            <constraint firstItem="IPt-76-8AX" firstAttribute="trailing" secondItem="NVS-2i-z4o" secondAttribute="trailing" id="Wjq-nt-dDA"/>
+                            <constraint firstItem="fdw-bg-hpR" firstAttribute="leading" secondItem="IPt-76-8AX" secondAttribute="leading" id="Wqt-E1-Cdz"/>
+                            <constraint firstItem="IPt-76-8AX" firstAttribute="trailing" secondItem="fdw-bg-hpR" secondAttribute="trailing" id="b12-eC-cMw"/>
+                            <constraint firstItem="IPt-76-8AX" firstAttribute="bottom" secondItem="NVS-2i-z4o" secondAttribute="bottom" id="fYK-LA-kE4"/>
+                            <constraint firstItem="NVS-2i-z4o" firstAttribute="leading" secondItem="IPt-76-8AX" secondAttribute="leading" id="jAd-i2-c4R"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="IPt-76-8AX"/>
                     </view>
                     <connections>
                         <outlet property="playerContainer" destination="fdw-bg-hpR" id="KZg-Kn-tal"/>
@@ -93,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xi5-VD-UVV" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="137.18140929535232"/>
+            <point key="canvasLocation" x="135.19999999999999" y="136.69950738916256"/>
         </scene>
     </scenes>
 </document>

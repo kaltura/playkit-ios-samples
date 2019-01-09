@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitProviders
 
 /*********************************/
 // Plugin registration should be done in App Delegate!!!
@@ -64,6 +65,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
@@ -101,7 +106,7 @@ class ViewController: UIViewController {
         }
         
         player.addObserver(self, events: [KalturaLiveStatsEvent.report]) { event in
-            print("received kaltura live stats event(buffer time): \(String(describing: event.kalturaLiveStatsBufferTime))")
+            print("received kaltura live stats event (buffer time): \(String(describing: event.kalturaLiveStatsBufferTime))")
         }
     }
     

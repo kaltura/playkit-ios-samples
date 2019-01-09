@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitYoubora
 
 /*
  This sample will show you how to create a player with youbora plugin.
@@ -52,6 +53,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
@@ -85,30 +90,32 @@ class ViewController: UIViewController {
     
     func createYouboraPluginConfig() -> AnalyticsConfig {
         // account code is mandatory, make sure to put the correct one.
-        let youboraPluginParams: [String: Any] = ["accountCode": "nicetest",
-                                                   "httpSecure": true,
-                                                   "parseHLS": true,
-                                                   "media": [
+        let youboraPluginParams: [String: Any] = ["youboraConfig": [
+                                                    "accountCode": "nicetest",
+                                                    "httpSecure": true,
+                                                    "parseHLS": true
+                                                    ],
+                                                  "media": [
                                                     "title": "Sintel",
                                                     "duration": 600
                                                     ],
-                                                   "properties": [
+                                                  "properties": [
                                                     "year": "2001",
                                                     "genre": "Fantasy",
                                                     "price": "free"
                                                     ],
-                                                   "network": [
+                                                  "network": [
                                                     "ip": "1.2.3.4"
                                                     ],
-                                                   "ads": [
+                                                  "ads": [
                                                     "adsExpected": true,
                                                     "campaign": "Ad campaign name"
                                                     ],
-                                                   "extraParams": [
+                                                  "extraParams": [
                                                     "param1": "Extra param 1 value",
                                                     "param2": "Extra param 2 value"
                                                     ]
-        ]
+                                                ]
         
         return AnalyticsConfig(params: youboraPluginParams)
     }

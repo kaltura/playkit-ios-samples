@@ -47,6 +47,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
@@ -109,5 +113,14 @@ class ViewController: UIViewController {
         
         print("playhead value:", slider.value)
         player.currentTime = player.duration * Double(slider.value)
+    }
+    
+    @IBAction func replayTouched(_ sender: Any) {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        player.replay()
     }
 }

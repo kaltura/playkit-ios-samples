@@ -1,0 +1,56 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+#inhibit_all_warnings!
+use_frameworks!
+
+platform :ios, '9.0' # (define required version)
+
+# Uncomment to use a local copy of PlayKit
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
+#PLAYKIT_KAVA_LOCAL='../../playkit-ios-kava'
+
+# Uncomment to use a git copy
+#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+#PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
+#PLAYKIT_KAVA_GIT='https://github.com/kaltura/playkit-ios-kava.git'
+
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
+PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
+PLAYKIT_KAVA_BRANCH=ENV['PK_KAVA_BRANCH'] || 'develop'
+
+abstract_target 'SharedPods' do
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
+    else
+    if defined? PLAYKIT_GIT
+      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+      else
+      pod 'PlayKit'
+    end
+  end
+  
+  if defined? PLAYKIT_PROVIDERS_LOCAL
+    pod 'PlayKitProviders', :path => PLAYKIT_PROVIDERS_LOCAL
+    else
+    if defined? PLAYKIT_PROVIDERS_GIT
+      pod 'PlayKitProviders', :git => PLAYKIT_PROVIDERS_GIT, :branch => PLAYKIT_PROVIDERS_BRANCH
+      else
+      pod 'PlayKitProviders'
+    end
+  end
+  
+  if defined? PLAYKIT_KAVA_LOCAL
+    pod 'PlayKitKava', :path => PLAYKIT_KAVA_LOCAL
+    else
+    if defined? PLAYKIT_KAVA_GIT
+      pod 'PlayKitKava', :git => PLAYKIT_KAVA_GIT, :branch => PLAYKIT_KAVA_BRANCH
+      else
+      pod 'PlayKitKava'
+    end
+  end
+  
+  target 'KavaPluginSample'
+  
+end
+

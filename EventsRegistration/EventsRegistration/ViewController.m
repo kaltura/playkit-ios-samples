@@ -10,7 +10,7 @@
 #import "PlayKit-Swift.h"
 
 @interface ViewController ()
-
+    
 @property (strong, nonatomic) id<Player> player;
 @property (strong, nonatomic) NSTimer *playheadTimer;
 @property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
@@ -19,11 +19,11 @@
 @end
 
 @implementation ViewController
-   
+    
 /*********************************/
 #pragma mark - LifeCycle
 /*********************************/
-
+    
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.playheadSlider.continuous = NO;
@@ -37,15 +37,15 @@
     // Prepare Player
     [self preparePlayer:error];
 }
- 
-- (void)viewDidLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    self.player.view.frame = self.playerContainer.bounds;
+    
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
     
 /*********************************/
 #pragma mark - Player Setup
 /*********************************/
+    
 - (NSError *)loadPlayer {
     // load the player
     NSError *error = nil;
@@ -53,7 +53,7 @@
     
     return error;
 }
-
+    
 - (void)preparePlayer:(NSError *)error {
     self.player.view = self.playerContainer;
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
@@ -76,32 +76,33 @@
         NSLog(@"error:: %@",error.description);
     }
 }
-
+    
 /*********************************/
 #pragma mark - Events Registration
 /*********************************/
+    
 - (void)registerPlayerEvents {
     [self registerPlayEvent];
     [self registerDurationChangedEvent];
     [self registerPlayerEventStateChangedEvent];
     [self registerErrorEvent];
 }
-
+    
 // Handle basic event (Play, Pause, CanPlay ..)
 - (void)registerPlayEvent {
     [self.player addObserver:self
                       events:@[PlayerEvent.playing, PlayerEvent.pause]
                        block:^(PKEvent * _Nonnull event) {
-        NSLog(@"Several Events Callback");
-    }];
+                           NSLog(@"Several Events Callback");
+                       }];
     
     [self.player addObserver:self
-                      event:PlayerEvent.playing
+                       event:PlayerEvent.playing
                        block:^(PKEvent * _Nonnull event) {
-        NSLog(@"Playing Event");
-    }];
+                           NSLog(@"Playing Event");
+                       }];
 }
-
+    
 // Handle Duration Changes
 - (void)registerDurationChangedEvent {
     [self.player addObserver:self
@@ -113,7 +114,7 @@
                            }
                        }];
 }
-
+    
 // Handle State Changes
 - (void)registerPlayerEventStateChangedEvent {
     [self.player addObserver:self
@@ -124,7 +125,7 @@
                            NSLog(@"State Chnaged Event:: oldState: %d | newState: %d", (int)oldState, (int)newState);
                        }];
 }
-
+    
 // Handle Player Errors
 - (void)registerErrorEvent {
     [self.player addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
@@ -134,11 +135,11 @@
         }
     }];
 }
-
+    
 /*********************************/
 #pragma mark - Actions
 /*********************************/
-
+    
 - (IBAction)playTouched:(UIButton *)sender {
     if(!self.player.isPlaying) {
         self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
@@ -158,7 +159,7 @@
     NSLog(@"playhead value: %f", sender.value);
     self.player.currentTime = self.player.duration * sender.value;
 }
-   
+    
 - (void)playheadUpdate {
     self.playheadSlider.value = self.player.currentTime / self.player.duration;
 }

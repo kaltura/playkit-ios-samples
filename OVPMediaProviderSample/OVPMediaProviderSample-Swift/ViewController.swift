@@ -8,6 +8,8 @@
 
 import UIKit
 import PlayKit
+import PlayKitUtils
+import PlayKitProviders
 
 /*
  This sample will show you how to create a player with basic functionality.
@@ -47,6 +49,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 /************************/
 // MARK: - Player Setup
 /***********************/
@@ -57,7 +63,7 @@ class ViewController: UIViewController {
         let serverURL = "https://cdnapisec.kaltura.com"
         let partnerId: Int64 = 1424501 // put your partner id here
         // in real app you will need to provide a ks if your app need it, if not keep empty for anonymous session.
-        let sessionProvider = SimpleOVPSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:nil )
+        let sessionProvider = SimpleSessionProvider(serverURL:serverURL, partnerId:partnerId, ks:nil )
         let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
         mediaProvider.entryId = "1_djnefl4e"
         mediaProvider.loadMedia { (mediaEntry, error) in
@@ -82,10 +88,9 @@ class ViewController: UIViewController {
         }
         
         if !(player.isPlaying) {
-            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (timer) in
+            self.playheadTimer = PKTimer.every(0.5) { (timer) in
                 self.playheadSlider.value = Float(player.currentTime / player.duration)
-            })
-            
+            }
             player.play()
         }
     }

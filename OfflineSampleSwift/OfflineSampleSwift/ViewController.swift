@@ -8,19 +8,17 @@
 
 import UIKit
 import PlayKit
-
+import PlayKitProviders
 
 class ViewController: UIViewController {
     
     var player: Player?
-    @IBOutlet var playerContainer: UIView!
-    var playerView: PlayerView!
+    @IBOutlet weak var playerContainer: PlayerView!
     
     let simpleStorage = DefaultLocalDataStore.defaultDataStore()
     
-    // The sample entries are initialized asynchronously by loadSampleEntries().
+    // The sample entries are initialized asynchronously by loadSampleEntries(). 
     var sampleEntries = [PKMediaEntry]()
-    
     
     // Use a LocalAssetsManager to handle local (offline, downloaded) assets.
     lazy var assetsManager: LocalAssetsManager = {
@@ -40,6 +38,16 @@ class ViewController: UIViewController {
         
         NotificationCenter.default.addObserver(forName: AssetDownloadStateChangedNotification, object: nil, queue: OperationQueue.main) { (notif) in
             print("AssetDownloadProgressNotification", notif)
+            
+            guard let state = notif.userInfo?["AssetDownloadStateKey"] as? String else { return }
+            
+            if state == "downloaded"{
+                let alert = UIAlertController(title: "Download Progress", message: state, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: { (alert) in
+                    self.dismiss(animated: true, completion: nil)
+                }))
+                self.present(alert, animated: true, completion: nil)
+            }
         }
         
         let pluginConfig = PluginConfig(config: [:])
@@ -47,15 +55,8 @@ class ViewController: UIViewController {
         
         loadSampleEntries()
         
-        self.playerView = PlayerView.init(frame: playerContainer.bounds)
-        playerContainer.addSubview(playerView)
-        player.view = self.playerView
-        
         self.player = player
-    }
-    
-    override func viewDidLayoutSubviews() {
-        self.player?.view?.frame = self.playerContainer.bounds
+        self.player?.view = self.playerContainer
     }
     
     override func didReceiveMemoryWarning() {
@@ -114,15 +115,15 @@ class ViewController: UIViewController {
     func loadSampleEntries() {
         // Use OVPMediaProvider to load a hardcoded entry.
         
-        let serverURL = "http://cdnapi.kaltura.com"
+        let serverURL = "https://cdnapisec.kaltura.com"
 
         let params: [(partnerId: Int, entryId: String)] = [
             (2215841, "1_9bwuo813"),    // Clear HLS
-            (2222401, "1_z9tkt5uz"),    // HLS with FairPlay DRM
+            (2222401, "1_q81a5nbp"),    // HLS with FairPlay DRM
         ]
         
         for item in params {
-            let session = SimpleOVPSessionProvider(serverURL: serverURL, partnerId: Int64(item.partnerId), ks: nil)
+            let session = SimpleSessionProvider(serverURL: serverURL, partnerId: Int64(item.partnerId), ks: nil)
             OVPMediaProvider()
                 .set(sessionProvider: session)
                 .set(entryId: item.entryId)

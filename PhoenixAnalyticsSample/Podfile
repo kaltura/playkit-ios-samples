@@ -5,44 +5,37 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-# PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 
-PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'master'
+# Uncomment to use a git copy
+#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+#PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
 
-target 'PhoenixAnalyticsSample' do
-    if defined? PLAYKIT_LOCAL
-        pod "PlayKit" , :path => PLAYKIT_LOCAL
-    	pod 'PlayKit/PhoenixPlugin', :path => PLAYKIT_LOCAL
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
+PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
+
+abstract_target 'SharedPods' do
+  if defined? PLAYKIT_LOCAL
+    pod 'PlayKit', :path => PLAYKIT_LOCAL
     else
-	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    	pod 'PlayKit/PhoenixPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    if defined? PLAYKIT_GIT
+      pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+      else
+      pod 'PlayKit'
     end
-end
-
-target 'PhoenixAnalyticsSample-Swift' do
-    if defined? PLAYKIT_LOCAL
-        pod "PlayKit" , :path => PLAYKIT_LOCAL
-    	pod 'PlayKit/PhoenixPlugin', :path => PLAYKIT_LOCAL
+  end
+  
+  if defined? PLAYKIT_PROVIDERS_LOCAL
+    pod 'PlayKitProviders', :path => PLAYKIT_PROVIDERS_LOCAL
     else
-	    pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
-    	pod 'PlayKit/PhoenixPlugin', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
+    if defined? PLAYKIT_PROVIDERS_GIT
+      pod 'PlayKitProviders', :git => PLAYKIT_PROVIDERS_GIT, :branch => PLAYKIT_PROVIDERS_BRANCH
+      else
+      pod 'PlayKitProviders'
     end
+  end
+  
+  target 'PhoenixAnalyticsSample'
+  target 'PhoenixAnalyticsSample-Swift'
 end
-
-pre_install do |installer|
-    def installer.verify_no_static_framework_transitive_dependencies; end
-end
-
-
-post_install do |installer| 
-    installer.pods_project.targets.each do |target| 
-        target.build_configurations.each do |config| 
-            config.build_settings['ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES'] = 'NO'
- 	    if target.name == 'PlayKit'
-	           config.build_settings['SWIFT_VERSION'] = '4.0'
-	    end
-        end 
-    end 
-end
-

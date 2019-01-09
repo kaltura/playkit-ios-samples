@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "PlayKit-Swift.h"
+#import "PlayKitYoubora-Swift.h"
 
 @interface AppDelegate ()
 
