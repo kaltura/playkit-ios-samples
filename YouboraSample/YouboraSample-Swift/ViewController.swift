@@ -90,32 +90,31 @@ class ViewController: UIViewController {
     
     func createYouboraPluginConfig() -> AnalyticsConfig {
         // account code is mandatory, make sure to put the correct one.
-        let youboraPluginParams: [String: Any] = ["youboraConfig": [
-                                                    "accountCode": "nicetest",
-                                                    "httpSecure": true,
-                                                    "parseHLS": true
-                                                    ],
-                                                  "media": [
-                                                    "title": "Sintel",
-                                                    "duration": 600
-                                                    ],
-                                                  "properties": [
-                                                    "year": "2001",
-                                                    "genre": "Fantasy",
-                                                    "price": "free"
-                                                    ],
-                                                  "network": [
-                                                    "ip": "1.2.3.4"
-                                                    ],
-                                                  "ads": [
-                                                    "adsExpected": true,
-                                                    "campaign": "Ad campaign name"
-                                                    ],
-                                                  "extraParams": [
-                                                    "param1": "Extra param 1 value",
-                                                    "param2": "Extra param 2 value"
-                                                    ]
-                                                ]
+        let youboraPluginParams: [String: Any] = [
+            "accountCode": "nicetest",
+            "httpSecure": true,
+            "parseHLS": true,
+            "media": [
+                "title": "Sintel",
+                "duration": 600
+            ],
+            "properties": [
+                "year": "2001",
+                "genre": "Fantasy",
+                "price": "free"
+            ],
+            "network": [
+                "ip": "1.2.3.4"
+            ],
+            "ads": [
+                "adsExpected": true,
+                "campaign": "Ad campaign name"
+            ],
+            "extraParams": [
+                "param1": "Extra param 1 value",
+                "param2": "Extra param 2 value"
+            ]
+        ]
         
         return AnalyticsConfig(params: youboraPluginParams)
     }

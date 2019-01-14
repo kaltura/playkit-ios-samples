@@ -95,11 +95,9 @@
 
 - (AnalyticsConfig *)createYouboraPluginConfig {
     // account code is mandatory, make sure to put the correct one.
-    NSDictionary *youboraPluginParams = @{@"youboraConfig": @{
-                                                  @"accountCode": @"nicetest",
-                                                  @"httpSecure": @YES,
-                                                  @"parseHLS": @YES
-                                                  },
+    NSDictionary *youboraPluginParams = @{@"accountCode": @"nicetest",
+                                          @"httpSecure": @YES,
+                                          @"parseHLS": @YES,
                                           @"media": @{
                                                   @"title": @"Sintel",
                                                   @"duration": @600
