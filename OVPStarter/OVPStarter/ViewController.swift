@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     var entryId: String?
     var ks: String?
     var player: Player! // Created in viewDidLoad
+    
     var state: State = .idle {
         didSet {
             let title: String
@@ -50,27 +51,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var positionLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
-    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.state = .idle
-
+        self.playPauseButton.isEnabled = false
+        self.playheadSlider.isEnabled = false
+        
         // 2. Load the player
-        do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: createPluginConfig())
-            // 3. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            self.addPlayerEventObservations()
-            
-            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.setupPlayer()
-        } catch let e {
-            // Error loading the player
-            print("error:", e.localizedDescription)
-        }
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: createPluginConfig())
+        // 3. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        
+        self.addPlayerEventObservations()
+        
+        // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        self.setupPlayer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -101,7 +100,7 @@ class ViewController: UIViewController {
     
     func addPlayerEventObservations() {
         // Observe duration and currentTime to update UI
-        self.player?.addObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.playheadUpdate], block: { (event) in
+        self.player?.addObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.playheadUpdate]) { (event) in
             switch event {
             case is PlayerEvent.DurationChanged:
                 if let playerEvent = event as? PlayerEvent, let d = playerEvent.duration as? TimeInterval {
@@ -115,32 +114,56 @@ class ViewController: UIViewController {
             default:
                 break
             }
-        })
+        }
         
         // Observe play/pause to update UI
-        self.player?.addObserver(self, events: [PlayerEvent.play, PlayerEvent.ended, PlayerEvent.pause], block: { (event) in
+        self.player?.addObserver(self, events: [PlayerEvent.canPlay,
+                                                PlayerEvent.play,
+                                                PlayerEvent.playing,
+                                                PlayerEvent.ended,
+                                                PlayerEvent.pause,
+                                                PlayerEvent.seeking,
+                                                PlayerEvent.seeked]) { (event) in
             switch event {
+            case is PlayerEvent.CanPlay:
+                self.activityIndicator.stopAnimating()
             case is PlayerEvent.Play, is PlayerEvent.Playing:
                 self.state = .playing
-                
+                self.activityIndicator.stopAnimating()
             case is PlayerEvent.Pause:
                 self.state = .paused
-                
             case is PlayerEvent.Ended:
                 self.state = .ended
-                
+            case is PlayerEvent.Seeking:
+                self.activityIndicator.startAnimating()
+            case is PlayerEvent.Seeked:
+                if self.state == .paused {
+                    self.activityIndicator.stopAnimating()
+                }
             default:
                 break
             }
-        })
+        }
+        
+        self.player.addObserver(self, events: [PlayerEvent.error]) { (event) in
+            self.activityIndicator.stopAnimating()
+            let alertController = UIAlertController.init(title: "An error has occurred", message: event.error?.description, preferredStyle: UIAlertController.Style.alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+            self.show(alertController, sender: self)
+        }
     }
     
     func removePlayerEventObservations() {
         self.player?.removeObserver(self, events: [PlayerEvent.durationChanged,
                                                    PlayerEvent.playheadUpdate,
+                                                   PlayerEvent.canPlay,
                                                    PlayerEvent.play,
+                                                   PlayerEvent.playing,
                                                    PlayerEvent.ended,
-                                                   PlayerEvent.pause])
+                                                   PlayerEvent.pause,
+                                                   PlayerEvent.seeking,
+                                                   PlayerEvent.seeked,
+                                                   PlayerEvent.error])
     }
     
     func format(_ time: TimeInterval) -> String {
@@ -183,8 +206,18 @@ class ViewController: UIViewController {
                 self.player.prepare(mediaConfig)      
                 
                 self.state = .paused
-                
+                self.playPauseButton.isEnabled = true
                 self.playheadSlider.isEnabled = (me.mediaType != .live)
+            } else {
+                self.playPauseButton.isEnabled = false
+                let alertController = UIAlertController(title: "An error has occurred",
+                                                        message: "The media could not be loaded",
+                                                        preferredStyle: UIAlertController.Style.alert)
+                alertController.addAction(UIAlertAction(title: "try again", style: UIAlertAction.Style.cancel, handler: { (action) in
+                    self.loadMedia()
+                }))
+
+                self.show(alertController, sender: self)
             }
         }
     }
@@ -204,10 +237,13 @@ class ViewController: UIViewController {
             player.pause()
         case .idle:
             player.play()
+            activityIndicator.startAnimating()
         case .paused:
             player.play()
+            activityIndicator.startAnimating()
         case .ended:
             player.replay()
+            activityIndicator.startAnimating()
         }
     }
     
