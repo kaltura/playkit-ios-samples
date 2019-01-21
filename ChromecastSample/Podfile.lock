@@ -11,9 +11,9 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.7.0):
-    - PlayKit/Core (= 3.7.0)
-  - PlayKit/Core (3.7.0):
+  - PlayKit (3.8.0):
+    - PlayKit/Core (= 3.8.0)
+  - PlayKit/Core (3.8.0):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
@@ -52,7 +52,7 @@ SPEC CHECKSUMS:
   google-cast-sdk: 792980f4fa5afd4f9b91f41d582cc75251648f3a
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
+  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
   PlayKitGoogleCast: 7a4cca755a943c1cc0196457d6eac94264d5ce37
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
@@ -62,4 +62,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: af61dd44cdeae7445096b769923e26bf8142fd98
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3

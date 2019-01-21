@@ -258,7 +258,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample/Pods-SharedPods-KalturaLiveStatsSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample/Pods-SharedPods-KalturaLiveStatsSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -281,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample/Pods-SharedPods-KalturaLiveStatsSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample/Pods-SharedPods-KalturaLiveStatsSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		1BDF9D0784072557E99950F3 /* [CP] Check Pods Manifest.lock */ = {
@@ -326,7 +326,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample-Swift/Pods-SharedPods-KalturaLiveStatsSample-Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample-Swift/Pods-SharedPods-KalturaLiveStatsSample-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -349,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample-Swift/Pods-SharedPods-KalturaLiveStatsSample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KalturaLiveStatsSample-Swift/Pods-SharedPods-KalturaLiveStatsSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

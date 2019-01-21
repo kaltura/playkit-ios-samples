@@ -125,26 +125,20 @@
         PluginConfig *pluginConfig = [self createPluginConfig:video]; // 2
         
         // 1. Load the player
-        NSError *error = nil;
-        self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig error:&error];
+        self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig];
         self.player.delegate = self;
-        // make sure player loaded
-        if (!error) {
-            // 2. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            
-            // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            //[self preparePlayer];
-            destVC.player = self.player;
-            destVC.mediaConfig = [self firstMediaConfig];
-            [self.player addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
-                event.error;
-            }];
-        } else {
-            NSLog(@"%@", error.description);
-            // error loading the player
-        }
+        // 2. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        [self.player addObserver:self events:@[PlayerEvent.error] block:^(PKEvent * _Nonnull event) {
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"An error has occurred" message:event.error.description preferredStyle:UIAlertControllerStyleAlert];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleCancel handler:nil]];
+        }];
+        
+        // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        //[self preparePlayer];
+        destVC.player = self.player;
+        destVC.mediaConfig = [self firstMediaConfig];
     }
 }
 

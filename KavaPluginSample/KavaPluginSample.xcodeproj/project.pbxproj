@@ -169,7 +169,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -194,7 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-KavaPluginSample/Pods-SharedPods-KavaPluginSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9EB65D062C9FB3B913B0872C /* [CP] Check Pods Manifest.lock */ = {

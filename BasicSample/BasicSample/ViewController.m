@@ -37,19 +37,14 @@
     self.playheadSlider.continuous = NO;
     
     // 1. Load the player
-    NSError *error = nil;
-    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:nil error:&error];
-    // make sure player loaded
-    if (!error) {
-        // 2. Register events if have ones.
-        // Event registeration must be after loading the player successfully to make sure events are added,
-        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-        
-        // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-        [self preparePlayer];
-    } else {
-        // error loading the player
-    }
+    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:nil];
+    
+    // 2. Register events if have ones.
+    // Event registeration must be after loading the player successfully to make sure events are added,
+    // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+    
+    // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+    [self preparePlayer];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {

@@ -45,17 +45,12 @@ class ViewController: UIViewController, PlayerDelegate {
         self.playheadSlider.isContinuous = false;
         
         // 1. Load the player
-        do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-            // 2. Set delegate
-            self.player?.delegate = self
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+        // 2. Set delegate
+        self.player?.delegate = self
 
-            // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.preparePlayer()
-        } catch let e {
-            // error loading the player
-            print("error:", e.localizedDescription)
-        }
+        // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        self.preparePlayer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,7 +80,7 @@ class ViewController: UIViewController, PlayerDelegate {
             let entryID = mediaData?.entryId
             else { return }
         
-        let sessionProvider = SimpleOVPSessionProvider(serverURL: serverURL, partnerId: Int64(partnerId), ks: nil)
+        let sessionProvider = SimpleSessionProvider(serverURL: serverURL, partnerId: Int64(partnerId), ks: nil)
         let mediaProvider: OVPMediaProvider = OVPMediaProvider(sessionProvider)
         
         mediaProvider.entryId = entryID

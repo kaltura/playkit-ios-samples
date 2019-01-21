@@ -7,26 +7,26 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.7.0):
-    - PlayKit/Core (= 3.7.0)
-  - PlayKit/AnalyticsCommon (3.7.0):
+  - PlayKit (3.8.0):
+    - PlayKit/Core (= 3.8.0)
+  - PlayKit/AnalyticsCommon (3.8.0):
     - PlayKit/Core
-  - PlayKit/Core (3.7.0):
+  - PlayKit/Core (3.8.0):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
-  - PlayKitProviders (1.0.1):
+  - PlayKitProviders (1.1.0):
     - KalturaNetKit
-    - PlayKit/AnalyticsCommon (~> 3.7.0)
+    - PlayKit/AnalyticsCommon (~> 3.8.0)
     - PlayKitUtils
   - PlayKitUtils (0.1.6)
   - PlayKitVR (1.0.3):
     - MetalScope (= 0.16.0)
     - PlayKit/Core
-  - PlayKitYoubora (1.0.1):
-    - PlayKit/AnalyticsCommon (~> 3.7.0)
+  - PlayKitYoubora (1.1.0):
+    - PlayKit/AnalyticsCommon (~> 3.8.0)
     - Youbora-AVPlayer/dynamic (= 5.4.18)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
@@ -39,7 +39,7 @@ PODS:
   - Youbora-YouboraLib/dynamic (5.4.4)
 
 DEPENDENCIES:
-  - MetalScope (from `../../MetalScope`)
+  - MetalScope (from `https://github.com/kaltura/MetalScope.git`, branch `swift-4.2`)
   - PlayKit
   - PlayKitProviders
   - PlayKitVR
@@ -62,23 +62,29 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   MetalScope:
-    :path: "../../MetalScope"
+    :branch: swift-4.2
+    :git: https://github.com/kaltura/MetalScope.git
+
+CHECKOUT OPTIONS:
+  MetalScope:
+    :commit: 72afc97b5d40318b7d98f4d08e0df868b000b89e
+    :git: https://github.com/kaltura/MetalScope.git
 
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   MetalScope: 0453bf074a48927830018478cf7bc72f76645e5d
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
-  PlayKitProviders: a2105f245762bd3c005f9da785926f6e53b8b118
+  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
+  PlayKitProviders: b0a8d8b001d4ea5c4d0fdad70e4cf0556423b645
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   PlayKitVR: 13d6abe2179509de304b361d23ad99116079c1f4
-  PlayKitYoubora: 67e80416c20271ab9eb73ef147efb29d9ebc3ac6
+  PlayKitYoubora: 250e047530e27256df616f9dcf1ec43d19d4a365
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 7752fe974dcad18d9dce1e8479a66ece56f2d3bc
+PODFILE CHECKSUM: c6d29372674ed6889c079bda0d25b4d8d3f122d0
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3

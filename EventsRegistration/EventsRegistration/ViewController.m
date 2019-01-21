@@ -29,13 +29,13 @@
     self.playheadSlider.continuous = NO;
     
     // Load Player
-    NSError *error = [self loadPlayer];
+    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
     // Register Player Events
     // >Note: Make sure to register befor `prepare` is called
     //        Otherwise you will miss events
     [self registerPlayerEvents];
     // Prepare Player
-    [self preparePlayer:error];
+    [self preparePlayer];
 }
     
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -46,15 +46,7 @@
 #pragma mark - Player Setup
 /*********************************/
     
-- (NSError *)loadPlayer {
-    // load the player
-    NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
-    
-    return error;
-}
-    
-- (void)preparePlayer:(NSError *)error {
+- (void)preparePlayer {
     self.player.view = self.playerContainer;
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"];
     
@@ -68,13 +60,8 @@
     // create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
-    if (!error) {
-        // prepare the player
-        [self.player prepare:mediaConfig];
-    } else {
-        // error loading the player
-        NSLog(@"error:: %@",error.description);
-    }
+    // prepare the player
+    [self.player prepare:mediaConfig];
 }
     
 /*********************************/

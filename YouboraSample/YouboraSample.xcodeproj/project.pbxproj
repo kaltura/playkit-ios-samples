@@ -258,7 +258,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -285,7 +285,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-YouboraSample/Pods-SharedPods-YouboraSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		481E198182B781C2254CA390 /* [CP] Embed Pods Frameworks */ = {
@@ -294,7 +294,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -321,7 +321,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-YouboraSample-Swift/Pods-SharedPods-YouboraSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DA6D72395D3AE25067EE1039 /* [CP] Check Pods Manifest.lock */ = {

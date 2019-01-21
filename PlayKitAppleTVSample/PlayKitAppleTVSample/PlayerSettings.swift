@@ -54,7 +54,7 @@ class PlayerSettings {
             }
             dataTask.resume()*/
             
-            let sessionProvider = SimpleOVPSessionProvider(serverURL: "https://cdnapisec.kaltura.com", partnerId: 1851571, ks: nil)
+            let sessionProvider = SimpleSessionProvider(serverURL: "https://cdnapisec.kaltura.com", partnerId: 1851571, ks: nil)
             let mediaProvider = OVPMediaProvider(sessionProvider)
             mediaProvider.entryId = "0_pl5lbfo0"
             mediaProvider.loadMedia() { (mediaEntry, error) in

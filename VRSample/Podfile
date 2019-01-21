@@ -10,7 +10,7 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 #PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 #PLAYKIT_VR_LOCAL='../../playkit-ios-vr'
-METALSCOPE_LOCAL='../../MetalScope'
+#METALSCOPE_LOCAL='../../MetalScope'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'

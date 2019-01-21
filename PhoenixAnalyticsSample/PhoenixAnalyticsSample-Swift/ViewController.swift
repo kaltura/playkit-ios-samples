@@ -10,6 +10,20 @@ import UIKit
 import PlayKit
 import PlayKitProviders
 
+// VOD
+//fileprivate let SERVER_BASE_URL = "http://api-preprod.ott.kaltura.com/v4_5/api_v3"
+//fileprivate let PARTNER_ID = 198
+//fileprivate let ENTRY_ID = "259153"
+//fileprivate let ASSET_TYPE = AssetType.media
+//fileprivate let PLAYBACK_CONTEXT_TYPE = PlaybackContextType.playback
+
+// Live
+fileprivate let SERVER_BASE_URL = "https://api-preprod.ott.kaltura.com/v5_1_0/api_v3"
+fileprivate let PARTNER_ID = 198
+fileprivate let ENTRY_ID = "277170"
+fileprivate let ASSET_TYPE = AssetType.media
+fileprivate let PLAYBACK_CONTEXT_TYPE = PlaybackContextType.playback
+
 /*********************************/
 // Plugin registration should be done in App Delegate!!!
 // Don't forget to add it in your project.
@@ -39,25 +53,22 @@ class ViewController: UIViewController {
         let pluginConfig: PluginConfig = self.createPluginConfig()
         
         // 2. Load the player
-        do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-            // 3. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            self.addKalturaLiveStatsObservations()
-            
-            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.preparePlayer()
-        } catch let e {
-            // Error loading the player
-            print("error:", e.localizedDescription)
-        }
+        self.player =  PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        // 3. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        self.addKalturaLiveStatsObservations()
+        self.addPlayerEventObservations()
+        
+        // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        self.preparePlayer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         // Remove observers
         self.removeAnalyticsObservations()
+        self.removePlayerEventObservations()
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,16 +88,14 @@ class ViewController: UIViewController {
         self.player?.view = self.playerContainer
         
         // Create a session provider
-        let sessionProvider = SimpleSessionProvider(serverURL: "http://api-preprod.ott.kaltura.com/v4_5/api_v3/",
-                                 partnerId: 198,
-                                 ks: nil)
+        let sessionProvider = SimpleSessionProvider(serverURL: SERVER_BASE_URL, partnerId: Int64(PARTNER_ID), ks: nil)
         
         // Create the media provider
         let phoenixMediaProvider = PhoenixMediaProvider()
-        phoenixMediaProvider.set(assetId: "259153")
-        phoenixMediaProvider.set(type: AssetType.media)
+        phoenixMediaProvider.set(assetId: ENTRY_ID)
+        phoenixMediaProvider.set(type: ASSET_TYPE)
         phoenixMediaProvider.set(formats: ["Mobile_Devices_Main_SD"])
-        phoenixMediaProvider.set(playbackContextType: PlaybackContextType.playback)
+        phoenixMediaProvider.set(playbackContextType: PLAYBACK_CONTEXT_TYPE)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
         
         phoenixMediaProvider.loadMedia { (pkMediaEntry, error) in
@@ -97,7 +106,28 @@ class ViewController: UIViewController {
             
             // Prepare the player
             self.player?.prepare(mediaConfig)
+            
+            self.playheadSlider.isEnabled = mediaEntry.mediaType != .live
         }
+    }
+    
+    func addPlayerEventObservations() {
+        // Observe PlayheadUpdate to update UI
+        self.player?.addObserver(self, events: [PlayerEvent.playheadUpdate], block: { (event) in
+            guard let player = self.player else { return }
+            switch event {
+            case is PlayerEvent.PlayheadUpdate:
+                if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
+                    self.playheadSlider.value = Float(currentTime.doubleValue / player.duration)
+                }
+            default:
+                break
+            }
+        })
+    }
+    
+    func removePlayerEventObservations() {
+        self.player?.removeObserver(self, events: [PlayerEvent.playheadUpdate])
     }
     
 /************************/
@@ -151,10 +181,6 @@ class ViewController: UIViewController {
         }
         
         if !(player.isPlaying) {
-            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (timer) in
-                self.playheadSlider.value = Float(player.currentTime / player.duration)
-            })
-            
             player.play()
         }
     }

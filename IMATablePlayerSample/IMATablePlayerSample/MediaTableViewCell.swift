@@ -54,11 +54,7 @@ class MediaTableViewCell: UITableViewCell, PlayerDelegate {
     
     func setupPlayer() {
         if player == nil {
-            do {
-                self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-            } catch {
-                print("error:", error.localizedDescription)
-            }
+            self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
             self.player?.delegate = self
             
             self.player?.addObserver(self, events: [PlayerEvent.error, PluginEvent.error, PlayerEvent.errorLog], block: { (event) in

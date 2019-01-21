@@ -67,23 +67,19 @@ class MediaPlayerViewController: UIViewController {
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
         mediaProgressSlider.value = 0.0
         
-        do {
-            player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-            registerPlayerEvents()
-            player!.prepare(mediaConfig)
-            player?.view = playerView
-            
-            if selectedSubtitle.count > 0 {
-                player?.settings.trackSelection.textSelectionMode = .selection
-                player?.settings.trackSelection.textSelectionLanguage = selectedSubtitle
-            }
-            
-            if selectedAudio.count > 0 {
-                player?.settings.trackSelection.audioSelectionMode = .selection
-                player?.settings.trackSelection.audioSelectionLanguage = selectedAudio
-            }
-        } catch let e {
-            print("Error loading the player: \(e)")
+        player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+        registerPlayerEvents()
+        player!.prepare(mediaConfig)
+        player?.view = playerView
+        
+        if selectedSubtitle.count > 0 {
+            player?.settings.trackSelection.textSelectionMode = .selection
+            player?.settings.trackSelection.textSelectionLanguage = selectedSubtitle
+        }
+        
+        if selectedAudio.count > 0 {
+            player?.settings.trackSelection.audioSelectionMode = .selection
+            player?.settings.trackSelection.audioSelectionLanguage = selectedAudio
         }
     }
     
