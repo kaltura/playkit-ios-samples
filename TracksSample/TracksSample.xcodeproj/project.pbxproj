@@ -283,7 +283,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -304,7 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92C8D439ADEA36DF872967D7 /* [CP] Embed Pods Frameworks */ = {
@@ -313,7 +313,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -334,7 +334,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-TracksSample-swift/Pods-SharedPods-TracksSample-swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

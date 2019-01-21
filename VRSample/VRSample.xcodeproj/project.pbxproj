@@ -169,7 +169,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/MetalScope/MetalScope.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
@@ -202,7 +202,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-VRSample/Pods-SharedPods-VRSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ADC9A3EDFCA8152F6B3FB380 /* [CP] Check Pods Manifest.lock */ = {

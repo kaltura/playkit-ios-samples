@@ -6,19 +6,19 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.7.0):
-    - PlayKit/Core (= 3.7.0)
-  - PlayKit/AnalyticsCommon (3.7.0):
+  - PlayKit (3.8.0):
+    - PlayKit/Core (= 3.8.0)
+  - PlayKit/AnalyticsCommon (3.8.0):
     - PlayKit/Core
-  - PlayKit/Core (3.7.0):
+  - PlayKit/Core (3.8.0):
     - KalturaNetKit (~> 0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
   - PlayKitUtils (0.1.6)
-  - PlayKitYoubora (1.0.1):
-    - PlayKit/AnalyticsCommon (~> 3.7.0)
+  - PlayKitYoubora (1.1.0):
+    - PlayKit/AnalyticsCommon (~> 3.8.0)
     - Youbora-AVPlayer/dynamic (= 5.4.18)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
@@ -50,9 +50,9 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 7d604486ac41f3f2961cf382e24212c8106ed5f6
+  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
-  PlayKitYoubora: 67e80416c20271ab9eb73ef147efb29d9ebc3ac6
+  PlayKitYoubora: 250e047530e27256df616f9dcf1ec43d19d4a365
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
@@ -61,4 +61,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 86c26cfd9c7a0531ef8a44a6ec0b0a1f682f99de
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.3

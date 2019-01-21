@@ -7,7 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "PlayKit-Swift.h"
+
+@import PlayKit;
 
 @interface ViewController ()
 
@@ -62,16 +63,11 @@
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
     // load the player
-    NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
+    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
     
-    if (!error) {
-        [self.player prepare:mediaConfig];
-        self.player.view = self.playerContainer;
-        [self.playerContainer sendSubviewToBack:self.player.view];
-    } else {
-        // error loading the player
-    }
+    [self.player prepare:mediaConfig];
+    self.player.view = self.playerContainer;
+    [self.playerContainer sendSubviewToBack:self.player.view];
 }
 
 /*********************************/

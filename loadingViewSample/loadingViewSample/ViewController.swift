@@ -30,25 +30,20 @@ class ViewController: UIViewController, PlayerDelegate {
         self.playheadSlider.isContinuous = false
         
         // 1. Load the player
-        do {
-            var plugins = [String : AnyObject]()
-            let adsConfig = IMAConfig()
-            adsConfig.set(adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=")
-            plugins[IMAPlugin.pluginName] = adsConfig
-            let pluginConfig = PluginConfig(config: plugins)
-            
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-            // 2. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            self.handleLoadingViewAppearance()
-            self.player?.delegate = self
-            // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.preparePlayer()
-        } catch let e {
-            // error loading the player
-            print("error:", e.localizedDescription)
-        }
+        var plugins = [String : AnyObject]()
+        let adsConfig = IMAConfig()
+        adsConfig.set(adTagUrl: "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=")
+        plugins[IMAPlugin.pluginName] = adsConfig
+        let pluginConfig = PluginConfig(config: plugins)
+        
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        // 2. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        self.handleLoadingViewAppearance()
+        self.player?.delegate = self
+        // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        self.preparePlayer()
     }
 
     override func didReceiveMemoryWarning() {

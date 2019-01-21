@@ -51,11 +51,10 @@ class ViewController: UIViewController {
         }
         
         let pluginConfig = PluginConfig(config: [:])
-        guard let player = try? PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig) else { return }
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
         
         loadSampleEntries()
         
-        self.player = player
         self.player?.view = self.playerContainer
     }
     

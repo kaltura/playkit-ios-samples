@@ -72,11 +72,7 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
                         let youboraConfig = AnalyticsConfig(params: ["accountCode": "kalturatest", YouboraPlugin.enableSmartAdsKey: true])
                         let pluginConfig = PluginConfig(config: [IMAPlugin.pluginName: adsConfig, YouboraPlugin.pluginName: youboraConfig])
                         
-                        do {
-                            player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-                        } catch let e {
-                            print("error:", e.localizedDescription)
-                        }
+                        player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
                         player?.delegate = self
                         
                         player?.addObserver(self, event: PlayerEvent.error, block: { (event) in

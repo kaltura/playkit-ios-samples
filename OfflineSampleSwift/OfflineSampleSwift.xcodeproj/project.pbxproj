@@ -172,7 +172,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -195,7 +195,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OfflineSampleSwift/Pods-SharedPods-OfflineSampleSwift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F38AAF6F99FFC8EC387347C6 /* [CP] Check Pods Manifest.lock */ = {

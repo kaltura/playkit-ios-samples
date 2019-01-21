@@ -61,13 +61,9 @@ class VideoViewController: UIViewController {
         // create plugin config object
         let pluginConfig = PluginConfig(config: config)
         
-        guard let player = try? PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig) else {
-            print("failed to create player!")
-            return
-        }
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
         player.view = (self.view as! PlayerView)
         player.view?.backgroundColor = UIColor.black
-        self.player = player
         
         playerSettings.createMediaConfig() { [weak self] (mediaConfig) in
             guard let mc = mediaConfig else { return }

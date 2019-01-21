@@ -28,20 +28,15 @@ class ViewController: UIViewController {
         self.playheadSlider.isContinuous = false;
         
         // 1. Load the player
-        do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-            // 2. Register events
-            // Register Player Events
-            // >Note: Make sure to register befor `prepare` is called
-            //        Otherwise you will miss events
-            self.registerPlayerEvents()
-            
-            // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.preparePlayer()
-        } catch let e {
-            // error loading the player
-            PKLog.debug("Error: \(e.localizedDescription)")
-        }
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+        // 2. Register events
+        // Register Player Events
+        // >Note: Make sure to register before `prepare` is called
+        //        Otherwise you will miss events
+        self.registerPlayerEvents()
+        
+        // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        self.preparePlayer()
     }
     
     override func viewWillDisappear(_ animated: Bool) {

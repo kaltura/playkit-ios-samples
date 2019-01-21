@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "PlayKit-Swift.h"
-#import "PlayKitYoubora-Swift.h"
+
+@import PlayKit;
+@import PlayKitYoubora;
 
 /*
  This sample will show you how to create a player with youbora plugin.
@@ -40,20 +41,14 @@
     // 1. create plugin config
     PluginConfig *pluginConfig = [self createPluginConfig];
     // 2. Load the player
-    NSError *error = nil;
-    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig error:&error];
-    // make sure player loaded
-    if (!error) {
-        // 3. Register events if have ones.
-        // Event registeration must be after loading the player successfully to make sure events are added,
-        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-        [self addYouboraObservations];
-        
-        // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-        [self preparePlayer];
-    } else {
-        // error loading the player
-    }
+    self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig];
+    // 3. Register events if have ones.
+    // Event registeration must be after loading the player successfully to make sure events are added,
+    // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+    [self addYouboraObservations];
+    
+    // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+    [self preparePlayer];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -95,7 +90,7 @@
 
 - (AnalyticsConfig *)createYouboraPluginConfig {
     // account code is mandatory, make sure to put the correct one.
-    NSDictionary *youboraPluginParams = @{@"accountCode": @"nicetest",
+    NSDictionary *youboraPluginParams = @{@"accountCode": @"kalturatest",
                                           @"httpSecure": @YES,
                                           @"parseHLS": @YES,
                                           @"media": @{

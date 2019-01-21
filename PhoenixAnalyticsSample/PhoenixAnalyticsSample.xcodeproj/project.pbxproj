@@ -258,7 +258,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -281,7 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AEFBCBCA974A642BC95ADE20 /* [CP] Check Pods Manifest.lock */ = {
@@ -308,7 +308,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -331,7 +331,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D60FB2A4F160BE815EC0F630 /* [CP] Check Pods Manifest.lock */ = {

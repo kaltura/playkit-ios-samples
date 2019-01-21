@@ -33,19 +33,14 @@ class ViewController: UIViewController {
         let pluginConfig: PluginConfig = self.createPluginConfig()
         
         // 2. Load the player
-        do {
-            self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-            // 3. Register events if have ones.
-            // Event registeration must be after loading the player successfully to make sure events are added,
-            // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-            self.addYouboraObservations()
-            
-            // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-            self.preparePlayer()
-        } catch let e {
-            // error loading the player
-            print("error:", e.localizedDescription)
-        }
+        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
+        // 3. Register events if have ones.
+        // Event registeration must be after loading the player successfully to make sure events are added,
+        // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        self.addYouboraObservations()
+        
+        // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
+        self.preparePlayer()
     }
 
     override func didReceiveMemoryWarning() {
@@ -91,7 +86,7 @@ class ViewController: UIViewController {
     func createYouboraPluginConfig() -> AnalyticsConfig {
         // account code is mandatory, make sure to put the correct one.
         let youboraPluginParams: [String: Any] = [
-            "accountCode": "nicetest",
+            "accountCode": "kalturatest",
             "httpSecure": true,
             "parseHLS": true,
             "media": [
