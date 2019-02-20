@@ -10,6 +10,7 @@ import UIKit
 import KalturaNetKit
 import PlayKit
 import PlayKitYoubora
+import PlayKitKava
 
 class VideoViewController: UIViewController {
 
@@ -56,8 +57,12 @@ class VideoViewController: UIViewController {
         ]
         // create analytics config with the created params
         let youboraConfig = AnalyticsConfig(params: youboraOptions)
+        
+        let kavaConfig = KavaPluginConfig(partnerId: 1091, entryId: nil, ks: nil, playbackContext: nil, referrer: nil, applicationVersion: "1.0", playlistId: "abc", customVar1: nil, customVar2: nil, customVar3: nil)
+        kavaConfig.playbackType = KavaPluginConfig.PlaybackType.vod
+        
         // create config dictionary
-        let config = [YouboraPlugin.pluginName: youboraConfig]
+        let config = [YouboraPlugin.pluginName: youboraConfig, KavaPlugin.pluginName: kavaConfig]
         // create plugin config object
         let pluginConfig = PluginConfig(config: config)
         

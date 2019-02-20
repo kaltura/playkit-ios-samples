@@ -19,6 +19,9 @@ PODS:
   - PlayKitAdManagerPlugin (0.1.0):
     - PlayKitUtils (= 0.1.6)
     - XCGLogger (= 6.1.0)
+  - PlayKitKava (1.0.5):
+    - PlayKit/AnalyticsCommon
+    - PlayKit/Core
   - PlayKitProviders (1.1.0):
     - KalturaNetKit
     - PlayKit/AnalyticsCommon (~> 3.8.0)
@@ -40,6 +43,7 @@ PODS:
 DEPENDENCIES:
   - PlayKit
   - PlayKitAdManagerPlugin (from `https://github.com/kaltura/playkit-ios-admanager-plugin.git`, branch `develop`)
+  - PlayKitKava
   - PlayKitProviders
   - PlayKitYoubora
 
@@ -48,6 +52,7 @@ SPEC REPOS:
     - KalturaNetKit
     - ObjcExceptionBridging
     - PlayKit
+    - PlayKitKava
     - PlayKitProviders
     - PlayKitUtils
     - PlayKitYoubora
@@ -72,6 +77,7 @@ SPEC CHECKSUMS:
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
   PlayKitAdManagerPlugin: 617e9e450335680fe994ee81cd3ac51e49d035c2
+  PlayKitKava: 897ec5364c9662199a23825c20499d3fcd6bafbd
   PlayKitProviders: b0a8d8b001d4ea5c4d0fdad70e4cf0556423b645
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
   PlayKitYoubora: 250e047530e27256df616f9dcf1ec43d19d4a365
@@ -81,6 +87,6 @@ SPEC CHECKSUMS:
   Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
   Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
 
-PODFILE CHECKSUM: 36ff876d79aa1acc7dc126fdcbe68a98a2cfab9a
+PODFILE CHECKSUM: daa9704988c2ded77cc90e6912e7a68a3bbbfb2f
 
 COCOAPODS: 1.5.3
