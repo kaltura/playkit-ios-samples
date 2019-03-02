@@ -43,13 +43,15 @@ class VideoViewController: UIViewController, PlayerDelegate {
         player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
         player.delegate = self
         
-        player.addObserver(self, events: [PlayerEvent.error, PlayerEvent.canPlay], block: { [weak self] (event) in
+        player.addObserver(self, events: [PlayerEvent.error, PlayerEvent.canPlay, PlayerEvent.playheadUpdate], block: { [weak self] (event) in
             guard let strongSelf = self else { return }
             switch event {
             case is PlayerEvent.Error:
                 print("error: " + (event.error?.localizedDescription ?? ""))
             case is PlayerEvent.CanPlay:
                 strongSelf.activityIndicator.stopAnimating()
+            case is PlayerEvent.PlayheadUpdate:
+                strongSelf.playheadUpdate()
             default:
                 break
             }
@@ -96,30 +98,25 @@ class VideoViewController: UIViewController, PlayerDelegate {
     }
     
     @objc func playheadUpdate() {
-        if let _ = player {
-            playheadSlider.value = Float(player!.currentTime / player!.duration)
-        }
+        playheadSlider.value = Float(player.currentTime / player.duration)
     }
     
     @IBAction func didSeek(_ sender: UISlider) {
         print("playhead value: \(sender.value)")
-        if let _ = player {
-            player!.currentTime = player!.duration * TimeInterval(sender.value)
-        }
+        
+        let seekTime = player.duration * TimeInterval(sender.value)
+        player.seek(to: seekTime)
     }
     
     @IBAction func didTapPlay(_ sender: UIButton) {
-        if player?.isPlaying == false {
-            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(playheadUpdate), userInfo: nil, repeats: true)
-            player?.play()
+        if player.isPlaying == false {
+            player.play()
         }
     }
     
     @IBAction func didTapPause(_ sender: UIButton) {
-        if player?.isPlaying == true {
-            timer?.invalidate()
-            timer = nil
-            player?.pause()
+        if player.isPlaying == true {
+            player.pause()
         }
     }
     
