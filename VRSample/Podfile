@@ -10,7 +10,6 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 #PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 #PLAYKIT_VR_LOCAL='../../playkit-ios-vr'
-#METALSCOPE_LOCAL='../../MetalScope'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
@@ -62,13 +61,6 @@ abstract_target 'SharedPods' do
       else
       pod 'PlayKitVR'
     end
-  end
-  
-  #   Forked temporary until MetalScope updates to Swift 4
-  if defined? METALSCOPE_LOCAL
-    pod 'MetalScope', :path => METALSCOPE_LOCAL
-    else
-    pod 'MetalScope', :git => 'https://github.com/kaltura/MetalScope.git', :branch => 'swift-4.2'
   end
   
   target 'VRSample'
