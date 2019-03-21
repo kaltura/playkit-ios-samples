@@ -5,9 +5,14 @@ import PlayKitKava
 import PlayKitProviders
 
 // VOD
-fileprivate let SERVER_BASE_URL = "https://cdnapisec.kaltura.com"
-fileprivate let PARTNER_ID = 1424501
-fileprivate let ENTRY_ID = "1_djnefl4e"
+//fileprivate let SERVER_BASE_URL = "https://cdnapisec.kaltura.com"
+//fileprivate let PARTNER_ID = 1424501
+//fileprivate let ENTRY_ID = "1_djnefl4e"
+
+// VOD Audio/Captions
+fileprivate let SERVER_BASE_URL = "https://qa-apache-php7.dev.kaltura.com"
+fileprivate let PARTNER_ID = 1091
+fileprivate let ENTRY_ID = "0_ttfy4uu0"
 
 // Live DVR
 //fileprivate let SERVER_BASE_URL = "https://cdnapisec.kaltura.com"
@@ -52,6 +57,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var seekToTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -258,5 +264,17 @@ class ViewController: UIViewController {
         }
         player.currentTime = player.duration * Double(playheadSlider.value)
         positionLabel.text = format(player.currentTime)
+    }
+    
+    @IBAction func performSeekClicked(_ sender: Any) {
+        seekToTextField.resignFirstResponder()
+        guard let string = seekToTextField.text else {
+            return
+        }
+        guard let value = Double(string) else {
+            return
+        }
+        
+        player.seek(to: value)
     }
 }
