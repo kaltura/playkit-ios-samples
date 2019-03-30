@@ -1,17 +1,17 @@
 PODS:
-  - KalturaNetKit (0.0.17):
-    - KalturaNetKit/Core (= 0.0.17)
-  - KalturaNetKit/Core (0.0.17):
+  - KalturaNetKit (1.0.0):
+    - KalturaNetKit/Core (= 1.0.0)
+  - KalturaNetKit/Core (1.0.0):
     - SwiftyJSON
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.8.0):
-    - PlayKit/Core (= 3.8.0)
-  - PlayKit/AnalyticsCommon (3.8.0):
+  - PlayKit (3.8.0-dev):
+    - PlayKit/Core (= 3.8.0-dev)
+  - PlayKit/AnalyticsCommon (3.8.0-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.8.0):
-    - KalturaNetKit (~> 0.0)
+  - PlayKit/Core (3.8.0-dev):
+    - KalturaNetKit (~> 1.0.0)
     - PlayKitUtils (~> 0.1.6)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
@@ -22,71 +22,65 @@ PODS:
   - PlayKitKava (1.0.5):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
-  - PlayKitProviders (1.1.0):
+  - PlayKitProviders (1.1.0-dev):
     - KalturaNetKit
-    - PlayKit/AnalyticsCommon (~> 3.8.0)
+    - PlayKit/AnalyticsCommon (~> 3.8.0-dev)
     - PlayKitUtils
   - PlayKitUtils (0.1.6)
-  - PlayKitYoubora (1.1.0):
-    - PlayKit/AnalyticsCommon (~> 3.8.0)
-    - Youbora-AVPlayer/dynamic (= 5.4.18)
+  - PlayKitYoubora (1.2.0-dev):
+    - PlayKit/AnalyticsCommon (~> 3.8.0-dev)
+    - YouboraLib (= 6.1.7)
   - SwiftyJSON (3.1.4)
   - SwiftyXMLParser (3.0.3)
   - XCGLogger (6.1.0):
     - XCGLogger/Core (= 6.1.0)
   - XCGLogger/Core (6.1.0):
     - ObjcExceptionBridging
-  - Youbora-AVPlayer/dynamic (5.4.18):
-    - Youbora-YouboraLib/dynamic (= 5.4.4)
-  - Youbora-YouboraLib/dynamic (5.4.4)
+  - YouboraLib (6.1.7)
 
 DEPENDENCIES:
-  - PlayKit
-  - PlayKitAdManagerPlugin (from `https://github.com/kaltura/playkit-ios-admanager-plugin.git`, branch `develop`)
-  - PlayKitKava
-  - PlayKitProviders
-  - PlayKitYoubora
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKitAdManagerPlugin (from `../../playkit-ios-admanager-plugin`)
+  - PlayKitKava (from `../../playkit-ios-kava`)
+  - PlayKitProviders (from `../../playkit-ios-providers`)
+  - PlayKitYoubora (from `../../playkit-ios-youbora`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
     - ObjcExceptionBridging
-    - PlayKit
-    - PlayKitKava
-    - PlayKitProviders
     - PlayKitUtils
-    - PlayKitYoubora
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
-    - Youbora-AVPlayer
-    - Youbora-YouboraLib
+    - YouboraLib
 
 EXTERNAL SOURCES:
+  PlayKit:
+    :path: "../../playkit-ios"
   PlayKitAdManagerPlugin:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios-admanager-plugin.git
-
-CHECKOUT OPTIONS:
-  PlayKitAdManagerPlugin:
-    :commit: 1173553fcca8eff7c3f72e940877e3abf85313d5
-    :git: https://github.com/kaltura/playkit-ios-admanager-plugin.git
+    :path: "../../playkit-ios-admanager-plugin"
+  PlayKitKava:
+    :path: "../../playkit-ios-kava"
+  PlayKitProviders:
+    :path: "../../playkit-ios-providers"
+  PlayKitYoubora:
+    :path: "../../playkit-ios-youbora"
 
 SPEC CHECKSUMS:
-  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
+  KalturaNetKit: 41647d130d478c51229c50cda0ec3d58fb75a258
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
+  PlayKit: 0ebcacbb39f57eca58bfca3f729c453e1ed4eb52
   PlayKitAdManagerPlugin: 617e9e450335680fe994ee81cd3ac51e49d035c2
-  PlayKitKava: 897ec5364c9662199a23825c20499d3fcd6bafbd
-  PlayKitProviders: b0a8d8b001d4ea5c4d0fdad70e4cf0556423b645
+  PlayKitKava: 3606e8e427a43b52ef05a40b0b9a7d67ad721fb4
+  PlayKitProviders: 5032228d47a2edb6fe55eefd2f60a457ee8d25b9
   PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
-  PlayKitYoubora: 250e047530e27256df616f9dcf1ec43d19d4a365
+  PlayKitYoubora: 4329bf04bc82dddc0fde1dc4dbafa19638ce45f2
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
-  Youbora-AVPlayer: e824d4332e65825e9e79347bc4990a407b96ca9d
-  Youbora-YouboraLib: 90bfccf52b9e918c5cb8543a5a5c015c0f02c4f2
+  YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: daa9704988c2ded77cc90e6912e7a68a3bbbfb2f
+PODFILE CHECKSUM: 6c0e13da40834ecf050ceaca29255ac8061b353e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

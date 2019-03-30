@@ -123,9 +123,7 @@ class AssetPersistenceManager: NSObject {
         var asset: Asset?
         var bookmarkDataIsStale = false
         do {
-            guard let url = try URL(resolvingBookmarkData: localFileLocation, bookmarkDataIsStale: &bookmarkDataIsStale) else {
-                fatalError("Failed to create URL from bookmark!")
-            }
+            let url = try URL(resolvingBookmarkData: localFileLocation, bookmarkDataIsStale: &bookmarkDataIsStale)
             
             if bookmarkDataIsStale {
                 fatalError("Bookmark data is stale!")
@@ -217,7 +215,7 @@ class AssetPersistenceManager: NSObject {
                 if savedOptions.count < mediaSelectionGroup.options.count {
                     // There are still media options left to download.
                     for option in mediaSelectionGroup.options {
-                        if !savedOptions.contains(option) && option.mediaType != AVMediaType.closedCaption.rawValue {
+                        if !savedOptions.contains(option) && option.mediaType.rawValue != AVMediaType.closedCaption.rawValue {
                             // This option has not been downloaded.
                             options.append((mediaSelectionGroup, option))
                         }

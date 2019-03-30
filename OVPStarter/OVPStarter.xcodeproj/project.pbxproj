@@ -166,7 +166,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -191,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SharedPods-OVPStarter/Pods-SharedPods-OVPStarter-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD65978E9A1F308F9BE04F8A /* [CP] Check Pods Manifest.lock */ = {

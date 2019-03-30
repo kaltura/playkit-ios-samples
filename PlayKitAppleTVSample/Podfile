@@ -5,11 +5,11 @@ platform :tvos, '9.0' # (define required version)
 use_frameworks!
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-#PLAYKIT_ADMANAGER_LOCAL='../../playkit-ios-admanager-plugin'
-#PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
-#PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
-#PLAYKIT_KAVA_LOCAL='../../playkit-ios-kava'
+PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_ADMANAGER_LOCAL='../../playkit-ios-admanager-plugin'
+PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
+PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
+PLAYKIT_KAVA_LOCAL='../../playkit-ios-kava'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'

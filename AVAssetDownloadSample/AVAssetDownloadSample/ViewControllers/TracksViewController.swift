@@ -50,8 +50,8 @@ class TracksViewController: UIViewController, UITableViewDataSource, UITableView
         
         tableView.reloadData()
         
-        tableView.selectRow(at: IndexPath(row: selectedAudioLanguageIndex, section: TracksSection.Audio.rawValue), animated: false, scrollPosition: UITableViewScrollPosition.none)
-        tableView.selectRow(at: IndexPath(row: selectedTextLanguageIndex, section: TracksSection.Subtitle.rawValue), animated: false, scrollPosition: UITableViewScrollPosition.none)
+        tableView.selectRow(at: IndexPath(row: selectedAudioLanguageIndex, section: TracksSection.Audio.rawValue), animated: false, scrollPosition: UITableView.ScrollPosition.none)
+        tableView.selectRow(at: IndexPath(row: selectedTextLanguageIndex, section: TracksSection.Subtitle.rawValue), animated: false, scrollPosition: UITableView.ScrollPosition.none)
     }
     
     // MARK: - Private
@@ -121,7 +121,7 @@ class TracksViewController: UIViewController, UITableViewDataSource, UITableView
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TracksTableViewCell", for: indexPath)
         cell.isSelected = false
-        cell.selectionStyle = UITableViewCellSelectionStyle.blue
+        cell.selectionStyle = UITableViewCell.SelectionStyle.blue
         
         switch indexPath.section {
         case TracksSection.Audio.rawValue:
