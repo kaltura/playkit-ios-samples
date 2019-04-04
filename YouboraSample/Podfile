@@ -5,8 +5,8 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
-PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
