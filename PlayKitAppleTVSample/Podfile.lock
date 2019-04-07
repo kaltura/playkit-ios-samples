@@ -1,24 +1,21 @@
 PODS:
-  - KalturaNetKit (0.0.17):
-    - KalturaNetKit/Core (= 0.0.17)
-  - KalturaNetKit/Core (0.0.17):
-    - SwiftyJSON
+  - KalturaNetKit (1.1.0):
+    - KalturaNetKit/Core (= 1.1.0)
+  - KalturaNetKit/Core (1.1.0):
+    - SwiftyJSON (= 3.1.4)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.8.0):
-    - PlayKit/Core (= 3.8.0)
-  - PlayKit/AnalyticsCommon (3.8.0):
+  - PlayKit (3.9.0):
+    - PlayKit/Core (= 3.9.0)
+  - PlayKit/AnalyticsCommon (3.9.0):
     - PlayKit/Core
-  - PlayKit/Core (3.8.0):
-    - KalturaNetKit (~> 0.0)
-    - PlayKitUtils (~> 0.1.6)
+  - PlayKit/Core (3.9.0):
+    - KalturaNetKit (~> 1.1.0)
+    - PlayKitUtils (~> 0.2.0)
     - SwiftyJSON (= 3.1.4)
     - SwiftyXMLParser (= 3.0.3)
     - XCGLogger (~> 6.1.0)
-  - PlayKitAdManagerPlugin (0.1.0):
-    - PlayKitUtils (= 0.1.6)
-    - XCGLogger (= 6.1.0)
   - PlayKitKava (1.1.0):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
@@ -26,7 +23,7 @@ PODS:
     - KalturaNetKit
     - PlayKit/AnalyticsCommon (~> 3.8)
     - PlayKitUtils
-  - PlayKitUtils (0.1.6)
+  - PlayKitUtils (0.2.0)
   - PlayKitYoubora (1.3.0):
     - PlayKit/AnalyticsCommon (~> 3.8)
     - YouboraLib (= 6.1.7)
@@ -40,7 +37,6 @@ PODS:
 
 DEPENDENCIES:
   - PlayKit
-  - PlayKitAdManagerPlugin (from `https://github.com/kaltura/playkit-ios-admanager-plugin.git`, branch `develop`)
   - PlayKitKava
   - PlayKitProviders
   - PlayKitYoubora
@@ -59,30 +55,19 @@ SPEC REPOS:
     - XCGLogger
     - YouboraLib
 
-EXTERNAL SOURCES:
-  PlayKitAdManagerPlugin:
-    :branch: develop
-    :git: https://github.com/kaltura/playkit-ios-admanager-plugin.git
-
-CHECKOUT OPTIONS:
-  PlayKitAdManagerPlugin:
-    :commit: 1173553fcca8eff7c3f72e940877e3abf85313d5
-    :git: https://github.com/kaltura/playkit-ios-admanager-plugin.git
-
 SPEC CHECKSUMS:
-  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
+  KalturaNetKit: 56a3ba31d3c5246bb4ae4f9fd8861e93c1f37dd2
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
-  PlayKitAdManagerPlugin: 617e9e450335680fe994ee81cd3ac51e49d035c2
+  PlayKit: 9a636a67d25f968abac2826cae00fc278488fb04
   PlayKitKava: c5948bac19e42a606cc0b54f161495f106d094af
   PlayKitProviders: a04e074cea6c5f89f72bc99b2af9f8e0b2651e01
-  PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
+  PlayKitUtils: 866a0144a06080b2fb51a6a93c0aea585b4b4ef1
   PlayKitYoubora: ecd1e142ec32388b49d652c2be2b7fddaea66370
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
   XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
   YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: daa9704988c2ded77cc90e6912e7a68a3bbbfb2f
+PODFILE CHECKSUM: 252625398eef82fe3d7c91238517966bce0faf28
 
 COCOAPODS: 1.6.1
