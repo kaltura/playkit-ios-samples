@@ -1,64 +1,73 @@
 PODS:
-  - KalturaNetKit (1.1.0):
-    - KalturaNetKit/Core (= 1.1.0)
-  - KalturaNetKit/Core (1.1.0):
-    - SwiftyJSON (= 3.1.4)
+  - KalturaNetKit (1.1.0-dev):
+    - KalturaNetKit/Core (= 1.1.0-dev)
+  - KalturaNetKit/Core (1.1.0-dev):
+    - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.9.0):
-    - PlayKit/Core (= 3.9.0)
-  - PlayKit/AnalyticsCommon (3.9.0):
+  - PlayKit (3.9.0-dev):
+    - PlayKit/Core (= 3.9.0-dev)
+  - PlayKit/AnalyticsCommon (3.9.0-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.9.0):
-    - KalturaNetKit (~> 1.1.0)
-    - PlayKitUtils (~> 0.2.0)
-    - SwiftyJSON (= 3.1.4)
-    - SwiftyXMLParser (= 3.0.3)
-    - XCGLogger (~> 6.1.0)
-  - PlayKitKava (1.1.0):
+  - PlayKit/Core (3.9.0-dev):
+    - KalturaNetKit (~> 1.1.0-dev)
+    - PlayKitUtils (~> 0.2.0-dev)
+    - SwiftyJSON (= 4.3.0)
+    - XCGLogger (= 7.0.0)
+  - PlayKitKava (1.1.0-dev):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
-  - PlayKitProviders (1.2.1):
+  - PlayKitProviders (1.2.1-dev):
     - KalturaNetKit
-    - PlayKit/AnalyticsCommon (~> 3.8)
+    - PlayKit/AnalyticsCommon (~> 3.8-dev)
     - PlayKitUtils
-  - PlayKitUtils (0.2.0)
-  - SwiftyJSON (3.1.4)
-  - SwiftyXMLParser (3.0.3)
-  - XCGLogger (6.1.0):
-    - XCGLogger/Core (= 6.1.0)
-  - XCGLogger/Core (6.1.0):
+    - SwiftyXMLParser (= 5.0.0)
+  - PlayKitUtils (0.2.0-dev)
+  - SwiftyJSON (4.3.0)
+  - SwiftyXMLParser (5.0.0)
+  - XCGLogger (7.0.0):
+    - XCGLogger/Core (= 7.0.0)
+  - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit
-  - PlayKitKava
-  - PlayKitProviders
+  - KalturaNetKit (from `../../netkit-ios`)
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKitKava (from `../../playkit-ios-kava`)
+  - PlayKitProviders (from `../../playkit-ios-providers`)
+  - PlayKitUtils (from `../../playkit-ios-utils`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - KalturaNetKit
     - ObjcExceptionBridging
-    - PlayKit
-    - PlayKitKava
-    - PlayKitProviders
-    - PlayKitUtils
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
 
-SPEC CHECKSUMS:
-  KalturaNetKit: 56a3ba31d3c5246bb4ae4f9fd8861e93c1f37dd2
-  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 9a636a67d25f968abac2826cae00fc278488fb04
-  PlayKitKava: c5948bac19e42a606cc0b54f161495f106d094af
-  PlayKitProviders: a04e074cea6c5f89f72bc99b2af9f8e0b2651e01
-  PlayKitUtils: 866a0144a06080b2fb51a6a93c0aea585b4b4ef1
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
-  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+EXTERNAL SOURCES:
+  KalturaNetKit:
+    :path: "../../netkit-ios"
+  PlayKit:
+    :path: "../../playkit-ios"
+  PlayKitKava:
+    :path: "../../playkit-ios-kava"
+  PlayKitProviders:
+    :path: "../../playkit-ios-providers"
+  PlayKitUtils:
+    :path: "../../playkit-ios-utils"
 
-PODFILE CHECKSUM: d1696fe7f46e820fb42b10bfc8f0544841856deb
+SPEC CHECKSUMS:
+  KalturaNetKit: 5d1947f8c491c5753992c6271a86f1ed547d55aa
+  ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
+  PlayKit: 1bd9f754c546af37d4d74dca17584125afd84e71
+  PlayKitKava: 2f7c24a4f7d9b93bb75190a6d96067c9ddad8201
+  PlayKitProviders: 0f82c11a95b96455d6c2a93df178aa0d7f3b6638
+  PlayKitUtils: 0928b63e6a421d9e2b4ec7738102e9fc2d3580b0
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
+  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
+
+PODFILE CHECKSUM: 3984aad0efdb24f66626d6fe493ed4802139b123
 
 COCOAPODS: 1.6.1

@@ -5,12 +5,12 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-#PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
+PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-#PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
+PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 PLAYKIT_YOUBORA_BRANCH=ENV['PKY_BRANCH'] || 'develop'
@@ -35,6 +35,9 @@ abstract_target 'SharedPods' do
       pod 'PlayKitYoubora'
     end
   end
+
+pod 'KalturaNetKit', :path => '../../netkit-ios'
+pod 'PlayKitUtils', :path => '../../playkit-ios-utils'
   
   target 'YouboraSample'
   target 'YouboraSample-Swift'

@@ -1,72 +1,82 @@
 PODS:
-  - KalturaNetKit (1.1.0):
-    - KalturaNetKit/Core (= 1.1.0)
-  - KalturaNetKit/Core (1.1.0):
-    - SwiftyJSON (= 3.1.4)
+  - KalturaNetKit (1.1.0-dev):
+    - KalturaNetKit/Core (= 1.1.0-dev)
+  - KalturaNetKit/Core (1.1.0-dev):
+    - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.9.0):
-    - PlayKit/Core (= 3.9.0)
-  - PlayKit/AnalyticsCommon (3.9.0):
+  - PlayKit (3.9.0-dev):
+    - PlayKit/Core (= 3.9.0-dev)
+  - PlayKit/AnalyticsCommon (3.9.0-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.9.0):
-    - KalturaNetKit (~> 1.1.0)
-    - PlayKitUtils (~> 0.2.0)
-    - SwiftyJSON (= 3.1.4)
-    - SwiftyXMLParser (= 3.0.3)
-    - XCGLogger (~> 6.1.0)
-  - PlayKitProviders (1.2.1):
+  - PlayKit/Core (3.9.0-dev):
+    - KalturaNetKit (~> 1.1.0-dev)
+    - PlayKitUtils (~> 0.2.0-dev)
+    - SwiftyJSON (= 4.3.0)
+    - XCGLogger (= 7.0.0)
+  - PlayKitProviders (1.2.1-dev):
     - KalturaNetKit
-    - PlayKit/AnalyticsCommon (~> 3.8)
+    - PlayKit/AnalyticsCommon (~> 3.8-dev)
     - PlayKitUtils
-  - PlayKitUtils (0.2.0)
-  - PlayKitVR (1.1.1):
+    - SwiftyXMLParser (= 5.0.0)
+  - PlayKitUtils (0.2.0-dev)
+  - PlayKitVR (1.1.1-dev):
     - PlayKit/Core
-  - PlayKitYoubora (1.3.0):
-    - PlayKit/AnalyticsCommon (~> 3.8)
+  - PlayKitYoubora (1.3.0-dev):
+    - PlayKit/AnalyticsCommon (~> 3.8-dev)
     - YouboraLib (= 6.1.7)
-  - SwiftyJSON (3.1.4)
-  - SwiftyXMLParser (3.0.3)
-  - XCGLogger (6.1.0):
-    - XCGLogger/Core (= 6.1.0)
-  - XCGLogger/Core (6.1.0):
+  - SwiftyJSON (4.3.0)
+  - SwiftyXMLParser (5.0.0)
+  - XCGLogger (7.0.0):
+    - XCGLogger/Core (= 7.0.0)
+  - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
   - YouboraLib (6.1.7)
 
 DEPENDENCIES:
-  - PlayKit
-  - PlayKitProviders
-  - PlayKitVR
-  - PlayKitYoubora
+  - KalturaNetKit (from `../../netkit-ios`)
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKitProviders (from `../../playkit-ios-providers`)
+  - PlayKitUtils (from `../../playkit-ios-utils`)
+  - PlayKitVR (from `../../playkit-ios-vr`)
+  - PlayKitYoubora (from `../../playkit-ios-youbora`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - KalturaNetKit
     - ObjcExceptionBridging
-    - PlayKit
-    - PlayKitProviders
-    - PlayKitUtils
-    - PlayKitVR
-    - PlayKitYoubora
     - SwiftyJSON
     - SwiftyXMLParser
     - XCGLogger
     - YouboraLib
 
+EXTERNAL SOURCES:
+  KalturaNetKit:
+    :path: "../../netkit-ios"
+  PlayKit:
+    :path: "../../playkit-ios"
+  PlayKitProviders:
+    :path: "../../playkit-ios-providers"
+  PlayKitUtils:
+    :path: "../../playkit-ios-utils"
+  PlayKitVR:
+    :path: "../../playkit-ios-vr"
+  PlayKitYoubora:
+    :path: "../../playkit-ios-youbora"
+
 SPEC CHECKSUMS:
-  KalturaNetKit: 56a3ba31d3c5246bb4ae4f9fd8861e93c1f37dd2
+  KalturaNetKit: 5d1947f8c491c5753992c6271a86f1ed547d55aa
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 9a636a67d25f968abac2826cae00fc278488fb04
-  PlayKitProviders: a04e074cea6c5f89f72bc99b2af9f8e0b2651e01
-  PlayKitUtils: 866a0144a06080b2fb51a6a93c0aea585b4b4ef1
-  PlayKitVR: 944136f0ca37a38536059b4feda270503677eeb7
-  PlayKitYoubora: ecd1e142ec32388b49d652c2be2b7fddaea66370
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
-  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+  PlayKit: 1bd9f754c546af37d4d74dca17584125afd84e71
+  PlayKitProviders: 0f82c11a95b96455d6c2a93df178aa0d7f3b6638
+  PlayKitUtils: 0928b63e6a421d9e2b4ec7738102e9fc2d3580b0
+  PlayKitVR: aa7c960bb7b85606848eaf6e2a5a8d9c00524c12
+  PlayKitYoubora: 2513f5532688c555dd33a2eaf3325e0d66b7ef80
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
+  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: 5d8b4ede8dabe06387d714cc36a5da845f404032
+PODFILE CHECKSUM: 30bb45ab24bcff5ab0512c34daa7d6bb6d3b4e4a
 
 COCOAPODS: 1.6.1

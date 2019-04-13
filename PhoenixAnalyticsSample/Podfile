@@ -5,8 +5,8 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-#PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
+PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
@@ -35,7 +35,10 @@ abstract_target 'SharedPods' do
       pod 'PlayKitProviders'
     end
   end
-  
+
+pod 'KalturaNetKit', :path => '../../netkit-ios'
+pod 'PlayKitUtils', :path => '../../playkit-ios-utils'
+
   target 'PhoenixAnalyticsSample'
   target 'PhoenixAnalyticsSample-Swift'
 end

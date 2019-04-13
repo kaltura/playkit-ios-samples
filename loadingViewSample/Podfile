@@ -5,8 +5,8 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
-#PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
+PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
@@ -35,7 +35,10 @@ abstract_target 'SharedPods' do
       pod 'PlayKit_IMA'
     end
   end
-  
+
+pod 'KalturaNetKit', :path => '../../netkit-ios'
+pod 'PlayKitUtils', :path => '../../playkit-ios-utils'
+
   target 'loadingViewSample'
   
 end
