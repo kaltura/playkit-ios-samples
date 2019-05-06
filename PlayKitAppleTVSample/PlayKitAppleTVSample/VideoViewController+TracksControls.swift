@@ -126,7 +126,7 @@ extension VideoViewController {
         // Create and add the actions.
         for track in tracks {
             alertController.addAction(UIAlertAction(title: track.title, style: .default) { (action) in
-                if let selectedTrackIndex = tracks.index(where: { $0.title == action.title }) {
+                if let selectedTrackIndex = tracks.firstIndex(where: { $0.title == action.title }) {
                     let selectedTrack = tracks[selectedTrackIndex]
                     self.player.selectTrack(trackId: selectedTrack.id)
                 }

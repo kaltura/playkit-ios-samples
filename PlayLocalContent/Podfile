@@ -22,6 +22,6 @@ abstract_target 'SharedPods' do
       pod 'PlayKit'
     end
   end
-  
+
   target 'PlayLocalContent'
 end

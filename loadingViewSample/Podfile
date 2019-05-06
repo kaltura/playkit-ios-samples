@@ -35,7 +35,7 @@ abstract_target 'SharedPods' do
       pod 'PlayKit_IMA'
     end
   end
-  
+
   target 'loadingViewSample'
   
 end

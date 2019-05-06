@@ -94,7 +94,7 @@ class ViewController: UIViewController {
                 "duration": 600
             ],
             "properties": [
-                "year": "2001",
+                "year": 2001,
                 "genre": "Fantasy",
                 "price": "free"
             ],

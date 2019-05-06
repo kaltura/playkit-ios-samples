@@ -1,25 +1,23 @@
 PODS:
-  - KalturaNetKit (1.1.0):
-    - KalturaNetKit/Core (= 1.1.0)
-  - KalturaNetKit/Core (1.1.0):
-    - SwiftyJSON (= 3.1.4)
+  - KalturaNetKit (1.2.0):
+    - KalturaNetKit/Core (= 1.2.0)
+  - KalturaNetKit/Core (1.2.0):
+    - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.9.0):
-    - PlayKit/Core (= 3.9.0)
-  - PlayKit/Core (3.9.0):
-    - KalturaNetKit (~> 1.1.0)
-    - PlayKitUtils (~> 0.2.0)
-    - SwiftyJSON (= 3.1.4)
-    - SwiftyXMLParser (= 3.0.3)
-    - XCGLogger (~> 6.1.0)
-  - PlayKitUtils (0.2.0)
-  - SwiftyJSON (3.1.4)
-  - SwiftyXMLParser (3.0.3)
-  - XCGLogger (6.1.0):
-    - XCGLogger/Core (= 6.1.0)
-  - XCGLogger/Core (6.1.0):
+  - PlayKit (3.10.1):
+    - PlayKit/Core (= 3.10.1)
+  - PlayKit/Core (3.10.1):
+    - KalturaNetKit (~> 1.2.0)
+    - PlayKitUtils (~> 0.3.0)
+    - SwiftyJSON (= 4.3.0)
+    - XCGLogger (= 7.0.0)
+  - PlayKitUtils (0.3.0)
+  - SwiftyJSON (4.3.0)
+  - XCGLogger (7.0.0):
+    - XCGLogger/Core (= 7.0.0)
+  - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
@@ -32,17 +30,15 @@ SPEC REPOS:
     - PlayKit
     - PlayKitUtils
     - SwiftyJSON
-    - SwiftyXMLParser
     - XCGLogger
 
 SPEC CHECKSUMS:
-  KalturaNetKit: 56a3ba31d3c5246bb4ae4f9fd8861e93c1f37dd2
+  KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 9a636a67d25f968abac2826cae00fc278488fb04
-  PlayKitUtils: 866a0144a06080b2fb51a6a93c0aea585b4b4ef1
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
-  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+  PlayKit: d913462f821b24a8802a557955446461e61e305f
+  PlayKitUtils: 6d574d85825fbaad58b39f228e228ee489fa1107
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
 PODFILE CHECKSUM: 350244c6a89efcfcadfef3f1fecae8e13aa919ed
 

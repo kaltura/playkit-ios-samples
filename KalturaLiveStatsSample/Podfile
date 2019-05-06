@@ -36,7 +36,7 @@ abstract_target 'SharedPods' do
       pod 'PlayKitProviders'
     end
   end
-  
+
   target 'KalturaLiveStatsSample'
   target 'KalturaLiveStatsSample-Swift'
   
