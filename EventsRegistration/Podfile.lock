@@ -1,19 +1,19 @@
 PODS:
-  - KalturaNetKit (1.1.0-dev):
-    - KalturaNetKit/Core (= 1.1.0-dev)
-  - KalturaNetKit/Core (1.1.0-dev):
+  - KalturaNetKit (1.2.0):
+    - KalturaNetKit/Core (= 1.2.0)
+  - KalturaNetKit/Core (1.2.0):
     - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.9.0-dev):
-    - PlayKit/Core (= 3.9.0-dev)
-  - PlayKit/Core (3.9.0-dev):
-    - KalturaNetKit (~> 1.1.0-dev)
-    - PlayKitUtils (~> 0.2.0-dev)
+  - PlayKit (3.10.1):
+    - PlayKit/Core (= 3.10.1)
+  - PlayKit/Core (3.10.1):
+    - KalturaNetKit (~> 1.2.0)
+    - PlayKitUtils (~> 0.3.0)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
-  - PlayKitUtils (0.2.0-dev)
+  - PlayKitUtils (0.3.0)
   - SwiftyJSON (4.3.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
@@ -21,32 +21,25 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - KalturaNetKit (from `../../netkit-ios`)
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKitUtils (from `../../playkit-ios-utils`)
+  - PlayKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - KalturaNetKit
     - ObjcExceptionBridging
+    - PlayKit
+    - PlayKitUtils
     - SwiftyJSON
     - XCGLogger
 
-EXTERNAL SOURCES:
-  KalturaNetKit:
-    :path: "../../netkit-ios"
-  PlayKit:
-    :path: "../../playkit-ios"
-  PlayKitUtils:
-    :path: "../../playkit-ios-utils"
-
 SPEC CHECKSUMS:
-  KalturaNetKit: 5d1947f8c491c5753992c6271a86f1ed547d55aa
+  KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 1bd9f754c546af37d4d74dca17584125afd84e71
-  PlayKitUtils: 0928b63e6a421d9e2b4ec7738102e9fc2d3580b0
+  PlayKit: d913462f821b24a8802a557955446461e61e305f
+  PlayKitUtils: 6d574d85825fbaad58b39f228e228ee489fa1107
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 8a7712417b53f658973a9f25da5f7415833ff524
+PODFILE CHECKSUM: 34949c3dc6627e3c17dd25946d2b7f1daf35a4b6
 
 COCOAPODS: 1.6.1

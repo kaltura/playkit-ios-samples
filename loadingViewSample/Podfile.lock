@@ -1,24 +1,24 @@
 PODS:
   - GoogleAds-IMA-iOS-SDK (3.8.1)
-  - KalturaNetKit (1.1.0-dev):
-    - KalturaNetKit/Core (= 1.1.0-dev)
-  - KalturaNetKit/Core (1.1.0-dev):
+  - KalturaNetKit (1.2.0):
+    - KalturaNetKit/Core (= 1.2.0)
+  - KalturaNetKit/Core (1.2.0):
     - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.9.0-dev):
-    - PlayKit/Core (= 3.9.0-dev)
-  - PlayKit/Core (3.9.0-dev):
-    - KalturaNetKit (~> 1.1.0-dev)
-    - PlayKitUtils (~> 0.2.0-dev)
+  - PlayKit (3.10.1):
+    - PlayKit/Core (= 3.10.1)
+  - PlayKit/Core (3.10.1):
+    - KalturaNetKit (~> 1.2.0)
+    - PlayKitUtils (~> 0.3.0)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
-  - PlayKit_IMA (1.4.0-dev):
+  - PlayKit_IMA (1.5.0):
     - GoogleAds-IMA-iOS-SDK (= 3.8.1)
-    - PlayKit (~> 3.9.0-dev)
+    - PlayKit (~> 3.10.0)
     - XCGLogger (= 7.0.0)
-  - PlayKitUtils (0.2.0-dev)
+  - PlayKitUtils (0.3.0)
   - SwiftyJSON (4.3.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
@@ -26,38 +26,30 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - KalturaNetKit (from `../../netkit-ios`)
-  - PlayKit (from `../../playkit-ios`)
-  - PlayKit_IMA (from `../../playkit-ios-ima`)
-  - PlayKitUtils (from `../../playkit-ios-utils`)
+  - PlayKit
+  - PlayKit_IMA
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GoogleAds-IMA-iOS-SDK
+    - KalturaNetKit
     - ObjcExceptionBridging
+    - PlayKit
+    - PlayKit_IMA
+    - PlayKitUtils
     - SwiftyJSON
     - XCGLogger
 
-EXTERNAL SOURCES:
-  KalturaNetKit:
-    :path: "../../netkit-ios"
-  PlayKit:
-    :path: "../../playkit-ios"
-  PlayKit_IMA:
-    :path: "../../playkit-ios-ima"
-  PlayKitUtils:
-    :path: "../../playkit-ios-utils"
-
 SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 9659b8999443366d2d159413c189e55d88734b78
-  KalturaNetKit: 5d1947f8c491c5753992c6271a86f1ed547d55aa
+  KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 1bd9f754c546af37d4d74dca17584125afd84e71
-  PlayKit_IMA: b3716dd160c4fd7dff772328af64e4359ebfacce
-  PlayKitUtils: 0928b63e6a421d9e2b4ec7738102e9fc2d3580b0
+  PlayKit: d913462f821b24a8802a557955446461e61e305f
+  PlayKit_IMA: 6b54768609e6bead842202322c949061aef86e69
+  PlayKitUtils: 6d574d85825fbaad58b39f228e228ee489fa1107
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 04b7d28f5cb9f81e4866eb8592bab956fd992127
+PODFILE CHECKSUM: 8ed71bf10c7744db87c14027a938358749e72ea0
 
 COCOAPODS: 1.6.1
