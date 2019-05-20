@@ -168,5 +168,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         selectedTracks = textTracks
         picker.reloadAllComponents()
     }
+    
+    @IBAction func changeStyleTouched(_ sender: Any) {
+        player?.settings.textTrackStyling.setTextColor(UIColor.blue)
+        player?.settings.textTrackStyling.setBackgroundColor(UIColor.clear)
+        player?.updateTextTrackStyling()
+    }
 }
 

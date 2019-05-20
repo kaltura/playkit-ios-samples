@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,6 +80,15 @@
                                     <action selector="didTapAudio:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Q6C-Ur-ejC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCY-eP-55k">
+                                <rect key="frame" x="243" y="553" width="108" height="34"/>
+                                <state key="normal" title="Change Style">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeStyleTouched:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Q8c-7D-59r"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-qA-bGs">
                                 <rect key="frame" x="264" y="592" width="87" height="34"/>
                                 <state key="normal" title="TextTracks">
@@ -113,11 +121,14 @@
                             <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="Dh3-5s-DVq" secondAttribute="top" id="JJi-ft-RWz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LDa-qA-bGs" secondAttribute="trailing" constant="8" id="MS2-Cy-GFe"/>
                             <constraint firstItem="GjG-IB-70v" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leadingMargin" constant="8" id="PfU-ao-MsT"/>
+                            <constraint firstItem="XCY-eP-55k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="Uqd-yT-cIK"/>
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="rpY-Fm-cXa" secondAttribute="bottom" id="XSa-Yg-S3V"/>
+                            <constraint firstItem="LDa-qA-bGs" firstAttribute="top" secondItem="XCY-eP-55k" secondAttribute="bottom" constant="5" id="Ygd-nV-dQZ"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="c6j-MD-5Jc"/>
                             <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="gy5-vm-eFy" secondAttribute="trailing" id="fHS-GB-kvx"/>
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GjG-IB-70v" secondAttribute="trailing" id="fcg-nT-osY"/>
                             <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="rpY-Fm-cXa" secondAttribute="trailing" constant="8" id="jbj-vx-esL"/>
+                            <constraint firstItem="LDa-qA-bGs" firstAttribute="trailing" secondItem="XCY-eP-55k" secondAttribute="trailing" id="nma-jJ-COo"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" id="wni-xA-PRH"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="LDa-qA-bGs" secondAttribute="bottom" constant="8" id="yjr-cA-AaV"/>
                         </constraints>
