@@ -16,7 +16,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var picker: UIPickerView!
     
     var player: Player?
-    var timer: Timer?
     var audioTracks: [Track] = []
     var textTracks: [Track] = []
     var selectedTracks: [Track] = []
@@ -26,15 +25,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view, typically from a nib.
         
         // 1. Load the player
-        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-        // 2. Register events if have ones.
+        player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+        // 2. Register events if needed.
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        handleTracks()
+        handlePlaybackInfo()
+        handlePlayheadUpdate()
+        setupTextTrackStyling()
         
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
-        self.preparePlayer()
-        self.handleTracks()
-        self.currentBitrateHandler()
+        preparePlayer()
     }
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
@@ -42,23 +43,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
 
     func preparePlayer() {
-        // setup the player's view
-        self.player?.view = self.playerContainer
-        self.playerContainer.sendSubviewToBack(self.player!.view!)
+        // Setup the player's view
+        player?.view = self.playerContainer
+        playerContainer.sendSubviewToBack(self.player!.view!)
         
         let contentURL = "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
         
-        // create media source and initialize a media entry with that source
+        // Create media source and initialize a media entry with that source
         let entryId = "bipbop_16x9"
         let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
-        // setup media entry
+        // Setup media entry
         let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
         
-        // create media config
+        // Create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
         
-        // prepare the player
-        self.player!.prepare(mediaConfig)
+        // Prepare the player
+        player!.prepare(mediaConfig)
     }
     
     func handleTracks() {
@@ -84,7 +85,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         })
     }
     
-    func currentBitrateHandler() {
+    func handlePlaybackInfo() {
         player?.addObserver(self, event: PlayerEvent.playbackInfo) { event in
             if type(of: event) == PlayerEvent.playbackInfo {
                 if let _ = event.playbackInfo {
@@ -92,6 +93,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                 }
             }
         }
+    }
+    
+    func handlePlayheadUpdate() {
+        player?.addObserver(self, event: PlayerEvent.playheadUpdate, block: { [weak self] (event) in
+            guard let self = self else { return }
+            self.playheadUpdate()
+        })
+    }
+    
+    func setupTextTrackStyling() {
+        player?.settings.textTrackStyling
+            .setTextColor(UIColor.red)
+            .setBackgroundColor(UIColor.white)
+            .setTextSize(percentageOfVideoHeight: 10)
+            .setEdgeStyle(.raised)
+            .setEdgeColor(UIColor.yellow)
+            .setFontFamily("Arial")
     }
     
     func selectTrack(_ track: Track) {
@@ -120,6 +138,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    // MARK: - IBAction
+    
     @IBAction func didSeek(_ sender: UISlider) {
         print("playhead value: \(sender.value)")
         if let _ = player {
@@ -129,15 +149,12 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func didTapPause(_ sender: UIButton) {
         if player?.isPlaying == true {
-            timer?.invalidate()
-            timer = nil
             player?.pause()
         }
     }
     
     @IBAction func didTapPlay(_ sender: UIButton) {
         if player?.isPlaying == false {
-            timer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(playheadUpdate), userInfo: nil, repeats: true)
             player?.play()
         }
     }
