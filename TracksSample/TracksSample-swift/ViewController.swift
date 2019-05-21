@@ -32,7 +32,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         handleTracks()
         handlePlaybackInfo()
         handlePlayheadUpdate()
-        setupTextTrackStyling()
         
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         preparePlayer()
@@ -40,6 +39,17 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "TextStylingSegue":
+            guard let navigationVC = segue.destination as? UINavigationController else { return }
+            guard let textStylingVC = navigationVC.topViewController as? TextStylingViewController else { return }
+            textStylingVC.player = player
+        default:
+            return
+        }
     }
 
     func preparePlayer() {
@@ -102,16 +112,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         })
     }
     
-    func setupTextTrackStyling() {
-        player?.settings.textTrackStyling
-            .setTextColor(UIColor.red)
-            .setBackgroundColor(UIColor.white)
-            .setTextSize(percentageOfVideoHeight: 10)
-            .setEdgeStyle(.raised)
-            .setEdgeColor(UIColor.yellow)
-            .setFontFamily("Arial")
-    }
-    
     func selectTrack(_ track: Track) {
         player?.selectTrack(trackId: track.id)
     }
@@ -168,11 +168,4 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         selectedTracks = textTracks
         picker.reloadAllComponents()
     }
-    
-    @IBAction func changeStyleTouched(_ sender: Any) {
-        player?.settings.textTrackStyling.setTextColor(UIColor.blue)
-        player?.settings.textTrackStyling.setBackgroundColor(UIColor.clear)
-        player?.updateTextTrackStyling()
-    }
 }
-
