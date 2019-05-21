@@ -65,15 +65,10 @@
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
     // load the player
-    NSError *error = nil;
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil error:&error];
+    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
     
-    if (!error) {
-        self.player.view = self.playerContainer;
-        [self.player prepare:mediaConfig];
-    } else {
-        // error loading the player
-    }
+    self.player.view = self.playerContainer;
+    [self.player prepare:mediaConfig];
 }
 
 /*********************************/
@@ -115,8 +110,7 @@
 }
 
 - (void)startRecording {
-    // don't forget to use weak self to prevent retain cycles when needed
-    __weak __typeof(self) weakSelf = self;
+    
     if (_recognitionTask) {
         [self.recognitionTask cancel];
         self.recognitionTask = nil;
@@ -136,36 +130,43 @@
     self.recognitionRequest = [SFSpeechAudioBufferRecognitionRequest new];
         
     if (!self.audioEngine.inputNode) {
-        assert(@"Audio engine has no input node");
+        NSAssert(NO, @"Audio engine has no input node");
     }
     
     if (!self.recognitionRequest) {
-        assert(@"Unable to create an SFSpeechAudioBufferRecognitionRequest object");
+        NSAssert(NO, @"Unable to create an SFSpeechAudioBufferRecognitionRequest object");
     }
         
     self.recognitionRequest.shouldReportPartialResults = YES;
-    self.recognitionTask = [self.speechRecognizer recognitionTaskWithRequest:self.recognitionRequest resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
-        
+    
+    // don't forget to use weak self to prevent retain cycles when needed
+    __weak ViewController *weakSelf = self;
+    self.recognitionTask = [self.speechRecognizer recognitionTaskWithRequest:self.recognitionRequest
+                                                               resultHandler:^(SFSpeechRecognitionResult * _Nullable result, NSError * _Nullable error) {
+        ViewController *strongSelf = weakSelf;
         BOOL isFinal = NO;
         
         if (result) {
-            playerCommand = result.bestTranscription.formattedString;
+            strongSelf->playerCommand = result.bestTranscription.formattedString;
             isFinal = result.isFinal;
         }
         
         if (error || isFinal) {
-            [weakSelf.audioEngine stop];
-            [weakSelf.audioEngine.inputNode removeTapOnBus:0];
+            [strongSelf.audioEngine stop];
+            [strongSelf.audioEngine.inputNode removeTapOnBus:0];
             
-            weakSelf.recognitionRequest = nil;
-            weakSelf.recognitionTask = nil;
+            strongSelf.recognitionRequest = nil;
+            strongSelf.recognitionTask = nil;
             
-            weakSelf.microphoneButton.enabled = YES;
+            strongSelf.microphoneButton.enabled = YES;
         }
     }];
     
     AVAudioFormat *recordingFormat = [self.audioEngine.inputNode outputFormatForBus:0];
-    [self.audioEngine.inputNode installTapOnBus:0 bufferSize:1024 format:recordingFormat block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
+    [self.audioEngine.inputNode installTapOnBus:0
+                                     bufferSize:1024
+                                         format:recordingFormat
+                                          block:^(AVAudioPCMBuffer * _Nonnull buffer, AVAudioTime * _Nonnull when) {
         [weakSelf.recognitionRequest appendAudioPCMBuffer:buffer];
     }];
         

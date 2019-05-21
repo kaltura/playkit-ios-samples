@@ -35,7 +35,7 @@ abstract_target 'SharedPods' do
       pod 'PlayKitProviders'
     end
   end
-  
+
   target 'PhoenixAnalyticsSample'
   target 'PhoenixAnalyticsSample-Swift'
 end

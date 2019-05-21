@@ -189,10 +189,10 @@ class MediaPlayerViewController: UIViewController {
             return
         }
         
-        let alertController = UIAlertController(title: "Select Speech", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alertController = UIAlertController(title: "Select Speech", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
         for track in tracks {
-            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertActionStyle.default, handler: { (alertAction) in
+            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertAction.Style.default, handler: { (alertAction) in
                 self.player?.selectTrack(trackId: track.id)
             }))
         }
@@ -204,10 +204,10 @@ class MediaPlayerViewController: UIViewController {
             return
         }
         
-        let alertController = UIAlertController(title: "Select Subtitle", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alertController = UIAlertController(title: "Select Subtitle", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
         for track in tracks {
-            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertActionStyle.default, handler: { (alertAction) in
+            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertAction.Style.default, handler: { (alertAction) in
                 self.player?.selectTrack(trackId: track.id)
             }))
         }
@@ -250,16 +250,16 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @IBAction func speedRateTouched(_ sender: Any) {
-        let alertController = UIAlertController(title: "Select Speed Rate", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alertController.addAction(UIAlertAction(title: "Normal", style: UIAlertActionStyle.default, handler: { (alertAction) in
+        let alertController = UIAlertController(title: "Select Speed Rate", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+        alertController.addAction(UIAlertAction(title: "Normal", style: UIAlertAction.Style.default, handler: { (alertAction) in
             self.player?.rate = 1
             self.updateAnimatedPlayButton()
         }))
-        alertController.addAction(UIAlertAction(title: "x2", style: UIAlertActionStyle.default, handler: { (alertAction) in
+        alertController.addAction(UIAlertAction(title: "x2", style: UIAlertAction.Style.default, handler: { (alertAction) in
             self.player?.rate = 2
             self.updateAnimatedPlayButton()
         }))
-        alertController.addAction(UIAlertAction(title: "x3", style: UIAlertActionStyle.default, handler: { (alertAction) in
+        alertController.addAction(UIAlertAction(title: "x3", style: UIAlertAction.Style.default, handler: { (alertAction) in
             self.player?.rate = 3
             self.updateAnimatedPlayButton()
         }))

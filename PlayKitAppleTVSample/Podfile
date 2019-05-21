@@ -22,8 +22,8 @@ PLAYKIT_YOUBORA_BRANCH=ENV['PKY_BRANCH'] || 'develop'
 PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
 PLAYKIT_KAVA_BRANCH=ENV['PK_KAVA_BRANCH'] || 'develop'
 
-PLAYKIT_ADMANAGER_GIT='https://github.com/kaltura/playkit-ios-admanager-plugin.git'
-PLAYKIT_ADMANAGER_BRANCH=ENV['PK_AD_BRANCH'] || 'develop'
+#PLAYKIT_ADMANAGER_GIT='https://github.com/kaltura/playkit-ios-admanager-plugin.git'
+#PLAYKIT_ADMANAGER_BRANCH=ENV['PK_AD_BRANCH'] || 'develop'
 
 abstract_target 'SharedPods' do
   if defined? PLAYKIT_LOCAL
@@ -36,11 +36,11 @@ abstract_target 'SharedPods' do
     end
   end
   
-  if defined? PLAYKIT_ADMANAGER_LOCAL
-    pod 'PlayKitAdManagerPlugin', :path => PLAYKIT_ADMANAGER_LOCAL
-    else
-    pod 'PlayKitAdManagerPlugin', :git => PLAYKIT_ADMANAGER_GIT, :branch => PLAYKIT_ADMANAGER_BRANCH
-  end
+#  if defined? PLAYKIT_ADMANAGER_LOCAL
+#    pod 'PlayKitAdManagerPlugin', :path => PLAYKIT_ADMANAGER_LOCAL
+#    else
+#    pod 'PlayKitAdManagerPlugin', :git => PLAYKIT_ADMANAGER_GIT, :branch => PLAYKIT_ADMANAGER_BRANCH
+#  end
   
   if defined? PLAYKIT_YOUBORA_LOCAL
     pod 'PlayKitYoubora', :path => PLAYKIT_YOUBORA_LOCAL

@@ -1,25 +1,23 @@
 PODS:
-  - KalturaNetKit (0.0.17):
-    - KalturaNetKit/Core (= 0.0.17)
-  - KalturaNetKit/Core (0.0.17):
-    - SwiftyJSON
+  - KalturaNetKit (1.2.0):
+    - KalturaNetKit/Core (= 1.2.0)
+  - KalturaNetKit/Core (1.2.0):
+    - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.8.0):
-    - PlayKit/Core (= 3.8.0)
-  - PlayKit/Core (3.8.0):
-    - KalturaNetKit (~> 0.0)
-    - PlayKitUtils (~> 0.1.6)
-    - SwiftyJSON (= 3.1.4)
-    - SwiftyXMLParser (= 3.0.3)
-    - XCGLogger (~> 6.1.0)
-  - PlayKitUtils (0.1.6)
-  - SwiftyJSON (3.1.4)
-  - SwiftyXMLParser (3.0.3)
-  - XCGLogger (6.1.0):
-    - XCGLogger/Core (= 6.1.0)
-  - XCGLogger/Core (6.1.0):
+  - PlayKit (3.10.1):
+    - PlayKit/Core (= 3.10.1)
+  - PlayKit/Core (3.10.1):
+    - KalturaNetKit (~> 1.2.0)
+    - PlayKitUtils (~> 0.3.0)
+    - SwiftyJSON (= 4.3.0)
+    - XCGLogger (= 7.0.0)
+  - PlayKitUtils (0.3.0)
+  - SwiftyJSON (4.3.0)
+  - XCGLogger (7.0.0):
+    - XCGLogger/Core (= 7.0.0)
+  - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
@@ -32,18 +30,16 @@ SPEC REPOS:
     - PlayKit
     - PlayKitUtils
     - SwiftyJSON
-    - SwiftyXMLParser
     - XCGLogger
 
 SPEC CHECKSUMS:
-  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
+  KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
-  PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
-  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+  PlayKit: d913462f821b24a8802a557955446461e61e305f
+  PlayKitUtils: 6d574d85825fbaad58b39f228e228ee489fa1107
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 82a9e64cc21c7f2a11a09e26bb2f20fcb2916c70
+PODFILE CHECKSUM: a20c5202d2c578b0c6265bc71a783696a74a6fd7
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

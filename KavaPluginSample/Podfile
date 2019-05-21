@@ -49,7 +49,7 @@ abstract_target 'SharedPods' do
       pod 'PlayKitKava'
     end
   end
-  
+
   target 'KavaPluginSample'
   
 end

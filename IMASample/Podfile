@@ -48,7 +48,7 @@ abstract_target 'SharedPods' do
       pod 'PlayKitYoubora'
     end
   end
-  
+
   target 'IMASample'
   target 'IMASample-swift'
 end

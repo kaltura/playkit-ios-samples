@@ -4,35 +4,33 @@ PODS:
     - Protobuf (~> 3.0)
   - google-cast-sdk/Core (4.3.3):
     - Protobuf (~> 3.0)
-  - KalturaNetKit (0.0.17):
-    - KalturaNetKit/Core (= 0.0.17)
-  - KalturaNetKit/Core (0.0.17):
-    - SwiftyJSON
+  - KalturaNetKit (1.2.0):
+    - KalturaNetKit/Core (= 1.2.0)
+  - KalturaNetKit/Core (1.2.0):
+    - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.8.0):
-    - PlayKit/Core (= 3.8.0)
-  - PlayKit/Core (3.8.0):
-    - KalturaNetKit (~> 0.0)
-    - PlayKitUtils (~> 0.1.6)
-    - SwiftyJSON (= 3.1.4)
-    - SwiftyXMLParser (= 3.0.3)
-    - XCGLogger (~> 6.1.0)
-  - PlayKitGoogleCast (1.0.0):
+  - PlayKit (3.10.1):
+    - PlayKit/Core (= 3.10.1)
+  - PlayKit/Core (3.10.1):
+    - KalturaNetKit (~> 1.2.0)
+    - PlayKitUtils (~> 0.3.0)
+    - SwiftyJSON (= 4.3.0)
+    - XCGLogger (= 7.0.0)
+  - PlayKitGoogleCast (1.2.0):
     - google-cast-sdk (= 4.3.3)
-    - XCGLogger (~> 6.1.0)
-  - PlayKitUtils (0.1.6)
-  - Protobuf (3.6.1)
-  - SwiftyJSON (3.1.4)
-  - SwiftyXMLParser (3.0.3)
-  - XCGLogger (6.1.0):
-    - XCGLogger/Core (= 6.1.0)
-  - XCGLogger/Core (6.1.0):
+    - XCGLogger (= 7.0.0)
+  - PlayKitUtils (0.3.0)
+  - Protobuf (3.7.0)
+  - SwiftyJSON (4.3.0)
+  - XCGLogger (7.0.0):
+    - XCGLogger/Core (= 7.0.0)
+  - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit
+  - PlayKit (= 3.10.1)
   - PlayKitGoogleCast
 
 SPEC REPOS:
@@ -45,21 +43,19 @@ SPEC REPOS:
     - PlayKitUtils
     - Protobuf
     - SwiftyJSON
-    - SwiftyXMLParser
     - XCGLogger
 
 SPEC CHECKSUMS:
   google-cast-sdk: 792980f4fa5afd4f9b91f41d582cc75251648f3a
-  KalturaNetKit: d37b3c6fc08da9935677fc547c59b25abc3574a3
+  KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 49ff3cd0f0f23ffc4a84b699c2e6fda75e85aacb
-  PlayKitGoogleCast: 7a4cca755a943c1cc0196457d6eac94264d5ce37
-  PlayKitUtils: 81c0da29a21969ecce8731bc975057682555c9d0
-  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  SwiftyXMLParser: 9c6cc0310e778266a63d8eba50d9e07925aab0fb
-  XCGLogger: 7f7f43f15dfe3a305fa1342b7dc29af656289abd
+  PlayKit: d913462f821b24a8802a557955446461e61e305f
+  PlayKitGoogleCast: 8d6d58d54c146fbe13779e2098f202b4d30eaab6
+  PlayKitUtils: 6d574d85825fbaad58b39f228e228ee489fa1107
+  Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: af61dd44cdeae7445096b769923e26bf8142fd98
+PODFILE CHECKSUM: 762ce2a5a103ec8473d459540bdefb1a0e139de5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1
