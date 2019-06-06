@@ -79,7 +79,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 contentSourceId: "19463",
                                 videoId: "googleio-highlights",
                                 autoPlay: true,
-                                startPosition: 20,
+                                startPosition: 30,
                                 streamType: .vod))
         
         videos.append(VideoData(title: "ovp_dai_hls_start_position_with_skip_preroll",
@@ -92,7 +92,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 contentSourceId: "19463",
                                 videoId: "tears-of-steel",
                                 autoPlay: true,
-                                startPosition: 20,
+                                startPosition: 30,
                                 streamType: .vod))
         
         videos.append(VideoData(title: "ovp_dai_live",
