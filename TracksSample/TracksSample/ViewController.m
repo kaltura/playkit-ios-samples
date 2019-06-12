@@ -25,20 +25,24 @@
 
 @implementation ViewController
 
-/*********************************/
-#pragma mark - LifeCycle
-/*********************************/
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.playheadSlider.continuous = NO;
-    // setup our player instance
+    
+    // Load the player
+    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
+    
+    // Register events if needed.
+    // Event registeration must be after loading the player successfully to make sure events are added, and before prepare to make sure no events are missed (when calling prepare player starts buffering and sends events)
+    // Handle audio/ text tracks
+    [self handleTracks];
+    // Get current bitrate value
+    [self handlePlaybackInfo];
+    [self handlePlayheadUpdate];
+    [self setupTextTrackStyling];
+    
     [self setupPlayer];
     
-    // handle audio/ text tracks
-    [self handleTracks];
-    // get current bitrate value
-    [self currentBitrateHandler];
+    self.playheadSlider.continuous = NO;
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -46,33 +50,28 @@
 }
 
 /*********************************/
-#pragma mark - Player Setup
+#pragma mark - Private Methods
 /*********************************/
 
 - (void)setupPlayer {
+    // Setup the player's view
+    self.player.view = self.playerContainer;
+    [self.playerContainer sendSubviewToBack:self.player.view];
+    
     NSURL *contentURL = [[NSURL alloc] initWithString:@"https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"];
     
-    // create media source and initialize a media entry with that source
+    // Create media source and initialize a media entry with that source
     NSString *entryId = @"bipbop_16x9";
     PKMediaSource* source = [[PKMediaSource alloc] init:entryId contentUrl:contentURL mimeType:nil drmData:nil mediaFormat:MediaFormatHls];
     NSArray<PKMediaSource*>* sources = [[NSArray alloc] initWithObjects:source, nil];
-    // setup media entry
+    // Setup media entry
     PKMediaEntry *mediaEntry = [[PKMediaEntry alloc] init:entryId sources:sources duration:-1];
     
-    // create media config
+    // Create media config
     MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
     
-    // load the player
-    self.player = [PlayKitManager.sharedInstance loadPlayerWithPluginConfig:nil];
-    
     [self.player prepare:mediaConfig];
-    self.player.view = self.playerContainer;
-    [self.playerContainer sendSubviewToBack:self.player.view];
 }
-
-/*********************************/
-#pragma mark - Tracks
-/*********************************/
 
 // Handle Available Tracks and Present Them
 - (void)handleTracks {
@@ -114,7 +113,7 @@
 }
 
 // Get Current Bitrate
-- (void)currentBitrateHandler {
+- (void)handlePlaybackInfo {
     [self.player addObserver:self events:@[PlayerEvent.playbackInfo] block:^(PKEvent * _Nonnull event) {
         if ([event isKindOfClass:PlayerEvent.playbackInfo]) {
             // Get Current Bitrate Value
@@ -130,18 +129,31 @@
     [self.player selectTrackWithTrackId:track.id];
 }
 
-/*********************************/
-// Tracks - Picker View
-/*********************************/
-- (IBAction)audioTracksTapped:(id)sender {
-    self.selectedTracks = self.audioTracks;
-    [self.picker reloadAllComponents];
+- (void)handlePlayheadUpdate {
+    __weak __typeof(self) weakSelf = self;
+    
+    [self.player addObserver:self events:@[PlayerEvent.playheadUpdate] block:^(PKEvent * _Nonnull event) {
+        __strong __typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf playheadUpdate];
+    }];
 }
 
-- (IBAction)textTracksTapped:(id)sender {
-    self.selectedTracks = self.textTracks;
-    [self.picker reloadAllComponents];
+- (void)playheadUpdate {
+    self.playheadSlider.value = self.player.currentTime / self.player.duration;
 }
+
+- (void)setupTextTrackStyling {
+    [self.player.settings.textTrackStyling setTextColor:[UIColor redColor]];
+    [self.player.settings.textTrackStyling setBackgroundColor:[UIColor whiteColor]];
+    [self.player.settings.textTrackStyling setTextSizeWithPercentageOfVideoHeight:10];
+    [self.player.settings.textTrackStyling setEdgeStyle:PKTextMarkupCharacterEdgeStyleDropShadow];
+    [self.player.settings.textTrackStyling setEdgeColor:[UIColor yellowColor]];
+    [self.player.settings.textTrackStyling setFontFamily:@"Helvetica"];
+}
+
+/*********************************/
+#pragma mark - Picker View
+/*********************************/
 
 // The number of columns of data
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -167,6 +179,16 @@
 #pragma mark - Actions
 /*********************************/
 
+- (IBAction)audioTracksTapped:(id)sender {
+    self.selectedTracks = self.audioTracks;
+    [self.picker reloadAllComponents];
+}
+
+- (IBAction)textTracksTapped:(id)sender {
+    self.selectedTracks = self.textTracks;
+    [self.picker reloadAllComponents];
+}
+
 - (IBAction)playTouched:(UIButton *)sender {
     if(!self.player.isPlaying) {
         self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
@@ -187,8 +209,5 @@
     self.player.currentTime = self.player.duration * sender.value;
 }
 
-- (void)playheadUpdate {
-    self.playheadSlider.value = self.player.currentTime / self.player.duration;
-}
 @end
 
