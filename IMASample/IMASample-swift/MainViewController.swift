@@ -73,7 +73,6 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                         let pluginConfig = PluginConfig(config: [IMAPlugin.pluginName: adsConfig, YouboraPlugin.pluginName: youboraConfig])
                         
                         player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-                        player?.delegate = self
                         
                         player?.addObserver(self, event: PlayerEvent.error, block: { (event) in
                             print("error: " + (event.error?.localizedDescription ?? ""))
