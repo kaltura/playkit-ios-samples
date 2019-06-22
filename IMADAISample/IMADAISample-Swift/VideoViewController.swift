@@ -41,7 +41,6 @@ class VideoViewController: UIViewController, PlayerDelegate {
         let pluginConfig = PluginConfig(config: [IMADAIPlugin.pluginName: imaDAIConfig, YouboraPlugin.pluginName: youboraConfig])
         
         player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-        player.delegate = self
         
         player.addObserver(self, events: [PlayerEvent.error, PlayerEvent.canPlay, PlayerEvent.playheadUpdate], block: { [weak self] (event) in
             guard let strongSelf = self else { return }
@@ -118,11 +117,5 @@ class VideoViewController: UIViewController, PlayerDelegate {
         if player.isPlaying == true {
             player.pause()
         }
-    }
-    
-    // MARK: - PlayerDelegate
-    
-    func playerShouldPlayAd(_ player: Player) -> Bool {
-        return true
     }
 }

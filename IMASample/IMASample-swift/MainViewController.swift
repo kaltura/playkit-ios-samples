@@ -12,7 +12,7 @@ import PlayKit
 import PlayKit_IMA
 import PlayKitYoubora
 
-class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     var videos: [Video] = []
     var player: Player?
@@ -111,12 +111,6 @@ class MainViewController: UIViewController, PlayerDelegate, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-    }
-    
-    // MARK: - PlayerDelegate
-    
-    func playerShouldPlayAd(_ player: Player) -> Bool {
-        return true
     }
 }
 
