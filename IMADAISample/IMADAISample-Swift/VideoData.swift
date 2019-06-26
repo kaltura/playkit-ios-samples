@@ -22,4 +22,5 @@ struct VideoData {
     var autoPlay: Bool = false
     var startPosition: Double = 0
     var streamType: PKIMADAIStreamType = .vod
+    var alwaysStartWithPreroll: Bool = false
 }
