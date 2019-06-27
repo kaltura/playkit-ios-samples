@@ -20,6 +20,7 @@
 		BD533FF31FB1D9360087C71F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD533FF11FB1D9360087C71F /* LaunchScreen.storyboard */; };
 		BD533FFA1FB1DB2F0087C71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD533FF81FB1DB2F0087C71F /* Main.storyboard */; };
 		BD533FFD1FB1DB370087C71F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD533FFB1FB1DB370087C71F /* Main.storyboard */; };
+		D23A932B2293D4540013924B /* TextStylingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D23A932A2293D4540013924B /* TextStylingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		BD533FF91FB1DB2F0087C71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD533FFC1FB1DB370087C71F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C988125DB1118323BDD4C7EF /* Pods-SharedPods-TracksSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-TracksSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-TracksSample/Pods-SharedPods-TracksSample.release.xcconfig"; sourceTree = "<group>"; };
+		D23A932A2293D4540013924B /* TextStylingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStylingViewController.swift; sourceTree = "<group>"; };
 		EAAC9073724B0896A5FBC59F /* Pods_SharedPods_TracksSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_TracksSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				BD533FF11FB1D9360087C71F /* LaunchScreen.storyboard */,
 				BD533FFB1FB1DB370087C71F /* Main.storyboard */,
 				BD533FEA1FB1D9360087C71F /* ViewController.swift */,
+				D23A932A2293D4540013924B /* TextStylingViewController.swift */,
 			);
 			path = "TracksSample-swift";
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD533FEB1FB1D9360087C71F /* ViewController.swift in Sources */,
+				D23A932B2293D4540013924B /* TextStylingViewController.swift in Sources */,
 				BD533FE91FB1D9360087C71F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
