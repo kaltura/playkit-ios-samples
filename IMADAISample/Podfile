@@ -8,15 +8,18 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_LOCAL='../../playkit-ios'
 #PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 #PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
+#PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 
 # Uncomment to use a git copy
 PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
 PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
+PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'develop'
 PLAYKIT_YOUBORA_BRANCH=ENV['PKY_BRANCH'] || 'develop'
+PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
 
 abstract_target 'SharedPods' do
   if defined? PLAYKIT_LOCAL
@@ -48,7 +51,17 @@ abstract_target 'SharedPods' do
       pod 'PlayKitYoubora'
     end
   end
-
-  target 'IMASample'
-  target 'IMASample-swift'
+  
+  if defined? PLAYKIT_PROVIDERS_LOCAL
+      pod 'PlayKitProviders', :path => PLAYKIT_PROVIDERS_LOCAL
+      else
+      if defined? PLAYKIT_PROVIDERS_GIT
+          pod 'PlayKitProviders', :git => PLAYKIT_PROVIDERS_GIT, :branch => PLAYKIT_PROVIDERS_BRANCH
+          else
+          pod 'PlayKitProviders'
+      end
+  end
+  
+  target 'IMADAISample'
+  target 'IMADAISample-Swift'
 end
