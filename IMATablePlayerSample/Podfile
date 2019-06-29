@@ -10,9 +10,9 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 
 # Uncomment to use a git copy
-#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-#PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
-#PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
+PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'develop'

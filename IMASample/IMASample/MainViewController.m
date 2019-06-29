@@ -12,14 +12,13 @@
 /*
  This sample will show you how to create a player with IMA plugin.
  The steps required:
- 1. Conform to Protocol `PlayerDelegate`.
- 2. Create IMA plugin config.
- 3. Load player with plugin config.
- 4. Register events.
- 5. Prepare Player.
+ 1. Create IMA plugin config.
+ 2. Load player with plugin config.
+ 3. Register events.
+ 4. Prepare Player.
  */
 
-@interface MainViewController () <UIAlertViewDelegate, PlayerDelegate> // 1
+@interface MainViewController () <UIAlertViewDelegate> // 1
 
 /// Storage point for videos.
 @property(nonatomic, copy) NSArray<Video *> *videos;
@@ -126,7 +125,7 @@
         
         // 1. Load the player
         self.player = [[PlayKitManager sharedInstance] loadPlayerWithPluginConfig:pluginConfig];
-        self.player.delegate = self;
+        
         // 2. Register events if have ones.
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
@@ -205,14 +204,14 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+}
+
 // Standard override.
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (BOOL)playerShouldPlayAd:(id<Player>)player {
-    return YES;
 }
 
 @end
