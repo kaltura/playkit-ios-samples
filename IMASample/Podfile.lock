@@ -59,10 +59,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: 6569b0100ad72865a3c2fe747d037ebda495fdab
+    :commit: ef3903f7fc93d93e733af199db9f533565b8697d
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
-    :commit: 77a4efbd7d1c838696632c64c7fb7c854e049a7d
+    :commit: aca66850e07c6dd1a610f23cd1097e3971935f3d
     :git: https://github.com/kaltura/playkit-ios-ima.git
   PlayKitYoubora:
     :commit: 00cb7ea2ca7b17495852ba16baea6f0f9011ec12

@@ -16,7 +16,7 @@ struct Media {
     var adTagURL: String
 }
 
-class MediaTableViewCell: UITableViewCell, PlayerDelegate {
+class MediaTableViewCell: UITableViewCell {
     
     var player: Player?
     var pluginConfig: PluginConfig?
@@ -55,7 +55,6 @@ class MediaTableViewCell: UITableViewCell, PlayerDelegate {
     func setupPlayer() {
         if player == nil {
             self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
-            self.player?.delegate = self
             
             self.player?.addObserver(self, events: [PlayerEvent.error, PluginEvent.error, PlayerEvent.errorLog], block: { (event) in
                 print("error: " + (event.error?.localizedDescription ?? ""))
@@ -92,9 +91,5 @@ class MediaTableViewCell: UITableViewCell, PlayerDelegate {
         }
         
         player.pause()
-    }
-    
-    func playerShouldPlayAd(_ player: Player) -> Bool {
-        return true
     }
 }
