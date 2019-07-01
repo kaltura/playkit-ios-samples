@@ -33,6 +33,7 @@ class VideoViewController: UIViewController {
             imaDAIConfig.contentSourceId = videoData.contentSourceId
             imaDAIConfig.videoId = videoData.videoId
             imaDAIConfig.streamType = videoData.streamType
+            imaDAIConfig.alwaysStartWithPreroll = videoData.alwaysStartWithPreroll
         }
 
         imaDAIConfig.playerVersion = PlayKitManager.versionString

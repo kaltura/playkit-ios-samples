@@ -41,7 +41,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "tears-of-steel",
                                 autoPlay: false,
                                 startPosition: 0,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: false))
         
         videos.append(VideoData(title: "ovp_dai_hls_autoPlay",
                                 entryID: "1_djnefl4e",
@@ -54,7 +55,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "tears-of-steel",
                                 autoPlay: true,
                                 startPosition: 0,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: false))
         
         videos.append(VideoData(title: "ovp_dai_hls2_autoPlay",
                                 entryID: "1_djnefl4e",
@@ -67,7 +69,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "googleio-highlights",
                                 autoPlay: true,
                                 startPosition: 0,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: false))
         
         videos.append(VideoData(title: "ovp_dai_hls_start_position_without_skip_preroll",
                                 entryID: "1_djnefl4e",
@@ -80,7 +83,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "googleio-highlights",
                                 autoPlay: true,
                                 startPosition: 30,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: true))
         
         videos.append(VideoData(title: "ovp_dai_hls_start_position_with_skip_preroll",
                                 entryID: "1_djnefl4e",
@@ -93,7 +97,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "tears-of-steel",
                                 autoPlay: true,
                                 startPosition: 30,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: false))
         
         videos.append(VideoData(title: "ovp_dai_live",
                                 entryID: "1_djnefl4e",
@@ -106,7 +111,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: nil,
                                 autoPlay: true,
                                 startPosition: 0,
-                                streamType: .live))
+                                streamType: .live,
+                                alwaysStartWithPreroll: false))
         
         videos.append(VideoData(title: "ovp_dai_error",
                                 entryID: "1_djnefl4e",
@@ -119,7 +125,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "the-tears-of-steel",
                                 autoPlay: true,
                                 startPosition: 0,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: false))
         
         videos.append(VideoData(title: "ovp_dai_error_start_position",
                                 entryID: "1_djnefl4e",
@@ -132,7 +139,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                                 videoId: "the-tears-of-steel",
                                 autoPlay: true,
                                 startPosition: 20,
-                                streamType: .vod))
+                                streamType: .vod,
+                                alwaysStartWithPreroll: false))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
