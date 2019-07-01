@@ -28,7 +28,7 @@ class PlayerSettings {
             let mediaEntry = self.createMediaEntry(fromUrl: contentUrl, andId: id)
             completionHandler(MediaConfig(mediaEntry: mediaEntry, startTime: self.startTime))
         case .live:
-            let mediaEntry = self.createMediaEntry(fromUrl: "http://il-wowza-centos-01.dev.kaltura.com:8080/live/hls/p/1091/e/0_cb9k71rb/t/KQT69d74Ls5IGXrkjtAABQ/index-s32.m3u8", andId: "0_cb9k71rb")
+            let mediaEntry = self.createMediaEntry(fromUrl: "http://cdntesting.qa.mkaltura.com/p/1091/sp/109100/playManifest/entryId/0_f8re4ujs/protocol/http/format/applehttp/flavorIds/0_cqe1sj58,0_4grpaumc,0_77l646yh/a.m3u8", andId: "0_f8re4ujs")
             completionHandler(MediaConfig(mediaEntry: mediaEntry, startTime: self.startTime))
         case .drm:
             /*let id = "0_pl5lbfo0"

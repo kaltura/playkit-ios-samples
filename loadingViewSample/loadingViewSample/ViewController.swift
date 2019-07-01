@@ -18,7 +18,7 @@ import PlayKit_IMA
  3. Prepare Player.
  */
 
-class ViewController: UIViewController, PlayerDelegate {
+class ViewController: UIViewController {
     var player: Player?
     var playheadTimer: Timer?
     @IBOutlet weak var playerContainer: PlayerView!
@@ -41,7 +41,7 @@ class ViewController: UIViewController, PlayerDelegate {
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
         self.handleLoadingViewAppearance()
-        self.player?.delegate = self
+        
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         self.preparePlayer()
     }
@@ -53,10 +53,6 @@ class ViewController: UIViewController, PlayerDelegate {
     
     override var preferredStatusBarStyle : UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
-    }
-    
-    func playerShouldPlayAd(_ player: Player) -> Bool {
-        return true
     }
 
 /************************************************************/

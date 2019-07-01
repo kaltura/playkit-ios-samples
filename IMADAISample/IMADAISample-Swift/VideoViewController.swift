@@ -12,7 +12,7 @@ import PlayKitYoubora
 import PlayKit_IMA
 import PlayKitProviders
 
-class VideoViewController: UIViewController, PlayerDelegate {
+class VideoViewController: UIViewController {
 
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
