@@ -48,6 +48,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         videos.append(Video(title: "Wrapper", thumbnail: bunnyThumbnail!, tag: kWrapperTag))
         videos.append(Video(title: "AdSense", thumbnail: bipThumbnail!, tag: kAdSenseTag))
         videos.append(Video(title: "Custom", thumbnail: androidThumbnail!, tag: "custom"))
+        videos.append(Video(title: "Pre-roll adsResponse", thumbnail: dfpThumbnail!, adsResponse: kPrerollAdsResponse))
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,7 +60,12 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
                     videoVC.video = video
                     
                     let adsConfig = IMAConfig()
-                    adsConfig.adTagUrl = video.tag
+                    if let tagURL = video.tag {
+                        adsConfig.adTagUrl = tagURL
+                    }
+                    if let adsResponse = video.adsResponse {
+                        adsConfig.adsResponse = adsResponse
+                    }
                     adsConfig.playerVersion = PlayKitManager.versionString
                     
                     var url: URL?
