@@ -11,11 +11,13 @@ import UIKit
 public class Video {
     var title: String
     var thumbnail: UIImage
-    var tag: String
+    var tag: String?
+    var adsResponse: String?
     
-    init(title: String, thumbnail: UIImage, tag: String) {
+    init(title: String, thumbnail: UIImage, tag: String? = "", adsResponse: String? = "") {
         self.title = title
         self.thumbnail = thumbnail
         self.tag = tag
+        self.adsResponse = adsResponse
     }
 }

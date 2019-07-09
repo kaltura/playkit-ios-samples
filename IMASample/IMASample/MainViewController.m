@@ -60,39 +60,53 @@
                     [[Video alloc] initWithTitle:@"Pre-roll"
                                        thumbnail:dfpThumbnail
                                            video:kDFPContentPath
-                                             tag:kPrerollTag],
+                                             tag:kPrerollTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"Skippable Pre-roll"
                                        thumbnail:androidThumbnail
                                            video:kAndroidContentPath
-                                             tag:kSkippableTag],
+                                             tag:kSkippableTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"Post-roll"
                                        thumbnail:bunnyThumbnail
                                            video:kBigBuckBunnyContentPath
-                                             tag:kPostrollTag],
+                                             tag:kPostrollTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"AdRules"
                                        thumbnail:bipThumbnail
                                            video:kBipBopContentPath
-                                             tag:kAdRulesTag],
+                                             tag:kAdRulesTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"AdRules Pods"
                                        thumbnail:dfpThumbnail
                                            video:kDFPContentPath
-                                             tag:kAdRulesPodsTag],
+                                             tag:kAdRulesPodsTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"VMAP Pods"
                                        thumbnail:androidThumbnail
                                            video:kAndroidContentPath
-                                             tag:kVMAPPodsTag],
+                                             tag:kVMAPPodsTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"Wrapper"
                                        thumbnail:bunnyThumbnail
                                            video:kBigBuckBunnyContentPath
-                                             tag:kWrapperTag],
+                                             tag:kWrapperTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"AdSense"
                                        thumbnail:bipThumbnail
                                            video:kBipBopContentPath
-                                             tag:kAdSenseTag],
+                                             tag:kAdSenseTag
+                                     adsResponse:nil],
                     [[Video alloc] initWithTitle:@"Custom"
                                        thumbnail:androidThumbnail
                                            video:kAndroidContentPath
-                                             tag:@"custom"]
+                                             tag:@"custom"
+                                     adsResponse:nil],
+                    [[Video alloc] initWithTitle:@"Pre-roll adsResponse"
+                                       thumbnail:dfpThumbnail
+                                           video:kDFPContentPath
+                                             tag:nil
+                                     adsResponse:kPrerollAdsResponse]
                     ];
 }
 
@@ -113,6 +127,7 @@
             MediaConfig *mediaConfig = [[MediaConfig alloc] initWithMediaEntry:mediaEntry startTime:0.0];
             IMAConfig *adsConfig = [IMAConfig new];
             adsConfig.adTagUrl = video.tag;
+            adsConfig.adsResponse = video.adsResponse;
             adsConfig.playerVersion = PlayKitManager.versionString;
             [self.player updatePluginConfigWithPluginName:@"IMAPlugin" config:adsConfig];
             destVC.mediaConfig = mediaConfig;

@@ -65,3 +65,6 @@ static NSString *const kWrapperTag = @"http://pubads.g.doubleclick.net/gampad/ad
 // AdSense
 static NSString *const kAdSenseTag =
     @"http://googleads.g.doubleclick.net/pagead/ads?client=ca-video-afvtest&ad_type=video";
+
+// Pre-roll as an adsResponse
+static NSString *const kPrerollAdsResponse = @"<VAST xsi:noNamespaceSchemaLocation=\"vast.xsd\" version=\"3.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\n<script/>\n<Ad id=\"697203496\">\n<InLine>\n<AdTitle>External NCA1C1L1 Linear Inline</AdTitle>\n<Description><![CDATA[External NCA1C1L1 Linear Inline ad]]></Description>\n<Creatives>\n<Creative id=\"57859154776\" sequence=\"1\">\n<Linear>\n<Duration>00:00:5</Duration>\n<MediaFiles>\n<MediaFile id=\"GDFP\" delivery=\"progressive\" width=\"1280\" height=\"720\" type=\"video/mp4\" bitrate=\"450\" scalable=\"true\" maintainAspectRatio=\"true\"><![CDATA[http://techslides.com/demos/sample-videos/small.mp4]]></MediaFile>\n</MediaFiles>\n</Linear>\n</Creative>\n</Creatives>\n</InLine>\n</Ad>\n<script/>\n</VAST>";

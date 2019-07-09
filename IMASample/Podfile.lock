@@ -59,10 +59,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PlayKit:
-    :commit: ef3903f7fc93d93e733af199db9f533565b8697d
+    :commit: 0e768925bc619249e8db967d5330ef24df186080
     :git: https://github.com/kaltura/playkit-ios.git
   PlayKit_IMA:
-    :commit: aca66850e07c6dd1a610f23cd1097e3971935f3d
+    :commit: f825ab97e26363b49caa2f13aa645671039865b8
     :git: https://github.com/kaltura/playkit-ios-ima.git
   PlayKitYoubora:
     :commit: 00cb7ea2ca7b17495852ba16baea6f0f9011ec12
@@ -72,7 +72,7 @@ SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 8f57879738137b81a48ba792e42439e6bff5413b
   KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 46da5b32b306122fda6232547234d7fe9a3bb77b
+  PlayKit: 1ec0792d81a37f0be6704a21c9f5a125750c9593
   PlayKit_IMA: f64a5840b410eebc43bff36ec1e17c00ad50883b
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
   PlayKitYoubora: d57d26b8c586ed104e43d1d6f85a6853092dc490
