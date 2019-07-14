@@ -20,6 +20,9 @@
 		BF7B407A1E9E4B820011CA01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7B40781E9E4B820011CA01 /* Main.storyboard */; };
 		BF7B407C1E9E4B820011CA01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7B407B1E9E4B820011CA01 /* Assets.xcassets */; };
 		BF7B407F1E9E4B820011CA01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7B407D1E9E4B820011CA01 /* LaunchScreen.storyboard */; };
+		D2900B7B22DA66E600324268 /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2900B7A22DA66E600324268 /* MediaViewController.swift */; };
+		D2900B7D22DA6A8700324268 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2900B7C22DA6A8700324268 /* MainViewController.swift */; };
+		D2900B7F22DA6C0600324268 /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2900B7E22DA6C0600324268 /* VideoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		BF7B407B1E9E4B820011CA01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7B407E1E9E4B820011CA01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF7B40801E9E4B820011CA01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2900B7A22DA66E600324268 /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		D2900B7C22DA6A8700324268 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D2900B7E22DA6C0600324268 /* VideoData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		E4D80C492D9536D0F70C49F9 /* Pods-SharedPods-BasicSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-BasicSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-BasicSample/Pods-SharedPods-BasicSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,12 +141,15 @@
 		BF7B40731E9E4B820011CA01 /* BasicSample-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				D2900B7E22DA6C0600324268 /* VideoData.swift */,
 				BF7B40741E9E4B820011CA01 /* AppDelegate.swift */,
 				BF7B40761E9E4B820011CA01 /* ViewController.swift */,
 				BF7B40781E9E4B820011CA01 /* Main.storyboard */,
 				BF7B407B1E9E4B820011CA01 /* Assets.xcassets */,
 				BF7B407D1E9E4B820011CA01 /* LaunchScreen.storyboard */,
 				BF7B40801E9E4B820011CA01 /* Info.plist */,
+				D2900B7A22DA66E600324268 /* MediaViewController.swift */,
+				D2900B7C22DA6A8700324268 /* MainViewController.swift */,
 			);
 			path = "BasicSample-Swift";
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUI/PlayKitUI.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -289,6 +299,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -308,6 +319,7 @@
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUI/PlayKitUI.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -317,6 +329,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -362,7 +375,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF7B40771E9E4B820011CA01 /* ViewController.swift in Sources */,
+				D2900B7B22DA66E600324268 /* MediaViewController.swift in Sources */,
 				BF7B40751E9E4B820011CA01 /* AppDelegate.swift in Sources */,
+				D2900B7D22DA6A8700324268 /* MainViewController.swift in Sources */,
+				D2900B7F22DA6C0600324268 /* VideoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

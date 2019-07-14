@@ -22,6 +22,8 @@ abstract_target 'SharedPods' do
       pod 'PlayKit'
     end
   end
+
+  pod 'PlayKitUI', :git => 'https://github.com/kaltura/playkit-ios-media-player', :branch => 'pod'
   
   target 'BasicSample'
   target 'BasicSample-Swift'
