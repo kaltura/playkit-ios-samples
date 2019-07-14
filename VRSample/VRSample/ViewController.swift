@@ -27,7 +27,7 @@ struct MediaData {
     let entryId: String
 }
     
-class ViewController: UIViewController, PlayerDelegate {
+class ViewController: UIViewController {
     
     var mediaData: MediaData?
     
@@ -46,8 +46,6 @@ class ViewController: UIViewController, PlayerDelegate {
         
         // 1. Load the player
         self.player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-        // 2. Set delegate
-        self.player?.delegate = self
 
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         self.preparePlayer()
@@ -147,13 +145,5 @@ class ViewController: UIViewController, PlayerDelegate {
         let vrController = self.player?.getController(ofType: PKVRController.self)
         // 6. Use PKVRController API
         vrController?.setVRModeEnabled(true)
-    }
- 
-/************************/
-// MARK: - PlayerDelegate
-/***********************/
-
-    func playerShouldPlayAd(_ player: Player) -> Bool {
-        return true
     }
 }

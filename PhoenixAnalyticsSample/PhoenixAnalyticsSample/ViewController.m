@@ -76,13 +76,13 @@
     self.player.view = self.playerContainer;
     
     // Create a session provider
-    SimpleSessionProvider *sessionProvider = [[SimpleSessionProvider alloc] initWithServerURL:@"http://api-preprod.ott.kaltura.com/v4_5/api_v3/"
+    SimpleSessionProvider *sessionProvider = [[SimpleSessionProvider alloc] initWithServerURL:@"https://api-preprod.ott.kaltura.com/v5_1_0/api_v3"
                                                                                     partnerId:198
                                                                                            ks:nil];
     
     // Create the media provider
     PhoenixMediaProvider *phoenixMediaProvider = [[PhoenixMediaProvider alloc] init];
-    [phoenixMediaProvider setAssetId:@"259153"];
+    [phoenixMediaProvider setAssetId:@"277170"];
     [phoenixMediaProvider setType:AssetTypeMedia];
     [phoenixMediaProvider setFormats:@[@"Mobile_Devices_Main_SD"]];
     [phoenixMediaProvider setPlaybackContextType:PlaybackContextTypePlayback];
