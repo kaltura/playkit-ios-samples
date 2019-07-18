@@ -7,18 +7,18 @@
 //
 
 #import "ViewController.h"
+#import "VideoData.h"
 
 @import PlayKit;
 @import PlayKitProviders;
 
 @interface ViewController ()
-
-@property (strong, nonatomic) id<Player> player;
-@property (strong, nonatomic) NSTimer *playheadTimer;
-@property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
-@property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
-
-@end
+    
+    @property (strong, nonatomic) id<Player> player;
+    @property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
+    @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
+    
+    @end
 
 /*********************************/
 // Plugin registration should be done in App Delegate!!!
@@ -52,6 +52,7 @@
     // Event registeration must be after loading the player successfully to make sure events are added,
     // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
     [self addPhoenixAnalyticsObservations];
+    [self addPlayerEventObservations];
     
     // 4. Prepare the player (can be called at a later stage, preparing starts buffering the video)
     [self preparePlayer];
@@ -61,10 +62,34 @@
     [super viewDidDisappear:animated];
     // remove observers
     [self removeAnalyticsObservations];
+    [self removePlayerEventObservations];
+    [self.player destroy];
 }
     
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+// MARK: - PlayerEvents
+
+- (void)addPlayerEventObservations {
+    __weak __typeof(self)weakSelf = self;
+    [self.player addObserver:self
+                      events:@[PlayerEvent.playheadUpdate]
+                       block:^(PKEvent * _Nonnull event) {
+                           __typeof(weakSelf) strongSelf = weakSelf;
+                           
+                           if ([event isKindOfClass:PlayerEvent.playheadUpdate]) {
+                               PlayerEvent *playerEvent = (PlayerEvent *)event;
+                               NSNumber *currentTime = playerEvent.currentTime;
+                               
+                               strongSelf.playheadSlider.value = currentTime.doubleValue / self.player.duration;
+                           }
+    }];
+}
+
+- (void)removePlayerEventObservations {
+    [self.player removeObserver:self events:@[PlayerEvent.playheadUpdate]];
 }
 
 /*********************************/
@@ -76,15 +101,15 @@
     self.player.view = self.playerContainer;
     
     // Create a session provider
-    SimpleSessionProvider *sessionProvider = [[SimpleSessionProvider alloc] initWithServerURL:@"https://api-preprod.ott.kaltura.com/v5_1_0/api_v3"
-                                                                                    partnerId:198
-                                                                                           ks:nil];
+    SimpleSessionProvider *sessionProvider = [[SimpleSessionProvider alloc] initWithServerURL:self.videoData.serverURL
+                                                                                    partnerId:self.videoData.partnerID
+                                                                                           ks:self.videoData.ks];
     
     // Create the media provider
     PhoenixMediaProvider *phoenixMediaProvider = [[PhoenixMediaProvider alloc] init];
-    [phoenixMediaProvider setAssetId:@"277170"];
+    [phoenixMediaProvider setAssetId:self.videoData.assetId];
     [phoenixMediaProvider setType:AssetTypeMedia];
-    [phoenixMediaProvider setFormats:@[@"Mobile_Devices_Main_SD"]];
+    [phoenixMediaProvider setFormats:self.videoData.formats];
     [phoenixMediaProvider setPlaybackContextType:PlaybackContextTypePlayback];
     [phoenixMediaProvider setSessionProvider:sessionProvider];
     
@@ -138,15 +163,12 @@
 
 - (IBAction)playTouched:(UIButton *)sender {
     if(!self.player.isPlaying) {
-        self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
         [self.player play];
     }
 }
 
 - (IBAction)pauseTouched:(UIButton *)sender {
     if(self.player.isPlaying) {
-        [self.playheadTimer invalidate];
-        self.playheadTimer = nil;
         [self.player pause];
     }
 }
@@ -154,10 +176,6 @@
 - (IBAction)playheadValueChanged:(UISlider *)sender {
     NSLog(@"playhead value: %f", sender.value);
     self.player.currentTime = self.player.duration * sender.value;
-}
-
-- (void)playheadUpdate {
-    self.playheadSlider.value = self.player.currentTime / self.player.duration;
 }
 
 @end

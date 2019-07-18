@@ -20,6 +20,10 @@
 		BFD20A231EA795820018FD8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A211EA795820018FD8A /* Main.storyboard */; };
 		BFD20A251EA795820018FD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A241EA795820018FD8A /* Assets.xcassets */; };
 		BFD20A281EA795820018FD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD20A261EA795820018FD8A /* LaunchScreen.storyboard */; };
+		D2900B8522DF191900324268 /* VideosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2900B8422DF191900324268 /* VideosViewController.m */; };
+		D2900B8A22DF245200324268 /* VideoData.m in Sources */ = {isa = PBXBuildFile; fileRef = D2900B8722DF204C00324268 /* VideoData.m */; };
+		D2E5041422DF4103004C4CEF /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E5041322DF4103004C4CEF /* VideosViewController.swift */; };
+		D2E5041622DF4228004C4CEF /* VideoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E5041522DF4228004C4CEF /* VideoData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,12 @@
 		BFD20A241EA795820018FD8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFD20A271EA795820018FD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFD20A291EA795820018FD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D2900B8422DF191900324268 /* VideosViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideosViewController.m; sourceTree = "<group>"; };
+		D2900B8622DF194600324268 /* VideosViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideosViewController.h; sourceTree = "<group>"; };
+		D2900B8722DF204C00324268 /* VideoData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoData.m; sourceTree = "<group>"; };
+		D2900B8922DF216500324268 /* VideoData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoData.h; sourceTree = "<group>"; };
+		D2E5041322DF4103004C4CEF /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		D2E5041522DF4228004C4CEF /* VideoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoData.swift; sourceTree = "<group>"; };
 		D575796C4C445E5E20EB4AF1 /* Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample/Pods-SharedPods-PhoenixAnalyticsSample.debug.xcconfig"; sourceTree = "<group>"; };
 		D6F76FA6DF48FD765B17CD72 /* Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PhoenixAnalyticsSample-Swift/Pods-SharedPods-PhoenixAnalyticsSample-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		DFC167E5A10CA04A76E76C0C /* Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_PhoenixAnalyticsSample_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +116,10 @@
 				2005AEF91E81696200FB01B0 /* AppDelegate.m */,
 				2005AEFB1E81696200FB01B0 /* ViewController.h */,
 				2005AEFC1E81696200FB01B0 /* ViewController.m */,
+				D2900B8922DF216500324268 /* VideoData.h */,
+				D2900B8722DF204C00324268 /* VideoData.m */,
+				D2900B8622DF194600324268 /* VideosViewController.h */,
+				D2900B8422DF191900324268 /* VideosViewController.m */,
 				2005AEFE1E81696200FB01B0 /* Main.storyboard */,
 				2005AF011E81696200FB01B0 /* Assets.xcassets */,
 				2005AF031E81696200FB01B0 /* LaunchScreen.storyboard */,
@@ -128,6 +142,8 @@
 			children = (
 				BFD20A1D1EA795820018FD8A /* AppDelegate.swift */,
 				BFD20A1F1EA795820018FD8A /* ViewController.swift */,
+				D2E5041522DF4228004C4CEF /* VideoData.swift */,
+				D2E5041322DF4103004C4CEF /* VideosViewController.swift */,
 				BFD20A211EA795820018FD8A /* Main.storyboard */,
 				BFD20A241EA795820018FD8A /* Assets.xcassets */,
 				BFD20A261EA795820018FD8A /* LaunchScreen.storyboard */,
@@ -362,6 +378,8 @@
 				2005AEFD1E81696200FB01B0 /* ViewController.m in Sources */,
 				2005AEFA1E81696200FB01B0 /* AppDelegate.m in Sources */,
 				2005AEF71E81696200FB01B0 /* main.m in Sources */,
+				D2900B8A22DF245200324268 /* VideoData.m in Sources */,
+				D2900B8522DF191900324268 /* VideosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +387,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E5041422DF4103004C4CEF /* VideosViewController.swift in Sources */,
 				BFD20A201EA795820018FD8A /* ViewController.swift in Sources */,
 				BFD20A1E1EA795820018FD8A /* AppDelegate.swift in Sources */,
+				D2E5041622DF4228004C4CEF /* VideoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

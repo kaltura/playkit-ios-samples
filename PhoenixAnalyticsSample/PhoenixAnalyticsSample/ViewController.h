@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VideoData;
 
 @interface ViewController : UIViewController
-
-
+    
+    @property (strong, nonatomic) VideoData *videoData;
+    
 @end
 
