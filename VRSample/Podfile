@@ -29,7 +29,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_GIT
       pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
-      pod 'PlayKit'
+      pod 'PlayKit', '~> 3.12'
     end
   end
   
@@ -39,7 +39,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_PROVIDERS_GIT
       pod 'PlayKitProviders', :git => PLAYKIT_PROVIDERS_GIT, :branch => PLAYKIT_PROVIDERS_BRANCH
       else
-      pod 'PlayKitProviders'
+      pod 'PlayKitProviders', '~> 1.4'
     end
   end
   
@@ -49,7 +49,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_YOUBORA_GIT
       pod 'PlayKitYoubora', :git => PLAYKIT_YOUBORA_GIT, :branch => PLAYKIT_YOUBORA_BRANCH
       else
-      pod 'PlayKitYoubora'
+      pod 'PlayKitYoubora', '~> 1.4'
     end
   end
   
@@ -59,7 +59,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_VR_GIT
       pod 'PlayKitVR', :git => PLAYKIT_VR_GIT, :branch => PLAYKIT_VR_BRANCH
       else
-      pod 'PlayKitVR'
+      pod 'PlayKitVR', '~> 1.2'
     end
   end
   

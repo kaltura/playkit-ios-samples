@@ -6,17 +6,17 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.11.0):
-    - PlayKit/Core (= 3.11.0)
-  - PlayKit/AnalyticsCommon (3.11.0):
+  - PlayKit (3.12.0):
+    - PlayKit/Core (= 3.12.0)
+  - PlayKit/AnalyticsCommon (3.12.0):
     - PlayKit/Core
-  - PlayKit/Core (3.11.0):
+  - PlayKit/Core (3.12.0):
     - KalturaNetKit (~> 1.2.0)
     - PlayKitUtils (~> 0.4.0)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
   - PlayKitUtils (0.4.0)
-  - PlayKitYoubora (1.4.1):
+  - PlayKitYoubora (1.4.2):
     - PlayKit/AnalyticsCommon
     - YouboraLib (= 6.1.7)
   - SwiftyJSON (4.3.0)
@@ -27,8 +27,8 @@ PODS:
   - YouboraLib (6.1.7)
 
 DEPENDENCIES:
-  - PlayKit
-  - PlayKitYoubora
+  - PlayKit (~> 3.12)
+  - PlayKitYoubora (~> 1.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -44,13 +44,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 1587a2bb6ef36cd9428fa7f3fc1455b7320773f1
+  PlayKit: 887882082d26392f11a2cee1dbb1545f01f1ddc9
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
-  PlayKitYoubora: 30db9a78cae05701b79981e4078d830781b41e32
+  PlayKitYoubora: 45f49971ff979896d94dddd33b8361339339e292
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: 86c26cfd9c7a0531ef8a44a6ec0b0a1f682f99de
+PODFILE CHECKSUM: 0c52dc32f8096e5f297cde7364e007860fa366a9
 
 COCOAPODS: 1.7.1

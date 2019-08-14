@@ -22,7 +22,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_GIT
       pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
-      pod 'PlayKit'
+      pod 'PlayKit', '~> 3.12'
     end
   end
   
@@ -32,7 +32,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_GOOGLECAST_GIT
       pod 'PlayKitGoogleCast', :git => PLAYKIT_GOOGLECAST_GIT, :branch => PLAYKIT_GOOGLECAST_BRANCH
       else
-      pod 'PlayKitGoogleCast'
+      pod 'PlayKitGoogleCast', '~> 1.2'
     end
   end
   

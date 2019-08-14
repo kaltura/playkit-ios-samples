@@ -19,7 +19,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_GIT
       pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
-      pod 'PlayKit'
+      pod 'PlayKit', '~> 3.12'
     end
   end
   
