@@ -56,20 +56,56 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Setup the player's view
         player?.view = self.playerContainer
         playerContainer.sendSubviewToBack(self.player!.view!)
+       
+        // Uncomment the type of media needed
+        let mediaEntry = getMediaWithInternalSubtitles()
+//        let mediaEntry = getMediaWithExternalSubtitles()
         
+        // Create media config
+        let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
+        
+        // Set if we want the player to auto select the subtitles.
+        player?.settings.trackSelection.textSelectionMode = .auto
+        player?.settings.trackSelection.textSelectionLanguage = "en"
+        
+        // Prepare the player
+        player?.prepare(mediaConfig)
+    }
+    
+    func getMediaWithInternalSubtitles() -> PKMediaEntry {
         let contentURL = "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8"
         
         // Create media source and initialize a media entry with that source
         let entryId = "bipbop_16x9"
         let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
+        
         // Setup media entry
         let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
         
-        // Create media config
-        let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
+        return mediaEntry
+    }
+    
+    func getMediaWithExternalSubtitles() -> PKMediaEntry {
+        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/sp/2215841/playManifest/entryId/1_9bwuo813/flavorIds/0_vfdi28n9,1_5j0bgx4v,1_x6tlvn4x,1_zj4vzg46/deliveryProfileId/19201/protocol/https/format/applehttp/a.m3u8"
         
-        // Prepare the player
-        player!.prepare(mediaConfig)
+        // Create media source and initialize a media entry with that source
+        let entryId = "1_9bwuo813"
+        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
+        
+        // Setup media entry
+        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
+        mediaEntry.externalSubtitles = [PKExternalSubtitle(id: "Deutsch-de",
+                                                           name: "Deutsch",
+                                                           language: "de",
+                                                           vttURLString: "http://brenopolanski.com/html5-video-webvtt-example/MIB2-subtitles-pt-BR.vtt",
+                                                           duration: 57.0),
+                                        PKExternalSubtitle(id: "English-en",
+                                                           name: "English",
+                                                           language: "en",
+                                                           vttURLString: "http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt",
+                                                           duration: 57.0)]
+        
+        return mediaEntry
     }
     
     func handleTracks() {
@@ -129,7 +165,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selectTrack(selectedTracks[row])
+        if !selectedTracks.isEmpty {
+            selectTrack(selectedTracks[row])
+        }
     }
     
     @objc func playheadUpdate() {
