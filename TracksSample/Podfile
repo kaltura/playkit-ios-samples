@@ -8,9 +8,9 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_LOCAL='../../playkit-ios'
 
 # Uncomment to use a git copy
-#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 
-PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
+PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'FEM-2357'
 
 abstract_target 'SharedPods' do
   if defined? PLAYKIT_LOCAL

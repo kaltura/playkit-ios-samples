@@ -58,8 +58,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         playerContainer.sendSubviewToBack(self.player!.view!)
        
         // Uncomment the type of media needed
-        let mediaEntry = getMediaWithInternalSubtitles()
-//        let mediaEntry = getMediaWithExternalSubtitles()
+//        let mediaEntry = getMediaWithInternalSubtitles()
+        let mediaEntry = getMediaWithExternalSubtitles()
         
         // Create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)

@@ -6,9 +6,9 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.12.0):
-    - PlayKit/Core (= 3.12.0)
-  - PlayKit/Core (3.12.0):
+  - PlayKit (3.12.1-dev):
+    - PlayKit/Core (= 3.12.1-dev)
+  - PlayKit/Core (3.12.1-dev):
     - KalturaNetKit (~> 1.2.0)
     - PlayKitUtils (~> 0.4.0)
     - SwiftyJSON (= 4.3.0)
@@ -21,25 +21,34 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit (~> 3.12)
+  - PlayKit (from `https://github.com/kaltura/playkit-ios.git`, branch `FEM-2357`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KalturaNetKit
     - ObjcExceptionBridging
-    - PlayKit
     - PlayKitUtils
     - SwiftyJSON
     - XCGLogger
 
+EXTERNAL SOURCES:
+  PlayKit:
+    :branch: FEM-2357
+    :git: https://github.com/kaltura/playkit-ios.git
+
+CHECKOUT OPTIONS:
+  PlayKit:
+    :commit: 321ddb6c80c14a283afc151a0a00d5690885c7b8
+    :git: https://github.com/kaltura/playkit-ios.git
+
 SPEC CHECKSUMS:
   KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 887882082d26392f11a2cee1dbb1545f01f1ddc9
+  PlayKit: 270d8a995c09e7389b854babde9fb2aebdfb7aaf
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 2bcea4ab22711d3946f4ee035eba0505f747824e
+PODFILE CHECKSUM: 37e244ca666fa33b1705a473b3708bf41c701c73
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.7.5
