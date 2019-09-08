@@ -97,22 +97,22 @@
     
     mediaEntry.externalSubtitles = @[[[PKExternalSubtitle alloc] initWithId:@"Deutsch-de"
                                                                        name:@"Deutsch"
+                                                                   language:@"de"
                                                                   isDefault:NO
                                                                  autoSelect:NO
                                                                      forced:NO
-                                                                   language:@"de"
                                                             characteristics:nil
                                                                vttURLString:@"http://brenopolanski.com/html5-video-webvtt-example/MIB2-subtitles-pt-BR.vtt"
-                                                                   duration:57.0],
+                                                                   duration:570.0],
                                      [[PKExternalSubtitle alloc] initWithId:@"English-en"
                                                                        name:@"English"
+                                                                   language:@"en"
                                                                   isDefault:YES
                                                                  autoSelect:YES
                                                                      forced:NO
-                                                                   language:@"en"
                                                             characteristics:nil
                                                                vttURLString:@"http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt"
-                                                                   duration:57.0]];
+                                                                   duration:570.0]];
     
     return mediaEntry;
 }

@@ -60,6 +60,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Uncomment the type of media needed
 //        let mediaEntry = getMediaWithInternalSubtitles()
         let mediaEntry = getMediaWithExternalSubtitles()
+//        let mediaEntry = getDRMMediaWithExternalSubtitles()
         
         // Create media config
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
@@ -81,6 +82,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         // Setup media entry
         let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
+        // If we set external subtitles, they will be ignored.
         
         return mediaEntry
     }
@@ -98,12 +100,38 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
                                                            name: "Deutsch",
                                                            language: "de",
                                                            vttURLString: "http://brenopolanski.com/html5-video-webvtt-example/MIB2-subtitles-pt-BR.vtt",
-                                                           duration: 57.0),
+                                                           duration: 570.0),
                                         PKExternalSubtitle(id: "English-en",
                                                            name: "English",
                                                            language: "en",
                                                            vttURLString: "http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt",
-                                                           duration: 57.0)]
+                                                           duration: 570.0)]
+        
+        return mediaEntry
+    }
+    
+    func getDRMMediaWithExternalSubtitles() -> PKMediaEntry {
+        let contentURL = "https://cdnapisec.kaltura.com/p/2222401/sp/2222401/playManifest/entryId/1_i18rihuv/flavorIds/1_nwoofqvr,1_3z75wwxi,1_exjt5le8,1_uvb3fyqs/deliveryProfileId/8642/protocol/https/format/applehttp/a.m3u8"
+        
+        // Create media source and initialize a media entry with that source
+        let entryId = "0_pl5lbfo0"
+        let drmParams = FairPlayDRMParams(licenseUri: "https://udrmv3.kaltura.com/fps/license?custom_data=eyJjYV9zeXN0ZW0iOiJPVlAiLCJ1c2VyX3Rva2VuIjoiZGpKOE1qSXlNalF3TVh3amRkODBoRzFnNEVFU1ZLdG9KVmF6VlJRWFEwZ05faDRLRGxvOVc5NklEOUw1c0hLdGkwZ1J3UXM5dW5zbTlLTmNOT1o2QWtDR0hFRTdlMmZuNHFOdGlPYjM1M2k4QTZaQWlnbktxS0hsNHc9PSIsImFjY291bnRfaWQiOiIyMjIyNDAxIiwiY29udGVudF9pZCI6IjFfaTE4cmlodXYiLCJmaWxlcyI6IjFfbndvb2ZxdnIsMV8zejc1d3d4aSwxX2V4anQ1bGU4LDFfdXZiM2Z5cXMifQ%3D%3D&signature=KbGUO7ucxk7xDIdIWS4IKtAdSZU%3D",
+                                          base64EncodedCertificate: "MIIFETCCA/mgAwIBAgIISWLo8KcYfPMwDQYJKoZIhvcNAQEFBQAwfzELMAkGA1UEBhMCVVMxEzARBgNVBAoMCkFwcGxlIEluYy4xJjAkBgNVBAsMHUFwcGxlIENlcnRpZmljYXRpb24gQXV0aG9yaXR5MTMwMQYDVQQDDCpBcHBsZSBLZXkgU2VydmljZXMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMTYwMjAxMTY0NTQ0WhcNMTgwMjAxMTY0NTQ0WjCBijELMAkGA1UEBhMCVVMxKDAmBgNVBAoMH1ZJQUNPTSAxOCBNRURJQSBQUklWQVRFIExJTUlURUQxEzARBgNVBAsMClE5QU5HR0w4TTYxPDA6BgNVBAMMM0ZhaXJQbGF5IFN0cmVhbWluZzogVklBQ09NIDE4IE1FRElBIFBSSVZBVEUgTElNSVRFRDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEA2YmfdPWM86+te7Bbt4Ic6FexXwMeL+8AmExIj8jAaNxhKbfVFnUnuXzHOajGC7XDbXxsFbPqnErqjw0BqUoZhs+WVMy+0X4AGqHk7uRpZ4RLYganel+fqitL9rz9w3p41x8JfLV+lAej+BEN7zNeqQ2IsC4BxkViu1gA6K22uGsCAwEAAaOCAgcwggIDMB0GA1UdDgQWBBQK+Gmarl2PO3jtLP6A6TZeihOL3DAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFGPkR1TLhXFZRiyDrMxEMWRnAyy+MIHiBgNVHSAEgdowgdcwgdQGCSqGSIb3Y2QFATCBxjCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjA1BgNVHR8ELjAsMCqgKKAmhiRodHRwOi8vY3JsLmFwcGxlLmNvbS9rZXlzZXJ2aWNlcy5jcmwwDgYDVR0PAQH/BAQDAgUgMEgGCyqGSIb3Y2QGDQEDAQH/BDYBZ2diOGN5bXpsb21vdXFqb3p0aHg5aXB6dDJ0bThrcGdqOGNwZGlsbGVhMWI1aG9saWlyaW8wPQYLKoZIhvdjZAYNAQQBAf8EKwF5aHZlYXgzaDB2Nno5dXBqcjRsNWVyNm9hMXBtam9zYXF6ZXdnZXFkaTUwDQYJKoZIhvcNAQEFBQADggEBAIaTVzuOpZhHHUMGd47XeIo08E+Wb5jgE2HPsd8P/aHwVcR+9627QkuAnebftasV/h3FElahzBXRbK52qIZ/UU9nRLCqqKwX33eS2TiaAzOoMAL9cTUmEa2SMSzzAehb7lYPC73Y4VQFttbNidHZHawGp/844ipBS7Iumas8kT8G6ZmIBIevWiggd+D5gLdqXpOFI2XsoAipuxW6NKnnlKnuX6aNReqzKO0DmQPDHO2d7pbd3wAz5zJmxDLpRQfn7iJKupoYGqBs2r45OFyM14HUWaC0+VSh2PaZKwnSS8XXo4zcT/MfEcmP0tL9NaDfsvIWnScMxHUUTNNsZIp3QXA=")
+        
+        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: [drmParams], mediaFormat: .hls)
+        
+        // Setup media entry
+        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
+        mediaEntry.externalSubtitles = [PKExternalSubtitle(id: "Deutsch-de",
+                                                           name: "Deutsch",
+                                                           language: "de",
+                                                           vttURLString: "http://brenopolanski.com/html5-video-webvtt-example/MIB2-subtitles-pt-BR.vtt",
+                                                           duration: 888.11),
+                                        PKExternalSubtitle(id: "English-en",
+                                                           name: "English",
+                                                           language: "en",
+                                                           vttURLString: "http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt",
+                                                           duration: 888.11)]
         
         return mediaEntry
     }
