@@ -98,21 +98,21 @@
     mediaEntry.externalSubtitles = @[[[PKExternalSubtitle alloc] initWithId:@"Deutsch-de"
                                                                        name:@"Deutsch"
                                                                    language:@"de"
+                                                               vttURLString:@"http://brenopolanski.com/html5-video-webvtt-example/MIB2-subtitles-pt-BR.vtt"
+                                                                   duration:570.0
                                                                   isDefault:NO
                                                                  autoSelect:NO
                                                                      forced:NO
-                                                            characteristics:nil
-                                                               vttURLString:@"http://brenopolanski.com/html5-video-webvtt-example/MIB2-subtitles-pt-BR.vtt"
-                                                                   duration:570.0],
+                                                            characteristics:nil],
                                      [[PKExternalSubtitle alloc] initWithId:@"English-en"
                                                                        name:@"English"
                                                                    language:@"en"
+                                                               vttURLString:@"http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt"
+                                                                   duration:570.0
                                                                   isDefault:YES
                                                                  autoSelect:YES
                                                                      forced:NO
-                                                            characteristics:nil
-                                                               vttURLString:@"http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt"
-                                                                   duration:570.0]];
+                                                            characteristics:nil]];
     
     return mediaEntry;
 }
