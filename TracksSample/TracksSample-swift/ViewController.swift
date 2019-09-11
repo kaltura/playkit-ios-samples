@@ -15,6 +15,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var playheadSlider: UISlider!
     @IBOutlet weak var picker: UIPickerView!
     
+    @IBOutlet weak var audioTracksButton: UIButton!
+    @IBOutlet weak var textTracksButton: UIButton!
+    
     var player: Player?
     var audioTracks: [Track] = []
     var textTracks: [Track] = []
@@ -71,6 +74,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         // Prepare the player
         player?.prepare(mediaConfig)
+    }
+    
+    func getMediaWithOutSubtitles() -> PKMediaEntry {
+        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/sp/2215841/playManifest/entryId/1_9bwuo813/flavorIds/0_vfdi28n9,1_5j0bgx4v,1_x6tlvn4x,1_zj4vzg46/deliveryProfileId/19201/protocol/https/format/applehttp/a.m3u8"
+        
+        // Create media source and initialize a media entry with that source
+        let entryId = "1_9bwuo813"
+        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
+        
+        // Setup media entry
+        let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
+        
+        return mediaEntry
     }
     
     func getMediaWithInternalSubtitles() -> PKMediaEntry {
@@ -180,6 +196,23 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         player?.selectTrack(trackId: track.id)
     }
     
+    @objc func playheadUpdate() {
+        if let _ = player {
+            playheadSlider.value = Float(player!.currentTime / player!.duration)
+        }
+    }
+    
+    func resetView() {
+        audioTracks = []
+        textTracks = []
+        selectedTracks = []
+        picker.reloadAllComponents()
+        audioTracksButton.isSelected = true
+        textTracksButton.isSelected = false
+    }
+    
+    // MARK: - UIPickerViewDataSource
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -188,6 +221,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return selectedTracks.count
     }
 
+    // MARK: - UIPickerViewDelegate
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return selectedTracks[row].title
     }
@@ -197,13 +232,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             selectTrack(selectedTracks[row])
         }
     }
-    
-    @objc func playheadUpdate() {
-        if let _ = player {
-            playheadSlider.value = Float(player!.currentTime / player!.duration)
-        }
-    }
-    
+
     // MARK: - IBAction
     
     @IBAction func didSeek(_ sender: UISlider) {
@@ -226,12 +255,40 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     @IBAction func didTapAudio(_ sender: UIButton) {
+        audioTracksButton.isSelected = true
+        textTracksButton.isSelected = false
+        
         selectedTracks = audioTracks
         picker.reloadAllComponents()
     }
     
     @IBAction func didTapText(_ sender: UIButton) {
+        textTracksButton.isSelected = true
+        audioTracksButton.isSelected = false
+        
         selectedTracks = textTracks
         picker.reloadAllComponents()
+    }
+    
+    @IBAction func change(_ sender: Any) {
+        guard let player = self.player else {
+            print("player is not set")
+            return
+        }
+        
+        resetView()
+        
+        let mediaEntry = getMediaWithOutSubtitles()
+        // Resets The Player And Prepares for Change Media
+        player.stop() // 1. Stop Player
+        // Create new Media Config
+        let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
+        // Call Prepare
+        player.prepare(mediaConfig) // 2. Call Prepare with new MediaConfig
+        
+        // After preparing if you wish to play make sure to wait `canPlay` event.
+        player.addObserver(self, events: [PlayerEvent.canPlay]) { event in
+            player.play()
+        }
     }
 }

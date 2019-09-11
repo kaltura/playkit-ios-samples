@@ -87,10 +87,22 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-IB-70v">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV9-PZ-gbo">
+                                <rect key="frame" x="24" y="553" width="117" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Change Media"/>
+                                <connections>
+                                    <action selector="change:" destination="yQf-LR-HVa" eventType="touchUpInside" id="z4t-lq-Deq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-IB-70v">
                                 <rect key="frame" x="24" y="592" width="98" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="AudioTracks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapAudio:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Q6C-Ur-ejC"/>
@@ -109,6 +121,9 @@
                                 <rect key="frame" x="264" y="592" width="87" height="34"/>
                                 <state key="normal" title="TextTracks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapText:" destination="yQf-LR-HVa" eventType="touchUpInside" id="mMn-j5-XDa"/>
@@ -135,9 +150,10 @@
                             <constraint firstItem="Dh3-5s-DVq" firstAttribute="bottom" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="ENu-5D-jFy"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="Dh3-5s-DVq" secondAttribute="top" id="JJi-ft-RWz"/>
+                            <constraint firstItem="RV9-PZ-gbo" firstAttribute="leading" secondItem="GjG-IB-70v" secondAttribute="leading" id="Jkt-4L-1Gi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LDa-qA-bGs" secondAttribute="trailing" constant="8" id="MS2-Cy-GFe"/>
                             <constraint firstItem="GjG-IB-70v" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leadingMargin" constant="8" id="PfU-ao-MsT"/>
-                            <constraint firstItem="XCY-eP-55k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="Uqd-yT-cIK"/>
+                            <constraint firstItem="GjG-IB-70v" firstAttribute="top" secondItem="RV9-PZ-gbo" secondAttribute="bottom" constant="5" id="QXu-2P-0jM"/>
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="rpY-Fm-cXa" secondAttribute="bottom" id="XSa-Yg-S3V"/>
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="top" secondItem="XCY-eP-55k" secondAttribute="bottom" constant="5" id="Ygd-nV-dQZ"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="c6j-MD-5Jc"/>
@@ -145,15 +161,18 @@
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GjG-IB-70v" secondAttribute="trailing" id="fcg-nT-osY"/>
                             <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="rpY-Fm-cXa" secondAttribute="trailing" constant="8" id="jbj-vx-esL"/>
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="trailing" secondItem="XCY-eP-55k" secondAttribute="trailing" id="nma-jJ-COo"/>
+                            <constraint firstItem="XCY-eP-55k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RV9-PZ-gbo" secondAttribute="trailing" id="nnX-jU-s8Y"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" id="wni-xA-PRH"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="LDa-qA-bGs" secondAttribute="bottom" constant="8" id="yjr-cA-AaV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dh3-5s-DVq"/>
                     </view>
                     <connections>
+                        <outlet property="audioTracksButton" destination="GjG-IB-70v" id="kHW-ee-JqO"/>
                         <outlet property="picker" destination="rpY-Fm-cXa" id="uOG-t2-gj5"/>
                         <outlet property="playerContainer" destination="8iB-Nh-WVv" id="aeQ-d8-fnQ"/>
                         <outlet property="playheadSlider" destination="QMa-LM-qs2" id="rRu-Ih-Ma8"/>
+                        <outlet property="textTracksButton" destination="LDa-qA-bGs" id="vus-Xz-SnU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nI-3U-OAI" sceneMemberID="firstResponder"/>
