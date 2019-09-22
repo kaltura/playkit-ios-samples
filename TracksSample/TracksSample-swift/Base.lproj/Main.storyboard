@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yQf-LR-HVa">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,7 +62,7 @@
                                         </button>
                                         <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" continuous="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-LM-qs2">
                                             <rect key="frame" x="108" y="17" width="261" height="31"/>
-                                            <color key="minimumTrackTintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="minimumTrackTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="maximumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
                                                 <action selector="didSeek:" destination="yQf-LR-HVa" eventType="valueChanged" id="pr4-tg-RJN"/>
@@ -85,10 +87,22 @@
                                 </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-IB-70v">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RV9-PZ-gbo">
+                                <rect key="frame" x="24" y="553" width="117" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Change Media"/>
+                                <connections>
+                                    <action selector="change:" destination="yQf-LR-HVa" eventType="touchUpInside" id="z4t-lq-Deq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjG-IB-70v">
                                 <rect key="frame" x="24" y="592" width="98" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="AudioTracks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapAudio:" destination="yQf-LR-HVa" eventType="touchUpInside" id="Q6C-Ur-ejC"/>
@@ -107,6 +121,9 @@
                                 <rect key="frame" x="264" y="592" width="87" height="34"/>
                                 <state key="normal" title="TextTracks">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="didTapText:" destination="yQf-LR-HVa" eventType="touchUpInside" id="mMn-j5-XDa"/>
@@ -133,9 +150,10 @@
                             <constraint firstItem="Dh3-5s-DVq" firstAttribute="bottom" secondItem="gy5-vm-eFy" secondAttribute="bottom" id="Acp-Kh-yfh"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="XYE-bW-STh" secondAttribute="bottom" id="ENu-5D-jFy"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="top" secondItem="Dh3-5s-DVq" secondAttribute="top" id="JJi-ft-RWz"/>
+                            <constraint firstItem="RV9-PZ-gbo" firstAttribute="leading" secondItem="GjG-IB-70v" secondAttribute="leading" id="Jkt-4L-1Gi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LDa-qA-bGs" secondAttribute="trailing" constant="8" id="MS2-Cy-GFe"/>
                             <constraint firstItem="GjG-IB-70v" firstAttribute="leading" secondItem="p5V-JA-dmL" secondAttribute="leadingMargin" constant="8" id="PfU-ao-MsT"/>
-                            <constraint firstItem="XCY-eP-55k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="Uqd-yT-cIK"/>
+                            <constraint firstItem="GjG-IB-70v" firstAttribute="top" secondItem="RV9-PZ-gbo" secondAttribute="bottom" constant="5" id="QXu-2P-0jM"/>
                             <constraint firstItem="gy5-vm-eFy" firstAttribute="top" secondItem="rpY-Fm-cXa" secondAttribute="bottom" id="XSa-Yg-S3V"/>
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="top" secondItem="XCY-eP-55k" secondAttribute="bottom" constant="5" id="Ygd-nV-dQZ"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" constant="8" id="c6j-MD-5Jc"/>
@@ -143,15 +161,18 @@
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GjG-IB-70v" secondAttribute="trailing" id="fcg-nT-osY"/>
                             <constraint firstItem="Dh3-5s-DVq" firstAttribute="trailing" secondItem="rpY-Fm-cXa" secondAttribute="trailing" constant="8" id="jbj-vx-esL"/>
                             <constraint firstItem="LDa-qA-bGs" firstAttribute="trailing" secondItem="XCY-eP-55k" secondAttribute="trailing" id="nma-jJ-COo"/>
+                            <constraint firstItem="XCY-eP-55k" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RV9-PZ-gbo" secondAttribute="trailing" id="nnX-jU-s8Y"/>
                             <constraint firstItem="XYE-bW-STh" firstAttribute="leading" secondItem="Dh3-5s-DVq" secondAttribute="leading" id="wni-xA-PRH"/>
                             <constraint firstItem="rpY-Fm-cXa" firstAttribute="top" secondItem="LDa-qA-bGs" secondAttribute="bottom" constant="8" id="yjr-cA-AaV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Dh3-5s-DVq"/>
                     </view>
                     <connections>
+                        <outlet property="audioTracksButton" destination="GjG-IB-70v" id="kHW-ee-JqO"/>
                         <outlet property="picker" destination="rpY-Fm-cXa" id="uOG-t2-gj5"/>
                         <outlet property="playerContainer" destination="8iB-Nh-WVv" id="aeQ-d8-fnQ"/>
                         <outlet property="playheadSlider" destination="QMa-LM-qs2" id="rRu-Ih-Ma8"/>
+                        <outlet property="textTracksButton" destination="LDa-qA-bGs" id="vus-Xz-SnU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2nI-3U-OAI" sceneMemberID="firstResponder"/>
@@ -163,11 +184,11 @@
             <objects>
                 <viewController id="ZWF-Xq-3AW" customClass="TextStylingViewController" customModule="TracksSample_swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gLY-2N-iit">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHq-JK-OTd" userLabel="VideoView">
-                                <rect key="frame" x="0.0" y="56" width="375" height="211"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="211"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a sample caption" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kuv-w5-Y76">
                                         <rect key="frame" x="95.333333333333329" y="94.666666666666657" width="184.33333333333337" height="21.333333333333329"/>
@@ -191,10 +212,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0qH-id-KYb" userLabel="StylingView">
-                                <rect key="frame" x="0.0" y="267" width="375" height="457"/>
+                                <rect key="frame" x="0.0" y="299" width="375" height="479"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="MI4-Mx-XB6">
-                                        <rect key="frame" x="10" y="26" width="187.66666666666666" height="405"/>
+                                        <rect key="frame" x="10" y="37" width="187.66666666666666" height="405"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivP-0f-EtP">
                                                 <rect key="frame" x="0.0" y="0.0" width="82" height="21.666666666666668"/>
@@ -235,7 +256,7 @@
                                         </subviews>
                                     </stackView>
                                     <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RdD-ur-F82" userLabel="Text Color Picker View">
-                                        <rect key="frame" x="177.66666666666663" y="-3.3333333333333144" width="187.33333333333337" height="80"/>
+                                        <rect key="frame" x="177.66666666666663" y="7.6666666666666856" width="187.33333333333337" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="Zee-qg-QiW"/>
                                         </constraints>
@@ -245,7 +266,7 @@
                                         </connections>
                                     </pickerView>
                                     <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEw-8j-DCl" userLabel="Background Color Picker View">
-                                        <rect key="frame" x="177.66666666666663" y="73.333333333333314" width="187.33333333333337" height="80"/>
+                                        <rect key="frame" x="177.66666666666663" y="84.333333333333314" width="187.33333333333337" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="2aR-55-EuH"/>
                                             <constraint firstAttribute="height" constant="80" id="ltn-kT-ngo"/>
@@ -256,7 +277,7 @@
                                         </connections>
                                     </pickerView>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yUY-Ki-dd1" userLabel="Text Size Text Field">
-                                        <rect key="frame" x="177.66666666666663" y="173" width="187.33333333333337" height="34"/>
+                                        <rect key="frame" x="177.66666666666663" y="186" width="187.33333333333337" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numbersAndPunctuation" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
@@ -265,7 +286,7 @@
                                         </connections>
                                     </textField>
                                     <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NvV-wC-sfa" userLabel="Edge Style Picker View">
-                                        <rect key="frame" x="177.66666666666663" y="226.66666666666669" width="187.33333333333337" height="80"/>
+                                        <rect key="frame" x="177.66666666666663" y="237.66666666666663" width="187.33333333333337" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="tRE-DR-zuh"/>
                                         </constraints>
@@ -275,7 +296,7 @@
                                         </connections>
                                     </pickerView>
                                     <pickerView tag="4" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14I-zD-e9U" userLabel="Edge Color Picker View">
-                                        <rect key="frame" x="177.66666666666663" y="303.33333333333337" width="187.33333333333337" height="80"/>
+                                        <rect key="frame" x="177.66666666666663" y="314.33333333333337" width="187.33333333333337" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="qJ4-nJ-vEY"/>
                                         </constraints>
@@ -285,7 +306,7 @@
                                         </connections>
                                     </pickerView>
                                     <pickerView tag="5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O2Q-VZ-6WK" userLabel="Font Family Picker View">
-                                        <rect key="frame" x="177.66666666666663" y="380" width="187.33333333333337" height="80"/>
+                                        <rect key="frame" x="177.66666666666663" y="391" width="187.33333333333337" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="vT1-Kd-4cg"/>
                                         </constraints>
@@ -356,7 +377,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VsT-TG-zv9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="znf-PA-kzu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
