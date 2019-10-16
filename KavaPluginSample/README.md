@@ -4,7 +4,7 @@
 
 This PlayKit sample show how to create and setup PlayKit Kava.
 
-For more info see [documentation](https://kaltura.github.io/playkit-ios-kava/)
+For more info see [documentation](https://kaltura.github.io/playkit/guide/ios/plugins/kava.html)
 
 ## How to use
 
