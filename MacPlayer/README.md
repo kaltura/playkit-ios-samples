@@ -12,7 +12,7 @@ Open the Xcode project and build MacPlayer target on "My Mac". The only dependen
 
 ### Prebuilt Binary
 
-[Download here](https://dl.bintray.com/kaltura/tools/:MacPlayer.app.zip). Because the app is not signed for distribution, you need to manually approve it: after unzipping, ctrl-click (or right-click) the app bundle, select Open in the menu, and click the Open button. This step is only required once.
+[Download here](https://dl.bintray.com/kaltura/tools/MacPlayer.app.zip). Because the app is not signed for distribution, you need to manually approve it: after unzipping, ctrl-click (or right-click) the app bundle, select Open in the menu, and click the Open button. This step is only required once.
 
 ### Usage
 
