@@ -7,11 +7,11 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.12.0):
-    - PlayKit/Core (= 3.12.0)
-  - PlayKit/AnalyticsCommon (3.12.0):
+  - PlayKit (3.13.0):
+    - PlayKit/Core (= 3.13.0)
+  - PlayKit/AnalyticsCommon (3.13.0):
     - PlayKit/Core
-  - PlayKit/Core (3.12.0):
+  - PlayKit/Core (3.13.0):
     - KalturaNetKit (~> 1.2.0)
     - PlayKitUtils (~> 0.4.0)
     - SwiftyJSON (= 4.3.0)
@@ -37,7 +37,7 @@ DEPENDENCIES:
   - PlayKitYoubora (~> 1.4)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - GoogleAds-IMA-iOS-SDK
     - KalturaNetKit
     - ObjcExceptionBridging
@@ -53,7 +53,7 @@ SPEC CHECKSUMS:
   GoogleAds-IMA-iOS-SDK: 8f57879738137b81a48ba792e42439e6bff5413b
   KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 887882082d26392f11a2cee1dbb1545f01f1ddc9
+  PlayKit: 8406830c73b83abba8b340afe21f0e5e6e09cb3c
   PlayKit_IMA: 6f7b7be6ab26e3cc8a22d253c5ddfdee6d0b190e
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
   PlayKitYoubora: 45f49971ff979896d94dddd33b8361339339e292
@@ -63,4 +63,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ec2f3247c1133bb312c75236b5eafdc187d49a6a
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.8.0

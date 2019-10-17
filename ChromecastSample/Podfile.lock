@@ -1,8 +1,8 @@
 PODS:
-  - google-cast-sdk (4.3.3):
-    - google-cast-sdk/Core (= 4.3.3)
+  - google-cast-sdk (4.4.4):
+    - google-cast-sdk/Core (= 4.4.4)
     - Protobuf (~> 3.0)
-  - google-cast-sdk/Core (4.3.3):
+  - google-cast-sdk/Core (4.4.4):
     - Protobuf (~> 3.0)
   - KalturaNetKit (1.2.0):
     - KalturaNetKit/Core (= 1.2.0)
@@ -11,18 +11,18 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.12.0):
-    - PlayKit/Core (= 3.12.0)
-  - PlayKit/Core (3.12.0):
+  - PlayKit (3.13.0):
+    - PlayKit/Core (= 3.13.0)
+  - PlayKit/Core (3.13.0):
     - KalturaNetKit (~> 1.2.0)
     - PlayKitUtils (~> 0.4.0)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
-  - PlayKitGoogleCast (1.2.0):
-    - google-cast-sdk (= 4.3.3)
+  - PlayKitGoogleCast (1.3.0):
+    - google-cast-sdk (= 4.4.4)
     - XCGLogger (= 7.0.0)
   - PlayKitUtils (0.4.0)
-  - Protobuf (3.9.0)
+  - Protobuf (3.10.0)
   - SwiftyJSON (4.3.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
@@ -31,10 +31,10 @@ PODS:
 
 DEPENDENCIES:
   - PlayKit (~> 3.12)
-  - PlayKitGoogleCast (~> 1.2)
+  - PlayKitGoogleCast (~> 1.3)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - google-cast-sdk
     - KalturaNetKit
     - ObjcExceptionBridging
@@ -46,16 +46,16 @@ SPEC REPOS:
     - XCGLogger
 
 SPEC CHECKSUMS:
-  google-cast-sdk: 792980f4fa5afd4f9b91f41d582cc75251648f3a
+  google-cast-sdk: 776a7ecf2d630cf665d37fac7421b2bdb21fa414
   KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 887882082d26392f11a2cee1dbb1545f01f1ddc9
-  PlayKitGoogleCast: 8d6d58d54c146fbe13779e2098f202b4d30eaab6
+  PlayKit: 8406830c73b83abba8b340afe21f0e5e6e09cb3c
+  PlayKitGoogleCast: 19eb5d4421a729640be4bfd2a40e49342ee8a225
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
-  Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
+  Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 0fc8d4dec0ee20eac1b57eea8c2fa1642c2ddd9f
+PODFILE CHECKSUM: a7f767d5a8487241f4260e1cfee5e4366a3f3b9a
 
-COCOAPODS: 1.7.1
+COCOAPODS: 1.8.0

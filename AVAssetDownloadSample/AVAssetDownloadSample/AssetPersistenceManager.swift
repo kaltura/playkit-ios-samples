@@ -280,29 +280,35 @@ extension AssetPersistenceManager: AVAssetDownloadDelegate {
         userInfo[Asset.Keys.name] = asset.name
         
         if let error = error as NSError? {
-            switch (error.domain, error.code) {
-            case (NSURLErrorDomain, NSURLErrorCancelled):
-                /*
-                 This task was canceled, you should perform cleanup using the
-                 URL saved from AVAssetDownloadDelegate.urlSession(_:assetDownloadTask:didFinishDownloadingTo:).
-                 */
-                guard let localFileLocation = localAssetForStream(withName: asset.name)?.urlAsset.url else { return }
+            print("An error occured: \(error)")
+            
+            switch error.domain {
+            case AVFoundationErrorDomain:
+                break
                 
-                do {
-                    try FileManager.default.removeItem(at: localFileLocation)
+            case NSURLErrorDomain:
+                switch error.code {
+                case NSURLErrorCancelled:
+                    /*
+                     This task was canceled, you should perform cleanup using the
+                     URL saved from AVAssetDownloadDelegate.urlSession(_:assetDownloadTask:didFinishDownloadingTo:).
+                     */
+                    guard let localFileLocation = localAssetForStream(withName: asset.name)?.urlAsset.url else { return }
                     
-                    userDefaults.removeObject(forKey: asset.name)
-                } catch {
-                    print("An error occured trying to delete the contents on disk for \(asset.name): \(error)")
+                    do {
+                        try FileManager.default.removeItem(at: localFileLocation)
+                        
+                        userDefaults.removeObject(forKey: asset.name)
+                    } catch {
+                        print("An error occured trying to delete the contents on disk for \(asset.name): \(error)")
+                    }
+                    
+                    userInfo[Asset.Keys.downloadState] = Asset.DownloadState.notDownloaded.rawValue
+                default:
+                    break
                 }
-                
-                userInfo[Asset.Keys.downloadState] = Asset.DownloadState.notDownloaded.rawValue
-                
-            case (NSURLErrorDomain, NSURLErrorUnknown):
-                fatalError("Downloading HLS streams is not supported in the simulator.")
-                
             default:
-                fatalError("An unexpected error occured \(error.domain)")
+                break
             }
             
             postUpdate(userInfo)

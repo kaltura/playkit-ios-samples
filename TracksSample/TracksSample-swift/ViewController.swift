@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var audioTracksButton: UIButton!
     @IBOutlet weak var textTracksButton: UIButton!
     
-    var player: Player?
+    var player: Player! // Created in the viewDidLoad
     var audioTracks: [Track] = []
     var textTracks: [Track] = []
     var selectedTracks: [Track] = []
@@ -57,8 +57,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     func preparePlayer() {
         // Setup the player's view
-        player?.view = self.playerContainer
-        playerContainer.sendSubviewToBack(self.player!.view!)
+        player.view = self.playerContainer
+        playerContainer.sendSubviewToBack(self.player.view!)
        
         // Uncomment the type of media needed
 //        let mediaEntry = getMediaWithInternalSubtitles()
@@ -69,11 +69,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
         
         // Set if we want the player to auto select the subtitles.
-        player?.settings.trackSelection.textSelectionMode = .auto
-        player?.settings.trackSelection.textSelectionLanguage = "en"
+        player.settings.trackSelection.textSelectionMode = .auto
+        player.settings.trackSelection.textSelectionLanguage = "en"
         
         // Prepare the player
-        player?.prepare(mediaConfig)
+        player.prepare(mediaConfig)
     }
     
     func getMediaWithOutSubtitles() -> PKMediaEntry {
@@ -153,7 +153,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func handleTracks() {
-        player?.addObserver(self, events: [PlayerEvent.tracksAvailable, PlayerEvent.textTrackChanged, PlayerEvent.audioTrackChanged], block: { [weak self] (event: PKEvent) in
+        player.addObserver(self, events: [PlayerEvent.tracksAvailable, PlayerEvent.textTrackChanged, PlayerEvent.audioTrackChanged], block: { [weak self] (event: PKEvent) in
             if type(of: event) == PlayerEvent.tracksAvailable {
                 guard let this = self else { return }
                 
@@ -176,7 +176,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func handlePlaybackInfo() {
-        player?.addObserver(self, event: PlayerEvent.playbackInfo) { event in
+        player.addObserver(self, event: PlayerEvent.playbackInfo) { event in
             if type(of: event) == PlayerEvent.playbackInfo {
                 if let _ = event.playbackInfo {
                     print("\(event.playbackInfo!)")
@@ -186,19 +186,19 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func handlePlayheadUpdate() {
-        player?.addObserver(self, event: PlayerEvent.playheadUpdate, block: { [weak self] (event) in
+        player.addObserver(self, event: PlayerEvent.playheadUpdate, block: { [weak self] (event) in
             guard let self = self else { return }
             self.playheadUpdate()
         })
     }
     
     func selectTrack(_ track: Track) {
-        player?.selectTrack(trackId: track.id)
+        player.selectTrack(trackId: track.id)
     }
     
     @objc func playheadUpdate() {
         if let _ = player {
-            playheadSlider.value = Float(player!.currentTime / player!.duration)
+            playheadSlider.value = Float(player.currentTime / player.duration)
         }
     }
     
@@ -237,20 +237,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBAction func didSeek(_ sender: UISlider) {
         print("playhead value: \(sender.value)")
-        if let _ = player {
-            player!.currentTime = player!.duration * TimeInterval(sender.value)
-        }
+        player.currentTime = player.duration * Double(playheadSlider.value)
     }
     
     @IBAction func didTapPause(_ sender: UIButton) {
-        if player?.isPlaying == true {
-            player?.pause()
+        if player.isPlaying == true {
+            player.pause()
         }
     }
     
     @IBAction func didTapPlay(_ sender: UIButton) {
-        if player?.isPlaying == false {
-            player?.play()
+        if player.isPlaying == false {
+            player.play()
         }
     }
     

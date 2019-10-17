@@ -26,7 +26,13 @@ class VideosViewController: UITableViewController {
                                 serverURL: "http://api-preprod.ott.kaltura.com/v4_5/api_v3",
                                 ks: nil,
                                 assetId: "259153",
-                                formats: ["Mobile_Devices_Main_SD"]))
+                                assetType: .media,
+                                assetRefType: .unset,
+                                assetPlaybackContextType: .playback,
+                                formats: ["Mobile_Devices_Main_SD"],
+                                fileIds: nil,
+                                networkProtocol: nil,
+                                referrer: nil))
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

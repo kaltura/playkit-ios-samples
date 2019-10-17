@@ -19,7 +19,6 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) id<Player> player;
-@property (strong, nonatomic) NSTimer *playheadTimer;
 @property (weak, nonatomic) IBOutlet PlayerView *playerContainer;
 @property (weak, nonatomic) IBOutlet UISlider *playheadSlider;
     
@@ -42,7 +41,11 @@
     // 2. Register events if have ones.
     // Event registeration must be after loading the player successfully to make sure events are added,
     // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-    
+    __weak __typeof__(self) weakSelf = self;
+    [self.player addObserver:self event:PlayerEvent.playheadUpdate block:^(PKEvent *event) {
+        __typeof__(self) strongSelf = weakSelf;
+        strongSelf.playheadSlider.value = strongSelf.player.currentTime / strongSelf.player.duration;
+    }];
     // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
     [self preparePlayer];
 }
@@ -79,15 +82,12 @@
     
 - (IBAction)playTouched:(UIButton *)sender {
     if(!self.player.isPlaying) {
-        self.playheadTimer = [NSTimer scheduledTimerWithTimeInterval:0.5f target:self selector:@selector(playheadUpdate) userInfo:nil repeats:YES];
         [self.player play];
     }
 }
     
 - (IBAction)pauseTouched:(UIButton *)sender {
     if(self.player.isPlaying) {
-        [self.playheadTimer invalidate];
-        self.playheadTimer = nil;
         [self.player pause];
     }
 }
@@ -98,7 +98,7 @@
 }
    
 - (void)playheadUpdate {
-    self.playheadSlider.value = self.player.currentTime / self.player.duration;
+    
 }
     
 @end

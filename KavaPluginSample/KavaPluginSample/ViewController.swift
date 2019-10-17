@@ -30,7 +30,17 @@ class ViewController: UIViewController {
         self.playheadSlider.isContinuous = false;
         
         // 1. Load the player
-        let kavaConfig = KavaPluginConfig(partnerId: 1091, entryId: nil, ks: nil, playbackContext: nil, referrer: nil, applicationVersion: "1.0", playlistId: "abc", customVar1: nil, customVar2: nil, customVar3: nil)
+        let kavaConfig = KavaPluginConfig(partnerId: 1091,
+                                          entryId: "1_djnefl4e",
+                                          ks: nil,
+                                          playbackContext: nil,
+                                          referrer: nil,
+                                          applicationVersion: "1.0",
+                                          playlistId: "abc",
+                                          customVar1: nil,
+                                          customVar2: nil,
+                                          customVar3: nil)
+        
         kavaConfig.playbackType = KavaPluginConfig.PlaybackType.vod
         let pluginConfig = PluginConfig(config: [KavaPlugin.pluginName: kavaConfig])
         self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)

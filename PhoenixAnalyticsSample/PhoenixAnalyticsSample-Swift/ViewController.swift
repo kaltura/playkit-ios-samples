@@ -10,9 +10,6 @@ import UIKit
 import PlayKit
 import PlayKitProviders
 
-fileprivate let ASSET_TYPE = AssetType.media
-fileprivate let PLAYBACK_CONTEXT_TYPE = PlaybackContextType.playback
-
 /*********************************/
 // Plugin registration should be done in App Delegate!!!
 // Don't forget to add it in your project.
@@ -89,9 +86,13 @@ class ViewController: UIViewController {
         // Create the media provider
         let phoenixMediaProvider = PhoenixMediaProvider()
         phoenixMediaProvider.set(assetId: video.assetId)
-        phoenixMediaProvider.set(type: ASSET_TYPE)
+        phoenixMediaProvider.set(type: video.assetType)
+        phoenixMediaProvider.set(refType: video.assetRefType)
+        phoenixMediaProvider.set(playbackContextType: video.assetPlaybackContextType)
         phoenixMediaProvider.set(formats: video.formats)
-        phoenixMediaProvider.set(playbackContextType: PLAYBACK_CONTEXT_TYPE)
+        phoenixMediaProvider.set(fileIds: video.fileIds)
+        phoenixMediaProvider.set(networkProtocol: video.networkProtocol)
+        phoenixMediaProvider.set(referrer: video.referrer)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
         
         phoenixMediaProvider.loadMedia { (pkMediaEntry, error) in
@@ -164,9 +165,10 @@ class ViewController: UIViewController {
     }
     
     func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
+        // Must have a KS, otherwise the Analytics won't work.
         return PhoenixAnalyticsPluginConfig(baseUrl: "https://rest-eus1.ott.kaltura.com/restful_v4_8/api_v3/",
                                             timerInterval: 30,
-                                            ks: "",
+                                            ks: "djJ8MTk4fCBNp58cv0U0E-JjH9TUGjGZsPtJ_uhtM1oEDfA4CHKRuw0G4UvWYvEfE5PcvN-dVFiFl0EssY9_F1477u-TtWahVnn44D0iJ0dEim8Hh2l87AUddFzEHvNuSK6D6tEAhcls1Ukx2cecwjE3bGh10-o=",
                                             partnerId: 0)
     }
     

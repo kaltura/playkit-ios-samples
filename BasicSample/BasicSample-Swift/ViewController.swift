@@ -18,8 +18,7 @@ import PlayKit
  */
 
 class ViewController: UIViewController {
-    var player: Player?
-    var playheadTimer: Timer?
+    var player: Player! // Created in viewDidLoad
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
@@ -28,11 +27,16 @@ class ViewController: UIViewController {
         self.playheadSlider.isContinuous = false;
         
         // 1. Load the player
-        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+        player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
         // 2. Register events if have ones.
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-        
+        player.addObserver(self, event: PlayerEvent.playheadUpdate, block: { (event) in
+            if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
+                self.playheadSlider.value = Float(self.player.currentTime / self.player.duration)
+                print(currentTime)
+            }
+        })
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         self.preparePlayer()
     }
@@ -79,10 +83,6 @@ class ViewController: UIViewController {
         }
         
         if !(player.isPlaying) {
-            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (timer) in
-                self.playheadSlider.value = Float(player.currentTime / player.duration)
-            })
-            
             player.play()
         }
     }
@@ -92,9 +92,7 @@ class ViewController: UIViewController {
             print("player is not set")
             return
         }
-        
-        self.playheadTimer?.invalidate()
-        self.playheadTimer = nil
+
         player.pause()
     }
     

@@ -32,9 +32,9 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_GOOGLECAST_GIT
       pod 'PlayKitGoogleCast', :git => PLAYKIT_GOOGLECAST_GIT, :branch => PLAYKIT_GOOGLECAST_BRANCH
       else
-      pod 'PlayKitGoogleCast', '~> 1.2'
+      pod 'PlayKitGoogleCast', '~> 1.3'
     end
   end
-  
+
   target 'ChromecastSample'
 end
