@@ -1,26 +1,26 @@
 PODS:
-  - KalturaNetKit (1.2.0):
-    - KalturaNetKit/Core (= 1.2.0)
-  - KalturaNetKit/Core (1.2.0):
+  - KalturaNetKit (1.3.0):
+    - KalturaNetKit/Core (= 1.3.0)
+  - KalturaNetKit/Core (1.3.0):
     - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.13.0):
-    - PlayKit/Core (= 3.13.0)
-  - PlayKit/AnalyticsCommon (3.13.0):
+  - PlayKit (3.14.0):
+    - PlayKit/Core (= 3.14.0)
+  - PlayKit/AnalyticsCommon (3.14.0):
     - PlayKit/Core
-  - PlayKit/Core (3.13.0):
-    - KalturaNetKit (~> 1.2.0)
-    - PlayKitUtils (~> 0.4.0)
+  - PlayKit/Core (3.14.0):
+    - KalturaNetKit (~> 1.3)
+    - PlayKitUtils (~> 0.4)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
-  - PlayKitKava (1.2.1):
+  - PlayKitKava (1.3.1):
     - PlayKit/AnalyticsCommon
     - PlayKit/Core
-  - PlayKitProviders (1.4.0):
-    - KalturaNetKit
-    - PlayKit/AnalyticsCommon
+  - PlayKitProviders (1.5.0):
+    - KalturaNetKit (~> 1.3)
+    - PlayKit/AnalyticsCommon (~> 3.11)
     - PlayKitUtils
     - SwiftyXMLParser (= 5.0.0)
   - PlayKitUtils (0.4.0)
@@ -49,11 +49,11 @@ SPEC REPOS:
     - XCGLogger
 
 SPEC CHECKSUMS:
-  KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
+  KalturaNetKit: 638852ff98361e1421fd52035d3390e7ffbd4c8a
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 8406830c73b83abba8b340afe21f0e5e6e09cb3c
-  PlayKitKava: 82e9b95dc487b9b4e71d4e62f4aa61362515ca51
-  PlayKitProviders: 47acfb2a297b9ea01fa89539614b97e6ab95a1f0
+  PlayKit: 5660408440b89b7b61078f4be463b56adbcc13ef
+  PlayKitKava: d9f9eb9552ed43964ef24b4644032b587fc072a6
+  PlayKitProviders: 0737fc36f459afa7897b2b3872f76b779a088650
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
