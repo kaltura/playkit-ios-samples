@@ -5,15 +5,15 @@ use_frameworks!
 platform :ios, '9.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
-PLAYKIT_LOCAL='../../playkit-ios'
-PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
+#PLAYKIT_LOCAL='../../playkit-ios'
+#PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 
 # Uncomment to use a git copy
-#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
-#PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
+PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
-PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
+PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'FEM-2770'
 
 
 abstract_target 'SharedPods' do
