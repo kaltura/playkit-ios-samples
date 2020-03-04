@@ -1,26 +1,29 @@
 project 'PlayKitAppleTVSample.xcodeproj'
 
-platform :tvos, '9.0' # (define required version)
+platform :tvos, '10.0' # (define required version)
 
 use_frameworks!
 
 # Uncomment to use a local copy of PlayKit
-#PLAYKIT_LOCAL='../../playkit-ios'
+PLAYKIT_LOCAL='../../playkit-ios'
 #PLAYKIT_ADMANAGER_LOCAL='../../playkit-ios-admanager-plugin'
 #PLAYKIT_YOUBORA_LOCAL='../../playkit-ios-youbora'
 #PLAYKIT_PROVIDERS_LOCAL='../../playkit-ios-providers'
 #PLAYKIT_KAVA_LOCAL='../../playkit-ios-kava'
+PLAYKIT_IMA_LOCAL='../../playkit-ios-ima'
 
 # Uncomment to use a git copy
 #PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 #PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 #PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
 #PLAYKIT_KAVA_GIT='https://github.com/kaltura/playkit-ios-kava.git'
+#PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 PLAYKIT_YOUBORA_BRANCH=ENV['PKY_BRANCH'] || 'develop'
 PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
 PLAYKIT_KAVA_BRANCH=ENV['PK_KAVA_BRANCH'] || 'develop'
+PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'develop'
 
 
 abstract_target 'SharedPods' do
@@ -61,6 +64,16 @@ abstract_target 'SharedPods' do
           pod 'PlayKitKava', :git => PLAYKIT_KAVA_GIT, :branch => PLAYKIT_KAVA_BRANCH
           else
           pod 'PlayKitKava', '~> 1.3'
+      end
+  end
+
+  if defined? PLAYKIT_IMA_LOCAL
+      pod 'PlayKit_IMA/tvOS', :path => PLAYKIT_IMA_LOCAL
+      else
+      if defined? PLAYKIT_IMA_GIT
+          pod 'PlayKit_IMA/tvOS', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
+          else
+          pod 'PlayKit_IMA/tvOS', '~> 1.7'
       end
   end
   

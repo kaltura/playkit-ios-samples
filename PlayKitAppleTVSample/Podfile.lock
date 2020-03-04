@@ -1,4 +1,5 @@
 PODS:
+  - GoogleAds-IMA-tvOS-SDK (4.2.1)
   - KalturaNetKit (1.3.0):
     - KalturaNetKit/Core (= 1.3.0)
   - KalturaNetKit/Core (1.3.0):
@@ -6,26 +7,30 @@ PODS:
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.14.0):
-    - PlayKit/Core (= 3.14.0)
-  - PlayKit/AnalyticsCommon (3.14.0):
+  - PlayKit (3.16.1-dev):
+    - PlayKit/Core (= 3.16.1-dev)
+  - PlayKit/AnalyticsCommon (3.16.1-dev):
     - PlayKit/Core
-  - PlayKit/Core (3.14.0):
+  - PlayKit/Core (3.16.1-dev):
     - KalturaNetKit (~> 1.3)
     - PlayKitUtils (~> 0.4)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
-  - PlayKitKava (1.3.1):
+  - PlayKit_IMA/tvOS (1.7.1-dev):
+    - GoogleAds-IMA-tvOS-SDK (= 4.2.1)
+    - PlayKit (~> 3.11)
+    - XCGLogger (= 7.0.0)
+  - PlayKitKava (1.4.0):
     - PlayKit/AnalyticsCommon
-    - PlayKit/Core
-  - PlayKitProviders (1.5.0):
+    - PlayKit/Core (~> 3.16)
+  - PlayKitProviders (1.6.0):
     - KalturaNetKit (~> 1.3)
     - PlayKit/AnalyticsCommon (~> 3.11)
     - PlayKitUtils
     - SwiftyXMLParser (= 5.0.0)
   - PlayKitUtils (0.4.0)
-  - PlayKitYoubora (1.4.2):
-    - PlayKit/AnalyticsCommon
+  - PlayKitYoubora (1.5.0):
+    - PlayKit/AnalyticsCommon (~> 3.8)
     - YouboraLib (= 6.1.7)
   - SwiftyJSON (4.3.0)
   - SwiftyXMLParser (5.0.0)
@@ -36,16 +41,17 @@ PODS:
   - YouboraLib (6.1.7)
 
 DEPENDENCIES:
-  - PlayKit (~> 3.14)
+  - PlayKit (from `../../playkit-ios`)
+  - PlayKit_IMA/tvOS (from `../../playkit-ios-ima`)
   - PlayKitKava (~> 1.3)
   - PlayKitProviders (~> 1.5)
   - PlayKitYoubora (~> 1.4)
 
 SPEC REPOS:
   trunk:
+    - GoogleAds-IMA-tvOS-SDK
     - KalturaNetKit
     - ObjcExceptionBridging
-    - PlayKit
     - PlayKitKava
     - PlayKitProviders
     - PlayKitUtils
@@ -55,19 +61,27 @@ SPEC REPOS:
     - XCGLogger
     - YouboraLib
 
+EXTERNAL SOURCES:
+  PlayKit:
+    :path: "../../playkit-ios"
+  PlayKit_IMA:
+    :path: "../../playkit-ios-ima"
+
 SPEC CHECKSUMS:
+  GoogleAds-IMA-tvOS-SDK: 2e13f90cdb893de667b12db571e5bed5a6c0ec8c
   KalturaNetKit: 638852ff98361e1421fd52035d3390e7ffbd4c8a
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 5660408440b89b7b61078f4be463b56adbcc13ef
-  PlayKitKava: d9f9eb9552ed43964ef24b4644032b587fc072a6
-  PlayKitProviders: 0737fc36f459afa7897b2b3872f76b779a088650
+  PlayKit: 3eabd4cfd3b77f9bc7ffd5e42f0a640a66b05830
+  PlayKit_IMA: 5ba16046b1657efbed5978c243989244c299fa94
+  PlayKitKava: 72e8865d11f17ee56e48dc2f287710e7f13a50b0
+  PlayKitProviders: 69205522a7c267a77e3fdb0a629968ff5378b808
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
-  PlayKitYoubora: 45f49971ff979896d94dddd33b8361339339e292
+  PlayKitYoubora: 18a842249156fb704bb2cd35ad6dc9bcb7de5e3b
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: 7f3b246b4ace62a245496532defff09739a62f98
+PODFILE CHECKSUM: 3e1846ee5eeb7ff2e0a635eec9399160bdc6bafb
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.9.0

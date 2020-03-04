@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="appleTV" orientation="landscape">
-        <adaptation id="light"/>
-    </device>
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="15702" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="appleTV" appearance="light"/>
     <dependencies>
         <deployment identifier="tvOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,6 +23,7 @@
                     <navigationItem key="navigationItem" id="qlk-qt-OqG"/>
                     <connections>
                         <segue destination="1JF-lr-PYs" kind="presentation" identifier="showSettings" id="4Mn-Gp-pJn"/>
+                        <segue destination="v0S-zZ-C1h" kind="presentation" identifier="showChangeMedia" id="CRO-L5-pY7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -44,94 +43,100 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LbU-oR-3bs">
-                                <rect key="frame" x="192" y="243" width="1536" height="486"/>
+                                <rect key="frame" x="288" y="389" width="1344" height="302"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Media Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLe-gU-ikb">
-                                        <rect key="frame" x="8" y="57" width="209" height="46"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="HAQ-ax-gYH">
-                                        <rect key="frame" x="533" y="57" width="995" height="70"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
-                                        <segments>
-                                            <segment title="Clear"/>
-                                            <segment title="Live"/>
-                                            <segment title="DRM"/>
-                                            <segment title="Captions"/>
-                                            <segment title="Audio"/>
-                                        </segments>
-                                    </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-7i-kcm">
-                                        <rect key="frame" x="8" y="380" width="190" height="46"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Time in Seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0g-eu-dCH">
-                                        <rect key="frame" x="533" y="380" width="995" height="46"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                    </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Play:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KjL-ZM-ovB">
-                                        <rect key="frame" x="8" y="220" width="172" height="46"/>
+                                        <rect key="frame" x="8" y="70" width="169" height="46"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="foO-lH-Vyw">
-                                        <rect key="frame" x="533" y="209" width="995" height="70"/>
+                                        <rect key="frame" x="1124" y="58.5" width="212" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
                                         <segments>
                                             <segment title="No"/>
                                             <segment title="Yes"/>
                                         </segments>
                                     </segmentedControl>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-7i-kcm">
+                                        <rect key="frame" x="8" y="186" width="184" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Time in Seconds" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J0g-eu-dCH">
+                                        <rect key="frame" x="890" y="186" width="446" height="46"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="dLe-gU-ikb" firstAttribute="leading" secondItem="LbU-oR-3bs" secondAttribute="leading" constant="8" id="6hZ-LQ-zuR"/>
-                                    <constraint firstAttribute="trailing" secondItem="HAQ-ax-gYH" secondAttribute="trailing" constant="8" id="7Dj-sU-gLv"/>
-                                    <constraint firstItem="dLe-gU-ikb" firstAttribute="centerY" secondItem="LbU-oR-3bs" secondAttribute="centerY" multiplier="0.33" id="ROy-P5-MTv"/>
-                                    <constraint firstItem="foO-lH-Vyw" firstAttribute="width" secondItem="HAQ-ax-gYH" secondAttribute="width" id="TLR-Ae-6lS"/>
-                                    <constraint firstItem="J0g-eu-dCH" firstAttribute="width" secondItem="HAQ-ax-gYH" secondAttribute="width" id="VEm-Jj-6Tp"/>
-                                    <constraint firstItem="KjL-ZM-ovB" firstAttribute="centerY" secondItem="LbU-oR-3bs" secondAttribute="centerY" id="VWG-WA-Ouw"/>
-                                    <constraint firstItem="HAQ-ax-gYH" firstAttribute="top" secondItem="dLe-gU-ikb" secondAttribute="top" id="Wv4-Qy-ylV"/>
-                                    <constraint firstItem="XEC-7i-kcm" firstAttribute="leading" secondItem="LbU-oR-3bs" secondAttribute="leading" constant="8" id="XCK-QP-Nov"/>
-                                    <constraint firstAttribute="trailing" secondItem="foO-lH-Vyw" secondAttribute="trailing" constant="8" id="dX6-lz-xo0"/>
-                                    <constraint firstItem="KjL-ZM-ovB" firstAttribute="leading" secondItem="LbU-oR-3bs" secondAttribute="leading" constant="8" id="mb3-0f-Wrz"/>
+                                    <constraint firstItem="foO-lH-Vyw" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KjL-ZM-ovB" secondAttribute="trailing" constant="8" id="7St-MT-uzP"/>
+                                    <constraint firstItem="J0g-eu-dCH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XEC-7i-kcm" secondAttribute="trailing" constant="8" id="Bzu-er-T5X"/>
+                                    <constraint firstItem="KjL-ZM-ovB" firstAttribute="top" secondItem="LbU-oR-3bs" secondAttribute="top" constant="70" id="G0m-7c-zCt"/>
+                                    <constraint firstItem="KjL-ZM-ovB" firstAttribute="leading" secondItem="LbU-oR-3bs" secondAttribute="leading" constant="8" id="Vz4-Mf-mZb"/>
+                                    <constraint firstAttribute="trailing" secondItem="foO-lH-Vyw" secondAttribute="trailing" constant="8" id="aZo-WG-8bH"/>
+                                    <constraint firstAttribute="trailing" secondItem="J0g-eu-dCH" secondAttribute="trailing" constant="8" id="agz-lc-EBe"/>
+                                    <constraint firstAttribute="bottom" secondItem="XEC-7i-kcm" secondAttribute="bottom" constant="70" id="amv-RV-eXq"/>
+                                    <constraint firstItem="XEC-7i-kcm" firstAttribute="leading" secondItem="LbU-oR-3bs" secondAttribute="leading" constant="8" id="gR8-eO-dWI"/>
                                     <constraint firstItem="foO-lH-Vyw" firstAttribute="centerY" secondItem="KjL-ZM-ovB" secondAttribute="centerY" id="qxe-bY-LPy"/>
-                                    <constraint firstItem="XEC-7i-kcm" firstAttribute="centerY" secondItem="LbU-oR-3bs" secondAttribute="centerY" multiplier="1.66" id="sID-lH-kMo"/>
+                                    <constraint firstItem="XEC-7i-kcm" firstAttribute="top" secondItem="KjL-ZM-ovB" secondAttribute="bottom" constant="70" id="uTc-ja-Rrg"/>
                                     <constraint firstItem="J0g-eu-dCH" firstAttribute="centerY" secondItem="XEC-7i-kcm" secondAttribute="centerY" id="yyV-ci-QnB"/>
-                                    <constraint firstAttribute="trailing" secondItem="J0g-eu-dCH" secondAttribute="trailing" constant="8" id="zpb-P6-kQe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Will take effect on change media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-yx-lu9">
-                                <rect key="frame" x="739" y="737" width="442" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="* Will take effect on change media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-yx-lu9">
+                                <rect key="frame" x="742.5" y="737" width="435" height="35"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="LbU-oR-3bs" firstAttribute="width" secondItem="MCz-9A-Ofw" secondAttribute="width" multiplier="0.8" id="5Rq-yO-caY"/>
-                            <constraint firstItem="LbU-oR-3bs" firstAttribute="centerX" secondItem="MCz-9A-Ofw" secondAttribute="centerX" id="HTx-2c-llx"/>
+                            <constraint firstItem="LbU-oR-3bs" firstAttribute="centerX" secondItem="MCz-9A-Ofw" secondAttribute="centerX" id="6BF-PW-rqR"/>
+                            <constraint firstItem="LbU-oR-3bs" firstAttribute="centerY" secondItem="MCz-9A-Ofw" secondAttribute="centerY" id="Cnb-vc-xQ8"/>
                             <constraint firstItem="7Y8-yx-lu9" firstAttribute="centerX" secondItem="MCz-9A-Ofw" secondAttribute="centerX" id="NlQ-Ru-ax1"/>
-                            <constraint firstItem="LbU-oR-3bs" firstAttribute="height" secondItem="MCz-9A-Ofw" secondAttribute="height" multiplier="0.45" id="dHF-FS-sIy"/>
-                            <constraint firstItem="LbU-oR-3bs" firstAttribute="centerY" secondItem="MCz-9A-Ofw" secondAttribute="centerY" multiplier="0.9" id="ed8-N7-Nsv"/>
-                            <constraint firstItem="7Y8-yx-lu9" firstAttribute="top" secondItem="LbU-oR-3bs" secondAttribute="bottom" constant="8" id="gS3-Lw-ybP"/>
+                            <constraint firstItem="LbU-oR-3bs" firstAttribute="width" secondItem="MCz-9A-Ofw" secondAttribute="width" multiplier="0.7" id="zV4-Ew-OTz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="segmentedControlAutoplay" destination="foO-lH-Vyw" id="NJf-f7-1xJ"/>
-                        <outlet property="segmentedControlMediaType" destination="HAQ-ax-gYH" id="Dqa-bd-6Tg"/>
                         <outlet property="textFieldStartTime" destination="J0g-eu-dCH" id="dpZ-6o-UAm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5kg-Lr-USL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4413" y="74"/>
+        </scene>
+        <!--Change Media Table View Controller-->
+        <scene sceneID="YWp-RU-iyA">
+            <objects>
+                <tableViewController id="v0S-zZ-C1h" customClass="ChangeMediaTableViewController" customModule="PlayKitAppleTVSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="66" sectionFooterHeight="66" id="EiZ-WZ-4O6">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" id="nUg-ac-qwI">
+                                <rect key="frame" x="106" y="66" width="1708" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nUg-ac-qwI" id="XkU-qe-h7K">
+                                    <rect key="frame" x="0.0" y="0.0" width="1708" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="v0S-zZ-C1h" id="C8z-iy-g4G"/>
+                            <outlet property="delegate" destination="v0S-zZ-C1h" id="mKB-ri-oF0"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="tabBarObservedScrollView" destination="EiZ-WZ-4O6" id="4mM-M5-BAH"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ix-yl-OPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2775" y="1665"/>
         </scene>
     </scenes>
 </document>

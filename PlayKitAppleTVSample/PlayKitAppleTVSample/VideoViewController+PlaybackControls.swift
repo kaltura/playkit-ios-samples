@@ -168,17 +168,7 @@ extension VideoViewController {
         self.selectedCaptionTrack = nil
         self.selectedAudioTrack = nil
         self.tracks = nil
-        self.playerSettings.createMediaConfig { [weak self] (mediaConfig) in
-            guard let mc = mediaConfig else { return }
-            self?.player.prepare(mc)
-            if self?.playerSettings.autoplay == true && self?.player.rate == 0 { // if was paused and autoplay true then play
-                self?.playPause()
-            } else if self?.playerSettings.autoplay == false && self?.player.rate == 1 { // if was playing and autoplay false then pause
-                self?.playPause()
-            } else {
-                self?.startProgressTimer()
-            }
-        }
+        self.performSegue(withIdentifier: self.changeMediaSegueIdentifier, sender: nil)
     }
     
     @objc fileprivate func playbackControlsTapped(sender: UITapGestureRecognizer) {

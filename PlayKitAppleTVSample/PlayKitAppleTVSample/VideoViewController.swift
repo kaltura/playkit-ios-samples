@@ -11,12 +11,14 @@ import KalturaNetKit
 import PlayKit
 import PlayKitYoubora
 import PlayKitKava
+import PlayKit_IMA
 
 class VideoViewController: UIViewController {
 
     let animationDuration: TimeInterval = 0.5
     let seekAmount: TimeInterval = 15
     let settingsSegueIdentifier = "showSettings"
+    let changeMediaSegueIdentifier = "showChangeMedia"
     
     var player: Player!
     var duration: TimeInterval?
@@ -42,6 +44,8 @@ class VideoViewController: UIViewController {
     weak var captionsSegmentedControl: UISegmentedControl?
     weak var audioTracksSegmentedControl: UISegmentedControl?
     
+    var medias: [Media] = Medias.create()
+
     /************************************************************/
     // MARK: - Life Cycle
     /************************************************************/
@@ -61,19 +65,18 @@ class VideoViewController: UIViewController {
         let kavaConfig = KavaPluginConfig(partnerId: 1091, entryId: nil, ks: nil, playbackContext: nil, referrer: nil, applicationVersion: "1.0", playlistId: "abc", customVar1: nil, customVar2: nil, customVar3: nil)
         kavaConfig.playbackType = KavaPluginConfig.PlaybackType.vod
         
+        // IMA Config
+        let imaConfig = IMAConfig()
+        imaConfig.playerVersion = PlayKitManager.versionString
+        
         // create config dictionary
-        let config = [YouboraPlugin.pluginName: youboraConfig, KavaPlugin.pluginName: kavaConfig]
+        let config = [YouboraPlugin.pluginName: youboraConfig, KavaPlugin.pluginName: kavaConfig, IMAPlugin.pluginName: imaConfig]
         // create plugin config object
         let pluginConfig = PluginConfig(config: config)
         
         self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
         player.view = (self.view as! PlayerView)
         player.view?.backgroundColor = UIColor.black
-        
-        playerSettings.createMediaConfig() { [weak self] (mediaConfig) in
-            guard let mc = mediaConfig else { return }
-            self?.player.prepare(mc)
-        }
         
         player.addObserver(self, event: PlayerEvent.durationChanged) { event in
             self.duration = event.duration?.doubleValue
@@ -82,6 +85,21 @@ class VideoViewController: UIViewController {
         player.addObserver(self, event: PlayerEvent.tracksAvailable) { event in
             self.tracks = event.tracks
         }
+        player.addObserver(self, events: [AdEvent.adDidRequestContentPause, AdEvent.adDidRequestContentResume]) { (event) in
+            switch event {
+            case is AdEvent.AdDidRequestContentPause:
+                break
+            case is AdEvent.AdDidRequestContentResume:
+                break
+            default:
+                break
+            }
+        }
+        
+        medias.first?.mediaConfig(startTime: playerSettings.startTime, completionHandler: { (mediaConfig) in
+            guard let mc = mediaConfig else { return }
+            self.player.prepare(mc)
+        })
         
         let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeUp(gesture:)))
         swipeUpGesture.direction = .up
@@ -98,6 +116,10 @@ class VideoViewController: UIViewController {
             self.shouldShowControlsOnViewWillAppear = false
             self.showPlaybackControlsView()
         }
+    }
+    
+    deinit {
+        player.removeObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.tracksAvailable, AdEvent.adDidRequestContentPause, AdEvent.adDidRequestContentResume])
     }
     
     /************************************************************/
@@ -155,6 +177,13 @@ class VideoViewController: UIViewController {
         if segue.identifier == self.settingsSegueIdentifier {
             let destinationVC = segue.destination as! SettingsViewController
             destinationVC.playerSettings = self.playerSettings
+            self.shouldShowControlsOnViewWillAppear = true
+            self.removePlaybackControlsView()
+        } else if segue.identifier == self.changeMediaSegueIdentifier {
+            let destinationVC = segue.destination as! ChangeMediaTableViewController
+            destinationVC.player = player
+            destinationVC.medias = medias
+            destinationVC.playerSettings = playerSettings
             self.shouldShowControlsOnViewWillAppear = true
             self.removePlaybackControlsView()
         } else {
