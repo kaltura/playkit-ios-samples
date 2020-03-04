@@ -85,16 +85,6 @@ class VideoViewController: UIViewController {
         player.addObserver(self, event: PlayerEvent.tracksAvailable) { event in
             self.tracks = event.tracks
         }
-        player.addObserver(self, events: [AdEvent.adDidRequestContentPause, AdEvent.adDidRequestContentResume]) { (event) in
-            switch event {
-            case is AdEvent.AdDidRequestContentPause:
-                break
-            case is AdEvent.AdDidRequestContentResume:
-                break
-            default:
-                break
-            }
-        }
         
         medias.first?.mediaConfig(startTime: playerSettings.startTime, completionHandler: { (mediaConfig) in
             guard let mc = mediaConfig else { return }
@@ -119,7 +109,7 @@ class VideoViewController: UIViewController {
     }
     
     deinit {
-        player.removeObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.tracksAvailable, AdEvent.adDidRequestContentPause, AdEvent.adDidRequestContentResume])
+        player.removeObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.tracksAvailable])
     }
     
     /************************************************************/
@@ -196,14 +186,14 @@ class VideoViewController: UIViewController {
     /************************************************************/
     
     @objc func playPause() {
-        if self.player.rate == 0 {
-            self.player.play()
-            self.playPauseButton?.setTitle("Pause", for: .normal)
-            self.startProgressTimer()
-        } else if self.player.rate == 1 {
+        if player.isPlaying {
             self.player.pause()
             self.playPauseButton?.setTitle("Play", for: .normal)
             self.stopProgressTimer()
+        } else {
+            self.player.play()
+            self.playPauseButton?.setTitle("Pause", for: .normal)
+            self.startProgressTimer()
         }
     }
     
