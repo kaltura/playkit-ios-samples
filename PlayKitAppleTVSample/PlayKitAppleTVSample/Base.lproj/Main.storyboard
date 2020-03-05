@@ -85,8 +85,8 @@
                                     <constraint firstItem="J0g-eu-dCH" firstAttribute="centerY" secondItem="XEC-7i-kcm" secondAttribute="centerY" id="yyV-ci-QnB"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="* Will take effect on change media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-yx-lu9">
-                                <rect key="frame" x="742.5" y="737" width="435" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="* Will take effect on change media" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Y8-yx-lu9">
+                                <rect key="frame" x="742.5" y="741" width="435" height="35"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -95,7 +95,10 @@
                         <constraints>
                             <constraint firstItem="LbU-oR-3bs" firstAttribute="centerX" secondItem="MCz-9A-Ofw" secondAttribute="centerX" id="6BF-PW-rqR"/>
                             <constraint firstItem="LbU-oR-3bs" firstAttribute="centerY" secondItem="MCz-9A-Ofw" secondAttribute="centerY" id="Cnb-vc-xQ8"/>
+                            <constraint firstItem="7Y8-yx-lu9" firstAttribute="top" secondItem="LbU-oR-3bs" secondAttribute="bottom" constant="50" id="MM9-Mg-pcj"/>
                             <constraint firstItem="7Y8-yx-lu9" firstAttribute="centerX" secondItem="MCz-9A-Ofw" secondAttribute="centerX" id="NlQ-Ru-ax1"/>
+                            <constraint firstItem="7Y8-yx-lu9" firstAttribute="centerX" secondItem="MCz-9A-Ofw" secondAttribute="centerX" id="aJF-7p-kF5"/>
+                            <constraint firstItem="qZh-3V-6Be" firstAttribute="top" relation="greaterThanOrEqual" secondItem="7Y8-yx-lu9" secondAttribute="bottom" constant="50" id="z1b-6r-4ZA"/>
                             <constraint firstItem="LbU-oR-3bs" firstAttribute="width" secondItem="MCz-9A-Ofw" secondAttribute="width" multiplier="0.7" id="zV4-Ew-OTz"/>
                         </constraints>
                     </view>
@@ -130,9 +133,6 @@
                             <outlet property="delegate" destination="v0S-zZ-C1h" id="mKB-ri-oF0"/>
                         </connections>
                     </tableView>
-                    <connections>
-                        <outlet property="tabBarObservedScrollView" destination="EiZ-WZ-4O6" id="4mM-M5-BAH"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ix-yl-OPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
