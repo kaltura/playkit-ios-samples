@@ -61,6 +61,9 @@ class ChangeMediaTableViewController: UITableViewController {
             
             self.player?.updatePluginConfig(pluginName: IMAPlugin.pluginName, config: imaConfig)
             self.player?.prepare(mc)
+            if self.playerSettings?.autoplay == true {
+                self.player?.play()
+            }
             
             self.dismiss(animated: true, completion: nil)
         })
