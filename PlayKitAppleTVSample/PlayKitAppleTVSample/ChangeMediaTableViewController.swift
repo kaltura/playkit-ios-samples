@@ -54,7 +54,7 @@ class ChangeMediaTableViewController: UITableViewController {
             // IMA Config
             let imaConfig = IMAConfig()
             imaConfig.playerVersion = PlayKitManager.versionString
-            if var adTagURL = media.adTag?.rawValue, !adTagURL.isEmpty {
+            if var adTagURL = media.adTag?.rawValue, !adTagURL.isEmpty, adTagURL.hasSuffix("correlator=") {
                 adTagURL += Date().description
                 imaConfig.adTagUrl = adTagURL
             }
