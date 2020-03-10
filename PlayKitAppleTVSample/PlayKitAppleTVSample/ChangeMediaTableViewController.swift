@@ -46,6 +46,7 @@ class ChangeMediaTableViewController: UITableViewController {
             return
         }
         
+        player?.stop()
         media.mediaConfig(startTime: playerSettings?.startTime ?? 0, completionHandler: { [weak self] (mediaConfig) in
             guard let self = self else { return }
             self.activityIndicatorView.stopAnimating()
