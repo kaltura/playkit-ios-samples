@@ -20,10 +20,34 @@ struct Medias {
         medias.append(Media(id: "Apple Bip Bop",
                             contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
                             adTag: .Preroll))
-        // Basic with Preroll
+        // Basic with Postroll
         medias.append(Media(id: "Apple Bip Bop",
                             contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
                             adTag: .Postroll))
+        
+        medias.append(Media(id: "Apple Bip Bop",
+                            contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+                            adTag: .AdRules))
+        
+        medias.append(Media(id: "Apple Bip Bop",
+                            contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+                            adTag: .AdRulesPods))
+        
+        medias.append(Media(id: "Apple Bip Bop",
+                            contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+                            adTag: .VMAPPods))
+        
+        medias.append(Media(id: "Apple Bip Bop",
+                            contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+                            adTag: .Wrapper))
+        
+        medias.append(Media(id: "Apple Bip Bop",
+                            contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+                            adTag: .AdSense))
+        
+        medias.append(Media(id: "Apple Bip Bop",
+                            contentUrl: "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8",
+                            adTag: .PrerollAdsResponse))
         
         // Basic live
         medias.append(Media(id: "Live",

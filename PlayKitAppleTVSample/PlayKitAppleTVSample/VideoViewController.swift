@@ -13,36 +13,37 @@ import PlayKitYoubora
 import PlayKitKava
 import PlayKit_IMA
 
-class VideoViewController: UIViewController {
+class VideoViewController: UIViewController, UIGestureRecognizerDelegate {
 
     let animationDuration: TimeInterval = 0.5
     let seekAmount: TimeInterval = 15
     let settingsSegueIdentifier = "showSettings"
     let changeMediaSegueIdentifier = "showChangeMedia"
     
-    var player: Player!
-    var duration: TimeInterval?
-    var progressTimer: Timer?
+    var player: Player! // Created in the viewDidLoad
     var focusedViews = [UIView]()
     var playerSettings = PlayerSettings()
     var shouldShowControlsOnViewWillAppear = false
-    // tracks //
+    
+    // Tracks
     var tracks: PKTracks?
     var selectedAudioTrack: Track?
     var selectedCaptionTrack: Track?
+    var tracksControlsView: UIView?
+    var captionsSegmentedControl: UISegmentedControl?
+    var audioTracksSegmentedControl: UISegmentedControl?
     
-    // playback controls
-    weak var playbackControlsView: UIView?
-    weak var playbackControlsViewBottomConstraint: NSLayoutConstraint?
-    weak var playPauseButton: UIButton?
-    weak var progressView: UIProgressView?
-    weak var currentTimeLabel: UILabel?
-    weak var durationLabel: UILabel?
-    
-    // captions controls
-    weak var tracksControlsView: UIView?
-    weak var captionsSegmentedControl: UISegmentedControl?
-    weak var audioTracksSegmentedControl: UISegmentedControl?
+    // Playback controls
+    @IBOutlet weak var playbackControlsView: UIVisualEffectView!
+    @IBOutlet weak var seekBackButton: UIButton!
+    @IBOutlet weak var playPauseButton: UIButton!
+    @IBOutlet weak var seekForwardButton: UIButton!
+    @IBOutlet weak var changeMediaButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var playbackControlsViewBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
     
     var medias: [Media] = Medias.create()
 
@@ -54,50 +55,50 @@ class VideoViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // config options
+        // Config options
         let youboraOptions: [String: Any] = [
             "accountCode": "kalturatest" // mandatory
             // YouboraPlugin.enableSmartAdsKey: true - use this if you want to enable smart ads
         ]
-        // create analytics config with the created params
+        
+        // Create analytics config with the created params
         let youboraConfig = AnalyticsConfig(params: youboraOptions)
         
-        let kavaConfig = KavaPluginConfig(partnerId: 1091, entryId: nil, ks: nil, playbackContext: nil, referrer: nil, applicationVersion: "1.0", playlistId: "abc", customVar1: nil, customVar2: nil, customVar3: nil)
+        let kavaConfig = KavaPluginConfig(partnerId: 1091,
+                                          entryId: nil,
+                                          ks: nil,
+                                          playbackContext: nil,
+                                          referrer: nil,
+                                          applicationVersion: "1.0",
+                                          playlistId: "abc",
+                                          customVar1: nil,
+                                          customVar2: nil,
+                                          customVar3: nil)
         kavaConfig.playbackType = KavaPluginConfig.PlaybackType.vod
         
         // IMA Config
         let imaConfig = IMAConfig()
         imaConfig.playerVersion = PlayKitManager.versionString
         
-        // create config dictionary
+        // Create config dictionary
         let config = [YouboraPlugin.pluginName: youboraConfig, KavaPlugin.pluginName: kavaConfig, IMAPlugin.pluginName: imaConfig]
-        // create plugin config object
+        
+        // Create plugin config object
         let pluginConfig = PluginConfig(config: config)
         
         self.player = PlayKitManager.shared.loadPlayer(pluginConfig: pluginConfig)
         player.view = (self.view as! PlayerView)
         player.view?.backgroundColor = UIColor.black
         
-        player.addObserver(self, event: PlayerEvent.durationChanged) { event in
-            self.duration = event.duration?.doubleValue
-            self.durationLabel?.text = self.getTimeRepresentation(time: self.duration ?? 0)
-        }
-        player.addObserver(self, event: PlayerEvent.tracksAvailable) { event in
-            self.tracks = event.tracks
-        }
+        registerPlayerEvents()
+        addGestures()
+        setupPlaybackControlsView()
         
+        // Select first media to load
         medias.first?.mediaConfig(startTime: playerSettings.startTime, completionHandler: { (mediaConfig) in
             guard let mc = mediaConfig else { return }
             self.player.prepare(mc)
         })
-        
-        let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeUp(gesture:)))
-        swipeUpGesture.direction = .up
-        player.view?.addGestureRecognizer(swipeUpGesture)
-        
-        let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeDown(gesture:)))
-        swipeDownGesture.direction = .down
-        player.view?.addGestureRecognizer(swipeDownGesture)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -109,7 +110,7 @@ class VideoViewController: UIViewController {
     }
     
     deinit {
-        player.removeObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.tracksAvailable])
+        unregisterPlayerEvents()
     }
     
     /************************************************************/
@@ -117,17 +118,21 @@ class VideoViewController: UIViewController {
     /************************************************************/
     
     override var preferredFocusEnvironments: [UIFocusEnvironment] {
-        if focusedViews.count > 0  {
+        if focusedViews.count > 0 {
             return focusedViews
+        } else if let playerView = player?.view {
+            return [playerView]
         } else {
             return super.preferredFocusEnvironments
         }
     }
     
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
-        if presses.first?.type == UIPress.PressType.menu && (self.playbackControlsView != nil || self.tracksControlsView != nil) {
-            self.removePlaybackControlsView()
-            self.removeTracksControlsView()
+        if presses.first?.type == UIPress.PressType.menu {
+            // DO NOT REMOVE THE FOCUSED VIEWS HERE!
+            // Menu also takes the app to the background.
+            // If there is an ad playing it will be stuck on paused.
+            super.pressesBegan(presses, with: event)
         } else if presses.first?.type == UIPress.PressType.playPause {
             self.playPause()
         } else {
@@ -135,26 +140,26 @@ class VideoViewController: UIViewController {
         }
     }
     
-    override func didUpdateFocus(in context: UIFocusUpdateContext, with coordinator: UIFocusAnimationCoordinator) {
-        super.didUpdateFocus(in: context, with: coordinator)
-    }
-    
     /************************************************************/
     // MARK: - Actions
     /************************************************************/
     
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
     @objc func handleSwipeUp(gesture: UISwipeGestureRecognizer) {
-        if self.playbackControlsView == nil && self.tracksControlsView == nil {
-            self.showPlaybackControlsView()
-        } else if self.playbackControlsView == nil && self.tracksControlsView != nil {
+        if isTracksControlsViewShown() {
             self.removeTracksControlsView()
+        } else if !isPlaybackControlsViewShown() {
+            self.showPlaybackControlsView()
         }
     }
     
     @objc func handleSwipeDown(gesture: UISwipeGestureRecognizer) {
-        if self.playbackControlsView != nil {
-            self.removePlaybackControlsView()
-        } else if let tracks = self.tracks, self.tracksControlsView == nil {
+        if isPlaybackControlsViewShown() {
+            self.hidePlaybackControlsView()
+        } else if let tracks = self.tracks, !isTracksControlsViewShown() {
             self.showTracksControlsView(tracks: tracks)
         }
     }
@@ -164,18 +169,19 @@ class VideoViewController: UIViewController {
     /************************************************************/
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        player.pause()
         if segue.identifier == self.settingsSegueIdentifier {
             let destinationVC = segue.destination as! SettingsViewController
             destinationVC.playerSettings = self.playerSettings
             self.shouldShowControlsOnViewWillAppear = true
-            self.removePlaybackControlsView()
+            self.hidePlaybackControlsView()
         } else if segue.identifier == self.changeMediaSegueIdentifier {
             let destinationVC = segue.destination as! ChangeMediaTableViewController
             destinationVC.player = player
             destinationVC.medias = medias
             destinationVC.playerSettings = playerSettings
             self.shouldShowControlsOnViewWillAppear = true
-            self.removePlaybackControlsView()
+            self.hidePlaybackControlsView()
         } else {
             super.prepare(for: segue, sender: sender)
         }
@@ -185,28 +191,63 @@ class VideoViewController: UIViewController {
     // MARK: - Internal
     /************************************************************/
     
+    func registerPlayerEvents() {
+        player.addObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.tracksAvailable, PlayerEvent.playing, PlayerEvent.pause, PlayerEvent.playheadUpdate, PlayerEvent.ended, PlayerEvent.stopped]) { (event) in
+            switch event {
+            case is PlayerEvent.DurationChanged:
+                self.durationLabel.text = self.getTimeRepresentation(time: event.duration?.doubleValue ?? self.player.duration)
+            case is PlayerEvent.TracksAvailable:
+                self.tracks = event.tracks
+            case is PlayerEvent.Playing:
+                self.playPauseButton.setTitle("Pause", for: .normal)
+                self.playPauseButton.tag = 0
+            case is PlayerEvent.Pause:
+                self.playPauseButton.setTitle("Play", for: .normal)
+            case is PlayerEvent.PlayheadUpdate:
+                let currentTime = event.currentTime?.doubleValue ?? self.player.currentTime
+                self.currentTimeLabel.text = self.getTimeRepresentation(time: currentTime)
+                if currentTime > 0 {
+                    self.progressView.setProgress(Float(currentTime/self.player.duration), animated: true)
+                }
+            case is PlayerEvent.Ended:
+                self.playPauseButton.setTitle("Replay", for: .normal)
+                self.playPauseButton.tag = 1
+            case is PlayerEvent.Stopped:
+                self.currentTimeLabel.text = self.getTimeRepresentation(time: 0)
+                self.progressView.progress = 0
+                self.durationLabel.text = self.getTimeRepresentation(time: 0)
+            default:
+                break
+            }
+        }
+    }
+    
+    func unregisterPlayerEvents() {
+        player.removeObserver(self, events: [PlayerEvent.durationChanged, PlayerEvent.tracksAvailable, PlayerEvent.playing, PlayerEvent.pause, PlayerEvent.playheadUpdate, PlayerEvent.ended, PlayerEvent.stopped])
+    }
+    
+    func addGestures() {
+        let swipeUpGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeUp(gesture:)))
+        swipeUpGesture.direction = .up
+        player.view?.addGestureRecognizer(swipeUpGesture)
+        
+        let swipeDownGesture = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipeDown(gesture:)))
+        swipeDownGesture.direction = .down
+        player.view?.addGestureRecognizer(swipeDownGesture)
+    }
+    
     @objc func playPause() {
         if player.isPlaying {
-            self.player.pause()
-            self.playPauseButton?.setTitle("Play", for: .normal)
-            self.stopProgressTimer()
+            player.pause()
+            playPauseButton.setTitle("Play", for: .normal)
         } else {
-            self.player.play()
-            self.playPauseButton?.setTitle("Pause", for: .normal)
-            self.startProgressTimer()
+            if playPauseButton.tag == 1 {
+                player.replay()
+            } else {
+                player.play()
+            }
+            playPauseButton.setTitle("Pause", for: .normal)
         }
-    }
-    
-    func startProgressTimer() {
-        self.stopProgressTimer()
-        self.progressTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { [weak self] timer in
-            self?.updateProgress()
-        }
-    }
-    
-    func stopProgressTimer() {
-        self.progressTimer?.invalidate()
-        self.progressTimer = nil
     }
     
     func getTimeRepresentation(time: TimeInterval) -> String {
@@ -221,14 +262,6 @@ class VideoViewController: UIViewController {
             let minutes = Int(time / 60)
             let seconds = Int(time.truncatingRemainder(dividingBy: 60))
             return String(format: "%d:%02d", minutes, seconds)
-        }
-    }
-    
-    func updateProgress(animated: Bool = true) {
-        let currentTime = self.player.currentTime
-        self.currentTimeLabel?.text = self.getTimeRepresentation(time: currentTime)
-        if currentTime > 0 {
-            self.progressView?.setProgress(Float(self.player.currentTime/self.player.duration), animated: animated)
         }
     }
 }

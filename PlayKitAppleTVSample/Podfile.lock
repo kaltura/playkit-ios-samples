@@ -69,7 +69,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   PlayKit_IMA:
-    :commit: b7bfa601c82bca91ebb46972808c53b58892c244
+    :commit: b098149b9912aabb394694d469dc00f726d39f12
     :git: https://github.com/kaltura/playkit-ios-ima.git
 
 SPEC CHECKSUMS:
