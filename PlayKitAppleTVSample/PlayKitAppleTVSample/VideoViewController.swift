@@ -213,6 +213,9 @@ class VideoViewController: UIViewController, UIGestureRecognizerDelegate {
                 self.playPauseButton.setTitle("Replay", for: .normal)
                 self.playPauseButton.tag = 1
             case is PlayerEvent.Stopped:
+                // Reset view
+                self.playPauseButton.setTitle("Play", for: .normal)
+                self.playPauseButton.tag = 0
                 self.currentTimeLabel.text = self.getTimeRepresentation(time: 0)
                 self.progressView.progress = 0
                 self.durationLabel.text = self.getTimeRepresentation(time: 0)
