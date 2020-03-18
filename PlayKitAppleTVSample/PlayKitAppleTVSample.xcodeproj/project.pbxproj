@@ -16,6 +16,10 @@
 		20972B2D1EB9A11800F52E90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20972B2B1EB9A11800F52E90 /* Main.storyboard */; };
 		20972B2F1EB9A11800F52E90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20972B2E1EB9A11800F52E90 /* Assets.xcassets */; };
 		226669DD67BB9374EE8DDA5E /* Pods_SharedPods_PlayKitAppleTVSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BB7E7281B8E7C1E290B2339 /* Pods_SharedPods_PlayKitAppleTVSample.framework */; };
+		D2E3C8A9240BCD280073664F /* ChangeMediaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3C8A8240BCD280073664F /* ChangeMediaTableViewController.swift */; };
+		D2E3C8AB240BF6FF0073664F /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3C8AA240BF6FF0073664F /* Media.swift */; };
+		D2E3C8AD240C02170073664F /* IMAAdTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3C8AC240C02170073664F /* IMAAdTag.swift */; };
+		D2E3C8AF240E47B60073664F /* Medias.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E3C8AE240E47B60073664F /* Medias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		4BB7E7281B8E7C1E290B2339 /* Pods_SharedPods_PlayKitAppleTVSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SharedPods_PlayKitAppleTVSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		779DE6713EE4E5181DB85A8A /* Pods-SharedPods-PlayKitAppleTVSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PlayKitAppleTVSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PlayKitAppleTVSample/Pods-SharedPods-PlayKitAppleTVSample.debug.xcconfig"; sourceTree = "<group>"; };
 		BFED347E9AAB51C08EFB4CD4 /* Pods-SharedPods-PlayKitAppleTVSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SharedPods-PlayKitAppleTVSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-SharedPods-PlayKitAppleTVSample/Pods-SharedPods-PlayKitAppleTVSample.release.xcconfig"; sourceTree = "<group>"; };
+		D2E3C8A8240BCD280073664F /* ChangeMediaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeMediaTableViewController.swift; sourceTree = "<group>"; };
+		D2E3C8AA240BF6FF0073664F /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		D2E3C8AC240C02170073664F /* IMAAdTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMAAdTag.swift; sourceTree = "<group>"; };
+		D2E3C8AE240E47B60073664F /* Medias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +75,16 @@
 		20972B261EB9A11800F52E90 /* PlayKitAppleTVSample */ = {
 			isa = PBXGroup;
 			children = (
+				D2E3C8AC240C02170073664F /* IMAAdTag.swift */,
 				20972B271EB9A11800F52E90 /* AppDelegate.swift */,
 				20972B291EB9A11800F52E90 /* VideoViewController.swift */,
 				203AA2351ED49C6900C5A27E /* VideoViewController+PlaybackControls.swift */,
 				203AA23B1ED5713200C5A27E /* VideoViewController+TracksControls.swift */,
 				203AA2391ED55B4500C5A27E /* SettingsViewController.swift */,
 				203AA2371ED49D4700C5A27E /* PlayerSettings.swift */,
+				D2E3C8A8240BCD280073664F /* ChangeMediaTableViewController.swift */,
+				D2E3C8AA240BF6FF0073664F /* Media.swift */,
+				D2E3C8AE240E47B60073664F /* Medias.swift */,
 				20972B2B1EB9A11800F52E90 /* Main.storyboard */,
 				20972B2E1EB9A11800F52E90 /* Assets.xcassets */,
 				20972B301EB9A11800F52E90 /* Info.plist */,
@@ -193,6 +205,7 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SharedPods-PlayKitAppleTVSample/Pods-SharedPods-PlayKitAppleTVSample-frameworks.sh",
+				"${PODS_ROOT}/GoogleAds-IMA-tvOS-SDK/GoogleInteractiveMediaAds.framework",
 				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjcExceptionBridging/ObjcExceptionBridging.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
@@ -200,6 +213,7 @@
 				"${BUILT_PRODUCTS_DIR}/PlayKitProviders/PlayKitProviders.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/PlayKitYoubora/PlayKitYoubora.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit_IMA/PlayKit_IMA.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
 				"${BUILT_PRODUCTS_DIR}/XCGLogger/XCGLogger.framework",
@@ -207,6 +221,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjcExceptionBridging.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
@@ -214,6 +229,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitProviders.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitYoubora.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit_IMA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XCGLogger.framework",
@@ -233,9 +249,13 @@
 			files = (
 				20972B2A1EB9A11800F52E90 /* VideoViewController.swift in Sources */,
 				203AA2381ED49D4700C5A27E /* PlayerSettings.swift in Sources */,
+				D2E3C8A9240BCD280073664F /* ChangeMediaTableViewController.swift in Sources */,
 				203AA23C1ED5713200C5A27E /* VideoViewController+TracksControls.swift in Sources */,
+				D2E3C8AF240E47B60073664F /* Medias.swift in Sources */,
+				D2E3C8AB240BF6FF0073664F /* Media.swift in Sources */,
 				203AA2361ED49C6900C5A27E /* VideoViewController+PlaybackControls.swift in Sources */,
 				203AA23A1ED55B4500C5A27E /* SettingsViewController.swift in Sources */,
+				D2E3C8AD240C02170073664F /* IMAAdTag.swift in Sources */,
 				20972B281EB9A11800F52E90 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +329,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -360,7 +380,7 @@
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 10.2;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -371,12 +391,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = PlayKitAppleTVSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitAppleTVSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Debug;
 		};
@@ -386,12 +411,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X8RDCFJK95;
 				INFOPLIST_FILE = PlayKitAppleTVSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kaltura.playkit.PlayKitAppleTVSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
 			name = Release;
 		};

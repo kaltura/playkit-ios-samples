@@ -105,6 +105,10 @@ extension VideoViewController {
         }
     }
     
+    func isTracksControlsViewShown() -> Bool {
+        return tracksControlsView != nil
+    }
+    
     /************************************************************/
     // MARK: - Actions
     /************************************************************/

@@ -10,6 +10,7 @@ import UIKit
 import PlayKit
 import PlayKitYoubora
 import PlayKitKava
+import PlayKit_IMA
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,7 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         PlayKitManager.shared.registerPlugin(YouboraPlugin.self)
         PlayKitManager.shared.registerPlugin(KavaPlugin.self)
-
+        PlayKitManager.shared.registerPlugin(IMAPlugin.self)
+        
         return true
     }
 
