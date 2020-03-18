@@ -17,13 +17,13 @@ use_frameworks!
 #PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 #PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
 #PLAYKIT_KAVA_GIT='https://github.com/kaltura/playkit-ios-kava.git'
-PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
+#PLAYKIT_IMA_GIT='https://github.com/kaltura/playkit-ios-ima.git'
 
 PLAYKIT_BRANCH=ENV['PK_BRANCH'] || 'develop'
 PLAYKIT_YOUBORA_BRANCH=ENV['PKY_BRANCH'] || 'develop'
 PLAYKIT_PROVIDERS_BRANCH=ENV['PKP_BRANCH'] || 'develop'
 PLAYKIT_KAVA_BRANCH=ENV['PK_KAVA_BRANCH'] || 'develop'
-PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'FEM-2823'
+PLAYKIT_IMA_BRANCH=ENV['PK_IMA_BRANCH'] || 'develop'
 
 
 abstract_target 'SharedPods' do
@@ -68,12 +68,12 @@ abstract_target 'SharedPods' do
   end
 
   if defined? PLAYKIT_IMA_LOCAL
-      pod 'PlayKit_IMA/tvOS', :path => PLAYKIT_IMA_LOCAL
+      pod 'PlayKit_IMA', :path => PLAYKIT_IMA_LOCAL
       else
       if defined? PLAYKIT_IMA_GIT
-          pod 'PlayKit_IMA/tvOS', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
+          pod 'PlayKit_IMA', :git => PLAYKIT_IMA_GIT, :branch => PLAYKIT_IMA_BRANCH
           else
-          pod 'PlayKit_IMA/tvOS', '~> 1.7'
+          pod 'PlayKit_IMA', '~> 1.8'
       end
   end
   

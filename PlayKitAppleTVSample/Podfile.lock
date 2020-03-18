@@ -16,7 +16,8 @@ PODS:
     - PlayKitUtils (~> 0.4)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
-  - PlayKit_IMA/tvOS (1.7.1-dev):
+  - PlayKit_IMA (1.8.0):
+    - GoogleAds-IMA-iOS-SDK (= 3.11.1)
     - GoogleAds-IMA-tvOS-SDK (= 4.2.1)
     - PlayKit (~> 3.11)
     - XCGLogger (= 7.0.0)
@@ -42,7 +43,7 @@ PODS:
 
 DEPENDENCIES:
   - PlayKit (~> 3.14)
-  - PlayKit_IMA/tvOS (from `https://github.com/kaltura/playkit-ios-ima.git`, branch `FEM-2823`)
+  - PlayKit_IMA (~> 1.8)
   - PlayKitKava (~> 1.3)
   - PlayKitProviders (~> 1.5)
   - PlayKitYoubora (~> 1.4)
@@ -53,6 +54,7 @@ SPEC REPOS:
     - KalturaNetKit
     - ObjcExceptionBridging
     - PlayKit
+    - PlayKit_IMA
     - PlayKitKava
     - PlayKitProviders
     - PlayKitUtils
@@ -62,22 +64,12 @@ SPEC REPOS:
     - XCGLogger
     - YouboraLib
 
-EXTERNAL SOURCES:
-  PlayKit_IMA:
-    :branch: FEM-2823
-    :git: https://github.com/kaltura/playkit-ios-ima.git
-
-CHECKOUT OPTIONS:
-  PlayKit_IMA:
-    :commit: b098149b9912aabb394694d469dc00f726d39f12
-    :git: https://github.com/kaltura/playkit-ios-ima.git
-
 SPEC CHECKSUMS:
   GoogleAds-IMA-tvOS-SDK: 2e13f90cdb893de667b12db571e5bed5a6c0ec8c
   KalturaNetKit: 638852ff98361e1421fd52035d3390e7ffbd4c8a
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
   PlayKit: 25baf98c60c51c572ece7a8135a72d1d7ccce213
-  PlayKit_IMA: 5ba16046b1657efbed5978c243989244c299fa94
+  PlayKit_IMA: 5602fa6afe93b6a0793ea1a756285a0f8b9ea823
   PlayKitKava: 72e8865d11f17ee56e48dc2f287710e7f13a50b0
   PlayKitProviders: 69205522a7c267a77e3fdb0a629968ff5378b808
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
@@ -87,6 +79,6 @@ SPEC CHECKSUMS:
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
 
-PODFILE CHECKSUM: 23182004e54bf1d4e55b2e4f0db8a945661a82a0
+PODFILE CHECKSUM: 08ac957b4a216326010ac1bf2900584763367eab
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.1
