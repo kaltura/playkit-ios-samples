@@ -4,17 +4,10 @@
 //
 //  Created by Sergii Chausov on 03.08.2020.
 //  Copyright © 2020 Kaltura. All rights reserved.
-//
-//
-//
-//
-//
-//
-//
+
 // Useful links:
 // https://developer.apple.com/documentation/avkit/adopting_picture_in_picture_in_a_custom_player
 // https://developer.apple.com/library/archive/samplecode/AVFoundationPiPPlayer/Introduction/Intro.html
-//
 
 import UIKit
 import AVKit
