@@ -11,7 +11,7 @@
 //
 //
 //
-// There are some useful links.
+// Useful links:
 // https://developer.apple.com/documentation/avkit/adopting_picture_in_picture_in_a_custom_player
 // https://developer.apple.com/library/archive/samplecode/AVFoundationPiPPlayer/Introduction/Intro.html
 //
