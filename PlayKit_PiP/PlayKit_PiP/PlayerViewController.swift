@@ -24,14 +24,12 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var playerView: PlayerView!
     
     var player: Player? = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
-    var playheadTimer: Timer?
     
     var pictureInPictureController: AVPictureInPictureController?
     var pipPossibleObservation: NSKeyValueObservation?
     
     deinit {
         pipPossibleObservation = nil
-        playheadTimer = nil
     }
     
     override func viewDidLoad() {
@@ -66,8 +64,6 @@ class PlayerViewController: UIViewController {
         
         player?.stop()
         player?.destroy()
-
-        playheadTimer?.invalidate()
     }
     
     func preparePlayer() {
@@ -83,14 +79,17 @@ class PlayerViewController: UIViewController {
         let entry = PKMediaEntry("Entry_ID", sources: [source])
         
         player.prepare(MediaConfig(mediaEntry: entry, startTime: 0.0))
-                
-        player.addObserver(self, events: [PlayerEvent.canPlay, PlayerEvent.pause, PlayerEvent.pause.playing]) { [weak self] (event) in
+        
+        let events = [PlayerEvent.canPlay, PlayerEvent.pause, PlayerEvent.playing, PlayerEvent.playheadUpdate]
+        
+        player.addObserver(self, events: events) { [weak self] (event) in
             guard let strongSelf = self else { return }
 
             switch event {
             case is PlayerEvent.CanPlay: strongSelf.play()
             case is PlayerEvent.Playing: strongSelf.playButton.setTitle("⏸", for: .normal)
             case is PlayerEvent.Pause: strongSelf.playButton.setTitle("▶️", for: .normal)
+            case is PlayerEvent.PlayheadUpdate: strongSelf.playheadUpdate()
             default:
                 break
             }
@@ -125,7 +124,6 @@ class PlayerViewController: UIViewController {
         guard let player = self.player else { return }
         
         if !player.isPlaying {
-            self.playheadTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(playheadUpdate), userInfo: nil, repeats: true)
             player.play()
         }
     }
@@ -134,14 +132,11 @@ class PlayerViewController: UIViewController {
         guard let player = self.player else { return }
         
         if player.isPlaying {
-            self.playheadTimer?.invalidate()
-            self.playheadTimer = nil
-            
             player.pause()
         }
     }
     
-    @objc func playheadUpdate() {
+    func playheadUpdate() {
         guard let player = self.player else { return }
         self.slider.value = Float(player.currentTime / player.duration)
     }
