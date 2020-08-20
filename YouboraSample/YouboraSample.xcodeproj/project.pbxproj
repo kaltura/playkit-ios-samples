@@ -193,7 +193,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = Kaltura;
 				TargetAttributes = {
 					2005AE881E80133900FB01B0 = {

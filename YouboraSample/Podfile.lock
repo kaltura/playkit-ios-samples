@@ -1,34 +1,34 @@
 PODS:
-  - KalturaNetKit (1.3.0):
-    - KalturaNetKit/Core (= 1.3.0)
-  - KalturaNetKit/Core (1.3.0):
+  - KalturaNetKit (1.3.1):
+    - KalturaNetKit/Core (= 1.3.1)
+  - KalturaNetKit/Core (1.3.1):
     - SwiftyJSON (= 4.3.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.14.0):
-    - PlayKit/Core (= 3.14.0)
-  - PlayKit/AnalyticsCommon (3.14.0):
+  - PlayKit (3.17.1):
+    - PlayKit/Core (= 3.17.1)
+  - PlayKit/AnalyticsCommon (3.17.1):
     - PlayKit/Core
-  - PlayKit/Core (3.14.0):
+  - PlayKit/Core (3.17.1):
     - KalturaNetKit (~> 1.3)
     - PlayKitUtils (~> 0.4)
     - SwiftyJSON (= 4.3.0)
     - XCGLogger (= 7.0.0)
   - PlayKitUtils (0.4.0)
-  - PlayKitYoubora (1.4.2):
-    - PlayKit/AnalyticsCommon
-    - YouboraLib (= 6.1.7)
+  - PlayKitYoubora (1.5.0.0000):
+    - PlayKit/AnalyticsCommon (~> 3.8)
+    - YouboraLib (= 6.5.27)
   - SwiftyJSON (4.3.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
   - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
-  - YouboraLib (6.1.7)
+  - YouboraLib (6.5.27)
 
 DEPENDENCIES:
   - PlayKit (~> 3.12)
-  - PlayKitYoubora (~> 1.4)
+  - PlayKitYoubora (from `https://github.com/kaltura/playkit-ios-youbora.git`, branch `FEC-9795`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -36,21 +36,30 @@ SPEC REPOS:
     - ObjcExceptionBridging
     - PlayKit
     - PlayKitUtils
-    - PlayKitYoubora
     - SwiftyJSON
     - XCGLogger
     - YouboraLib
 
+EXTERNAL SOURCES:
+  PlayKitYoubora:
+    :branch: FEC-9795
+    :git: https://github.com/kaltura/playkit-ios-youbora.git
+
+CHECKOUT OPTIONS:
+  PlayKitYoubora:
+    :commit: 9c943beb52c9d46c95aa1a446f32e6f040d36218
+    :git: https://github.com/kaltura/playkit-ios-youbora.git
+
 SPEC CHECKSUMS:
-  KalturaNetKit: 638852ff98361e1421fd52035d3390e7ffbd4c8a
+  KalturaNetKit: d2813b01d569fce0b5bc16c38e8d8ff302e72335
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 5660408440b89b7b61078f4be463b56adbcc13ef
+  PlayKit: 38f3a7f8b34c99fe5df4d62e6df00c9c40ab0280
   PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
-  PlayKitYoubora: 45f49971ff979896d94dddd33b8361339339e292
+  PlayKitYoubora: 68cf21e76537e2dac4a121e2361cfd7e1288cddd
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
-  YouboraLib: 8c04a76eefd756909d2cc285a75e7cb91e53abee
+  YouboraLib: a4617d5ec9e37724f5330531d020a8c35d7e0f0d
 
-PODFILE CHECKSUM: 0c52dc32f8096e5f297cde7364e007860fa366a9
+PODFILE CHECKSUM: 4a2160a35dcb00dba36460d0eb62d03d62203ebf
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.9.2
