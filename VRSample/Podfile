@@ -12,7 +12,7 @@ platform :ios, '9.0' # (define required version)
 #PLAYKIT_VR_LOCAL='../../playkit-ios-vr'
 
 # Uncomment to use a git copy
-#PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
+PLAYKIT_GIT='https://github.com/kaltura/playkit-ios.git'
 #PLAYKIT_PROVIDERS_GIT='https://github.com/kaltura/playkit-ios-providers.git'
 #PLAYKIT_YOUBORA_GIT='https://github.com/kaltura/playkit-ios-youbora.git'
 #PLAYKIT_VR_GIT='https://github.com/kaltura/playkit-ios-vr.git'
