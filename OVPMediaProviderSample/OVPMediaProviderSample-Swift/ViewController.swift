@@ -35,6 +35,39 @@ class ViewController: UIViewController {
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
         
+        
+        self.player?.addPeriodicObserver(interval: 1, observeOn: DispatchQueue.main, using: { (interval) in
+            print("1 INTERVAL 1 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 1, observeOn: DispatchQueue.main, using: { (interval) in
+            print("2 INTERVAL 1 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 1, observeOn: DispatchQueue.main, using: { (interval) in
+            print("3 INTERVAL 1 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 3, observeOn: DispatchQueue.main, using: { (interval) in
+            print("1 INTERVAL 3 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 15, observeOn: DispatchQueue.main, using: { (interval) in
+            print("2 INTERVAL 5 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 2, observeOn: DispatchQueue.main, using: { (interval) in
+            print("INTERVAL 2 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 15, observeOn: DispatchQueue.main, using: { (interval) in
+            print("3 INTERVAL 15 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 2, observeOn: DispatchQueue.main, using: { (interval) in
+            print("INTERVAL 2 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 2, observeOn: DispatchQueue.main, using: { (interval) in
+            print("INTERVAL 2 \(interval)")
+        })
+        self.player?.addPeriodicObserver(interval: 2, observeOn: DispatchQueue.main, using: { (interval) in
+            print("INTERVAL 2 \(interval)")
+        })
+        
+        
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         self.preparePlayer()
     }
