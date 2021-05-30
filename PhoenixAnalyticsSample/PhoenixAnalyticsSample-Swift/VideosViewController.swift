@@ -20,18 +20,20 @@ class VideosViewController: UITableViewController {
         createVideos()        
     }
     
+    
     func createVideos() {
         // VOD
-        videos.append(VideoData(partnerID: 198,
-                                serverURL: "http://api-preprod.ott.kaltura.com/v4_5/api_v3",
+        
+        videos.append(VideoData(partnerID: 3009,
+                                serverURL: "https://rest-us.ott.kaltura.com/v4_5/api_v3/",
                                 ks: nil,
-                                assetId: "259153",
+                                assetId: "548576",
                                 assetType: .media,
                                 assetRefType: .unset,
                                 assetPlaybackContextType: .playback,
-                                formats: ["Mobile_Devices_Main_SD"],
+                                formats: ["Mobile_Main"],
                                 fileIds: nil,
-                                networkProtocol: nil,
+                                networkProtocol: "http",
                                 referrer: nil))
     }
     
