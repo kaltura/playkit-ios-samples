@@ -57,11 +57,15 @@ class ViewController: UIViewController {
         // setup the player's view
         self.player?.view = self.playerContainer
         
-        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
+        let contentURL = "content-url"
+        
+        
+        let drmParams = FairPlayDRMParams(licenseUri: "license-url",
+                                                base64EncodedCertificate: "certificate")
         
         // create media source and initialize a media entry with that source
-        let entryId = "sintel"
-        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: nil, mediaFormat: .hls)
+        let entryId = "live"
+        let source = PKMediaSource(entryId, contentUrl: URL(string: contentURL), drmData: [drmParams], mediaFormat: .hls)
         // setup media entry
         let mediaEntry = PKMediaEntry(entryId, sources: [source], duration: -1)
         
