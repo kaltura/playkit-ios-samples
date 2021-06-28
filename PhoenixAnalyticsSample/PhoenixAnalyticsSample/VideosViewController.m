@@ -24,10 +24,12 @@
 }
 
 - (void)createVideos {
-    VideoData *v1 = [[VideoData alloc] initWithPartnerID:198
-                                               serverURL:@"http://api-preprod.ott.kaltura.com/v4_5/api_v3"
+    VideoData *v1 = [[VideoData alloc] initWithPartnerID:3009
+                                                 serverURL:@"https://rest-us.ott.kaltura.com/v4_5/api_v3/"
                                                       ks:nil
-                                                 assetId:@"259153" formats:@[@"Mobile_Devices_Main_SD"]];
+                                                 assetId:@"548576"
+                                                 networkProtocol:@"http"
+                                                 formats:@[@"Mobile_Main"] ];
     
     self.videos = @[v1];
 }

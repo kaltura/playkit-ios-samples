@@ -14,8 +14,10 @@
     @property (strong, nonatomic) NSString *serverURL;
     @property (strong, nonatomic) NSString *ks;
     @property (strong, nonatomic) NSString *assetId;
+    @property (strong, nonatomic) NSString *networkProtocol;
     @property (strong, nonatomic) NSArray <NSString*> *formats;
-    
-    - (instancetype)initWithPartnerID:(NSInteger)partnerID serverURL:(NSString *)serverURL ks:(NSString *)ks assetId:(NSString *)assetId formats:(NSArray <NSString*> *)formats;
+
+
+    - (instancetype)initWithPartnerID:(NSInteger)partnerID serverURL:(NSString *)serverURL ks:(NSString *)ks assetId:(NSString *)assetId networkProtocol:(NSString *)networkProtocol formats:(NSArray <NSString*> *)formats ;
     
     @end

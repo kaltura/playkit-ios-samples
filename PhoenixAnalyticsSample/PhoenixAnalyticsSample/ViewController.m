@@ -110,6 +110,7 @@
     [phoenixMediaProvider setAssetId:self.videoData.assetId];
     [phoenixMediaProvider setType:AssetTypeMedia];
     [phoenixMediaProvider setFormats:self.videoData.formats];
+    [phoenixMediaProvider setNetworkProtocol:self.videoData.networkProtocol];
     [phoenixMediaProvider setPlaybackContextType:PlaybackContextTypePlayback];
     [phoenixMediaProvider setSessionProvider:sessionProvider];
     
