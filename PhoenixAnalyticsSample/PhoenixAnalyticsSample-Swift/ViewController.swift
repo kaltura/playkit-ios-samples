@@ -87,10 +87,14 @@ class ViewController: UIViewController {
         let phoenixMediaProvider = PhoenixMediaProvider()
         phoenixMediaProvider.set(assetId: video.assetId)
         phoenixMediaProvider.set(type: video.assetType)
+        phoenixMediaProvider.set(epgId: video.epgId)
         phoenixMediaProvider.set(refType: video.assetRefType)
+        phoenixMediaProvider.set(streamerType: "applehttp")
+        phoenixMediaProvider.set(urlType: "direct")
+
         phoenixMediaProvider.set(playbackContextType: video.assetPlaybackContextType)
-        phoenixMediaProvider.set(formats: video.formats)
-        phoenixMediaProvider.set(fileIds: video.fileIds)
+        //phoenixMediaProvider.set(formats: video.formats)
+        //phoenixMediaProvider.set(fileIds: video.fileIds)
         phoenixMediaProvider.set(networkProtocol: video.networkProtocol)
         phoenixMediaProvider.set(referrer: video.referrer)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
@@ -164,12 +168,13 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [OttEvent.report, OttEvent.bookmarkError, OttEvent.concurrency])
     }
     
+    
     func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
         // Must have a KS, otherwise the Analytics won't work.
-        return PhoenixAnalyticsPluginConfig(baseUrl: "https://rest-eus1.ott.kaltura.com/restful_v4_8/api_v3/",
+        return PhoenixAnalyticsPluginConfig(baseUrl: "https://api.frp1.ott.kaltura.com/api_v3/",
                                             timerInterval: 30,
-                                            ks: "djJ8MTk4fCBNp58cv0U0E-JjH9TUGjGZsPtJ_uhtM1oEDfA4CHKRuw0G4UvWYvEfE5PcvN-dVFiFl0EssY9_F1477u-TtWahVnn44D0iJ0dEim8Hh2l87AUddFzEHvNuSK6D6tEAhcls1Ukx2cecwjE3bGh10-o=",
-                                            partnerId: 0)
+                                            ks:"djJ8MzIwMHyKjzl58GlR0B_q2Vcr4-QYBs0X8dk9sDJrt-OqP5nDR9hn4tEpD8n69AFEZ38IbbXumSkoDXBEaz7SPQ6FZxcpTytthNY6hwzHZhJUiE0NGS4Rl2y_AQb6Kx22bJBJ-DGOPUhA20NhLDaxU07fReFfxaayH4i9CF1DKLyNpPFNejiNqTlp1sJsWGSJwW1feaNaUeoiQ3cYF8usNS-DmafAQu25Vm7QRdrkZj3esKF1V-xKFV83SyRTG2-pGyLeJHR6j3IEKPAAs0X1LVlvnO91mh5EtFIZsjQFF-61osxJfVKhnEoSty_FC9RRq8KNnkw=",
+                                            partnerId: 3200)
     }
     
 /************************/

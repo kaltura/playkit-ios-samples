@@ -14,6 +14,7 @@ struct VideoData {
     var serverURL: String
     var ks: String?
     var assetId: String
+    var epgId: String? // optional for live /var assetId: String live Dvr
     var assetType: AssetType
     var assetRefType: AssetReferenceType
     var assetPlaybackContextType: PlaybackContextType
