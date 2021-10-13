@@ -155,7 +155,9 @@
     return [[PhoenixAnalyticsPluginConfig alloc] initWithBaseUrl:@"https://rest-eus1.ott.kaltura.com/restful_v4_8/api_v3/"
                                                    timerInterval:30.0f
                                                               ks:@""
-                                                       partnerId:0];
+                                                       partnerId:0
+                                                       disableMediaHit:false
+                                                       disableMediaMark:false];
 }
 
 /*********************************/
