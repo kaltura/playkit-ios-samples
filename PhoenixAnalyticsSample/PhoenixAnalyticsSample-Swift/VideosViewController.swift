@@ -24,31 +24,20 @@ class VideosViewController: UITableViewController {
     func createVideos() {
         // VOD
         
-//        videos.append(VideoData(partnerID: 3009,
-//                                serverURL: "https://rest-us.ott.kaltura.com/v4_5/api_v3/",
-//                                ks: nil,
-//                                assetId: "548576",
-//                                epgId: "gilad",
-//                                assetType: .media,
-//                                assetRefType: .unset,
-//                                assetPlaybackContextType: .playback,
-//                                formats: ["Mobile_Main"],
-//                                fileIds: nil,
-//                                networkProtocol: "http",
-//                                referrer: nil))
-        
-        videos.append(VideoData(partnerID: 3200,
-                                serverURL: "https://api.frp1.ott.kaltura.com/api_v3",
-                                ks:"djJ8MzIwMHyKjzl58GlR0B_q2Vcr4-QYBs0X8dk9sDJrt-OqP5nDR9hn4tEpD8n69AFEZ38IbbXumSkoDXBEaz7SPQ6FZxcpTytthNY6hwzHZhJUiE0NGS4Rl2y_AQb6Kx22bJBJ-DGOPUhA20NhLDaxU07fReFfxaayH4i9CF1DKLyNpPFNejiNqTlp1sJsWGSJwW1feaNaUeoiQ3cYF8usNS-DmafAQu25Vm7QRdrkZj3esKF1V-xKFV83SyRTG2-pGyLeJHR6j3IEKPAAs0X1LVlvnO91mh5EtFIZsjQFF-61osxJfVKhnEoSty_FC9RRq8KNnkw=",
-                                assetId: "109791863",
-                                epgId: nil,
-                                assetType: .epg,
-                                assetRefType: .epgInternal,
-                                assetPlaybackContextType: .catchup,
+        videos.append(VideoData(partnerID: 3009,
+                                serverURL: "https://rest-us.ott.kaltura.com/v4_5/api_v3/",
+                                ks: nil,
+                                assetId: "548576",
+                                assetType: .media,
+                                assetRefType: .unset,
+                                assetPlaybackContextType: .playback,
                                 formats: ["Mobile_Main"],
                                 fileIds: nil,
-                                networkProtocol: "https",
+                                streamerType: "applehttp",
+                                urlType: "playmanifest",
+                                networkProtocol: "http",
                                 referrer: nil))
+        
         
     }
     

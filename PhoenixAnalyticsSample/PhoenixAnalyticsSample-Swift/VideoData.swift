@@ -20,6 +20,8 @@ struct VideoData {
     var assetPlaybackContextType: PlaybackContextType
     var formats: [String]?
     var fileIds: [String]?
+    var streamerType: String?
+    var urlType: String?
     var networkProtocol: String?
     var referrer: String?
 }
