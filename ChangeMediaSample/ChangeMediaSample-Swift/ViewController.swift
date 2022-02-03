@@ -18,23 +18,33 @@ import PlayKit
  */
 
 class ViewController: UIViewController {
-    var player: Player?
-    var playheadTimer: Timer?
+    var player: Player! // Created in viewDidLoad
     @IBOutlet weak var playerContainer: PlayerView!
     @IBOutlet weak var playheadSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.playheadSlider.isContinuous = false;
+        playheadSlider.isContinuous = false;
         
         // 1. Load the player
-        self.player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
+        player = PlayKitManager.shared.loadPlayer(pluginConfig: nil)
         // 2. Register events if have ones.
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
+        player.addObserver(self, event: PlayerEvent.playheadUpdate, block: { [weak self] (event) in
+            guard let self = self else { return }
+            if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
+                self.playheadSlider.value = Float(self.player.currentTime / self.player.duration)
+                print(currentTime)
+            }
+        })
         
         // 3. Prepare the player (can be called at a later stage, preparing starts buffering the video)
         self.preparePlayer()
+    }
+    
+    deinit {
+        player.removeObserver(self, event: PlayerEvent.playheadUpdate)
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +61,7 @@ class ViewController: UIViewController {
 /***********************/
     func preparePlayer() {
         // setup the view
-        self.player?.view = self.playerContainer
+        player.view = self.playerContainer
         
         let contentURL = "https://cdnapisec.kaltura.com/p/2215841/playManifest/entryId/1_w9zx2eti/format/applehttp/protocol/https/a.m3u8"
         
@@ -98,10 +108,6 @@ class ViewController: UIViewController {
         }
         
         if !(player.isPlaying) {
-            self.playheadTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true, block: { (timer) in
-                self.playheadSlider.value = Float(player.currentTime / player.duration)
-            })
-            
             player.play()
         }
     }
@@ -112,8 +118,6 @@ class ViewController: UIViewController {
             return
         }
         
-        self.playheadTimer?.invalidate()
-        self.playheadTimer = nil
         player.pause()
     }
     
@@ -143,8 +147,9 @@ class ViewController: UIViewController {
         // Resets The Player And Prepares for Change Media
         player.stop() // 1. Stop Player
         // Create new Media Config
-        let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
+        let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0)
         // Call Prepare
+        
         player.prepare(mediaConfig) // 2. Call Prepare with new MediaConfig
         
         // After preparing if you wish to play make sure to wait `canPlay` event.
