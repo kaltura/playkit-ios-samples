@@ -31,7 +31,8 @@ class ViewController: UIViewController {
         // 2. Register events if have ones.
         // Event registeration must be after loading the player successfully to make sure events are added,
         // and before prepare to make sure no events are missed (when calling prepare player starts buffering and sending events)
-        player.addObserver(self, event: PlayerEvent.playheadUpdate, block: { (event) in
+        player.addObserver(self, event: PlayerEvent.playheadUpdate, block: { [weak self] (event) in
+            guard let self = self else { return }
             if let playerEvent = event as? PlayerEvent, let currentTime = playerEvent.currentTime {
                 self.playheadSlider.value = Float(self.player.currentTime / self.player.duration)
                 print(currentTime)
@@ -41,6 +42,10 @@ class ViewController: UIViewController {
         self.preparePlayer()
     }
 
+    deinit {
+        player.removeObserver(self, event: PlayerEvent.playheadUpdate)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
