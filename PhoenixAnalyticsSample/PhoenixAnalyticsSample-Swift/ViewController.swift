@@ -87,10 +87,13 @@ class ViewController: UIViewController {
         let phoenixMediaProvider = PhoenixMediaProvider()
         phoenixMediaProvider.set(assetId: video.assetId)
         phoenixMediaProvider.set(type: video.assetType)
+        phoenixMediaProvider.set(epgId: video.epgId)
         phoenixMediaProvider.set(refType: video.assetRefType)
         phoenixMediaProvider.set(playbackContextType: video.assetPlaybackContextType)
         phoenixMediaProvider.set(formats: video.formats)
         phoenixMediaProvider.set(fileIds: video.fileIds)
+        phoenixMediaProvider.set(streamerType: video.streamerType)
+        phoenixMediaProvider.set(urlType: video.urlType)
         phoenixMediaProvider.set(networkProtocol: video.networkProtocol)
         phoenixMediaProvider.set(referrer: video.referrer)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
@@ -164,12 +167,14 @@ class ViewController: UIViewController {
         player.removeObserver(self, events: [OttEvent.report, OttEvent.bookmarkError, OttEvent.concurrency])
     }
     
+    
     func createPhoenixAnalyticsPluginConfig() -> PhoenixAnalyticsPluginConfig {
         // Must have a KS, otherwise the Analytics won't work.
         return PhoenixAnalyticsPluginConfig(baseUrl: "https://rest-eus1.ott.kaltura.com/restful_v4_8/api_v3/",
                                             timerInterval: 30,
                                             ks: "djJ8MTk4fCBNp58cv0U0E-JjH9TUGjGZsPtJ_uhtM1oEDfA4CHKRuw0G4UvWYvEfE5PcvN-dVFiFl0EssY9_F1477u-TtWahVnn44D0iJ0dEim8Hh2l87AUddFzEHvNuSK6D6tEAhcls1Ukx2cecwjE3bGh10-o=",
                                             partnerId: 0)
+
     }
     
 /************************/

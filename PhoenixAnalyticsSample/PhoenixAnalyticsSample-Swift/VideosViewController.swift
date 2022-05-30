@@ -33,8 +33,12 @@ class VideosViewController: UITableViewController {
                                 assetPlaybackContextType: .playback,
                                 formats: ["Mobile_Main"],
                                 fileIds: nil,
+                                streamerType: "applehttp",
+                                urlType: "playmanifest",
                                 networkProtocol: "http",
                                 referrer: nil))
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
