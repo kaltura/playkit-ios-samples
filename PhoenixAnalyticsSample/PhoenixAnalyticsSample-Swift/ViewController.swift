@@ -91,9 +91,12 @@ class ViewController: UIViewController {
         phoenixMediaProvider.set(playbackContextType: video.assetPlaybackContextType)
         phoenixMediaProvider.set(formats: video.formats)
         phoenixMediaProvider.set(fileIds: video.fileIds)
-        phoenixMediaProvider.set(networkProtocol: video.networkProtocol)
         phoenixMediaProvider.set(referrer: video.referrer)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
+        
+        if let networkProtocol = video.networkProtocol {
+            phoenixMediaProvider.set(networkProtocol: networkProtocol)
+        }
         
         phoenixMediaProvider.loadMedia { (pkMediaEntry, error) in
             guard let mediaEntry = pkMediaEntry else { return }
