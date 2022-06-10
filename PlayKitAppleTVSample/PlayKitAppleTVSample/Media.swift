@@ -106,9 +106,11 @@ class OTTMedia: Media {
         phoenixMediaProvider.set(refType: .unset)
         phoenixMediaProvider.set(playbackContextType: .playback)
         phoenixMediaProvider.set(formats: formats)
-        phoenixMediaProvider.set(networkProtocol: networkProtocol)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
-
+        if let networkProtocol = networkProtocol {
+            phoenixMediaProvider.set(networkProtocol: networkProtocol)
+        }
+        
         phoenixMediaProvider.loadMedia { (pkMediaEntry, error) in
             guard let mediaEntry = pkMediaEntry else { return }
             completionHandler(MediaConfig(mediaEntry: mediaEntry, startTime: startTime))

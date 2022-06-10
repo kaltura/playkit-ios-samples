@@ -2,7 +2,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 use_frameworks!
 
-platform :ios, '9.0' # (define required version)
+platform :ios, '11.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
 #PLAYKIT_LOCAL='../../playkit-ios'
@@ -19,7 +19,7 @@ target 'BasicSample' do
     if defined? PLAYKIT_GIT
       pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
-      pod 'PlayKit', '~> 3.12'
+      pod 'PlayKit'
     end
   end
 

@@ -21,7 +21,7 @@ PODS:
     - GoogleAds-IMA-tvOS-SDK (= 4.4.2)
     - PlayKit (~> 3.22)
   - PlayKitUtils (0.5.0)
-  - PlayKitYoubora (1.12.0):
+  - PlayKitYoubora (1.12.1):
     - PlayKit/AnalyticsCommon (~> 3.22)
     - YouboraLib (= 6.5.39)
   - SwiftyJSON (5.0.0)
@@ -32,9 +32,9 @@ PODS:
   - YouboraLib (6.5.39)
 
 DEPENDENCIES:
-  - PlayKit (~> 3.25)
-  - PlayKit_IMA (~> 1.11)
-  - PlayKitYoubora (~> 1.12)
+  - PlayKit
+  - PlayKit_IMA
+  - PlayKitYoubora
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -56,11 +56,11 @@ SPEC CHECKSUMS:
   PlayKit: 535ee453b55becb60ec3fa38e42e6c41966024f7
   PlayKit_IMA: 356faeeeeda85707834ad1dc0b4a50582136617f
   PlayKitUtils: 8edb43515c8b91d9aa9a47ae8b5af1e7dd58f6f3
-  PlayKitYoubora: 63b935385a5b1b2457ca53bbe6b62aa455bddb0d
+  PlayKitYoubora: 15e9627ec6b025867a7b9500e32ec081b3e8acf4
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
   YouboraLib: 10429980003aeeeb24b7fe52cb10de6e31d67147
 
-PODFILE CHECKSUM: 15d78d15b908a19f5944131ee145a4e4d515315e
+PODFILE CHECKSUM: b67b004cd90ccf8cdad6ba174da741020efe4d56
 
 COCOAPODS: 1.11.3
