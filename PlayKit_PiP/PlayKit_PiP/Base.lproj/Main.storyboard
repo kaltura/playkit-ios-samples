@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,11 +14,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayKit_PiP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DY-iv-RRB">
-                                <rect key="frame" x="313.5" y="494" width="141" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2DY-iv-RRB">
+                                <rect key="frame" x="116" y="388" width="143" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Play some video"/>
                                 <connections>
@@ -25,12 +26,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2DY-iv-RRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dAZ-d3-tc8"/>
                             <constraint firstItem="2DY-iv-RRB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qgY-uA-b5u"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,19 +43,26 @@
             <objects>
                 <viewController id="U4L-0D-C4l" customClass="PlayerViewController" customModule="PlayKit_PiP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lqr-nz-gxe">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFT-Ko-RbL" customClass="PlayerView" customModule="PlayKit">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cr-FA-mWH">
+                                <rect key="frame" x="10" y="49" width="57" height="30"/>
+                                <state key="normal" title="Go back"/>
+                                <connections>
+                                    <action selector="goBackAction:" destination="U4L-0D-C4l" eventType="touchUpInside" id="ltv-9m-X7o"/>
+                                </connections>
+                            </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mha-jT-eQE">
-                                <rect key="frame" x="0.0" y="974" width="768" height="50"/>
+                                <rect key="frame" x="0.0" y="729" width="375" height="49"/>
                                 <items>
                                     <barButtonItem style="plain" id="OeP-Gn-JxG">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BNF-ss-YoQ">
-                                            <rect key="frame" x="20" y="3" width="46" height="44"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="BNF-ss-YoQ">
+                                            <rect key="frame" x="16" y="5" width="46" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <state key="normal" title="▶️"/>
@@ -66,7 +74,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4nZ-l9-Dzb"/>
                                     <barButtonItem style="plain" id="rk9-Ik-Lnt">
                                         <slider key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" id="iZz-Y2-ThM">
-                                            <rect key="frame" x="163" y="8" width="442" height="34"/>
+                                            <rect key="frame" x="87.666666666666686" y="10" width="200" height="34"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="seekAction:" destination="U4L-0D-C4l" eventType="valueChanged" id="eY9-Rk-qg5"/>
@@ -75,8 +83,8 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="O4O-JX-Fwm"/>
                                     <barButtonItem style="plain" id="DRp-ba-Bfl">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ECk-Wa-MXU">
-                                            <rect key="frame" x="718" y="10" width="30" height="30"/>
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ECk-Wa-MXU">
+                                            <rect key="frame" x="329" y="12" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <connections>
                                                 <action selector="togglePictureInPictureMode:" destination="U4L-0D-C4l" eventType="touchUpInside" id="kUB-Ih-Wmh"/>
@@ -85,27 +93,20 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8cr-FA-mWH">
-                                <rect key="frame" x="15" y="20" width="57" height="30"/>
-                                <state key="normal" title="Go back"/>
-                                <connections>
-                                    <action selector="goBackAction:" destination="U4L-0D-C4l" eventType="touchUpInside" id="ltv-9m-X7o"/>
-                                </connections>
-                            </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="3L2-IM-il8"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mha-jT-eQE" firstAttribute="leading" secondItem="3L2-IM-il8" secondAttribute="leading" id="5BR-1O-zmA"/>
                             <constraint firstItem="fFT-Ko-RbL" firstAttribute="bottom" secondItem="3L2-IM-il8" secondAttribute="bottom" id="Hum-Nv-LcS"/>
                             <constraint firstItem="Mha-jT-eQE" firstAttribute="trailing" secondItem="3L2-IM-il8" secondAttribute="trailing" id="IDu-0M-dkb"/>
-                            <constraint firstItem="8cr-FA-mWH" firstAttribute="leading" secondItem="lqr-nz-gxe" secondAttribute="leading" constant="15" id="NjP-Ka-EbB"/>
-                            <constraint firstItem="8cr-FA-mWH" firstAttribute="top" secondItem="lqr-nz-gxe" secondAttribute="top" constant="20" id="S0t-sc-Nkz"/>
                             <constraint firstItem="fFT-Ko-RbL" firstAttribute="top" secondItem="3L2-IM-il8" secondAttribute="top" id="Udc-ph-P73"/>
+                            <constraint firstItem="8cr-FA-mWH" firstAttribute="top" secondItem="3L2-IM-il8" secondAttribute="top" constant="5" id="eQw-XN-Ztf"/>
                             <constraint firstItem="Mha-jT-eQE" firstAttribute="bottom" secondItem="3L2-IM-il8" secondAttribute="bottom" id="ft5-Dk-0bY"/>
                             <constraint firstItem="fFT-Ko-RbL" firstAttribute="trailing" secondItem="3L2-IM-il8" secondAttribute="trailing" id="hh2-4L-YiZ"/>
+                            <constraint firstItem="8cr-FA-mWH" firstAttribute="leading" secondItem="3L2-IM-il8" secondAttribute="leading" constant="10" id="hk4-0h-Yzr"/>
                             <constraint firstItem="fFT-Ko-RbL" firstAttribute="leading" secondItem="3L2-IM-il8" secondAttribute="leading" id="rJf-ay-0iG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="3L2-IM-il8"/>
                     </view>
                     <navigationItem key="navigationItem" id="yOO-tS-bHt"/>
                     <connections>
@@ -122,4 +123,9 @@
             <point key="canvasLocation" x="889.84375" y="138.8671875"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
