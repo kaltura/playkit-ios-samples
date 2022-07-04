@@ -1,34 +1,34 @@
 PODS:
-  - KalturaNetKit (1.4.0):
-    - KalturaNetKit/Core (= 1.4.0)
-  - KalturaNetKit/Core (1.4.0):
+  - KalturaNetKit (1.5.1):
+    - KalturaNetKit/Core (= 1.5.1)
+  - KalturaNetKit/Core (1.5.1):
     - SwiftyJSON (= 5.0.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.19.0):
-    - PlayKit/Core (= 3.19.0)
-  - PlayKit/AnalyticsCommon (3.19.0):
+  - PlayKit (3.25.0):
+    - PlayKit/Core (= 3.25.0)
+  - PlayKit/AnalyticsCommon (3.25.0):
     - PlayKit/Core
-  - PlayKit/Core (3.19.0):
-    - KalturaNetKit (~> 1.4)
+  - PlayKit/Core (3.25.0):
+    - KalturaNetKit (~> 1.5.1)
     - PlayKitUtils (~> 0.5)
     - SwiftyJSON (= 5.0.0)
     - XCGLogger (= 7.0.0)
   - PlayKitUtils (0.5.0)
-  - PlayKitYoubora (1.7.0):
-    - PlayKit/AnalyticsCommon (~> 3.8)
-    - YouboraLib (= 6.5.27)
+  - PlayKitYoubora (1.12.1):
+    - PlayKit/AnalyticsCommon (~> 3.22)
+    - YouboraLib (= 6.5.39)
   - SwiftyJSON (5.0.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
   - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
-  - YouboraLib (6.5.27)
+  - YouboraLib (6.5.39)
 
 DEPENDENCIES:
-  - PlayKit (~> 3.12)
-  - PlayKitYoubora (~> 1.4)
+  - PlayKit
+  - PlayKitYoubora
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -42,15 +42,15 @@ SPEC REPOS:
     - YouboraLib
 
 SPEC CHECKSUMS:
-  KalturaNetKit: 0356a0430b06b98453761d4b87baba121de301c5
+  KalturaNetKit: 8774fdc2e73d3d013c3df88aa49376dd922d3606
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: a24a5aad161837bcbddff4260f10758b1ccd078a
+  PlayKit: 535ee453b55becb60ec3fa38e42e6c41966024f7
   PlayKitUtils: 8edb43515c8b91d9aa9a47ae8b5af1e7dd58f6f3
-  PlayKitYoubora: 33805b5bb178eedac6a6edb07cd12cad896599ce
+  PlayKitYoubora: 15e9627ec6b025867a7b9500e32ec081b3e8acf4
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
-  YouboraLib: a4617d5ec9e37724f5330531d020a8c35d7e0f0d
+  YouboraLib: 10429980003aeeeb24b7fe52cb10de6e31d67147
 
-PODFILE CHECKSUM: 4ac5c1395a6a4c9522b6f38ee8b9680dc22cc67a
+PODFILE CHECKSUM: b332cf1305deb764b3bbc63f88f6aa259d70b915
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.11.3

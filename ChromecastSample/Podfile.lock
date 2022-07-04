@@ -1,37 +1,37 @@
 PODS:
-  - google-cast-sdk (4.4.4):
-    - google-cast-sdk/Core (= 4.4.4)
-    - Protobuf (~> 3.0)
-  - google-cast-sdk/Core (4.4.4):
-    - Protobuf (~> 3.0)
-  - KalturaNetKit (1.3.0):
-    - KalturaNetKit/Core (= 1.3.0)
-  - KalturaNetKit/Core (1.3.0):
-    - SwiftyJSON (= 4.3.0)
+  - google-cast-sdk (4.6.1):
+    - google-cast-sdk/Core (= 4.6.1)
+    - Protobuf (~> 3.13)
+  - google-cast-sdk/Core (4.6.1):
+    - Protobuf (~> 3.13)
+  - KalturaNetKit (1.5.1):
+    - KalturaNetKit/Core (= 1.5.1)
+  - KalturaNetKit/Core (1.5.1):
+    - SwiftyJSON (= 5.0.0)
   - ObjcExceptionBridging (1.0.1):
     - ObjcExceptionBridging/ObjcExceptionBridging (= 1.0.1)
   - ObjcExceptionBridging/ObjcExceptionBridging (1.0.1)
-  - PlayKit (3.14.0):
-    - PlayKit/Core (= 3.14.0)
-  - PlayKit/Core (3.14.0):
-    - KalturaNetKit (~> 1.3)
-    - PlayKitUtils (~> 0.4)
-    - SwiftyJSON (= 4.3.0)
+  - PlayKit (3.25.0):
+    - PlayKit/Core (= 3.25.0)
+  - PlayKit/Core (3.25.0):
+    - KalturaNetKit (~> 1.5.1)
+    - PlayKitUtils (~> 0.5)
+    - SwiftyJSON (= 5.0.0)
     - XCGLogger (= 7.0.0)
-  - PlayKitGoogleCast (1.3.0):
-    - google-cast-sdk (= 4.4.4)
+  - PlayKitGoogleCast (1.5.1):
+    - google-cast-sdk (= 4.6.1)
     - XCGLogger (= 7.0.0)
-  - PlayKitUtils (0.4.0)
-  - Protobuf (3.10.0)
-  - SwiftyJSON (4.3.0)
+  - PlayKitUtils (0.5.0)
+  - Protobuf (3.21.1)
+  - SwiftyJSON (5.0.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
   - XCGLogger/Core (7.0.0):
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - PlayKit (~> 3.12)
-  - PlayKitGoogleCast (~> 1.3)
+  - PlayKit
+  - PlayKitGoogleCast
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -46,16 +46,16 @@ SPEC REPOS:
     - XCGLogger
 
 SPEC CHECKSUMS:
-  google-cast-sdk: 776a7ecf2d630cf665d37fac7421b2bdb21fa414
-  KalturaNetKit: 638852ff98361e1421fd52035d3390e7ffbd4c8a
+  google-cast-sdk: 9fc76175641bc24ef2515e0263344bd2c5c4e75c
+  KalturaNetKit: 8774fdc2e73d3d013c3df88aa49376dd922d3606
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
-  PlayKit: 5660408440b89b7b61078f4be463b56adbcc13ef
-  PlayKitGoogleCast: 19eb5d4421a729640be4bfd2a40e49342ee8a225
-  PlayKitUtils: 98bffe139cffe5cb1fe8fc757b58845c939caf67
-  Protobuf: a4dc852ad69c027ca2166ed287b856697814375b
-  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  PlayKit: 535ee453b55becb60ec3fa38e42e6c41966024f7
+  PlayKitGoogleCast: 5fb18e38aee48ca9c8df6572475afabcd5eb5045
+  PlayKitUtils: 8edb43515c8b91d9aa9a47ae8b5af1e7dd58f6f3
+  Protobuf: 9e88c1e667d75aa2491d211f26ccddde4e8ad4cf
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: a7f767d5a8487241f4260e1cfee5e4366a3f3b9a
+PODFILE CHECKSUM: 92a8b392010fbdefdf61cf3396789ef7bdd9c264
 
-COCOAPODS: 1.8.0
+COCOAPODS: 1.11.3

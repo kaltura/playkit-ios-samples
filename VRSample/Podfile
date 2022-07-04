@@ -3,7 +3,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 #inhibit_all_warnings!
 use_frameworks!
 
-platform :ios, '9.0' # (define required version)
+platform :ios, '11.0' # (define required version)
 
 # Uncomment to use a local copy of PlayKit
 #PLAYKIT_LOCAL='../../playkit-ios'
@@ -29,7 +29,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_GIT
       pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
-      pod 'PlayKit', '~> 3.12'
+      pod 'PlayKit'
     end
   end
   
@@ -39,7 +39,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_PROVIDERS_GIT
       pod 'PlayKitProviders', :git => PLAYKIT_PROVIDERS_GIT, :branch => PLAYKIT_PROVIDERS_BRANCH
       else
-      pod 'PlayKitProviders', '~> 1.4'
+      pod 'PlayKitProviders'
     end
   end
   
@@ -49,7 +49,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_YOUBORA_GIT
       pod 'PlayKitYoubora', :git => PLAYKIT_YOUBORA_GIT, :branch => PLAYKIT_YOUBORA_BRANCH
       else
-      pod 'PlayKitYoubora', '~> 1.4'
+      pod 'PlayKitYoubora'
     end
   end
   
@@ -59,7 +59,7 @@ abstract_target 'SharedPods' do
     if defined? PLAYKIT_VR_GIT
       pod 'PlayKitVR', :git => PLAYKIT_VR_GIT, :branch => PLAYKIT_VR_BRANCH
       else
-      pod 'PlayKitVR', '~> 1.2'
+      pod 'PlayKitVR'
     end
   end
   
