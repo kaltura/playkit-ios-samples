@@ -8,6 +8,8 @@
 
 import UIKit
 import PlayKit
+import PlayKitProviders
+
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -72,8 +74,48 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         player.settings.trackSelection.textSelectionMode = .auto
         player.settings.trackSelection.textSelectionLanguage = "en"
         
+        
+        // Create a session provider
+        let sessionProvider = SimpleSessionProvider(serverURL: "https://rest-us.ott.kaltura.com/v4_5/api_v3/", partnerId: Int64(3009), ks: nil)
+        
+        // Create the media provider
+        let phoenixMediaProvider = PhoenixMediaProvider()
+        phoenixMediaProvider.set(assetId: "548576")
+        phoenixMediaProvider.set(type: .media)
+        phoenixMediaProvider.set(refType: .unset)
+        phoenixMediaProvider.set(playbackContextType: .playback)
+        phoenixMediaProvider.set(formats: ["Mobile_Main"])
+        phoenixMediaProvider.set(fileIds: nil)
+        //phoenixMediaProvider.set(referrer: .unset)
+        phoenixMediaProvider.set(sessionProvider: sessionProvider)
+        phoenixMediaProvider.set(networkProtocol: "http")
+        
+      
+
+        phoenixMediaProvider.loadMedia { (pkMediaEntry, error) in
+            guard let mediaEntry = pkMediaEntry else { return }
+            
+//            pkMediaEntry?.externalSubtitles = [PKExternalSubtitle(id: "Deutsch-de",
+//                                                               name: "Deutsch",
+//                                                               language: "de",
+//                                                               vttURLString: "http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt",
+//                                                               duration: 888.11),
+//                                            PKExternalSubtitle(id: "English-en",
+//                                                               name: "English",
+//                                                               language: "en",
+//                                                               vttURLString: "http://externaltests.dev.kaltura.com/player/captions_files/eng.vtt",
+//                                                               duration: 888.11)]
+            // Create media config
+            let mediaConfig = MediaConfig(mediaEntry: mediaEntry)
+            
+            // Prepare the player
+            self.player?.prepare(mediaConfig)
+            
+            self.playheadSlider.isEnabled = mediaEntry.mediaType != .live
+        }
+        
         // Prepare the player
-        player.prepare(mediaConfig)
+        //player.prepare(mediaConfig)
     }
     
     func getMediaWithOutSubtitles() -> PKMediaEntry {
@@ -104,7 +146,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func getMediaWithExternalSubtitles() -> PKMediaEntry {
-        let contentURL = "https://cdnapisec.kaltura.com/p/2215841/sp/2215841/playManifest/entryId/1_9bwuo813/flavorIds/0_vfdi28n9,1_5j0bgx4v,1_x6tlvn4x,1_zj4vzg46/deliveryProfileId/19201/protocol/https/format/applehttp/a.m3u8"
+        let contentURL =  "https://cdnapisec.kaltura.com/p/2215841/sp/2215841/playManifest/entryId/1_9bwuo813/flavorIds/0_vfdi28n9,1_5j0bgx4v,1_x6tlvn4x,1_zj4vzg46/deliveryProfileId/19201/protocol/https/format/applehttp/a.m3u8"
         
         // Create media source and initialize a media entry with that source
         let entryId = "1_9bwuo813"

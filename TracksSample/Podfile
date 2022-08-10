@@ -20,6 +20,7 @@ abstract_target 'SharedPods' do
       pod 'PlayKit', :git => PLAYKIT_GIT, :branch => PLAYKIT_BRANCH
       else
       pod 'PlayKit'
+      pod 'PlayKitProviders'
     end
   end
   
