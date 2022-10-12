@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Player View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PlayerViewController" customModule="ContentModeSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtl-lP-EY3" customClass="PlayerView" customModule="PlayKit">
+                                <rect key="frame" x="20" y="67" width="350" height="723"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jPq-dm-H8D">
+                                        <rect key="frame" x="109.66666666666666" y="330.66666666666669" width="131" height="62"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="bDn-5A-fw2">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="32"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="videoSourceChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="0l6-8m-aS3"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ryo-l7-uOC">
+                                                <rect key="frame" x="0.0" y="31" width="131" height="32"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <segments>
+                                                    <segment title="First"/>
+                                                    <segment title="Second"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="contentModeChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fys-7d-hmd"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="jPq-dm-H8D" firstAttribute="centerX" secondItem="qtl-lP-EY3" secondAttribute="centerX" id="4m1-a2-76l"/>
+                                    <constraint firstItem="jPq-dm-H8D" firstAttribute="centerY" secondItem="qtl-lP-EY3" secondAttribute="centerY" id="mEa-bZ-fhf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemMintColor"/>
+                        <constraints>
+                            <constraint firstItem="qtl-lP-EY3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0sd-dL-Jq0"/>
+                            <constraint firstItem="qtl-lP-EY3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="DJQ-6o-LqD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qtl-lP-EY3" secondAttribute="bottom" constant="20" id="dr7-dp-QJj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qtl-lP-EY3" secondAttribute="trailing" constant="20" id="rbA-8l-sun"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentModeControl" destination="Ryo-l7-uOC" id="GDC-Ml-aa9"/>
+                        <outlet property="playerView" destination="qtl-lP-EY3" id="BNz-tN-6Z9"/>
+                        <outlet property="videoSourceControl" destination="bDn-5A-fw2" id="9lB-2L-06j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12.307692307692307" y="-41.232227488151658"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
