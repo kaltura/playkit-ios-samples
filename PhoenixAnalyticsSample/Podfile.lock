@@ -23,6 +23,7 @@ PODS:
   - PlayKitUtils (0.5.0)
   - SwiftyJSON (5.0.0)
   - SwiftyXMLParser (5.0.0)
+  - Wormholy (1.7.0)
   - XCGLogger (7.0.0):
     - XCGLogger/Core (= 7.0.0)
   - XCGLogger/Core (7.0.0):
@@ -31,6 +32,7 @@ PODS:
 DEPENDENCIES:
   - PlayKit
   - PlayKitProviders
+  - Wormholy
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -41,6 +43,7 @@ SPEC REPOS:
     - PlayKitUtils
     - SwiftyJSON
     - SwiftyXMLParser
+    - Wormholy
     - XCGLogger
 
 SPEC CHECKSUMS:
@@ -51,8 +54,9 @@ SPEC CHECKSUMS:
   PlayKitUtils: 8edb43515c8b91d9aa9a47ae8b5af1e7dd58f6f3
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
+  Wormholy: ab1c8c2f02f58587a0941deb0088555ffbf039a1
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 480f3aeeb0f4e3b3b24c672dfb5a2917c09df434
+PODFILE CHECKSUM: 3325bdea837e04b6c0b0a82a8d28155b18172f18
 
 COCOAPODS: 1.15.2

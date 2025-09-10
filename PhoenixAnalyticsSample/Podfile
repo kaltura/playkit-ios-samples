@@ -35,6 +35,8 @@ abstract_target 'SharedPods' do
       pod 'PlayKitProviders'
     end
   end
+  
+  pod 'Wormholy', :configurations => ['Debug']
 
   target 'PhoenixAnalyticsSample'
   target 'PhoenixAnalyticsSample-Swift'

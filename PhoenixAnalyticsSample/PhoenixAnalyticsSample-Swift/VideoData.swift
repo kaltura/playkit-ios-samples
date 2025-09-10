@@ -20,5 +20,6 @@ struct VideoData {
     var formats: [String]?
     var fileIds: [String]?
     var networkProtocol: String?
+    var urlType: String? = "DIRECT"
     var referrer: String?
 }

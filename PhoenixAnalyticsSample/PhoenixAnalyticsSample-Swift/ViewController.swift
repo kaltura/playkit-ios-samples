@@ -93,6 +93,7 @@ class ViewController: UIViewController {
         phoenixMediaProvider.set(fileIds: video.fileIds)
         phoenixMediaProvider.set(referrer: video.referrer)
         phoenixMediaProvider.set(sessionProvider: sessionProvider)
+        phoenixMediaProvider.set(urlType: video.urlType)
         
         if let networkProtocol = video.networkProtocol {
             phoenixMediaProvider.set(networkProtocol: networkProtocol)
